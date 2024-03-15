@@ -78,7 +78,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with WidgetsBindingObserv
                     ButtonFilledInactiveSurface2(
                       title: context.intl.i_want_to_sell,
                       buttonColor: Theme.of(context).colorScheme.tonalP90,
-                      textColor: Theme.of(context).colorScheme.primary90,
+                      textColor: Theme.of(context).colorScheme.p90p10,
                       onPressed: () => AutoRouter.of(context).push(
                         WelcomeSlidesRoute(isBuy: false),
                       ),

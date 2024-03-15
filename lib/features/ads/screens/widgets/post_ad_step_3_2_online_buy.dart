@@ -124,6 +124,7 @@ class _PostAdStep32OnlineBuyState extends State<PostAdStep32OnlineBuy> with QrSc
                 SizedBox(
                   height: 40,
                   child: Radio<BtcFeesEnum>(
+                    activeColor: context.colP70P40,
                     value: BtcFeesEnum.values[index],
                     groupValue: widget.model.btcFeesEnum,
                     onChanged: (BtcFeesEnum? value) {

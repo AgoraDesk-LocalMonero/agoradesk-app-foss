@@ -39,8 +39,7 @@ class RadioListItem extends StatelessWidget {
               ),
             ),
             Radio<bool>(
-              materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-              activeColor: context.colP70,
+              activeColor: context.colP70P40,
               value: isActive,
               groupValue: true,
               onChanged: (bool? val) {

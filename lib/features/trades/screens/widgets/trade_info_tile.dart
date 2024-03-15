@@ -65,7 +65,7 @@ class TradeInfoTile extends StatelessWidget with DateMixin, CountryInfoMixin {
                                       maxLines: 2,
                                       minFontSize: 6,
                                       style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                                            color: Theme.of(context).colorScheme.primary90,
+                                            color: Theme.of(context).colorScheme.p90p10,
                                           ),
                                     ),
                                   ),

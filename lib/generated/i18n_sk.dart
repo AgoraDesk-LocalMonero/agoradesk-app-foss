@@ -150,7 +150,7 @@ class I18nSk extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'kúpiť';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val) {
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
     return 'Koľko si želáte $buyOrSell?';
   }
 
@@ -2543,7 +2543,7 @@ class I18nSk extends I18n {
   String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb5 => 'Monero je obecná komunita priťahujúca najlepších svetových výskumníkov v oblasti kryptomien a inžinierskych talentov.';
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb6 => 'Do projektu Monero prispelo viac ako 420 vývojárov vrátane 30 kľúčových vývojárov. Fóra a chatové kanály sú vítané a aktívne.';
+  String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb6 => 'Do projektu Monero prispelo viac ako 420 vývojárov vrátane 30 kľúčových vývojárov. Fóra a chatovacie kanály sú vítané a aktívne.';
 
   @override
   String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb7 => 'Výskumné laboratórium spoločnosti Monero, hlavný vývojový tím a komunitní vývojári neustále posúvajú hranice toho, čo je možné so súkromím a bezpečnosťou kryptomien.';
@@ -2873,7 +2873,7 @@ class I18nSk extends I18n {
   String get guide250Sbmnemonic250Sbtitle => 'Ako obnoviť moju neväzobnú peňaženku z mnemotechnického slova?';
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1 => 'Prejdite na <a target=\"_blank\" href=\"/\" class=\"next-link\">hlavnú stránku</a> – uvidíte najlepšie ponuky pre váš predvolený región. Výsledky môžete spresniť zadaním požadovanej sumy a zmenou meny, krajiny alebo spôsobu platby (ak si nie ste istí, ktorý spôsob platby chcete použiť, vyberte možnosť „Všetky ponuky online“) a stlačte tlačidlo „Hľadať“.';
+  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1 => 'Prejdite na <a target=\"_blank\" href=\"/\" class=\"next-link\">hlavnú stránku</a> – uvidíte najlepšie ponuky pre váš predvolený región. Svoje výsledky môžete spresniť zadaním požadovanej sumy, ktorú chcete uskutočniť, do vyhľadávacieho poľa, potom vyberte menu, v ktorej chcete vykonávať transakcie, krajinu a požadovaný spôsob platby (ak si nie ste istí, ktorý spôsob platby si vyberiete, vyberte možnosť Všetky online ponuky ktoré chcete použiť).';
 
   @override
   String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1250Sb1 => 'Zo zoznamu reklám vyberte jednu od obchodníka s vysokým počtom obchodov a dobrým skóre reputácie (zobrazené v zátvorkách vedľa používateľského mena). Zelený kruh znamená, že obchodník bol dnes online; žltý kruh znamená, že stránku navštívili tento týždeň; a sivý kruh znamená, že obchodník tu nebol viac ako týždeň. Kliknutím na tlačidlo \"Kúpiť\" zobrazíte ďalšie informácie o inzeráte.';
@@ -3878,7 +3878,7 @@ class I18nSk extends I18n {
   String get knowledge250Sbscams250Sb3250Sbtitle => 'Úplný podvod';
 
   @override
-  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Vaše semeno Monero JE vaše Monero. Musíte si to zapísať, keď si prvýkrát vytvoríte peňaženku, pretože ak stratíte svoje semeno, stratili ste svoje Monero a nikto vám nemôže pomôcť. ALE AJ toto semeno musíte chrániť pred ostatnými. Ak vám niekto ukradne semeno, môže poslať Monero z peňaženky, ako keby ste to boli vy, a opäť za vás nikto nemôže získať späť tieto peniaze. Je to preč.</p>\n\n<p>Príliš často jednotlivec držal v peňaženke Monero, bol zvedavý na svoje finančné prostriedky a chcel si ich skontrolovať. Ale namiesto toho, aby sa museli trápiť s preinštalovaním celej aplikácie peňaženky, jednoducho sa rozhodnú použiť webovú peňaženku na rýchle obnovenie svojho zárodku a pozrieť sa na svoje peniaze. Ak sa stanú obeťou podvodu typu Business Look Alike, potom už samotný akt vloženia ich zárodku to dá podvodníkom, ktorí potom môžu presunúť peniaze do inej peňaženky, ktorú ovládajú podľa vlastného uváženia.</p>\n\n<p> KEDYKOĽVEK má stránka, aplikácia alebo peňaženka možnosť „obnoviť pomocou seedu“, buďte veľmi opatrní, aby bola aplikácia, ktorú používate, legitímna. Skontrolujte hodnoty hash programu (na webovej lokalite Monero nájdete pokyny, ako to urobiť), aby ste sa uistili, že s programom nemanipulovali vonkajšie sily, a neustále si uvedomujte, kde a ako odhaľujete svoje semeno. Dvojitá kontrola môže byť nepríjemná, ale strata finančných prostriedkov z nepozornosti by bola ešte horšia.</p>';
+  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Vaše semeno Monero JE vaše Monero. Musíte si to zapísať, keď si prvýkrát vytvoríte peňaženku, pretože ak stratíte svoje semeno, stratili ste svoje Monero a nikto vám nemôže pomôcť. ALE AJ toto semeno musíte chrániť pred ostatnými. Ak vám niekto ukradne semeno, môže poslať Monero z peňaženky, ako keby ste to boli vy, a opäť za vás nikto nemôže získať späť tieto peniaze. Je to preč.</p>\n\n<p>Príliš často jednotlivec držal v peňaženke Monero, bol zvedavý na svoje finančné prostriedky a chcel si ich skontrolovať. Ale namiesto toho, aby sa museli trápiť s preinštalovaním celej aplikácie peňaženky, jednoducho sa rozhodnú použiť webovú peňaženku na rýchle obnovenie svojho zárodku a pozrieť sa na svoje peniaze. Ak sa stanú obeťou podvodu typu Business Look Alike, potom už samotný akt vloženia ich zárodku to dá podvodníkom, ktorí potom môžu presunúť peniaze do inej peňaženky, ktorú ovládajú podľa vlastného uváženia.</p>\n\n<p> KEDYKOĽVEK má stránka, aplikácia alebo peňaženka možnosť „obnoviť pomocou seedu“, buďte veľmi opatrní, aby bola aplikácia, ktorú používate, legitímna. Skontrolujte hodnoty hash programu (na webovej lokalite Monero nájdete pokyny, ako to urobiť), aby ste sa uistili, že s programom nebolo manipulované vonkajšími silami, a neustále si uvedomujte, kde a ako odhaľujete svoje semeno. Dvojitá kontrola môže byť nepríjemná, ale strata finančných prostriedkov z nepozornosti by bola ešte horšia.</p>';
 
   @override
   String get knowledge250Sbscams250Sb4250Sbtitle => 'Úloha vášho Monero semienka v podvodoch';
@@ -4585,7 +4585,7 @@ class I18nSk extends I18n {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => 'Obnoviť';
 
   @override
-  String note250Sbbutton(Object username, Object val) {
+  String note250Sbbutton(Object username) {
     return 'Pridať poznámku k $username';
   }
 
@@ -4598,7 +4598,7 @@ class I18nSk extends I18n {
   String get note250Sbinput250Sbplaceholder => 'Toto je súkromná poznámka pre vašu vlastnú potrebu, nebude viditeľná pre tohto používateľa ani pre žiadneho iného používateľa.';
 
   @override
-  String note250Sbtitle(Object username, Object val) {
+  String note250Sbtitle(Object username) {
     return 'Vaša poznámka na $username (vidíte ju iba vy)';
   }
 
@@ -6674,7 +6674,7 @@ class I18nSk extends I18n {
   String get verify8722Sbemail250Sbsuccess => 'E-mail bol úspešne overený!';
 
   @override
-  String get wallet250Sbclipboard8722Sbvirus8722Sbwarning => '<strong> Uistite sa, že adresa, ktorú ste prilepili, je rovnaká ako adresa, ktorú ste skopírovali! </strong> Niektorí používatelia ukradli svoje prostriedky <a style=\"text-decoration:underline;font-size:inherit;color:inherit\" href=\"https://reddit.com/r/Monero/comments/mcvuxc/beware_crypto_stealing_malware/\" target=\"_blank\">malvérom, ktorý nahradil adresu skopírovanú do schránky adresou útočníka</a>.';
+  String get wallet250Sbclipboard8722Sbvirus8722Sbwarning => '<strong> Uistite sa, že adresa, ktorú ste prilepili, je rovnaká ako adresa, ktorú ste skopírovali! </strong> Niektorým používateľom bol ukradnutý <a style=\"text-decoration:underline;font-size:inherit;color:inherit\" href=\"https://web.archive.org/web/20220422235453/https://www.reddit.com/r/Monero/comments/mcvuxc/beware_crypto_stealing_malware/\" target=\"_blank\">malvér, ktorý nahradil adresu skopírovanú do schránky adresou útočníka</a>.';
 
   @override
   String get wallet250Sbdownload8722Sbcsv8722Sbbtn => 'Stiahnite si CSV';
@@ -7553,6 +7553,40 @@ class I18nSk extends I18n {
   String dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsingle8722Sbasset8722Sbbuys(Object asset) {
     return '$asset nakupovať iba reklamy';
   }
+
+  @override
+  String error250Sbtrade8722Sbrequest250Sb363(Object cakeLink, Object monerujoLink, Object featherLink) {
+    return 'Zadali ste adresu, ktorú ste dostali od obchodníka, ktorý neaktualizoval svoj formát adresy (integrovaná adresa). Nastavte si vlastnú peňaženku v aplikácii ako $cakeLink, $monerujoLink alebo $featherLink a uveďte túto adresu.';
+  }
+
+  @override
+  String get error250Sbtrade8722Sbrequest250Sb364 => 'Vlastník tejto reklamy neuviedol adresu sídla. Kontaktujte ich a povedzte im, aby aktualizovali svoju reklamu alebo našli iného kupujúceho.';
+
+  @override
+  String notification250Sbtrade8722Sbfunded(Object tradeId, Object username) {
+    return 'Obchod $tradeId bol prijatý $username';
+  }
+
+  @override
+  String get web8722Sbnotification250Sbtrade8722Sbfunded => 'Obchod bol prijatý';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbtrade8722Sbsend => 'Obchod poslať';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbnon8722Sbtrade8722Sbsend => 'Neobchodné odosielanie';
+
+  @override
+  String get address250Sbvalidation250Sbgeneric => 'Neplatná adresa';
+
+  @override
+  String get address250Sbvalidation250Sbtaproot8722Sbdisallowed => 'Taproot adresy nie sú povolené';
+
+  @override
+  String get reputation8722Sbimport250Sbstep250Sbcode250Sbmessage250Sbpaxful => 'Umiestnite kód ako štítok na jednu zo svojich ponúk tak, aby bol viditeľný vo vašom verejnom profile. Keď kód overíme, môžete ho odstrániť.';
+
+  @override
+  String get trade250Sbwarning250Sbconfirmations => 'Nedokončujte, kým TX kupujúceho nebude mať potvrdenia! Došlo k nárastu podvodov, pri ktorých je nepotvrdená transakcia zrušená po dokončení predajcu.';
 
   @override
   String get ads => 'Reklamy';
@@ -9051,7 +9085,7 @@ class I18nSk extends I18n {
   }
 
   @override
-  String app_buy_sell(Object val) {
+  String app_buy_sell(Object val, Object buyOrSell) {
     return 'Koľko si želáte $val?';
   }
 
@@ -9212,12 +9246,12 @@ class I18nSk extends I18n {
   String get app_final_amount => 'Konečná suma';
 
   @override
-  String app_note_label(Object val) {
+  String app_note_label(Object val, Object username) {
     return 'Vaša poznámka na $val(vidíte ju iba vy)';
   }
 
   @override
-  String app_note_add(Object val) {
+  String app_note_add(Object val, Object username) {
     return 'Pridať poznámku k $val';
   }
 
@@ -9286,7 +9320,7 @@ class I18nSk extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: kúp XMR ľahko';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Kúpiť alebo predávať Monero bez overenia ID. Hotovostne alebo online. Bezpečne, rýchlo, jednoducho.\n\nLocalMonero je najväčšia, najdôveryhodnejšia a osvedčená obchodná platforma P2P v komunite XMR. Nemáme žiadne šeky KYC – môžete si jednoducho kúpiť Monero anonymne bez overenia ID cez PayPal, kreditnú kartu, darčekovú kartu, hotovosť poštou alebo previesť bitcoiny, étery, USDT alebo akékoľvek iné kryptomeny na Monero – naša platforma podporuje akýkoľvek spôsob platby.\n\n- Bezpečné a plynulé obchodovanie\nPodporujeme akýkoľvek spôsob platby, akúkoľvek menu a kdekoľvek. Neodstraňujeme spôsoby platby a plne podporujeme osobné hotovostné obchody. Všetky naše obchody sú chránené arbitrážnym dlhopisom. Vďaka tomu, že požadujeme, aby boli finančné prostriedky pred začatím obchodu držané v rozhodcovskom dlhopise, zabezpečujeme bezproblémový a bezpečný zážitok pre kupujúceho, čo je nevyhnutné pre popularitu platformy a opakovaných zákazníkov pre predajcov.\n\n- Žiadne overenie KYC/AML alebo ID\nLocalMonero sa zaväzuje zachovať jednoduchosť a priamočiarosť vašich obchodných skúseností. Nezamestnávame KYC/AML a ani to nikdy neplánujeme.\n\n- Dôveryhodné spoločenstvom\nNaša platforma funguje už viac ako štyri roky, prežila veľký krach kryptomenového trhu v roku 2018 a vďaka svojej dôslednej službe zameranej na komunitu sa stala jedným z najdôveryhodnejších mien v extrémne skeptickej komunite Monero.\n\n- Bezpečné, Open Source, Súkromie, Odolné voči cenzúre\nNaša aplikácia je bezplatná a má otvorený zdroj, čo zaisťuje, že veľa očí sa pozerá na kód aplikácie, aby sa zaistilo, že neexistujú žiadne bezpečnostné diery alebo úniky súkromia. Otvorený zdroj našej aplikácie tiež umožňuje komukoľvek mať prístup k našej aplikácii, aj keď určité úložisko aplikácie cenzuruje aplikáciu. Naša aplikácia funguje dokonca aj na telefónoch, ktoré majú Google úplne zablokovaný. Veľmi si vážime vaše súkromie, preto od vás pri registrácii nevyžadujeme ani e-mail.\n\nZdrojový kód: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nNástroj na sledovanie problémov: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Hviezdna podpora\nNáš tím podpory je rýchly, pohotový a vždy ochotný potešiť. Nikdy sme nemali lístok na podporu, ktorý by nebol zodpovedaný do 24 hodín. Sme vždy ľahko dosiahnuteľní prostredníctvom sociálnych médií, pozorne počúvame vašu kritiku a vždy implementujeme dobré návrhy používateľov v rekordnom čase.\n\nNašu podporu nájdete na: https://localmonero.co/support\n\n- Spravodlivé poplatky\nNeúčtujeme prehnané poplatky, keď vložíte alebo vyberiete Monero do/z našej peňaženky arbitrážnych dlhopisov. Neexistuje žiadny poplatok za vklad a poplatok za výber je veľmi blízko poplatku, ktorý by ste platili pri bežnej transakcii.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Kúpiť alebo predávať Monero bez overenia ID. Hotovostne alebo online. Bezpečne, rýchlo, jednoducho.\n\nLocalMonero je najväčšia, najdôveryhodnejšia a osvedčená obchodná platforma P2P v komunite XMR. Nemáme žiadne šeky KYC – môžete si jednoducho kúpiť Monero anonymne bez overenia ID cez PayPal, kreditnú kartu, darčekovú kartu, hotovosť poštou alebo previesť bitcoiny, étery, USDT alebo akékoľvek iné kryptomeny na Monero – naša platforma podporuje akýkoľvek spôsob platby.\n\n- Bezpečné a plynulé obchodovanie\nPodporujeme akýkoľvek spôsob platby, akúkoľvek menu a kdekoľvek. Neodstraňujeme spôsoby platby a plne podporujeme osobné hotovostné obchody. Všetky naše obchody sú chránené arbitrážnym dlhopisom. Vďaka tomu, že pred začatím obchodu požadujeme držbu prostriedkov v rozhodcovskom dlhopise, zabezpečujeme bezproblémový a bezpečný zážitok pre kupujúceho, čo je nevyhnutné pre popularitu platformy a opakovaných zákazníkov pre predajcov.\n\n- Žiadne overenie KYC/AML alebo ID\nLocalMonero sa zaviazala zachovať jednoduchosť a priamočiarosť vašich obchodných skúseností. Nezamestnávame KYC/AML a ani to nikdy neplánujeme.\n\n- Dôveryhodné spoločenstvom\nNaša platforma funguje už viac ako štyri roky, prežila veľký krach kryptomenového trhu v roku 2018 a vďaka svojej dôslednej službe zameranej na komunitu sa stala jedným z najdôveryhodnejších mien v extrémne skeptickej komunite Monero.\n\n- Bezpečné, Open Source, Súkromie, Odolné voči cenzúre\nNaša aplikácia je bezplatná a má otvorený zdroj, čo zaisťuje, že veľa očí sa pozerá na kód aplikácie, aby sa zaistilo, že neexistujú žiadne bezpečnostné diery alebo úniky súkromia. Otvorený zdroj našej aplikácie tiež umožňuje komukoľvek mať prístup k našej aplikácii, aj keď určité úložisko aplikácie cenzuruje aplikáciu. Naša aplikácia funguje dokonca aj na telefónoch, ktoré majú Google úplne zablokovaný. Veľmi si vážime vaše súkromie, preto od vás pri registrácii nevyžadujeme ani e-mail.\n\nZdrojový kód: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nNástroj na sledovanie problémov: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Hviezdna podpora\nNáš tím podpory je rýchly, pohotový a vždy ochotný potešiť. Nikdy sme nemali lístok na podporu, ktorý by nebol zodpovedaný do 24 hodín. Sme vždy ľahko dosiahnuteľní prostredníctvom sociálnych médií, pozorne počúvame vašu kritiku a vždy implementujeme dobré návrhy používateľov v rekordnom čase.\n\nNašu podporu nájdete na: https://localmonero.co/support\n\n- Spravodlivé poplatky\nNeúčtujeme prehnané poplatky, keď vložíte alebo vyberiete Monero do/z našej peňaženky arbitrážnych dlhopisov. Neexistuje žiadny poplatok za vklad a poplatok za výber je veľmi blízko poplatku, ktorý by ste platili pri bežnej transakcii.';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: súkromná kúpa XMR';

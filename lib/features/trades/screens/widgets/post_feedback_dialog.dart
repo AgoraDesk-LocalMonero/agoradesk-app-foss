@@ -104,7 +104,7 @@ class PostFeedbackDialog extends StatelessWidget {
                 SizedBox(
                   height: 40,
                   child: Radio<FeedbackType>(
-                    activeColor: Theme.of(context).colorScheme.primary70,
+                    activeColor: context.colP70P40,
                     value: FeedbackType.values[index],
                     groupValue: model.feedbackType,
                     onChanged: (FeedbackType? value) {

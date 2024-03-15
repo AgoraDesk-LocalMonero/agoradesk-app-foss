@@ -150,7 +150,7 @@ class I18nRo extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'Cumpără';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val) {
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
     return 'Cât de mult doriți să $buyOrSell?';
   }
 
@@ -264,7 +264,7 @@ class I18nRo extends I18n {
   }
 
   @override
-  String get ad250Sbconfirmation250Sbprovide8722Sbaddress250Sbyou8722Sbown => 'Prin începerea tranzacției, confirmați că portofelul destinatar vă aparține.';
+  String get ad250Sbconfirmation250Sbprovide8722Sbaddress250Sbyou8722Sbown => 'Prin începerea tranzacției, confirmați că portofelul destinatar vă aparține';
 
   @override
   String get ad250Sbdeleted => 'Acest anunț a fost șters';
@@ -556,7 +556,7 @@ class I18nRo extends I18n {
   String get agoradesk250Sblbc8722Sbalternative250Sbfeatures8722Sb128722Sb1 => 'Program de afiliere';
 
   @override
-  String get agoradesk250Sblbc8722Sbalternative250Sbfeatures8722Sb13 => 'Multilingvistic: este compatibil cu limba engleză, rusă, chineză (atât simplificată, cât și tradițională), italiană, portugheză și spaniolă.';
+  String get agoradesk250Sblbc8722Sbalternative250Sbfeatures8722Sb13 => 'Multilingvistic: este compatibil cu limba engleză, rusă, chineză (atât simplificată, cât și tradițională), italiană, portugheză și spaniolă';
 
   @override
   String agoradesk250Sblbc8722Sbalternative250Sbfeatures8722Sb14(Object telegram) {
@@ -910,7 +910,7 @@ class I18nRo extends I18n {
 
   @override
   String contact250Sbtext8722Sb0(Object openATicket, Object email) {
-    return 'Pentru a contacta serviciul nostru de asistență puteți $openATicket sau trimite un e-mail la $email.';
+    return 'Pentru a contacta serviciul nostru de asistență puteți $openATicket sau trimite un e-mail la $email';
   }
 
   @override
@@ -918,7 +918,7 @@ class I18nRo extends I18n {
 
   @override
   String contact250Sbtext8722Sb1(Object email) {
-    return 'Pentru afaceri, presă și alte solicitări, contactați-ne la $email.';
+    return 'Pentru afaceri, presă și alte solicitări, contactați-ne la $email';
   }
 
   @override
@@ -1467,7 +1467,7 @@ class I18nRo extends I18n {
 
   @override
   String document8722Sbtitle250Sbfeedback(Object user) {
-    return 'Feedback-ul lui $user.';
+    return 'Feedback-ul lui $user';
   }
 
   @override
@@ -1700,7 +1700,7 @@ class I18nRo extends I18n {
   String get error250Sbpost8722Sbad250Sb107 => 'Nu se poate urmări lichiditatea fără a seta suma maximă';
 
   @override
-  String get error250Sbpost8722Sbad250Sb108 => 'Valoarea minimă a tranzacției nu poate fi egală sau mai mare decât valoarea maximă a tranzacției.';
+  String get error250Sbpost8722Sbad250Sb108 => 'Valoarea minimă a tranzacției nu poate fi egală sau mai mare decât valoarea maximă a tranzacției';
 
   @override
   String get error250Sbpost8722Sbad250Sb114 => 'Fereastra de plată trebuie să fie de 15-90 de minute';
@@ -1726,7 +1726,7 @@ class I18nRo extends I18n {
   String get error250Sbpost8722Sbad250Sb81 => 'Valoarea prețului nu a fost setată corect';
 
   @override
-  String get error250Sbpost8722Sbad250Sb86 => 'Combinații nevalide de țară, metodă de plată și monedă';
+  String get error250Sbpost8722Sbad250Sb86 => 'Combinații invalide de țară, metodă de plată și monedă';
 
   @override
   String get error250Sbpost8722Sbad250Sb87 => 'Această metodă de plată nu este valabilă pentru țara selectată';
@@ -1857,7 +1857,7 @@ class I18nRo extends I18n {
 
   @override
   String faq250Sbanswer8722Sb0(Object appName) {
-    return '$appName este o platformă de tranzacționare peer-to-peer Monero. Suntem o piață în care utilizatorii pot cumpăra și vinde Monero unul către și de la celălalt. Utilizatorii, numiți comercianți, creează reclame cu prețul și metoda de plată pe care doresc să o ofere. Puteți naviga pe site-ul nostru pentru anunțuri comerciale și puteți căuta o metodă de plată pe care o preferați. Veți găsi comercianți care cumpără și vând Monero online pentru mai mult de 60 de metode de plată diferite. Dacă sunteți nou la $appName și doriți să cumpărați Monero, vă rugăm să aruncați o privire la ghidul nostru cum să cumpărați pentru a afla cum să cumpărați Monero.';
+    return '$appName este o platformă de tranzacționare peer-to-peer pentru Monero. Suntem o piață unde utilizatorii pot cumpăra și vinde Monero unul altuia. Utilizatorii, numiți comercianți, creează anunțuri cu prețul și metoda de plată pe care doresc să o ofere. Puteți parcurge site-ul nostru pentru anunțuri de tranzacționare și căutați metoda de plată pe care o preferați. Veți găsi comercianți care cumpără și vând Monero online pentru mai mult de 60 de metode de plată diferite. Dacă sunteți nou la $appName și doriți să cumpărați Monero, aruncați o privire la ghidul nostru despre cum să cumpărați pentru a învăța cum să cumpărați Monero.';
   }
 
   @override
@@ -2017,7 +2017,7 @@ class I18nRo extends I18n {
 
   @override
   String faq250Sbanswer8722Sb29(Object feesPage) {
-    return 'Puteți verifica toate informațiile despre comisioanele actuale pe pagina noastră $feesPage.';
+    return 'Puteți verifica toate informațiile despre comisioanele actuale pe pagina noastră $feesPage';
   }
 
   @override
@@ -2025,7 +2025,7 @@ class I18nRo extends I18n {
 
   @override
   String faq250Sbanswer8722Sb30(Object playstoreLink, Object fdroidLink, Object apkLink, Object appstoreLink, Object telegram, Object thisGuide, Object appName) {
-    return 'Da facem! Dacă aveți Android, îl puteți obține pe $playstoreLink, $fdroidLink sau puteți descărca direct $apkLink. Pentru dispozitivele iOS, este disponibil pe $appstoreLink. De asemenea, puteți primi notificări pe mobil în $telegram! $thisGuide vă va ghida prin procesul de activare a notificărilor Telegram (este ușor). Botul nostru vă va trimite apoi notificări cu privire la evenimentele $appName.';
+    return 'Da, avem! Dacă ai Android, îl poți obține de pe $playstoreLink, $fdroidLink, sau îl poți descărca direct prin $apkLink. Pentru dispozitivele iOS, este disponibil pe $appstoreLink. Poți primi și notificări mobile în $telegram! $thisGuide te va ghida prin procesul de activare a notificărilor Telegram (este simplu). Botul nostru îți va trimite notificări despre evenimentele tale $appName.';
   }
 
   @override
@@ -2043,7 +2043,7 @@ class I18nRo extends I18n {
   }
 
   @override
-  String get faq250Sbanswer8722Sb338722Sbmorphtoken8722Sbfaq8722Sblink => 'Aici puteți citi mai multe despre cum funcționează ChangeNow, despre serviciul lor și despre taxele de rețea.';
+  String get faq250Sbanswer8722Sb338722Sbmorphtoken8722Sbfaq8722Sblink => 'Aici puteți citi mai multe despre cum funcționează ChangeNow, despre serviciul lor și despre taxele de rețea';
 
   @override
   String faq250Sbanswer8722Sb4(Object value) {
@@ -2073,12 +2073,12 @@ class I18nRo extends I18n {
 
   @override
   String faq250Sbanswer8722Sb8(Object appName) {
-    return 'Toate tranzacțiile online sunt protejate de obligațiuni de arbitraj. Când începe o tranzacție, o sumă de Monero egală cu valoarea tranzacției este rezervată automat din portofelul de obligațiuni $appName al vânzătorului. Aceasta înseamnă că, dacă vânzătorul fuge cu banii tăi și nu finalizează tranzacția, suportul $appName vă poate direcționa Monero-ul deținut în obligațiunea de arbitraj. Dacă vindeți Monero, nu finalizați niciodată tranzacția înainte de a ști că ați primit bani de la cumpărătorul Monero. Vă rugăm să rețineți că tranzacțiile locale nu au protecția obligațiunilor de arbitraj activată în mod implicit.';
+    return 'Toate tranzacțiile online sunt protejate prin garanții de arbitraj. Atunci când este inițiată o tranzacție, o sumă de Monero egală cu suma tranzacției este rezervată automat din portofelul de garanție $appName al vânzătorului. Aceasta înseamnă că dacă vânzătorul fuge cu banii tăi și nu finalizează tranzacția, suportul $appName poate direcționa Monero deținut în garanția de arbitraj către tine. Dacă vinzi Monero, nu finaliza niciodată tranzacția înainte de a ști că ai primit bani de la cumpărătorul de Monero. Vă rugăm să rețineți că tranzacțiile locale nu au protecția garanției de arbitraj activată în mod implicit.';
   }
 
   @override
   String faq250Sbanswer8722Sb857Sbagoradesk(Object appName) {
-    return 'Toate tranzacțiile online sunt protejate de obligațiuni de arbitraj. Când începe o tranzacție, o cantitate de criptomonedă egală cu valoarea tranzacției este rezervată automat din portofelul de obligațiuni $appName al vânzătorului. Aceasta înseamnă că, dacă vânzătorul fuge cu banii tăi și nu finalizează tranzacția, suportul $appName vă poate direcționa criptomoneda deținută în obligațiunea de arbitraj. Dacă vindeți criptomonede, nu finalizați niciodată tranzacția înainte de a ști că ați primit bani de la cumpărător. Vă rugăm să rețineți că tranzacțiile locale nu au protecția obligațiunilor de arbitraj activată în mod implicit.';
+    return 'Toate tranzacțiile online sunt protejate prin garanții de arbitraj. Atunci când este inițiată o tranzacție, o sumă de criptomonede egală cu suma tranzacției este rezervată automat din portofelul de garanție $appName al vânzătorului. Aceasta înseamnă că dacă vânzătorul fuge cu banii tăi și nu finalizează tranzacția, suportul $appName poate direcționa criptomonedele deținute în garanția de arbitraj către tine. Dacă vinzi criptomonede, nu finaliza niciodată tranzacția înainte de a ști că ai primit bani de la cumpărător. Vă rugăm să rețineți că tranzacțiile locale nu au protecția garanției de arbitraj activată în mod implicit.';
   }
 
   @override
@@ -2174,7 +2174,7 @@ class I18nRo extends I18n {
   }
 
   @override
-  String get faq250Sbquestion8722Sb24 => 'Am efectuat plata, dar am uitat să apăs butonul \"Am plătit\" sau nu l-am apăsat la timp.';
+  String get faq250Sbquestion8722Sb24 => 'Am efectuat plata, dar am uitat să apăs butonul \"Am plătit\" sau nu l-am apăsat la timp';
 
   @override
   String get faq250Sbquestion8722Sb25 => 'Cum vor fi gestionate litigiile?';
@@ -2313,7 +2313,7 @@ class I18nRo extends I18n {
   String get footer250Sble => 'Cereri de informații privind aplicarea legii';
 
   @override
-  String get footer250Sbpgp => 'chei PGP';
+  String get footer250Sbpgp => 'Cheile PGP';
 
   @override
   String get footer250Sbtor => 'Serviciu ascuns Tor';
@@ -2438,7 +2438,7 @@ class I18nRo extends I18n {
   String get guide250Sbbtc250Sbcard8722Sbfive8722Sb5250Sbtitle => '3. Discriminarea prețurilor';
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbfive8722Sb6 => 'Vindeți prăjituri și primiți bitcoin ca plată. Se pare că <strong>cineva care a deținut acel bitcoin înaintea ta a fost implicat în activități infracționale</strong>. Acum sunteți îngrijorat că ați devenit <strong>suspect într-un caz penal</strong>, deoarece mișcarea de fonduri către dumneavoastră este o chestiune de interes public. De asemenea, vă îngrijorează faptul că anumiți bitcoini pe care credeați că îi dețineți vor fi considerați \"pătați\" și că <strong>alții vor refuza să îi accepte ca plată</strong>.';
+  String get guide250Sbbtc250Sbcard8722Sbfive8722Sb6 => 'Vindeți prăjituri și primiți bitcoin ca plată. Se pare că <strong>cineva care a deținut acel bitcoin înaintea ta a fost implicat în activități infracționale</strong>. Acum sunteți îngrijorat că ați devenit <strong>suspect într-un caz penal</strong>, deoarece mișcarea de fonduri către dumneavoastră este o chestiune de interes public. De asemenea, vă îngrijorează faptul că anumiți bitcoini pe care credeați că îi dețineți vor fi considerați \"pătați\" și că <strong>alții vor refuza să îi accepte ca plată</strong>';
 
   @override
   String get guide250Sbbtc250Sbcard8722Sbfive8722Sb6250Sbtitle => '4. Fonduri viciate';
@@ -2557,7 +2557,7 @@ class I18nRo extends I18n {
   }
 
   @override
-  String get guide250Sbbtc250Sbconclusion8722Sb1 => 'Devine din ce în ce mai dificil pe măsură ce trece timpul, dar este încă posibil să achiziționezi bitcoin în mod anonim, atâta timp cât ești dispus să faci un pas în plus și să <strong>îl convertești din Monero.</strong> Din fericire, Monero nu face decât să vă sporească și mai mult confidențialitatea și anonimatul. În timp ce în majoritatea celorlalte ghiduri disponibile online se sugerează metode care implică pași care creează și mai multe scurgeri de confidențialitate, acest ghid este oferă o modalitate care nu numai că va minimiza scurgerile de confidențialitate, ci chiar va spori nivelul de confidențialitate în comparație cu cumpărarea de bitcoin direct cu bani lichizi, deoarece <strong>vei fi protejat de caracteristicile de confidențialitate ale Monero</strong>.';
+  String get guide250Sbbtc250Sbconclusion8722Sb1 => 'Devine tot mai dificil pe măsură ce trece timpul, dar este încă posibil să obții în mod anonim bitcoin atât timp cât ești dispus să faci un pas suplimentar de <strong> convertire a acestuia din Monero. </strong> Din fericire, Monero nu face decât să-ți crească intimitatea și anonimatul la un nivel și mai înalt. Spre deosebire de majoritatea celorlalte ghiduri disponibile online, care sugerează metode ce implică pași ce pot duce la scurgeri de informații private, acest ghid oferă o cale care nu numai că va minimiza scurgerile de informații private, dar va chiar îmbunătăți nivelul tău de intimitate în comparație cu cumpărarea de bitcoin direct cu numerar, deoarece <strong> vei fi protejat de funcțiile de confidențialitate ale Monero. </strong>';
 
   @override
   String get guide250Sbbtc250Sbconclusion250Sbtitle => 'Concluzie';
@@ -2586,7 +2586,7 @@ class I18nRo extends I18n {
 
   @override
   String guide250Sbbuy250Sbstep8722Sbfive8722Sbtext8722Sblocalmonero8722Sbwallet(Object appName) {
-    return 'portofel $appName.';
+    return 'portofel $appName';
   }
 
   @override
@@ -2628,10 +2628,10 @@ class I18nRo extends I18n {
   String get guide250Sbcbm250Sbbuyer250Sb0250Sbtext => 'Poți pune banii în plic acasă sau în mașină, iar telefonul tău, cu camera video pornită, poate fi pus în buzunarul din față al cămășii și va înregistra întregul proces fără prea multă muncă suplimentară din partea ta, în afară de a te asigura că faci totul în fața camerei. Dacă aveți ceva precum un GoPro sau cel mai recent iPhone, care are o cameră cu un unghi de vizualizare mai larg, va fi și mai ușor.\n\nPăstrați imaginile în caz de litigiu timp de 180 de zile.';
 
   @override
-  String get guide250Sbcbm250Sbbuyer250Sb0250Sbtitle => 'Videoclipul tău trebuie să fie filmat într-o singură repriză, fără întreruperi.';
+  String get guide250Sbcbm250Sbbuyer250Sb0250Sbtitle => 'Videoclipul tău trebuie să fie filmat într-o singură repriză, fără întreruperi';
 
   @override
-  String get guide250Sbcbm250Sbbuyer250Sb1250Sbtext => 'Folosiți un fel de toacă/ștampilă/ștampilă personalizată, sau o semnătură sau doar piscăleli aleatorii cu un marker în interiorul plicului, acoperind toate suprafețele. Acest lucru va ajuta să stabiliți dacă vânzătorul deschide într-adevăr plicul pe care l-ați trimis sau unul fals. Asigurați-vă că semnul este vizibil pe video.';
+  String get guide250Sbcbm250Sbbuyer250Sb1250Sbtext => 'Utilizează un fel de ștampilă personalizată sau un știft special, o semnătură sau pur și simplu mișcări aleatorii cu un marker în interiorul plicului, acoperind toate suprafețele. Acest lucru va ajuta să stabilești dacă vânzătorul deschide de fapt plicul pe care l-ai trimis sau unul fals. Asigură-te că semnul este vizibil pe înregistrare.';
 
   @override
   String get guide250Sbcbm250Sbbuyer250Sb1250Sbtitle => 'Puneți marcaje personalizate în interiorul plicului';
@@ -2751,7 +2751,7 @@ class I18nRo extends I18n {
   String get guide250Sblocal250Sbtext8722Sb9 => 'Tranzacționare fericită!';
 
   @override
-  String get guide250Sblocal250Sbtext8722Sbfour => 'Trimiteți link-uri prietenilor dvs., faceți publicitate pe rețelele de socializare și la nivel local, așteptați să apară comenzile.';
+  String get guide250Sblocal250Sbtext8722Sbfour => 'Trimiteți link-uri prietenilor dvs., faceți publicitate pe rețelele sociale și local, așteptați să înceapă comenzile';
 
   @override
   String guide250Sblocal250Sbtext8722Sbstep8722Sbone(Object signUp) {
@@ -2873,7 +2873,7 @@ class I18nRo extends I18n {
   String get guide250Sbmnemonic250Sbtitle => 'Cum să-mi refac portofelul de decontare fără custodie din sămânța mnemonică?';
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1 => 'Accesați pagina principală <a target=\"_blank\" href=\"/\" class=\"next-link\"></a> - veți vedea cele mai bune oferte pentru regiunea dvs. prestabilită. Puteți să vă rafinați rezultatele introducând suma dorită și modificând moneda, țara sau metoda de plată (selectați „Toate ofertele online” dacă nu sunteți sigur ce metodă de plată doriți să utilizați) în caseta de căutare și apăsând „Căutare”.';
+  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1 => 'Accesați pagina principală <a target=\"_blank\" href=\"/\" class=\"next-link\"></a> - veți vedea cele mai bune oferte pentru regiunea dvs. prestabilită. Vă puteți rafina rezultatele introducând suma dorită pe care doriți să o tranzacționați în caseta de căutare, apoi selectați cu ce monedă doriți să tranzacționați, țara și metoda de plată dorită (selectați „Toate ofertele online” dacă nu sunteți sigur ce metodă de plată vrei să folosești).';
 
   @override
   String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1250Sb1 => 'Din lista de anunțuri, alegeți unul de la un comerciant cu un număr mare de tranzacții și cu un scor de reputație bun (indicat în parantezele de lângă numele de utilizator). Un cerc verde înseamnă că comerciantul a fost online astăzi; un cerc galben înseamnă că a vizitat site-ul săptămâna aceasta; iar un cerc gri înseamnă că comerciantul nu a mai fost aici de mai bine de o săptămână. Puteți face clic pe butonul „Cumpără” pentru a vedea mai multe informații despre un anunț.';
@@ -3071,7 +3071,7 @@ class I18nRo extends I18n {
 
   @override
   String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb08722Sblocalmonero8722Sbwallet(Object appName) {
-    return 'portofel $appName.';
+    return 'portofel $appName';
   }
 
   @override
@@ -3118,7 +3118,7 @@ class I18nRo extends I18n {
 
   @override
   String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb1(Object assetName, Object assetSymbol, Object appName) {
-    return '<strong> Preț de piață sau preț fix </strong><br/> Pentru a stabili prețul anunțului dvs. puteți introduce o marjă pe care o doriți peste prețul de piață $assetName. Pentru a face acest lucru, introduceți un procent în câmpul de marjă după ce ați ales opțiunea \"Preț de piață\". De asemenea, este posibil să doriți să specificați un preț fix care nu se va schimba până când nu îl modificați manual. Pentru aceasta trebuie să alegeți opțiunea \"Preț fix\" și să introduceți valoarea prețului.<br/><br/> <strong>Min. Limita maximă a tranzacției </strong><br/>Limita minimă a tranzacției stabilește cea mai mică sumă pe care o poate cumpăra cineva. Dacă o setați la cinci și aveți moneda setată la EUR, înseamnă că cea mai mică sumă pentru care cineva poate deschide o tranzacție cu dvs. va fi de 5 EUR. Limita maximă a tranzacției stabilește care este cea mai mare sumă de tranzacționare pe care doriți să o acceptați. <br/><br/> <strong>Termeni de comercializare </strong><br/> Acesta este textul pe care cumpărătorul îl vede înainte de a deschide o tranzacție cu dumneavoastră. Este o idee bună să scrieți instrucțiuni pentru cumpărător cu privire la modul în care doriți să se desfășoare tranzacția și dacă aveți instrucțiuni specifice. Dacă, de exemplu, cereți cumpărătorului să prezinte o chitanță ca dovadă a plății înainte de a finaliza un schimb sau dacă aveți nevoie ca acesta să prezinte un act de identitate, acesta este locul în care trebuie să menționați acest lucru. Puteți arunca o privire la anunțurile altor comercianți pentru metoda de plată pe care doriți să o utilizați pentru a vă face o idee despre ce conțin condițiile comerciale bune. <br/><br/> <strong> Scor minim necesar de feedback </strong><br/>Minimul de feedback vă permite să stabiliți un scor minim de feedback necesar pentru a deschide o tranzacție folosind anunțul dumneavoastră.<br/><br/> <strong>Prima limită de timp ($assetSymbol) </strong><br/> Aceasta este o limită maximă specifică de tranzacții pentru utilizatorii noi. Dacă un cumpărător care nu are un istoric de tranzacționare anterior cu dumneavoastră dorește să deschidă o tranzacție cu dumneavoastră, aceasta este cea mai mare sumă pentru care poate deschide o tranzacție. <br/><br/><strong>Fereastra de plată</strong><br/>Timpul pe care cumpărătorul îl are la dispoziție pentru a finaliza plata înainte ca vânzătorul să poată anula tranzacția.<br/><br/> <strong>Urmăriți valoarea maximă a lichidității</strong><br/> Activarea urmăririi lichidității reduce limita maximă a reclamei cu suma care este reținută în prezent în tranzacțiile deschise. <br/><br/> <strong> Sfaturi rapide pentru identificarea escrocilor </strong> <br/><br/><strong>Cumpărătorii fraudulenți sunt adesea grăbiți.</strong> Cu cât un client îți cere mai mult să faci grăbește-te/grabă-te cu cât ar trebui să fii mai suspicios, clienții reali au întotdeauna răbdare. <br/><br/>Cumpărătorii fraudulenți deseori <strong>sugerează efectuarea integrală sau parțială a tranzacției în afara sistemului de protecție a obligațiunilor de arbitraj </strong>și apoi nu finalizează partea lor din tranzacție. <br/><br/> Fiți atenți la <strong>dovezile de plată prin photoshop</strong>, nu finalizați o tranzacție până când nu confirmați că ați primit banii. Nu sunteți obligat să finalizați o tranzacție până când nu puteți verifica că ați primit plata cumpărătorului. <br/><br/><strong>Nu deschideți niciun link pe care partenerul dvs. comercial vi le trimite</strong>. Dacă este necesar, utilizați un browser diferit de cel pe care îl utilizați. <br/><br/>Nu vizitați alte site-uri decât $appName cu browserul pe care îl utilizați pentru tranzacționare. <strong>Folosiți un browser diferit pentru alte site-uri web.</strong> <br/><br/> Marcați $appName în browser și utilizați întotdeauna marcajul când vizitați site-ul web. Acest lucru vă ajută să evitați vizitarea accidentală a site-urilor de phishing, acestea există și pot fi foarte convingătoare.';
+    return '<strong> Preț de piață sau preț fix </strong><br/> Pentru a stabili prețul la anunțul dvs., puteți introduce o marjă pe care o doriți peste prețul de piață al $assetName. Pentru a face acest lucru, introduceți un procent în câmpul marjă după ce alegeți opțiunea \"Preț de piață\". S-ar putea să doriți să specificați un preț fix care nu se va schimba până nu îl schimbați manual. Pentru aceasta, trebuie să alegeți opțiunea \"Preț fix\" și să introduceți valoarea prețului. <br/><br/> <strong> Limită min. / max. de tranzacție </strong><br/> Limita minimă de tranzacție stabilește suma minimă pe care cineva o poate cumpăra. Dacă o setați la cinci, și aveți moneda setată la EUR, înseamnă că suma minimă de tranzacție cu care cineva poate deschide o tranzacție cu dvs. va fi de 5 EUR. Limita maximă de tranzacție stabilește care este suma maximă de tranzacție pe care doriți să o acceptați. <br/><br/> <strong> Termeni de tranzacție </strong><br/> Acesta este textul pe care cumpărătorul îl va vedea înainte de a deschide o tranzacție cu dvs. Este o idee bună să scrieți instrucțiuni pentru cumpărător despre cum doriți să se desfășoare tranzacția și dacă aveți cerințe specifice. Dacă solicitați, de exemplu, ca cumpărătorul să predea un bon ca dovadă de plată înainte de a finaliza o tranzacție sau dacă aveți nevoie ca cumpărătorul să furnizeze un ID, acesta este locul în care trebuie să menționați aceasta. Puteți arunca o privire la anunțurile altor comercianți pentru metoda de plată pe care doriți să o utilizați pentru a avea o idee despre ce conțin termenii buni de tranzacție. <br/><br/> <strong> Opțiuni extra </strong><br/><br/> <strong> Limitări de sume </strong><br/> Puteți restricționa anunțul astfel încât să permită doar deschiderea de tranzacții pentru sume specificate. Dacă introduceți 20,30,60 în casetă, un potențial partener de tranzacție va putea deschide o tranzacție doar pentru 20, 30 sau 60 EUR. <br/><br/> <strong> Detalii de plată </strong><br/> Introduceți aici informații specifice referitoare la modul în care ar trebui să plătească cumpărătorul, acest lucru poate fi numărul dvs. de cont bancar sau adresa de e-mail (de exemplu, pentru PayPal). <br/><br/> <strong> Punctaj minim de feedback necesar </strong><br/> Punctajul minim de feedback vă permite să setați un punctaj de feedback minim necesar pentru a deschide o tranzacție utilizând anunțul dvs. <br/><br/> <strong> Limită pentru prima dată ($assetSymbol) </strong><br/> Aceasta este o limită de tranzacție maximă specifică pentru utilizatorii noi. Dacă un cumpărător care nu are un istoric de tranzacționare cu dvs. dorește să deschidă o tranzacție cu dvs., aceasta este suma maximă pentru care pot deschide o tranzacție. <br/><br/> <strong> Fereastra de plată </strong><br/> Cantitatea de timp pe care cumpărătorul o are pentru a finaliza plata înainte ca vânzătorul să poată anula tranzacția. <br/><br/> <strong> Monitorizarea lichidității maxime </strong><br/> Activarea monitorizării lichidității scade limita maximă a anunțului cu suma care este în prezent blocată în tranzacțiile deschise. <br/><br/> <strong> Sfaturi rapide pentru identificarea escrocilor </strong> <br/><br/><strong>Clienții frauduloși sunt adesea în grabă.</strong> Cu cât un client vă cere mai mult să vă grăbiți, cu atât ar trebui să fiți mai suspicios, clienții reali au întotdeauna răbdare. <br/><br/>Clienții frauduloși propun adesea <strong>să se realizeze toată tranzacția sau o parte a acesteia în afara sistemului de protecție al legăturii de arbitraj </strong>și apoi nu își finalizează partea de tranzacție. <br/><br/> Fiți atent la <strong>dovezile de plată photoshoppate</strong>, nu finalizați o tranzacție până când nu v-ați asigurat că ați primit banii. Nu sunteți obligat să finalizați o tranzacție până când puteți verifica că ați primit plata cumpărătorului. <br/><br/><strong>Nu deschideți niciun link pe care partenerul de tranzacții vi-l trimite</strong>. Dacă este absolut necesar, utilizați un alt browser decât cel pe care îl utilizați. <br/><br/> Nu vizitați alte site-uri decât $appName cu browserul pe care îl utilizați pentru a face tranzacții. <strong> Utilizați un alt browser pentru alte site-uri web. </strong> <br/><br/> Adăugați $appName în bookmark-urile browserului dvs. și utilizați întotdeauna marcajul pentru a vizita site-ul web. Acest lucru vă ajută să evitați vizitarea accidentală a site-urilor de phishing, ele există și pot fi foarte convingătoare.';
   }
 
   @override
@@ -3242,7 +3242,7 @@ class I18nRo extends I18n {
   String get keywords57Sbagoradesk => 'cumpăra bitcoin btc monero xmr cash card de credit usd euro lira sterlină transfer bancar local vinde anonim criptocurrency';
 
   @override
-  String get knowledge250Sbatomic250Sb0250Sbtext => '<p>În căutarea descentralizării și a unui sistem cu adevărat lipsit de permisiuni, puține lucruri sunt la fel de râvnite în spațiul criptomonedelor ca schimburile descentralizate și schimburile atomice. Încă de la înființare, Monero s-a luptat să implementeze schimburi atomice, deoarece caracteristicile de confidențialitate creează probleme unice atunci când se încearcă proiectarea unui protocol</p>\n<p>Dar mai întâi, să ne întoarcem. Ce sunt schimburile atomice? Un swap atomic este un protocol prin care două criptomonede diferite, pe blockchains diferite, pot fi schimbate fără încredere și fără intermediari. Acest lucru înseamnă că, dacă cineva ar dori să schimbe criptomoneda A cu criptomoneda B, ar putea să o facă fără un schimb, centralizat sau descentralizat. După cum ne putem imagina, acest lucru necesită o cercetare considerabilă, iar detaliile tehnice complete care fac posibil acest lucru devin destul de complicate. Încă o dată, LocalMonero este aici pentru a ajuta și a oferi o explicație simplă pentru omul de rând.</p>\n<p>Pentru început, să luăm în considerare cea mai simplă formă de swap atomic, așa cum este implementată de Bitcoin. Dacă cineva dorește să schimbe Bitcoin cu o altă monedă care utilizează aceeași tehnologie de contract de blocare a timpului de hash, o poate face în felul următor. Alice are Bitcoin (BTC), dar vrea Litecoin (LTC), iar Bob are LTC, dar vrea BTC. Ei decid să facă un schimb atomic, astfel încât fiecare să primească moneda pe care o dorește. Alice își trimite BTC-ul la o adresă specială, utilizând scripturi care blochează fondurile astfel încât nici măcar ea nu le poate accesa. Puteți să vă gândiți că Alice își pune BTC-ul într-o cutie de valori. Atunci când se face cutia de blocare, ea primește o cheie și îi trimite lui Bob un hash al acestei chei. Acum, Bob nu are cheia în sine, ci doar hash-ul, așa că nu poate accesa încă fondurile.</p>\n<p>Bob folosește acest hash ca o sămânță din care își generează propriul lockbox și își trimite LTC-ul acolo, unde este de asemenea blocat. Deoarece hash-ul cheii lui Alice a fost folosit ca sămânță pentru a crea caseta de blocare a lui Bob, aceasta își poate folosi cheia pentru a revendica LTC în caseta de blocare a lui Bob. Cheia ei se potrivește! Dar, folosind magia voodoo a matematicii, atunci când Alice își folosește cheia pentru a deschide încuietoarea LTC, îi dezvăluie cheia lui Bob, care o poate folosi pentru a revendica BTC-ul pe care ea l-a pus în cutia ei. În acest fel, fără niciun intermediar, Alice și Bob și-au schimbat cu succes activele.</p>\n<p>Dar există o mică problemă. Ce se întâmplă dacă Alice trimite la cutia de valori, iar Bob decide că nu mai vrea să facă schimb. Acum, din moment ce Alice nu-și poate accesa BTC-ul pe care l-a blocat, iar Bob nu-și va finaliza partea sa de tranzacție, Alice își pierde banii pentru totdeauna. Din fericire, Bitcoin dispune de o mică tehnologie numită tranzacții de rambursare, astfel încât, după o anumită perioadă de timp, dacă BTC nu este revendicat de Bob, scripturile au un sistem de siguranță integrat, prin care BTC se va întoarce automat la Alice. Acesta a fost principalul obstacol în calea implementării schimburilor atomice ale Monero. Datorită tehnologiei Monero <a target=\"_blank\" href=\"/knowledge/ring-signatures\" class=\"next-link\">tehnologiei de confidențialitate a semnăturilor în formă de inel</a>, expeditorul unei tranzacții este întotdeauna incert. Cum poate protocolul să facă o tranzacție de rambursare dacă nici măcar el nu știe de unde a venit tranzacția?</p>\n<p>În 2017, un mic grup de cercetători a prezentat o metodă diferită prin care schimburile atomice ar funcționa în Monero. După mai mulți ani de perfecționare, cercetătorii au finalizat un proces prin care Monero ar putea face schimburi atomice cu Bitcoin, chiar și fără tranzacții de rambursare.</p>\n<p>Ca în cazul multor lucruri de acest nivel de complexitate tehnică, explicația noastră va simplifica excesiv unele lucruri pentru a transmite ideea, dar va oferi totuși o idee solidă despre mecanismele prin care ar funcționa acest proces.</p>\n<p>Atât Alice (care are XMR și vrea BTC), cât și Bob (care are BTC și vrea XMR) trebuie să descarce și să ruleze un program care acceptă schimbul atomic. Acest lucru poate fi implementat în portofele, în schimburi descentralizate sau în programe speciale, specifice, dar software-ul trebuie să ruleze protocolul de swap atomic. În prima etapă, clienții lui Alice și Bob se conectează unul la celălalt și realizează mai multe secrete și chei partajate. În această etapă, se creează o nouă adresă Monero, Alice având o jumătate din cheie, iar Bob cealaltă. Cu toate acestea, nu există încă Monero acolo, deci nu există nimic de cheltuit. Un ultim lucru care trebuie remarcat în legătură cu această adresă este că amândoi au cheia de vizualizare a acestui portofel, așa că amândoi pot trage cu ochiul înăuntru pentru a vedea dacă sau când ajunge Monero.</p>\n<p>În al doilea pas, Bob trimite BTC-ul său la o adresă specială, similar cu protocolul de schimb atomic Bitcoin pe care l-am discutat deja. După ce Alice vede BTC-ul sosit la această adresă pe blockchain, ea își trimite Monero la adresa Monero la care atât ea, cât și Bob au câte o jumătate de cheie. Bob poate verifica dacă Monero a sosit, deoarece și el are cheia de vizualizare, iar după ce vede că Monero este în siguranță în portofel, îi trimite lui Alice o bucată de cheie care îi va permite să retragă Bitcoin. La fel ca în cazul celuilalt protocol, procesul de revendicare a Bitcoin îi dezvăluie lui Bob jumătatea ei de cheie Monero. Acum Bob are ambele jumătăți, astfel încât poate revendica Monero, în timp ce Alice are doar jumătatea ei, deci nu poate încerca să o ia înaintea lui.</p>\n<p>Deci, dacă te-ai uitat la toate acestea și ești încă puțin confuz cu privire la modul în care Monero a reușit să ocolească problema tranzacțiilor de rambursare, răspunsul este destul de simplu. Deoarece Monero nu are tranzacții de rambursare, cititorul ar trebui să observe că Bitcoin (care are tranzacții de rambursare) este trimis mai întâi și numai după ce este verificată ca fiind în blockchain este trimisă Monero. Acest lucru permite Monero să utilizeze capacitatea Bitcoin de a scrie în scripturi în tranzacții de rambursare și să profite de acestea, fără a fi nevoie să aibă ea însăși aceste capacități.</p>\n<p>Schimbul atomic este acum finalizat, dar de aici încolo, Bob are câteva opțiuni pentru noul său XMR revendicat. El poate folosi acest portofel Monero ca atare sau poate muta XMR într-un alt portofel pe care îl deține deja. Cel mai probabil, Bob va muta Monero într-un alt portofel, deoarece Alice are încă cheia de vizualizare și poate vedea înăuntru.</p>\n<p>Frumusețea acestui protocol constă în faptul că este încă destul de nou și că există mult loc pentru optimizări. De asemenea, este destul de flexibil în arhitectura sa, astfel încât implementarea în alte portofele sau burse descentralizate ar trebui să fie simplă și să se potrivească perfect cu arhitectura lor existentă.</p>';
+  String get knowledge250Sbatomic250Sb0250Sbtext => '<p>În căutarea descentralizării și a unui sistem cu adevărat fără permisiuni, puține lucruri sunt la fel de râvnite în spațiul criptomonedei precum schimburile descentralizate și schimburile atomice. De la apariția sa, Monero a avut dificultăți în implementarea schimburilor atomice, deoarece caracteristicile de confidențialitate creează probleme unice atunci când încerci să proiectezi un protocol.</p>\n\n<p>Dar mai întâi, să ne lămurim. Ce sunt schimburile atomice? Un schimb atomic este un protocol prin care două criptomonede diferite, pe blockchain-uri diferite, pot fi schimbate într-o manieră fără încredere, fără niciun intermediar. Acest lucru înseamnă că dacă cineva vrea să schimbe criptomoneda A pentru criptomoneda B, ar putea face acest lucru fără o bursă, centralizată sau descentralizată. După cum vă puteți imagina, aceasta necesită o cercetare considerabilă, iar detaliile tehnice care o fac posibilă devin destul de complicate. Din nou, LocalMonero este aici pentru a ajuta și oferă o explicație simplă pentru persoana obișnuită.</p>\n\n<p>Ca să începem, haideți să considerăm forma cea mai simplă de schimb atomic, așa cum este implementat de Bitcoin. Dacă cineva vrea să schimbe Bitcoin cu o altă monedă care utilizează aceeași tehnologie de contract hash time lock, poate face acest lucru în următorul mod. Alice are Bitcoin (BTC), dar vrea Litecoin (LTC), iar Bob are LTC, dar vrea BTC. Ei decid să facă un schimb atomic astfel încât fiecare să obțină moneda pe care o dorește. Alice trimite BTC-ul ei la o adresă specială, folosind scripturi care blochează fondurile astfel încât nici măcar ea nu poate să-l acceseze. Puteți considera că Alice își pune BTC-ul într-un seif. Când seiful este creat, ea obține o cheie, și trimite un cod hash al acestei chei lui Bob. Acum, Bob nu are cheia însăși, doar codul hash, așa că încă nu poate accesa fondurile.</p>\n\n<p>Bob folosește acest cod hash ca o sămânță de la care își generează propriul seif, și își trimite LTC-ul acolo, unde este de asemenea blocat. Deoarece codul hash al cheii lui Alice a fost folosit ca sămânță prin care a fost creat seiful lui Bob, ea își poate folosi cheia pentru a revendica LTC-ul din seiful lui Bob. Cheia ei se potrivește! Dar, folosind magia matematicii, când ea își folosește cheia pentru a deschide seiful LTC, îi dezvăluie cheia lui Bob, care apoi poate să o folosească pentru a revendica BTC-ul pe care l-a pus în seiful ei. Astfel, fără nici un intermediar, Alice și Bob și-au schimbat cu succes activele.</p>\n\n<p>Dar există o mică problemă. Ce se întâmplă dacă Alice trimite BTC-ul în seiful ei, și Bob decide că nu mai vrea să facă tranzacția. Acum, deoarece Alice nu poate accesa BTC-ul pe care l-a blocat, iar Bob nu își va finaliza partea de tranzacție, Alice își pierde pur și simplu banii pentru totdeauna. Ei bine, din fericire, Bitcoin are o tehnică numită tranzacții de rambursare, și astfel, după o perioadă de timp, dacă BTC-ul nu este revendicat de Bob, scripturile au o rețea de siguranță integrată, unde BTC-ul va reveni automat la Alice. Acesta a fost obstacolul principal pentru implementarea schimburilor atomice de câtre Monero. Din cauza <a target=\"_blank\" href=\"/knowledge/ring-signatures\" class=\"next-link\">tehnologiei de confidențialitate a semnăturilor circulare a Monero</a>, expeditorul unei tranzacții este întotdeauna incert. Cum poate protocolul să facă o tranzacție de rambursare dacă nici măcar nu știe de unde a venit tranzacția?</p>\n\n<p>În 2017, un mic grup de cercetători a conturat o metodă diferită prin care schimburile atomice ar funcționa în Monero. După mai mulți ani de rafinare, cercetătorii au finalizat un proces prin care Monero ar putea face schimburi atomice cu Bitcoin, chiar și fără tranzacții de rambursare.</p>\n\n<p>Ca și în multe alte lucruri de acest nivel de complexitate tehnică, explicația noastră va simplifica foarte mult unele lucruri pentru a transmite ideea, dar va oferi totuși o idee solidă despre mecanismele prin care acest proces ar funcționa.</p>\n\n<p>Alice (care are XMR și dorește BTC) și Bob (care are BTC și dorește XMR) trebuie să descarce și să ruleze un program care suportă schimbul atomic. Acest lucru poate fi implementat în portofele, schimburi descentralizate sau programe speciale, dar software-ul trebuie să ruleze protocolul de schimb atomic. În primul pas, clienții Alinei și lui Bob se conectează unul la altul și fac mai multe secrete și chei comune. În acest pas, se creează o nouă adresă Monero, având Alice cu o jumătate de cheie, iar Bob pe cealaltă. Încă nu există niciun Monero în acolo, așa că nu este nimic de cheltuit. Un ultim lucru de notat despre această adresă, este că ambii au cheia de vizualizare a acestui portofel, așa că pot amândoi să se uite în interior pentru a vedea dacă sau când sosește Monero.</p>\n\n<p>În al doilea pas, Bob trimite BTC-ul său la o adresă specială, similară cu protocolul de schimb atomic Bitcoin pe care l-am discutat deja. După ce Alice vede că BTC-ul a ajuns la acea adresă pe blockchain, ea își trimite Monero-ul la adresa Monero la care ea și Bob au amândoi o jumătate de cheie. Bob poate verifica că Monero a ajuns deoarece are și el cheia de vizualizare, și odată ce vede că Monero este în siguranță în portofel, el îi trimite Alicei o parte a unei chei care îi va permite să retragă Bitcoin-ul. Similar cu celălalt protocol, procesul de revendicare a Bitcoin-ului îi dezvăluie lui Bob jumătatea Monero a Alicei. Acum, Bob are ambele jumătăți, deci poate să revendice Monero, în timp ce Alice are doar jumătatea ei, de aceea nu poate încerca să o ia înainte de a o lua el.</p>\n\n<p>Dacă ați citit tot acest lucru și sunteți încă ușor confuz despre cum a reușit Monero să ocolească problema tranzacțiilor de rambursare, răspunsul este destul de simplu. Deoarece Monero în sine nu are tranzacții de rambursare, cititorul ar trebui să observe că Bitcoin (care are tranzacții de rambursare) este trimis mai întâi și doar după ce este verificat că se află pe blockchain, se trimite Monero. Acest lucru permite Monero să utilizeze capacitatea Bitcoin de a înregistra tranzacții de rambursare și să profite de ele, fără a avea aceste capacități în sine.</p>\n\n<p>Schimbul atomic este acum complet, dar de aici, Bob are câteva opțiuni pentru XMR-ul său proaspăt revendicat. El poate folosi acest portofel Monero așa cum este, sau poate muta XMR-ul în alt portofel pe care îl deține deja. Probabil că Bob va muta Monero într-un alt portofel, pentru că Alice încă are cheia de vizualizare și poate vedea în interior.</p>\n\n<p>Frumusețea acestui protocol este că este încă destul de nou, iar există mult loc pentru optimizări. De asemenea, este destul de flexibil în arhitectura sa, deci implementarea în alte portofele sau schimburi descentralizate ar trebui să fie simplă și să se potrivească perfect cu arhitectura lor existentă.</p>';
 
   @override
   String get knowledge250Sbatomic250Sbdescription => 'Puține lucruri sunt la fel de râvnite în spațiul criptografic precum schimburile atomice. Recent, cercetătorii au pus la punct o modalitate prin care XMR ar putea face schimburi atomice cu BTC.';
@@ -3251,7 +3251,7 @@ class I18nRo extends I18n {
   String get knowledge250Sbatomic250Sbtitle => 'Cum vor funcționa schimburile atomice în Monero';
 
   @override
-  String get knowledge250Sbblocks250Sb0250Sbtext => '<p><i><b>Notă:</b> Este foarte recomandat ca cititorul să citească articolele noastre <a target=\"_blank\" href=\"/knowledge/monero-tail-emission\" class=\"next-link\">„De ce Monero are o emisie de coadă”</a> și <a target=\"_blank\" href=\"/knowledge/monero-mining-randomx\" class=\"next-link\">„Monero Mining: What Makes RandomX atât de special”</a>. Acest articol se bazează pe conceptele prezentate acolo.</i></p>\n\n<p>De câte ori indivizii discută despre problemele legate de blockchain, unul dintre primele cuvinte care vor apărea va fi „scalarea”. Nu este un secret faptul că blockchain-urile nu se scalează bine, dar majoritatea oamenilor nu știu de ce.</p>\n\n<p>Adevărul este că scalarea este de fapt un termen umbrelă care acoperă două categorii diferite: suport pentru protocol și suport tehnologic la un moment dat. În acest articol, ne vom concentra atenția asupra unuia, suportul pentru protocol este practic o măsură a câte tranzacții poate gestiona protocolul la un moment dat.</p>\n\n<p>Bitcoin are o limită de dimensiune a blocurilor, ceea ce înseamnă că, odată ce sunt incluse suficiente tranzacții într-un bloc, orice tranzacție suplimentară va trebui să aștepte la rând pentru următorul bloc. O analogie utilă ar fi să te gândești la un tren. Un tren oprește până la gară, iar cei din coadă trec. Odată ce trenul este plin, oricine rămâne afară va trebui să aștepte pe următorul.</p>\n\n<p>Bitcoin folosește taxe pentru a determina cine intră sau nu în bloc. Revenind la analogia cu trenul, ne putem imagina că un potențial pasager, care este pe cale să rămână în urmă, îi oferă mecanicului de tren cinci dolari pentru a-i oferi un loc. Alți pasageri urmează exemplul și, în cele din urmă, există un război al licitațiilor pentru a vedea cine primește ce locuri. Rămâne la latitudinea șoferului să decidă dacă dorește să respecte politica primul venit, primul servit, dar este în interesul său financiar să-și maximizeze veniturile luând la bord cei mai mari ofertanți.</p>\n\n<p>În această analogie, minerii sunt mecanicii de tren. Ei pot include orice tranzacții doresc în bloc, dar în general le vor alege pe cele care au cele mai mari taxe plătite.</p>\n\n<p>În mod alternativ, dacă blocurile nu sunt foarte pline, oamenii nu au niciun stimulent să plătească taxe mari, deoarece există o mulțime de locuri libere de rezervat.</p>\n\n<p>În apogeul boom-ului criptomonedelor din 2017, Bitcoin a fost inundat de tranzacții, iar taxele au crescut vertiginos pentru cei care doreau să fie incluși în următorul bloc sau, de altfel, în orice bloc în viitorul apropiat. Cei care nu au fost dispuși să plătească taxe mari și-au văzut tranzacțiile amânate cu ore, zile sau chiar au renunțat cu totul la coadă.</p>\n\n<p>Aceasta a fost o perspectivă îngrozitoare asupra modului în care s-ar descurca Bitcoin dacă ar avea loc des vorbita despre „adopție în masă”. Dacă Bitcoin ar fi folosit de către mase, lucrurile ar fi chiar mai rău decât în 2017, iar Bitcoin ar fi inaccesibil oricui, în afară de cei bogați, pur și simplu pentru că debitul este mic din cauza unei dimensiuni fixe a blocului, ceea ce face ca piața de taxe să preia controlul. .</p>\n\n<p>Monero a prevăzut acest lucru și a vrut să facă ceva diferit. Deci, dezvoltatorii Monero au implementat o dimensiune bloc dinamică.</p>\n\n<p>Practic, Monero are și un capac de dimensiune bloc, dar este un capac moale. Când linia tranzacțiilor de așteptare devine prea lungă, minerii pot crește dimensiunea blocurilor. Cu analogia noastră cu trenul, vă puteți imagina să adăugați mai multe vagoane pentru a se potrivi cu pasagerii suplimentari. După ce coada este goală, blocurile se micșorează înapoi la dimensiunea inițială de acum înainte.</p>\n\n<p>Dacă aceasta pare a fi o idee bună, pare rezonabil să ne întrebăm de ce Monero este singura criptomonedă care a implementat acest lucru. De ce să nu îl adăugați pe Bitcoin pentru a pune capăt problemelor de debit?</p>\n\n<p>Din păcate, acest lucru nu este posibil. Există mai multe motive și vom face tot posibilul să explicăm.</p>\n\n<p> Este întotdeauna în interesul unui miner să aibă blocuri mari. Cu blocuri mari se pot încadra în mai multe tranzacții și pot câștiga mai mulți bani din comisioane, precum și din recompensele blocului. Acest lucru are potențialul de a duce la atacuri de spam, în care cineva trimite multe tranzacții mici, cu comisioane mici, pentru a umfla lanțul. Miner\'s ar ridica dimensiunea blocului și le-ar include pe toate pentru că banii sunt bani, indiferent cât de mici. Acest lucru ar duce la blocuri consistente mari, cu beneficii economice reduse. Bitcoin rezolvă acest lucru prin restricționarea artificială a dimensiunii blocului, generând astfel o piață de taxe. Atacatorii de spam ar trebui să plătească taxe pe ceilalți utilizatori și nu mai este ieftin. Dar asta înseamnă că blocurile sunt pline, lăsând unele tranzacții în așteptare, așa cum s-a menționat mai sus.</p>\n\n<p>Deci cum poate Monero să aibă dimensiuni de bloc dinamice, dar să evite atacurile de spam? Răspunsul este simplu, dar inteligent. O penalizare pentru recompensa de bloc este introdusă atunci când un bloc este mai mare decât în mod normal. Dacă un miner dorește să mărească dimensiunea blocului, recompensa pe care o primește din găsirea acelui bloc va fi mai mică decât ar primi-o altfel. Deci, vor crește dimensiunea blocului doar atunci când taxele de tranzacție plătite ale utilizatorilor depășesc partea pierdută a recompensei blocului. De exemplu, dacă minerul ar pierde 0,5 XMR prin creșterea dimensiunii blocului, iar suma taxelor de tranzacție plătite ar fi de 0,4 XMR, atunci ar exista o pierdere netă de 0,1 XMR dacă ar crește dimensiunea, așa că ar nu o face. În schimb, dacă taxele totale de tranzacție s-au adăugat până la 0,7 XMR, atunci ar exista un câștig net de 0,2 XMR, chiar dacă ei pierd 0,5 XMR din penalitatea de recompensă bloc, astfel încât minerul va crește dimensiunea.</p>\n\n<p>Aceste blocuri dinamice permit rețelei să se dezvolte organic, fără a restricționa în mod aritif dimensiunea blocului pentru a face o piață cu taxe forțate, evitând în același timp atacurile de spam. Există mai multe unghiuri din care putem vedea această idee și mai multe motive pentru care nu ar fi posibil să o adăugați la Bitcoin, dar pentru moment, sperăm că cititorul are o înțelegere a modului în care Monero ocolește câteva dintre problemele din Bitcoin și derivatele sale și modul în care intenționează să-și extindă debitul în viitor.</p>';
+  String get knowledge250Sbblocks250Sb0250Sbtext => '<p><i><b>Notă:</b> Este foarte recomandat ca cititorul să fi citit articolele noastre <a target=\"_blank\" href=\"/knowledge/monero-tail-emission\" class=\"next-link\">\"De ce Monero are o emisie de coadă\"</a> și <a target=\"_blank\" href=\"/knowledge/monero-mining-randomx\" class=\"next-link\">\"Minarea Monero: Ce face RandomX atât de special\"</a>. Acest articol se bazează pe conceptele prezentate acolo.</i></p>\n\n<p>De fiecare dată când indivizii discută problemele cu blockchain, unul dintre primele cuvinte care apar va fi \'scalarea\'. Nu este un secret că blockchains nu scalează bine, dar majoritatea oamenilor nu știu de ce.</p>\n\n<p>Adevărul este că scalarea este de fapt un termen umbrelă care acoperă două categorii diferite: suportul protocolului și suportul tehnologic la un moment dat. În acest articol, ne vom concentra atenția pe una, suportul protocolului este practic o măsură a cât de multe tranzacții poate gestiona protocolul la un moment dat.</p>\n\n<p>Bitcoin are o limită a dimensiunii blocului, ceea ce înseamnă că odată ce sunt incluse suficiente tranzacții într-un bloc, orice tranzacții suplimentare vor trebui să aștepte la rând pentru următorul bloc. O analogie utilă ar fi să te gândești la un tren. Un tren ajunge la stație și cei din coadă intră. Odată ce trenul este plin, oricine este lăsat afară va trebui să aștepte următorul.</p>\n\n<p>Bitcoin folosește taxe pentru a determina cine intră în bloc sau nu. Să revenim la analogia cu trenul, putem imagina un potențial pasager, care este pe punctul de a fi lăsat în urmă, oferă mecanicului de tren cinci dolari pentru a-i oferi un loc. Alți pasageri urmează exemplul, și în cele din urmă se ajunge la o licitație pentru a vedea cine ocupă care locuri. Este la latitudinea șoferului să decidă dacă vrea să respecte politica de primul venit, primul servit, dar este în cel mai bun interes financiar al său să-și maximizeze venitul luând la bord licitatorii cu cele mai mari oferte.</p>\n\n<p>În această analogie, mineri sunt șoferii de tren. Ei pot include oricare tranzacții doresc în bloc, dar în general vor alege cele care au taxele plătite cele mai mari.</p>\n\n<p>Alternativ, dacă blocurile nu sunt foarte pline, oamenii nu au niciun stimulent să plătească taxe mari deoarece sunt suficiente locuri gratuite disponibile.</p>\n\n<p>În vârful boomului criptomonedelor din 2017, Bitcoin a fost inundat cu tranzacții, iar taxele au crescut pentru cei care doreau să fie incluși în următorul bloc, sau orice bloc apropiat de viitor. Cei care nu erau dispuși să plătească taxe mari și-au văzut tranzacțiile amânate cu ore, zile, sau chiar scoase complet din coadă.</p>\n\n<p>Aceasta a fost o perspectivă înfricoșătoare asupra modului în care Bitcoin ar funcționa dacă adesea discutata \'adoptare în masă\' ar avea loc. Dacă Bitcoin ar fi folosit de mase, lucrurile ar fi și mai rele decât în 2017, și Bitcoin ar fi inaccesibil pentru oricine în afara celor bogați, pur și simplu pentru că debitul este mic din cauza unei dimensiuni fixe a blocului, determinând piața taxelor să preia controlul.</p>\n\n<p>Monero a prevăzut aceasta și a dorit să facă ceva diferit. Așadar, dezvoltatorii Monero au implementat un bloc dinamic.</p>\n\n<p>Practic, Monero are și o limită a dimensiunii blocului, dar este o limită moale. Când coada tranzacțiilor în așteptare devine prea lungă, minatorii pot crește dimensiunea blocurilor. Folosind analogia noastră cu trenul, te poți imagina adăugând mai multe vagoane pentru a se potrivi cu pasagerii extra. După ce coada este golită, blocurile se micsorează la dimensiunea lor originală.</p>\n\n<p>Dacă aceasta pare o idee bună, pare rezonabil să întrebăm de ce Monero este singura criptomonedă care a implementat acest lucru. De ce să nu-l adăugăm pe Bitcoin pentru a pune capăt problemelor de debit?</p>\n\n<p>Din păcate, acest lucru nu este posibil. Există mai multe motive pentru care, și vom face tot posibilul să explicăm.</p>\n\n<p> Este întotdeauna în cel mai bun interes al unui miner să aibă blocuri mari. Cu blocuri mari ei pot include mai multe tranzacții și pot face mai mulți bani din taxe, precum și din recompensele blocului. Acest lucru are potențialul de a duce la atacuri spam, unde cineva trimite multe tranzacții mici, cu taxe mici, pentru a umfla lanțul. Minatorii ar crește doar dimensiunea blocului pentru a le include pe toate pentru că banii sunt bani, indiferent cât de mici. Aceasta ar duce la blocuri consistent mari cu puțin beneficiu economic. Bitcoin rezolvă aceasta prin restricționarea artificială a dimensiunii blocului, generând astfel o piață a taxelor. Atacatorii spam ar trebui să plătească mai mult decât ceilalți utilizatori în taxe, și nu mai este ieftin. Dar asta înseamnă că blocurile devin pline lăsând unele tranzacții în așteptare cum am menționat mai sus.</p>\n\n<p>Așadar, cum poate Monero să aibă blocuri dinamice, dar să evite atacurile spam? Răspunsul este simplu, dar ingenios. O penalitate asupra recompensei blocului este introdusă atunci când un bloc este mai mare decât normal. Dacă un miner vrea să crească dimensiunea blocului, recompensa pe care o obține din găsirea acelui bloc va fi mai mică decât ar fi primit altfel. Așadar, ei vor crește dimensiunea blocului doar atunci când taxele plătite de utilizatori pentru tranzacții depășesc partea pierdută a recompensei blocului. De exemplu, dacă minerul ar pierde 0.5 XMR ridicând dimensiunea blocului, și suma taxelor plătite pentru tranzacții ar fi 0.4 XMR, atunci ar exista o pierdere netă de 0.1 XMR dacă ar crește dimensiunea, așadar ei nu ar face asta. Pe de altă parte, dacă totalul taxelor de tranzacție se ridică la 0.7 XMR, atunci ar exista un câștig net de 0.2 XMR, chiar dacă ei pierd 0.5 XMR din penalitatea recompensei blocului, așadar minerul va crește dimensiunea.</p>\n\n<p>Aceste blocuri dinamice permit rețelei să crească organic, fără a restricționa artificial dimensiunea blocului pentru a crea o piață de taxe forțată, în timp ce evită totuși atacurile spam. Există mai multe perspective din care putem privi această idee, și mai multe motive pentru care nu ar fi posibil să fie adăugat la Bitcoin, dar pentru moment, sperăm că cititorul are o înțelegere asupra felului în care Monero evită mai multe dintre problemele din Bitcoin și derivatele acestuia, și cum intenționează să-și scaleze debitul în viitor.</p>';
 
   @override
   String get knowledge250Sbblocks250Sbdescription => 'Ori de câte ori se discută despre problemele legate de blockchain, unul dintre primele cuvinte care apar este „scalare”. Monero se diferențiază prin faptul că rezolvă această problemă.';
@@ -3260,7 +3260,7 @@ class I18nRo extends I18n {
   String get knowledge250Sbblocks250Sbtitle => 'Cum a rezolvat Monero problema dimensiunii blocurilor care afectează Bitcoin';
 
   @override
-  String get knowledge250Sbbtc250Sb0250Sbtext => '<p>Monero este o criptomonedă care prețuiește confidențialitatea mai presus de orice, dar ceea ce majoritatea oamenilor nu înțeleg este că intimitatea acordată prin utilizarea ei nu este nici antiglonț, nici absolută în anumite situații. Nu faceți nicio greșeală, Monero este cât se poate de privată în domeniul fără încredere, dar există unele considerații pe care utilizatorii trebuie să le ia în considerare pentru a se asigura că intimitatea lor rămâne puternică.</p>.\n\n<p>Același lucru este valabil și în alte domenii ale vieții cu adevărat. De exemplu, poți să nu te mai conectezi la toate rețelele de socializare în efortul de a-ți păstra viața privată, dar dacă ești în mod constant cu prieteni care îți fac selfie-uri cu tine în ele, spun că sunt cu tine în subtitlu și îți etichetează locația, o mare parte din efortul tău poate fi în zadar. Conglomeratul social media poate în continuare să vă construiască un profil, în ciuda faptului că dumneavoastră personal nu sunteți pe platforma lor.</p>.\n\n<p>Una dintre situațiile despre care se vorbește adesea și în care oamenii nu iau în considerare toate implicațiile și potențialele scurgeri de metadate este problema schimbului de Bitcoin pentru Monero. Se consideră în mod obișnuit în cadrul comunității că achiziționarea Monero cu Bitcoin va fi o curățare completă și că utilizatorul păstrează toate beneficiile legate de confidențialitate odată ce intră în Monero, în ciuda faptului că provine dintr-un lanț transparent.</p>.\n\n<p>În mod similar, unii consideră că este la fel de privat să se obțină Monero din surse non-KYC și KYC. Se consideră că este similar cu obținerea de numerar de la o bancă. În acest scenariu, banca însăși vă cunoaște fața și numele și știe cât de mult aveți în cont în general și cât de mult ați retras în numerar, dar nu știe ce faceți cu banii după aceea. Având în vedere garanțiile de confidențialitate ale Monero, ar trebui să fie la fel de bine și cu obținerea Monero de la o sursă KYC/AML, nu-i așa?</p>\n\n<p>Bine, nu chiar așa.</p>\n\n<p>În primul rând, să facem un pas rapid înapoi și să definim ce înțelegem prin KYC/AML. Acest acronim reprezintă legile Know Your Customer (KYC) / Anti-Money Laundering (AML), care impun burselor și întreprinderilor să colecteze informații de identificare a clienților lor. Cu cât suma de bani schimbată este mai mare, cu atât mai multe informații sunt necesare. După cum sugerează și numele, toate acestea se fac în numele reducerii la minimum a riscului de spălare a banilor de către persoane.</p>.\n\n<p>Înapoi la Monero. Cu siguranță, mutarea banilor dvs. în Monero de la o sursă KYC este astronomic mai bună pentru confidențialitate decât utilizarea unei surse KYC pentru a cumpăra ceva precum BTC sau orice altă monedă transparentă, dar există totuși considerente care trebuie luate în considerare cu privire la ceea ce este dezvăluit și ce ar putea însemna aceste informații dezvăluite pentru confidențialitatea și siguranța dvs.</p>.\n\n<p>Chiar rămânând la scenariul cu banii lichizi și banca, dacă retrageți o sumă mare de la bancă, din moment ce banca vă cunoaște detaliile (inclusiv adresa dvs. de domiciliu), casierul poate vedea cât de mult este în contul dvs. și poate, eventual, să facă planuri nefaste în funcție de averea dvs. Acest lucru este rar și, deoarece banii se află în bancă și nu la dumneavoastră acasă, ceea ce pot realiza în acest scenariu este relativ mic. Nu același lucru este valabil și pentru Monero, care nu este securizat de o terță parte, ci mai degrabă de dumneavoastră. Să fii propria ta bancă nu este întotdeauna ușor.</p>.\n\n<p>În mod similar, trecerea de la BTC la XMR, indiferent de modul în care se face, lasă urme pe blockchain-ul Bitcoin. Deși acest lucru este într-adevăr mai puțin dăunător decât trecerea de la BTC la BTC, deoarece, de cealaltă parte a schimbului se află confidențialitatea obligatorie a Monero, trebuie luate în considerare implicațiile lăsării unei urme în urmă. Aceste urme se agravează și mai mult dacă a fost implicat KYC undeva în acest proces.</p>\n\n<p>Imaginați-vă un scenariu în care s-au primit Bitcoini murdari pentru un bun sau un serviciu, lucru care este posibil doar datorită transparenței radicale a Bitcoin. Nu știți că aceste Bitcoins sunt murdare, deoarece nu aveți tehnologia necesară pentru a verifica fiecare Bitcoin, așa că, fiind o persoană cunoscătoare de cripto, nu vă simțiți confortabil cu acest fapt și nu aveți banii necesari pentru a plăti o companie de analiză a lanțului care să verifice pentru dvs. Așa că decideți să faceți schimb cu Monero pentru a fi în siguranță.</p>.\n\n<p>Depui Bitcoin-ul pe un exchange și îl schimbi cu Monero, pe care apoi îl scoți în portofelul tău local. Acest scenariu este deja un pic cam tras de păr, deoarece bursa ar putea să vă semnaleze Bitcoinii murdari și să vă blocheze contul, și s-ar putea sau nu să îi recuperați, dar de dragul acestui exemplu vom presupune că vor lăsa să se întâmple schimbul.</p>\n\n<p>În acest moment, dacă guvernul devine interesat să urmărească traseul acestor Bitcoins, le va urmări până la bursă, va cere informații KYC despre deponent, va vedea că au fost schimbate în Monero (suspect) și va veni să vă bată la ușă.</p>\n\n<p>Vă rugăm să înțelegeți că acest lucru nu înseamnă că ar trebui să evitați să schimbați Bitcoin în Monero pentru a evita să păreți suspicios. Erai deja suspect pentru că ai acceptat Bitcoin murdar, iar dacă nu ai făcut schimbul, ei ar fi folosit în continuare analiza blockchain și tot ar fi venit să bată la ușă. Mai degrabă, acest exemplu evidențiază pur și simplu faptul că există un risc semnificativ dacă se folosesc monede transparente, iar schimbarea cu o monedă privată și fungibilă precum Monero nu șterge urmele lăsate în blockchain-ul transparent.</p>\n\n<p>Pentru persoana interesată de propria intimitate, utilizarea blockchain-urilor transparente ar trebui menținută la minimum și cu extremă prudență. KYC ar trebui evitată ori de câte ori este posibil, deoarece aceste metadate pot fi în continuare folosite pentru a construi un caz și a pune întrebări și, Doamne ferește, aceste informații KYC (alături de informațiile comerciale) sunt scurse de la burse din cauza incompetenței. Chiar dacă ați cumpărat și retras Monero doar de pe bursă, aceste informații scurse ar putea dezvălui cât Monero aveți și unde vă aflați. Toate informațiile pe care putem fi cu toții de acord că nimeni nu și le-ar dori să plutească pur și simplu în spațiul cibernetic.</p>.\n\n<p>În rezumat, deși utilizarea Monero anulează într-adevăr foarte multe atacuri și minimizează implicit scurgerea metadatelor, utilizatorul însuși poate face multe lucruri pentru a-și distruge în cele din urmă propria intimitate. Unul dintre cele mai puțin luate în considerare sunt implicațiile utilizării fie a unui lanț de transparență ca o cale de acces la Monero, fie a unei surse KYC pentru a-l achiziționa, ca să nu mai vorbim de utilizarea ambelor deodată.</p>.\n\n<p>Acest articol nu este menit să inducă teamă, ci mai degrabă să încurajeze utilizatorii să se gândească critic la deciziile lor și să le reamintească faptul că până și cea mai bună confidențialitate poate fi fragilă în anumite circumstanțe. Utilizatorii trebuie să fie vigilenți pentru a-și proteja propria confidențialitate prin luarea unor decizii inteligente cu privire la ce să cumpere, de unde și de la cine.</p>.';
+  String get knowledge250Sbbtc250Sb0250Sbtext => '<p>Monero este o criptomonedă care pune accentul pe confidențialitate, dar ceea ce mulți oameni nu înțeleg este că intimitatea oferită de folosirea acesteia nu este nici infailibilă, nici absolută în anumite situații. Nu este nicio greșeală, Monero este cam tot ce poți obține din punct de vedere al confidențialității în domeniul care nu presupune încredere, dar există anumite considerente pe care utilizatorii trebuie să le ia în seama pentru a se asigura că intimitatea lor rămâne solidă.</p>\n\n<p>Același lucru este valabil și în alte aspecte ale vieții, de fapt. De exemplu, poți să te abții de la utilizarea tuturor rețelelor de socializare, în încercarea de a-ți păstra viața privată, dar dacă te afli constant cu prietenii care fac selfie-uri cu tine în ele, afirmă că sunt cu tine în subtitlu și îți etichetează locația, o mare parte din efortul tău poate fi în zadar. Conglomeratele de social media pot construi în continuare un profil despre tine, în ciuda faptului că tu personal nu ești pe platforma lor.</p>\n\n<p>Una dintre situațiile frecvent invocate, unde oamenii nu iau în considerare toate implicațiile și metadatele potențial expuse este problema schimbului de Bitcoin pentru Monero. Este considerat în mod obișnuit în comunitate că achiziționarea Monero cu Bitcoin va fi o curățare totală, și că utilizatorul își păstrează toate avantajele confidențialității odată ce adoptă Monero, în ciuda faptului că provine de la o rețea blockchain transparentă.</p>\n\n<p>Într-o notă similară, unii consideră că este la fel de confidențial să obții Monero de la surse non-KYC și KYC. Raționamentul este că acest lucru este similar cu obținerea de numerar de la o bancă. În acest scenariu, banca în sine îți cunoaște fața și numele, știe cât ai în cont în total și cât ai retras în numerar, dar nu știe ce faci cu banii ulterior. Cu garanțiile de confidențialitate ale Monero, ar trebui să fie la fel și când obții Monero de la o sursă KYC/AML, nu-i așa?</p>\n\n<p>Ei bine, nu chiar.</p>\n\n<p>În primul rând, să facem un pas înapoi rapid și să definim ce înțelegem prin KYC/AML. Acest acronim reprezintă Know Your Customer (KYC) / Anti-Money Laundering (AML) legi, care cer schimburilor și afacerilor să colecteze informații de identificare ale clienților lor. Cu cât suma de bani schimbată este mai mare, cu atât este nevoie de mai multe informații. După cum indică numele, totul se face în numele reducerii riscului de spălare a banilor de către oameni.</p>\n\n<p>Înapoi la Monero. Desigur, mutarea banilor în Monero dintr-o sursă KYC este cu mult mai bună pentru confidențialitate decât utilizarea unei surse KYC pentru a cumpăra ceva precum BTC sau orice altă monedă transparentă. Totuși, există totuși considerații de făcut despre ce se dezvăluie și ce ar putea însemna aceste informații dezvăluite pentru confidențialitatea și siguranța ta.</p>\n\n<p>Chiar și în scenariul cu numerarul și banca, dacă retragi o sumă mare de la bancă, deoarece banca îți cunoaște detaliile (inclusiv adresa ta de domiciliu), casierul poate vedea cât ai în cont și poate face planuri rele în funcție de averea ta. Acest lucru este rar, iar din moment ce banii sunt la bancă și nu la casa ta, ceea ce pot realiza în acest scenariu este relativ mic. Același lucru nu este adevărat pentru Monero, care nu este asigurat de o terță parte, ci de tine însuți. A fi propria bancă nu este întotdeauna ușor.</p>\n\n<p>În mod similar, trecerea de la BTC la XMR, indiferent de modul în care este realizată, lasă urme pe blockchain-ul Bitcoin. Deși acest lucru este într-adevăr mai puțin dăunător decât să mergi de la BTC la BTC, pentru că, de cealaltă parte a schimbului este confidențialitatea obligatorie a Monero, implicațiile lăsării unei urme în urmă trebuie luate în considerare. Aceste urme se adună pentru a avea un efect chiar mai mare dacă a fost implicat KYC în orice parte a procesului.</p>\n\n<p>Imaginați-vă un scenariu în care au fost primite Bitcoinuri \"murdare\" pentru un bun sau un serviciu, lucru care este posibil numai din cauza transparenței radicale a Bitcoinului. Nu știi că aceste Bitcoinuri sunt \"murdare\", deoarece nu ai tehnologia să verifici fiecare Bitcoin, așa că tu, fiind o persoană experimentată în cripto, nu te simți confortabil cu acest fapt, și nu ai bani să plătești o companie de analiză a lanțului să verifice pentru tine. Deci, decizi să schimbi în Monero pentru siguranță.</p>\n\n<p>Depuneți-vă Bitcoinii pe o platformă de schimb și le schimbați pentru Monero, pe care îl retrageți în portofelul dvs. local. Acest scenariu este deja puțin îndepărtat, pentru că schimbul poate marca Bitcoinii dvs. \"murdari\" și să îți blocheze contul, și s-ar putea să nu-i mai primești înapoi, dar pentru scopul acestui exemplu, vom presupune că le permit să facă schimbul.</p>\n\n<p>La acest punct, dacă guvernul devine interesat să urmeze traseul acestor Bitcoinuri, va urma traseul până la schimbul de valută, va cere informații KYC despre depozitar, va vedea că au fost schimbate pentru Monero (suspect) și va veni să bată la ușa ta.</p>\n\n<p>Vă rog să înțelegeți, asta nu înseamnă că ar trebui să evitați schimbul Bitcoin pe Monero pentru a evita să arătați suspect. Erai deja suspect pentru că ai acceptat Bitcoin \"murdar\" și dacă nu ai fi schimbat, tot ar fi folosit analiza blockchainului și tot ar fi venit să bata la ușă. Mai degrabă, acest exemplu evidențiază doar că există un risc semnificativ în utilizarea monedelor transparente în general, și schimbarea într-o monedă privată și fungibilă precum Monero nu șterge urmele lăsate în lanțul de blocuri transparent.</p>\n\n<p>Pentru persoana interesată de propria confidențialitate, utilizarea lanțurilor de blocuri transparente ar trebui să fie minimă și cu o precauție extremă. KYC ar trebui evitat ori de câte ori este posibil, deoarece aceste metadate pot fi încă utilizate pentru a construi un caz și a pune întrebări, și mai rău ar fi dacă aceste informații KYC (alături de informațiile despre tranzacții) ar fi divulgate de schimburi din cauza incompetenței. Chiar dacă ai cumpărat și ai retras doar Monero de la schimb, aceste informații divulgate ar dezvălui totuși cât de mult Monero ai avut și unde te afli. Toate informațiile pe care suntem de acord că nimeni nu ar vrea să le vadă plimbându-se prin spațiul cibernetic.</p>\n\n<p>În rezumat, în timp ce utilizarea Monero anulează cu adevărat multe, multe atacuri și minimizează scurgerile de metadate în mod implicit, utilizatorul poate face multe lucruri pentru a distruge în cele din urmă propria confidențialitate. Una dintre cele mai puțin luate în considerare este implicațiile utilizării fie a unui lanț de blocuri transparent ca cale către Monero, fie a unei surse KYC pentru a o obține, nemaivorbind despre utilizarea ambelor în același timp.</p>\n\n<p>Acest articol nu este destinat să creeze panică, ci mai degrabă să încurajeze utilizatorii să gândească critic despre deciziile lor și să le reamintească că chiar și cea mai bună confidențialitate poate fi fragilă în anumite circumstanțe. Utilizatorii trebuie să fie vigilenți pentru a-și proteja propria confidențialitate printr-o decizie inteligentă despre ce să cumpere, de unde și de la cine.</p>';
 
   @override
   String get knowledge250Sbbtc250Sbdescription => 'Mulți consideră că achiziționarea de XMR cu BTC reprezintă o curățare completă și că utilizatorul își păstrează toată confidențialitatea, în ciuda faptului că provine dintr-un lanț transparent. Dar oare este așa?';
@@ -3305,7 +3305,7 @@ class I18nRo extends I18n {
   String get knowledge250Sbcoinjoin250Sbtitle => 'Semnături inelare Monero vs CoinJoin ca în Wasabi';
 
   @override
-  String get knowledge250Sbcontributing250Sb0250Sbtext => '<p>Proiectul Monero (la fel ca multe alte proiecte cu sursă deschisă) nu are în spate nicio companie centrală, entitate sau finanțare, toate acestea fiind necesare pentru descentralizare și reziliență. Cu toate acestea, acest lucru înseamnă că succesul proiectului depinde în întregime de contribuțiile unor persoane pasionate din comunitate pentru finanțare, dezvoltare și informare, la fel ca tine.</p>\n\n<p>Marea majoritate a persoanelor din comunitatea Monero nu vor fi în mod necesar dezvoltatori, așa că ne vom concentra pe numeroasele moduri în care noi, cei care nu suntem dezvoltatori, putem contribui la un proiect atât de incredibil.</p>';
+  String get knowledge250Sbcontributing250Sb0250Sbtext => '<p>Proiectul Monero (la fel ca multe alte proiecte open-source) nu are o companie centrală, o entitate sau finanțare în spatele său, toate acestea fiind necesare pentru descentralizare și reziliență. Totuși, aceasta înseamnă că succesul proiectului depinde în întregime de contribuțiile indivizilor pasionați din comunitate pentru finanțare, dezvoltare și promovare, exact ca tine.</p>\n<p>Marea majoritate a oamenilor din comunitatea Monero nu vor fi neapărat dezvoltatori, așa că ne vom concentra asupra multor moduri în care noi, cei care nu suntem dezvoltatori, putem contribui la un astfel de proiect incredibil.</p>';
 
   @override
   String get knowledge250Sbcontributing250Sb1250Sbtext => '<p>Monero folosește un sistem unic de finanțare a activității numit <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://ccs.getmonero.org/\">Community Crowdfunding System</a> (sau “CCS”) care permite oricărei persoane din comunitate să prezinte o idee pentru finanțare. Dacă sunt aprobate de comunitate, aceste propuneri sunt apoi deschise pentru finanțare de către comunitate.</p>\n<p>Există două etape ale sistemului, fiecare dintre acestea beneficiind de o mai mare implicare a persoanelor din toate mediile.</p>\n<h6 id=\"participating-in-ideas\">Participarea la \"Idei\"</h6>\n<p>Toate propunerile CCS încep ca \"Idei\", care sunt deschise pentru comentarii din partea comunității și sunt deseori discutate și în cadrul unor reuniuni comunitare. Aceasta este o șansă pentru toți membrii comunității să citească propunerea și să comenteze ceea ce cred că ar putea fi schimbat sau îmbunătățit, sau dacă propunerea ar trebui sau nu să fie aprobată pentru finanțare. Acest lucru vă permite nu numai să fiți la curent cu eforturile în curs de desfășurare ale altora din comunitate, ci și să aveți un cuvânt de spus activ în ceea ce privește cine și ce este finanțat de comunitate, să îmbunătățiți propunerile înainte de finanțare și să oferiți supraveghere după finanțare.</p>\n<p><em>Puteți vedea toate propunerile care se află în etapa \"Idei\" la adresa <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://ccs.getmonero.org/ideas/\">Idei CCS</a>.</em></p>\n<h6 id=\"funding-proposals-in-funding-required\">Propuneri de finanțare în \"Finanțare necesară\"</h6>\n<p>A doua etapă a unei propuneri aprobate este etapa \"Finanțare necesară\". Aceasta este etapa în care oricine din comunitate căruia îi place o propunere și vede valoarea acesteia poate dona ușor, rapid și în mod privat Monero-ul său pentru propunerea respectivă.</p>\n<p>Pentru a face o donație pentru o propunere, trebuie doar să accesați <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://ccs.getmonero.org/funding-required/\">Finanțarea CCS necesară</a>, dați click pe propunerea pentru care doriți să donați și scanați codul QR sau copiați adresa și trimiteți cât de mult (sau puțin!) doriți să contribuiți. Orice sumă ajută, oricât de mică ar fi!</p>\n<p>Odată ce o propunere este finanțată în totalitate, puteți să o urmăriți în timp ce este <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://ccs.getmonero.org/work-in-progress/\">în curs de desfășurare</a> sau să vedeți rezultatele <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://ccs.getmonero.org/completed-proposals/\">propunerilor finalizate</a>.</p>\n<p><em>Puteți vedea toate propunerile care se află în etapa \"Finanțare necesară\" la adresa <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://ccs.getmonero.org/funding-required/\">Finanțarea CCS necesară</a>.</em></p>';
@@ -3515,22 +3515,22 @@ class I18nRo extends I18n {
   String get knowledge250Sbhistory250Sbtitle => 'O scurtă istorie a Monero';
 
   @override
-  String get knowledge250Sbkeys250Sb0250Sbtext => '<p>Ați mai auzit până acum expresia \" nu cheile tale, nu monedele tale\"?\nAceasta a devenit o frază omniprezentă în comunitatea criptomonedelor, dar\nîn ciuda faptului că cei mai mulți oameni au auzit-o, marea majoritate a utilizatorilor de criptomonede nu dețin propriile chei.</p>\n<p>Beneficiile criptomonedei care o diferențiază cu adevărat de cele ale\nsistemul financiar tradițional sunt realizate doar atunci când ai o deplină\ncustodia completă a fondurilor tale - deținând cheile private ale monedelor tale.</p>\n<p>În această scurtă postare ne vom scufunda în motivele pentru care ar trebui să vă păstrați propriile chei și vă vom oferi câteva modalități simple de a vă păstra singuri Monero <em>astăzi</em>.</p>';
+  String get knowledge250Sbkeys250Sb0250Sbtext => '<p>Ați auzit vreodată fraza \"dacă nu sunt ale tale cheile, nu sunt ale\ntale monedele\"? Aceasta a devenit o expresie omniprezentă în comunitatea\ncriptomonedei, dar despite majoritatea oamenilor au auzit-o, marea\nmajoritate a utilizatorilor de criptomonede nu își dețin propriile\nchei.</p> <p>Beneficiile criptomonedelor care o diferențiază cu adevărat\nde sistemul financiar tradițional sunt realizate doar atunci când aveți\nîn totalitate custodia asupra fondurilor dvs. - deținând cheile private\nale monedelor dvs.</p> <p>În această scurtă postare, vom explora de ce\nar trebui să vă dețineți propriile chei și vom oferi câteva modalități\nușoare de a avea custodia asupra Monero <em>astăzi</em>.</p>';
 
   @override
-  String get knowledge250Sbkeys250Sb1250Sbtext => '<h6 id=\"it-preserves-the-privacy-that-monero-affords-users\">Păstrează\nconfidențialitatea pe care Monero o oferă utilizatorilor</h6> <p>Unul\ndintre cele mai des neînțelese aspecte ale custodiei personale în Monero\neste că, dacă nu dețineți propriile chei, nu veți beneficia deloc de\nconfidențialitatea oferită de Monero. Întrucât expeditorul unei\ntranzacții are vizibilitate totală asupra cheltuielilor reale, a sumei\nși a adresei destinatarului, dacă nu sunteți cel care trimite tranzacția\nși, în schimb, lăsați acest lucru pe seama unui schimb sau a unui\ncustode, aceștia au o <em>vizibilitate totală</em> asupra modului în\ncare vă cheltuiți Monero.</p> <p>Din fericire, după ce trimit fondurile,\ngaranțiile de confidențialitate ale Monero intră în vigoare și asigură o\nputernică \"confidențialitate în viitor\", dar schimbul sau depozitarul va\nști clar unde ați trimis fondurile și cât de mult ați trimis\ninițial.</p> <h6\nid=\"it-enables-the-incredible-censorship-resistance-of-monero\">Acesta\npermite incredibila rezistență la cenzură a Monero</h6> <p>Unul dintre\naspectele fundamentale ale Monero este de a permite tranzacții\nrezistente la cenzură - permițându-vă să faceți tranzacții care pot fi\nsau nu aprobate de \"ei\", indiferent de ceea ce încearcă să facă. să vă\noprească. În timp ce nevoia de rezistență la cenzură poate fi un pic\npierdut pentru noi, cei din țările \"libere\", alunecarea rapidă spre\nautoritarismului și a decăderii politice în multe părți ale lumii este\nface tot mai evident pe zi ce trece faptul că avem nevoie de o\nmodalitate de a face tranzacții cu sau fără aprobarea\nguvernamentală.</p> <p>Totuși, dacă nu dețineți propriile chei, un\nguvern sau un organism de reglementare poate forța cu ușurință o bursă\nsau un custode să vă pună pe lista neagră a fondurilor, să confiște le\nsau să cenzureze tranzacțiile către anumite adrese. Acest lucru este\ndeja se întâmplă deja pe scară largă din cauza sancțiunilor la nivel de\nstat în prezent și va fi o temă din ce în ce mai frecventă, pe măsură ce\nguvernele și autoritățile de reglementare își dau seama că bursele și\ncustozii sunt cea mai ușoară cale spre controlul asupra pieței\nMonero.</p> <p>De asemenea, ar putea veni o zi în care un guvern să\ninterzică auto-depozitarea Monero, iar dacă nu v-ați retras încă Monero\nde la un exchange sau de la un custode, s-ar putea să nu o mai puteți\nface niciodată.</p> <h6\nid=\"it-prevents-simple-theft-or-confiscation-of-your-monero\">Acesta\nprevine furtul sau confiscarea simplă a Monero dvs.</h6> <p>Un scenariu\nipotetic, dar posibil, ar putea fi cel mai rău caz pentru cei care aleg\nsă nu dețină propriile chei - Monero să le fie furat de un hacker sau\nconfiscat de un guvern cu o politică de <a class=\"next-link\"\ntarget=\"_blank\" rel=\"noopener nofollow\"\nhref=\"https://en.wikipedia.org/wiki/Executive_Order_6102\">tip ordinul\n6102</a>.</p> <p><a class=\"next-link\" target=\"_blank\" rel=\"noopener\nnofollow\"\nhref=\"https://blog.chainalysis.com/reports/2022-crypto-crime-report-introduction/\">Aproape\n500 de milioane de dolari</a> în criptomonede au fost furate de la\nbursele centralizate în 2021, iar 3,2 miliarde de dolari în total au\nfost furate de la utilizatorii care au renunțat la custodia fondurilor\ndintr-un motiv sau altul. Acesta este unul dintre cele mai mari riscuri\npentru utilizatorii de criptomonede și continuă să crească atât ca număr\nde cazuri, cât și ca volum, pe măsură ce criptomonedele câștigă\npopularitate. Dacă un exchange deține cheile fondurilor dvs., aceste\nfonduri pot fi furate de un hacker (sau de exchange însuși!) în orice\nmoment.</p> <p>Dacă dețineți propriile chei, singurele riscuri reale de\nfurt sau de confiscare sunt escrocheriile și atacurile fizice, lucru\ncare este mult mai puțin probabile și care, de obicei, se întâmplă doar\npersoanelor cu profil înalt sau celor care au fost afectați de scurgeri\nsau pierderea datelor de cunoaștere a clientului (KYC) de la\nexchange-uri centralizate, care le leagă identitatea și adresa cu\nproprietatea de criptomonede.</p> <h6\nid=\"it-prevents-exchanges-leveraging-fractional-reserve-lending-and-trading\">Acesta\nprevine ca bursele să utilizeze împrumuturi cu rezerve fracționare și\ntranzacționare</h6> <p>Un alt aspect important al deținerii propriilor\nchei este unul care este mai puțin personal și mai mult comun. Atunci\ncând marea majoritate a utilizatorilor de Monero își dețin propriile\nchei, schimburile sunt mai puțin capabile să mintă cu privire la\ncantitatea de Monero pe care le dețin și să tranzacționeze \"Monero pe\nhârtie\", deoarece utilizatorii nu păstrează Monero-ul lor în\nschimburi.</p> <p>Deși acest tip de activitate nu este adesea confirmată\npublic, există mulți membri ai comunității care sunt îngrijorați de\nfaptul că exchange-uri precum Binance folosesc Monero pe care\nutilizatorii săi îl dețin pe exchange pentru a tranzacționa împotriva\nMonero, umflând cantitatea de Monero short și cauzând suprimarea\nprețului în timp.</p> <p>Acest comportament poate duce, de asemenea, la\ncrize de lichiditate, în care utilizatorii <em>care doresc</em> să\ndețină propriile chei nu se pot retrage de pe exchange, deoarece\nexchange-ul a promis mai mult Monero utilizatorilor săi decât are de\nfapt disponibil. Cu cât mai mulți utilizatori de Monero își păstrează\npropriile chei și își păstrează Monero în afara exchange-urilor, cu atât\nmai sănătoasă și mai naturală va fi, teoretic, piața și cu atât mai\npuțin risc pe care exchange-urile rău intenționate sau lacome îl pot\nreprezenta pentru stabilitatea prețului Monero.</p>';
+  String get knowledge250Sbkeys250Sb1250Sbtext => '<h6 id=\"it-preserves-the-privacy-that-monero-affords-users\">Își păstrează \nconfidențialitatea pe care Monero o oferă utilizatorilor</h6>\n<p>Unul dintre aspectele cel mai frecvent înțelese greșit ale custodierii proprii în\nMonero este că dacă nu deții propriile chei, beneficiezi de puțin sau niciun\nbeneficiu din intimitatea pe care Monero o oferă. Deoarece expeditorul unei tranzacții\nare o vizibilitate totală asupra cheltuielii reale, sumei și adresei destinatarului,\ndacă nu ești tu cel care trimite tranzacția și în schimb o lași pe seama\nunei burse sau a unui custode, aceștia au <em>o vizibilitate completă</em> asupra\nmodurilor în care cheltui tu Monero.</p>\n<p>Din fericire, după trimiterea fondurilor, garanțiile de confidențialitate ale Monero\nintră în joc și oferă o \"secreție avansată\" puternică, dar va fi clar pentru\nbursa sau custode unde ai trimis fondurile și cât ai trimis\ninitital.</p>\n<h6 id=\"it-enables-the-incredible-censorship-resistance-of-monero\">Permite \nrezistența incredibilă la cenzură a Monero</h6>\n<p>Unul dintre aspectele fundamentale ale Monero este furnizarea de\ntranzacții rezistente la cenzură – ceea ce îți permite să realizezi tranzacții\ncare ar putea sau nu să fie aprobate de \"ei\", indiferent ce ar încerca să\nfacă pentru a să te opri. Deși necesitatea rezistenței la cenzură poate fi un pic\npierdută pentru noi în \"țările libere\", alunecarea rapidă spre\nautoritarism și descompunere politică în multe părți ale lumii este\nfacând tot mai evident în fiecare zi că avem nevoie de un mod de a face tranzacții cu\nsau fără aprobarea guvernamentală.</p>\n<p>Dacă nu deții propriile chei, însă, un guvern sau regulator\npot să ceară cu ușurință unei burse sau unui custode să îți blocheze fondurile, să\nle confiște, sau să cenzureze tranzacții către adrese specifice. Acest lucru se întâmplă deja\nîn mod larg din cauza sancțiunilor la nivel de stat astăzi și va fi o temă\nîn creștere pe măsură ce guvernele și reglementatorii realizează că bursele\nși custodele sunt cel mai ușor drum spre controlul utilizării Monero.</p>\n<p>Ziua ar putea veni de asemenea când un guvern va interzice automonitorizarea\nde Monero și dacă încă nu ți-ai retras Monero de la o bursă\nsau un custode s-ar putea să nu mai poți vreodată.</p>\n<h6 id=\"it-prevents-simple-theft-or-confiscation-of-your-monero\">Previne \nfurtul simplu sau confiscarea Monero</h6>\n<p>Un scenariu ipotetic, dar posibil, ar putea fi cel mai rău pentru\ncei care aleg să nu-și dețină propriile chei – Monero lor fiind\nfurat de către un hacker sau confiscat de un guvern cu o <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" \nhref=\"https://en.wikipedia.org/wiki/Executive_Order_6102\">ordonanță de tip 6102\n</a>.</p>\n<p><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" \nhref=\"https://blog.chainalysis.com/reports/2022-crypto-crime-report-introduction/\">Aproape\n500 de milioane de dolari</a> în criptomonede au fost furate din bursele centralizate\nîn 2021 și 3,2 miliarde de dolari total furate de la utilizatori care și-au cedat custodia fondurilor\ndintr-un motiv sau altul. Acesta este unul din cele mai mari riscuri pentru\nutilizatori de criptomonede și continuă să crească atât în numărul de cazuri cât și\nvolum pe măsură ce criptomoneda câștigă popularitate. Dacă o bursă deține cheile\nla fondurile tale, acele fonduri pot fi furate de un hacker (sau de bursă\nînsăși!) în orice moment.</p>\n<p>Dacă îți deții propriile chei, singurele riscuri reale de furt sau\nconfiscare sunt escrocheriile și atacurile fizice, ceva care este mult mai puțin\nprobabil și de obicei se întâmplă doar cu persoanele de profil înalt sau cele\nvătămate de furtul sau pierderea datelor cunoscute- clienții (KYC) de la\nbursele centralizate care leagă identitatea și adresa lor cu\nproprietatea criptomonedei.</p>\n<h6\nid=\"it-prevents-exchanges-leveraging-fractional-reserve-lending-and-trading\">Previne \nbursele să se folosească de împrumutul și tranzacționarea cu rezerva fracțională</h6>\n<p>Un alt aspect important al deținerii propriilor chei este unul care este mai puțin\npersonal și mai mult comunal. Când majoritatea utilizatorilor Monero\nîși dețin propriile chei, bursele sunt mai puțin capabile să mintă despre cantitatea de\nMonero pe care o au în custodie și să tranzacționeze \"Monero de hârtie\", pe măsură ce utilizatorii nu își păstrează\nMonero în burse.</p>\n<p>Deși acest tip de activitate nu este deseori confirmat public, există\nmulți în comunitate care sunt îngrijorați că bursele precum Binance\nfolosesc Monero pe care utilizatorii săi îl au în bursă pentru a face tranzacții\nîmpotriva Monero, umflând cantitatea de scăderi de Monero și cauzând o suprimare a prețului în timp.</p>\n<p>Această comportare poate duce, de asemenea, la crize de lichiditate în care utilizatorii care\n<em>doresc</em> să își dețină propriile chei nu pot să retragă de la\nbursă, deoarece bursa a promis mai mult Monero utilizatorilor săi decât are\nde fapt disponibil. Cu cât mai mulți utilizatori Monero își dețin propriile chei și\npăstrează Monero în afara burselor, cu atât mai sănătoasa și mai naturală va fi\npiața în teorie și cu atât mai puțin risc pot pune bursele malefice sau lacome\nla stabilitatea prețului Monero.</p>';
 
   @override
   String get knowledge250Sbkeys250Sb1250Sbtitle => 'De ce este important să vă păstrați propriile chei?';
 
   @override
-  String get knowledge250Sbkeys250Sb2250Sbtext => '<p>Atunci când începeți să dețineți propriile chei, cel mai important\nlucru de reținut este să vă <em>păstrați fraza de semințe în\nsiguranță!</em> Acesta este setul de 14 sau 25 de cuvinte aleatorii pe\ncare orice portofel Monero vi le va oferi atunci când creați un portofel\nși este tot ce vă va trebui pentru a vă recupera fondurile dacă vă\npierdeți telefonul, desktop-ul, laptopul sau dacă uitați o parolă.</p>\n<p>Tratați această frază de semințe ca și cum ar valora toți Monero din\nportofelul dumneavoastră, deoarece oricine o obține va avea acces\ncomplet la fondurile din portofelul dumneavoastră. Este ideal să o\npăstrați într-un loc sigur sau secret, să păstrați mai multe copii în\ncaz de incendiu sau dezastru natural și să nu o arătați niciodată\nnimănui.</p> <p>Pentru mai multe informații privind frazele semințe, a\nse vedea <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"\nhref=\"https://web.getmonero.org/resources/moneropedia/mnemonicseed.html\">Mnemonic\nSeed | Moneropedia</a>.</p> <h6\nid=\"using-free-and-open-source-wallets\">Utilizarea portofelelor gratuite\nși open-source</h6> <h5 id=\"for-desktop\">Pentru desktop</h5> <p>Dacă\nsunteți în principal un utilizator de desktop și nu cheltuiți/primiți\nMonero în deplasare foarte des, există câteva opțiuni solide pentru a vă\npăstra propriile chei fără a fi nevoie să vă bazați pe terțe părți.</p>\n<ul> <li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"\nhref=\"https://getmonero.org/downloads\">Portofelul oficial Monero</a>\n<ul> <li>Acesta este software-ul oficial al portofelului Monero și a\nfost îmbunătățit și completat constant. Acesta include un daemon Monero\nintegrat (dacă doriți), este foarte ușor de utilizat și va suporta în\ncurând <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"\nhref=\"https://localmonero.co/knowledge/p2pool-decentralizing-monero-mining\">mineritul\nprin p2pool direct din portofelul tău</a>.</li> </ul></li> <li><a\nclass=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"\nhref=\"https://featherwallet.org/\">Feather Wallet</a> <ul> <li>Acesta\neste un portofel excelent, în genul lui <a class=\"next-link\"\ntarget=\"_blank\" rel=\"noopener nofollow\"\nhref=\"https://electrum.org/\">Electrum pentru Bitcoin</a>, și oferă atât\no utilizare simplă, cât și funcții extrem de puternice într-un singur\nportofel.</li> </ul></li> </ul> <h5 id=\"for-mobile\">Pentru mobil</h4>\n<p>Pentru aceia dintre noi cărora le place să își poată folosi Monero în\ndeplasare sau să cheltuiască frecvent, este extrem de important să aibă\nun portofel Monero mobil robust, care să ne păstreze cheile în propriile\nmâini.</p> <ul> <li><a class=\"next-link\" target=\"_blank\" rel=\"noopener\nnofollow\"  href=\"https://cakewallet.com/\">Cake Wallet</a> <ul> <li>Cake\nWallet este un portofel gratuit și open-source (FOSS) pentru Android și\niOS care acceptă Monero, Bitcoin și Litecoin în mod nativ.</li>\n</ul></li> <li><a class=\"next-link\" target=\"_blank\" rel=\"noopener\nnofollow\"  href=\"https://www.monerujo.io/\">Monerujo</a> <ul>\n<li>Monerujo este un portofel FOSS pentru Android care are câteva\ncaracteristici și grafice grozave, suport nativ pentru noduri Tor și\nmulte altele.</li> </ul></li> </ul>';
+  String get knowledge250Sbkeys250Sb2250Sbtext => '<p>Când începi să îți păstrezi propriile chei, cel mai important lucru de reținut este să <em>salvezi și să îți păstrezi fraza seed în siguranță</em>! Aceasta este setul de 14 sau 25 de cuvinte aleatorii pe care orice portofel Monero ți-l va oferi când creezi un portofel și este tot ce vei avea nevoie pentru a-ți recupera fondurile dacă îți pierzi telefonul, desktopul, laptopul sau dacă uiți o parolă.</p>\n<p>Tratează această frază seed ca și cum ar valora toate Monero din portofelul tău, deoarece oricine o obține va avea acces complet la fondurile din portofelul tău. Este ideal să o păstrezi într-un loc sigur sau secret, să păstrezi mai multe copii în caz de incendiu sau dezastru natural și să nu o arăți nimănui.</p>\n<p>Pentru mai multe informații despre frazele seed, vezi <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" \nhref=\"https://web.getmonero.org/resources/moneropedia/mnemonicseed.html\">Mnemonic\nSeed | Moneropedia</a>.</p>\n<h6 id=\"using-free-and-open-source-wallets\">Folosind portofele gratuite și cu sursă deschisă</h6>\n<h5 id=\"for-desktop\">Pentru desktop</h5>\n<p>Dacă folosești în principal un desktop și nu cheltuii/primești Monero foarte des în deplasare, există câteva opțiuni solide pentru a-ți păstra propriile chei fără a fi nevoie să te bazezi pe terți.</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://getmonero.org/downloads\">Portofelul oficial Monero</a>\n<ul>\n<li>Acesta este software-ul oficial al portofelului Monero și a cunoscut îmbunătățiri și adăugiri constante. Include un daemon Monero integrat (dacă dorești), este foarte ușor de utilizat și va suporta în curând <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" \nhref=\"https://localmonero.co/knowledge/p2pool-decentralizing-monero-mining\">minarea\nprin p2pool direct din portofelul tău</a>.</li>\n</ul></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://featherwallet.org/\">Feather Wallet</a>\n<ul>\n<li>Acesta este un portofel excelent în stilul <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" \nhref=\"https://electrum.org/\">Electrum pentru Bitcoin</a> și oferă atât o utilizare simplă, cât și caracteristici extrem de puternice într-un singur portofel.</li>\n</ul></li>\n</ul>\n<h5 id=\"for-mobile\">Pentru mobile</h5>\n<p>Pentru cei dintre noi care doresc să utilizeze Monero în deplasare sau să cheltuiască frecvent, având un portofel Monero mobil solid care încă ne păstrează cheile în propriile mâini este extrem de important.</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://cakewallet.com/\">Cake Wallet</a>\n<ul>\n<li>Cake Wallet este un portofel gratuit și cu sursă deschisă (FOSS) pentru Android și iOS care suportă nativ Monero, Bitcoin și Litecoin.</li>\n</ul></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://www.monerujo.io/\">Monerujo</a>\n<ul>\n<li>Monerujo este un portofel FOSS pentru Android care are unele caracteristici și grafică superioară, suport nativ pentru nod Tor și multe altele.</li>\n</ul></li>\n</ul>';
 
   @override
   String get knowledge250Sbkeys250Sb2250Sbtitle => 'Cum îmi pot deține propriile chei cu Monero?';
 
   @override
-  String get knowledge250Sbkeys250Sb3250Sbtext => '<p>\nSperăm că această postare a ajutat la consolidarea necesității de a vă ține\npropriile chei, precum și să vă îndrume către unele dintre portofelele\nexcelente de pe piață.\n</p>\n<p>\nCu cât luați Monero în propriile mâini și îl folosiți mai mult, cu atât mai\nmulte beneficii puteți obține atât acum, cât și în viitor. Monero nu este doar\nun activ speculativ - este un instrument puternic pentru libertate și\nconfidențialitate financiară, de care avem mare nevoie în lumea de astăzi și\nîn viitorul care ne așteaptă.\n</p>\n<p>\nAcum du-te și ia aceste monede de pe un exchange și scufundă-te în ceea ce a\nfost Monero construit pentru.\n</p>';
+  String get knowledge250Sbkeys250Sb3250Sbtext => '<p>Sperăm că această postare a ajutat la consolidarea necesității de a-ți deține propriile chei, precum și la îndrumarea ta către unele dintre portofelele excelente disponibile.</p>\n<p>Cu cât preiei mai mult Monero în propriile mâini și îl folosești de fapt, cu atât poți obține mai multe beneficii atât acum, cât și în viitor. Monero nu este doar un bun de speculație - este un instrument puternic pentru libertate și confidențialitate financiară, care este extrem de necesar în lumea de astăzi și în viitorul care ne așteaptă.</p>\n<p>Acum, mută acele monede de pe o platformă de schimb și explorează pentru ce a fost creat Monero.</p>';
 
   @override
   String get knowledge250Sbkeys250Sb3250Sbtitle => 'Concluzie';
@@ -3551,7 +3551,7 @@ class I18nRo extends I18n {
   String get knowledge250Sbmining250Sb1250Sbtitle => 'Scop';
 
   @override
-  String get knowledge250Sbmining250Sb2250Sbtext => 'Pentru context, să vorbim puțin despre hardware-ul de minerit. Minerii folosesc computere pentru a face treaba, dar știm cu toții că nu fiecare computer este fabricat în mod egal. Unele computere sunt suficient de puternice pentru a rula rețele AI sau jocuri intense, în timp ce altele se luptă chiar și cu sarcini simple. Aceste diferențe de putere de calcul afectează, de asemenea, rata de hash sau rata la care caută soluții bloc. <br/><br/>\nDar chiar și aceste diferențe între computere palid în comparație cu ratele de hash ale hardware-ului specializat, altfel cunoscut sub numele de circuite integrate specifice aplicației (ASIC), care depășesc computerele obișnuite cu mai multe ordine de mărime.<br/><br/>\nSă luăm ceva timp pentru a explora ceea ce face ca ASIC-urile să fie atât de puternice. Imaginați-vă că toate computerele se încadrează undeva pe un spectru, care variază de la a putea face multe lucruri, dar nimic bine, până la a face un singur lucru, dar făcându-l foarte bine. CPU-urile și ASIC-urile sunt la capetele opuse ale acestui spectru.<br/><br/>\nCPU-urile care sunt în toate computerele standard sunt la primul capăt. Ei pot face multe lucruri, cum ar fi să navigheze pe web, să joace jocuri sau să redă videoclipuri, dar nu pot face niciunul dintre ele deosebit de bine. Dar această flexibilitate vine cu prețul eficienței.<br/><br/>\nASIC-urile sunt la celălalt capăt, unde pot doar un singur lucru, dar o fac într-un ritm incredibil. Ei pot îndeplini doar o funcție matematică, dar pentru că pot ignora orice altceva, câștigurile de performanță sunt astronomice. Cu toate acestea, această eficiență vine cu prețul flexibilității, așa că dacă funcția se schimbă chiar și ușor - un exemplu este x + y = z se schimbă la 2x + y = z - atunci ASIC-ul va înceta să mai funcționeze. <br/><br/>\nNu toată lumea deține un ASIC, dar toată lumea are computere proprii. Acest lucru poate duce la un avantaj nedrept.';
+  String get knowledge250Sbmining250Sb2250Sbtext => 'Pentru a ne situa în context, să vorbim puțin despre echipamentul de minerit. Minatorii folosesc calculatoare pentru a face acest lucru, dar știm cu toții că nu toate calculatoarele sunt create egal. Unele computere sunt suficient de puternice pentru a rula rețele AI sau jocuri intense, în timp ce altele se luptă cu sarcini chiar și simple. Aceste diferențe în puterea de calcul afectează, de asemenea, rata de hash, sau rata la care căută soluții pentru blocuri. <br/><br/>\nDar chiar și aceste diferențe între calculatoare par a fi nesemnificative în comparație cu ratele de hash ale echipamentelor specializate, cunoscute și sub numele de Circuite Integrate Specifice Aplicației (ASICs), care depășesc calculatoarele obișnuite cu câteva ordine de mărime.<br/><br/>\nSă acordăm ceva timp pentru a explora ce face ASIC-urile atât de puternice. Imaginați-vă toate calculatoarele căzând undeva pe un spectru, care variază de la capacitatea de a face multe lucruri, dar nimic bine, la a face numai un lucru, dar a-l face foarte bine. CPU-urile și ASIC-urile sunt la capete opuse ale acestui spectru.<br/><br/>\nCPU-urile care se găsesc în toate calculatoarele standard sunt la primul capăt. Pot face multe lucruri, cum ar fi navigarea pe web, jocuri sau redarea de videoclipuri, dar nu fac niciunul dintre acestea în mod deosebit de bine. Dar această flexibilitate vine cu costul eficienței.<br/><br/>\nASIC-urile se află la celălalt capăt, unde pot face doar un lucru, dar îl fac la o rată incredibilă. Ele pot efectua numai o funcție matematică, dar pentru că pot ignora totul în rest, câștigurile de performanță sunt astronomice. Această eficiență, cu toate acestea, vine la costul flexibilității, așa că dacă funcția se schimbă chiar și ușor - un exemplu este x + y = z se schimbă în 2x + y = z - atunci ASIC-ul va înceta să funcționeze cu totul. <br/><br/>\nNu toată lumea deține un ASIC, dar toată lumea posedă calculatoare. Acest lucru poate duce la un avantaj injust.';
 
   @override
   String get knowledge250Sbmining250Sb2250Sbtitle => 'Fundal';
@@ -3677,7 +3677,7 @@ class I18nRo extends I18n {
   String get knowledge250Sbmyths250Sbtitle => 'Top 15 mituri și îngrijorări legate de Monero dezmințite';
 
   @override
-  String get knowledge250SbnetworkEffect250Sb0250Sbtext => '<p>Blockchain este o multitudine de discipline, toate strânse la un loc. Acesta aduce elemente de tehnologie, economie și teoria jocurilor în modelele sale de securitate. Acest lucru înseamnă că este una dintre cele mai implicate și mai complicate piese de tehnologie de până acum, dar înseamnă, de asemenea, că o înțelegere profundă și completă este imposibilă fără a învăța elementele de bază ale fiecărei piese de puzzle care o formează.</p>\n\n<p>Un aspect al blockchain care nu este discutat adesea este concurența. Fiecare criptomonedă este adesea evaluată în funcție de propriile merite și chiar în raport cu criptomonedele cele mai asemănătoare, însă puține sunt evaluate în funcție de ceea ce oferă pieței în ansamblu și de numărul de persoane care o folosesc. Luată mai departe, o criptomonedă trebuie să analizeze câți o folosesc, știu despre ea sau se interfațează în vreun fel cu ea. Acest concept este cunoscut sub numele de efect de rețea.</p>\n\n<p>Un exemplu non-blockchain de efect de rețea este social media. Dacă toți prietenii tăi sunt pe Facebook, atunci, atunci când alegi în ce medii sociale vrei să te implici mai mult, alegerile prietenilor tăi sunt, de asemenea, luate în considerare în această decizie. Faptul că cei mai mulți dintre ei sunt pe Facebook vă poate influența să vă alăturați și dumneavoastră. Iar atunci când decideți dacă doriți sau nu să părăsiți platforma, faptul că s-ar putea să pierdeți contactul cu unii dintre acești prieteni va influența, de asemenea, această decizie. Acesta este efectul de rețea în acțiune. După ce adoptarea atinge o masă critică, adoptarea ulterioară devine mai ușoară și este adesea alimentată de participanții actuali ai rețelei.</p>\n\n<p>Dacă privim acest aspect în contextul blockchain și, într-adevăr, al comerțului în general, puterea efectelor de rețea devine rapid evidentă. Dacă Bitcoin este criptografia despre care știu cei mai mulți oameni și pe care o cumpără cei mai mulți oameni, atunci mai mulți comercianți o vor accepta. Dacă mai mulți comercianți îl acceptă, atunci există mai multe locuri unde poate fi folosit, astfel încât mai mulți oameni îl vor cumpăra și mai mulți oameni vor ști despre el. Devine o mare buclă de feedback pozitiv care se transformă în bulgăre de zăpadă. În acest moment, un comerciant ar putea fi abordat cu privire la utilizarea unei alte criptomonede, dar se va întreba de ce este nevoie de ea, din moment ce acceptă deja Bitcoin și toată lumea o folosește. </p>\n\n<p>Deși este incontestabil faptul că Bitcoin este de departe cea mai mare criptomonedă, există și altele care sunt considerate de top în nișa lor. Monero este o astfel de monedă, fiind considerată de mulți ca fiind prima monedă de confidențialitate, deși diferite persoane au opinii diferite cu privire la faptul dacă Monero concurează sau nu în același spațiu cu Bitcoin. Acest lucru se datorează faptului că Bitcoin și-a pus toate cărțile pe transparență de dragul verificării sumei totale (deși acest lucru este posibil și în Monero, deși într-un mod mult mai ocolit).</p>\n\n<p>Deci, unde se situează Monero în acest joc al efectelor de rețea? Unde am început? Ce ne rezervă viitorul? Ei bine, să începem cu începutul.</p>\n\n<p>Este interesant de observat că în <a target=\"_blank\" href=\"/knowledge/monero-history\" class=\"next-link\">zilele de început ale Monero</a>, a fost una dintre cele trei modalități de a asigura confidențialitatea. Coinjoin, CryptoNote și hibridul masternode/coinjoin al lui Dash. Opțiunile au fost limitate și, cu siguranță, nu au fost revizuite de colegi, dar asta nu i-a împiedicat pe oameni să aleagă o parte. În această epocă mai veche, era jocul oricui, iar unii au decis să stea deoparte și să lase crema să se ridice în vârf. Timpul s-a dovedit în cele din urmă a fi pe <a target=\"_blank\" href=\"/knowledge/why-monero-is-better\" class=\"next-link\">partea la Monero</a>, în timp ce alte criptomonede de confidențialitate au apărut și au dispărut.</p>\n\n<p>Acest lucru a stabilit efectul de rețea al Monero ca monedă care a deschis calea altora în domeniul confidențialității. Chiar și atunci când au apărut tehnologii mai noi, cum ar fi zk-SNARKs de la Zcash și MimbleWimble, masele s-au uitat la Monero pentru leadership și discuții sănătoase despre aceste noi protocoale.</p>\n\n<p>În prezent, Monero este unul dintre puținele proiecte universal respectate în acest domeniu. De la începători în domeniul criptografic până la maximaliștii Bitcoin, toți privesc Monero cu cel puțin un respect reticent, deși cel mai adesea este vorba de recunoașteri mai mari. Atunci când veteranii spațiului vorbesc despre monedele care au cele mai mari șanse de a face o diferență în lume și care vor rezista prin încercări și necazuri, Monero nu lipsește niciodată.</p>\n\n<p>Aceste ultime câteva paragrafe nu sunt doar de autofelicitare, ci o privire sinceră asupra situației din peisajul criptografic la momentul scrierii acestui articol. Efectele de rețea ale Monero devin din ce în ce mai evidente în fiecare zi și apar în locuri neașteptate.</p>\n\n<p>Oamenii sunt destul de divizați în ceea ce privește viitorul Monero, dar toate opiniile arată că Monero își face bine treaba. Cel mai mare exemplu în acest sens este reprezentat de preocupările legate de reglementare. Unii se tem că Monero este prea privat, ceea ce va provoca o ciocnire inevitabilă cu guvernele lumii, în timp ce alții sunt încântați de modul în care această confidențialitate readuce libertatea la omul de rând. La baza ambelor puncte de vedere se află ideea că Monero își îndeplinește pe deplin promisiunea de confidențialitate și fungibilitate, fiind adesea singura monedă în astfel de conversații, deoarece majoritatea celorlalte \"monede de confidențialitate\" nu o fac.</p>\n\n<p>În timp ce comunitatea Monero încearcă din răsputeri să fie <a target=\"_blank\" href=\"/knowledge/critical-thinking\" class=\"next-link\">rațională și sceptică</a>, nu se teme de noile tehnologii. Alte monede, care se preocupă mai mult de partea competitivă, vorbesc constant despre \"detronarea\" Monero și despre cum Monero ar trebui să se teamă de noua lor tehnologie care va cuceri lumea confidențialității. Cu alte cuvinte, ei cred că noua lor tehnologie va depăși efectele de rețea stabilite de Monero în cercurile de confidențialitate.</p>\n\n<p>Spre deosebire de Bitcoin, care se bazează în primul rând pe efectele sale de rețea pentru a rămâne relevant, fără prea multă inovație de bază, Monero a decis să le îmbrățișeze pe amândouă. Tehnologii noi, verificate, sunt adăugate pentru a face Monero mai privat și mai sigur, asigurându-se că efectele de rețea ale Monero nu sunt niciodată singurul scop al statutului său, ci mai degrabă un rezultat al inovației și al muncii asidue.</p>\n\n<p>În acest sens, trebuie să ne întrebăm cât timp o tehnologie precum Bitcoin se poate baza doar pe efectele de rețea existente pentru a rămâne relevantă. Cazul este în prezent puternic, nicio monedă nefiind nici măcar pe aproape de a egala recunoașterea mărcii Bitcoin și spațiul colectiv al creierului, dar trebuie să ne amintim că mulți alți giganți din alte industrii s-au crezut de neatins, doar pentru a se confrunta cu propria cădere din cauza lipsei de inovare.</p>';
+  String get knowledge250SbnetworkEffect250Sb0250Sbtext => '<p>Blockchain reprezintă o mulțime de discipline adunate într-una singură. Întregește elemente de tehnologie, economie și teoria jocurilor în modelele sale de securitate. Acest lucru înseamnă că este una dintre cele mai complexe și intricate piese de tehnologie până în prezent, dar înseamnă și că o înțelegere profundă și temeinică este imposibilă fără a învăța fundamentalele fiecărui puzzle care îl formează.</p>\n\n<p>O parte a blockchain-ului care nu este adesea discutată este competiția. Fiecare criptomonedă este adesea evaluată în funcție de propriile merite și chiar în comparație cu criptomonedele cel mai asemănătoare cu ea, dar puține sunt evaluate pe baza a ceea ce oferă ele pieței în ansamblu și cât de mulți oameni o folosesc. Mai departe, o criptomonedă trebuie să analizeze câți o folosesc, știu de ea sau se conectează cu ea în orice fel. Acest concept este cunoscut sub numele de efect de rețea.</p>\n\n<p>Un exemplu non-blockchain de efect de rețea este rețeaua socială. Dacă toți prietenii tăi sunt pe Facebook, atunci când alegi pe ce platformă socială vrei să te implici, alegerea prietenilor tăi influențează și această decizie. Faptul că majoritatea sunt pe Facebook te poate influența să te alături și tu. Iar când decizi dacă vrei să părăsești platforma, faptul că ai putea pierde contactul cu unii dintre acești prieteni va influența și această decizie. Acesta este efectul de rețea în acțiune. După ce adopția atinge o masă critică, adopția ulterioară devine mai ușoară și este adesea alimentată de participanții actuali ai rețelei.</p>\n\n<p>Când privim acest lucru în contextul blockchain-ului, și într-adevăr al comerțului în general, puterea efectelor de rețea devine rapid evidentă. Dacă Bitcoin este criptomoneda despre care majoritatea oamenilor știu și este cea pe care majoritatea oamenilor o cumpără, atunci mai mulți comercianți o vor accepta. Dacă mai mulți comercianți o acceptă, atunci există mai multe locuri unde să o folosești, așa că mai mulți oameni vor cumpăra-o și mai mulți oameni vor auzi despre ea. Devine un ciclu de reacție pozitiv mare ce se amplifică. În acest moment, un comerciant poate fi abordat despre utilizarea unei alte criptomonede, dar se va întreba de ce este nevoie de aceasta, deoarece deja acceptă Bitcoin și este ceea ce toată lumea folosește și acceptă. </p>\n\n<p>Desi este indiscutabil că Bitcoin este, de departe, cea mai mare criptomonedă, există altele care sunt considerate de top în nișa lor. Monero este un astfel de caz, fiind considerată de mulți a fi moneda principală privind confidențialitatea, deși diverse persoane au opinii diferite despre dacă Monero concurează în același spațiu cu Bitcoin. Acest lucru se datorează faptului că Bitcoin și-a bazat toate atuurile pe transparența sa în vederea verificării cantității totale (deși acest lucru este și posibil în Monero, dar într-un mod mult mai indirect).</p>\n\n<p>Așadar, unde se situează Monero în acest joc al efectelor de rețea? De unde am început? Ce ne rezervă viitorul? Ei bine, să începem de la început.</p>\n\n<p>Este interesant de observat că în <a target=\"_blank\" href=\"/knowledge/monero-history\" class=\"next-link\">zilele sale timpurii</a>, Monero era unul dintre cele trei moduri de a asigura confidențialitatea. Coinjoin, CryptoNote și hibridul masternode/coinjoin al Dash. Opțiunile erau limitate și cu siguranță nu erau revizuite de experți, dar aceasta nu a împiedicat oamenii să aleagă o parte. În această perioadă mai veche, era jocul oricui și unii au decis să stea deoparte și să lase crema să se ridice la suprafață. Timpul a demonstrat în cele din urmă că era de <a target=\"_blank\" href=\"/knowledge/why-monero-is-better\" class=\"next-link\">partea Monero</a>, pe măsură ce alte criptomonede axate pe confidențialitate au apărut și au dispărut.</p>\n\n<p>Monero și-a stabilit efectul de rețea ca și monedă care a deschis drumul pentru altele în ceea ce privește confidențialitatea. Chiar și atunci când au apărut noi tehnologii, cum ar fi zk-SNARKs la Zcash și MimbleWimble, masele s-au uitat la Monero pentru conducere și o discuție rațională despre aceste noi protocoale.</p>\n\n<p>La momentul actual, Monero este unul dintre puținele proiecte universal respectate în acest domeniu. De la începătorii în cripto la maximaliștii Bitcoin, toți îi acordă Monero cel puțin un respect nevoit, deși mai des cu aprecieri înalte. Când veteranii domeniului vorbesc despre monedele care au cele mai mari șanse de a face o diferență în lume și care vor rezista prin încercare și suferință, Monero nu lipsește niciodată.</p>\n\n<p>Aceste ultime paragrafe nu sunt doar un elogiu de sine, ci o privire sinceră asupra ceea ce este peisajul cripto în momentul de față. Efectele de rețea ale Monero devin din ce în ce mai evidente în fiecare zi și apar în locuri neașteptate.</p>\n\n<p>Oamenii sunt destul de divizați în ceea ce privește viitorul Monero, dar toate opiniile indică faptul că Monero își face bine treaba. Cel mai mare exemplu în acest sens sunt îngrijorările de reglementare. Unii se tem că Monero este prea privat, ceea ce va determina un conflict inevitabil cu guvernele lumii, în timp ce alții sunt entuziasmați de modul în care această confidențialitate restituie libertatea persoanei obișnuite. La baza ambelor aceste puncte de vedere se află ideea că Monero își îndeplinește pe deplin promisiunea de confidențialitate și fungibilitate și că este adesea singura monedă în astfel de conversații, deoarece celelalte „monede de confidențialitate” nu o fac.</p>\n\n<p>Pe măsură ce comunitatea Monero încearcă din greu să fie <a target=\"_blank\" href=\"/knowledge/critical-thinking\" class=\"next-link\">rațională și sceptică</a>, nu se teme de tehnologia nouă. Alte monede, care se preocupă mai mult de partea competitivă, vorbesc constant despre \"dethroning\" Monero și cum Monero ar trebui să se teamă de noua lor tehnologie ce va prelua lumea confidențialității. Cu alte cuvinte, cred că noua lor tehnologie va depăși efectele de rețea stabilite de Monero în cercurile de confidențialitate.</p>\n\n<p>Spre deosebire de Bitcoin, care se bazează în principal pe efectele sale de rețea pentru a rămâne relevantă fără multe inovații, Monero a decis să îmbrățișeze ambele. Tehnologia nouă, verificată, este adăugată pentru a face Monero mai privat și mai sigur, asigurând că efectele de rețea ale Monero nu sunt niciodată singurul motiv pentru statutul său, ci mai degrabă un rezultat al inovației și al muncii asidue.</p>\n\n<p>În acest sens, trebuie să te întrebi cât timp poate o tehnologie cum este Bitcoin să se bazeze pur și simplu pe efectele sale de rețea existente pentru a rămâne relevantă. Cazul este în prezent puternic, nicio monedă nereușind să se apropie chiar de recunoașterea brandului Bitcoin și de spațiul colectiv de cunoaștere, dar trebuie să ne amintim că multe alte giganți din alte industrii s-au considerat de neatins, doar pentru a-și înfrunta propria cădere din cauza lipsei de inovație.</p>';
 
   @override
   String get knowledge250SbnetworkEffect250Sbdescription => 'Deși este de necontestat faptul că Bitcoin este de departe cea mai mare criptomonedă, ne întrebăm dacă se poate baza doar pe efectele de rețea existente pentru a rămâne relevantă.';
@@ -3839,7 +3839,7 @@ class I18nRo extends I18n {
   String get knowledge250Sbpractices250Sbtitle => 'Cele mai bune practici Monero pentru începători';
 
   @override
-  String get knowledge250Sbringct250Sb0250Sbtext => '<p>Confidențialitatea Monero nu depinde de un mecanism singular care, dacă ar fi spart, ar dezvălui întreaga tranzacție, ci mai degrabă de trei tehnologii diferite care lucrează în tandem pentru a oferi o confidențialitate holistică, compensând în același timp slăbiciunile celorlalte părți. Această abordare în trei direcții constă în <a target=\"_blank\" href=\"/knowledge/ring-signatures\" class=\"next-link\">semnături inelare</a>, RingCT, și <a target=\"_blank\" href=\"/knowledge/monero-stealth-addresses\" class=\"next-link\">adrese invizibile</a>. Aceste trei tehnologii ascund ieșirea reală (expeditorul), suma și, respectiv, destinatarul. Astăzi vom vorbi despre RingCT.</p>\n\n<p>RingCT este, fără îndoială, cel mai tehnic dintre cele trei și poate fi dificil de înțeles, așa că nu vom explica cum funcționează cu exactitate, ci mai degrabă vom arăta cum este posibil să nu cunoaștem o sumă și să confirmăm totuși anumite lucruri despre aceasta. Și nu vă faceți griji, vom folosi o mulțime de exemple, ca întotdeauna.</p>\n\n<p>În primul rând, să analizăm de ce este important să verificăm tot ceea ce privește sumele. De ce nu putem să le ținem complet secrete? Răspunsul este că există modalități inteligente prin care oamenii pot crea bani din nimic dacă li se oferă ocazia. Cum ar putea funcționa așa ceva? Să ne uităm la un exemplu.</p>\n\n<p>Dacă doriți să cumpărați un obiect de la prietenul dvs. și el vrea zece dolari pentru el, atunci începeți cu zece dolari, iar el începe cu zero. După ce îi dai cei zece dolari, el are zece dolari, iar tu ai zero. Tu ai început cu zece, iar el are zece. În această tranzacție nu au fost creați sau distruși bani.</p>\n\n<p>Cu criptomonedele, o persoană inteligentă poate da zece dolari pentru un obiect și, în loc să primească zero dolari în schimb, poate primi doi dolari înapoi. În loc ca 0 și 10 să ducă la 10 și 0 (sau 10=10), acum 0 și 10 duce la 10 și 2 (sau 10=12). Doi Monero a fost creat din senin. Vă puteți imagina că, dacă individul și-ar face acest lucru de mai multe ori, ar putea să acumuleze o avere uriașă în scurt timp.</p>\n\n<p>În cazul Bitcoin și al altora, acest lucru ar fi ușor de observat. Trebuie să te uiți la intrările care intră într-o tranzacție și la ieșirile care ies și să te asiguri că ceea ce se trimite este egal cu ceea ce se primește. Dacă aceste sume ar fi criptate și nu ar fi vizibile, atunci un utilizator nu ar avea cum să verifice dacă ceea ce se trimite și ceea ce se primește este același.</p>\n\n<p>În încercarea de a spori confidențialitatea Bitcoin, Gregory Maxwell a creat Confidential Transactions (CT), o nouă tehnologie care ar permite criptarea sumelor, dovedind în același timp că nimic nu a fost creat sau distrus în acest proces. La fel ca în cazul majorității tehnologiilor de confidențialitate, aceasta nu a ajuns în Bitcoin, dar Monero a fost dornică să o adopte. A existat doar o singură problemă. Tehnologia deja implementată a semnăturilor inelare era incompatibilă cu ideea propusă. Așadar, unul dintre cercetătorii MRL de la acea vreme, Shen Noether, a modificat CT în RingCT, o versiune de CT compatibilă cu semnăturile inelare.</p>\n\n<p>Încă o dată, modul în care funcționează acest lucru este destul de tehnic și ar fi dificil de explicat într-un articol introductiv. Pentru pasionații de criptografie care pur și simplu trebuie să știe, există o mulțime de articole aprofundate scrise pe internet despre mecanismele interne ale CT. Pentru noi ceilalți, acest articol va arăta cum ar fi posibil să se ascundă sumele, dar să se dovedească faptul că nu s-a creat sau distrus nimic.</p>\n\n<p>Să presupunem că Alice vrea să-i trimită bani lui Bob. Alice îi va trimite 10 XMR lui Bob, care va primi 10 XMR. 10=10, deci nu este nimic în neregulă aici. Dar Alice nu vrea ca nimeni să știe cât de mult trimite. Așa că ea și Bob creează un secret comun. Practic, un număr pe care doar ei doi îl cunosc. Să spunem că acel număr este 22. Acum, Alice înmulțește 10 (ceea ce trimite cu adevărat) cu 22 pentru a obține 220. Acesta este numărul pe care îl împărtășește cu rețeaua.</p>\n\n<p>Minerii înșiși nu cunosc numărul secret. Dacă ar ști, ar putea împărți numărul care li se arată cu numărul secret și ar obține suma reală trimisă. Dar, din moment ce nu știu, nu pot. Totuși, ei văd că Bob va primi 220. 220 trimis. 220 primit. 220 = 220. În acest fel, rețeaua poate verifica dacă nu a fost creat sau distrus niciun Monero, fără a cunoaște suma reală pe care Alice i-a trimis-o lui Bob.</p>\n\n<p>Deoarece Bob cunoaște numărul secret partajat, atunci când primește banii, el doar împarte la 22 pentru a obține suma reală trimisă de Alice, 10. Alice și Bob știu amândoi cât de mult au trimis și cât de mult au primit, în timp ce toți ceilalți primesc un număr fals.</p>\n\n<p>Încă o dată, acesta nu este modul real în care funcționează CT, dar oferă o idee despre cum ar putea fi posibil așa ceva. Modul real implică lucruri precum angajamentele Pedersen, două sume trimise (o sumă criptată către receptor și o sumă de angajament către rețea) și... da, este deja ușor de înțeles cum cineva s-ar putea pierde în toate acestea.</p>\n\n<p>Cu toate acestea, trebuie remarcat faptul că, deși RingCT ascunde suma tranzacționată între două părți într-o tranzacție, nu ascunde alte două seturi de numere.</p>\n\n<p>Primul este tranzacțiile coinbase. Dacă acest termen nu vă este familiar, înseamnă, în principiu, recompensa pe care minerii o primesc pentru găsirea următorului bloc. Acest număr nu este ascuns. Oricine poate vedea cât de mult a acordat protocolul unui miner pentru serviciile sale. În acest fel, cantitatea actuală de Monero existentă poate fi cunoscută prin însumarea tuturor tranzacțiilor coinbase. Suma acestora va fi egală cu Monero aflat în circulație.</p>\n\n<p>A doua cifră care nu este ascunsă este taxa plătită minerilor atunci când un utilizator trimite o tranzacție. Taxele trebuie să fie clare, astfel încât minerii să știe cui să acorde prioritate. Totuși, acesta este un mod în care utilizatorii își pot afecta confidențialitatea, deoarece dacă cineva folosește o taxă unică pentru mineri de fiecare dată când trimite o tranzacție (cum ar fi 0,12345), atunci tranzacțiile lor pot fi legate între ele.</p>\n\n<p>În afară de aceste cazuri, RingCT a ascuns sumele Monero încă din 2017, iar confidențialitatea noastră colectivă este cu atât mai puternică din acest motiv.</p>';
+  String get knowledge250Sbringct250Sb0250Sbtext => '<p>Confidențialitatea Monero nu depinde de un singur mecanism care, odată compromis, ar dezvălui totalitatea tranzacțiilor, ci de trei tehnologii diferite care lucrează împreună pentru a oferi confidențialitate holistică, compensând astfel punctele slabe ale celorlalte componente. Această abordare tridentă constă în <a target=\"_blank\" href=\"/knowledge/ring-signatures\" class=\"next-link\">semnături inele</a>, RingCT și <a target=\"_blank\" href=\"/knowledge/monero-stealth-addresses\" class=\"next-link\">adrese furtive</a>. Aceste trei tehnologii ascund respectiv expeditorului real (emisia), suma și destinatarul. Astăzi vom vorbi despre RingCT.</p>\n\n<p>RingCT este, probabil, cel mai tehnic dintre cele trei și poate fi dificil de înțeles, așa că nu vom explica exact cum funcționează, ci vom arăta cum este posibil să nu știi o sumă și să confirmi totuși lucruri despre ea. Și nu vă faceți griji, vom folosi din plin exemple, ca întotdeauna.</p>\n\n<p>În primul rând, să explorăm de ce este important să verificăm orice despre sumele implicate. De ce nu le păstrăm pur și simplu complet secrete? Răspunsul este că există modalități ingenioase prin care oamenii pot crea bani din nimic dacă li se oferă ocazia. Cum ar putea funcționa așa ceva? Să vedem un exemplu.</p>\n\n<p>Dacă dorești să achiziționezi un obiect de la un prieten și acesta vrea zece dolari pentru el, atunci tu începi cu zece dolari și el începe cu zero. După ce îi dai zece dolari, el are zece dolari și tu ai zero. Ai început cu zece și acum el are zece. Niciun ban nu a fost creat sau distrus în această tranzacție.</p>\n\n<p>În cazul criptomonedelor, o persoană ingenioasă poate da zece dolari pentru articol și, în loc să primească zero dolari înapoi, pot primi doi dolari înapoi. În loc de 0 și 10 care duc la 10 și 0 (adica 10 egal 10), acum avem 0 și 10 care duce la 10 și 2 (adica 10 egal 12). Doi Monero au fost creați din nimic. Îți poți imagina că dacă individul ar face acest lucru de mai multe ori, ar putea acumula o avere imensă într-un timp scurt.</p>\n\n<p>În cazul Bitcoin și al altora, acest lucru ar fi ușor de văzut. Te uiți la intrările care merg într-o tranzacție și la ieșirile care ies și te asiguri că ce este trimis este egal cu ceea ce este primit. Dacă aceste sume ar fi criptate și nu vizibile atunci, un utilizator nu are nicio modalitate de a verifica că ceea ce este trimis și ceea ce este primit este același lucru.</p>\n\n<p>Într-o încercare de a crește confidențialitatea Bitcoin, Gregory Maxwell a creat Confidential Transactions (CT), o nouă tehnologie care ar permite sumelor criptate, în timp ce demonstrează că nimic nu a fost creat sau distrus în proces. Așa cum se întâmplă cu majoritatea tehnologiilor de confidențialitate, nu a fost introdusă în Bitcoin, dar Monero era interesat să o adopte. A existat doar o problemă. Tehnologia deja implementată a semnăturilor inelare era incompatibilă cu ideea propusă. Astfel, unul dintre cercetătorii MRL de la acea vreme, Shen Noether, a modificat CT în RingCT, o versiune a CT care era compatibilă cu semnăturile inelare.</p>\n\n<p>Din nou, modul în care funcționează acesta este destul de tehnic și ar fi dificil de explicat într-un articol introductiv. Pentru entuziaștii de criptografie care pur și simplu trebuie să știe, există multe articole pe internet despre modul în care funcționează CT. Pentru restul dintre noi, acest articol va arăta cum ar putea fi posibil să ascunzi sumele, dar totuși să demonstrezi că nimic nu a fost creat sau distrus.</p>\n\n<p>Să presupunem că Alice dorește să îi trimită lui Bob bani. Alice va trimite 10 XMR lui Bob, care va primi 10 XMR. 10 egal 10, deci nimic nu este în neregulă aici. Dar Alice nu vrea ca nimeni să știe cât trimite ea. Așa că ea și Bob creează un secret comun. Practic, un număr pe care doar ei doi îl știu. Să spunem că numărul este 22. Acum, Alice înmulțește 10 (cât trimite ea de fapt) cu 22 pentru a obține 220. Acesta este numărul pe care-l împărtășește cu rețeaua.</p>\n\n<p>Minerii înșiși nu știu numărul secret. Dacă ar ști, ar putea împărți numărul pe care îl văd cu numărul secret și ar obține suma reală trimisă. Dar din moment ce nu știu, nu pot. Ei văd, totuși, că Bob va primi 220. S-au trimis 220. S-au primit 220. 220 egal 220. În acest fel, rețeaua poate verifica că niciun Monero nu a fost creat sau distrus, fără a cunoaște suma reală pe care Alice a trimis-o lui Bob.</p>\n\n<p>Din moment ce Bob cunoaște numărul secret comun, când primește banii, el doar împarte la 22 pentru a obține suma reală pe care Alice a trimis-o, 10. Alice și Bob știu amândoi cât a fost trimis și cât a fost primit, în timp ce toți ceilalți primesc un număr fals.</p>\n\n<p>Din nou, aceasta nu este modalitatea reală în care funcționează CT, dar oferă o idee despre cum ar fi posibil așa ceva. Modul real implică lucruri precum angajamente Pedersen, două sume trimise (o sumă criptată destinatarului și o sumă de angajament pentru rețea) și ... da, este deja ușor de văzut cum ai putea te-ai pierde în toate acestea.</p>\n\n<p>Un aspect de notat însă este că, în timp ce RingCT ascunde suma tranzacționată între două părți într-o tranzacție, nu ascunde alte două seturi de numere.</p>\n\n<p>Primul este tranzacțiile coinbase. Dacă acest termen nu îți este familiar, înseamnă practic recompensa pe care minerii o primesc pentru găsirea următorului bloc. Acest număr nu este ascuns. Oricine poate vedea cât a acordat protocolul unui miner pentru serviciul lor. În acest fel, suma actuală de Monero existentă poate fi cunoscută prin adăugarea tuturor tranzacțiilor coinbase. Suma lor va fi egală cu Monero actual în circulație.</p>\n\n<p>Al doilea număr care nu este ascuns este taxa plătită minerilor atunci când un utilizator trimite o tranzacție. Taxele trebuie să fie transparente astfel încât minerii să știe pe cine să prioritizeze. Acesta este un mod prin care utilizatorii își pot prejudicia confidențialitatea, deoarece dacă cineva folosește o taxă de minerit unică de fiecare dată când trimite o tranzacție (cum ar fi 0.12345), atunci tranzacțiile lor pot fi legate.</p>\n\n<p>În afara acestor cazuri, RingCT a ascuns sumele Monero din 2017, iar confidențialitatea noastră colectivă este cu atât mai puternică pentru asta.</p>';
 
   @override
   String get knowledge250Sbringct250Sbdescription => 'RingCT a ascuns sumele Monero încă din 2017, iar confidențialitatea noastră colectivă este cu atât mai puternică din acest motiv. Dar cum se realizează acest lucru?';
@@ -3878,7 +3878,7 @@ class I18nRo extends I18n {
   String get knowledge250Sbscams250Sb3250Sbtitle => 'Înșelătoria absolută';
 
   @override
-  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Sămânța ta Monero ESTE Monero-ul tău. Trebuie să-l notezi când îți faci pentru prima dată un portofel, pentru că dacă îți pierzi sămânța, ți-ai pierdut Monero-ul și nimeni nu te poate ajuta. DAR, DE ASEMENEA, trebuie să păstrați această sămânță în siguranță de ceilalți. Dacă cineva îți fură sămânța, poate trimite Monero-ul din portofel ca și cum ai fi tu și, din nou, nimeni nu poate recupera acești bani pentru tine. A dispărut.</p>\n\n<p>De prea multe ori o persoană a păstrat un portofel rece de Monero, a fost curios de fondurile sale și a vrut să verifice. Dar, în loc să treacă prin bătaia de cap de a reinstala întreaga aplicație de portofel, ei decid doar să folosească un portofel web pentru a-și restaura rapid semințele și a-și privi banii. Dacă devin victime ale înșelătoriei Business Look Alike, atunci însuși actul de a introduce semințele lor le dă escrocilor, care pot muta apoi banii într-un alt portofel pe care îl controlează la convenție.</p>\n\n<p>Oricand un site, o aplicație sau un portofel are o opțiune „restaurare cu semințe”, fiți foarte atenți că aplicația pe care o utilizați este una legitimă. Verificați hash-urile programului (site-ul web Monero are instrucțiuni despre cum să faceți acest lucru) pentru a vă asigura că programul nu a fost alterat de forțele externe și fiți constant conștienți de unde și cum vă expuneți semințele. Verificarea dublă poate fi enervantă, dar pierderea de fonduri din neatenție ar fi și mai gravă.</p>';
+  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Sămânța ta Monero ESTE Monero-ul tău. Trebuie să o notezi când îți faci inițial un portofel, pentru că dacă îți pierzi sămânța, ți-ai pierdut Monero și nimeni nu te poate ajuta. DAR, DE ASEMENEA, trebuie să îți păstrezi această sămânță în siguranță de ceilalți. Dacă cineva îți fură sămânța, poate trimite Monero din portofel ca și cum ar fi tu, și, din nou, nimeni nu poate recupera acești bani pentru tine. S-au dus.</p>\n\n<p>Prea des, un individ a păstrat un portofel rece de Monero, a fost curios despre fondurile sale și a vrut să le verifice. Dar în loc să treacă prin toată bătaia de cap de a reinstala întreaga aplicație de portofel, ei decid pur și simplu să folosească un portofel de web pentru a-și restaura rapid sămânța și a-și privi banii. Dacă sunt victime ale escrocheriei \"Business Look Alike\", atunci chiar actul de introducere a sămânței le oferă escrocilor, care pot atunci muta banii într-un alt portofel pe care îl controlează la conveniența lor.</p>\n\n<p>ORICÂND un site, o aplicație sau un portofel are o opțiune \"restore with seed\" (restaurare cu sămânță), fii foarte atent că aplicația pe care o folosești este una legitimă. Verifică hashr-urile programului (site-ul Monero are instrucțiuni despre cum să faci acest lucru) pentru a te asigura că programul nu a fost falsificat de forțe externe, și fii constant conștient de unde și cum îți expui sămânța. Verificarea dublă poate fi enervantă, dar pierderea de fonduri din neglijență ar fi și mai rea.</p>';
 
   @override
   String get knowledge250Sbscams250Sb4250Sbtitle => 'Rolul semințelor tale Monero în escrocherii';
@@ -3965,7 +3965,7 @@ class I18nRo extends I18n {
   String get knowledge250Sbtrust250Sb0250Sbtext => '<p>Puține idei din spațiul criptomonedelor primesc atât de multă atenție și discuții ca și conceptul de încredere, și nu fără motiv. La urma urmei, întregul scop al unui blockchain este de a elimina încrederea în terți.</p>\n\n<p>Pentru cei care nu înțeleg pe deplin această idee, iată un mic îndrumar. În sistemul financiar tradițional, terții sunt, în general, utilizați pentru diverse sarcini. Băncile sunt folosite pentru a proteja banii în numele dvs. împotriva furtului, arbitrii. Escrows sunt folosite pentru ca afacerile să poată funcționa între două părți care nu au încredere una în cealaltă. Companiile de carduri de credit plătesc bani pentru bunuri și servicii în numele dumneavoastră, asumându-și riscul că s-ar putea să nu le plătiți înapoi.</p>\n\n<p>Fiecare dintre aceste cazuri necesită încredere. În cazul băncilor și al agenților de escrow, aveți încredere că ei înșiși nu vor fugi cu banii dumneavoastră, iar în cazul companiilor de carduri de credit, aveți încredere că nu vor plăti bani în numele dumneavoastră fără consimțământul dumneavoastră, toate acestea fiind foarte posibile. Noi facem tot ce putem pentru a ne asigura că aceste lucruri nu se întâmplă. Lucrăm numai cu companii și persoane de încredere și legiferăm pentru a face ca scenariile de mai sus să fie ilegale și încercăm să asigurăm consecințe pentru infractori, dar asta nu le împiedică întotdeauna să se întâmple oricum.</p>\n\n<p>În plus, aceste servicii nu sunt gratuite. Agenții escrow și băncile pot percepe taxe pentru serviciile lor, iar cardurile de credit percep dobânzi pentru banii împrumutați.</p>\n\n<p>Blockchain a fost creat pentru a elimina acești intermediari, precum și încrederea și comisioanele care vin împreună cu ei. Prin puterea consensului, utilizatorii pot impune ei înșiși starea registrului, fără a avea încredere în cineva care să le spună câți bani au și fără ca terțe părți de încredere să poată fugi cu fondurile dumneavoastră.</p>\n\n<p>Se pune atât de mult accent pe această lipsă de încredere, încât orice schimbare sau adăugare tehnologică care adaugă un element de încredere în blockchain este întâmpinată cu mult scepticism și critică, iar unele proiecte resping toate aceste noțiuni în mod categoric. Este interesant atunci faptul că nu se acordă aceeași atenție și confidențialității.</p>\n\n<p>Încă o dată, ne uităm la restul lumii și observăm că, de prea multe ori, viața noastră privată este la mila unor terți \"de încredere\". Atunci când furnizăm adresele noastre fizice pentru un articol pe care dorim să ni-l trimitem, avem încredere că magazinul în cauză nu va folosi aceste informații în scopuri nefaste sau nu le va vinde altora. Același lucru este valabil și pentru gândurile noastre personale sau fotografiile pe care le postăm pe rețelele de socializare. Acest lucru se aplică chiar și în cazul finanțelor noastre, deoarece mai multe hack-uri din industria contabilă sau aplicații financiare care postează direct pe un panou public intern pe ce cheltuiesc oamenii banii (de exemplu, Venmo).</p>\n\n<p>Monero vede acest angajament de încredere în blockchain și aplică un standard similar în ceea ce privește modul în care abordăm confidențialitatea. Confidențialitatea noastră nu ar trebui să depindă de promisiunea unei terți de a o păstra în siguranță, așa cum nici finanțele noastre nu ar trebui să depindă de promisiunea altora că nu vor fugi cu ele. În acest scop, Monero se asigură că toate tehnologiile de confidențialitate implementate sunt lipsite de încredere.</p>\n\n<p>Există și alte tehnologii de confidențialitate care circulă. Cele de încredere și, trebuie să recunoaștem, nu sunt lipsite de puncte forte. Zcash utilizează anumite tipuri de sisteme de demonstrație ca elemente constitutive în protocolul său de tranzacționare confidențială, care au garanții de confidențialitate foarte puternice, cu seturi de anonimat mari și, utilizate corect, ar putea fi o modalitate puternică de a vă asigura confidențialitatea. Dezavantajul acestei abordări este însă că, în cadrul configurării inițiale a acestei tehnologii, trebuie să existe un set de parametri care trebuie ales și ulterior uitat. Dacă cineva păstrează acest parametru, ar avea capacitatea de a crea dovezi SNARK false, tipărind efectiv bani fără ca nimeni să fie mai înțelept, deoarece sunt ascunși. Dar afectează acest lucru viața privată? Unii teoretizează că da, în timp ce alții că nu, iar în cele din urmă, trebuie făcute mai multe cercetări pentru a se ajunge la un răspuns definitiv.</p>\n\n<p>Oricum ar fi, acest proces de minimizare a încrederii seamănă cu scenariile pe care le-am discutat la începutul acestui articol. Lumea tradițională. Cea de care încercăm să ne îndepărtăm. Blockchain în sine nu reduce încrederea în terți, ci mai degrabă o elimină. Comunitatea Monero consideră că același standard de eliminare, mai degrabă decât de reducere, ar trebui aplicat și tehnologiilor noastre de confidențialitate. Doar pentru că nu s-a dovedit definitiv că configurațiile de încredere pot sau nu pot compromite confidențialitatea, nu înseamnă că ar trebui să fim permisivi în ceea ce privește acordarea de încredere înapoi în sistem în această privință.</p>\n\n<p>Desigur, orice progres în domeniul confidențialității reprezintă o îmbunătățire și, adesea, confidențialitatea de încredere este doar un pas înainte către confidențialitatea fără încredere, iar în aceste cazuri suntem bucuroși să vedem că spațiul progresează. Și totuși, în același timp, comunitatea Monero nu poate, cu conștiința împăcată, să implementeze pe blockchain-ul nostru o tehnologie de confidențialitate care ar slăbi chiar scopul revoluției noastre.</p>\n\n<p>Deseori ni se pune întrebarea când va implementa Monero această sau acea nouă tehnologie de confidențialitate. Aceste întrebări vin adesea de la persoane neinformate, care nu înțeleg compromisurile și care nu fac decât să repete noile cuvinte de ordine ale zilei în materie de confidențialitate. Răspunsul la aceste întrebări este simplu. Monero analizează, revizuiește și cercetează în mod constant noi protocoale de confidențialitate care ar consolida garanțiile de confidențialitate pe lanțul Monero, dar nu suntem dispuși să pătrundem în lumea confidențialității de încredere pentru a atinge acest obiectiv, chiar dacă garanțiile sunt teoretic mai puternice.</p>\n\n<p>Unii spun că această abordare se va dovedi a fi depășită, dar noi credem că astfel de oameni au pierdut povestea de ce ne aflăm aici de la bun început.</p>';
 
   @override
-  String get knowledge250Sbtrust250Sbdescription => 'Conceptul de încredere este unul dintre cele mai discutate în domeniul criptomonedelor. La urma urmei, întregul scop al unui blockchain este de a elimina încrederea în terți';
+  String get knowledge250Sbtrust250Sbdescription => 'Conceptul de încredere este unul dintre cele mai discutate în spațiul criptomonedelor. La urma urmei, întregul scop al unui blockchain este de a elimina încrederea în terțe părți.';
 
   @override
   String get knowledge250Sbtrust250Sbtitle => 'De ce Monero folosește o configurație fără încredere, spre deosebire de Zcash';
@@ -4217,7 +4217,7 @@ class I18nRo extends I18n {
   String get knowledge250Sbwhy8722Sbmonero250Sbintro250Sbuntraceable250Sbtitle => 'Nedetectabil';
 
   @override
-  String get knowledge250Sbwhy8722Sbmonero250Sbsummary => '<h2>Rezumat</h2>\n <p>  În opinia noastră, Monero este alegerea cea mai bună dacă sunteți în căutarea unei criptomonede private, sigure, nedetectabile, fungibile, descentralizate, fără a fi nevoie de o configurare de încredere. Orice altceva vă pune în pericol confidențialitatea și securitatea. Dar nu vă încredeți doar în opinia noastră. Faceți propriile cercetări și convingeți-vă singuri. Luați în considerare faptul că Monero este aprobată și utilizată de entități care depind de confidențialitate și de nedetectabilitate, cum ar fi:                  </p>\n\n                  <ul class=\"disc\">\n                    <li>\n                      <a href=\"https://www.reddit.com/r/Monero/comments/4xqrzd/sigaint_launches_tor_monero_node_as_its_operators/\"> SIGAINT </a>\n                    </li>\n\n                    <li>\n                      <a href=\"https://puri.sm/posts/purism-collaborates-with-cryptocurrency-monero-to-enable-mobile-payments/\"> Purism </a>\n                    </li>\n\n                    <li>\n                      <a href=\"https://shop.wikileaks.org/donate#db9\"> Wikileaks </a>\n                    </li>\n\n                    <li>\n                      Piața AlphaBay (AB) a fost închisă în iulie 2017. Plângerea de <a href=\"https://assets.documentcloud.org/documents/3898109/AlphaBay-Cazes-Forfeiture-Complaint.pdf\"> Confiscarea Federală </a> împotriva AB arată că:\n                      <ul class=\"disc\">\n                        <li>\n                          <b> Monero este singura criptomonedă privată și nedetectabilă:\n                          </b>\n                          <br />\n                          &quot;În total, din portofelele CAZES și agenții computerizați au preluat controlul asupra a aproximativ 8.800.000 de dolari în Bitcoin, Ethereum, Moreno [sic] și Zcash, repartizați după cum urmează: 1.605,0503851 Bitcoin, 8.309,271639 Ethereum, 3.691,98 Zcash, <em>și o cantitate necunoscută de Monero.</em>&quot; (partea de jos a paginii 20 și partea de sus a paginii 21, sublinierea a fost adăugată.) </li>\n                        <li>\n                          <b>\n                            Tranzacțiile Bitcoin nu sunt private și pot fi urmărite:\n                          </b>\n                          <br />\n                          &quot;Agenții federali au obținut mandatele după ce au urmărit o serie de tranzacții Bitcoin provenind de la AlphaBay către conturi de monedă digitală și, în cele din urmă, conturi bancare și alte active tangibile, deținute de CAZES și soția sa..&quot; (p. 17, liniile 24-26)\n                        </li>\n                      </ul>\n                    </li>\n                  </ul>\n\n                  <div class=\"notice info\">\n                    <p>\n                      LocalMonero nu susține și nu încurajează nicio activitate ilegală..\n                    </p>\n                  </div>  ';
+  String get knowledge250Sbwhy8722Sbmonero250Sbsummary => '<h2>Rezumat</h2>\n<p>În opinia noastră, Monero este alegerea evidentă dacă căutați o criptomonedă privată, sigură, de neurmărit, fungibilă, descentralizată, pentru care nu este necesară nicio configurare de încredere. Orice altceva pune în pericol intimitatea și securitatea dvs. Dar nu vă bazati doar pe opinia noastră. Faceți-vă propriile cercetări și vedeți singuri. Luați în considerare faptul că Monero este aprobat și folosit de entități care depind de intimitate și imposibilitatea de a fi urmărit, cum ar fi:</p>\n\n<ul class=\"disc\">\n    <li>\n      <a href=\"https://www.reddit.com/r/Monero/comments/4xqrzd/sigaint_launches_tor_monero_node_as_its_operators/\"> SIGAINT </a>\n    </li>\n\n    <li>\n      <a href=\"https://puri.sm/posts/purism-collaborates-with-cryptocurrency-monero-to-enable-mobile-payments/\"> Purism </a>\n    </li>\n\n    <li>\n      <a href=\"https://shop.wikileaks.org/donate#db9\"> Wikileaks </a>\n    </li>\n\n    <li>\n      AlphaBay Market (AB) a fost închis în iulie 2017. <a href=\"https://assets.documentcloud.org/documents/3898109/AlphaBay-Cazes-Forfeiture-Complaint.pdf\"> Plângerea federală de confiscare </a> împotriva AB arată că:\n      <ul class=\"disc\">\n        <li>\n          <b> Monero este singura criptomonedă privată și de neurmărit:</b>\n          <br />\n          &quot;În total, din portofelele lui CAZES și computerul agenților a fost preluată controlul asupra aproximativ 8,800,000 de dolari în Bitcoin, Ethereum, Moreno [sic] și Zcash, după cum urmează: 1,605.0503851 Bitcoin, 8,309.271639 Ethereum, 3,691.98 Zcash, <em>și o sumă necunoscută de Monero.</em>&quot; (la sfârșitul paginii 20 și începutul paginii 21, accent adăugat) </li>\n        <li>\n          <b>\n            Tranzacțiile cu Bitcoin nu sunt private și pot fi urmărite:\n          </b>\n          <br />\n          &quot;Agenții federali au obținut mandatele după ce au urmărit un număr de tranzacții Bitcoin care începeau cu AlphaBay, conducând la conturi de monede digitale, iar în final la conturi bancare și alte active tangibile, deținute de CAZES și soția lui.&quot; (p. 17, liniile 24-26)\n        </li>\n      </ul>\n    </li>\n</ul>\n\n<div class=\"notice info\">\n    <p>\n      LocalMonero nu susține sau nu încurajează nicio activitate ilegală.\n    </p>\n</div>  ';
 
   @override
   String get knowledge250Sbwhy8722Sbmonero250Sbtitle => 'De ce Monero este mai bun decât Dash, Zcash, Zcoin (chiar și cu Lelantus), Grin și Bitcoin Mixers ca Wasabi (actualizat în mai 2020)';
@@ -4262,7 +4262,7 @@ class I18nRo extends I18n {
   String get left8722Sbdrawer250Sbsupport => 'Asistență';
 
   @override
-  String get login250Sberror8722Sb0 => 'Nume de utilizator/parolă/parolă unică greșită!';
+  String get login250Sberror8722Sb0 => 'Nume de utilizator/parolă/parolă unică incorectă!';
 
   @override
   String get login250Sberror8722Sb1 => 'Numele de utilizator și parola au caractere nepermise sau lungime invalidă';
@@ -4424,11 +4424,11 @@ class I18nRo extends I18n {
   String get morph250Sbcheckbox250Sbfaq8722Sblink => 'Cum funcționează?';
 
   @override
-  String get morph250Sbdeposit250Sbaddress8722Sbinput250Sbhelper => 'Această adresă va fi folosită pentru o rambursare în cazul în care ceva nu merge bine în timpul schimbului ChangeNow.';
+  String get morph250Sbdeposit250Sbaddress8722Sbinput250Sbhelper => 'Această adresă va fi utilizată pentru rambursare în cazul în care ceva nu merge bine în timpul tranzacției cu ChangeNow';
 
   @override
   String morph250Sbdeposit250Sbaddress8722Sbinput250Sbtext(Object cryptocurrencyName) {
-    return 'Adresă de rambursare $cryptocurrencyName.';
+    return 'Adresă de rambursare $cryptocurrencyName';
   }
 
   @override
@@ -4479,7 +4479,7 @@ class I18nRo extends I18n {
   String get nojs250Sbdashboard250Sbsave8722Sbvacations8722Sbbtn => 'Salvați vacanțele';
 
   @override
-  String get nojs250Sberror250Sblogin250Sbunauthorized => 'Nume de utilizator/parolă/parolă unică greșită!';
+  String get nojs250Sberror250Sblogin250Sbunauthorized => 'Nume de utilizator/parolă/parolă unică incorectă!';
 
   @override
   String get nojs250Sberror250Sbserver => 'Ceva nu a mers bine cu cererea. Vă rugăm să reîmprospătați pagina și să încercați din nou. Dacă problema persistă, vă rugăm să contactați serviciul nostru de asistență.';
@@ -4575,7 +4575,7 @@ class I18nRo extends I18n {
 
   @override
   String nojs250Sbno8722Sbgoogle8722Sbtext(Object value) {
-    return 'Puteți utiliza serviciul $value pentru a obține coordonatele locației dvs.';
+    return 'Puteți folosi serviciul $value pentru a obține coordonatele locației dumneavoastră';
   }
 
   @override
@@ -4585,7 +4585,7 @@ class I18nRo extends I18n {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => 'Reîmprospăta';
 
   @override
-  String note250Sbbutton(Object username, Object val) {
+  String note250Sbbutton(Object username) {
     return 'Adăugați o notă la $username';
   }
 
@@ -4598,7 +4598,7 @@ class I18nRo extends I18n {
   String get note250Sbinput250Sbplaceholder => 'Aceasta este o notă privată pentru referință proprie, nu va fi vizibilă pentru acest utilizator sau pentru oricare alt utilizator.';
 
   @override
-  String note250Sbtitle(Object username, Object val) {
+  String note250Sbtitle(Object username) {
     return 'Nota dvs. pe $username (văzută doar de dvs.)';
   }
 
@@ -4617,7 +4617,7 @@ class I18nRo extends I18n {
 
   @override
   String notification250Sbmessage(Object tradeId, Object username) {
-    return 'Aveți un mesaj nou în tranzacția $tradeId de la $username.';
+    return 'Aveți un mesaj nou în tranzacția $tradeId de la $username';
   }
 
   @override
@@ -4682,13 +4682,13 @@ class I18nRo extends I18n {
   String get password8722Sbreset250Sbconfirm8722Sbnew8722Sbpassword8722Sbtip => 'Vă rugăm să confirmați noua parolă';
 
   @override
-  String get password8722Sbreset250Sberror => 'S-a produs o eroare în legătură cu cererea dvs.';
+  String get password8722Sbreset250Sberror => 'A apărut o eroare la solicitarea dvs';
 
   @override
   String get password8722Sbreset250Sbnew8722Sbpassword => 'Parolă nouă';
 
   @override
-  String get password8722Sbreset250Sbsubtitle => 'După schimbarea parolei, va trebui să te autentifici din nou folosind noua parolă.';
+  String get password8722Sbreset250Sbsubtitle => 'După schimbarea parolei, va trebui să vă autentificați din nou folosind noua parolă';
 
   @override
   String get password8722Sbreset250Sbsuccess => 'Succes!';
@@ -5338,7 +5338,7 @@ class I18nRo extends I18n {
   String get seo250Sbheadline8722Sb257Sbagoradesk => 'O adevărată alternativă LocalBitcoins și Paxful.';
 
   @override
-  String get seo250Sbtext8722Sb1 => 'Dacă sunteți îngrijorat de invadarea confidențialității - cea mai bună criptomonedă în care să investiți este XMR. Monero este o monedă imposibil de urmărit, dezvoltată având în vedere confidențialitatea prin design.\n<br/>\nDe unde să cumpăr Monero? LocalMonero este cea mai mare, cea mai de încredere și mai bine stabilită platformă de tranzacționare P2P Monero din comunitatea XMR. Nu avem cecuri KYC - puteți pur și simplu cumpăra Monero anonim fără verificarea ID-ului cu PayPal, card de credit, card cadou, numerar prin poștă sau puteți converti bitcoin în Monero - platforma noastră acceptă orice metodă de plată.';
+  String get seo250Sbtext8722Sb1 => 'Dacă ești preocupat de invadarea intimității - cea mai bună criptomonedă în care să investești este XMR. Monero este o monedă care nu poate fi urmărită, dezvoltată având în minte confidențialitatea la proiectare.\n<br/>\nUnde să cumperi Monero? LocalMonero este cea mai mare, cea mai de încredere și bine stabilită platformă de tranzacționare P2P Monero în comunitatea XMR. Nu avem controale KYC - poți pur și simplu să cumperi Monero anonim fără verificarea ID-ului cu PayPal, card de credit, card cadou, bani prin poștă sau să convertești bitcoin în Monero - platforma noastră suportă orice metodă de plată.';
 
   @override
   String get seo250Sbtext8722Sb157Sbagoradesk => 'Vă întrebați cum să investiți în Bitcoin? Pe AgoraDesk, cumpărarea de bitcoini nu a fost niciodată mai ușoară - cumpărați instantaneu BTC de la o persoană folosind metoda dvs. preferată de plată online: PayPal, card de credit/debit sau transfer bancar, carduri cadou, Venmo sau orice altă.\n<br/>\nDacă doriți să cumpărați bitcoini în apropiere de dumneavoastră cu bani cash, puteți găsi pe cineva dispus să vândă bitcoini la nivel local - platforma de tranzacționare acceptă cumpărarea și vânzarea de BTC cu bani cash. Puteți chiar să cumpărați bitcoini folosind numerar prin poștă.';
@@ -5725,7 +5725,7 @@ class I18nRo extends I18n {
   String get settings250Sbtab250Sbchange8722Sbemail8722Sbshort => 'E-mail';
 
   @override
-  String get settings250Sbtab250Sbchange8722Sbpassword8722Sblong => 'Parola';
+  String get settings250Sbtab250Sbchange8722Sbpassword8722Sblong => 'Parolă';
 
   @override
   String get settings250Sbtab250Sbimport8722Sbreputation => 'Import reputație';
@@ -6674,7 +6674,7 @@ class I18nRo extends I18n {
   String get verify8722Sbemail250Sbsuccess => 'E-mail verificat cu succes!';
 
   @override
-  String get wallet250Sbclipboard8722Sbvirus8722Sbwarning => '<strong> Asigurați-vă că adresa pe care ați introdus-o este aceeași cu cea pe care ați copiat-o! </strong> Unii utilizatori s-au ales cu fondurile furate de către <a style=\"text-decoration:underline;font-size:inherit;color:inherit\" href=\"https://reddit.com/r/Monero/comments/mcvuxc/beware_crypto_stealing_malware/\" target=\"_blank\">malware care înlocuiește adresa copiată în clipboard cu adresa atacatorului</a>.';
+  String get wallet250Sbclipboard8722Sbvirus8722Sbwarning => '<strong> Asigurați-vă că adresa pe care ați lipit-o este aceeași cu adresa pe care ați copiat-o! </strong> Unii utilizatori și-au pierdut fondurile din cauza <a style=\"text-decoration:underline;font-size:inherit;color:inherit\" href=\"https://web.archive.org/web/20220422235453/https://www.reddit.com/r/Monero/comments/mcvuxc/beware_crypto_stealing_malware/\" target=\"_blank\"> unui malware care înlocuiește adresa copiată în clipboard cu adresa atacatorului</a>.';
 
   @override
   String get wallet250Sbdownload8722Sbcsv8722Sbbtn => 'Descărcați CSV';
@@ -7437,70 +7437,70 @@ class I18nRo extends I18n {
   }
 
   @override
-  String get devblog250Sbdescription => 'În acest blog, echipa noastră împărtășește unele dintre perspectivele noastre de dezvoltare celor care sunt interesați de partea tehnică a lucrurilor.';
+  String get devblog250Sbdescription => 'În acest blog, echipa noastră împărtășește unele dintre percepțiile noastre despre dezvoltare cu cei interesați de partea tehnică a lucrurilor.';
 
   @override
-  String get devblog250Sbfdroid250Sb0250Sbtext => '<blockquote>\n<p>F-Droid este un catalog instalabil de aplicații FOSS (Free and Open Source Software) pentru platforma Android. Clientul facilitează navigarea, instalarea și urmărirea actualizărilor de pe dispozitiv.\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\">Site web F-Droid</a></p>\n</blockquote>\n\n<p>Toți pașii din acest tutorial vor funcționa și pentru o aplicație fără arome.</p>';
+  String get devblog250Sbfdroid250Sb0250Sbtext => '<blockquote>\n<p>F-Droid este un catalog instalabil de aplicații FOSS (Free and Open Source Software) pentru platforma Android. Clientul facilitează navigarea, instalarea și urmărirea actualizărilor pe dispozitivul tău.\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\">Website-ul F-Droid</a></p>\n</blockquote>\n\n<p>Toți pașii din acest tutorial vor funcționa și pentru o aplicație fără variante (flavors) de asemenea.</p>';
 
   @override
-  String get devblog250Sbfdroid250Sb1250Sbtext => '<p>Aplicația poate fi inclusă în F-Droid numai dacă este complet open-source - inclusiv toate bibliotecile și dependențele utilizate. Aflați mai multe despre politica de includere <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">aici</a>.</p>\n<p>De exemplu, dacă utilizați baza de date ObjectBox în aplicația dvs., aceasta nu poate fi inclusă în F-Droid (<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">discuție</a>).</p>';
+  String get devblog250Sbfdroid250Sb1250Sbtext => '<p>Aplicația poate fi inclusă în F-Droid doar dacă este complet open-source - inclusiv toate bibliotecile și dependențele utilizate. Aflați mai multe despre politica de includere <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">aici</a>.</p>\n<p>De exemplu, dacă folosești baza de date ObjectBox în aplicația ta, aceasta nu poate fi inclusă în F-Droid (<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">discuție</a>).</p>';
 
   @override
   String get devblog250Sbfdroid250Sb1250Sbtitle => 'Ce aplicații pot fi incluse în F-Droid?';
 
   @override
-  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>Fork <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">fdroiddata depozit</a> pe Gitlab.</li>\n<li>Clonează depozitul pe dispozitivul tău.</li>\n<li>Creează o ramură cu ID-ul pachetului al aplicației, de exemplu <code>co.localmonero.app</code></li>\n</ul>';
+  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>Creează un fork la <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">repositoriul fdroiddata</a> pe Gitlab.</li>\n<li>Clonează repositoriul pe dispozitivul tău.</li>\n<li>Creează o ramură cu ID-ul pachetului aplicației, de exemplu <code>co.localmonero.app</code></li>\n</ul>';
 
   @override
   String get devblog250Sbfdroid250Sb2250Sbtitle => 'Pasul 1';
 
   @override
-  String get devblog250Sbfdroid250Sb3250Sbtext => '<p>Verificați dacă <code>fdroid</code> funcționează corect. Rulați următoarele comenzi în folderul <code>fdroid</code>:</p>\n<pre><code class=\"lang-sh\">fdroid init\nfdroid readmeta\n</code></pre>';
+  String get devblog250Sbfdroid250Sb3250Sbtext => '<p>Verificați dacă <code>fdroid</code> funcționează corect. Rulați următoarele comenzi în folderul dvs. <code>fdroid</code>:</p>\n<pre><code class=\"lang-sh\">fdroid init\nfdroid readmeta\n</code></pre>';
 
   @override
   String get devblog250Sbfdroid250Sb3250Sbtitle => 'Pasul 2';
 
   @override
-  String get devblog250Sbfdroid250Sb4250Sbtext => '<p>Adăugați proiectul dvs.:</p>\n<pre><code>fdroid import --url https://github.com/YOUR_REPO --subdir app\n</code></pre>\n<p>Va crea un fișier în directorul de metadate, de exemplu <code>metadata/co.localmonero.app.yml</code>.\nDe asemenea, puteți crea acest fișier manual.</p>';
+  String get devblog250Sbfdroid250Sb4250Sbtext => '<p>Adaugă proiectul tău:</p>\n<pre><code>fdroid import --url https://github.com/YOUR_REPO --subdir app\n</code></pre>\n<p>Acesta va crea un fișier în directorul de metadate, de exemplu <code>metadata/co.localmonero.app.yml</code>.\nPoți, de asemenea, să creezi acest fișier manual.</p>';
 
   @override
   String get devblog250Sbfdroid250Sb4250Sbtitle => 'Pasul 3';
 
   @override
-  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>Deschideți fișierul și editați-l. Iată un exemplu: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>În exemplu puteți vedea:</p>\n<ol>\n<li>Flutter este folosit ca submodul - aceasta este o cerință din partea echipei F-Droid.</li>\n<li>Pentru fiecare aromă am folosit o ramură separată (comanda <code>AutoUpdateMode: Versiunea %v-fdroid-lm</code>). Asta pentru că Fastlane&#39;nu acceptă arome cu Flutter.</li>\n<li>Prima dată când adăugăm informații de construcție manual, în viitor acestea vor fi adăugate automat de un bot, după ce vom împinge o nouă etichetă.</li>\n</ol>\n<p>Verificați dacă fișierul are sintaxa corectă: <code>fdroid readmeta</code>.</p>';
+  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>Deschide fișierul și editează-l. Iată un exemplu: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>În exemplul furnizat poți vedea:</p>\n<ol>\n<li>Flutter este folosit ca un submodul - aceasta este o cerință din partea echipei F-Droid.</li>\n<li>Pentru fiecare variație (flavor), am folosit o ramură separată (comanda <code>AutoUpdateMode: Version %v-fdroid-lm</code>). Asta deoarece Fastlane nu suportă variații cu Flutter.</li>\n<li>Prima dată adăugăm manual informațiile despre compilare, în viitor acestea vor fi adăugate automat de un bot, după ce vom trimite un nou tag.</li>\n</ol>\n<p>Verifică dacă fișierul are o sintaxă corectă: <code>fdroid readmeta</code>.</p>';
 
   @override
   String get devblog250Sbfdroid250Sb5250Sbtitle => 'Pasul 4';
 
   @override
-  String get devblog250Sbfdroid250Sb6250Sbtext => '<p>Acum, să adăugăm date pentru piața F-Droid. Pentru asta creăm o ramură separată pentru fiecare aromă:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n</ul>\n<p>După aceea, creăm un folder pentru Fastlane:\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a>.</p>\n<p>Adăugați datele necesare și împingeți-le.</p>';
+  String get devblog250Sbfdroid250Sb6250Sbtext => '<p>Acum, să adăugăm date pentru piața F-Droid. Pentru aceasta, creăm o ramură separată pentru fiecare variație (flavor):</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n</ul>\n<p>După aceea, creăm un folder pentru Fastlane:\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a>.</p>\n<p>Adaugă datele necesare și publică-le.</p>';
 
   @override
   String get devblog250Sbfdroid250Sb6250Sbtitle => 'Pasul 5';
 
   @override
-  String get devblog250Sbfdroid250Sb7250Sbtext => '<p>Este timpul să adăugați aplicația la F-Droid.</p>\n<ol>\n<li>Creați o etichetă în depozitul de aplicații.</li>\n<li>Aplicați modificări în depozitul F-Droid de pe Gitlab.</li>\n<li>Efectuați o solicitare de îmbinare în depozitul Gitlab. Utilizați id-ul aplicației dvs. în titlu.</li>\n<li>Așteptați o recenzie din partea echipei F-Droid.</li>\n</ol>';
+  String get devblog250Sbfdroid250Sb7250Sbtext => '<p>Este timpul să adăugăm aplicația la F-Droid.</p>\n<ol>\n<li>Creează un tag în depozitul aplicației tale.</li>\n<li>Publică modificările în depozitul F-Droid de pe Gitlab.</li>\n<li>Fă o cerere de îmbinare în depozitul Gitlab. Folosește id-ul aplicației tale în titlu.</li>\n<li>Așteaptă o recenzie din partea echipei F-Droid.</li>\n</ol>';
 
   @override
   String get devblog250Sbfdroid250Sb7250Sbtitle => 'Pasul 6';
 
   @override
-  String get devblog250Sbfdroid250Sb8250Sbtext => '<p>Procesul este puțin complicat și pot apărea diferite probleme pe parcurs. Dar odată ce ați configurat CI, următoarele actualizări vor fi gestionate automat.</p>\n<p>În cazul în care aveți întrebări, nu ezitați să le adresați pe <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHub</a>.</p>';
+  String get devblog250Sbfdroid250Sb8250Sbtext => '<p>Procesul este puțin complicat și pot apărea diverse probleme pe parcurs. Dar odată ce ai configurat integrarea continuă (CI), următoarele actualizări vor fi gestionate automat.</p>\n<p>În cazul în care ai întrebări, nu ezita să le pui pe pagina noastră de <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHub</a>.</p>';
 
   @override
   String get devblog250Sbfdroid250Sb8250Sbtitle => 'Concluzie';
 
   @override
-  String get devblog250Sbfdroid250Sbdescription => 'F-Droid este un catalog grozav de aplicații FOSS pentru Android, dar adăugarea aplicației dvs. poate fi puțin complicată...';
+  String get devblog250Sbfdroid250Sbdescription => 'F-Droid este un catalog excelent de aplicații FOSS pentru Android, dar adăugarea aplicației tale poate fi puțin complicată...';
 
   @override
-  String get devblog250Sbfdroid250Sbtitle => 'Cum să-ți publici aplicația Flutter cu arome pe F-Droid?';
+  String get devblog250Sbfdroid250Sbtitle => 'Cum să publici aplicația ta Flutter cu variații (flavors) pe F-Droid?';
 
   @override
-  String get devblog250Sbtitle => 'Blog de dezvoltare';
+  String get devblog250Sbtitle => 'Blog de Dezvoltare';
 
   @override
-  String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn => 'Adaugă adresă';
+  String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn => 'Adăugați adresă';
 
   @override
   String get address8722Sbbook250Sbcancel8722Sbbtn => 'Anulare';
@@ -7509,7 +7509,7 @@ class I18nRo extends I18n {
   String get address8722Sbbook250Sbconfirm8722Sbdeletion => 'Doriți să ștergeți această adresă?';
 
   @override
-  String get address8722Sbbook250Sbdescription => 'Ori de câte ori trebuie să furnizați o adresă, veți putea selecta rapid una salvată aici';
+  String get address8722Sbbook250Sbdescription => 'Oricând va trebui să furnizați o adresă, veți putea să selectați rapid una salvată aici.';
 
   @override
   String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => 'Etichetă (opțional)';
@@ -7518,7 +7518,7 @@ class I18nRo extends I18n {
   String get address8722Sbbook250Sbsave8722Sbbtn => 'Salvați';
 
   @override
-  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => 'Salvați această adresă pentru utilizare ulterioară';
+  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => 'Salvează această adresă pentru utilizare viitoare.';
 
   @override
   String get error250Sbaddress8722Sbbook250Sb270 => 'Această adresă există deja în agenda dvs. de adrese.';
@@ -7527,7 +7527,7 @@ class I18nRo extends I18n {
   String get error250Sbaddress8722Sbbook250Sb273 => 'Această adresă a fost deja ștearsă din agenda dvs. de adrese.';
 
   @override
-  String get address8722Sbbook => 'Carte de adrese';
+  String get address8722Sbbook => 'Agenda de adrese';
 
   @override
   String get address8722Sbbook250Sbshort => 'Adrese';
@@ -7537,22 +7537,56 @@ class I18nRo extends I18n {
 
   @override
   String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object timeRemaining) {
-    return 'Toate anunțurile pentru criptomonede sunt acum mutate în noua categorie de țară „global (cod XX)”. Toate anunțurile duplicat criptomonede care diferă numai în funcție de țară vor fi șterse $timeRemaining. Vă rugăm să asigurați-vă că aveți doar UN anunț de criptomonedă pentru fiecare monedă, altfel toate, cu excepția celui mai recent postat anunț în moneda respectivă, vor fi șterse, în timp ce anunțul rămas va fi mutat în categoria de țară „globală”.';
+    return 'Toate anunțurile despre criptomonede sunt acum mutate în noua categorie de țară \"globală (cod XX)\". Toate anunțurile duplicate despre criptomonede care diferă doar prin țară vor fi șterse $timeRemaining. Vă rugăm să vă asigurați că aveți doar UN anunț despre criptomonede per monedă, altfel toate, cu excepția celui mai recent postat anunț în acea monedă, vor fi șterse, în timp ce anunțul rămas va fi mutat în categoria de țară \"globală\".';
   }
 
   @override
-  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Când apăsați „Salvați”, țara anunțului va fi actualizată automat la „global”.';
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Când apăsați \"Salvează\", țara anunțului va fi actualizată automat la \"global\".';
 
   @override
-  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsame8722Sbasset8722Sbsells => 'Numai anunțuri de vânzare pentru același bun';
+  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsame8722Sbasset8722Sbsells => 'Doar anunțuri de vânzare pentru același bun';
 
   @override
-  String get mobile8722Sblanding250Sbto8722Sbthe8722Sbwebsite8722Sbbutton => 'Du-mă pe site';
+  String get mobile8722Sblanding250Sbto8722Sbthe8722Sbwebsite8722Sbbutton => 'Du-mă la site-ul web';
 
   @override
   String dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsingle8722Sbasset8722Sbbuys(Object asset) {
-    return '$asset cumpără numai anunțuri';
+    return 'Doar anunțuri de cumpărare $asset';
   }
+
+  @override
+  String error250Sbtrade8722Sbrequest250Sb363(Object cakeLink, Object monerujoLink, Object featherLink) {
+    return 'Ați furnizat o adresă pe care ați primit-o de la un comerciant care nu și-a actualizat formatul de adresă (adresă integrată). Vă rugăm să vă configurați propriul portofel pe o aplicație precum $cakeLink, $monerujoLink sau $featherLink, și să furnizați acea adresă în schimb.';
+  }
+
+  @override
+  String get error250Sbtrade8722Sbrequest250Sb364 => 'Proprietarul acestui anunț nu a specificat o adresă de reglementare. Vă rugăm să îi contactați și să le spuneți să își actualizeze anunțul, sau să găsiți alt cumpărător.';
+
+  @override
+  String notification250Sbtrade8722Sbfunded(Object tradeId, Object username) {
+    return 'Tranzacția $tradeId a fost acceptată de $username';
+  }
+
+  @override
+  String get web8722Sbnotification250Sbtrade8722Sbfunded => 'O tranzacție a fost acceptată';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbtrade8722Sbsend => 'Comerț trimite';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbnon8722Sbtrade8722Sbsend => 'Trimitere non-comercial';
+
+  @override
+  String get address250Sbvalidation250Sbgeneric => 'Adresă invalidă';
+
+  @override
+  String get address250Sbvalidation250Sbtaproot8722Sbdisallowed => 'Adresele Taproot nu sunt permise';
+
+  @override
+  String get reputation8722Sbimport250Sbstep250Sbcode250Sbmessage250Sbpaxful => 'Pune codul ca etichetă pe una dintre ofertele tale, astfel încât să fie vizibil în profilul tău public. După ce am verificat codul, îl puteți elimina.';
+
+  @override
+  String get trade250Sbwarning250Sbconfirmations => 'Nu finalizați până când TX-ul cumpărătorului nu are confirmări! A existat un val de escrocherii în care o tranzacție neconfirmată este anulată după ce vânzătorul finalizează.';
 
   @override
   String get ads => 'Reclame';
@@ -7582,7 +7616,7 @@ class I18nRo extends I18n {
   String get what_is_margin => 'Ce este o marjă?';
 
   @override
-  String get price_formula_examples => 'Exemple de formule de preț';
+  String get price_formula_examples => 'Exemple de formule de prețuri';
 
   @override
   String get see_examples => 'Vezi exemple';
@@ -7594,19 +7628,19 @@ class I18nRo extends I18n {
   String get final_price_in => 'Prețul final în';
 
   @override
-  String get show_formula_controls => 'Afișați comenzile formulei';
+  String get show_formula_controls => 'Arată controalele formulei';
 
   @override
   String get market_rates => 'Ratele pieței';
 
   @override
-  String get set_trade_limits => 'Setați limite de tranzacționare (opțional):';
+  String get set_trade_limits => 'Setează limitele de tranzacționare (opțional):';
 
   @override
-  String get restrict_limit_amounts_to => 'Restrângerea limitei de sume la';
+  String get restrict_limit_amounts_to => 'Restricționează sumele limită la';
 
   @override
-  String get restrict_limit_amounts => 'Restrângerea sumelor limită';
+  String get restrict_limit_amounts => 'Restricționează sumele limită';
 
   @override
   String get what_does_it_mean => 'Ce înseamnă?';
@@ -7623,11 +7657,11 @@ class I18nRo extends I18n {
 
   @override
   String ads_first_trade_max_limit(Object currency) {
-    return 'Prima tranzacție limită maximă $currency';
+    return 'Limita maximă pentru prima tranzacție $currency';
   }
 
   @override
-  String get ads_specify_trade_details => 'Precizați detaliile comerciale (opțional):';
+  String get ads_specify_trade_details => 'Specifica detalii ale tranzacției (opțional):';
 
   @override
   String get ads_payment_method_details => 'Detalii privind metoda de plată';
@@ -7833,7 +7867,7 @@ class I18nRo extends I18n {
 
   @override
   String about_transactions(Object asset) {
-    return 'Despre tranzacțiile $asset.';
+    return 'Despre tranzacțiile $asset';
   }
 
   @override
@@ -7909,7 +7943,7 @@ class I18nRo extends I18n {
   String get api_error_103 => 'Cerere de schimb pentru un anunț al cărui poster este în vacanță de vânzare';
 
   @override
-  String get api_error_105 => 'Afișierul anunțului pentru care se solicită schimbul nu are un sold suficient pentru a finanța garanția.';
+  String get api_error_105 => 'Afișantul anunțului pentru care se solicită tranzacția nu are un sold suficient pentru a finanța tranzacția de tip escrow';
 
   @override
   String get api_error_107 => 'Încercarea de a urmări lichiditatea fără a seta maxAmount';
@@ -7930,7 +7964,7 @@ class I18nRo extends I18n {
   String get api_error_146 => 'Încercarea de a activa programul de afiliere pentru un cont care îl are deja activat';
 
   @override
-  String get api_error_170 => 'Suma care a fost solicitată pentru retragere este mai mică decât suma minimă posibilă pentru criptomoneda respectivă.';
+  String get api_error_170 => 'Suma solicitată pentru retragere este mai mică decât suma minimă posibilă pentru criptomoneda specificată';
 
   @override
   String get api_error_171 => 'Adresa invalidă furnizată la solicitarea retragerii';
@@ -7975,7 +8009,7 @@ class I18nRo extends I18n {
   String get api_error_208 => 'Încercarea de a confirma plasarea codului de verificare a importului de reputație pentru un utilizator care nu se află în etapa 1 a fluxului de import al reputației';
 
   @override
-  String get api_error_209 => 'Eroare LocalBitcoins la încercarea de a confirma reputația importului importului de plasare a codului de verificare. Poate că numele de utilizator este greșit sau profilul nu este vizibil';
+  String get api_error_209 => 'Eroare LocalBitcoins atunci când se încearcă confirmarea plasării codului de verificare a reputației. Poate că numele de utilizator este greșit sau profilul nu este vizibil';
 
   @override
   String get api_error_210 => 'Eroare paxful la încercarea de a confirma plasarea codului de verificare a importului de reputație. Poate că numele de utilizator este greșit sau profilul nu este vizibil';
@@ -7996,7 +8030,7 @@ class I18nRo extends I18n {
   String get api_error_243 => 'Adresa internă AgoraDesk nu poate fi utilizată pentru decontarea tranzacțiilor. Vă rugăm să introduceți o adresă XMR externă, care nu este din AgoraDesk, pentru a continua.';
 
   @override
-  String get api_error_254 => 'Încercarea de a posta o retragere la o adresă și o sumă identice în ultimele 10 minute.';
+  String get api_error_254 => 'Se încearcă postarea unei retrageri către aceeași adresă și cu aceeași sumă în ultimele 10 minute';
 
   @override
   String get api_error_260 => 'Încercarea de a posta o notă pe un utilizator care nu există';
@@ -8032,7 +8066,7 @@ class I18nRo extends I18n {
   String get api_error_45 => 'Nu puteți avea atât \"first_time_limit_asset\", cât și \"first_time_limit_TICKER\" în cererea dumneavoastră. Eliminați unul dintre ele (sunt interschimbabile).';
 
   @override
-  String get api_error_46 => 'Cererea trebuie să conțină fie un corp de cerere de tip application/json cu parametrul \"msg\", fie un corp de cerere de tip multipart/form-data cu fișierul imagine listat la parametrul \"document\".';
+  String get api_error_46 => 'Cererea trebuie să conțină FIE un corp de cerere application/json cu un parametru \"msg\" FIE un corp de cerere multipart/form-data cu fișierul de imagine enumerat sub parametrul \"document\"';
 
   @override
   String get api_error_47 => 'Utilizatorul cu acest nume de utilizator există deja';
@@ -8101,10 +8135,10 @@ class I18nRo extends I18n {
   String get api_error_71 => 'Încercare de a obține tranzacții dintr-un cont care nu există';
 
   @override
-  String get api_error_72 => 'Încercare de a retrage fonduri dintr-un cont care nu există.';
+  String get api_error_72 => 'Încercare de a retrage fonduri dintr-un cont care nu există';
 
   @override
-  String get api_error_78 => 'Încercarea de a obține anunțuri cu o combinație nevalidă de parametri';
+  String get api_error_78 => 'Încercare de a obține anunțuri cu o combinație invalidă de parametri';
 
   @override
   String get api_error_79 => 'ID-ul anunțului solicitat nu există';
@@ -8167,7 +8201,7 @@ class I18nRo extends I18n {
   String get api_error_98 => 'Încercare de a crea un schimb pentru un anunț al cărui publicist nu există';
 
   @override
-  String get api_error_99 => 'Încercarea de a solicita o sumă mai mare decât cea permisă de proprietarul anunțului la crearea unei prime tranzacții';
+  String get api_error_99 => 'Se încearcă solicitarea unei sume mai mari decât cea permisă de către proprietarul anunțului atunci când se creează o primă tranzacție';
 
   @override
   String get api_error_100 => 'Nu se poate solicita mai puțin de 0.0000000001 XMR pentru crearea unei tranzacții';
@@ -8182,7 +8216,7 @@ class I18nRo extends I18n {
   String get api_error_104 => 'Se solicită schimb pentru anunțul al cărui poster este în vacanță de cumpărare';
 
   @override
-  String get api_error_106 => 'Solicitantul schimbului nu are un sold suficient pentru a finanța cererea de schimb.';
+  String get api_error_106 => 'Cel care solicită tranzacția nu are suficienți sold în cont pentru a finanța cererea de tranzacție';
 
   @override
   String get api_error_108 => 'minAmount nu poate fi mai mare sau egală cu maxAmount';
@@ -8212,7 +8246,7 @@ class I18nRo extends I18n {
   String get api_error_116 => 'Utilizatorul care solicită schimbul nu există';
 
   @override
-  String get api_error_117 => 'Valuta pentru care a fost solicitat cursul de schimb nu există.';
+  String get api_error_117 => 'Valuta pentru care a fost solicitat cursul de schimb nu există';
 
   @override
   String get api_error_118 => 'Utilizatorul care solicită finanțarea unei tranzacții nu există';
@@ -8296,10 +8330,10 @@ class I18nRo extends I18n {
   String get api_error_149 => 'Prioritate nespecificată pentru retragerea externă';
 
   @override
-  String get api_error_150 => 'Încercare de a începe o tranzacție pe un anunț în cazul în care utilizatorul solicitant este blocat de către autorul anunțului.';
+  String get api_error_150 => 'Se încearcă inițierea unei tranzacții la un anunț în care utilizatorul solicitant este blocat de către cel care a postat anunțul';
 
   @override
-  String get api_error_151 => 'Încercare de a începe o tranzacție pe un anunț în cazul în care utilizatorul solicitant nu este de încredere pentru autorul anunțului.';
+  String get api_error_151 => 'Se încearcă initierea unei tranzacții pe un anunț unde utilizatorul solicitant nu este considerat de încredere de către cel care a postat anunțul';
 
   @override
   String get api_error_152 => 'Încercare de a anula o tranzacție care este deja închisă';
@@ -8392,7 +8426,7 @@ class I18nRo extends I18n {
   String get api_error_191 => 'Încercare de a obține mai mult de 50 de anunțuri atunci când se obțin tranzacții după ID';
 
   @override
-  String get api_error_192 => 'Nici unul dintre ID-urile de tranzacționare solicitate nu este un ID valid atunci când se obțin tranzacții după ID.';
+  String get api_error_192 => 'Niciunul dintre ID-urile de tranzacții solicitate nu este un ID valid atunci când se obțin tranzacțiile după ID';
 
   @override
   String get api_error_193 => 'Niciuna dintre tranzacțiile solicitate nu există atunci când se obțin tranzacții după ID';
@@ -8467,7 +8501,7 @@ class I18nRo extends I18n {
   String get api_error_223 => 'Încercare de actualizare a unui anunț cu specificarea verificationRequired ca fiind adevărată în timp ce verificationMsg este nulă';
 
   @override
-  String get api_error_224 => 'Încercare de actualizare a anunțului cu specificarea lui verificationMsg, dar anunțul nu necesită verificare, iar cererea de actualizare a anunțului nu setează verificationRequired ca fiind adevărată.';
+  String get api_error_224 => 'Încercare de a actualiza anunțul în care se specifică verificationMsg, dar anunțul nu necesită verificare și cererea de actualizare a anunțului nu setează nici verificationRequired ca fiind adevărat';
 
   @override
   String get api_error_227 => 'Încercare de a sancționa un utilizator care nu există';
@@ -8485,7 +8519,7 @@ class I18nRo extends I18n {
   String get api_error_231 => 'Încercare de a elimina o sancțiune de la un utilizator care nu are nicio sancțiune asupra sa';
 
   @override
-  String get api_error_232 => 'Încercare de a deschide o tranzacție cu un utilizator căruia îi este interzisă tranzacționarea din cauza unei sancțiuni.';
+  String get api_error_232 => 'Încercați să inițiați un schimb cu un utilizator care în prezent nu poate face tranzacții din cauza unei sancțiuni';
 
   @override
   String get api_error_233 => 'Încercare de eliminare a unui feedback cu ID care nu există';
@@ -8506,7 +8540,7 @@ class I18nRo extends I18n {
   String get api_error_240 => 'Adresa invalidă furnizată de cumpărător atunci când răspunde la un anunț de tip VÂNZARE';
 
   @override
-  String get api_error_241 => 'Încercarea cumpărătorului de a furniza o adresă internă atunci când răspunde la un anunț de tip VÂNZARE (adresele interne nu sunt permise în scopul decontării tranzacțiilor).';
+  String get api_error_241 => 'Cumpărătorul încearcă să furnizeze o adresă internă în răspuns la un anunț de tip VÂNZARE (adresele interne nu sunt permise în scopul finalizării tranzacțiilor)';
 
   @override
   String get api_error_242 => 'Adresă invalidă furnizată de cumpărător la crearea unui anunț de tip BUY';
@@ -8515,7 +8549,7 @@ class I18nRo extends I18n {
   String get api_error_244 => 'Adresă invalidă furnizată de cumpărător la actualizarea unui anunț de tip CUMPĂRARE';
 
   @override
-  String get api_error_245 => 'Încercarea cumpărătorului de a furniza o adresă internă la actualizarea unui anunț de tip CUMPĂRARE (adresele interne nu sunt permise în scopul decontării tranzacțiilor).';
+  String get api_error_245 => 'Cumpărătorul încearcă să furnizeze o adresă internă atunci când actualizează un anunț de tip CUMPARARE (adresele interne nu sunt permise în scopul finalizării tranzacțiilor)';
 
   @override
   String get api_error_246 => 'Încercare de a începe o tranzacție de la un anunț de tip CUMPĂRARE care nu specifică adresa de decontare a cumpărătorului';
@@ -8524,7 +8558,7 @@ class I18nRo extends I18n {
   String get api_error_247 => 'Încercarea de a elibera o tranzacție dintr-un cont în care este interzisă retragerea din cauza unor sancțiuni';
 
   @override
-  String get api_error_248 => 'Încercarea de a elibera o tranzacție atunci când valoarea tranzacției nu este suficientă pentru a acoperi comisioanele aferente decontării.';
+  String get api_error_248 => 'Încercarea de a elibera o tranzacție atunci când valoarea tranzacției nu este suficientă pentru a acoperi comisioanele aferente decontării';
 
   @override
   String get api_error_249 => 'Încercarea de a actualiza un anunț de tip BUY care nu are setat buyerSettlementAddress fără a seta parametrul buyerSettlementAddress în cererea de actualizare';
@@ -8781,7 +8815,7 @@ class I18nRo extends I18n {
 
   @override
   String link_account(Object platform) {
-    return 'Conectați contul $platform.';
+    return 'Conectați contul $platform';
   }
 
   @override
@@ -8982,7 +9016,7 @@ class I18nRo extends I18n {
 
   @override
   String reputation_import__step__username__input__label(Object platform) {
-    return 'Numele dvs. de utilizator $platform.';
+    return 'Numele dvs. de utilizator $platform';
   }
 
   @override
@@ -8992,7 +9026,7 @@ class I18nRo extends I18n {
 
   @override
   String settings__homepage_tip(Object exampleUrl) {
-    return 'Afișat pe profilul dvs. public. Se acceptă numai URL-uri valide (de exemplu, https://$exampleUrl).';
+    return 'Afișat pe profilul dvs. public. Se acceptă numai URL-uri valide (de exemplu, https://$exampleUrl)';
   }
 
   @override
@@ -9051,7 +9085,7 @@ class I18nRo extends I18n {
   }
 
   @override
-  String app_buy_sell(Object val) {
+  String app_buy_sell(Object val, Object buyOrSell) {
     return 'Cât de mult vrei să $val?';
   }
 
@@ -9155,7 +9189,7 @@ class I18nRo extends I18n {
   String get app_permanent => 'Permanent';
 
   @override
-  String get app_error_saving => 'Eroare la salvare. Modificările nu au fost salvate.';
+  String get app_error_saving => 'Eroare în timpul salvării. Modificările nu au fost salvate.';
 
   @override
   String get app_manage_ads => 'Gestionați anunțurile';
@@ -9206,18 +9240,18 @@ class I18nRo extends I18n {
   String get app_via => 'prin intermediul';
 
   @override
-  String get app_one_percent => 'comision de 1%.';
+  String get app_one_percent => 'comision de 1%';
 
   @override
   String get app_final_amount => 'Suma finală';
 
   @override
-  String app_note_label(Object val) {
+  String app_note_label(Object val, Object username) {
     return 'Nota ta despre $val (văzută numai de tine)';
   }
 
   @override
-  String app_note_add(Object val) {
+  String app_note_add(Object val, Object username) {
     return 'Adaugă o notă la $val';
   }
 
@@ -9286,16 +9320,16 @@ class I18nRo extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: cumpăra XMR ușor';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Cumpărați sau vindeți Monero fără verificarea ID. Cash sau online. Sigur, rapid, ușor.\n\nLocalMonero este cea mai mare, cea mai de încredere și mai bine stabilită platformă de tranzacționare P2P din comunitatea XMR. Nu avem cecuri KYC - puteți pur și simplu cumpăra Monero anonim fără verificarea ID-ului cu PayPal, card de credit, card cadou, numerar prin poștă sau puteți converti Bitcoin, Ether, USDT sau orice altă monedă cripto în Monero - platforma noastră acceptă orice metodă de plată.\n\n- Tranzacționare sigură și fără probleme\nAcceptăm orice metodă de plată, orice monedă, oriunde. Nu eliminăm metodele de plată și sprijinim pe deplin tranzacțiile cu numerar față în față. Toate tranzacțiile noastre sunt protejate de o obligațiune de arbitraj. Datorită faptului că solicităm ca fondurile să fie păstrate în obligațiune de arbitraj înainte de a începe tranzacția, asigurăm o experiență fluidă și sigură pentru cumpărător, care este esențială pentru popularitatea platformei și clienții repetați pentru vânzători.\n\n- Fără verificare KYC/AML sau ID\nLocalMonero se angajează să mențină simplitatea și claritatea experienței dvs. de tranzacționare. Nu folosim KYC/AML și nici nu intenționăm vreodată să facem acest lucru.\n\n- De încredere de către Comunitate\nPlatforma noastră a funcționat de peste patru ani, a supraviețuit Marelui Prăbuș al pieței de criptomonede din 2018 și, prin serviciul său diligent orientat către comunitate, a devenit unul dintre cele mai de încredere nume din comunitatea extrem de sceptică Monero.\n\n- Securizat, cu sursă deschisă, centrat pe confidențialitate, rezistent la cenzură\nAplicația noastră este gratuită și open source, ceea ce asigură că mulți ochi se uită la codul aplicației pentru a se asigura că nu există găuri de securitate sau scurgeri de confidențialitate. Deschiderea aplicației noastre permite, de asemenea, oricui să aibă acces la aplicația noastră, chiar dacă un anumit depozit de aplicații cenzurează aplicația. Aplicația noastră funcționează chiar și pe telefoanele care au Google complet blocat. Apreciem atât de mult confidențialitatea dvs., încât nici măcar nu vă cerem să furnizați un e-mail atunci când vă înregistrați.\n\nCod sursă: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nInstrument de urmărire a problemelor: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Suport stelar\nEchipa noastră de asistență este rapidă, receptivă și mereu dornică să vă mulțumească. Nu am avut niciodată un bilet de asistență care să nu primească răspuns în 24 de ore. Suntem întotdeauna ușor de contactat prin intermediul rețelelor sociale, ascultăm cu atenție criticile voastre și punem întotdeauna în aplicare sugestii bune ale utilizatorilor în timp record.\n\nPuteți ajunge la asistența noastră la: https://localmonero.co/support\n\n- Taxe corecte\nNu percepem comisioane exorbitante atunci când depuneți sau retrageți Monero în/din portofelul nostru de obligațiuni de arbitraj. Nu există nicio taxă de depunere, iar taxa de retragere este foarte apropiată de taxa pe care ați fi plătit-o pentru o tranzacție normală.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Cumpărați sau vindeți Monero fără verificare de identitate. Cash sau online. Sigur, rapid, ușor.\n\nLocalMonero este cea mai mare, cea mai de încredere și bine stabilite platformă de tranzacționare P2P în comunitatea XMR. Nu avem controale KYC - puteți pur și simplu să cumpărați Monero anonim fără verificare de identitate cu PayPal, card de credit, card cadou, bani prin poștă sau să convertiți Bitcoin, Ether, USDT, sau orice altă criptomonedă în Monero - platforma noastră suportă orice metodă de plată.\n\n- Tranzacționare sigură și fluidă\nSusținem orice metodă de plată, orice monedă, oriunde. Nu înlăturăm metode de plată și susținem în totalitate tranzacțiile față în față cu bani cash. Toate tranzacțiile noastre sunt protejate de o garanție de arbitraj. Mulțumită faptului că cerem ca fondurile să fie reținute în garanția de arbitraj înainte de a începe o tranzacție, asigurăm o experiență sigură și fluidă pentru cumpărător, lucru esențial pentru popularitatea platformei și clienții care revin la vânzători.\n\n- Fără KYC/AML sau verificare de identitate\nLocalMonero se angajează să mențină simplitatea și caracterul direct al experienței dvs. de tranzacționare. Nu aplicăm KYC/AML și nici nu plănuim să o facem.\n\n- Încredere din partea comunității\nPlatforma noastră a funcționat timp de peste patru ani, a supraviețuit Marii Crize a Pieței Criptomonedelor din 2018 și, prin intermediul serviciului său orientat spre comunitate, a devenit unul dintre cele mai de încredere nume în comunitatea extrem de sceptică Monero.\n\n- Sigur, open source, cu focalizare pe confidențialitate, rezistent la cenzură\nAplicația noastră este gratuită și open source, ceea ce asigură că mulți ochi verifică codul aplicației pentru a se asigura că nu există lacune de securitate sau scurgeri de confidențialitate. Faptul că aplicația noastră este open source permite oricui să aibă acces la ea chiar dacă un anumit depozit de aplicații cenzurează aplicația. Aplicația noastră funcționează chiar și pe telefoane care au blocat în totalitate Google. Valoarea atât de mult confidențialitatea dvs., încât nici nu îți cerem să furnizați un e-mail la înregistrare.\n\nCod sursă: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nUrmărire problemă: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Suport excelent\nEchipa noastră de suport este rapidă, receptivă și mereu dornică să facă pe plac. Nu am avut niciodată un tichet de suport care să nu fi fost răspuns în termen de 24 de ore. Suntem întotdeauna ușor de contactat prin rețele de socializare, ascultăm cu atenție criticile dvs. și implementăm întotdeauna sugestiile bune ale utilizatorilor într-un timp record.\n\nPuteți contacta suportul nostru la: https://localmonero.co/support\n\n- Comisioane corecte\nNu percepe taxe exorbitante atunci când depuneți sau retrageți Monero în/din portofelul nostru de garanție de arbitraj. Nu există nici o taxă de depunere, iar taxa de retragere este foarte apropiată de taxa pe care ați plăti-o la o tranzacție normală.';
 
   @override
-  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: XMR în mod privat';
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: cumpără XMR privat';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sblocalmonero => 'Cumpărați sau vindeți Monero fără verificarea ID-ului. Numerar sau online. Sigur, rapid și ușor.\n\nLocalMonero este cea mai mare, cea mai de încredere și bine stabilită platformă de tranzacționare P2P din comunitatea XMR. Nu avem verificări KYC - puteți pur și simplu să cumpărați Monero în mod anonim, fără verificare a identității, cu PayPal, card de credit, card cadou, numerar prin poștă sau să convertiți Bitcoin, Ether, USDT sau orice altă criptomonedă în Monero - platforma noastră acceptă orice metodă de plată.\n\n- Tranzacționare sigură și fără probleme\nAcceptăm orice metodă de plată, orice valută, oriunde. Nu eliminăm metodele de plată și susținem pe deplin tranzacțiile cu numerar față în față. Toate tranzacțiile noastre sunt protejate de o garanție de arbitraj. Datorită faptului că solicităm ca fondurile să fie păstrate în garanția de arbitraj înainte ca o tranzacție să poată începe, asigurăm o experiență sigură și fără probleme pentru cumpărător, ceea ce este esențial pentru popularitatea platformei și clienți repetați pentru vânzători.\n\n- Fără KYC/AML sau verificare a identității\nLocalMonero se angajează să mențină simplitatea și directețea experienței dvs. de tranzacționare. Nu folosim KYC/AML și nici nu intenționăm să facem vreodată acest lucru.\n\n- Încredere din partea comunității\nPlatforma noastră funcționează de peste patru ani, a supraviețuit Marii Prăbușiri a pieței de criptomonede din 2018 și, prin serviciile sale sârguincioase orientate spre comunitate, a devenit unul dintre cele mai de încredere nume din comunitatea Monero, extrem de sceptică.\n\n- Sigur, sursă deschisă, centrat pe confidențialitate, rezistent la cenzură\nAplicația noastră este gratuită și open source, ceea ce asigură că mulți ochi se uită la codul aplicației pentru a se asigura că nu există găuri de securitate sau scurgeri de confidențialitate. De asemenea, sursa deschisă permite oricui să aibă acces la aplicația noastră, chiar dacă un anumit depozit de aplicații cenzurează aplicația. Aplicația noastră funcționează chiar și pe telefoane care au Google complet blocat. Ținem atât de mult la confidențialitatea dvs. încât nici măcar nu vă cerem să furnizați un e-mail la înregistrare.\n\nCod sursă: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nUrmăritor de probleme: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Suport Stellar\nEchipa noastră de asistență este rapidă, receptivă și întotdeauna dornică să vă mulțumească. Nu am avut niciodată un bilet de asistență la care să nu ni se răspundă în 24 de ore. Suntem întotdeauna ușor de contactat prin intermediul rețelelor de socializare, vă ascultăm cu atenție criticile și implementăm întotdeauna sugestiile bune ale utilizatorilor în timp record.\n\nPuteți ajunge la serviciul nostru de asistență la: https://localmonero.co/support\n\n- Tarife corecte\nNu percepem taxe exorbitante atunci când depuneți sau retrageți Monero în/din portofelul nostru de obligațiuni de arbitraj. Nu există niciun comision de depunere, iar comisionul de retragere este foarte apropiat de cel pe care l-ai plăti la o tranzacție normală.';
 
   @override
-  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: cumpără BTC anonim';
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: cumpărați BTC anonim';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sbagoradesk => 'Cumpărați sau vindeți Bitcoin fără verificarea ID-ului. În numerar sau online.\n\nVă întrebați cum să investiți în Bitcoin? Pe AgoraDesk, cumpărarea de Bitcoin nu a fost niciodată mai ușoară - cumpărați instantaneu BTC de la o persoană folosind metoda dvs. preferată de plată online: PayPal, card de credit/debit sau transfer bancar, carduri cadou, Venmo sau oricare alta. Dacă doriți să cumpărați bitcoini în apropierea dumneavoastră cu bani lichizi, puteți găsi o persoană dispusă să vândă bitcoini la nivel local - platforma de tranzacționare acceptă cumpărarea și vânzarea de BTC cu bani cash. Puteți chiar să cumpărați bitcoini folosind numerar prin poștă.\n\n- Tranzacționare sigură și fără probleme\nLa fel ca LocalBitcoins, susținem orice metodă de plată, orice monedă, oriunde. Nu eliminăm metodele de plată și, spre deosebire de LocalBitcoins, susținem pe deplin tranzacțiile cu numerar față în față. Toate tranzacțiile noastre sunt protejate de o garanție de arbitraj. Datorită faptului că solicităm ca fondurile să fie păstrate în garanția de arbitraj înainte ca o tranzacție să poată începe, asigurăm o experiență ușoară și sigură pentru cumpărător, ceea ce este esențial pentru popularitatea platformei și clienți repetați pentru vânzători.\n\n- Fără KYC/AML sau verificare a identității\nAgoraDesk se angajează să mențină simplitatea și directețea care au făcut ca LocalBitcoins original să fie atât de popular. Nu folosim KYC/AML și nici nu plănuim să facem vreodată acest lucru.\n\n- Încredere din partea comunității\nPlatforma noastră a funcționat timp de peste patru ani, a supraviețuit Marii Prăbușiri a pieței de criptomonede din 2018 și, prin serviciile sale sârguincioase orientate spre comunitate, a devenit unul dintre cele mai de încredere nume din comunitatea criptomonedelor extrem de sceptică.\n\n- Securizată, cu sursă deschisă, axată pe confidențialitate, rezistentă la cenzură\nAplicația noastră este gratuită și open source, ceea ce asigură că mulți ochi se uită la codul aplicației pentru a se asigura că nu există găuri de securitate sau scurgeri de confidențialitate. De asemenea, sursa deschisă permite oricui să aibă acces la aplicația noastră, chiar dacă un anumit depozit de aplicații cenzurează aplicația. Aplicația noastră funcționează chiar și pe telefoane care au Google complet blocat. Ținem atât de mult la confidențialitatea dvs. încât nici măcar nu vă cerem să furnizați un e-mail la înregistrare.\n\nCod sursă: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nUrmăritor de probleme: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Suport Stellar\nEchipa noastră de asistență este rapidă, receptivă și întotdeauna dornică să vă mulțumească. Nu am avut niciodată un bilet de asistență la care să nu ni se răspundă în 24 de ore. Suntem întotdeauna ușor de contactat prin intermediul rețelelor de socializare, vă ascultăm cu atenție criticile și implementăm întotdeauna sugestiile bune ale utilizatorilor în timp record.\n\nPuteți ajunge la serviciul nostru de asistență la: https://agoradesk.com/support\n\n- Tarife corecte\nNu percepem taxe exorbitante atunci când depuneți sau retrageți Bitcoins în/din portofelul nostru de obligațiuni de arbitraj. Nu există niciun comision de depunere, iar comisionul de retragere este foarte apropiat de cel pe care l-ai plăti la o tranzacție normală.';
@@ -9313,16 +9347,16 @@ class I18nRo extends I18n {
   String get app_open_dropdown => 'Deschideți meniul drop-down';
 
   @override
-  String get error250Sbsignup250Sb175 => 'Încercarea de a valorifica un cupon care nu există în timpul înregistrării';
+  String get error250Sbsignup250Sb175 => 'Încercare de a folosi un cupon care nu există în timpul înregistrării';
 
   @override
-  String get error250Sbsignup250Sb176 => 'Încercarea de a valorifica un cupon expirat în timpul înregistrării';
+  String get error250Sbsignup250Sb176 => 'Încercare de a folosi un cupon expirat în timpul înregistrării';
 
   @override
-  String get error250Sbsignup250Sb177 => 'Încercarea de a răscumpăra un cupon care este epuizat în timpul înregistrării';
+  String get error250Sbsignup250Sb177 => 'Încercare de a folosi un cupon care nu mai este în stoc în timpul înregistrării';
 
   @override
-  String get nojs250Sbpassword8722Sbreset250Sbsuccess => 'Scrisoare de resetare a parolei trimisă! Verifica-ti casuta.';
+  String get nojs250Sbpassword8722Sbreset250Sbsuccess => 'Scrisoare de resetare a parolei trimisă! Verificați-vă inboxul.';
 
   @override
   String get ad8722Sbpage250Sbterms8722Sbdialog250Sbagree8722Sbcontinue => 'Acceptați termenii și continuați';
@@ -9339,26 +9373,26 @@ class I18nRo extends I18n {
   }
 
   @override
-  String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_buy => 'opțiune de cumpărare';
+  String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_buy => 'cumpărare opțiune de cumpărare';
 
   @override
-  String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_sell => 'vânzare opțiune de apel';
+  String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_sell => 'vânzare opțiune de cumpărare';
 
   @override
-  String get app250Sbf8722Sbdroid8722Sbtitle250Sblocalmonero => 'LocalMonero: cumpărați XMR anonim';
+  String get app250Sbf8722Sbdroid8722Sbtitle250Sblocalmonero => 'LocalMonero: cumpărați XMR în mod anonim';
 
   @override
-  String get app_accessibility_edit_box_password => 'Editați parola casetei, atingeți de două ori pentru a edita';
+  String get app_accessibility_edit_box_password => 'Căsuța de editare a parolei, apăsați de două ori pentru a edita';
 
   @override
-  String get app_accessibility_edit_box_confirm_password => 'Confirmați caseta de editare a parolei, atingeți de două ori pentru a edita';
+  String get app_accessibility_edit_box_confirm_password => 'Căsuță de confirmare a parolei, apăsați de două ori pentru a edita';
 
   @override
   String get app_ad_created => 'Anunț creat';
 
   @override
   String app_503_body(Object val) {
-    return '$val se va întoarce în curând!\\nNe pare rău pentru inconvenient, dar efectuăm o întreținere programată în acest moment.\\nProbabil că vom reveni online în curând. Rămâneți la curent în grupurile comunității noastre:';
+    return '$val se va întoarce curând! \\nNe cerem scuze pentru inconvenient, dar în acest moment efectuăm o întreținere programată. \\nProbabil vom fi din nou online în curând. Rămâneți actualizat în grupurile noastre comunitare:';
   }
 
   @override
@@ -9368,7 +9402,7 @@ class I18nRo extends I18n {
   String get app_chat_leave_review => 'Atingeți aici pentru a lăsa o recenzie!';
 
   @override
-  String get app_chat_update_review => 'Ați lăsat deja o recenzie acestui utilizator. Doriți să vă actualizați recenzia acum?';
+  String get app_chat_update_review => 'Deja ați lăsat acestui utilizator un review. Doriți să actualizați review-ul acum?';
 
   @override
   String get app_select_buyer_seller => 'Selectați cumpărătorul sau vânzătorul';
@@ -9377,51 +9411,51 @@ class I18nRo extends I18n {
   String get app_default_tab => 'Setați o filă implicită';
 
   @override
-  String get app_your_ads => 'Reclamele dvs';
+  String get app_your_ads => 'Anunțurile dvs.';
 
   @override
   String app_503_title(Object val) {
-    return '$val Întreținere aplicație';
+    return 'Întreținere aplicație $val';
   }
 
   @override
-  String get app_push_new_message => 'Ai un mesaj nou într-o tranzacție';
+  String get app_push_new_message => 'Aveți un mesaj nou într-o tranzacție';
 
   @override
-  String get app_push_new_offer => 'Ai o noua oferta';
+  String get app_push_new_offer => 'Aveți o ofertă nouă';
 
   @override
-  String get app_push_trade_marked_completed => 'Marca comercială ca finalizată';
+  String get app_push_trade_marked_completed => 'Tranzacție marcată ca finalizată';
 
   @override
-  String get app_push_trade_cancelled => 'Comerț anulat';
+  String get app_push_trade_cancelled => 'Tranzacție anulată';
 
   @override
-  String get app_push_trade_disputed => 'Comerț disputat';
+  String get app_push_trade_disputed => 'Tranzacție contestată';
 
   @override
-  String get app_apple_app_store_subtitle_localmonero => 'Cumpărați/vindeți XMR anonim';
+  String get app_apple_app_store_subtitle_localmonero => 'Cumpărați/vindeți Monero anonim';
 
   @override
-  String get app_apple_app_store_subtitle_agoradesk => 'Cumpărați/vindeți BTC anonim';
+  String get app_apple_app_store_subtitle_agoradesk => 'Cumpărați/vindeți Bitcoin anonim';
 
   @override
-  String get app_google_play_store_short_description_localmonero => 'Cumpărați sau vindeți Monero fără verificarea ID-ului. Numerar sau online.';
+  String get app_google_play_store_short_description_localmonero => 'Cumpărați sau vindeți Monero fără verificarea ID. Cash sau online. Sigur, rapid, ușor.';
 
   @override
-  String get app_google_play_store_short_description_agoradesk => 'Cumpărați sau vindeți Bitcoin fără verificarea ID. Cash sau online.';
+  String get app_google_play_store_short_description_agoradesk => 'Cumpărați sau vindeți Bitcoin fără verificarea ID. Cash sau online. Sigur, rapid, ușor.';
 
   @override
-  String get app_ask_community_chats => 'Ai întrebări? Întrebați în chat-urile comunității';
+  String get app_ask_community_chats => 'Aveți întrebări? Întrebați în chat-urile comunității';
 
   @override
   String get app_select_currency => 'Selectați moneda';
 
   @override
-  String get app_select_country => 'Selecteaza tara';
+  String get app_select_country => 'Selectați țara';
 
   @override
-  String get app_select_payment_method => 'Selecteaza metoda de plata';
+  String get app_select_payment_method => 'Selectați metoda de plată';
 
   @override
   String get app_enable_ad => 'Activați anunțul';
@@ -9439,7 +9473,7 @@ class I18nRo extends I18n {
   String get app_proxy_use => 'Utilizarea proxy';
 
   @override
-  String get app_proxy_bugs_expected => 'Avertizare! Funcționalitatea proxy este în versiune beta, sunt așteptate erori. Vă rugăm să raportați erorile către canalele noastre de dezvoltare pentru remedieri rapide';
+  String get app_proxy_bugs_expected => 'Atenție! Funcționalitatea proxy este în beta, sunt de așteptat bug-uri. Vă rugăm să raportați bug-urile pe canalele noastre de dezvoltare pentru remedieri rapide';
 
   @override
   String get app_proxy_select_type => 'Selectați tipul de proxy';
@@ -9454,16 +9488,16 @@ class I18nRo extends I18n {
   String get app_proxy_unavailable => 'Proxy indisponibil';
 
   @override
-  String get app_proxy_unavailable_decr => 'Verificați dacă setările de conexiune sunt corecte sau utilizați un alt proxy.';
+  String get app_proxy_unavailable_decr => 'Vă rugăm să verificați dacă setările de conexiune sunt corecte sau să utilizați un alt proxy.';
 
   @override
-  String get api_error_269 => 'Încercarea de a adăuga o adresă nevalidă într-o agendă de adrese';
+  String get api_error_269 => 'Încercare de a adăuga o adresă invalidă în agenda de adrese';
 
   @override
-  String get api_error_270 => 'Încercarea de a adăuga o adresă duplicată în agenda unui utilizator';
+  String get api_error_270 => 'Încercare de a adăuga o adresă duplicat în agenda de adrese a unui utilizator';
 
   @override
-  String get api_error_273 => 'Încercarea de a șterge o adresă care nu există în agenda unui utilizator';
+  String get api_error_273 => 'Încercare de a șterge o adresă care nu există în agenda de adrese a unui utilizator';
 
   @override
   String get pin_you_can_use_new => 'PIN-ul trebuie să aibă cel puțin 4 cifre';
@@ -9476,7 +9510,7 @@ class I18nRo extends I18n {
 
   @override
   String pin_wrong_current_info(Object val) {
-    return 'Mai aveți $val încercări. După aceea, veți fi deconectat și va trebui să vă conectați din nou.';
+    return 'Aveți $val încercări rămase. După aceea, veți fi deconectat și va trebui să vă autentificați din nou.';
   }
 
   @override

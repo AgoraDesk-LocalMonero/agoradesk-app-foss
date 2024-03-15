@@ -74,7 +74,7 @@ class _MainScreenState extends State<MainScreen> {
             iconSize: 24,
             selectedFontSize: 12,
             selectedLabelStyle: Theme.of(context).textTheme.agoraLabelMedium,
-            selectedItemColor: Theme.of(context).colorScheme.primary90,
+            selectedItemColor: Theme.of(context).colorScheme.p90p10,
             unselectedFontSize: 12,
             unselectedLabelStyle: Theme.of(context).textTheme.agoraLabelMedium,
             unselectedItemColor: Theme.of(context).colorScheme.n80N30,
