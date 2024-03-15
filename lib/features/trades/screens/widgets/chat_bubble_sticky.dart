@@ -428,46 +428,59 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
     return ContainerC85c09Radius12(
       child: Padding(
         padding: const EdgeInsets.fromLTRB(12, 14, 12, 14),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        child: Column(
           children: [
-            Expanded(
-              flex: 1,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    context.intl.app_buyer_marked_as_paid(model.tradeForScreen.buyer.username ?? ''),
-                    style: context.txtLabelMediumPrimary10,
-                  ),
-                  const SizedBox(height: 4),
-                  Text(
-                    niceDateSecs(model.tradeForScreen.paymentCompletedAt),
-                    style: context.txtTermsN30N50,
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(width: 10),
-            Expanded(
-              flex: 1,
-              child: ButtonFilledWithIconP80(
-                title: context.intl.trade250Sbrelease8722Sbmonero8722Sbbtn,
-                filledColor: context.colTonalP40,
-                style: context.txtLabelLargeP90White,
-                icon: Icon(
-                  AgoraFont.check_circle_alt,
-                  color: context.colP90White,
+            if (model.tradeForScreen.advertisement.paymentMethod == 'CRYPTOCURRENCY')
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 14),
+                child: Text(
+                  context.intl.trade250Sbwarning250Sbconfirmations,
+                  style: context.txtLabelSmallError20Error50,
+                  textAlign: TextAlign.center,
                 ),
-                onPressed: () {
-                  showDialog(
-                    barrierDismissible: true,
-                    context: context,
-                    barrierColor: Theme.of(context).colorScheme.dialogOverlay,
-                    builder: (_) => FinalizeTradeDialog(tradeModel: model),
-                  );
-                },
               ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(
+                  flex: 1,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        context.intl.app_buyer_marked_as_paid(model.tradeForScreen.buyer.username ?? ''),
+                        style: context.txtLabelMediumPrimary10,
+                      ),
+                      const SizedBox(height: 4),
+                      Text(
+                        niceDateSecs(model.tradeForScreen.paymentCompletedAt),
+                        style: context.txtTermsN30N50,
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(width: 10),
+                Expanded(
+                  flex: 1,
+                  child: ButtonFilledWithIconP80(
+                    title: context.intl.trade250Sbrelease8722Sbmonero8722Sbbtn,
+                    filledColor: context.colTonalP40,
+                    style: context.txtLabelLargeP90White,
+                    icon: Icon(
+                      AgoraFont.check_circle_alt,
+                      color: context.colP90White,
+                    ),
+                    onPressed: () {
+                      showDialog(
+                        barrierDismissible: true,
+                        context: context,
+                        barrierColor: Theme.of(context).colorScheme.dialogOverlay,
+                        builder: (_) => FinalizeTradeDialog(tradeModel: model),
+                      );
+                    },
+                  ),
+                ),
+              ],
             ),
           ],
         ),

@@ -59,7 +59,7 @@ class _AgoraBoxOpenCloseLineSurface2State extends State<AgoraBoxOpenCloseLineSur
                         AutoSizeText(
                           widget.title,
                           style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                                color: Theme.of(context).colorScheme.primary90,
+                                color: Theme.of(context).colorScheme.p90p10,
                               ),
                         ),
                         const SizedBox(width: 10),

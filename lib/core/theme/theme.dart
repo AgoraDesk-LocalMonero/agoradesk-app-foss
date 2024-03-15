@@ -48,10 +48,6 @@ final lightTheme = ThemeData(
   colorScheme: _lightColorScheme,
   scaffoldBackgroundColor: ThemeColors.surface1Light,
   textTheme: textTheme,
-  // radioTheme: RadioThemeData(
-  //   fillColor: MaterialStateProperty.all(ThemeColors.neutral80),
-  //   overlayColor: MaterialStateProperty.all(ThemeColors.primary40),
-  // ),
   inputDecorationTheme: const InputDecorationTheme(
     labelStyle: TextStyle(color: Colors.blue),
     border: OutlineInputBorder(),
@@ -59,13 +55,6 @@ final lightTheme = ThemeData(
       borderSide: BorderSide(style: BorderStyle.solid, color: Colors.blue),
     ),
   ),
-  // checkboxTheme: const CheckboxThemeData().copyWith(
-  //   shape: const RoundedRectangleBorder(
-  //     borderRadius: BorderRadius.all(
-  //       Radius.circular(4),
-  //     ),
-  //   ),
-  // ),
   fontFamily: 'Roboto',
   unselectedWidgetColor: ThemeColors.neutral60,
   checkboxTheme: const CheckboxThemeData()
@@ -90,6 +79,7 @@ final lightTheme = ThemeData(
   radioTheme: RadioThemeData(
     fillColor: MaterialStateProperty.all(ThemeColors.neutral80),
     overlayColor: MaterialStateProperty.all(ThemeColors.primary40),
+    materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
   ).copyWith(
     fillColor: MaterialStateProperty.resolveWith<Color?>((Set<MaterialState> states) {
       if (states.contains(MaterialState.disabled)) {
@@ -98,7 +88,7 @@ final lightTheme = ThemeData(
       if (states.contains(MaterialState.selected)) {
         return ThemeColors.primary80;
       }
-      return null;
+      return ThemeColors.neutral50;
     }),
   ),
   switchTheme: SwitchThemeData(
@@ -129,10 +119,6 @@ final darkTheme = ThemeData(
   scaffoldBackgroundColor: ThemeColors.surface1Dark,
   textSelectionTheme: const TextSelectionThemeData(cursorColor: Colors.white),
   textTheme: textTheme,
-  // radioTheme: RadioThemeData(
-  //   fillColor: MaterialStateProperty.all(ThemeColors.neutral50),
-  //   overlayColor: MaterialStateProperty.all(ThemeColors.primary70),
-  // ),
   inputDecorationTheme: const InputDecorationTheme(
     labelStyle: TextStyle(color: Colors.blue),
     border: OutlineInputBorder(),
@@ -140,13 +126,6 @@ final darkTheme = ThemeData(
       borderSide: BorderSide(style: BorderStyle.solid, color: Colors.blue),
     ),
   ),
-  // checkboxTheme: const CheckboxThemeData().copyWith(
-  //   shape: const RoundedRectangleBorder(
-  //     borderRadius: BorderRadius.all(
-  //       Radius.circular(4),
-  //     ),
-  //   ),
-  // ),
   iconTheme: const IconThemeData(color: Colors.white),
   fontFamily: 'Roboto',
   unselectedWidgetColor: ThemeColors.neutral60,
@@ -172,6 +151,7 @@ final darkTheme = ThemeData(
   radioTheme: RadioThemeData(
     fillColor: MaterialStateProperty.all(ThemeColors.neutral50),
     overlayColor: MaterialStateProperty.all(ThemeColors.primary70),
+    materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
   ).copyWith(
     fillColor: MaterialStateProperty.resolveWith<Color?>((Set<MaterialState> states) {
       if (states.contains(MaterialState.disabled)) {
@@ -180,7 +160,7 @@ final darkTheme = ThemeData(
       if (states.contains(MaterialState.selected)) {
         return ThemeColors.primary80;
       }
-      return null;
+      return ThemeColors.neutral50;
     }),
   ),
   switchTheme: SwitchThemeData(
@@ -241,8 +221,8 @@ extension ThemeShorcuts on BuildContext {
         color: Theme.of(this).colorScheme.p80P70,
       );
 
-  TextStyle get txtLabelSmallPrimary95 => Theme.of(this).textTheme.agoraLabelSmall.copyWith(
-        color: Theme.of(this).colorScheme.primary95,
+  TextStyle get txtLabelSmallP95P10 => Theme.of(this).textTheme.agoraLabelSmall.copyWith(
+        color: Theme.of(this).colorScheme.p95p10,
       );
 
   TextStyle get txtLabelMediumErr30 => Theme.of(this).textTheme.agoraLabelMedium.copyWith(
@@ -264,6 +244,9 @@ extension ThemeShorcuts on BuildContext {
   TextStyle get txtLabelMediumN90 => Theme.of(this).textTheme.agoraLabelMedium.copyWith(
         color: Theme.of(this).colorScheme.neutral90,
       );
+  TextStyle get txtLabelMediumCustom08Custom07 => Theme.of(this).textTheme.agoraLabelMedium.copyWith(
+        color: Theme.of(this).colorScheme.c08c07,
+      );
 
   TextStyle get txtLabelMediumPrimary10 => Theme.of(this).textTheme.agoraLabelMedium.copyWith(
         color: ThemeColors.primary10,
@@ -282,7 +265,7 @@ extension ThemeShorcuts on BuildContext {
       );
 
   TextStyle get txtLabelMediumPrimary90 => Theme.of(this).textTheme.agoraLabelMedium.copyWith(
-        color: Theme.of(this).colorScheme.primary90,
+        color: Theme.of(this).colorScheme.p90p10,
       );
 
   TextStyle get txtLabelLargeCustom08 => Theme.of(this).textTheme.agoraLabelLarge.copyWith(
@@ -345,7 +328,7 @@ extension ThemeShorcuts on BuildContext {
       );
 
   TextStyle get txtLabelLargePrimary90 => Theme.of(this).textTheme.agoraLabelLarge.copyWith(
-        color: Theme.of(this).colorScheme.primary90,
+        color: Theme.of(this).colorScheme.p90p10,
       );
 
   TextStyle get txtBodyXXSmallNeutral50 => Theme.of(this).textTheme.bodyTextXXSmall.copyWith(
@@ -410,7 +393,7 @@ extension ThemeShorcuts on BuildContext {
       );
 
   TextStyle get txtBodySmallP90 => Theme.of(this).textTheme.bodyTextSmall.copyWith(
-        color: Theme.of(this).colorScheme.primary90,
+        color: Theme.of(this).colorScheme.p90p10,
       );
 
   // bodyMedium == bodyMedium
@@ -443,7 +426,7 @@ extension ThemeShorcuts on BuildContext {
       );
 
   TextStyle get txtBodyMediumP90 => Theme.of(this).textTheme.bodyMedium!.copyWith(
-        color: Theme.of(this).colorScheme.primary90,
+        color: Theme.of(this).colorScheme.p90p10,
       );
 
   TextStyle get txtBodyMediumErr30 => Theme.of(this).textTheme.bodyMedium!.copyWith(
@@ -606,7 +589,7 @@ extension ThemeShorcuts on BuildContext {
 
   Color get colP80 => Theme.of(this).colorScheme.p80P70;
 
-  Color get colP90 => Theme.of(this).colorScheme.primary90;
+  Color get colP90 => Theme.of(this).colorScheme.p90p10;
 
   Color get colP95 => Theme.of(this).colorScheme.primary95;
 
@@ -872,7 +855,8 @@ extension ColorExtension on ColorScheme {
 
   Color get p80P70 => brightness == Brightness.dark ? ThemeColors.primary80 : ThemeColors.primary70;
 
-  Color get primary90 => brightness == Brightness.dark ? ThemeColors.primary90 : ThemeColors.primary10;
+  Color get p90p10 => brightness == Brightness.dark ? ThemeColors.primary90 : ThemeColors.primary10;
+  Color get p95p10 => brightness == Brightness.dark ? ThemeColors.primary95Dark : ThemeColors.primary10;
 
   Color get primary95 => brightness == Brightness.dark ? ThemeColors.primary95Dark : ThemeColors.primary95Light;
 
