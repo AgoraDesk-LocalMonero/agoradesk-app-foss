@@ -42,7 +42,7 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
             if (!model.displayStickyBubble()) {
               return const SizedBox(height: 8);
             }
-            if (model.tradeStatus == TradeStatus.notFunded && model.tradeForScreen.isBuying!) {
+            if (model.tradeStatus == TradeStatus.notFunded && model.tradeForScreen.isBuying == true) {
               return Column(
                 children: [
                   Padding(

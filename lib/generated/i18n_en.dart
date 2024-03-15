@@ -150,7 +150,7 @@ class I18nEn extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'buy';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val) {
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
     return 'How much do you wish to $buyOrSell?';
   }
 
@@ -2543,7 +2543,7 @@ class I18nEn extends I18n {
   String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb5 => 'Monero is a grassroots community attracting the world\'s best cryptocurrency researchers and engineering talent.';
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb6 => 'Over 420 developer have contributed to the Monero project, including 30 core developers. Forums and chat channels are welcoming and active.';
+  String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb6 => 'Over 420 developers have contributed to the Monero project, including 30 core developers. Forums and chat channels are welcoming and active.';
 
   @override
   String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb7 => 'Monero\'s Research Lab, Core Development Team and Community Developers are constantly pushing the frontier of what is possible with cryptocurrency privacy and security.';
@@ -2873,7 +2873,7 @@ class I18nEn extends I18n {
   String get guide250Sbmnemonic250Sbtitle => 'How to restore my non-custodial settlement wallet from the mnemonic seed?';
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1 => 'Go to the <a target=\"_blank\" href=\"/\" class=\"next-link\">main page</a> - you\'ll see the top offers for your default region. You can refine your results by entering the desired amount and changing the currency, country or payment method (select \"All online offers\" if you\'re unsure which payment method you want to use) in the search box and pressing \"Search\".';
+  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1 => 'Go to the <a target=\"_blank\" href=\"/\" class=\"next-link\">main page</a> - you\'ll see the top offers for your default region. You can refine your results by entering the desired amount you wish to transact in the search box, then select which currency you wish to transact with, country, and desired payment method (select \"All online offers\" if you\'re unsure which payment method you want to use).';
 
   @override
   String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1250Sb1 => 'From the list of ads, choose one from a trader with a high amount of trades and a good reputation score (shown respectively in the brackets next to the username). A green circle means the trader has been online today; a yellow circle means they have visited the site this week; and a gray circle means that the trader hasn\'t been here for over a week. You can click the \"Buy\" button to view more information about an advertisement.';
@@ -4585,7 +4585,7 @@ class I18nEn extends I18n {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => 'Refresh';
 
   @override
-  String note250Sbbutton(Object username, Object val) {
+  String note250Sbbutton(Object username) {
     return 'Add a note on $username';
   }
 
@@ -4598,7 +4598,7 @@ class I18nEn extends I18n {
   String get note250Sbinput250Sbplaceholder => 'This is a private note for your own reference, it will not be visible to this user or any other user.';
 
   @override
-  String note250Sbtitle(Object username, Object val) {
+  String note250Sbtitle(Object username) {
     return 'Your note on $username (only seen by you)';
   }
 
@@ -6674,7 +6674,7 @@ class I18nEn extends I18n {
   String get verify8722Sbemail250Sbsuccess => 'Email successfully verified!';
 
   @override
-  String get wallet250Sbclipboard8722Sbvirus8722Sbwarning => '<strong> Make sure the address you\'ve pasted is the same as the address you\'ve copied! </strong> Some users have gotten their funds stolen by <a style=\"text-decoration:underline;font-size:inherit;color:inherit\" href=\"https://reddit.com/r/Monero/comments/mcvuxc/beware_crypto_stealing_malware/\" target=\"_blank\">malware replacing the address copied to clipboard with the attacker\'s address</a>.';
+  String get wallet250Sbclipboard8722Sbvirus8722Sbwarning => '<strong> Make sure the address you\'ve pasted is the same as the address you\'ve copied! </strong> Some users have gotten their funds stolen by <a style=\"text-decoration:underline;font-size:inherit;color:inherit\" href=\"https://web.archive.org/web/20220422235453/https://www.reddit.com/r/Monero/comments/mcvuxc/beware_crypto_stealing_malware/\" target=\"_blank\">malware replacing the address copied to clipboard with the attacker\'s address</a>.';
 
   @override
   String get wallet250Sbdownload8722Sbcsv8722Sbbtn => 'Download CSV';
@@ -7553,6 +7553,40 @@ class I18nEn extends I18n {
   String dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsingle8722Sbasset8722Sbbuys(Object asset) {
     return '$asset buy ads only';
   }
+
+  @override
+  String error250Sbtrade8722Sbrequest250Sb363(Object cakeLink, Object monerujoLink, Object featherLink) {
+    return 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like $cakeLink, $monerujoLink, or $featherLink, and provide that address instead.';
+  }
+
+  @override
+  String get error250Sbtrade8722Sbrequest250Sb364 => 'The owner of this ad didn\'t specify a settlement address. Please contact them and tell them to update their ad, or find another buyer.';
+
+  @override
+  String notification250Sbtrade8722Sbfunded(Object tradeId, Object username) {
+    return 'Trade $tradeId has been accepted by $username';
+  }
+
+  @override
+  String get web8722Sbnotification250Sbtrade8722Sbfunded => 'A trade has been accepted';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbtrade8722Sbsend => 'Trade send';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbnon8722Sbtrade8722Sbsend => 'Non-trade send';
+
+  @override
+  String get address250Sbvalidation250Sbgeneric => 'Invalid address';
+
+  @override
+  String get address250Sbvalidation250Sbtaproot8722Sbdisallowed => 'Taproot addresses are not allowed';
+
+  @override
+  String get reputation8722Sbimport250Sbstep250Sbcode250Sbmessage250Sbpaxful => 'Put the code as a label on one of your offers, such that it\'s visible on your public profile. Once we\'ve verified the code, you can remove it.';
+
+  @override
+  String get trade250Sbwarning250Sbconfirmations => 'Do not finalize until the buyer\'s tx has confirmations! There has been a surge of scams where an unconfirmed transaction is cancelled after the seller finalizes.';
 
   @override
   String get ads => 'Ads';
@@ -9051,7 +9085,7 @@ class I18nEn extends I18n {
   }
 
   @override
-  String app_buy_sell(Object val) {
+  String app_buy_sell(Object val, Object buyOrSell) {
     return 'How much do you wish to $val?';
   }
 
@@ -9212,12 +9246,12 @@ class I18nEn extends I18n {
   String get app_final_amount => 'Final amount';
 
   @override
-  String app_note_label(Object val) {
+  String app_note_label(Object val, Object username) {
     return 'Your note on $val (only seen by you)';
   }
 
   @override
-  String app_note_add(Object val) {
+  String app_note_add(Object val, Object username) {
     return 'Add a note on $val';
   }
 
