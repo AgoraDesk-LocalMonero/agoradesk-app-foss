@@ -71,7 +71,7 @@ class NoteOnUserWidget extends StatelessWidget with StringMixin, DateMixin {
             child: Padding(
               padding: const EdgeInsets.fromLTRB(4, 2, 4, 4),
               child: Text(
-                context.intl.app_note_label(model.username),
+                context.intl.app_note_label(model.username, model.username),
                 style: context.txtTermsSec10,
               ),
             ),
@@ -153,7 +153,7 @@ class NoteOnUserWidget extends StatelessWidget with StringMixin, DateMixin {
 
   Widget _buildAddNoteLine(BuildContext context, NoteOnUserViewModel model) {
     return ButtonIconTextP80(
-      text: context.intl.app_note_add(model.username),
+      text: context.intl.app_note_add(model.username, model.username),
       iconData: AgoraFont.pen,
       onPressed: () => _noteEditDialog(context, model),
     );

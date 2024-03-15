@@ -150,7 +150,7 @@ class I18nDe extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'Kaufen';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val) {
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
     return 'Wie viel möchten Sie $buyOrSell?';
   }
 
@@ -1857,7 +1857,7 @@ class I18nDe extends I18n {
 
   @override
   String faq250Sbanswer8722Sb0(Object appName) {
-    return '$appName ist eine Peer-to-Peer-Monero-Handelsplattform. Wir sind ein Marktplatz, auf dem Benutzer Monero untereinander kaufen und verkaufen können. Benutzer, Händler genannt, erstellen Anzeigen mit dem Preis und der Zahlungsmethode, die sie anbieten möchten. Sie können unsere Website nach Handelsanzeigen durchsuchen und nach einer von Ihnen bevorzugten Zahlungsmethode suchen. Sie finden Händler, die Monero online für mehr als 60 verschiedene Zahlungsmethoden kaufen und verkaufen. Wenn Sie neu bei $appName sind und Monero kaufen möchten, lesen Sie bitte unsere Kaufanleitung, um zu erfahren, wie Sie Monero kaufen können.';
+    return '$appName ist eine Peer-to-Peer-Monero-Handelsplattform. Wir sind ein Marktplatz, auf dem Benutzer Monero untereinander kaufen und verkaufen können. Nutzer, sogenannte Händler, erstellen Anzeigen mit dem Preis und der Zahlungsmethode, die sie anbieten möchten. Sie können unsere Website nach Handelsanzeigen durchsuchen und nach der von Ihnen bevorzugten Zahlungsmethode suchen. Sie finden Händler, die Monero online für mehr als 60 verschiedene Zahlungsmethoden kaufen und verkaufen. Wenn Sie neu bei $appName sind und Monero kaufen möchten, schauen Sie sich bitte unsere Kaufanleitung an, um zu erfahren, wie Sie Monero kaufen.';
   }
 
   @override
@@ -2025,7 +2025,7 @@ class I18nDe extends I18n {
 
   @override
   String faq250Sbanswer8722Sb30(Object playstoreLink, Object fdroidLink, Object apkLink, Object appstoreLink, Object telegram, Object thisGuide, Object appName) {
-    return 'Ja das tun wir! Wenn Sie Android haben, können Sie es auf $playstoreLink, $fdroidLink herunterladen oder direkt auf $apkLink herunterladen. Für iOS-Geräte ist es auf $appstoreLink verfügbar. Sie können auch mobile Benachrichtigungen in $telegram erhalten! $thisGuide führt Sie durch den Aktivierungsprozess für Telegrammbenachrichtigungen (es ist ganz einfach). Unser Bot sendet Ihnen dann Benachrichtigungen zu Ihren $appName-Ereignissen.';
+    return 'Ja das tun wir! Wenn Sie Android haben, können Sie es auf $playstoreLink, $fdroidLink herunterladen oder $apkLink direkt herunterladen. Für iOS-Geräte ist es auf $appstoreLink verfügbar. Sie können auch mobile Benachrichtigungen in $telegram erhalten! $thisGuide führt Sie durch den Aktivierungsprozess für Telegram-Benachrichtigungen (es ist ganz einfach). Unser Bot sendet Ihnen dann Benachrichtigungen zu Ihren $appName-Ereignissen.';
   }
 
   @override
@@ -2073,12 +2073,12 @@ class I18nDe extends I18n {
 
   @override
   String faq250Sbanswer8722Sb8(Object appName) {
-    return 'Alle Online-Trades sind durch Schiedsgerichtsbarkeiten geschützt. Wenn ein Handel gestartet wird, wird automatisch ein Monero-Betrag in Höhe des Handelsbetrags aus der $appName-Anleihe-Wallet des Verkäufers reserviert. Das bedeutet, dass, wenn der Verkäufer mit Ihrem Geld davonläuft und den Handel nicht abschließt, der Support von $appName den in der Schlichtungsbürgschaft gehaltenen Monero an Sie weiterleiten kann. Wenn Sie Monero verkaufen, schließen Sie den Handel niemals ab, bevor Sie wissen, dass Sie Geld vom Monero-Käufer erhalten haben. Bitte beachten Sie, dass bei lokalen Trades der Schiedsbündnisschutz nicht standardmäßig aktiviert ist.';
+    return 'Alle Online-Geschäfte sind durch Schiedsgarantien geschützt. Wenn ein Handel gestartet wird, wird automatisch eine dem Handelsbetrag entsprechende Monero-Menge aus dem $appName-Bond-Wallet des Verkäufers reserviert. Das heißt, wenn der Verkäufer mit Ihrem Geld davonläuft und den Handel nicht abschließt, kann der Support von $appName die in der Schiedsgarantie gehaltenen Monero an Sie weiterleiten. Wenn Sie Monero verkaufen, schließen Sie den Handel niemals ab, bevor Sie wissen, dass Sie Geld vom Monero-Käufer erhalten haben. Bitte beachten Sie, dass bei lokalen Geschäften der Schiedsgarantieschutz nicht standardmäßig aktiviert ist.';
   }
 
   @override
   String faq250Sbanswer8722Sb857Sbagoradesk(Object appName) {
-    return 'Alle Online-Trades sind durch Schiedsgerichtsbarkeiten geschützt. Wenn ein Handel gestartet wird, wird automatisch eine Menge an Kryptowährung in Höhe des Handelsbetrags aus dem $appName Bond Wallet des Verkäufers reserviert. Das bedeutet, dass, wenn der Verkäufer mit Ihrem Geld davonläuft und den Handel nicht abschließt, der $appName-Support die in der Schiedsbürgschaft gehaltene Kryptowährung an Sie weiterleiten kann. Wenn Sie Kryptowährung verkaufen, schließen Sie den Handel niemals ab, bevor Sie wissen, dass Sie Geld vom Käufer erhalten haben. Bitte beachten Sie, dass bei lokalen Trades der Schiedsbündnisschutz nicht standardmäßig aktiviert ist.';
+    return 'Alle Online-Geschäfte sind durch Schiedsgarantien geschützt. Wenn ein Handel gestartet wird, wird automatisch eine Menge an Kryptowährung in Höhe des Handelsbetrags aus dem $appName-Bond-Wallet des Verkäufers reserviert. Das heißt, wenn der Verkäufer mit Ihrem Geld davonläuft und den Handel nicht abschließt, kann der Support von $appName die in der Schiedsgarantie enthaltene Kryptowährung an Sie weiterleiten. Wenn Sie Kryptowährungen verkaufen, schließen Sie den Handel niemals ab, bevor Sie wissen, dass Sie Geld vom Käufer erhalten haben. Bitte beachten Sie, dass bei lokalen Geschäften der Schiedsgarantieschutz nicht standardmäßig aktiviert ist.';
   }
 
   @override
@@ -2873,7 +2873,7 @@ class I18nDe extends I18n {
   String get guide250Sbmnemonic250Sbtitle => 'Wie kann ich meine nicht verwahrte Settlement-Wallet aus dem mnemonischen Seed wiederherstellen?';
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1 => 'Gehen Sie zur <a target=\"_blank\" href=\"/\" class=\"next-link\">Hauptseite</a> - Sie sehen die Top-Angebote für Ihre Standardregion. Sie können Ihre Ergebnisse verfeinern, indem Sie im Suchfeld den gewünschten Betrag eingeben und die Währung, das Land oder die Zahlungsmethode ändern (wählen Sie „Alle Online-Angebote“, wenn Sie sich nicht sicher sind, welche Zahlungsmethode Sie verwenden möchten) und auf „Suchen“ klicken.';
+  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1 => 'Gehen Sie zur <a target=\"_blank\" href=\"/\" class=\"next-link\">Hauptseite</a> – Sie sehen die Top-Angebote für Ihre Standardregion. Sie können Ihre Ergebnisse verfeinern, indem Sie den gewünschten Transaktionsbetrag in das Suchfeld eingeben und dann die gewünschte Währung, das Land und die gewünschte Zahlungsmethode auswählen (wählen Sie „Alle Online-Angebote“, wenn Sie sich bei der Zahlungsmethode nicht sicher sind). Sie verwenden möchten).';
 
   @override
   String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1250Sb1 => 'Wählen Sie aus der Liste der Anzeigen eine von einem Händler mit einer hohen Anzahl an Trades und einem guten Feedback-Wert (jeweils in Klammern neben dem Benutzernamen angezeigt). Ein grüner Kreis bedeutet, dass der Händler heute online war; ein gelber Kreis bedeutet, dass er die Website diese Woche besucht haben; und ein grauer Kreis bedeutet, dass der Händler seit über einer Woche nicht mehr hier war. Sie können auf die Schaltfläche „Kaufen“ klicken, um weitere Informationen zu einer Anzeige anzuzeigen.';
@@ -3878,7 +3878,7 @@ class I18nDe extends I18n {
   String get knowledge250Sbscams250Sb3250Sbtitle => 'Der glatte Betrug';
 
   @override
-  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Ihr Monero-Samen IST Ihr Monero. Sie müssen es aufschreiben, wenn Sie zum ersten Mal eine Brieftasche erstellen, denn wenn Sie Ihren Seed verlieren, haben Sie Ihr Monero verloren und niemand kann Ihnen helfen. ABER AUCH müssen Sie diesen Samen vor anderen sicher aufbewahren. Wenn jemand Ihren Seed stiehlt, kann er den Monero aus der Brieftasche schicken, als ob er Sie wäre, und wiederum kann niemand dieses Geld für Sie zurückholen. Es ist weg.</p>\n\n<p>Viel zu oft hat eine Person eine Cold Wallet von Monero aufbewahrt, war neugierig auf ihr Geld und wollte es überprüfen. Aber anstatt sich die Mühe zu machen, die gesamte Wallet-Anwendung neu zu installieren, entscheiden sie sich einfach für eine Web-Wallet, um ihren Seed schnell wiederherzustellen und sich ihr Geld anzusehen. Wenn sie Opfer des Business-Look-Alike-Betrugs werden, dann gibt die bloße Eingabe ihres Seeds es an die Betrüger weiter, die das Geld dann nach Belieben in eine andere Brieftasche verschieben können, die sie kontrollieren.</p>\n\n<p>Jedes Mal, wenn eine Website, Anwendung oder Brieftasche eine Option zum Wiederherstellen mit Startwert hat, achten Sie darauf, dass die Anwendung, die Sie verwenden, legitim ist. Überprüfen Sie die Hashes des Programms (auf der Monero-Website finden Sie Anweisungen dazu), um sicherzustellen, dass das Programm nicht von außen manipuliert wurde, und seien Sie sich ständig bewusst, wo und wie Sie Ihren Seed freigeben. Die doppelte Kontrolle mag ärgerlich sein, aber der Geldverlust durch Unachtsamkeit wäre noch schlimmer.</p>';
+  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Ihr Monero-Samen IST Ihr Monero. Sie müssen es aufschreiben, wenn Sie zum ersten Mal ein Wallet erstellen, denn wenn Sie Ihren Seed verlieren, haben Sie auch Ihre Monero verloren und niemand kann Ihnen helfen. ABER Sie müssen diesen Samen AUCH vor anderen schützen. Wenn jemand Ihren Samen stiehlt, kann er die Monero aus der Wallet schicken, als ob er Sie wären, und wiederum kann niemand dieses Geld für Sie zurückerhalten. Es ist weg.</p>\n\n<p>Viel zu oft hat jemand eine Cold Wallet von Monero behalten, war neugierig auf sein Geld und wollte es überprüfen. Aber anstatt sich die Mühe zu machen, die gesamte Wallet-Anwendung neu zu installieren, entscheiden sie sich einfach für die Verwendung eines Web-Wallets, um ihren Seed schnell wiederherzustellen und ihr Geld zu sehen. Wenn sie Opfer des Business-Look-Alike-Betrugs werden, reicht die bloße Eingabe ihres Seeds diesen an die Betrüger aus, die das Geld dann nach Belieben auf eine andere Wallet überweisen können, die sie kontrollieren.</p>\n\n<p>IMMER, WENN eine Website, eine Anwendung oder ein Wallet über die Option „Wiederherstellen mit Seed“ verfügt, achten Sie sehr darauf, dass die von Ihnen verwendete Anwendung legitim ist. Überprüfen Sie die Hashes des Programms (auf der Monero-Website finden Sie Anweisungen dazu), um sicherzustellen, dass das Programm nicht von externen Kräften manipuliert wurde, und achten Sie stets darauf, wo und wie Sie Ihren Seed preisgeben. Die doppelte Kontrolle mag ärgerlich sein, aber der Geldverlust durch Unachtsamkeit wäre noch schlimmer.</p>';
 
   @override
   String get knowledge250Sbscams250Sb4250Sbtitle => 'Die Rolle Ihres Monero-Seeds bei Betrug';
@@ -4585,7 +4585,7 @@ class I18nDe extends I18n {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => 'Aktualisieren';
 
   @override
-  String note250Sbbutton(Object username, Object val) {
+  String note250Sbbutton(Object username) {
     return 'Notiz hinzufügen zu $username';
   }
 
@@ -4598,7 +4598,7 @@ class I18nDe extends I18n {
   String get note250Sbinput250Sbplaceholder => 'Dies ist eine private Notiz für Ihre eigene Referenz, sie ist weder für diesen Benutzer noch für andere Benutzer sichtbar.';
 
   @override
-  String note250Sbtitle(Object username, Object val) {
+  String note250Sbtitle(Object username) {
     return 'Ihre Notiz zu $username (nur für Sie sichtbar)';
   }
 
@@ -5338,7 +5338,7 @@ class I18nDe extends I18n {
   String get seo250Sbheadline8722Sb257Sbagoradesk => 'Eine echte LocalBitcoins- und Paxful-Alternative.';
 
   @override
-  String get seo250Sbtext8722Sb1 => 'Wenn Sie sich Sorgen über die Verletzung der Privatsphäre machen, ist XMR die beste Kryptowährung, in die Sie investieren können. Monero ist eine nicht rückverfolgbare Münze, die mit Blick auf den Datenschutz entwickelt wurde.\n<br/>\nWo kann man Monero kaufen? LocalMonero ist die größte, vertrauenswürdigste und etablierteste P2P-Monero-Handelsplattform in der XMR-Community. Bei uns gibt es keine KYC-Prüfungen – Sie können Monero einfach anonym ohne Ausweisprüfung mit PayPal, Kreditkarte, Geschenkkarte, Bargeld per Post kaufen oder Bitcoin in Monero umwandeln – unsere Plattform unterstützt jede Zahlungsmethode.';
+  String get seo250Sbtext8722Sb1 => 'Wenn Sie Bedenken hinsichtlich der Verletzung Ihrer Privatsphäre haben, ist XMR die beste Kryptowährung, in die Sie investieren können. Monero ist eine nicht auffindbare Münze, die mit Blick auf den Datenschutz entwickelt wurde.\n<br/>\nWo kann man Monero kaufen? LocalMonero ist die größte, vertrauenswürdigste und etablierteste P2P-Monero-Handelsplattform in der XMR-Community. Wir haben keine KYC-Prüfungen – Sie können Monero einfach anonym ohne Identitätsprüfung mit PayPal, Kreditkarte, Geschenkkarte, Bargeld per Post kaufen oder Bitcoin in Monero umwandeln – unsere Plattform unterstützt jede Zahlungsmethode.';
 
   @override
   String get seo250Sbtext8722Sb157Sbagoradesk => 'Sie fragen sich, wie Sie in Bitcoin investieren können? Auf AgoraDesk war der Kauf von Bitcoins noch nie so einfach - kaufen Sie BTC sofort von einer Person mit Ihrer bevorzugten Online-Zahlungsmethode: PayPal, Kredit-/Debitkarte oder Banküberweisung, Geschenkkarten, Venmo oder jede andere Zahlungsmethode.\n<br/>\nWenn Sie Bitcoins in Ihrer Nähe mit Bargeld kaufen möchten, können Sie jemanden finden, der bereit ist, Bitcoins vor Ort zu verkaufen – die Handelsplattform unterstützt den Kauf und Verkauf von BTC mit Bargeld. Sie können Bitcoins sogar mit Bargeld per Post kaufen.';
@@ -6674,7 +6674,7 @@ class I18nDe extends I18n {
   String get verify8722Sbemail250Sbsuccess => 'E-Mail erfolgreich bestätigt!';
 
   @override
-  String get wallet250Sbclipboard8722Sbvirus8722Sbwarning => '<strong> Stellen Sie sicher, dass die Adresse, die Sie eingefügt haben, mit der Adresse übereinstimmt, die Sie kopiert haben! </strong> Einigen Benutzern wurde ihr Geld gestohlen, indem <a style=\"text-decoration:underline;font-size:inherit;color:inherit\" href=\"https://reddit.com/r/Monero/comments/mcvuxc/beware_crypto_stealing_malware/\" target=\"_blank\">Malware die in die Zwischenablage kopierte Adresse durch die Adresse des Angreifers</a> ersetzte.';
+  String get wallet250Sbclipboard8722Sbvirus8722Sbwarning => '<strong> Stellen Sie sicher, dass die von Ihnen eingefügte Adresse mit der von Ihnen kopierten Adresse übereinstimmt! </strong> Das Geld einiger Benutzer wurde durch <a style=\"text-decoration:underline;font-size:inherit;color:inherit\" href=\"https://web.archive.org/web/20220422235453/https://www.reddit.com/r/Monero/comments/mcvuxc/beware_crypto_stealing_malware/\" target=\"_blank\">Malware gestohlen, die die in die Zwischenablage kopierte Adresse durch die Adresse des Angreifers ersetzte</a>.';
 
   @override
   String get wallet250Sbdownload8722Sbcsv8722Sbbtn => 'CSV-Datei herunterladen';
@@ -7437,25 +7437,25 @@ class I18nDe extends I18n {
   }
 
   @override
-  String get devblog250Sbdescription => 'In diesem Blog teilt unser Team einige unserer Erkenntnisse aus der Entwicklung mit denen, die sich für die technische Seite der Dinge interessieren.';
+  String get devblog250Sbdescription => 'In diesem Blog teilt unser Team einige unserer Entwicklungserkenntnisse mit denen, die sich für die technische Seite der Dinge interessieren.';
 
   @override
-  String get devblog250Sbfdroid250Sb0250Sbtext => '<blockquote>\n<p>F-Droid ist ein installierbarer Katalog von FOSS-Anwendungen (Free and Open Source Software) für die Android-Plattform. Der Client macht es einfach, Updates auf Ihrem Gerät zu durchsuchen, zu installieren und zu verfolgen.\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\">F-Droid-Website</a></p>\n</blockquote>\n\n<p>Alle Schritte aus diesem Tutorial funktionieren auch für eine App ohne Flavors.</p>';
+  String get devblog250Sbfdroid250Sb0250Sbtext => '<blockquote>\n<p>F-Droid ist ein installierbarer Katalog von FOSS-Anwendungen (Free and Open Source Software) für die Android-Plattform. Der Client erleichtert das Durchsuchen, Installieren und Verfolgen von Updates auf Ihrem Gerät.\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\">F-Droid-Website</a></p>\n</blockquote>\n\n<p>Alle Schritte aus diesem Tutorial funktionieren auch für eine App ohne Flavors.</p>';
 
   @override
-  String get devblog250Sbfdroid250Sb1250Sbtext => '<p>Die App kann nur dann in F-Droid eingebunden werden, wenn sie vollständig Open Source ist – einschließlich aller verwendeten Bibliotheken und Abhängigkeiten. Erfahren Sie <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">hier</a> mehr über die Inklusionsrichtlinie.</p>\n<p>Wenn Sie beispielsweise die ObjectBox-Datenbank in Ihrer App verwenden, kann sie&#39;nicht in F-Droid aufgenommen werden (<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">Diskussion</a>).</p>';
+  String get devblog250Sbfdroid250Sb1250Sbtext => '<p>Die App kann nur dann in F-Droid eingebunden werden, wenn sie vollständig Open Source ist – einschließlich aller verwendeten Bibliotheken und Abhängigkeiten. Erfahren Sie mehr über die Einschlussrichtlinie <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">hier</a>.</p>\n<p>Wenn Sie beispielsweise die ObjectBox-Datenbank in Ihrer App verwenden, kann diese nicht in F-Droid eingebunden werden (<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">Diskussion</a>).</p>';
 
   @override
-  String get devblog250Sbfdroid250Sb1250Sbtitle => 'Welche Apps können zu F-Droid hinzugefügt werden?';
+  String get devblog250Sbfdroid250Sb1250Sbtitle => 'Welche Apps können in F-Droid integriert werden?';
 
   @override
-  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>Fork <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">fdroiddata repository</a> auf Gitlab.</li>\n<li>Klonen Sie das Repository auf Ihr Gerät.</li>\n<li>Erstellen Sie einen Branch mit der Bundle-ID der App, zum Beispiel <code>co.localmonero.app</code></li>\n</ul>';
+  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>Fork <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">fdroiddata-Repository</a> auf Gitlab.</li>\n<li>Klonen Sie das Repository auf Ihr Gerät.</li>\n<li>Erstellen Sie einen Zweig mit der Bundle-ID der App, zum Beispiel <code>co.localmonero.app</code></li>\n</ul>';
 
   @override
   String get devblog250Sbfdroid250Sb2250Sbtitle => 'Schritt 1';
 
   @override
-  String get devblog250Sbfdroid250Sb3250Sbtext => '<p>Überprüfen Sie, ob <code>fdroid</code> ordnungsgemäß funktioniert. Führen Sie die folgenden Befehle in Ihrem <code>fdroid</code>-Ordner aus:</p>\n<pre><code class=\"lang-sh\">fdroid-Init\nfdroid readmeta\n</code></pre>';
+  String get devblog250Sbfdroid250Sb3250Sbtext => '<p>Überprüfen Sie, ob <code>fdroid</code> ordnungsgemäß funktioniert. Führen Sie die folgenden Befehle in Ihrem Ordner <code>fdroid</code> aus:</p>\n<pre><code class=\"lang-sh\">fdroid init\nfdroid readmeta\n</code></pre>';
 
   @override
   String get devblog250Sbfdroid250Sb3250Sbtitle => 'Schritt 2';
@@ -7467,25 +7467,25 @@ class I18nDe extends I18n {
   String get devblog250Sbfdroid250Sb4250Sbtitle => 'Schritt 3';
 
   @override
-  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>Öffne die Datei und bearbeite sie. Hier ist ein Beispiel: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>Im Beispiel sehen Sie:</p>\n<ol>\n<li>Flutter wird als Submodul verwendet - dies ist eine Anforderung des F-Droid-Teams.</li>\n<li>Für jeden Flavor haben wir einen eigenen Branch verwendet (Befehl <code>AutoUpdateMode: Version %v-fdroid-lm</code>). Das liegt daran, dass Fastlane&#39;keine Flavors mit Flutter unterstützt.</li>\n<li>Das erste Mal, wenn wir Build-Informationen manuell hinzufügen, werden sie in Zukunft automatisch von einem Bot hinzugefügt, nachdem wir ein neues Tag übertragen haben.</li>\n</ol>\n<p>Überprüfen Sie, ob die Datei die richtige Syntax hat: <code>fdroid readmeta</code>.</p>';
+  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>Öffnen Sie die Datei und bearbeiten Sie sie. Hier ist ein Beispiel: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>Im Beispiel sehen Sie:</p>\n<ol>\n<li>Flutter wird als Submodul verwendet – dies ist eine Anforderung des F-Droid-Teams.</li>\n<li>Für jede Variante haben wir einen separaten Zweig verwendet (Befehl <code>AutoUpdateMode: Version %v-fdroid-lm</code>). Das liegt daran, dass Fastlane keine Flavors mit Flutter unterstützt.</li>\n<li>Wenn wir Build-Informationen zum ersten Mal manuell hinzufügen, werden sie in Zukunft automatisch von einem Bot hinzugefügt, nachdem wir ein neues Tag gepusht haben.</li>\n</ol>\n<p>Überprüfen Sie, ob die Datei die richtige Syntax hat: <code>fdroid readmeta</code>.</p>';
 
   @override
   String get devblog250Sbfdroid250Sb5250Sbtitle => 'Schritt 4';
 
   @override
-  String get devblog250Sbfdroid250Sb6250Sbtext => '<p>Jetzt fügen wir Daten für den F-Droid-Markt hinzu. Dafür erstellen wir für jeden Flavor einen eigenen Branch:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n</ul>\n<p>Danach erstellen wir einen Ordner für Fastlane:\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a>.</p>\n<p>Fügen Sie die erforderlichen Daten hinzu und übertragen Sie sie.</p>';
+  String get devblog250Sbfdroid250Sb6250Sbtext => '<p>Fügen wir nun Daten für den F-Droid-Markt hinzu. Dafür erstellen wir für jede Variante einen eigenen Zweig:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n</ul>\n<p>Danach erstellen wir einen Ordner für Fastlane:\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a>.</p>\n<p>Fügen Sie die erforderlichen Daten hinzu und übertragen Sie sie.</p>';
 
   @override
   String get devblog250Sbfdroid250Sb6250Sbtitle => 'Schritt 5';
 
   @override
-  String get devblog250Sbfdroid250Sb7250Sbtext => '<p>Es ist an der Zeit, die App zu F-Droid hinzuzufügen.</p>\n<ol>\n<li>Erstellen Sie ein Tag in Ihrem App-Repository.</li>\n<li>Push-Änderungen an das F-Droid-Repository auf Gitlab.</li>\n<li>Stellen Sie eine Merge-Anfrage im Gitlab-Repo. Verwenden Sie die ID Ihrer App im Titel.</li>\n<li>Warte auf eine Bewertung vom F-Droid-Team.</li>\n</ol>';
+  String get devblog250Sbfdroid250Sb7250Sbtext => '<p>Es ist Zeit, die App zu F-Droid hinzuzufügen.</p>\n<ol>\n<li>Erstellen Sie ein Tag in Ihrem App-Repository.</li>\n<li>Push-Änderungen am F-Droid-Repository auf Gitlab.</li>\n<li>Stellen Sie eine Zusammenführungsanforderung im Gitlab-Repository. Verwenden Sie die ID Ihrer App im Titel.</li>\n<li>Warten Sie auf eine Rezension vom F-Droid-Team.</li>\n</ol>';
 
   @override
   String get devblog250Sbfdroid250Sb7250Sbtitle => 'Schritt 6';
 
   @override
-  String get devblog250Sbfdroid250Sb8250Sbtext => '<p>Der Prozess ist etwas kompliziert und verschiedene Probleme können dabei auftreten. Aber sobald Sie das CI eingerichtet haben, werden die folgenden Updates automatisch gehandhabt.</p>\n<p>Falls Sie Fragen haben, können Sie diese gerne auf unserem <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHub</a> stellen.</p>';
+  String get devblog250Sbfdroid250Sb8250Sbtext => '<p>Der Prozess ist etwas kompliziert und es können dabei verschiedene Probleme auftreten. Aber sobald Sie das CI eingerichtet haben, werden die folgenden Updates automatisch durchgeführt.</p>\n<p>Falls Sie Fragen haben, können Sie diese gerne auf unserem <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHub</a> stellen.</p>';
 
   @override
   String get devblog250Sbfdroid250Sb8250Sbtitle => 'Abschluss';
@@ -7494,7 +7494,7 @@ class I18nDe extends I18n {
   String get devblog250Sbfdroid250Sbdescription => 'F-Droid ist ein großartiger Katalog von FOSS-Apps für Android, aber das Hinzufügen Ihrer App kann etwas kompliziert sein ...';
 
   @override
-  String get devblog250Sbfdroid250Sbtitle => 'Wie veröffentliche ich meine Flutter-App mit Flavors auf F-Droid?';
+  String get devblog250Sbfdroid250Sbtitle => 'Wie veröffentliche ich meine Flutter-App mit Geschmacksrichtungen auf F-Droid?';
 
   @override
   String get devblog250Sbtitle => 'Entwicklungsblog';
@@ -7509,7 +7509,7 @@ class I18nDe extends I18n {
   String get address8722Sbbook250Sbconfirm8722Sbdeletion => 'Möchten Sie diese Adresse löschen?';
 
   @override
-  String get address8722Sbbook250Sbdescription => 'Wann immer Sie eine Adresse angeben müssen, können Sie schnell eine hier gespeicherte auswählen';
+  String get address8722Sbbook250Sbdescription => 'Wenn Sie eine Adresse angeben müssen, können Sie schnell eine hier gespeicherte Adresse auswählen';
 
   @override
   String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => 'Etikett (optional)';
@@ -7521,7 +7521,7 @@ class I18nDe extends I18n {
   String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => 'Speichern Sie diese Adresse für die zukünftige Verwendung';
 
   @override
-  String get error250Sbaddress8722Sbbook250Sb270 => 'Diese Adresse existiert bereits in Ihrem Adressbuch.';
+  String get error250Sbaddress8722Sbbook250Sb270 => 'Diese Adresse ist bereits in Ihrem Adressbuch vorhanden.';
 
   @override
   String get error250Sbaddress8722Sbbook250Sb273 => 'Diese Adresse wurde bereits aus Ihrem Adressbuch gelöscht.';
@@ -7537,22 +7537,56 @@ class I18nDe extends I18n {
 
   @override
   String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object timeRemaining) {
-    return 'Alle Kryptowährungsanzeigen werden jetzt in die neue Länderkategorie „global (Code XX)“ verschoben. Alle doppelten Kryptowährungsanzeigen, die sich nur nach Land unterscheiden, werden gelöscht $timeRemaining. Bitte stellen Sie sicher, dass Sie nur EINE Kryptowährungsanzeige pro Währung haben, andernfalls werden alle bis auf die zuletzt gepostete Anzeige in dieser Währung gelöscht, während die verbleibende Anzeige in die Länderkategorie „global“ verschoben wird.';
+    return 'Alle Kryptowährungsanzeigen werden jetzt in die neue Länderkategorie „Global (Code XX)“ verschoben. Alle doppelten Kryptowährungsanzeigen, die sich nur je nach Land unterscheiden, werden gelöscht $timeRemaining. Bitte stellen Sie sicher, dass Sie nur EINE Kryptowährungsanzeige pro Währung haben. Andernfalls werden alle bis auf die zuletzt veröffentlichte Anzeige in dieser Währung gelöscht, während die verbleibende Anzeige in die Länderkategorie „Global“ verschoben wird.';
   }
 
   @override
-  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Wenn Sie auf „Speichern“ klicken, wird das Land der Anzeige automatisch auf „global“ aktualisiert.';
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Wenn Sie auf „Speichern“ klicken, wird das Land der Anzeige automatisch auf „Global“ aktualisiert.';
 
   @override
-  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsame8722Sbasset8722Sbsells => 'Nur Verkaufsanzeigen für denselben Vermögenswert';
+  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsame8722Sbasset8722Sbsells => 'Nur Verkaufsanzeigen mit demselben Asset';
 
   @override
-  String get mobile8722Sblanding250Sbto8722Sbthe8722Sbwebsite8722Sbbutton => 'Bringen Sie mich auf die Website';
+  String get mobile8722Sblanding250Sbto8722Sbthe8722Sbwebsite8722Sbbutton => 'Bring mich zur Website';
 
   @override
   String dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsingle8722Sbasset8722Sbbuys(Object asset) {
     return '$asset Nur Anzeigen kaufen';
   }
+
+  @override
+  String error250Sbtrade8722Sbrequest250Sb363(Object cakeLink, Object monerujoLink, Object featherLink) {
+    return 'Sie haben eine Adresse angegeben, die Sie von einem Händler erhalten haben, dessen Adressformat (integrierte Adresse) nicht aktualisiert wurde. Bitte richten Sie Ihr eigenes Wallet in einer App wie $cakeLink, $monerujoLink oder $featherLink ein und geben Sie stattdessen diese Adresse an.';
+  }
+
+  @override
+  String get error250Sbtrade8722Sbrequest250Sb364 => 'Der Inhaber dieser Anzeige hat keine Siedlungsadresse angegeben. Bitte kontaktieren Sie sie und bitten Sie sie, ihre Anzeige zu aktualisieren oder einen anderen Käufer zu finden.';
+
+  @override
+  String notification250Sbtrade8722Sbfunded(Object tradeId, Object username) {
+    return 'Handel $tradeId wurde von $username angenommen';
+  }
+
+  @override
+  String get web8722Sbnotification250Sbtrade8722Sbfunded => 'Ein Handel wurde angenommen';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbtrade8722Sbsend => 'Handelsversand';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbnon8722Sbtrade8722Sbsend => 'Nicht handelsüblicher Versand';
+
+  @override
+  String get address250Sbvalidation250Sbgeneric => 'Ungültige Adresse';
+
+  @override
+  String get address250Sbvalidation250Sbtaproot8722Sbdisallowed => 'Taproot-Adressen sind nicht zulässig';
+
+  @override
+  String get reputation8722Sbimport250Sbstep250Sbcode250Sbmessage250Sbpaxful => 'Platzieren Sie den Code als Etikett auf einem Ihrer Angebote, sodass er in Ihrem öffentlichen Profil sichtbar ist. Sobald wir den Code überprüft haben, können Sie ihn entfernen.';
+
+  @override
+  String get trade250Sbwarning250Sbconfirmations => 'Schließen Sie den Vorgang erst ab, wenn der Käufer die Bestätigung erhalten hat! Es gab eine Welle von Betrügereien, bei denen eine unbestätigte Transaktion storniert wurde, nachdem der Verkäufer sie abgeschlossen hatte.';
 
   @override
   String get ads => 'Anzeigen';
@@ -8167,7 +8201,7 @@ class I18nDe extends I18n {
   String get api_error_98 => 'Der Versuch, einen Handel für eine Anzeige zu erstellen, deren Ersteller nicht existiert';
 
   @override
-  String get api_error_99 => 'Der Versuch, beim Erstellen eines ersten Trades einen höheren Betrag anzufordern, als vom Anzeigeneigentümer zugelassen wurde';
+  String get api_error_99 => 'Es wird versucht, einen höheren Betrag anzufordern, als der Anzeigeneigentümer bei der Erstellung eines ersten Handels erlaubt hat';
 
   @override
   String get api_error_100 => 'Für die Handelserstellung kann nicht weniger als 0,0000000001 XMR angefordert werden';
@@ -8233,7 +8267,7 @@ class I18nDe extends I18n {
   String get api_error_123 => 'Unzureichende Mittel, um einen Handel zu finanzieren';
 
   @override
-  String get api_error_124 => 'Fehler bei der Finanzierung eines Trades';
+  String get api_error_124 => 'Fehler bei der Finanzierung eines Handels';
 
   @override
   String get api_error_125 => 'Der Benutzer, der die Stornierung des Handels beantragt, existiert nicht';
@@ -9051,7 +9085,7 @@ class I18nDe extends I18n {
   }
 
   @override
-  String app_buy_sell(Object val) {
+  String app_buy_sell(Object val, Object buyOrSell) {
     return 'Wie viel möchten Sie $val?';
   }
 
@@ -9212,12 +9246,12 @@ class I18nDe extends I18n {
   String get app_final_amount => 'Endbetrag';
 
   @override
-  String app_note_label(Object val) {
+  String app_note_label(Object val, Object username) {
     return 'Ihre Notiz zu $val (nur für Sie sichtbar)';
   }
 
   @override
-  String app_note_add(Object val) {
+  String app_note_add(Object val, Object username) {
     return 'Notiz hinzufügen zu $val';
   }
 
@@ -9286,7 +9320,7 @@ class I18nDe extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: XMR anonym kaufen';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Kaufen oder verkaufen Sie Monero ohne ID-Verifizierung. Bargeld oder online. Sicher, schnell, einfach.\n\nLocalMonero ist die größte, vertrauenswürdigste und etablierteste P2P-Handelsplattform in der XMR-Community. Bei uns gibt es keine KYC-Prüfungen – Sie können Monero einfach anonym ohne ID-Verifizierung mit PayPal, Kreditkarte, Geschenkkarte, Bargeld per Post kaufen oder Bitcoin, Ether, USDT oder jede andere Krypto-Münze in Monero umwandeln – unsere Plattform unterstützt jede Zahlungsmethode.\n\n- Sicherer und reibungsloser Handel\nWir unterstützen jede Zahlungsmethode, jede Währung und überall. Wir entfernen keine Zahlungsmethoden und unterstützen den Barhandel von Angesicht zu Angesicht. Alle unsere Trades sind durch eine Schiedsbürgschaft geschützt. Dank der Tatsache, dass wir verlangen, dass Gelder in einer Schiedsbürgschaft gehalten werden, bevor ein Handel beginnen kann, gewährleisten wir ein reibungsloses und sicheres Erlebnis für den Käufer, was für die Beliebtheit der Plattform und Stammkunden für die Verkäufer unerlässlich ist.\n\n- Keine KYC/AML- oder ID-Verifizierung\nLocalMonero ist bestrebt, die Einfachheit und Geradlinigkeit Ihrer Handelserfahrung beizubehalten. Wir setzen KYC/AML nicht ein und planen dies auch nie.\n\n- Von der Community vertraut\nUnsere Plattform ist seit über vier Jahren in Betrieb, hat den großen Crash des Kryptowährungsmarktes von 2018 überstanden und wurde durch ihren gemeinschaftsorientierten, gewissenhaften Service zu einem der vertrauenswürdigsten Namen in der äußerst skeptischen Monero-Community.\n\n- Sicher, Open Source, datenschutzzentriert, zensurresistent\nUnsere App ist kostenlos und Open Source, was sicherstellt, dass viele Augen auf den Code der App blicken, um sicherzustellen, dass es keine Sicherheitslücken oder Datenschutzlecks gibt. Open Source unserer App ermöglicht es auch jedem, auf unsere App zuzugreifen, selbst wenn ein bestimmtes App-Repository die App zensiert. Unsere App funktioniert sogar auf Telefonen, die Google vollständig blockiert hat. Wir schätzen Ihre Privatsphäre so sehr, dass Sie bei der Registrierung nicht einmal eine E-Mail-Adresse angeben müssen.\n\nQuellcode: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nProblemverfolgung: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellare Unterstützung\nUnser Support-Team ist schnell, reaktionsschnell und immer bemüht, Ihnen zu gefallen. Wir hatten noch nie ein Support-Ticket, das nicht innerhalb von 24 Stunden beantwortet wurde. Wir sind über Social Media immer gut erreichbar, hören uns Ihre Kritik aufmerksam an und setzen gute User-Vorschläge immer in Rekordzeit um.\n\nSie erreichen unseren Support unter: https://localmonero.co/support\n\n- Faire Gebühren\nWir erheben keine exorbitanten Gebühren, wenn Sie Monero in/aus unserer Wallet für Schiedsbürgschaften einzahlen oder abheben. Es gibt keine Einzahlungsgebühr und die Auszahlungsgebühr liegt sehr nahe an der Gebühr, die Sie für eine normale Transaktion zahlen würden.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Kaufen oder verkaufen Sie Monero ohne ID-Verifizierung. Bargeld oder online. Sicher, schnell, einfach.\n\nLocalMonero ist die größte, vertrauenswürdigste und etablierteste P2P-Handelsplattform in der XMR-Community. Wir haben keine KYC-Prüfungen – Sie können Monero einfach anonym ohne Identitätsprüfung mit PayPal, Kreditkarte, Geschenkkarte, Bargeld per Post kaufen oder Bitcoin, Ether, USDT oder jede andere Kryptomünze in Monero umwandeln – unsere Plattform unterstützt jede Zahlungsmethode.\n\n- Sicherer und reibungsloser Handel\nWir unterstützen jede Zahlungsmethode, jede Währung und überall. Wir entfernen keine Zahlungsmethoden und unterstützen uneingeschränkt den persönlichen Bargeldhandel. Alle unsere Geschäfte sind durch eine Schiedsgarantie geschützt. Da wir verlangen, dass Gelder in einer Schiedsgarantie gehalten werden, bevor ein Handel beginnen kann, gewährleisten wir ein reibungsloses und sicheres Erlebnis für den Käufer, was für die Beliebtheit der Plattform und Stammkunden bei den Verkäufern von entscheidender Bedeutung ist.\n\n- Keine KYC/AML- oder ID-Verifizierung\nLocalMonero ist bestrebt, die Einfachheit und Unkompliziertheit Ihres Handelserlebnisses aufrechtzuerhalten. Wir setzen kein KYC/AML ein und haben auch nie vor, dies zu tun.\n\n- Von der Community als vertrauenswürdig eingestuft\nUnsere Plattform ist seit über vier Jahren in Betrieb, überlebte den großen Kryptowährungsmarktcrash von 2018 und wurde durch ihren gemeinschaftsorientierten, sorgfältigen Service zu einem der vertrauenswürdigsten Namen in der äußerst skeptischen Monero-Community.\n\n- Sicher, Open Source, datenschutzorientiert, zensurresistent\nUnsere App ist kostenlos und Open Source, was dafür sorgt, dass viele Augen auf den Code der App blicken, um sicherzustellen, dass es keine Sicherheitslücken oder Datenschutzlecks gibt. Durch das Open-Sourcing unserer App hat auch jeder Zugriff auf unsere App, selbst wenn ein bestimmtes App-Repository die App zensiert. Unsere App funktioniert sogar auf Telefonen, bei denen Google vollständig blockiert ist. Wir legen großen Wert auf Ihre Privatsphäre, sodass Sie bei der Registrierung nicht einmal eine E-Mail-Adresse angeben müssen.\n\nQuellcode: https://github.com/AgoraDesk-LocalMonero/agoradek-app-foss\nIssue-Tracker: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Hervorragende Unterstützung\nUnser Support-Team ist schnell, reaktionsschnell und immer bemüht, Sie zufrieden zu stellen. Wir hatten noch nie ein Support-Ticket, das nicht innerhalb von 24 Stunden beantwortet wurde. Über die sozialen Medien sind wir immer gut erreichbar, wir hören aufmerksam auf Ihre Kritik und setzen gute Nutzervorschläge stets in Rekordzeit um.\n\nSie erreichen unseren Support unter: https://localmonero.co/support\n\n- Faire Gebühren\nWir erheben keine überhöhten Gebühren, wenn Sie Monero in unser Schieds-Bond-Wallet einzahlen oder von diesem abheben. Es gibt keine Einzahlungsgebühr und die Auszahlungsgebühr kommt der Gebühr, die Sie bei einer normalen Transaktion zahlen würden, sehr nahe.';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: XMR privat kaufen';
@@ -9351,18 +9385,18 @@ class I18nDe extends I18n {
   String get app_accessibility_edit_box_password => 'Box-Passwort bearbeiten, zum Bearbeiten doppeltippen';
 
   @override
-  String get app_accessibility_edit_box_confirm_password => 'Passwort-Bearbeitungsfeld bestätigen, zum Bearbeiten doppeltippen';
+  String get app_accessibility_edit_box_confirm_password => 'Bestätigen Sie das Passwort-Bearbeitungsfeld und tippen Sie zweimal, um es zu bearbeiten';
 
   @override
   String get app_ad_created => 'Anzeige erstellt';
 
   @override
   String app_503_body(Object val) {
-    return '$val wird bald zurück sein!\\nEntschuldigen Sie die Unannehmlichkeiten, aber wir führen derzeit einige planmäßige Wartungsarbeiten durch.\\nWir werden wahrscheinlich bald wieder online sein. Bleiben Sie in unseren Community-Gruppen auf dem Laufenden:';
+    return '$val wird bald zurück sein!\\nEntschuldigen Sie die Unannehmlichkeiten, aber wir führen derzeit einige geplante Wartungsarbeiten durch.\\nWir werden wahrscheinlich bald wieder online sein. Bleiben Sie in unseren Community-Gruppen auf dem Laufenden:';
   }
 
   @override
-  String get app_select_ad_type => 'Anzeigentyp auswählen';
+  String get app_select_ad_type => 'Wählen Sie den Anzeigentyp aus';
 
   @override
   String get app_chat_leave_review => 'Tippen Sie hier, um eine Bewertung abzugeben!';
@@ -9371,7 +9405,7 @@ class I18nDe extends I18n {
   String get app_chat_update_review => 'Sie haben diesem Benutzer bereits eine Bewertung hinterlassen. Möchten Sie Ihre Bewertung jetzt aktualisieren?';
 
   @override
-  String get app_select_buyer_seller => 'Käufer oder Verkäufer auswählen';
+  String get app_select_buyer_seller => 'Wählen Sie Käufer oder Verkäufer aus';
 
   @override
   String get app_default_tab => 'Legen Sie eine Standardregisterkarte fest';
@@ -9385,7 +9419,7 @@ class I18nDe extends I18n {
   }
 
   @override
-  String get app_push_new_message => 'Sie haben eine neue Nachricht in einem Handel';
+  String get app_push_new_message => 'Sie haben eine neue Nachricht in einem Trade';
 
   @override
   String get app_push_new_offer => 'Sie haben ein neues Angebot';
@@ -9430,16 +9464,16 @@ class I18nDe extends I18n {
   String get app_disable_ad => 'Anzeige deaktivieren';
 
   @override
-  String get app_proxy => 'Proxy';
+  String get app_proxy => 'Stellvertreter';
 
   @override
   String get app_proxy_details => 'Proxy-Details';
 
   @override
-  String get app_proxy_use => 'Proxy verwenden';
+  String get app_proxy_use => 'Verwenden Sie einen Proxy';
 
   @override
-  String get app_proxy_bugs_expected => 'Warnung! Die Proxy-Funktionalität befindet sich in der Beta-Phase, Fehler werden erwartet. Bitte melden Sie die Fehler unseren Entwicklungskanälen, um schnelle Lösungen zu erhalten';
+  String get app_proxy_bugs_expected => 'Warnung! Die Proxy-Funktionalität befindet sich in der Betaphase, Fehler werden erwartet. Bitte melden Sie die Fehler an unsere Entwicklungskanäle, um schnelle Lösungen zu erhalten';
 
   @override
   String get app_proxy_select_type => 'Wählen Sie den Proxy-Typ aus';
@@ -9448,7 +9482,7 @@ class I18nDe extends I18n {
   String get app_proxy_on => 'Proxy aktiviert';
 
   @override
-  String get app_proxy_on_descr => 'Die App verbindet sich nun über den Proxy mit der Plattform.';
+  String get app_proxy_on_descr => 'Die App stellt nun über den Proxy eine Verbindung zur Plattform her.';
 
   @override
   String get app_proxy_unavailable => 'Proxy nicht verfügbar';
@@ -9457,13 +9491,13 @@ class I18nDe extends I18n {
   String get app_proxy_unavailable_decr => 'Bitte überprüfen Sie, ob die Verbindungseinstellungen korrekt sind oder verwenden Sie einen anderen Proxy.';
 
   @override
-  String get api_error_269 => 'Versuch, einem Adressbuch eine ungültige Adresse hinzuzufügen';
+  String get api_error_269 => 'Es wird versucht, einem Adressbuch eine ungültige Adresse hinzuzufügen';
 
   @override
-  String get api_error_270 => 'Versuch, dem Adressbuch eines Benutzers eine doppelte Adresse hinzuzufügen';
+  String get api_error_270 => 'Es wird versucht, dem Adressbuch eines Benutzers eine doppelte Adresse hinzuzufügen';
 
   @override
-  String get api_error_273 => 'Versuch, eine Adresse zu löschen, die nicht im Adressbuch eines Benutzers vorhanden ist';
+  String get api_error_273 => 'Es wird versucht, eine Adresse zu löschen, die nicht im Adressbuch eines Benutzers vorhanden ist';
 
   @override
   String get pin_you_can_use_new => 'Die PIN muss mindestens 4-stellig sein';

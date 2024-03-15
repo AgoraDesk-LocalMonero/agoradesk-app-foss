@@ -150,7 +150,7 @@ class I18nJa extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => '購入';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val) {
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
     return 'いくらで$buyOrSellをご希望ですか？';
   }
 
@@ -1857,7 +1857,7 @@ class I18nJa extends I18n {
 
   @override
   String faq250Sbanswer8722Sb0(Object appName) {
-    return '$appName は、ピアツーピアのモネロ取引プラットフォームです。私たちは、ユーザーが相互にモネロを売買できる市場です。トレーダーと呼ばれるユーザーは、提供したい価格と支払い方法で広告を作成します。当社のウェブサイトで取引広告を閲覧し、ご希望の支払い方法を検索できます。 60 種類以上の支払い方法でモネロをオンラインで売買しているトレーダーを見つけることができます。 $appName を初めて使用し、Monero を購入したい場合は、購入方法ガイドを参照して、Monero の購入方法を確認してください。';
+    return '$appName はピアツーピアの Monero 取引プラットフォームです。私たちは、ユーザーが相互に Monero を売買できるマーケットプレイスです。トレーダーと呼ばれるユーザーは、希望する価格と支払い方法で広告を作成します。当社の Web サイトで貿易広告を閲覧し、ご希望の支払い方法を検索できます。 60 以上の異なる支払い方法でモネロをオンラインで売買しているトレーダーが見つかります。 $appName を初めて使用し、Monero を購入したい場合は、購入方法ガイドを参照して Monero の購入方法を確認してください。';
   }
 
   @override
@@ -2025,7 +2025,7 @@ class I18nJa extends I18n {
 
   @override
   String faq250Sbanswer8722Sb30(Object playstoreLink, Object fdroidLink, Object apkLink, Object appstoreLink, Object telegram, Object thisGuide, Object appName) {
-    return 'はい、そうです！ Android をお持ちの場合は、$playstoreLink、$fdroidLink で入手するか、$apkLink を直接ダウンロードしてください。 iOS デバイスの場合、$appstoreLink で利用できます。 $telegramでモバイル通知も受け取れます！ $thisGuide は、Telegram 通知の有効化プロセスを案内します (簡単です)。その後、ボットが $appName イベントに関する通知を送信します。';
+    return 'はい、そうです！ Android をお持ちの場合は、$playstoreLink、$fdroidLink で入手するか、$apkLink を直接ダウンロードできます。 iOS デバイスの場合は、$appstoreLink で利用できます。 【X225X】でもモバイル通知を受信可能！ $thisGuide では、Telegram 通知の有効化プロセスを案内します (簡単です)。その後、当社のボットが $appName イベントに関する通知を送信します。';
   }
 
   @override
@@ -2073,12 +2073,12 @@ class I18nJa extends I18n {
 
   @override
   String faq250Sbanswer8722Sb8(Object appName) {
-    return 'すべてのオンライン取引は、仲裁保証によって保護されています。取引が開始されると、取引額に等しい金額の Monero が自動的に売り手の $appName ボンド ウォレットから予約されます。これは、売り手があなたのお金を持ち逃げし、取引を確定しない場合、$appName サポートが仲裁保証金で保持されているモネロをあなたに向けることができることを意味します。モネロを販売している場合は、モネロの購入者からお金を受け取ったことを知る前に取引を確定しないでください。ローカル取引では、デフォルトで仲裁保証金保護が有効になっていないことに注意してください.';
+    return 'すべてのオンライン取引は仲裁保証金によって保護されています。取引が開始されると、取引額と同額のモネロが売り手の$appName債券ウォレットから自動的に確保されます。これは、売り手があなたのお金を持ち逃げして取引を完了させなかった場合、$appName サポートが仲裁保証金に保持されているモネロをあなたに振り向けることができることを意味します。 Monero を販売する場合は、Monero の購入者からお金を受け取ったことがわかるまでは取引を完了しないでください。ローカル取引では、デフォルトでは仲裁保証金保護が有効になっていないことに注意してください。';
   }
 
   @override
   String faq250Sbanswer8722Sb857Sbagoradesk(Object appName) {
-    return 'すべてのオンライン取引は、仲裁保証によって保護されています。取引が開始されると、取引額に等しい量の暗号通貨が売り手の $appName 債券ウォレットから自動的に予約されます。これは、売り手があなたのお金を持ち逃げし、取引を確定しない場合、$appName サポートが仲裁保証金に保持されている暗号通貨をあなたに向けることができることを意味します。暗号通貨を販売している場合は、買い手からお金を受け取ったことを知る前に取引を確定しないでください。ローカル取引では、デフォルトで仲裁保証金保護が有効になっていないことに注意してください.';
+    return 'すべてのオンライン取引は仲裁保証金によって保護されています。取引が開始されると、取引額と同額の暗号通貨が売り手の$appName債券ウォレットから自動的に確保されます。これは、売り手があなたのお金を持ち逃げして取引を完了させなかった場合、$appName サポートが仲裁保証金に保持されている暗号通貨をあなたに振り向けることができることを意味します。暗号通貨を販売している場合は、購入者からお金を受け取ったことがわかるまでは決して取引を終了しないでください。ローカル取引では、デフォルトでは仲裁保証金保護が有効になっていないことに注意してください。';
   }
 
   @override
@@ -2543,7 +2543,7 @@ class I18nJa extends I18n {
   String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb5 => 'Monero は、世界最高の暗号通貨研究者とエンジニアリングの才能を引き付ける草の根コミュニティです。';
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb6 => '30 人のコア開発者を含む 420 人以上の開発者が Monero プロジェクトに貢献しています。フォーラムとチャット チャネルは歓迎的で活発です。';
+  String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb6 => '30 人のコア開発者を含む 420 人を超える開発者が Monero プロジェクトに貢献しました。フォーラムとチャット チャネルは歓迎的で活発です。';
 
   @override
   String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb7 => 'Monero のリサーチ ラボ、コア開発チーム、およびコミュニティ デベロッパーは、暗号通貨のプライバシーとセキュリティで可能なことの最前線を常に押し進めています。';
@@ -2873,7 +2873,7 @@ class I18nJa extends I18n {
   String get guide250Sbmnemonic250Sbtitle => 'ニーモニックシードからノンカストディアルウォレットを復元方法は？';
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1 => '<a target=\"_blank\" href=\"/\" class=\"next-link\"> メイン ページ </a> に移動すると、デフォルト地域のトップ オファーが表示されます。検索ボックスに目的の金額を入力し、通貨、国、または支払い方法を変更して (使用する支払い方法がわからない場合は [すべてのオンライン オファー] を選択してください)、[検索] をクリックすると、結果を絞り込むことができます。';
+  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1 => '<a target=\"_blank\" href=\"/\" class=\"next-link\"> メイン ページ </a> に移動します。デフォルトの地域のトップ オファーが表示されます。検索ボックスに取引したい金額を入力して結果を絞り込み、取引したい通貨、国、希望の支払い方法を選択します（支払い方法がわからない場合は、「すべてのオンラインオファー」を選択してください）使いたい）。';
 
   @override
   String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1250Sb1 => '広告のリストから、取引量が多く、評判スコアが高いトレーダーから 1 つを選択します (ユーザー名の横の括弧内にそれぞれ表示されます)。緑色の円は、トレーダーが今日オンラインであることを意味します。黄色の円は、今週そのサイトを訪問したことを意味します。灰色の円は、トレーダーが 1 週間以上ここにいないことを意味します。 「購入」ボタンをクリックすると、広告に関する詳細情報を表示できます。';
@@ -3878,7 +3878,7 @@ class I18nJa extends I18n {
   String get knowledge250Sbscams250Sb3250Sbtitle => 'あからさまな詐欺';
 
   @override
-  String get knowledge250Sbscams250Sb4250Sbtext => '<p>あなたのモネロシードはあなたのモネロです。最初にウォレットを作成するときは、それを書き留めておく必要があります。なぜなら、シードを失うとモネロを失い、誰もあなたを助けることができないからです。しかし、あなたはこの種を他人から守らなければなりません。誰かがあなたのシードを盗んだ場合、彼らはあなたであるかのようにモネロをウォレットから送り出すことができます。なくなった。</p>\n\n<p> 個人が Monero のコールド ウォレットを保管していて、自分の資金に興味があり、それを確認したいと思っていることがあまりにも多くあります。しかし、ウォレット アプリケーション全体を再インストールするという面倒な作業を行うのではなく、Web ウォレットを使用してシードをすばやく復元し、お金を確認することにしました。彼らがBusiness Look Alike詐欺の犠牲になった場合、シードを入力するという行為自体が詐欺師にそれを与え、詐欺師は都合の良いときに管理している別のウォレットにお金を移すことができます.</p>\n\n<p>サイト、アプリケーション、またはウォレットに「シードを使用して復元」オプションがある場合はいつでも、使用しているアプリケーションが正当なものであることを十分に注意してください。プログラムのハッシュをチェックして (Monero の Web サイトにこれを行う方法の説明があります)、プログラムが外部の力によって改ざんされていないことを確認し、シードを公開する場所と方法を常に認識してください。ダブルチェックは煩わしいかもしれませんが、不注意による資金の損失はさらに悪いことです.</p>';
+  String get knowledge250Sbscams250Sb4250Sbtext => '<p>あなたのMoneroシードはあなたのMoneroです。初めてウォレットを作成するときにそれを書き留める必要があります。シードを失うと、モネロを失ったことになり、誰も助けてくれないからです。しかしまた、この種を他の人から安全に保管しなければなりません。誰かがあなたのシードを盗んだ場合、あたかもあなたであるかのようにウォレットからモネロを送り出すことができますが、やはり誰もあなたの代わりにこのお金を取り戻すことはできません。消えてしまいました。</p>\n\n<p>Monero のコールド ウォレットを保管し、自分の資金に興味があり、それを確認したいと考えている人が非常によくいます。しかし、ウォレット アプリケーション全体を再インストールするという手間をかけるのではなく、Web ウォレットを使用してシードをすばやく復元し、お金を確認することにしました。 Business Look Alike 詐欺の被害に遭った場合、シードを入力するという行為そのものが詐欺師にそのシードを与え、その後、自分の都合に合わせて管理する別のウォレットに資金を移動させることができます。</p>\n\n<p> サイト、アプリケーション、またはウォレットに「シードを使用して復元」オプションがある場合は常に、使用しているアプリケーションが正規のものであることに十分注意してください。プログラムのハッシュをチェックして (Monero の Web サイトにその方法の手順が記載されています)、プログラムが外部の力によって改ざんされていないことを確認し、シードをどこでどのように公開するかを常に意識してください。二重チェックは煩わしいかもしれませんが、不注意による資金の損失はさらに悪いことになります。</p>';
 
   @override
   String get knowledge250Sbscams250Sb4250Sbtitle => '詐欺におけるモネロシードの役割';
@@ -4585,7 +4585,7 @@ class I18nJa extends I18n {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => 'リフレッシュ';
 
   @override
-  String note250Sbbutton(Object username, Object val) {
+  String note250Sbbutton(Object username) {
     return '$username にメモを追加';
   }
 
@@ -4598,7 +4598,7 @@ class I18nJa extends I18n {
   String get note250Sbinput250Sbplaceholder => 'これはあなた自身の参照用の非公開メモであり、このユーザーや他のユーザーには表示されません。';
 
   @override
-  String note250Sbtitle(Object username, Object val) {
+  String note250Sbtitle(Object username) {
     return '$username に関するあなたのメモ (あなただけが見ることができます)';
   }
 
@@ -4773,7 +4773,7 @@ class I18nJa extends I18n {
   String get post8722Sbad250Sberror250Sbwallet8722Sbbalance => 'ウォレットの残高がこの広告タイプに必要な最低額を下回っています';
 
   @override
-  String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit => '最初の制限時間  ';
+  String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit => '初回制限時間  ';
 
   @override
   String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit8722Sbtip => 'オプション。以前に取引したことがないユーザーの最大取引額を制限します。最小 0。';
@@ -5338,7 +5338,7 @@ class I18nJa extends I18n {
   String get seo250Sbheadline8722Sb257Sbagoradesk => '真の LocalBitcoins と Paxful の代替品です。';
 
   @override
-  String get seo250Sbtext8722Sb1 => 'プライバシーの侵害を懸念している場合、投資するのに最適な暗号通貨は XMR です。 Monero は、プライバシー バイ デザインを念頭に置いて開発された追跡不可能なコインです。\n【X171X】\nモネロはどこで買える？ LocalMonero は、XMR コミュニティで最大かつ最も信頼され、確立された P2P モネロ取引プラットフォームです。 KYC チェックはありません。PayPal、クレジット カード、ギフト カード、郵送による現金、またはビットコインを Monero に変換することで、ID 確認なしで匿名で Monero を購入することができます。当社のプラットフォームはあらゆる支払い方法をサポートしています。';
+  String get seo250Sbtext8722Sb1 => 'プライバシーの侵害が心配な場合、投資に最適な仮想通貨は XMR です。 Monero は、プライバシーを念頭に置いて開発された追跡不可能なコインです。\n<br/>\nモネロはどこで買えますか？ LocalMonero は、XMR コミュニティで最大かつ最も信頼され、確立された P2P Monero 取引プラットフォームです。当社にはKYCチェックはありません。PayPal、クレジットカード、ギフトカード、郵送による現金によるID認証なしで匿名でMoneroを購入するか、ビットコインをMoneroに変換することができます。当社のプラットフォームはあらゆる支払い方法をサポートしています。';
 
   @override
   String get seo250Sbtext8722Sb157Sbagoradesk => 'ビットコインへの投資方法を知りたいですか？ AgoraDesk では、ビットコインの購入がこれまでになく簡単になりました。PayPal、クレジット/デビット カード、銀行振込、ギフト カード、Venmo など、お気に入りのオンライン支払い方法を使用して、BTC を即座に購入できます。\n<br/>\n近くでビットコインを現金で購入したい場合は、現地でビットコインを売ってくれる人を見つけることができます。取引プラットフォームは、現金での BTC の売買をサポートしています。郵送で現金を使ってビットコインを購入することもできます。';
@@ -6674,7 +6674,7 @@ class I18nJa extends I18n {
   String get verify8722Sbemail250Sbsuccess => 'メールが正常に確認されました!';
 
   @override
-  String get wallet250Sbclipboard8722Sbvirus8722Sbwarning => '<strong> 貼り付けたアドレスとコピーしたアドレスが同じであることを確認してください。 </strong> 一部のユーザーは、<a style=\"text-decoration:underline;font-size:inherit;color:inherit\" href=\"https://reddit.com/r/Monero/comments/mcvuxc/beware_crypto_stealing_malware/\" target=\"_blank\"> クリップボードにコピーされたアドレスを攻撃者のアドレス に置き換えるマルウェア</a> によって資金を盗まれました。';
+  String get wallet250Sbclipboard8722Sbvirus8722Sbwarning => '<strong> 貼り付けたアドレスがコピーしたアドレスと同じであることを確認してください。 </strong> 一部のユーザーは、クリップボードにコピーされたアドレスを攻撃者のアドレスに置き換える <a style=\"text-decoration:underline;font-size:inherit;color:inherit\" href=\"https://web.archive.org/web/20220422235453/https://www.reddit.com/r/Monero/comments/mcvuxc/beware_crypto_stealing_malware/\" target=\"_blank\"> マルウェアによって資金を盗まれました </a>。';
 
   @override
   String get wallet250Sbdownload8722Sbcsv8722Sbbtn => 'CSVをダウンロード';
@@ -7437,55 +7437,55 @@ class I18nJa extends I18n {
   }
 
   @override
-  String get devblog250Sbdescription => 'このブログでは、私たちのチームが開発に関する洞察の一部を、技術的な側面に関心のある人々と共有しています。';
+  String get devblog250Sbdescription => 'このブログでは、私たちのチームが開発に関する洞察の一部を、物事の技術的な側面に興味がある人々と共有しています。';
 
   @override
-  String get devblog250Sbfdroid250Sb0250Sbtext => '<blockquote>\n<p>F-Droid は、Android プラットフォーム用のインストール可能な FOSS (フリーおよびオープン ソース ソフトウェア) アプリケーションのカタログです。クライアントを使用すると、デバイスでの更新の参照、インストール、および追跡が簡単になります。\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\">F-Droid ウェブサイト</a></p>\n【X330X】\n\n<p> このチュートリアルのすべての手順は、フレーバーのないアプリでも機能します。</p>';
+  String get devblog250Sbfdroid250Sb0250Sbtext => '<blockquote>\n<p>F-Droid は、Android プラットフォーム用の FOSS (無料およびオープン ソース ソフトウェア) アプリケーションのインストール可能なカタログです。クライアントを使用すると、デバイス上の更新の参照、インストール、追跡が簡単になります。\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\">F-Droid ウェブサイト</a></p>\n【X330X】\n\n<p>このチュートリアルのすべての手順は、フレーバーなしのアプリでも機能します。</p>';
 
   @override
-  String get devblog250Sbfdroid250Sb1250Sbtext => '<p> アプリが完全にオープンソースである場合にのみ、アプリを F-Droid に含めることができます。これには、使用されるすべてのライブラリと依存関係が含まれます。包含ポリシーの詳細については、<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">こちら</a>.</p>をご覧ください。\n<p>たとえば、アプリで ObjectBox データベースを使用する場合、&#39;F-Droid に含めることはできません (<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">ディスカッション</a>)。</p>';
+  String get devblog250Sbfdroid250Sb1250Sbtext => '<p>アプリを F-Droid に含めることができるのは、使用されているすべてのライブラリと依存関係を含め、完全にオープンソースである場合のみです。包含ポリシーの詳細については、<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">こちら</a>.</p>をご覧ください。\n<p>たとえば、アプリで ObjectBox データベースを使用する場合、それを F-Droid に含めることは&#39;できません (<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">ディスカッション</a>)。</p>';
 
   @override
   String get devblog250Sbfdroid250Sb1250Sbtitle => 'F-Droid にはどのアプリを含めることができますか?';
 
   @override
-  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>Gitlab で <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">fdroiddata リポジトリ </a> をフォークします。</li>\n<li> リポジトリをデバイスにクローンします。</li>\n<li> <code>co.localmonero.app</code></li> など、アプリのバンドル ID を使用してブランチを作成します。\n【X307X】';
+  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li> Gitlab 上の <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">fdroiddata リポジトリ </a> をフォークします。</li>\n<li>デバイスにリポジトリのクローンを作成します。</li>\n<li>アプリのバンドル ID を使用してブランチを作成します (例: <code>co.localmonero.app</code></li>)。\n</ul>';
 
   @override
   String get devblog250Sbfdroid250Sb2250Sbtitle => 'ステップ1';
 
   @override
-  String get devblog250Sbfdroid250Sb3250Sbtext => '<p><code>fdroid</code>が正常に動作することを確認してください。 <code>fdroid</code> フォルダで次のコマンドを実行します:</p>\n<pre><code class=\"lang-sh\">fdroid 初期化\nfdroid readmeta\n</code></pre>';
+  String get devblog250Sbfdroid250Sb3250Sbtext => '<p><code>fdroid</code>が正しく動作することを確認します。 <code>fdroid</code> フォルダーで次のコマンドを実行します:</p>\n<pre><code class=\"lang-sh\">fdroid 初期化\nfdroid リードメタ\n</code></pre>';
 
   @override
   String get devblog250Sbfdroid250Sb3250Sbtitle => 'ステップ2';
 
   @override
-  String get devblog250Sbfdroid250Sb4250Sbtext => '<p>プロジェクトを追加:</p>\n<pre><code>fdroid インポート --url https://github.com/YOUR_REPO --subdir app\n</code></pre>\n<p><code>metadata/co.localmonero.app.yml</code> などのメタデータ ディレクトリにファイルを作成します。\nこのファイルを手動で作成することもできます。</p>';
+  String get devblog250Sbfdroid250Sb4250Sbtext => '<p>プロジェクトを追加します:</p>\n<pre><code>fdroid import --url https://github.com/YOUR_REPO --subdir app\n</code></pre>\n<p>メタデータ ディレクトリにファイルが作成されます (例: <code>metadata/co.localmonero.app.yml</code>)。\nこのファイルは手動で作成することもできます。</p>';
 
   @override
-  String get devblog250Sbfdroid250Sb4250Sbtitle => 'ステップ 3';
+  String get devblog250Sbfdroid250Sb4250Sbtitle => 'ステップ3';
 
   @override
-  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>ファイルを開いて編集します。例を次に示します: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>あなたが見ることができる例では：</p>\n<ol>\n<li>Flutter はサブモジュールとして使用されます - これは F-Droid チームからの要件です。</li>\n<li>フレーバーごとに別のブランチを使用しました (コマンド <code>AutoUpdateMode: Version %v-fdroid-lm</code>)。これは、Fastlane が &#39;Flutter のフレーバーをサポートしていないためです。</li>\n<li> 初めてビルド情報を手動で追加しますが、将来的には、新しいタグをプッシュした後、ボットによって自動的に追加されます。</li>\n</ol>\n<p>ファイルの構文が正しいことを確認します: <code>fdroid readmeta</code>.</p>';
+  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>ファイルを開いて編集します。以下に例を示します: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>この例では次のことがわかります:</p>\n<ol>\n<li>Flutter はサブモジュールとして使用されます - これは F-Droid チームからの要件です。</li>\n<li>フレーバーごとに個別のブランチを使用しました (コマンド <code>AutoUpdateMode: バージョン %v-fdroid-lm</code>)。これは、Fastlane が Flutter を使用したフレーバーをサポートしていないためです。</li>\n<li>初めてビルド情報を手動で追加しますが、今後は新しいタグをプッシュした後、ボットによって自動的に追加されます。</li>\n</ol>\n<p>ファイルの構文が正しいことを確認してください: <code>fdroid readmeta</code>.</p>';
 
   @override
-  String get devblog250Sbfdroid250Sb5250Sbtitle => 'ステップ 4';
+  String get devblog250Sbfdroid250Sb5250Sbtitle => 'ステップ4';
 
   @override
-  String get devblog250Sbfdroid250Sb6250Sbtext => '<p>F-Droid マーケットのデータを追加しましょう。そのために、フレーバーごとに別のブランチを作成します: </p>\n【X105X】\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n【X572X】\n<p>その後、Fastlane 用のフォルダーを作成します。\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a>.</p>\n<p>必要なデータを追加してプッシュします。</p>';
+  String get devblog250Sbfdroid250Sb6250Sbtext => '<p>次に、F-Droid マーケットのデータを追加しましょう。そのために、フレーバーごとに個別のブランチを作成します:</p>\n【X105X】\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n</ul>\n<p>その後、Fastlane 用のフォルダーを作成します。\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a>.</p>\n【X917X】必要なデータを追加してプッシュします。【X954X】';
 
   @override
-  String get devblog250Sbfdroid250Sb6250Sbtitle => 'ステップ 5';
+  String get devblog250Sbfdroid250Sb6250Sbtitle => 'ステップ5';
 
   @override
-  String get devblog250Sbfdroid250Sb7250Sbtext => '<p>アプリを F-Droid に追加します。</p>\n<ol>\n<li> アプリ リポジトリにタグを作成します。</li>\n<li> Gitlab の F-Droid リポジトリに変更をプッシュします。</li>\n<li> Gitlab リポジトリでマージ リクエストを作成します。アプリの ID をタイトルに使用します。</li>\n<li>F-Droid チームからのレビューを待ちます。</li>\n</ol>';
+  String get devblog250Sbfdroid250Sb7250Sbtext => '<p>アプリを F-Droid に追加します。</p>\n<ol>\n<li>アプリ リポジトリにタグを作成します。</li>\n<li>Gitlab 上の F-Droid リポジトリに変更をプッシュします。</li>\n<li>Gitlab リポジトリでマージ リクエストを作成します。タイトルにアプリの ID を使用します。</li>\n<li>F-Droid チームからのレビューを待ちます。</li>\n</ol>';
 
   @override
-  String get devblog250Sbfdroid250Sb7250Sbtitle => 'ステップ 6';
+  String get devblog250Sbfdroid250Sb7250Sbtitle => 'ステップ6';
 
   @override
-  String get devblog250Sbfdroid250Sb8250Sbtext => '<p> プロセスは少し複雑で、途中でさまざまな問題が発生する可能性があります。ただし、CI を設定すると、次の更新は自動的に処理されます。</p>\n<p>ご不明な点がございましたら、<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHub</a>.</p>でお気軽にお問い合わせください。';
+  String get devblog250Sbfdroid250Sb8250Sbtext => '<p>このプロセスは少し複雑で、途中でさまざまな問題が発生する可能性があります。ただし、CI をセットアップすると、次の更新は自動的に処理されます。</p>\n<p>ご質問がある場合は、<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHub</a>でお気軽にお問い合わせください。</p>';
 
   @override
   String get devblog250Sbfdroid250Sb8250Sbtitle => '結論';
@@ -7500,7 +7500,7 @@ class I18nJa extends I18n {
   String get devblog250Sbtitle => '開発ブログ';
 
   @override
-  String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn => '住所を追加';
+  String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn => 'アドレスを追加';
 
   @override
   String get address8722Sbbook250Sbcancel8722Sbbtn => 'キャンセル';
@@ -7509,7 +7509,7 @@ class I18nJa extends I18n {
   String get address8722Sbbook250Sbconfirm8722Sbdeletion => 'このアドレスを削除しますか?';
 
   @override
-  String get address8722Sbbook250Sbdescription => '住所を入力する必要があるときはいつでも、ここに保存されている住所をすばやく選択できます';
+  String get address8722Sbbook250Sbdescription => '住所を入力する必要があるときはいつでも、ここに保存されているアドレスをすぐに選択できます。';
 
   @override
   String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => 'ラベル (オプション)';
@@ -7518,13 +7518,13 @@ class I18nJa extends I18n {
   String get address8722Sbbook250Sbsave8722Sbbtn => '保存';
 
   @override
-  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => '将来の使用のためにこのアドレスを保存します';
+  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => '将来使用するためにこのアドレスを保存してください';
 
   @override
-  String get error250Sbaddress8722Sbbook250Sb270 => 'このアドレスはアドレス帳に既に存在します。';
+  String get error250Sbaddress8722Sbbook250Sb270 => 'このアドレスはアドレス帳にすでに存在します。';
 
   @override
-  String get error250Sbaddress8722Sbbook250Sb273 => 'このアドレスはアドレス帳から既に削除されています。';
+  String get error250Sbaddress8722Sbbook250Sb273 => 'このアドレスはアドレス帳からすでに削除されています。';
 
   @override
   String get address8722Sbbook => '住所録';
@@ -7537,22 +7537,56 @@ class I18nJa extends I18n {
 
   @override
   String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object timeRemaining) {
-    return '現在、すべての暗号通貨広告は、新しい「グローバル (コード XX)」の国カテゴリに移動されています。国のみが異なる重複する暗号通貨広告はすべて削除されます $timeRemaining。通貨ごとに 1 つの暗号通貨の広告しかないことを確認してください。そうしないと、その通貨で最近投稿された広告以外はすべて削除され、残りの広告は「グローバル」国カテゴリに移動されます。';
+    return 'すべての暗号通貨広告は、新しい「グローバル (コード XX)」国カテゴリに移動されます。国のみが異なる重複した暗号通貨広告はすべて削除されます $timeRemaining。通貨ごとに仮想通貨の広告は 1 つだけであることを確認してください。そうしないと、その通貨で最後に投稿された広告を除くすべての広告が削除され、残りの広告は「グローバル」国のカテゴリに移動されます。';
   }
 
   @override
-  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => '「保存」を押すと、広告の国は自動的に「グローバル」に更新されます。';
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => '[保存] を押すと、広告の国が自動的に「グローバル」に更新されます。';
 
   @override
-  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsame8722Sbasset8722Sbsells => '同一資産販売広告のみ';
+  String get dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsame8722Sbasset8722Sbsells => '同一アセット販売広告のみ';
 
   @override
-  String get mobile8722Sblanding250Sbto8722Sbthe8722Sbwebsite8722Sbbutton => 'ウェブサイトに移動';
+  String get mobile8722Sblanding250Sbto8722Sbthe8722Sbwebsite8722Sbbutton => 'ウェブサイトに連れて行ってください';
 
   @override
   String dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsingle8722Sbasset8722Sbbuys(Object asset) {
-    return '$asset 広告のみを購入';
+    return '$asset 広告のみを購入する';
   }
+
+  @override
+  String error250Sbtrade8722Sbrequest250Sb363(Object cakeLink, Object monerujoLink, Object featherLink) {
+    return '住所形式 (統合住所) が更新されていない販売者から取得した住所を指定しました。 $cakeLink、$monerujoLink、$featherLink などのアプリで独自のウォレットを設定し、代わりにそのアドレスを入力してください。';
+  }
+
+  @override
+  String get error250Sbtrade8722Sbrequest250Sb364 => 'この広告の所有者は和解先住所を指定していません。彼らに連絡して、広告を更新するか、別の購入者を探すように伝えてください。';
+
+  @override
+  String notification250Sbtrade8722Sbfunded(Object tradeId, Object username) {
+    return 'トレード $tradeId は $username によって受け入れられました';
+  }
+
+  @override
+  String get web8722Sbnotification250Sbtrade8722Sbfunded => '取引が受け付けられました';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbtrade8722Sbsend => 'トレード送信';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbnon8722Sbtrade8722Sbsend => '貿易以外の送金';
+
+  @override
+  String get address250Sbvalidation250Sbgeneric => '無効なアドレス';
+
+  @override
+  String get address250Sbvalidation250Sbtaproot8722Sbdisallowed => 'Taprootト アドレスは許可されません';
+
+  @override
+  String get reputation8722Sbimport250Sbstep250Sbcode250Sbmessage250Sbpaxful => 'コードをオファーの 1 つにラベルとして配置し、公開プロフィールに表示されるようにします。コードが確認されたら、削除できます。';
+
+  @override
+  String get trade250Sbwarning250Sbconfirmations => '購入者の TX で確認が得られるまで、最終決定しないでください。販売者が取引を完了した後に未確認の取引をキャンセルする詐欺が急増しています。';
 
   @override
   String get ads => '広告';
@@ -8167,7 +8201,7 @@ class I18nJa extends I18n {
   String get api_error_98 => 'ポスターが存在しない広告の取引を作成しようとしています';
 
   @override
-  String get api_error_99 => '最初の取引を作成するときに、広告所有者が許可したよりも高い金額をリクエストしようとしています';
+  String get api_error_99 => '最初の取引を作成するときに、広告所有者が許可した金額を超える金額をリクエストしようとしました';
 
   @override
   String get api_error_100 => '取引作成のために 0.0000000001XMR未満をリクエストすることはできません';
@@ -8227,10 +8261,10 @@ class I18nJa extends I18n {
   String get api_error_121 => '存在しない取引をエスクローしようとする';
 
   @override
-  String get api_error_122 => '取引資金が不足している';
+  String get api_error_122 => '取引に資金を供給するのに十分な資金がありません';
 
   @override
-  String get api_error_123 => '取引資金が不足している';
+  String get api_error_123 => '取引に資金を供給するのに十分な資金がありません';
 
   @override
   String get api_error_124 => '取引資金調達時のエラー';
@@ -8578,7 +8612,7 @@ class I18nJa extends I18n {
   String get pin_enter_to_confirm_transaction => '暗証番号を入力して取引を確認する';
 
   @override
-  String get pin_you_can_use => 'PIN は 4 桁以上である必要があります';
+  String get pin_you_can_use => 'PIN は少なくとも 4 桁である必要があります';
 
   @override
   String get pin_confirm => '暗証番号の確認';
@@ -9051,7 +9085,7 @@ class I18nJa extends I18n {
   }
 
   @override
-  String app_buy_sell(Object val) {
+  String app_buy_sell(Object val, Object buyOrSell) {
     return '$valにいくら希望しますか?';
   }
 
@@ -9212,12 +9246,12 @@ class I18nJa extends I18n {
   String get app_final_amount => '最終金額';
 
   @override
-  String app_note_label(Object val) {
+  String app_note_label(Object val, Object username) {
     return '$val に関するあなたのメモ (あなただけが見ることができます)';
   }
 
   @override
-  String app_note_add(Object val) {
+  String app_note_add(Object val, Object username) {
     return '$valにメモを追加';
   }
 
@@ -9286,7 +9320,7 @@ class I18nJa extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: XMR を簡単に購入';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => '本人確認なしでモネロを売買する。現金またはオンライン。安全、迅速、簡単。\n\nLocalMonero は、XMR コミュニティで最大かつ最も信頼され、確立された P2P 取引プラットフォームです。 KYCチェックはありません - PayPal、クレジットカード、ギフトカード、郵送による現金での身元確認なしで匿名でモネロを購入するか、ビットコイン、イーサ、USDT、またはその他の暗号コインをモネロに変換することができます - 私たちのプラットフォームはあらゆる支払い方法をサポートしています.\n\n- 安全でスムーズな取引\nあらゆる支払い方法、通貨、場所をサポートしています。支払い方法を排除せず、対面での現金取引を完全にサポートします。私たちの取引はすべて仲裁保証によって保護されています。取引を開始する前に資金を仲裁保証金に保持する必要があるという事実のおかげで、購入者にとってスムーズで安全な体験が保証されます。これは、プラットフォームの人気と売り手のリピート顧客にとって不可欠です.\n\n- KYC/AML または ID 検証なし\nLocalMonero は、取引体験のシンプルさと率直さを維持することをお約束します。私たちはKYC / AMLを採用しておらず、そうする予定もありません.\n\n- コミュニティからの信頼\n当社のプラットフォームは 4 年以上運営されており、2018 年の暗号通貨市場の大暴落を乗り切り、そのコミュニティ指向の勤勉なサービスを通じて、非常に懐疑的な Monero コミュニティで最も信頼される名前の 1 つになりました。\n\n- 安全、オープンソース、プライバシー中心、検閲耐性\n私たちのアプリは無料でオープンソースであるため、多くの人がアプリのコードを見て、セキュリティ ホールやプライバシー リークがないことを確認しています。アプリをオープンソース化することで、特定のアプリ リポジトリがアプリを検閲している場合でも、誰でもアプリにアクセスできるようになります。私たちのアプリは、Google が完全にブロックされている電話でも動作します。私たちはあなたのプライバシーをとても大切にしています。登録時に電子メールを提供する必要さえありません.\n\nソースコード: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\n問題トラッカー: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- ステラサポート\n私たちのサポートチームは、迅速で反応がよく、常に喜んでいます. 24 時間以内に回答されなかったサポート チケットはありません。私たちはソーシャルメディアを通じていつでも簡単にアクセスでき、あなたの批判に熱心に耳を傾け、常に記録的な速さでユーザーからの優れた提案を実装しています.\n\nサポートは https://localmonero.co/support からご利用いただけます。\n\n- フェア料金\n当社の仲裁債券ウォレットにモネロを入金または出金する際に法外な手数料を請求することはありません。入金手数料は無料で、出金手数料は通常の取引で支払う手数料に非常に近いものです。';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => '本人確認なしでモネロを売買できます。現金またはオンライン。安全、迅速、簡単。\n\nLocalMonero は、XMR コミュニティで最大かつ最も信頼され、確立された P2P 取引プラットフォームです。当社にはKYCチェックはありません。PayPal、クレジットカード、ギフトカード、郵送による現金によるID認証なしで匿名でMoneroを購入したり、ビットコイン、イーサ、USDT、またはその他の暗号コインをMoneroに変換したりすることができます。当社のプラットフォームはあらゆる支払い方法をサポートしています。\n\n- 安全でスムーズな取引\nあらゆる支払い方法、通貨、場所をサポートします。決済手段の削除は行わず、対面での現金取引を全面的にサポートいたします。当社の取引はすべて仲裁保証金によって保護されています。取引を開始する前に資金を仲裁保証金に保持する必要があるという事実のおかげで、プラットフォームの人気と売り手のリピート顧客にとって不可欠な、買い手にスムーズで安全なエクスペリエンスを保証します。\n\n- KYC/AML または ID 検証なし\nLocalMonero は、お客様の取引体験のシンプルさと直接性を維持することに尽力しています。当社はKYC/AMLを採用していませんし、今後も採用する予定はありません。\n\n- コミュニティからの信頼\n当社のプラットフォームは 4 年以上運営され、2018 年の仮想通貨市場の大暴落にも耐え、コミュニティ指向の勤勉なサービスを通じて、非常に懐疑的な Monero コミュニティで最も信頼される名前の 1 つになりました。\n\n- 安全、オープンソース、プライバシー重視、検閲耐性\n私たちのアプリは無料でオープンソースであるため、セキュリティ ホールやプライバシーの漏洩がないことを確認するためにアプリのコードに多くの目が注がれています。また、アプリをオープンソース化することで、特定のアプリ リポジトリがアプリを検閲している場合でも、誰でもアプリにアクセスできるようになります。私たちのアプリは、Google が完全にブロックしている携帯電話でも動作します。当社はお客様のプライバシーを非常に重視しているため、登録時にメールアドレスを入力する必要さえありません。\n\nソースコード: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\n問題トラッカー: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- ステラサポート\n当社のサポート チームは迅速かつ迅速に対応し、常に喜んでいただけるよう努めています。サポート チケットに対して 24 時間以内に返答がなかった例はありません。私たちはソーシャル メディアを通じて常に簡単に連絡を取ることができ、お客様の批判に熱心に耳を傾け、ユーザーからの優れた提案を常に記録的な速さで実装します。\n\n弊社のサポートには、https://localmonero.co/support からアクセスできます。\n\n- 公正な料金\n弊社の仲裁債券ウォレットへの、または仲裁債券ウォレットからの Monero の入出金の際に、法外な手数料はかかりません。入金手数料はなく、出金手数料は通常の取引で支払う手数料に非常に近いです。';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: XMR を非公開で購入する';
@@ -9348,30 +9382,30 @@ class I18nJa extends I18n {
   String get app250Sbf8722Sbdroid8722Sbtitle250Sblocalmonero => 'LocalMonero: XMR を匿名で購入';
 
   @override
-  String get app_accessibility_edit_box_password => 'ボックスのパスワードを編集します。編集するにはダブルタップします';
+  String get app_accessibility_edit_box_password => 'ボックスのパスワードを編集します。ダブルタップして編集します';
 
   @override
-  String get app_accessibility_edit_box_confirm_password => 'パスワード編集ボックスを確認します。編集するにはダブルタップします';
+  String get app_accessibility_edit_box_confirm_password => 'パスワード編集ボックスを確認します。ダブルタップして編集します';
 
   @override
   String get app_ad_created => '広告が作成されました';
 
   @override
   String app_503_body(Object val) {
-    return '$val はすぐに戻ってきます!\\nご迷惑をおかけして申し訳ありませんが、現在、定期メンテナンスを行っています。\\nおそらくすぐにオンラインに戻るでしょう。コミュニティ グループで最新情報を入手してください。';
+    return '$val は間もなく戻ってきます!\\nご迷惑をおかけして申し訳ありませんが、現在定期メンテナンスを行っております。\\nおそらくすぐにオンラインに戻ると思います。コミュニティ グループで最新情報を入手してください:';
   }
 
   @override
-  String get app_select_ad_type => '広告タイプを選択';
+  String get app_select_ad_type => '広告タイプを選択してください';
 
   @override
-  String get app_chat_leave_review => 'ここをタップしてレビューを残してください！';
+  String get app_chat_leave_review => 'レビューを残すにはここをタップしてください!';
 
   @override
-  String get app_chat_update_review => 'このユーザーには既にレビューを残しています。今すぐレビューを更新しますか?';
+  String get app_chat_update_review => 'このユーザーにはすでにレビューを残しています。今すぐレビューを更新しますか?';
 
   @override
-  String get app_select_buyer_seller => '買い手か売り手を選ぶ';
+  String get app_select_buyer_seller => '買い手または売り手を選択してください';
 
   @override
   String get app_default_tab => 'デフォルトのタブを設定する';
@@ -9385,43 +9419,43 @@ class I18nJa extends I18n {
   }
 
   @override
-  String get app_push_new_message => '取引に新しいメッセージがあります';
+  String get app_push_new_message => '取引中に新しいメッセージがあります';
 
   @override
   String get app_push_new_offer => '新しいオファーがあります';
 
   @override
-  String get app_push_trade_marked_completed => '取引が完了としてマークされました';
+  String get app_push_trade_marked_completed => '取引が完了としてマークされる';
 
   @override
-  String get app_push_trade_cancelled => 'トレードキャンセル';
+  String get app_push_trade_cancelled => '取引キャンセル';
 
   @override
-  String get app_push_trade_disputed => '貿易係争中';
+  String get app_push_trade_disputed => '貿易紛争中';
 
   @override
   String get app_apple_app_store_subtitle_localmonero => 'モネロを匿名で売買する';
 
   @override
-  String get app_apple_app_store_subtitle_agoradesk => 'ビットコインを匿名で売買する';
+  String get app_apple_app_store_subtitle_agoradesk => '匿名でビットコインを売買する';
 
   @override
-  String get app_google_play_store_short_description_localmonero => '本人確認なしでモネロを売買する。現金またはオンライン。安全、迅速、簡単。';
+  String get app_google_play_store_short_description_localmonero => '本人確認なしでモネロを売買できます。現金またはオンライン。安全、迅速、簡単。';
 
   @override
-  String get app_google_play_store_short_description_agoradesk => '本人確認なしでビットコインを売買します。現金またはオンライン。安全、迅速、簡単。';
+  String get app_google_play_store_short_description_agoradesk => '本人確認なしでビットコインを売買できます。現金またはオンライン。安全、迅速、簡単。';
 
   @override
-  String get app_ask_community_chats => '質問がありますか？コミュニティ チャットで質問する';
+  String get app_ask_community_chats => 'ご質問がありますか?コミュニティチャットで質問してください';
 
   @override
-  String get app_select_currency => '通貨を選択';
+  String get app_select_currency => '通貨を選択してください';
 
   @override
   String get app_select_country => '国を選択';
 
   @override
-  String get app_select_payment_method => 'お支払い方法を選択';
+  String get app_select_payment_method => '支払い方法を選択してください';
 
   @override
   String get app_enable_ad => '広告を有効にする';
@@ -9430,7 +9464,7 @@ class I18nJa extends I18n {
   String get app_disable_ad => '広告を無効にする';
 
   @override
-  String get app_proxy => 'プロキシー';
+  String get app_proxy => 'プロキシ';
 
   @override
   String get app_proxy_details => 'プロキシの詳細';
@@ -9439,34 +9473,34 @@ class I18nJa extends I18n {
   String get app_proxy_use => 'プロキシを使う';
 
   @override
-  String get app_proxy_bugs_expected => '警告！プロキシ機能はベータ版であり、バグが予想されます。迅速な修正のためにバグを開発チャネルに報告してください';
+  String get app_proxy_bugs_expected => '警告！プロキシ機能はベータ版であり、バグが予想されます。迅速な修正が必要な場合は、開発チャネルにバグを報告してください。';
 
   @override
-  String get app_proxy_select_type => 'プロキシの種類を選択';
+  String get app_proxy_select_type => 'プロキシの種類を選択してください';
 
   @override
-  String get app_proxy_on => 'プロキシが有効';
+  String get app_proxy_on => 'プロキシが有効になっています';
 
   @override
   String get app_proxy_on_descr => 'アプリはプロキシ経由でプラットフォームに接続します。';
 
   @override
-  String get app_proxy_unavailable => 'プロキシを利用できません';
+  String get app_proxy_unavailable => 'プロキシは使用できません';
 
   @override
   String get app_proxy_unavailable_decr => '接続設定が正しいかどうかを確認するか、別のプロキシを使用してください。';
 
   @override
-  String get api_error_269 => 'アドレス帳に無効なアドレスを追加しようとしています';
+  String get api_error_269 => '無効なアドレスをアドレス帳に追加しようとしました';
 
   @override
   String get api_error_270 => 'ユーザーのアドレス帳に重複したアドレスを追加しようとしています';
 
   @override
-  String get api_error_273 => 'ユーザーのアドレス帳に存在しないアドレスを削除しようとしています';
+  String get api_error_273 => 'ユーザーのアドレス帳に存在しないアドレスを削除しようとしました';
 
   @override
-  String get pin_you_can_use_new => 'PIN は 4 桁以上である必要があります';
+  String get pin_you_can_use_new => 'PIN は少なくとも 4 桁である必要があります';
 
   @override
   String get app_default_theme => 'デフォルトのテーマを設定する';
@@ -9476,7 +9510,7 @@ class I18nJa extends I18n {
 
   @override
   String pin_wrong_current_info(Object val) {
-    return '$val 回の試行が残っています。その後、ログアウトされ、再度ログインする必要があります。';
+    return '残り $val 回の試行回数が残っています。その後、ログアウトされ、再度ログインする必要があります。';
   }
 
   @override

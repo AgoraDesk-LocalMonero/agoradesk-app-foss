@@ -20,7 +20,7 @@ class PlusMinusBox extends StatelessWidget {
       ),
       child: Icon(
         isPlus ? CupertinoIcons.plus : CupertinoIcons.minus,
-        color: Theme.of(context).colorScheme.primary90,
+        color: Theme.of(context).colorScheme.p90p10,
         size: 14,
       ),
     );

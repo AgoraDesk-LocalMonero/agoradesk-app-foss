@@ -56,7 +56,7 @@ class AgoraTwoTabsBar extends StatelessWidget {
                   icon: iconLeft != null
                       ? Icon(
                           iconLeft,
-                          color: Theme.of(context).colorScheme.primary90.withOpacity(controller.index == 0 ? 1 : 0.5),
+                          color: Theme.of(context).colorScheme.p90p10.withOpacity(controller.index == 0 ? 1 : 0.5),
                         )
                       : null,
                   active: controller.index == 0,
@@ -69,7 +69,7 @@ class AgoraTwoTabsBar extends StatelessWidget {
                   icon: iconRight != null
                       ? Icon(
                           iconRight,
-                          color: Theme.of(context).colorScheme.primary90.withOpacity(controller.index == 1 ? 1 : 0.5),
+                          color: Theme.of(context).colorScheme.p90p10.withOpacity(controller.index == 1 ? 1 : 0.5),
                         )
                       : null,
                   active: controller.index == 1,

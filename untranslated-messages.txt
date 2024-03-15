@@ -53,6 +53,12 @@
     "find_user"
   ],
 
+  "ha": [
+    "api_error_363",
+    "api_error_364",
+    "find_user"
+  ],
+
   "hi": [
     "api_error_363",
     "api_error_364",
@@ -90,14 +96,6 @@
   ],
 
   "lt": [
-    "app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk",
-    "app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero",
-    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero",
-    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk",
-    "app_apple_app_store_subtitle_localmonero",
-    "app_apple_app_store_subtitle_agoradesk",
-    "app_google_play_store_short_description_localmonero",
-    "app_google_play_store_short_description_agoradesk",
     "api_error_363",
     "api_error_364",
     "find_user"
@@ -169,8 +167,20 @@
     "find_user"
   ],
 
-  "sv": [
+  "so": [
+    "app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk",
+    "app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero",
+    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero",
+    "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk",
+    "app_apple_app_store_subtitle_localmonero",
     "app_google_play_store_short_description_localmonero",
+    "app_google_play_store_short_description_agoradesk",
+    "api_error_363",
+    "api_error_364",
+    "find_user"
+  ],
+
+  "sv": [
     "api_error_363",
     "api_error_364",
     "find_user"

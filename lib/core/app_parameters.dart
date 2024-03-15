@@ -128,6 +128,10 @@ class AppParameters {
       'name': 'French',
       'origName': 'français, langue française',
     },
+    'ha': {
+      'name': 'Hausa',
+      'origName': 'Hausa, هَوُسَ',
+    },
     'hi': {
       'name': 'Hindi',
       'origName': 'हिन्दी',
@@ -195,6 +199,10 @@ class AppParameters {
     'sl': {
       'name': 'Slovenian',
       'origName': 'Slovenščina',
+    },
+    'so': {
+      'name': 'Somali',
+      'origName': 'Soomaaliga',
     },
     'sv': {
       'name': 'Swedish',
