@@ -52,7 +52,7 @@ class BtcFeesRadioButtons extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Radio<BtcFeesEnum>(
-                      activeColor: context.colP70,
+                      activeColor: context.colP70P40,
                       value: BtcFeesEnum.values[index],
                       groupValue: btcFeesEnum,
                       onChanged: (BtcFeesEnum? value) {

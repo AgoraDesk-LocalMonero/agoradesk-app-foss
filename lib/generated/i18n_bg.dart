@@ -150,7 +150,7 @@ class I18nBg extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'Купи';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val) {
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
     return 'Колко искате да $buyOrSell?';
   }
 
@@ -2543,7 +2543,7 @@ class I18nBg extends I18n {
   String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb5 => 'Monero е масова общност която привлича най-добрите в света изследователи на криптовалути и инженерни таланти.';
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb6 => 'Над 420 разработчици са допринесли за проекта Monero включително 30 основни разработчици. Форумите и каналите за чат са приветливи и активни.';
+  String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb6 => 'Над 420 разработчици са допринесли за проекта Monero, включително 30 основни разработчици. Форумите и каналите за чат са приветливи и активни.';
 
   @override
   String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb7 => 'Изследователската лаборатория на Monero както и основният екип за разработка и разработчиците на общността непрекъснато разширяват границите на възможното с поверителността и сигурността на криптовалутата.';
@@ -2873,7 +2873,7 @@ class I18nBg extends I18n {
   String get guide250Sbmnemonic250Sbtitle => 'Как да възстановя моя портфейл за уреждане без задържане от мнемоничното семе?';
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1 => 'Отидете на <a target=\"_blank\" href=\"/\" class=\"next-link\">главната страница</a> - ще видите най-добрите оферти за вашия регион по подразбиране. Можете да прецизирате резултатите си като въведете желаната сума и промените валутата държавата или метода на плащане (изберете „Всички онлайн оферти“ ако не сте сигурни кой метод на плащане искате да използвате) в полето за търсене и натиснете „Търсене“.';
+  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1 => 'Отидете на <a target=\"_blank\" href=\"/\" class=\"next-link\">главната страница</a> - ще видите най-добрите оферти за вашия регион по подразбиране. Можете да прецизирате резултатите си, като въведете желаната сума, която искате да извършите транзакция, в полето за търсене, след което изберете с коя валута искате да извършите транзакция, държава и желания метод на плащане (изберете „Всички онлайн оферти“, ако не сте сигурни кой метод на плащане искате да използвате).';
 
   @override
   String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1250Sb1 => 'От списъка с реклами изберете една от търговец с голям брой сделки и добра репутация (показва се съответно в скобите до потребителското име). Зелен кръг означава че търговецът е бил онлайн днес; жълт кръг означава че са посетили сайта тази седмица; а сив кръг означава че търговецът не е бил тук повече от седмица. Можете да кликнете върху бутона \"Купи\", за да видите повече информация за дадена реклама.';
@@ -4585,7 +4585,7 @@ class I18nBg extends I18n {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => 'Презаредете';
 
   @override
-  String note250Sbbutton(Object username, Object val) {
+  String note250Sbbutton(Object username) {
     return 'Добавете бележка към $username';
   }
 
@@ -4598,7 +4598,7 @@ class I18nBg extends I18n {
   String get note250Sbinput250Sbplaceholder => 'Това е лична бележка за ваша справка, тя няма да бъде видима за този потребител или който и да е друг потребител.';
 
   @override
-  String note250Sbtitle(Object username, Object val) {
+  String note250Sbtitle(Object username) {
     return 'Вашата бележка за $username (вижда се само от вас)';
   }
 
@@ -6674,7 +6674,7 @@ class I18nBg extends I18n {
   String get verify8722Sbemail250Sbsuccess => 'Имейлът е потвърден успешно!';
 
   @override
-  String get wallet250Sbclipboard8722Sbvirus8722Sbwarning => '<strong> Уверете се че адресът който сте поставили е същият като адреса който сте копирали! </strong> Средствата на някои потребители са откраднати от <a style=\"text-decoration:underline;font-size:inherit;color:inherit\" href=\"https://reddit.com/r/Monero/comments/mcvuxc/beware_crypto_stealing_malware/\" target=\"_blank\">зловреден софтуер който заменя адреса копиран в клипборда с адреса на атакуващия </a>.';
+  String get wallet250Sbclipboard8722Sbvirus8722Sbwarning => '<strong> Уверете се, че адресът, който сте поставили, е същият като адреса, който сте копирали! </strong> Средствата на някои потребители са откраднати от <a style=\"text-decoration:underline;font-size:inherit;color:inherit\" href=\"https://web.archive.org/web/20220422235453/https://www.reddit.com/r/Monero/comments/mcvuxc/beware_crypto_stealing_malware/\" target=\"_blank\"> злонамерен софтуер, който заменя адреса, копиран в клипборда, с адреса на атакуващия </a>.';
 
   @override
   String get wallet250Sbdownload8722Sbcsv8722Sbbtn => 'Изтеглете CSV';
@@ -7553,6 +7553,40 @@ class I18nBg extends I18n {
   String dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsingle8722Sbasset8722Sbbuys(Object asset) {
     return '$asset купувайте само реклами';
   }
+
+  @override
+  String error250Sbtrade8722Sbrequest250Sb363(Object cakeLink, Object monerujoLink, Object featherLink) {
+    return 'Предоставили сте адрес, който сте получили от търговец, който не е актуализирал своя адресен формат (интегриран адрес). Моля, настройте свой собствен портфейл в приложение като $cakeLink, $monerujoLink или $featherLink и предоставете този адрес вместо това.';
+  }
+
+  @override
+  String get error250Sbtrade8722Sbrequest250Sb364 => 'Собственикът на тази обява не е посочил адрес за населено място. Моля, свържете се с тях и им кажете да актуализират обявата си или да намерят друг купувач.';
+
+  @override
+  String notification250Sbtrade8722Sbfunded(Object tradeId, Object username) {
+    return 'Търговията $tradeId е приета от $username';
+  }
+
+  @override
+  String get web8722Sbnotification250Sbtrade8722Sbfunded => 'Търговията е приета';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbtrade8722Sbsend => 'Търговско изпращане';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbnon8722Sbtrade8722Sbsend => 'Нетърговско изпращане';
+
+  @override
+  String get address250Sbvalidation250Sbgeneric => 'Невалиден адрес';
+
+  @override
+  String get address250Sbvalidation250Sbtaproot8722Sbdisallowed => 'Taproot адреси не са разрешени';
+
+  @override
+  String get reputation8722Sbimport250Sbstep250Sbcode250Sbmessage250Sbpaxful => 'Поставете кода като етикет на една от вашите оферти, така че да се вижда в публичния ви профил. След като проверим кода, можете да го премахнете.';
+
+  @override
+  String get trade250Sbwarning250Sbconfirmations => 'Не финализирайте, докато tx на купувача не получи потвърждения! Налице е вълна от измами, при които непотвърдена транзакция се анулира, след като продавачът я финализира.';
 
   @override
   String get ads => 'реклами';
@@ -9051,7 +9085,7 @@ class I18nBg extends I18n {
   }
 
   @override
-  String app_buy_sell(Object val) {
+  String app_buy_sell(Object val, Object buyOrSell) {
     return 'Колко искате да $val?';
   }
 
@@ -9212,12 +9246,12 @@ class I18nBg extends I18n {
   String get app_final_amount => 'Крайна сума';
 
   @override
-  String app_note_label(Object val) {
+  String app_note_label(Object val, Object username) {
     return 'Вашата бележка за $val (вижда се само от вас)';
   }
 
   @override
-  String app_note_add(Object val) {
+  String app_note_add(Object val, Object username) {
     return 'Добавете бележка към $val';
   }
 

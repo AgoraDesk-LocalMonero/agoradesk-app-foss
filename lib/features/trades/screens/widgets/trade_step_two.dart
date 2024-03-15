@@ -298,6 +298,15 @@ class TradeStepTwo extends StatelessWidget with DateMixin, ClipboardMixin {
                             LineDotText(
                               text: context.intl.app_trade_option_payment_receiver_cancel_notice,
                             ),
+                            if (model.tradeForScreen.advertisement.paymentMethod == 'CRYPTOCURRENCY')
+                              Padding(
+                                padding: const EdgeInsets.fromLTRB(0, 12, 0, 6),
+                                child: Text(
+                                  context.intl.trade250Sbwarning250Sbconfirmations,
+                                  style: context.txtLabelMediumCustom08Custom07,
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
                             const SizedBox(height: 12),
                             ButtonFilledWithIconP80(
                               title: context.intl.trade250Sbrelease8722Sbmonero8722Sbbtn,

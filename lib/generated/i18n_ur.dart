@@ -150,7 +150,7 @@ class I18nUr extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'خریديں';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val) {
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
     return 'آپ $buyOrSell کتنا چاہتے ہیں؟';
   }
 
@@ -1857,7 +1857,7 @@ class I18nUr extends I18n {
 
   @override
   String faq250Sbanswer8722Sb0(Object appName) {
-    return '$appName ایک پیر ٹو پیئر Monero تجارتی پلیٹ فارم ہے۔ ہم ایک ایسا بازار ہیں جہاں صارف ایک دوسرے کو خرید اور فروخت کر سکتے ہیں۔ صارفین، جنہیں تاجر کہا جاتا ہے، قیمت اور ادائیگی کے طریقے کے ساتھ اشتہارات بناتے ہیں جو وہ پیش کرنا چاہتے ہیں۔ آپ تجارتی اشتہارات کے لیے ہماری ویب سائٹ کو براؤز کر سکتے ہیں اور اپنی پسند کا ادائیگی کا طریقہ تلاش کر سکتے ہیں۔ آپ تاجروں کو 60 سے زیادہ مختلف ادائیگی کے طریقوں پر Monero آن لائن خریدتے اور بیچتے ہوئے پائیں گے۔ اگر آپ $appName میں نئے ہیں اور Monero خریدنا چاہتے ہیں، تو براہ کرم Monero خریدنے کا طریقہ سیکھنے کے لیے ہماری گائیڈ پر ایک نظر ڈالیں۔';
+    return '$appName ایک ہم مرتبہ سے ہم مرتبہ Monero تجارتی پلیٹ فارم ہے۔ ہم ایک ایسا بازار ہیں جہاں صارف ایک دوسرے کو خرید اور فروخت کر سکتے ہیں۔ صارفین، جنہیں تاجر کہا جاتا ہے، قیمت اور ادائیگی کے طریقے کے ساتھ اشتہارات بناتے ہیں جو وہ پیش کرنا چاہتے ہیں۔ آپ تجارتی اشتہارات کے لیے ہماری ویب سائٹ کو براؤز کر سکتے ہیں اور اپنی پسند کا ادائیگی کا طریقہ تلاش کر سکتے ہیں۔ آپ تاجروں کو 60 سے زیادہ مختلف ادائیگی کے طریقوں پر Monero آن لائن خریدتے اور بیچتے ہوئے پائیں گے۔ اگر آپ $appName میں نئے ہیں اور Monero خریدنا چاہتے ہیں، تو براہ کرم Monero خریدنے کا طریقہ سیکھنے کے لیے ہماری گائیڈ پر ایک نظر ڈالیں۔';
   }
 
   @override
@@ -2873,7 +2873,7 @@ class I18nUr extends I18n {
   String get guide250Sbmnemonic250Sbtitle => 'یادداشت کے بیج سے میرا غیر تحویلی تصفیہ والا پرس کیسے بحال کیا جائے؟';
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1 => '<a target=\"_blank\" href=\"/\" class=\"next-link\">مرکزی صفحہ</a> پر جائیں - آپ کو اپنے پہلے سے طے شدہ علاقے کے لیے سرفہرست پیشکشیں نظر آئیں گی۔ آپ مطلوبہ رقم درج کرکے اور کرنسی، ملک یا ادائیگی کا طریقہ تبدیل کر کے اپنے نتائج کو بہتر بنا سکتے ہیں (select \"All online offers\" if you\'re unsure which payment method you want to use) اور \"Search\" کو دبا کر۔';
+  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1 => '<a target=\"_blank\" href=\"/\" class=\"next-link\">مرکزی صفحہ</a> پر جائیں - آپ کو اپنے پہلے سے طے شدہ علاقے کے لیے سرفہرست پیشکشیں نظر آئیں گی۔ آپ سرچ باکس میں مطلوبہ رقم درج کرکے اپنے نتائج کو بہتر بنا سکتے ہیں، پھر منتخب کریں کہ آپ کس کرنسی کے ساتھ لین دین کرنا چاہتے ہیں، ملک، اور مطلوبہ ادائیگی کا طریقہ (اگر آپ کو یقین نہیں ہے کہ ادائیگی کا کون سا طریقہ ہے تو \"تمام آن لائن پیشکشیں\" کو منتخب کریں۔ آپ استعمال کرنا چاہتے ہیں)۔';
 
   @override
   String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1250Sb1 => 'اشتہارات کی فہرست میں سے، ایک تاجر میں سے ایک کا انتخاب کریں جس میں زیادہ تجارت ہو اور اچھی ساکھ کا سکور ہو (shown respectively in the brackets next to the username)۔ سبز دائرے کا مطلب ہے کہ تاجر آج آن لائن ہے۔ پیلے رنگ کے دائرے کا مطلب ہے کہ انہوں نے اس ہفتے سائٹ کا دورہ کیا ہے۔ اور سرمئی دائرے کا مطلب ہے کہ تاجر یہاں ایک ہفتے سے زیادہ وقت سے نہیں آیا ہے۔ آپ کسی اشتہار کے بارے میں مزید معلومات دیکھنے کے لیے \"Buy\" بٹن پر کلک کر سکتے ہیں۔';
@@ -3878,7 +3878,7 @@ class I18nUr extends I18n {
   String get knowledge250Sbscams250Sb3250Sbtitle => 'سراسر گھوٹالہ';
 
   @override
-  String get knowledge250Sbscams250Sb4250Sbtext => '<p>آپ کا مونیرو بیج آپ کا مونیرو ہے۔ جب آپ پہلی بار پرس بناتے ہیں تو آپ کو اسے ضرور لکھنا چاہیے، کیونکہ اگر آپ اپنا بیج کھو دیتے ہیں، تو آپ اپنا Monero کھو چکے ہیں اور کوئی بھی آپ کی مدد نہیں کر سکتا۔ لیکن اس کے علاوہ آپ کو اس بیج کو دوسروں سے محفوظ رکھنا چاہیے۔ اگر کوئی آپ کا بیج چوری کرتا ہے، تو وہ بٹوے سے Monero کو اس طرح بھیج سکتے ہیں جیسے وہ آپ ہی ہوں، اور، دوبارہ، کوئی بھی آپ کے لیے یہ رقم واپس نہیں کر سکتا۔ یہ ختم ہو چکا ہے۔\n\n<p>اب تک اکثر کسی فرد نے Monero کا کولڈ پرس رکھا ہے، وہ اپنے فنڈز کے بارے میں متجسس تھا، اور اسے چیک کرنا چاہتا تھا۔ لیکن پوری بٹوے کی ایپلیکیشن کو دوبارہ انسٹال کرنے کی پریشانی سے گزرنے کے بجائے، وہ اپنے بیج کو تیزی سے بحال کرنے اور اپنے پیسوں کو دیکھنے کے لیے صرف ایک ویب والیٹ استعمال کرنے کا فیصلہ کرتے ہیں۔ اگر وہ بزنس لُک ایک جیسے گھوٹالے کا شکار ہو جاتے ہیں، تو ان کا بیج ڈالنے کا عمل ہی یہ سکیمرز کو دیتا ہے، جو پھر رقم کو ایک مختلف بٹوے میں منتقل کر سکتے ہیں جسے وہ اپنی سہولت کے مطابق کنٹرول کرتے ہیں۔</p>\n\n<p>کسی بھی وقت کسی سائٹ، ایپلیکیشن، یا بٹوے میں \'بیج کے ساتھ بحال کریں\' کا آپشن ہوتا ہے، بہت محتاط رہیں کہ آپ جو ایپلیکیشن استعمال کر رہے ہیں وہ جائز ہے۔ پروگرام کی ہیشز کو چیک کریں (منیرو ویب سائٹ پر ہدایات موجود ہیں کہ یہ کیسے کریں) اس بات کو یقینی بنانے کے لیے کہ پروگرام میں بیرونی قوتوں کی طرف سے کوئی چھیڑ چھاڑ نہیں کی گئی ہے، اور اس بات سے مسلسل آگاہ رہیں کہ آپ اپنے بیج کو کہاں اور کیسے ظاہر کرتے ہیں۔ ڈبل چیک پریشان کن ہو سکتا ہے، لیکن لاپرواہی سے فنڈز کا نقصان اس سے بھی بدتر ہو گا۔</p>';
+  String get knowledge250Sbscams250Sb4250Sbtext => '<p>آپ کا مونیرو بیج آپ کا مونیرو ہے۔ جب آپ پہلی بار بٹوہ بناتے ہیں تو آپ کو اسے ضرور لکھنا چاہیے، کیونکہ اگر آپ اپنا بیج کھو دیتے ہیں، تو آپ اپنا Monero کھو چکے ہیں اور کوئی بھی آپ کی مدد نہیں کر سکتا۔ لیکن اس کے علاوہ آپ کو اس بیج کو دوسروں سے محفوظ رکھنا چاہیے۔ اگر کوئی آپ کا بیج چوری کرتا ہے، تو وہ بٹوے سے Monero کو اس طرح بھیج سکتے ہیں جیسے وہ آپ ہی ہوں، اور، دوبارہ، کوئی بھی آپ کے لیے یہ رقم واپس نہیں کر سکتا۔ یہ ختم ہو چکا ہے۔</p>\n\n<p>اب تک اکثر کسی فرد نے Monero کا کولڈ پرس رکھا ہے، وہ اپنے فنڈز کے بارے میں متجسس تھا، اور اسے چیک کرنا چاہتا تھا۔ لیکن پوری پرس ایپلیکیشن کو دوبارہ انسٹال کرنے کی پریشانی سے گزرنے کے بجائے، وہ اپنے بیج کو تیزی سے بحال کرنے اور اپنے پیسوں کو دیکھنے کے لیے صرف ایک ویب والیٹ استعمال کرنے کا فیصلہ کرتے ہیں۔ اگر وہ بزنس لُک ایک جیسے گھوٹالے کا شکار ہو جاتے ہیں، تو ان کا بیج ڈالنے کا عمل ہی یہ سکیمرز کو دیتا ہے، جو پھر رقم کو ایک مختلف بٹوے میں منتقل کر سکتے ہیں جسے وہ اپنی سہولت کے مطابق کنٹرول کرتے ہیں۔</p>\n\n<p>کسی بھی وقت کسی سائٹ، ایپلیکیشن، یا بٹوے میں \'بیج کے ساتھ بحال کریں\' کا آپشن ہوتا ہے، بہت محتاط رہیں کہ آپ جو ایپلیکیشن استعمال کر رہے ہیں وہ جائز ہے۔ پروگرام کی ہیشز کو چیک کریں (مونیرو ویب سائٹ پر ہدایات موجود ہیں کہ یہ کیسے کریں) اس بات کو یقینی بنانے کے لیے کہ پروگرام میں بیرونی قوتوں کی طرف سے کوئی چھیڑ چھاڑ نہیں کی گئی ہے، اور اس بات سے مسلسل آگاہ رہیں کہ آپ اپنے بیج کو کہاں اور کیسے ظاہر کرتے ہیں۔ ڈبل چیک پریشان کن ہو سکتا ہے، لیکن لاپرواہی سے فنڈز کا نقصان اس سے بھی بدتر ہو گا۔</p>';
 
   @override
   String get knowledge250Sbscams250Sb4250Sbtitle => 'گھوٹالوں میں آپ کے مونیرو بیج کا کردار';
@@ -4585,7 +4585,7 @@ class I18nUr extends I18n {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => 'ریفریش کریں';
 
   @override
-  String note250Sbbutton(Object username, Object val) {
+  String note250Sbbutton(Object username) {
     return '$username پر ایک نوٹ شامل کریں';
   }
 
@@ -4598,7 +4598,7 @@ class I18nUr extends I18n {
   String get note250Sbinput250Sbplaceholder => 'یہ آپ کے اپنے حوالہ کے لیے ایک نجی نوٹ ہے، یہ اس صارف یا کسی دوسرے صارف کو نظر نہیں آئے گا۔';
 
   @override
-  String note250Sbtitle(Object username, Object val) {
+  String note250Sbtitle(Object username) {
     return '$username پر آپ کا نوٹ (صرف آپ نے دیکھا)';
   }
 
@@ -6674,7 +6674,7 @@ class I18nUr extends I18n {
   String get verify8722Sbemail250Sbsuccess => 'ای میل کی کامیابی سے تصدیق ہو گئی!';
 
   @override
-  String get wallet250Sbclipboard8722Sbvirus8722Sbwarning => '<strong> اس بات کو یقینی بنائیں کہ آپ نے جو پتہ چسپاں کیا ہے وہ وہی ہے جو آپ نے کاپی کیا ہے! </strong> کچھ صارفین نے اپنے فنڈز <a style=\"text-decoration:underline;font-size:inherit;color:inherit\" href=\"https://reddit.com/r/Monero/comments/mcvuxc/beware_crypto_stealing_malware/\" target=\"_blank\"> میلویئر کے ذریعے چوری کر لیے ہیں جو کلپ بورڈ پر کاپی کیے گئے پتے کو حملہ آور کے پتے </a> سے بدل دیتے ہیں۔';
+  String get wallet250Sbclipboard8722Sbvirus8722Sbwarning => '<strong> اس بات کو یقینی بنائیں کہ آپ نے جو پتہ چسپاں کیا ہے وہ وہی ہے جو آپ نے کاپی کیا ہے! </strong> کچھ صارفین نے اپنے فنڈز <a style=\"text-decoration:underline;font-size:inherit;color:inherit\" href=\"https://web.archive.org/web/20220422235453/https://www.reddit.com/r/Monero/comments/mcvuxc/beware_crypto_stealing_malware/\" target=\"_blank\"> میلویئر کے ذریعے چوری کر لیے ہیں جو کلپ بورڈ پر کاپی کیے گئے پتے کو حملہ آور کے پتے </a> سے بدل دیتے ہیں۔';
 
   @override
   String get wallet250Sbdownload8722Sbcsv8722Sbbtn => 'CSV ڈاؤن لوڈ کریں';
@@ -7461,7 +7461,7 @@ class I18nUr extends I18n {
   String get devblog250Sbfdroid250Sb3250Sbtitle => 'مرحلہ 2';
 
   @override
-  String get devblog250Sbfdroid250Sb4250Sbtext => '<p>اپنا پروجیکٹ شامل کریں:</p>\n<pre><code>fdroid import --url https://github.com/YOUR_REPO --subdir ایپ\n</code></pre>\n<p>یہ میٹا ڈیٹا ڈائرکٹری میں ایک فائل بنائے گا، مثال کے طور پر <code>metadata/co.localmonero.app.yml</code>۔\nآپ اس فائل کو دستی طور پر بھی بنا سکتے ہیں۔</p>';
+  String get devblog250Sbfdroid250Sb4250Sbtext => '<p>اپنا پروجیکٹ شامل کریں:</p>\n<pre><code>fdroid import --url https://github.com/YOUR_REPO --subdir app\n</code></pre>\n<p>یہ میٹا ڈیٹا ڈائرکٹری میں ایک فائل بنائے گا، مثال کے طور پر <code>metadata/co.localmonero.app.yml</code>۔\nآپ اس فائل کو دستی طور پر بھی بنا سکتے ہیں۔</p>';
 
   @override
   String get devblog250Sbfdroid250Sb4250Sbtitle => 'مرحلہ 3';
@@ -7473,7 +7473,7 @@ class I18nUr extends I18n {
   String get devblog250Sbfdroid250Sb5250Sbtitle => 'مرحلہ 4';
 
   @override
-  String get devblog250Sbfdroid250Sb6250Sbtext => '<p>اب، آئیے F-Droid مارکیٹ کے لیے ڈیٹا شامل کرتے ہیں۔ اس کے لیے ہم ہر ذائقے کے لیے الگ برانچ بناتے ہیں:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n</ul>\n<p>اس کے بعد، ہم فاسٹلین کے لیے ایک فولڈر بناتے ہیں:\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a></p>\n<p>مطلوبہ ڈیٹا شامل کریں اور اسے دبائیں</p>';
+  String get devblog250Sbfdroid250Sb6250Sbtext => '<p>اب، آئیے F-Droid مارکیٹ کے لیے ڈیٹا شامل کرتے ہیں۔ اس کے لیے ہم ہر ذائقے کے لیے الگ برانچ بناتے ہیں:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n</ul>\n<p>اس کے بعد، ہم فاسٹ لین کے لیے ایک فولڈر بناتے ہیں:\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a></p>\n<p>مطلوبہ ڈیٹا شامل کریں اور اسے دبائیں</p>';
 
   @override
   String get devblog250Sbfdroid250Sb6250Sbtitle => 'مرحلہ 5';
@@ -7494,7 +7494,7 @@ class I18nUr extends I18n {
   String get devblog250Sbfdroid250Sbdescription => 'F-Droid Android کے لیے FOSS ایپس کا ایک بہترین کیٹلاگ ہے، لیکن آپ کی ایپ کو شامل کرنا تھوڑا سا پیچیدہ ہو سکتا ہے...';
 
   @override
-  String get devblog250Sbfdroid250Sbtitle => 'F-Droid پر اپنی فلٹر ایپ کو ذائقوں کے ساتھ کیسے شائع کریں؟';
+  String get devblog250Sbfdroid250Sbtitle => 'F-Droid پر ذائقوں کے ساتھ اپنی فلٹر ایپ کیسے شائع کریں؟';
 
   @override
   String get devblog250Sbtitle => 'ترقیاتی بلاگ';
@@ -7524,7 +7524,7 @@ class I18nUr extends I18n {
   String get error250Sbaddress8722Sbbook250Sb270 => 'یہ پتہ آپ کی ایڈریس بک میں پہلے سے موجود ہے۔';
 
   @override
-  String get error250Sbaddress8722Sbbook250Sb273 => 'یہ پتہ پہلے ہی آپ کی ایڈریس بک سے حذف کر دیا گیا ہے۔';
+  String get error250Sbaddress8722Sbbook250Sb273 => 'یہ پتہ آپ کی ایڈریس بک سے پہلے ہی حذف کر دیا گیا ہے۔';
 
   @override
   String get address8722Sbbook => 'ایڈریس بک';
@@ -7537,11 +7537,11 @@ class I18nUr extends I18n {
 
   @override
   String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object timeRemaining) {
-    return 'تمام کریپٹو کرنسی اشتہارات کو اب نئے \"عالمی (کوڈ XX)\" ملک کے زمرے میں منتقل کیا جا رہا ہے۔ تمام ڈپلیکیٹ کریپٹو کرنسی اشتہارات جو صرف ملک کے لحاظ سے مختلف ہوتے ہیں حذف کر دیے جائیں گے $timeRemaining۔ براہ کرم یقینی بنائیں کہ آپ کے پاس فی کرنسی صرف ایک کریپٹو کرنسی کا اشتہار ہے، بصورت دیگر اس کرنسی میں حالیہ پوسٹ کیے گئے اشتہار کے علاوہ باقی سبھی کو حذف کر دیا جائے گا، جبکہ باقی اشتہار کو \"عالمی\" ملک کے زمرے میں منتقل کر دیا جائے گا۔';
+    return 'تمام کریپٹو کرنسی اشتہارات کو اب نئے \"عالمی (کوڈ XX)\" ملک کے زمرے میں منتقل کیا جا رہا ہے۔ تمام ڈپلیکیٹ کریپٹو کرنسی اشتہارات جو صرف ملک کے لحاظ سے مختلف ہوتے ہیں حذف کر دیے جائیں گے $timeRemaining۔ براہ کرم یقینی بنائیں کہ آپ کے پاس فی کرنسی صرف ایک کریپٹو کرنسی کا اشتہار ہے، بصورت دیگر اس کرنسی میں حال ہی میں پوسٹ کیے گئے اشتہار کے علاوہ باقی سبھی کو حذف کر دیا جائے گا، جبکہ باقی اشتہار کو \"عالمی\" ملک کے زمرے میں منتقل کر دیا جائے گا۔';
   }
 
   @override
-  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'جب آپ \"محفوظ کریں\" کو دبائیں گے، تو اشتہار کا ملک خود بخود \"عالمی\" میں اپ ڈیٹ ہو جائے گا۔';
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'جب آپ \"محفوظ کریں\" کو دبائیں گے تو اشتہار کا ملک خود بخود \"عالمی\" میں اپ ڈیٹ ہو جائے گا۔';
 
   @override
   String get dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsame8722Sbasset8722Sbsells => 'صرف ایک ہی اثاثہ فروخت اشتہارات';
@@ -7553,6 +7553,40 @@ class I18nUr extends I18n {
   String dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsingle8722Sbasset8722Sbbuys(Object asset) {
     return '$asset صرف اشتہارات خریدیں۔';
   }
+
+  @override
+  String error250Sbtrade8722Sbrequest250Sb363(Object cakeLink, Object monerujoLink, Object featherLink) {
+    return 'آپ نے ایک پتہ فراہم کیا ہے جو آپ کو ایک ایسے مرچنٹ سے ملا ہے جس نے اپنے ایڈریس فارمیٹ (مربوط پتہ) کو اپ ڈیٹ نہیں کیا ہے۔ براہ کرم $cakeLink، $monerujoLink، یا $featherLink جیسی ایپ پر اپنا پرس سیٹ کریں اور اس کے بجائے وہ پتہ فراہم کریں۔';
+  }
+
+  @override
+  String get error250Sbtrade8722Sbrequest250Sb364 => 'اس اشتہار کے مالک نے آبادکاری کا پتہ نہیں بتایا۔ براہ کرم ان سے رابطہ کریں اور انہیں بتائیں کہ وہ اپنا اشتہار اپ ڈیٹ کریں، یا کوئی اور خریدار تلاش کریں۔';
+
+  @override
+  String notification250Sbtrade8722Sbfunded(Object tradeId, Object username) {
+    return 'تجارت $tradeId کو $username نے قبول کر لیا ہے۔';
+  }
+
+  @override
+  String get web8722Sbnotification250Sbtrade8722Sbfunded => 'ایک تجارت قبول کر لی گئی ہے۔';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbtrade8722Sbsend => 'تجارت بھیجیں۔';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbnon8722Sbtrade8722Sbsend => 'غیر تجارتی بھیجیں۔';
+
+  @override
+  String get address250Sbvalidation250Sbgeneric => 'غلط پتہ';
+
+  @override
+  String get address250Sbvalidation250Sbtaproot8722Sbdisallowed => 'Taproot پتوں کی اجازت نہیں ہے۔';
+
+  @override
+  String get reputation8722Sbimport250Sbstep250Sbcode250Sbmessage250Sbpaxful => 'کوڈ کو اپنی پیشکشوں میں سے کسی ایک پر بطور لیبل لگائیں، اس طرح کہ یہ آپ کے عوامی پروفائل پر نظر آئے۔ ایک بار جب ہم کوڈ کی توثیق کر لیتے ہیں، تو آپ اسے ہٹا سکتے ہیں۔';
+
+  @override
+  String get trade250Sbwarning250Sbconfirmations => 'جب تک خریدار کے tx کی تصدیق نہیں ہو جاتی اس وقت تک حتمی شکل نہ دیں! گھوٹالوں میں اضافہ ہوا ہے جہاں بیچنے والے کے حتمی ہونے کے بعد غیر مصدقہ لین دین منسوخ کر دیا جاتا ہے۔';
 
   @override
   String get ads => 'اشتہارات';
@@ -9051,7 +9085,7 @@ class I18nUr extends I18n {
   }
 
   @override
-  String app_buy_sell(Object val) {
+  String app_buy_sell(Object val, Object buyOrSell) {
     return 'آپ $val کتنا چاہتے ہیں؟';
   }
 
@@ -9212,12 +9246,12 @@ class I18nUr extends I18n {
   String get app_final_amount => 'حتمی رقم';
 
   @override
-  String app_note_label(Object val) {
+  String app_note_label(Object val, Object username) {
     return '$val پر آپ کا نوٹ (only seen by you)';
   }
 
   @override
-  String app_note_add(Object val) {
+  String app_note_add(Object val, Object username) {
     return '$val پر ایک نوٹ شامل کریں';
   }
 
@@ -9358,7 +9392,7 @@ class I18nUr extends I18n {
 
   @override
   String app_503_body(Object val) {
-    return '$val جلد ہی واپس آجائے گا!\\nزحمت کے لیے معذرت لیکن ہم اس وقت کچھ طے شدہ دیکھ بھال کر رہے ہیں۔\\nہم شاید جلد ہی واپس آن لائن ہوں گے۔ ہمارے کمیونٹی گروپس میں اپ ڈیٹ رہیں:';
+    return '$val جلد ہی واپس آجائے گا!\\nتکلیف کے لیے معذرت لیکن ہم اس وقت کچھ طے شدہ دیکھ بھال انجام دے رہے ہیں۔\\nشاید ہم جلد ہی واپس آن لائن ہوں گے۔ ہمارے کمیونٹی گروپس میں اپ ڈیٹ رہیں:';
   }
 
   @override
@@ -9368,7 +9402,7 @@ class I18nUr extends I18n {
   String get app_chat_leave_review => 'ایک جائزہ چھوڑنے کے لیے یہاں تھپتھپائیں!';
 
   @override
-  String get app_chat_update_review => 'آپ نے پہلے ہی اس صارف کا جائزہ چھوڑ دیا ہے۔ کیا آپ ابھی اپنا جائزہ اپ ڈیٹ کرنا چاہیں گے؟';
+  String get app_chat_update_review => 'آپ نے پہلے ہی اس صارف کا جائزہ چھوڑ دیا ہے۔ کیا آپ اپنے جائزے کو ابھی اپ ڈیٹ کرنا چاہیں گے؟';
 
   @override
   String get app_select_buyer_seller => 'خریدار یا بیچنے والے کو منتخب کریں۔';
@@ -9415,7 +9449,7 @@ class I18nUr extends I18n {
   String get app_ask_community_chats => 'سوالات ہیں؟ کمیونٹی چیٹس میں پوچھیں۔';
 
   @override
-  String get app_select_currency => 'کرنسی کا انتخاب کریں۔';
+  String get app_select_currency => 'کرنسی منتخب کریں۔';
 
   @override
   String get app_select_country => 'ملک کا انتخاب کیجئے';
@@ -9442,7 +9476,7 @@ class I18nUr extends I18n {
   String get app_proxy_bugs_expected => 'وارننگ! پراکسی فعالیت بیٹا میں ہے، کیڑے متوقع ہیں۔ براہ کرم فوری اصلاحات کے لیے ہمارے ڈیولپمنٹ چینلز کو بگ کی اطلاع دیں۔';
 
   @override
-  String get app_proxy_select_type => 'پراکسی قسم کا انتخاب کریں۔';
+  String get app_proxy_select_type => 'پراکسی کی قسم منتخب کریں۔';
 
   @override
   String get app_proxy_on => 'پراکسی فعال ہے۔';
@@ -9469,7 +9503,7 @@ class I18nUr extends I18n {
   String get pin_you_can_use_new => 'PIN کم از کم 4 ہندسوں کا ہونا چاہیے۔';
 
   @override
-  String get app_default_theme => 'ایک ڈیفالٹ تھیم سیٹ کریں۔';
+  String get app_default_theme => 'ڈیفالٹ تھیم سیٹ کریں۔';
 
   @override
   String get app_no_info_to_export => 'برآمد کرنے کے لیے کوئی معلومات نہیں۔';

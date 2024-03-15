@@ -29,7 +29,7 @@ class LineIconTextPrimary90 extends StatelessWidget {
                   text,
                   maxLines: 1,
                   style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                        color: Theme.of(context).colorScheme.primary90.withOpacity(active ? 1 : 0.5),
+                        color: Theme.of(context).colorScheme.p90p10.withOpacity(active ? 1 : 0.5),
                       ),
                   overflow: TextOverflow.ellipsis,
                 ),
@@ -39,7 +39,7 @@ class LineIconTextPrimary90 extends StatelessWidget {
                   text,
                   maxLines: 1,
                   style: Theme.of(context).textTheme.agoraLabelSmall.copyWith(
-                        color: Theme.of(context).colorScheme.primary90.withOpacity(active ? 1 : 0.5),
+                        color: Theme.of(context).colorScheme.p90p10.withOpacity(active ? 1 : 0.5),
                       ),
                   overflow: TextOverflow.ellipsis,
                 ),

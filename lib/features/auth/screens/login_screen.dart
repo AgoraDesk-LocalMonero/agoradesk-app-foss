@@ -177,7 +177,7 @@ class LoginScreen extends ConsumerWidget with WidgetsBindingObserver, ValidatorM
                               title: context.intl.signup250Sbbtn,
                               onPressed: () => AutoRouter.of(context).push(SignUpRoute(displaySkip: displaySkip)),
                               buttonColor: Theme.of(context).colorScheme.tonalP90,
-                              textColor: Theme.of(context).colorScheme.primary90,
+                              textColor: Theme.of(context).colorScheme.p90p10,
                             ),
                           ],
                         ),
