@@ -150,7 +150,7 @@ class I18nFi extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'ostaa';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val) {
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
     return 'Kuinka paljon haluat $buyOrSell?';
   }
 
@@ -2073,7 +2073,7 @@ class I18nFi extends I18n {
 
   @override
   String faq250Sbanswer8722Sb8(Object appName) {
-    return 'Kaikki verkkokaupat on suojattu välimieslainoilla. Kun kauppa aloitetaan, myyjän $appName joukkovelkakirjalompakosta varataan automaattisesti kaupan määrää vastaava määrä Moneroa. Tämä tarkoittaa, että jos myyjä pakenee rahojesi kanssa eikä saa kauppaa päätökseen, $appName-tuki voi ohjata välimieslainassa olevan Moneron sinulle. Jos myyt Moneroa, älä koskaan viimeistele kauppaa ennen kuin tiedät, että olet saanut rahaa Moneron ostajalta. Huomaa, että paikallisissa kaupoissa ei ole oletusarvoisesti käytössä välimieslainsuojausta.';
+    return 'Kaikki verkkokaupat on suojattu välimieslainoilla. Kun kauppa aloitetaan, myyjän $appName joukkovelkakirjalompakosta varataan automaattisesti kaupan määrää vastaava määrä Moneroa. Tämä tarkoittaa, että jos myyjä pakenee rahojesi kanssa eikä saa kauppaa päätökseen, $appName-tuki voi ohjata välimieslainassa olevan Moneron sinulle. Jos myyt Moneroa, älä koskaan viimeistele kauppaa ennen kuin tiedät saavasi rahaa Moneron ostajalta. Huomaa, että paikallisissa kaupoissa ei ole oletusarvoisesti käytössä välimieslainsuojausta.';
   }
 
   @override
@@ -2873,7 +2873,7 @@ class I18nFi extends I18n {
   String get guide250Sbmnemonic250Sbtitle => 'Kuinka palauttaa sovintolompakkoni muistosiemenestä?';
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1 => 'Siirry <a target=\"_blank\" href=\"/\" class=\"next-link\">etusivulle</a> - näet oletusalueesi suosituimmat tarjoukset. Voit tarkentaa tuloksia kirjoittamalla haluamasi summan ja vaihtamalla valuutan, maan tai maksutavan (valitse \"Kaikki verkkotarjoukset\", jos et ole varma mitä maksutapaa haluat käyttää) hakukenttään ja painamalla \"Hae\".';
+  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1 => 'Siirry <a target=\"_blank\" href=\"/\" class=\"next-link\">pääsivulle</a> - näet oletusalueesi suosituimmat tarjoukset. Voit tarkentaa tuloksia kirjoittamalla haluamasi summan hakukenttään ja valitsemalla sitten valuutan, jolla haluat suorittaa maksun, maan ja haluamasi maksutavan (valitse \"Kaikki verkkotarjoukset\", jos et ole varma, mikä maksutapa) haluat käyttää).';
 
   @override
   String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1250Sb1 => 'Valitse ilmoitusluettelosta kauppias, jolla on paljon kauppoja ja hyvä maine (näkyy suluissa käyttäjänimen vieressä). Vihreä ympyrä tarkoittaa, ettäkauppias on ollut verkossa tänään; keltainen ympyrä tarkoittaa, että he ovat käyneet sivustolla tällä viikolla; ja harmaa ympyrä tarkoittaa, että kauppias ei ole ollut täällä yli viikkoon. Voit napsauttaa \"Osta\"-painiketta nähdäksesi lisätietoja ilmoituksesta.';
@@ -3878,7 +3878,7 @@ class I18nFi extends I18n {
   String get knowledge250Sbscams250Sb3250Sbtitle => 'Suoranainen huijaus';
 
   @override
-  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Monero-siemenesi ON sinun Monerosi. Sinun on kirjoitettava se muistiin, kun teet ensimmäisen lompakon, koska jos menetät siemenesi, olet menettänyt Monerosi, eikä kukaan voi auttaa sinua. MUTTA MYÖS sinun on pidettävä tämä siemen turvassa muilta. Jos joku varastaa siemenesi, hän voi lähettää Moneron lompakosta kuin olisit sinä, eikä kukaan voi periä näitä rahoja puolestasi. Se on poissa.</p>\n\n<p>Liian usein henkilö on pitänyt Moneron lompakkoa kylmänä, ollut utelias varoistaan ja halunnut tarkistaa sen. Mutta koko lompakkosovelluksen uudelleenasentamisen sijaan he päättävät käyttää verkkolompakkoa palauttaakseen nopeasti siemenensä ja tarkastellakseen rahojaan. Jos he joutuvat Business Look Alike -huijauksen uhriksi, jo siemenensä syöttäminen antaa sen huijareille, jotka voivat siirtää rahat toiseen lompakkoon, jota he hallitsevat haluamallaan tavalla.</p>\n\n<p> AINA sivustossa, sovelluksessa tai lompakossa on \"palautus siemenellä\" -vaihtoehto, ole erittäin varovainen, että käyttämäsi sovellus on aito. Tarkista ohjelman tiivisteet (Moneron verkkosivuilla on ohjeet tämän tekemiseen) varmistaaksesi, etteivät ulkopuoliset voimat ole peukaloitu ohjelmaa, ja ole jatkuvasti tietoinen siitä, missä ja miten paljastat siemenesi. Kaksoistarkistus voi olla ärsyttävää, mutta huolimattomuudesta johtuva varojen menetys olisi vielä pahempaa.</p>';
+  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Monero-siemenesi ON sinun Monerosi. Sinun on kirjoitettava se muistiin, kun teet ensimmäisen lompakon, koska jos menetät siemenesi, olet menettänyt Monerosi, eikä kukaan voi auttaa sinua. MUTTA MYÖS sinun on pidettävä tämä siemen turvassa muilta. Jos joku varastaa siemenesi, hän voi lähettää Moneron lompakosta kuin olisit sinä, eikä kukaan voi periä näitä rahoja puolestasi. Se on poissa.</p>\n\n<p>Liian usein henkilö on pitänyt Monero-lompakkoa kylmänä, ollut utelias varoistaan ja halunnut tarkistaa sen. Mutta koko lompakkosovelluksen uudelleenasentamisen sijaan he päättävät käyttää verkkolompakkoa palauttaakseen nopeasti siemenensä ja tarkastellakseen rahojaan. Jos he joutuvat Business Look Alike -huijauksen uhriksi, jo siemenensä syöttäminen antaa sen huijareille, jotka voivat siirtää rahat toiseen lompakkoon, jota he hallitsevat haluamallaan tavalla.</p>\n\n<p> AINA sivustossa, sovelluksessa tai lompakossa on \"palautus siemenellä\" -vaihtoehto, ole erittäin varovainen, että käyttämäsi sovellus on aito. Tarkista ohjelman tiivisteet (Moneron verkkosivuilla on ohjeet tämän tekemiseen) varmistaaksesi, etteivät ulkopuoliset voimat ole peukaloitu ohjelmaa, ja ole jatkuvasti tietoinen siitä, missä ja miten paljastat siemenesi. Kaksoistarkastus voi olla ärsyttävää, mutta huolimattomuudesta johtuva varojen menetys olisi vielä pahempaa.</p>';
 
   @override
   String get knowledge250Sbscams250Sb4250Sbtitle => 'Monero-seedisi rooli huijauksissa';
@@ -4585,7 +4585,7 @@ class I18nFi extends I18n {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => 'Päivittää';
 
   @override
-  String note250Sbbutton(Object username, Object val) {
+  String note250Sbbutton(Object username) {
     return 'Lisää muistiinpano käyttäjälle $username';
   }
 
@@ -4598,7 +4598,7 @@ class I18nFi extends I18n {
   String get note250Sbinput250Sbplaceholder => 'Tämä on yksityinen huomautus omaa viitettä varten, se ei näy tälle tai muille käyttäjille.';
 
   @override
-  String note250Sbtitle(Object username, Object val) {
+  String note250Sbtitle(Object username) {
     return 'Muistiinpanosi käyttäjästä $username (näet vain sinä)';
   }
 
@@ -5338,7 +5338,7 @@ class I18nFi extends I18n {
   String get seo250Sbheadline8722Sb257Sbagoradesk => 'Todellinen LocalBitcoins ja Paxful vaihtoehto.';
 
   @override
-  String get seo250Sbtext8722Sb1 => 'Jos olet huolissasi yksityisyyden loukkaamisesta - paras kryptovaluutta sijoittamiseen on XMR. Monero on jäljittämätön kolikko, joka on kehitetty yksityisyyttä ajatellen.\n<br/>\nMistä ostaa Moneroa? LocalMonero on XMR-yhteisön suurin, luotetuin ja vakiintunut P2P Monero -kaupankäyntialusta. Meillä ei ole KYC-sekkejä - voit yksinkertaisesti ostaa Moneroa nimettömästi ilman henkilöllisyystodistusta PayPalilla, luottokortilla, lahjakortilla, käteisellä postitse tai muuntaa bitcoinit Moneroksi - alustamme tukee mitä tahansa maksutapaa.';
+  String get seo250Sbtext8722Sb1 => 'Jos olet huolissasi yksityisyyden loukkaamisesta - paras kryptovaluutta sijoittamiseen on XMR. Monero on jäljittämätön kolikko, joka on kehitetty yksityisyyttä ajatellen.\n<br/>\nMistä ostaa Moneroa? LocalMonero on XMR-yhteisön suurin, luotettavin ja vakiintunein P2P Monero -kaupankäyntialusta. Meillä ei ole KYC-sekkejä - voit yksinkertaisesti ostaa Moneroa nimettömästi ilman henkilöllisyystodistusta PayPalilla, luottokortilla, lahjakortilla, käteisellä postitse tai muuntaa bitcoinit Moneroksi - alustamme tukee mitä tahansa maksutapaa.';
 
   @override
   String get seo250Sbtext8722Sb157Sbagoradesk => 'Mietitkö kuinka sijoittaa Bitcoiniin? AgoraDeskissä bitcoinien ostaminen ei ole koskaan ollut helpompaa - osta BTC:tä välittömästi henkilöltä käyttämällä lempi verkkomaksutapaasi: PayPal, luotto-/pankkikortti tai pankkisiirto, lahjakortit, Venmo tai mikä tahansa muu.\n<br/>\nJos haluat ostaa bitcoineja lähelläsi käteisellä, voit löytää jonkun joka haluaa myydä bitcoineja paikallisesti - kaupankäyntialusta tukee BTC:n ostamista ja myyntiä käteisellä. Voit jopa ostaa bitcoineja käteisellä postitse.';
@@ -6674,7 +6674,7 @@ class I18nFi extends I18n {
   String get verify8722Sbemail250Sbsuccess => 'Sähköposti vahvistettu!';
 
   @override
-  String get wallet250Sbclipboard8722Sbvirus8722Sbwarning => '<strong> Varmista, että liittämäsi osoite on sama kuin kopioimasi osoite! </strong> Jotkut käyttäjät ovat saaneet rahansa varastettua <a style=\"text-decoration:underline;font-size:inherit;color:inherit\" href=\"https://reddit.com/r/Monero/comments/mcvuxc/beware_crypto_stealing_malware/\" target=\"_blank\">-haittaohjelmalla, joka korvaa leikepöydälle kopioidun osoitteen hyökkääjän omalla osoitteella</a>.';
+  String get wallet250Sbclipboard8722Sbvirus8722Sbwarning => '<strong> Varmista, että liittämäsi osoite on sama kuin kopioimasi osoite! </strong> Jotkut käyttäjät ovat saaneet rahansa varastettua <a style=\"text-decoration:underline;font-size:inherit;color:inherit\" href=\"https://web.archive.org/web/20220422235453/https://www.reddit.com/r/Monero/comments/mcvuxc/beware_crypto_stealing_malware/\" target=\"_blank\">-haittaohjelmalla, joka korvaa leikepöydälle kopioidun osoitteen hyökkääjän osoitteella</a>.';
 
   @override
   String get wallet250Sbdownload8722Sbcsv8722Sbbtn => 'Lataa CSV';
@@ -7467,7 +7467,7 @@ class I18nFi extends I18n {
   String get devblog250Sbfdroid250Sb4250Sbtitle => 'Vaihe 3';
 
   @override
-  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>Avaa tiedosto ja muokkaa sitä. Tässä on esimerkki: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>Esimerkissä näet:</p>\n<ol>\n<li>Flutteria käytetään alimoduulina – tämä on F-Droid-tiimin vaatimus.</li>\n<li>Olemme käyttäneet jokaiselle maulle erillistä haaraa (komento <code>AutoUpdateMode: versio %v-fdroid-lm</code>). Tämä johtuu siitä, että Fastlane&#39; ei tue makuja Flutterilla.</li>\n<li>Ensimmäisen kerran lisäämme koontiversion tiedot manuaalisesti. Jatkossa robotti lisää ne automaattisesti, kun olemme painaneet uuden tagin.</li>\n</ol>\n<p>Tarkista, että tiedoston syntaksi on oikea: <code>fdroid readmeta</code>.</p>';
+  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>Avaa tiedosto ja muokkaa sitä. Tässä on esimerkki: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>Esimerkissä näet:</p>\n<ol>\n<li>Flutteria käytetään alimoduulina – tämä on F-Droid-tiimin vaatimus.</li>\n<li>Olemme käyttäneet jokaiselle maulle erillistä haaraa (komento <code>AutoUpdateMode: versio %v-fdroid-lm</code>). Tämä johtuu siitä, että Fastlane&#39; ei tue makuja Flutterilla.</li>\n<li>Ensimmäisen kerran lisäämme koontiversion tiedot manuaalisesti. Jatkossa botti lisää ne automaattisesti, kun olemme painaneet uuden tagin.</li>\n</ol>\n<p>Tarkista, että tiedoston syntaksi on oikea: <code>fdroid readmeta</code>.</p>';
 
   @override
   String get devblog250Sbfdroid250Sb5250Sbtitle => 'Vaihe 4';
@@ -7553,6 +7553,40 @@ class I18nFi extends I18n {
   String dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsingle8722Sbasset8722Sbbuys(Object asset) {
     return '$asset ostaa vain mainoksia';
   }
+
+  @override
+  String error250Sbtrade8722Sbrequest250Sb363(Object cakeLink, Object monerujoLink, Object featherLink) {
+    return 'Olet antanut osoitteen, jonka sait kauppiaalta, joka ei ole päivittänyt osoitemuotoaan (integroitu osoite). Määritä oma lompakkosi sovelluksessa, kuten $cakeLink, $monerujoLink tai $featherLink, ja anna sen sijaan kyseinen osoite.';
+  }
+
+  @override
+  String get error250Sbtrade8722Sbrequest250Sb364 => 'Tämän mainoksen omistaja ei määrittänyt asutusosoitetta. Ota yhteyttä ja pyydä heitä päivittämään ilmoituksensa tai etsimään toinen ostaja.';
+
+  @override
+  String notification250Sbtrade8722Sbfunded(Object tradeId, Object username) {
+    return '$username on hyväksynyt kaupan $tradeId';
+  }
+
+  @override
+  String get web8722Sbnotification250Sbtrade8722Sbfunded => 'Kauppa on hyväksytty';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbtrade8722Sbsend => 'Kaupan lähetys';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbnon8722Sbtrade8722Sbsend => 'Ei-kaupallinen lähetys';
+
+  @override
+  String get address250Sbvalidation250Sbgeneric => 'Väärä osoite';
+
+  @override
+  String get address250Sbvalidation250Sbtaproot8722Sbdisallowed => 'Taproot-osoitteet eivät ole sallittuja';
+
+  @override
+  String get reputation8722Sbimport250Sbstep250Sbcode250Sbmessage250Sbpaxful => 'Lisää koodi tarraksi johonkin tarjouksestasi siten, että se näkyy julkisessa profiilissasi. Kun olemme vahvistaneet koodin, voit poistaa sen.';
+
+  @override
+  String get trade250Sbwarning250Sbconfirmations => 'Älä viimeistele ennen kuin ostajan tx on saanut vahvistukset! On esiintynyt huijauksia, joissa vahvistamaton kauppa peruutetaan myyjän viimeistelyn jälkeen.';
 
   @override
   String get ads => 'Ilmoitukset';
@@ -9051,7 +9085,7 @@ class I18nFi extends I18n {
   }
 
   @override
-  String app_buy_sell(Object val) {
+  String app_buy_sell(Object val, Object buyOrSell) {
     return 'Kuinka paljon haluat $val?';
   }
 
@@ -9212,12 +9246,12 @@ class I18nFi extends I18n {
   String get app_final_amount => 'Lopullinen summa';
 
   @override
-  String app_note_label(Object val) {
+  String app_note_label(Object val, Object username) {
     return 'Muistiinpanosi aiheesta $val (vain sinä näet tämän)';
   }
 
   @override
-  String app_note_add(Object val) {
+  String app_note_add(Object val, Object username) {
     return 'Lisää muistiinpano aiheesta $val';
   }
 
@@ -9286,7 +9320,7 @@ class I18nFi extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: osta XMR helposti';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Osta tai myy Monero ilman henkilöllisyystodistusta. Käteisellä tai netissä. Turvallista, nopeaa, helppoa.\n\nLocalMonero on XMR-yhteisön suurin, luotettavin ja vakiintunein P2P-kaupankäyntialusta. Meillä ei ole KYC-sekkejä – voit yksinkertaisesti ostaa Moneroa nimettömästi ilman henkilöllisyystodistusta PayPalilla, luottokortilla, lahjakortilla, käteisellä postitse tai muuntaa Bitcoinin, Etherin, USDT:n tai minkä tahansa muun kryptokolikon Moneroksi – alustamme tukee mitä tahansa maksutapaa.\n\n- Turvallista ja sujuvaa kaupankäyntiä\nTuemme mitä tahansa maksutapaa, mitä tahansa valuuttaa, missä tahansa. Emme poista maksutapoja, ja tuemme täysin kasvokkain tapahtuvaa käteiskauppaa. Kaikki kauppamme on suojattu välimieslainalla. Sen tosiasian ansiosta, että vaadimme välimieslainaa ennen kaupan alkamista, varmistamme sujuvan ja turvallisen kokemuksen ostajalle, mikä on olennaista alustan suosion ja myyjien toistuvien asiakkaiden kannalta.\n\n- Ei KYC/AML- tai henkilöllisyystodistusta\nLocalMonero on sitoutunut säilyttämään kaupankäyntikokemuksesi yksinkertaisuuden ja suoraviivaisuuden. Emme käytä KYC/AML:ää, emmekä koskaan aio tehdä niin.\n\n- Yhteisö luottaa\nAlustamme on toiminut yli neljä vuotta, selvinnyt vuoden 2018 suuresta kryptovaluuttamarkkinoiden romahduksesta, ja yhteisölähtöisen ahkeran palvelunsa ansiosta siitä tuli yksi luotetuimmista nimistä erittäin skeptisessä Monero-yhteisössä.\n\n- Suojattu, avoimen lähdekoodin, yksityisyyskeskeinen, sensuurin kestävä\nSovelluksemme on ilmainen ja avoimen lähdekoodin, mikä varmistaa, että monet silmät katsovat sovelluksen koodia varmistaakseen, ettei tietoturva-aukkoja tai tietosuojavuotoja ole. Sovelluksemme avoimen lähdekoodin avulla kuka tahansa voi päästä sovellukseemme, vaikka tietty sovellusvarasto sensoisi sovelluksen. Sovelluksemme toimii jopa puhelimissa, joissa Google on kokonaan estetty. Arvostamme yksityisyyttäsi niin paljon, emme edes vaadi sinua antamaan sähköpostiosoitetta rekisteröityessämme.\n\nLähdekoodi: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nOngelman seuranta: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Tähtien tuki\nTukitiimimme on nopea, reagoiva ja aina innokas miellyttämään. Meillä ei ole koskaan ollut tukipyyntöä, johon ei vastattu 24 tunnin sisällä. Olemme aina helposti tavoitettavissa sosiaalisen median kautta, kuuntelemme tarkasti kritiikkiäsi ja toteutamme aina hyvät käyttäjäehdotukset ennätysajassa.\n\nVoit ottaa yhteyttä tukeemme osoitteessa: https://localmonero.co/support\n\n- Kohtuulliset maksut\nEmme veloita kohtuuttomia maksuja, kun talletat tai nostat Moneroa välimieslain lompakkoon tai sieltä. Talletusmaksua ei peritä, ja nostomaksu on hyvin lähellä palkkiota, jonka maksat normaalista tapahtumasta.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Osta tai myy Monero ilman henkilöllisyystodistusta. Käteisellä tai netissä. Turvallista, nopeaa, helppoa.\n\nLocalMonero on XMR-yhteisön suurin, luotettavin ja vakiintunein P2P-kaupankäyntialusta. Meillä ei ole KYC-sekkejä – voit yksinkertaisesti ostaa Moneroa nimettömästi ilman henkilöllisyystodistusta PayPalilla, luottokortilla, lahjakortilla, käteisellä postitse tai muuntaa Bitcoinin, Etherin, USDT:n tai minkä tahansa muun kryptokolikon Moneroksi – alustamme tukee mitä tahansa maksutapaa.\n\n- Turvallista ja sujuvaa kaupankäyntiä\nTuemme mitä tahansa maksutapaa, mitä tahansa valuuttaa, missä tahansa. Emme poista maksutapoja, ja tuemme täysin kasvokkain tapahtuvaa käteiskauppaa. Kaikki kauppamme on suojattu välimieslainalla. Sen tosiasian ansiosta, että vaadimme välimieslainaa ennen kaupan alkamista, varmistamme sujuvan ja turvallisen kokemuksen ostajalle, mikä on olennaista alustan suosion ja myyjien toistuvien asiakkaiden kannalta.\n\n- Ei KYC/AML- tai henkilöllisyystodistusta\nLocalMonero on sitoutunut säilyttämään kaupankäyntikokemuksesi yksinkertaisuuden ja suoraviivaisuuden. Emme käytä KYC/AML:ää, emmekä koskaan aio tehdä niin.\n\n- Yhteisö luottaa\nAlustamme on toiminut yli neljä vuotta, selvinnyt vuoden 2018 suuresta kryptovaluuttamarkkinoiden romahduksesta ja yhteisölähtöisen huolellisen palvelunsa ansiosta noussut yhdeksi luotetuimmista nimistä erittäin skeptisessä Monero-yhteisössä.\n\n- Suojattu, avoimen lähdekoodin, yksityisyyskeskeinen, sensuurin kestävä\nSovelluksemme on ilmainen ja avoimen lähdekoodin, mikä varmistaa, että monet silmät katsovat sovelluksen koodia varmistaakseen, ettei tietoturva-aukkoja tai tietosuojavuotoja ole. Sovelluksemme avoimen lähdekoodin avulla kuka tahansa voi päästä sovellukseemme, vaikka tietty sovellusvarasto sensoisi sovelluksen. Sovelluksemme toimii jopa puhelimissa, joissa Google on kokonaan estetty. Arvostamme yksityisyyttäsi niin paljon, emme edes vaadi sinua antamaan sähköpostia rekisteröityessämme.\n\nLähdekoodi: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nOngelman seuranta: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Tähtien tuki\nTukitiimimme on nopea, reagoiva ja aina innokas miellyttämään. Meillä ei ole koskaan ollut tukipyyntöä, johon ei vastattu 24 tunnin sisällä. Olemme aina helposti tavoitettavissa sosiaalisen median kautta, kuuntelemme tarkasti kritiikkiäsi ja toteutamme aina hyvät käyttäjäehdotukset ennätysajassa.\n\nVoit ottaa yhteyttä tukeemme osoitteessa: https://localmonero.co/support\n\n- Kohtuulliset maksut\nEmme veloita kohtuuttomia maksuja, kun talletat tai nostat Moneroa välimieslain lompakkoon tai sieltä. Talletusmaksua ei peritä, ja nostomaksu on hyvin lähellä palkkiota, jonka maksat normaalista tapahtumasta.';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: Osta XMR vaivatta';

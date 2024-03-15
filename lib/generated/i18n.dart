@@ -15,6 +15,7 @@ import 'i18n_en.dart';
 import 'i18n_es.dart';
 import 'i18n_fi.dart';
 import 'i18n_fr.dart';
+import 'i18n_ha.dart';
 import 'i18n_hi.dart';
 import 'i18n_hu.dart';
 import 'i18n_id.dart';
@@ -31,6 +32,7 @@ import 'i18n_ro.dart';
 import 'i18n_ru.dart';
 import 'i18n_sk.dart';
 import 'i18n_sl.dart';
+import 'i18n_so.dart';
 import 'i18n_sv.dart';
 import 'i18n_sw.dart';
 import 'i18n_tl.dart';
@@ -129,6 +131,7 @@ abstract class I18n {
     Locale('es'),
     Locale('fi'),
     Locale('fr'),
+    Locale('ha'),
     Locale('hi'),
     Locale('hu'),
     Locale('id'),
@@ -147,6 +150,7 @@ abstract class I18n {
     Locale('ru'),
     Locale('sk'),
     Locale('sl'),
+    Locale('so'),
     Locale('sv'),
     Locale('sw'),
     Locale('tl'),
@@ -383,7 +387,7 @@ abstract class I18n {
   ///
   /// In en, this message translates to:
   /// **'How much do you wish to {buyOrSell}?'**
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val);
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell);
 
   /// No description provided for @ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbsell.
   ///
@@ -4468,7 +4472,7 @@ abstract class I18n {
   /// No description provided for @guide250Sbbtc250Sbcard8722Sbtwo8722Sb6.
   ///
   /// In en, this message translates to:
-  /// **'Over 420 developer have contributed to the Monero project, including 30 core developers. Forums and chat channels are welcoming and active.'**
+  /// **'Over 420 developers have contributed to the Monero project, including 30 core developers. Forums and chat channels are welcoming and active.'**
   String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb6;
 
   /// No description provided for @guide250Sbbtc250Sbcard8722Sbtwo8722Sb7.
@@ -5032,7 +5036,7 @@ abstract class I18n {
   /// No description provided for @guide250Sbnon8722Sbcustodial250Sbbuy250Sb1.
   ///
   /// In en, this message translates to:
-  /// **'Go to the <a target=\"_blank\" href=\"/\" class=\"next-link\">main page</a> - you\'ll see the top offers for your default region. You can refine your results by entering the desired amount and changing the currency, country or payment method (select \"All online offers\" if you\'re unsure which payment method you want to use) in the search box and pressing \"Search\".'**
+  /// **'Go to the <a target=\"_blank\" href=\"/\" class=\"next-link\">main page</a> - you\'ll see the top offers for your default region. You can refine your results by entering the desired amount you wish to transact in the search box, then select which currency you wish to transact with, country, and desired payment method (select \"All online offers\" if you\'re unsure which payment method you want to use).'**
   String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1;
 
   /// No description provided for @guide250Sbnon8722Sbcustodial250Sbbuy250Sb1250Sb1.
@@ -8285,7 +8289,7 @@ abstract class I18n {
   ///
   /// In en, this message translates to:
   /// **'Add a note on {username}'**
-  String note250Sbbutton(Object username, Object val);
+  String note250Sbbutton(Object username);
 
   /// No description provided for @note250Sbcreated.
   ///
@@ -8303,7 +8307,7 @@ abstract class I18n {
   ///
   /// In en, this message translates to:
   /// **'Your note on {username} (only seen by you)'**
-  String note250Sbtitle(Object username, Object val);
+  String note250Sbtitle(Object username);
 
   /// No description provided for @note250Sbupdated.
   ///
@@ -11950,7 +11954,7 @@ abstract class I18n {
   /// No description provided for @wallet250Sbclipboard8722Sbvirus8722Sbwarning.
   ///
   /// In en, this message translates to:
-  /// **'<strong> Make sure the address you\'ve pasted is the same as the address you\'ve copied! </strong> Some users have gotten their funds stolen by <a style=\"text-decoration:underline;font-size:inherit;color:inherit\" href=\"https://reddit.com/r/Monero/comments/mcvuxc/beware_crypto_stealing_malware/\" target=\"_blank\">malware replacing the address copied to clipboard with the attacker\'s address</a>.'**
+  /// **'<strong> Make sure the address you\'ve pasted is the same as the address you\'ve copied! </strong> Some users have gotten their funds stolen by <a style=\"text-decoration:underline;font-size:inherit;color:inherit\" href=\"https://web.archive.org/web/20220422235453/https://www.reddit.com/r/Monero/comments/mcvuxc/beware_crypto_stealing_malware/\" target=\"_blank\">malware replacing the address copied to clipboard with the attacker\'s address</a>.'**
   String get wallet250Sbclipboard8722Sbvirus8722Sbwarning;
 
   /// No description provided for @wallet250Sbdownload8722Sbcsv8722Sbbtn.
@@ -13416,6 +13420,66 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'{asset} buy ads only'**
   String dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsingle8722Sbasset8722Sbbuys(Object asset);
+
+  /// No description provided for @error250Sbtrade8722Sbrequest250Sb363.
+  ///
+  /// In en, this message translates to:
+  /// **'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like {cakeLink}, {monerujoLink}, or {featherLink}, and provide that address instead.'**
+  String error250Sbtrade8722Sbrequest250Sb363(Object cakeLink, Object monerujoLink, Object featherLink);
+
+  /// No description provided for @error250Sbtrade8722Sbrequest250Sb364.
+  ///
+  /// In en, this message translates to:
+  /// **'The owner of this ad didn\'t specify a settlement address. Please contact them and tell them to update their ad, or find another buyer.'**
+  String get error250Sbtrade8722Sbrequest250Sb364;
+
+  /// No description provided for @notification250Sbtrade8722Sbfunded.
+  ///
+  /// In en, this message translates to:
+  /// **'Trade {tradeId} has been accepted by {username}'**
+  String notification250Sbtrade8722Sbfunded(Object tradeId, Object username);
+
+  /// No description provided for @web8722Sbnotification250Sbtrade8722Sbfunded.
+  ///
+  /// In en, this message translates to:
+  /// **'A trade has been accepted'**
+  String get web8722Sbnotification250Sbtrade8722Sbfunded;
+
+  /// No description provided for @wallet250Sbtxs250Sbfilter250Sbtype250Sbtrade8722Sbsend.
+  ///
+  /// In en, this message translates to:
+  /// **'Trade send'**
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbtrade8722Sbsend;
+
+  /// No description provided for @wallet250Sbtxs250Sbfilter250Sbtype250Sbnon8722Sbtrade8722Sbsend.
+  ///
+  /// In en, this message translates to:
+  /// **'Non-trade send'**
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbnon8722Sbtrade8722Sbsend;
+
+  /// No description provided for @address250Sbvalidation250Sbgeneric.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid address'**
+  String get address250Sbvalidation250Sbgeneric;
+
+  /// No description provided for @address250Sbvalidation250Sbtaproot8722Sbdisallowed.
+  ///
+  /// In en, this message translates to:
+  /// **'Taproot addresses are not allowed'**
+  String get address250Sbvalidation250Sbtaproot8722Sbdisallowed;
+
+  /// No description provided for @reputation8722Sbimport250Sbstep250Sbcode250Sbmessage250Sbpaxful.
+  ///
+  /// In en, this message translates to:
+  /// **'Put the code as a label on one of your offers, such that it\'s visible on your public profile. Once we\'ve verified the code, you can remove it.'**
+  String get reputation8722Sbimport250Sbstep250Sbcode250Sbmessage250Sbpaxful;
+
+  /// No description provided for @trade250Sbwarning250Sbconfirmations.
+  ///
+  /// In en, this message translates to:
+  /// **'Do not finalize until the buyer\'s tx has confirmations! There has been a surge of scams where an unconfirmed transaction is cancelled after the seller finalizes.'**
+  String get trade250Sbwarning250Sbconfirmations;
 
   /// No description provided for @ads.
   ///
@@ -16289,7 +16353,7 @@ abstract class I18n {
   ///
   /// In en, this message translates to:
   /// **'How much do you wish to {val}?'**
-  String app_buy_sell(Object val);
+  String app_buy_sell(Object val, Object buyOrSell);
 
   /// No description provided for @app_buyer_marked_as_paid.
   ///
@@ -16571,13 +16635,13 @@ abstract class I18n {
   ///
   /// In en, this message translates to:
   /// **'Your note on {val} (only seen by you)'**
-  String app_note_label(Object val);
+  String app_note_label(Object val, Object username);
 
   /// No description provided for @app_note_add.
   ///
   /// In en, this message translates to:
   /// **'Add a note on {val}'**
-  String app_note_add(Object val);
+  String app_note_add(Object val, Object username);
 
   /// No description provided for @app_update_new_version_available.
   ///
@@ -17099,7 +17163,7 @@ class _I18nDelegate extends LocalizationsDelegate<I18n> {
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['ar', 'bg', 'cs', 'da', 'de', 'el', 'en', 'es', 'fi', 'fr', 'hi', 'hu', 'id', 'it', 'ja', 'ko', 'lt', 'lv', 'nb', 'nl', 'pl', 'pt', 'ro', 'ru', 'sk', 'sl', 'sv', 'sw', 'tl', 'tr', 'ur', 'zh'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>['ar', 'bg', 'cs', 'da', 'de', 'el', 'en', 'es', 'fi', 'fr', 'ha', 'hi', 'hu', 'id', 'it', 'ja', 'ko', 'lt', 'lv', 'nb', 'nl', 'pl', 'pt', 'ro', 'ru', 'sk', 'sl', 'so', 'sv', 'sw', 'tl', 'tr', 'ur', 'zh'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_I18nDelegate old) => false;
@@ -17142,6 +17206,7 @@ case 'TW': return I18nZhTw();
     case 'es': return I18nEs();
     case 'fi': return I18nFi();
     case 'fr': return I18nFr();
+    case 'ha': return I18nHa();
     case 'hi': return I18nHi();
     case 'hu': return I18nHu();
     case 'id': return I18nId();
@@ -17158,6 +17223,7 @@ case 'TW': return I18nZhTw();
     case 'ru': return I18nRu();
     case 'sk': return I18nSk();
     case 'sl': return I18nSl();
+    case 'so': return I18nSo();
     case 'sv': return I18nSv();
     case 'sw': return I18nSw();
     case 'tl': return I18nTl();

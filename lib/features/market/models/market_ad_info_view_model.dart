@@ -459,7 +459,7 @@ class MarketAdInfoViewModel extends ViewModel
   String howMuchSign(BuildContext context) {
     return context.intl.app_buy_sell(ad!.tradeType.isSell()
         ? context.intl.ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy
-        : context.intl.ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbsell);
+        : context.intl.ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbsell, '');
   }
 
   void pasteAllAvailableBalance() {

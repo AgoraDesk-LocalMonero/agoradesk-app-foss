@@ -150,7 +150,7 @@ class I18nSw extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'kununua';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val) {
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
     return '${buyOrSell}Je! ungependa kiasi gani?';
   }
 
@@ -2025,7 +2025,7 @@ class I18nSw extends I18n {
 
   @override
   String faq250Sbanswer8722Sb30(Object playstoreLink, Object fdroidLink, Object apkLink, Object appstoreLink, Object telegram, Object thisGuide, Object appName) {
-    return 'Ndio tunafanya! Ikiwa una Android, unaweza kuipata kwenye $playstoreLink, $fdroidLink, au unaweza kupakua $apkLink moja kwa moja. Kwa vifaa vya iOS, inapatikana kwenye $appstoreLink. Unaweza pia kupokea arifa za simu katika $telegram! $thisGuide itakupeleka kwenye mchakato wa kuwezesha arifa za Telegramu (ni rahisi). Kijibu chetu kitakutumia arifa kuhusu matukio yako ya $appName.';
+    return 'Ndio tunafanya! Ikiwa una Android, unaweza kuipata kwenye $playstoreLink, $fdroidLink, au unaweza kupakua $apkLink moja kwa moja. Kwa vifaa vya iOS, inapatikana kwenye $appstoreLink. Unaweza pia kupokea arifa za simu katika $telegram! $thisGuide itakupeleka kwenye mchakato wa kuwezesha arifa za Telegramu (ni rahisi). Bot yetu itakutumia arifa kuhusu matukio yako ya $appName.';
   }
 
   @override
@@ -2543,7 +2543,7 @@ class I18nSw extends I18n {
   String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb5 => 'Monero ni jumuiya ya ngazi ya chini inayovutia watafiti bora zaidi duniani wa sarafu-fiche na vipaji vya uhandisi.';
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb6 => 'Zaidi ya wasanidi programu 420 wamechangia mradi wa Monero, ikiwa ni pamoja na wasanidi wakuu 30. Mijadala na vituo vya gumzo vinakaribisha na vinatumika.';
+  String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb6 => 'Zaidi ya watengenezaji 420 wamechangia mradi wa Monero, ikiwa ni pamoja na wasanidi wakuu 30. Mijadala na vituo vya gumzo vinakaribisha na vinatumika.';
 
   @override
   String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb7 => 'Maabara ya Utafiti ya Monero, Timu ya Maendeleo ya Msingi na Wasanidi Programu wa Jumuiya daima wanasukuma mipaka ya kile kinachowezekana kwa faragha na usalama wa cryptocurrency.';
@@ -2873,7 +2873,7 @@ class I18nSw extends I18n {
   String get guide250Sbmnemonic250Sbtitle => 'Jinsi ya kurejesha mkoba wangu wa makazi ambao haukuwa chini ya ulinzi kutoka kwa mbegu ya mnemonic?';
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1 => 'Nenda kwenye <a target=\"_blank\" href=\"/\" class=\"next-link\">ukurasa mkuu</a> - utaona matoleo makuu ya eneo lako chaguomsingi. Unaweza kuboresha matokeo lako kwa kuweka kiasi unachotaka na kubadilisha sarafu, nchi au njia ya kulipa (chagua \"Ofa zote za mtandaoni\" ikiwa huna uhakika ni njia gani ya malipo ungependa kutumia) kwenye kisanduku cha kutafutia na ubonyeze \"Tafuta\".';
+  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1 => 'Nenda kwenye <a target=\"_blank\" href=\"/\" class=\"next-link\">ukurasa mkuu</a> - utaona matoleo makuu ya eneo lako chaguomsingi. Unaweza kuboresha matokeo yako kwa kuweka kiasi unachotaka kufanya katika kisanduku cha kutafutia, kisha uchague ni sarafu gani ungependa kutumia, nchi na njia ya malipo unayotaka (chagua \"Ofa zote za mtandaoni\" ikiwa huna uhakika ni njia gani ya malipo. unataka kutumia).';
 
   @override
   String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1250Sb1 => 'Kutoka kwenye orodha ya matangazo, chagua mmoja kutoka kwa mfanyabiashara aliye na kiasi kikubwa cha biashara na alama nzuri ya sifa (inaonyeshwa kwa mtiririko huo kwenye mabano karibu na jina la mtumiaji). Duara la kijani unamaanisha kuwa mfanyabiashara amekuwa mtandaoni leo; duara la manjano inamaanisha kuwa wametembelea tovuti wiki hii; na duara la kijivu unamaanisha kuwa mfanyabiashara hajawahi kuwa hapa kwa zaidi ya wiki. Unaweza kubofya kitufe cha \"Nunua\" ili kuona maelezo zaidi kuhusu tangazo.';
@@ -4585,7 +4585,7 @@ class I18nSw extends I18n {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => 'Onyesha upya';
 
   @override
-  String note250Sbbutton(Object username, Object val) {
+  String note250Sbbutton(Object username) {
     return 'Ongeza dokezo kwenye $username';
   }
 
@@ -4598,7 +4598,7 @@ class I18nSw extends I18n {
   String get note250Sbinput250Sbplaceholder => 'Hili ni dokezo la faragha kwa marejeleo yako mwenyewe, halitaonekana kwa mtumiaji huyu au mtumiaji mwingine yeyote.';
 
   @override
-  String note250Sbtitle(Object username, Object val) {
+  String note250Sbtitle(Object username) {
     return 'Dokezo lako kwenye $username (inaonekana na wewe pekee)';
   }
 
@@ -6674,7 +6674,7 @@ class I18nSw extends I18n {
   String get verify8722Sbemail250Sbsuccess => 'Barua pepe imethibitishwa!';
 
   @override
-  String get wallet250Sbclipboard8722Sbvirus8722Sbwarning => '<strong> Hakikisha kuwa anwani uliyobandika ni sawa na ile uliyonakili! </strong> Baadhi ya watumiaji wameibiwa pesa zao na <a style=\"text-decoration:underline;font-size:inherit;color:inherit\" href=\"https://reddit.com/r/Monero/comments/mcvuxc/beware_crypto_stealing_malware/\" target=\"_blank\">programu hasidi ikibadilisha anwani iliyonakiliwa kwenye ubao wa kunakili kwa anwani ya mshambulizi</a>.';
+  String get wallet250Sbclipboard8722Sbvirus8722Sbwarning => '<strong> Hakikisha kuwa anwani uliyobandika ni sawa na ile uliyonakili! </strong> Baadhi ya watumiaji wameibiwa pesa zao na <a style=\"text-decoration:underline;font-size:inherit;color:inherit\" href=\"https://web.archive.org/web/20220422235453/https://www.reddit.com/r/Monero/comments/mcvuxc/beware_crypto_stealing_malware/\" target=\"_blank\">programu hasidi ikibadilisha anwani iliyonakiliwa kwenye ubao wa kunakili kwa anwani ya mshambulizi</a>.';
 
   @override
   String get wallet250Sbdownload8722Sbcsv8722Sbbtn => 'Pakua CSV';
@@ -7449,7 +7449,7 @@ class I18nSw extends I18n {
   String get devblog250Sbfdroid250Sb1250Sbtitle => 'Ni programu gani zinaweza kujumuishwa kwa F-Droid?';
 
   @override
-  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>Fork <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\"> hazina ya fdroiddata</a> kwenye Gitlab.</li>\n<li>Linganisha hazina kwenye kifaa chako.</li>\n<li>Unda tawi ukitumia kitambulisho cha bundle cha programu, kwa mfano <code>co.localmonero.app</code></li>\n</ul>';
+  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>Fork <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">fdroiddata hazina</a> kwenye Gitlab.</li>\n<li>Linganisha hazina kwenye kifaa chako.</li>\n<li>Unda tawi ukitumia kitambulisho cha bundle cha programu, kwa mfano <code>co.localmonero.app</code></li>\n</ul>';
 
   @override
   String get devblog250Sbfdroid250Sb2250Sbtitle => 'Hatua ya 1';
@@ -7467,7 +7467,7 @@ class I18nSw extends I18n {
   String get devblog250Sbfdroid250Sb4250Sbtitle => 'Hatua ya 3';
 
   @override
-  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>Fungua faili na uihariri. Huu hapa ni mfano: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>Katika mfano unaweza kuona:</p>\n<ol>\n<li>Flutter inatumika kama moduli ndogo - hili ni sharti kutoka kwa timu ya F-Droid.</li>\n<li>Kwa kila ladha tumetumia tawi tofauti (command <code>AutoUpdateMode: Version %v-fdroid-lm</code>). Hiyo ni kwa sababu Fastlane haitumii&#39; vionjo vya Flutter.</li>\n<li>Mara ya kwanza tunapoongeza maelezo ya muundo mwenyewe, katika siku zijazo yataongezwa kiotomatiki na roboti, baada ya kusukuma lebo mpya.</li>\n</ol>\n<p>Hakikisha kwamba faili ina syntax sahihi: <code>fdroid readmeta</code>.</p>';
+  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>Fungua faili na uihariri. Huu hapa ni mfano: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>Katika mfano unaweza kuona:</p>\n<ol>\n<li>Flutter inatumika kama moduli ndogo - hili ni sharti kutoka kwa timu ya F-Droid.</li>\n<li>Kwa kila ladha tumetumia tawi tofauti (command <code>AutoUpdateMode: Toleo %v-fdroid-lm</code>). Hiyo ni kwa sababu Fastlane haitumii&#39; vionjo vya Flutter.</li>\n<li>Mara ya kwanza tunapoongeza maelezo ya muundo mwenyewe, katika siku zijazo yataongezwa kiotomatiki na roboti, baada ya kusukuma lebo mpya.</li>\n</ol>\n<p>Hakikisha kwamba faili ina syntax sahihi: <code>fdroid readmeta</code>.</p>';
 
   @override
   String get devblog250Sbfdroid250Sb5250Sbtitle => 'Hatua ya 4';
@@ -7553,6 +7553,40 @@ class I18nSw extends I18n {
   String dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsingle8722Sbasset8722Sbbuys(Object asset) {
     return '$asset nunua matangazo pekee';
   }
+
+  @override
+  String error250Sbtrade8722Sbrequest250Sb363(Object cakeLink, Object monerujoLink, Object featherLink) {
+    return 'Umetoa anwani uliyopata kutoka kwa mfanyabiashara ambayo haijasasisha umbizo la anwani yake (anwani iliyounganishwa). Tafadhali sanidi pochi yako kwenye programu kama $cakeLink, $monerujoLink, au $featherLink, na utoe anwani hiyo badala yake.';
+  }
+
+  @override
+  String get error250Sbtrade8722Sbrequest250Sb364 => 'Mmiliki wa tangazo hili hakubainisha anwani ya malipo. Tafadhali wasiliana nao na uwaambie wasasishe tangazo lao, au utafute mnunuzi mwingine.';
+
+  @override
+  String notification250Sbtrade8722Sbfunded(Object tradeId, Object username) {
+    return 'Biashara $tradeId imekubaliwa na $username';
+  }
+
+  @override
+  String get web8722Sbnotification250Sbtrade8722Sbfunded => 'Biashara imekubaliwa';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbtrade8722Sbsend => 'Biashara kutuma';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbnon8722Sbtrade8722Sbsend => 'Tuma zisizo za biashara';
+
+  @override
+  String get address250Sbvalidation250Sbgeneric => 'Anwani batili';
+
+  @override
+  String get address250Sbvalidation250Sbtaproot8722Sbdisallowed => 'Anwani za Taproot haziruhusiwi';
+
+  @override
+  String get reputation8722Sbimport250Sbstep250Sbcode250Sbmessage250Sbpaxful => 'Weka msimbo kama lebo kwenye mojawapo ya matoleo yako, ili ionekane kwenye wasifu wako wa umma. Mara tu tumethibitisha nambari ya kuthibitisha, unaweza kuiondoa.';
+
+  @override
+  String get trade250Sbwarning250Sbconfirmations => 'Usimalize hadi tx ya mnunuzi iwe na uthibitisho! Kumekuwa na ongezeko la ulaghai ambapo muamala ambao haujathibitishwa hughairiwa baada ya muuzaji kukamilika.';
 
   @override
   String get ads => 'Matangazo';
@@ -9051,7 +9085,7 @@ class I18nSw extends I18n {
   }
 
   @override
-  String app_buy_sell(Object val) {
+  String app_buy_sell(Object val, Object buyOrSell) {
     return 'Je! ungependa $val kiasi gani?';
   }
 
@@ -9212,12 +9246,12 @@ class I18nSw extends I18n {
   String get app_final_amount => 'Kiasi cha mwisho';
 
   @override
-  String app_note_label(Object val) {
+  String app_note_label(Object val, Object username) {
     return 'Dokezo lako kwenye $val (umeonekana na wewe pekee)';
   }
 
   @override
-  String app_note_add(Object val) {
+  String app_note_add(Object val, Object username) {
     return 'Ongeza dokezo kwenye $val';
   }
 
@@ -9286,7 +9320,7 @@ class I18nSw extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: nunua au uza XMR';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Nunua au uuze Monero bila uthibitishaji wa kitambulisho. Pesa au mtandaoni. Salama, haraka, rahisi.\n\nLocalMonero ndio jukwaa kubwa zaidi, linaloaminika zaidi na lililoimarishwa vyema la P2P katika jumuiya ya XMR. Hatuna hundi za KYC - unaweza kununua Monero bila kukutambulisha bila uthibitisho wa kitambulisho kwa PayPal, kadi ya mkopo, kadi ya zawadi, pesa taslimu kwa barua au kubadilisha Bitcoin, Etha, USDT, au sarafu nyingine yoyote ya crypto hadi Monero - jukwaa letu linatumia njia yoyote ya malipo.\n\n- Biashara Salama na Laini\nTunatumia njia yoyote ya malipo, sarafu yoyote, popote. Hatuondoi njia za kulipa, na tunaunga mkono kikamilifu biashara ya ana kwa ana. Biashara zetu zote zinalindwa na dhamana ya usuluhishi. Shukrani kwa ukweli kwamba tunahitaji fedha ziwekwe katika dhamana ya usuluhishi kabla ya biashara kuanza, tunahakikisha hali ya utumiaji laini na salama kwa mnunuzi, ambayo ni muhimu kwa umaarufu wa jukwaa na kurudia wateja kwa wauzaji.\n\n- Hakuna KYC/AML au Uthibitishaji wa Kitambulisho\nLocalMonero imejitolea kudumisha usahili na usawazishaji wa uzoefu wako wa biashara. Hatuajiri KYC/AML, wala hatuna mpango wa kufanya hivyo.\n\n- Inaaminiwa na Jumuiya\nJukwaa letu limefanya kazi kwa zaidi ya miaka minne, lilinusurika kwenye Ajali Kubwa ya Soko la Cryptocurrency la 2018, na kupitia huduma yake ya bidii inayolenga jamii ikawa mojawapo ya majina yanayoaminika zaidi katika jumuiya ya Monero yenye shaka sana.\n\n- Salama, Chanzo Huria, Kitivo cha Faragha, Kipingamizi cha Udhibiti\nProgramu yetu ni chanzo huria na huria, ambayo huhakikisha kwamba macho mengi yanatazama msimbo wa programu ili kuhakikisha kuwa hakuna mashimo ya usalama au uvujaji wa faragha. Uwekaji vyanzo wazi programu yetu pia huruhusu mtu yeyote kufikia programu yetu hata kama hazina fulani ya programu inakagua programu. Programu yetu inafanya kazi hata kwenye simu ambazo Google imezuiwa kabisa. Tunathamini sana faragha yako, hatuhitaji hata utupe barua pepe wakati wa kusajili.\n\nNambari ya chanzo: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nKifuatiliaji cha suala: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Msaada wa Stellar\nTimu yetu ya usaidizi ni ya haraka, sikivu na ina shauku ya kupendeza kila wakati. Hatujawahi kupata tikiti ya usaidizi ambayo haikujibiwa ndani ya masaa 24. Tunaweza kufikiwa kwa urahisi kila wakati kupitia mitandao ya kijamii, tunasikiliza kwa makini ukosoaji wako na kila mara tunatekeleza mapendekezo mazuri ya watumiaji katika muda uliorekodiwa.\n\nUnaweza kufikia usaidizi wetu kwa: https://localmonero.co/support\n\n- Ada ya Haki\nHatutozi ada kubwa zaidi unapoweka au kutoa Monero kwa/kutoka kwa mkoba wetu wa dhamana ya usuluhishi. Hakuna ada ya amana, na ada ya uondoaji iko karibu sana na ada ambayo ungelipa kwa shughuli ya kawaida.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Nunua au uuze Monero bila uthibitishaji wa kitambulisho. Pesa au mtandaoni. Salama, haraka, rahisi.\n\nLocalMonero ndio jukwaa kubwa zaidi, linaloaminika zaidi na lililoimarishwa vyema la P2P katika jumuiya ya XMR. Hatuna hundi za KYC - unaweza kununua Monero bila kukutambulisha bila uthibitisho wa kitambulisho kwa PayPal, kadi ya mkopo, kadi ya zawadi, pesa taslimu kwa barua au kubadilisha Bitcoin, Etha, USDT, au sarafu nyingine yoyote ya crypto hadi Monero - jukwaa letu linatumia njia yoyote ya malipo.\n\n- Biashara Salama na Laini\nTunatumia njia yoyote ya malipo, sarafu yoyote, popote. Hatuondoi njia za kulipa, na tunaunga mkono kikamilifu biashara ya ana kwa ana. Biashara zetu zote zinalindwa na dhamana ya usuluhishi. Shukrani kwa ukweli kwamba tunahitaji pesa ziwekwe katika dhamana ya usuluhishi kabla ya biashara kuanza, tunahakikisha hali ya utumiaji laini na salama kwa mnunuzi, ambayo ni muhimu kwa umaarufu wa jukwaa na kurudia wateja kwa wauzaji.\n\n- Hakuna KYC/AML au Uthibitishaji wa Kitambulisho\nLocalMonero imejitolea kudumisha usahili na usawazishaji wa uzoefu wako wa biashara. Hatuajiri KYC/AML, wala hatuna mpango wa kufanya hivyo.\n\n- Inaaminiwa na Jumuiya\nJukwaa letu limefanya kazi kwa zaidi ya miaka minne, lilinusurika kwenye Ajali Kubwa ya Soko la Cryptocurrency la 2018, na kupitia huduma yake ya bidii inayolenga jamii ikawa mojawapo ya majina yanayoaminika zaidi katika jumuiya ya Monero yenye shaka sana.\n\n- Salama, Chanzo Huria, Kitivo cha Faragha, Kipingamizi cha Udhibiti\nProgramu yetu ni chanzo huria na huria, ambayo huhakikisha kwamba macho mengi yanatazama msimbo wa programu ili kuhakikisha kuwa hakuna mashimo ya usalama au uvujaji wa faragha. Uwekaji vyanzo wazi programu yetu pia huruhusu mtu yeyote kufikia programu yetu hata kama hazina fulani ya programu inakagua programu. Programu yetu inafanya kazi hata kwenye simu ambazo Google imezuiwa kabisa. Tunathamini sana faragha yako, hatuhitaji hata utupe barua pepe wakati wa kusajili.\n\nNambari ya chanzo: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nKifuatiliaji cha suala: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Msaada wa Stellar\nTimu yetu ya usaidizi ni ya haraka, sikivu na ina shauku ya kupendeza kila wakati. Hatujawahi kupata tikiti ya usaidizi ambayo haikujibiwa ndani ya masaa 24. Tunaweza kufikiwa kwa urahisi kila wakati kupitia mitandao ya kijamii, tunasikiliza kwa makini ukosoaji wako na kila mara tunatekeleza mapendekezo mazuri ya watumiaji katika muda uliorekodiwa.\n\nUnaweza kufikia usaidizi wetu kwa: https://localmonero.co/support\n\n- Ada ya Haki\nHatutozwi ada ghali zaidi unapoweka au kutoa Monero kwa/kutoka kwa mkoba wetu wa dhamana ya usuluhishi. Hakuna ada ya amana, na ada ya uondoaji iko karibu sana na ada ambayo ungelipa kwa shughuli ya kawaida.';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: nunua au uza XMR';

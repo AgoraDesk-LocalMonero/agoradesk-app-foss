@@ -1,6 +1,8 @@
 ### Updates
 
-1. Hotfix: push notifications token updates.
+1. Added additional warnings for trades.
+2. Fixed tab and radio button light theme colors.
+3. Added two languages.
 
 ### About the attached app's
 

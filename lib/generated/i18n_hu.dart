@@ -150,7 +150,7 @@ class I18nHu extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'vétel';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val) {
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
     return 'Mennyit szeretnél $buyOrSell?';
   }
 
@@ -2543,7 +2543,7 @@ class I18nHu extends I18n {
   String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb5 => 'A Monero egy alulról építkező közösség, amely a világ legjobb kriptovaluta-kutatóit és mérnöki tehetségeit vonzza.';
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb6 => 'Több mint 420 fejlesztő vett részt a Monero projektben, köztük a 30 főfejlesztő. A fórumok és egyéb csatornák barátságosak és aktívak.';
+  String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb6 => 'Több mint 420 fejlesztő vett részt a Monero projektben, köztük 30 fő fejlesztő. A fórumok és a chat-csatornák barátságosak és aktívak.';
 
   @override
   String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb7 => 'A Monero Kutatólaboratórium, a Főfejlesztők és a közösségi fejlesztők folyamatosan feszegetik a kriptovaluták adatvédelmi és biztonsági határait.';
@@ -2873,7 +2873,7 @@ class I18nHu extends I18n {
   String get guide250Sbmnemonic250Sbtitle => 'Hogyan állíthatom vissza a nem felügyelt elszámolási pénztárcámat az emlékeztető seedből?';
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1 => 'Lépjen a <a target=\"_blank\" href=\"/\" class=\"next-link\">főoldalra</a> – itt láthatja az alapértelmezett régió legjobb ajánlatait. Finomíthatja az eredményeket, ha beírja a kívánt összeget, és módosítja a pénznemet, az országot vagy a fizetési módot (ha nem biztos abban, hogy melyik fizetési módot szeretné használni, válassza a \"Minden online ajánlat\" lehetőséget), és nyomja meg a \"Keresés\" gombot.';
+  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1 => 'Lépjen az <a target=\"_blank\" href=\"/\" class=\"next-link\">főoldalra</a> – itt láthatja az alapértelmezett régió legjobb ajánlatait. Finomíthatja az eredményeket úgy, hogy beírja a keresni kívánt összeget a keresőmezőbe, majd válassza ki, hogy melyik pénznemet, országot és kívánt fizetési módot kívánja végrehajtani (ha nem biztos abban, hogy melyik fizetési módot választja, válassza az \"Összes online ajánlat\" lehetőséget. használni szeretnéd).';
 
   @override
   String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1250Sb1 => 'A hirdetések listájából válasszon egy olyan kereskedőt, aki sok kereskedéssel és jó hírnévvel rendelkezik (a felhasználónév melletti zárójelben látható). A zöld kör azt jelenti, hogy a kereskedő ma itt volt, a sárga kör azt jelenti, hogy ezen a héten meglátogatta az oldalt, a szürke pedig azt, hogy a kereskedő több mint egy hete nem járt erre. A hirdetéssel kapcsolatos további információk megtekintéséhez kattintson a „Vásárlás” gombra.';
@@ -4585,7 +4585,7 @@ class I18nHu extends I18n {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => 'Frissítés';
 
   @override
-  String note250Sbbutton(Object username, Object val) {
+  String note250Sbbutton(Object username) {
     return 'Megjegyzés hozzáadása $username felhasználóhoz';
   }
 
@@ -4598,7 +4598,7 @@ class I18nHu extends I18n {
   String get note250Sbinput250Sbplaceholder => 'Ez egy privát megjegyzés, amely csak az Ön számára készült, nem fogja látni sem az alanya, sem más felhasználó.';
 
   @override
-  String note250Sbtitle(Object username, Object val) {
+  String note250Sbtitle(Object username) {
     return 'Jegyzet róla: $username (csak Ön látja)';
   }
 
@@ -5338,7 +5338,7 @@ class I18nHu extends I18n {
   String get seo250Sbheadline8722Sb257Sbagoradesk => 'Valódi LocalBitcoins és Paxful alternatíva.';
 
   @override
-  String get seo250Sbtext8722Sb1 => 'Ha aggódik a magánélet megsértése miatt, a legjobb kriptovaluta az XMR. A Monero egy nyomon követhetetlen érme, amelyet a beépített adatvédelem szem előtt tartásával fejlesztettek ki.\n<br/>\nHol lehet Monero-t vásárolni? A LocalMonero a legnagyobb, legmegbízhatóbb és legmegbízhatóbb P2P Monero kereskedési platform az XMR közösségben. Nincsenek KYC csekkjeink – egyszerűen vásárolhat Monero névtelenül, személyazonosító igazolvány nélkül PayPal segítségével, hitelkártyával, ajándékkártyával, készpénzzel postai úton, vagy konvertálhatja a bitcoint Monerová – platformunk bármilyen fizetési módot támogat.';
+  String get seo250Sbtext8722Sb1 => 'Ha aggódik a magánélet megsértése miatt, a legjobb kriptovaluta az XMR. A Monero egy nyomon követhetetlen érme, amelyet a beépített adatvédelem szem előtt tartásával fejlesztettek ki.\n<br/>\nHol lehet Monero-t vásárolni? A LocalMonero a legnagyobb, legmegbízhatóbb és legmegbízhatóbb P2P Monero kereskedési platform az XMR közösségben. Nincsenek KYC csekkjeink – egyszerűen vásárolhat Monerót névtelenül, PayPal-lal történő igazoltatás nélkül, hitelkártyával, ajándékkártyával, készpénzzel postai úton, vagy konvertálhatja a bitcoint Monerová – platformunk bármilyen fizetési módot támogat.';
 
   @override
   String get seo250Sbtext8722Sb157Sbagoradesk => 'Kíváncsi, hogyan lehet Bitcoinba fektetni? Az AgoraDesken a bitcoin vásárlása még soha nem volt ilyen egyszerű – vásároljon azonnal BTC-t kedvenc online fizetési módjával: PayPal, hitelkártya/bankkártya vagy banki átutalás, ajándékkártyák, Venmo vagy bármi más.\n<br/>\nHa készpénzzel szeretne bitcoinokat vásárolni az Ön közelében, találhat valakit, aki hajlandó helyben Bitcoint eladni – a platform támogatja a BTC készpénzes vásárlását és eladását. Akár levélben küldött készpénzzel is vásárolhat Bitcoint.';
@@ -6674,7 +6674,7 @@ class I18nHu extends I18n {
   String get verify8722Sbemail250Sbsuccess => 'E-mail sikeresen megerősítve!';
 
   @override
-  String get wallet250Sbclipboard8722Sbvirus8722Sbwarning => '<strong> Győződjön meg arról, hogy a beillesztett cím megegyezik a kimásolt címmel! </strong> Egyes felhasználók eszközeit <a style=\"text-decoration:underline;font-size:inherit;color:inherit\" href=\"https://reddit.com/r/Monero/comments/mcvuxc/beware_crypto_stealing_malware/\" target=\"_blank\">rosszindulatú programok lopták el, a vágólapra másolt címet a támadó címére cserélve </a>.';
+  String get wallet250Sbclipboard8722Sbvirus8722Sbwarning => '<strong> Győződjön meg arról, hogy a beillesztett cím megegyezik a másolt címmel! </strong> Egyes felhasználók pénzeszközeiket <a style=\"text-decoration:underline;font-size:inherit;color:inherit\" href=\"https://web.archive.org/web/20220422235453/https://www.reddit.com/r/Monero/comments/mcvuxc/beware_crypto_stealing_malware/\" target=\"_blank\">rosszindulatú programok lopták el, és a vágólapra másolt címet a támadó címére cserélték </a>.';
 
   @override
   String get wallet250Sbdownload8722Sbcsv8722Sbbtn => 'CSV letöltése';
@@ -7553,6 +7553,40 @@ class I18nHu extends I18n {
   String dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsingle8722Sbasset8722Sbbuys(Object asset) {
     return '$asset csak hirdetések vásárlása';
   }
+
+  @override
+  String error250Sbtrade8722Sbrequest250Sb363(Object cakeLink, Object monerujoLink, Object featherLink) {
+    return 'Olyan címet adott meg, amelyet egy olyan kereskedőtől kapott, aki nem frissítette a címformátumát (integrált cím). Állítsa be saját pénztárcáját egy olyan alkalmazásban, mint az $cakeLink, $monerujoLink vagy $featherLink, és helyette adja meg ezt a címet.';
+  }
+
+  @override
+  String get error250Sbtrade8722Sbrequest250Sb364 => 'A hirdetés tulajdonosa nem adott meg települési címet. Kérjük, lépjen kapcsolatba velük, és mondja el nekik, hogy frissítsék hirdetésüket, vagy keressenek másik vevőt.';
+
+  @override
+  String notification250Sbtrade8722Sbfunded(Object tradeId, Object username) {
+    return 'Az $tradeId kereskedést az $username elfogadta';
+  }
+
+  @override
+  String get web8722Sbnotification250Sbtrade8722Sbfunded => 'A kereskedést elfogadták';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbtrade8722Sbsend => 'Kereskedelmi küldés';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbnon8722Sbtrade8722Sbsend => 'Nem kereskedelmi küldés';
+
+  @override
+  String get address250Sbvalidation250Sbgeneric => 'Helytelen cím';
+
+  @override
+  String get address250Sbvalidation250Sbtaproot8722Sbdisallowed => 'Taroot címek nem engedélyezettek';
+
+  @override
+  String get reputation8722Sbimport250Sbstep250Sbcode250Sbmessage250Sbpaxful => 'Helyezze el a kódot címkeként az egyik ajánlaton, hogy az látható legyen nyilvános profilján. Miután ellenőriztük a kódot, eltávolíthatja.';
+
+  @override
+  String get trade250Sbwarning250Sbconfirmations => 'Addig ne véglegesítsd, amíg a vevő tx-je nem rendelkezik visszaigazolásokkal! Megszaporodtak a csalások, amikor egy meg nem erősített tranzakciót az eladó véglegesítése után törölnek.';
 
   @override
   String get ads => 'Hirdetések';
@@ -9051,7 +9085,7 @@ class I18nHu extends I18n {
   }
 
   @override
-  String app_buy_sell(Object val) {
+  String app_buy_sell(Object val, Object buyOrSell) {
     return 'Mennyit szeretne $val?';
   }
 
@@ -9212,12 +9246,12 @@ class I18nHu extends I18n {
   String get app_final_amount => 'Végső összeg';
 
   @override
-  String app_note_label(Object val) {
+  String app_note_label(Object val, Object username) {
     return 'Jegyzet róla: $val (nem nyilvános)';
   }
 
   @override
-  String app_note_add(Object val) {
+  String app_note_add(Object val, Object username) {
     return 'Megjegyzés hozzáadása a következőhöz: $val';
   }
 

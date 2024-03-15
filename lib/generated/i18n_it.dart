@@ -150,7 +150,7 @@ class I18nIt extends I18n {
   String get ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy => 'Compra';
 
   @override
-  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell, Object val) {
+  String ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy57Sbsell(Object buyOrSell) {
     return 'Quanto vuoi per $buyOrSell?';
   }
 
@@ -1726,7 +1726,7 @@ class I18nIt extends I18n {
   String get error250Sbpost8722Sbad250Sb81 => 'Il valore del prezzo non è stato impostato correttamente';
 
   @override
-  String get error250Sbpost8722Sbad250Sb86 => 'Combinazioni non valide di paese, metodo di pagamento e valuta';
+  String get error250Sbpost8722Sbad250Sb86 => 'Combinazioni non valide di Paese, metodo di pagamento e valuta';
 
   @override
   String get error250Sbpost8722Sbad250Sb87 => 'Questo metodo di pagamento non è valido per il Paese selezionato';
@@ -1857,7 +1857,7 @@ class I18nIt extends I18n {
 
   @override
   String faq250Sbanswer8722Sb0(Object appName) {
-    return '$appName è una piattaforma di trading Monero peer-to-peer. Siamo un mercato in cui gli utenti possono acquistare e vendere Monero da e verso l\'altro. Gli utenti, chiamati commercianti, creano annunci con il prezzo e il metodo di pagamento che vogliono offrire. Puoi navigare nel nostro sito Web per annunci commerciali e cercare un metodo di pagamento che preferisci. Troverai trader che acquistano e vendono Monero online per più di 60 diversi metodi di pagamento. Se sei nuovo su $appName e desideri acquistare Monero, dai un\'occhiata alla nostra guida all\'acquisto per sapere come acquistare Monero.';
+    return '$appName è una piattaforma di trading Monero peer-to-peer. Siamo un mercato in cui gli utenti possono acquistare e vendere Monero tra loro. Gli utenti, chiamati commercianti, creano annunci con il prezzo e il metodo di pagamento che vogliono offrire. Puoi navigare nel nostro sito web per cercare annunci commerciali e cercare il metodo di pagamento che preferisci. Troverai trader che acquistano e vendono Monero online per più di 60 diversi metodi di pagamento. Se non conosci $appName e desideri acquistare Monero, dai un\'occhiata alla nostra guida all\'acquisto per sapere come acquistare Monero.';
   }
 
   @override
@@ -1933,7 +1933,7 @@ class I18nIt extends I18n {
   }
 
   @override
-  String get faq250Sbanswer8722Sb18 => 'Il feedback che è stato dato può essere confermato o non confermato. Il feedback confermato viene visualizzato sul profilo pubblico di un utente e influisce sul punteggio di feedback dell\'utente. Affinché un feedback non confermato venga confermato, il volume totale degli scambi tra l\'utente che fornisce e riceve feedback deve essere superiore a 100 USD equivalenti.';
+  String get faq250Sbanswer8722Sb18 => 'Il feedback fornito può essere confermato o non confermato. Il feedback confermato viene mostrato sul profilo pubblico di un utente e influisce sul punteggio del feedback dell\'utente. Affinché un feedback non confermato diventi confermato, il volume totale degli scambi tra l\'utente che ha fornito e ricevuto il feedback deve essere superiore a 100 USD equivalenti.';
 
   @override
   String faq250Sbanswer8722Sb19(Object appName, Object enableWebNotificationsFromYourProfile) {
@@ -2025,7 +2025,7 @@ class I18nIt extends I18n {
 
   @override
   String faq250Sbanswer8722Sb30(Object playstoreLink, Object fdroidLink, Object apkLink, Object appstoreLink, Object telegram, Object thisGuide, Object appName) {
-    return 'Sì, lo facciamo! Se hai Android, puoi scaricarlo su $playstoreLink, $fdroidLink oppure puoi scaricare direttamente $apkLink. Per i dispositivi iOS, è disponibile su $appstoreLink. Puoi anche ricevere notifiche mobili in $telegram! $thisGuide ti guiderà attraverso il processo di attivazione delle notifiche di Telegram (è facile). Il nostro bot ti invierà quindi notifiche sui tuoi eventi $appName.';
+    return 'Sì, lo sappiamo! Se hai Android, puoi scaricarlo su $playstoreLink, $fdroidLink oppure puoi scaricare direttamente $apkLink. Per i dispositivi iOS, è disponibile su $appstoreLink. Puoi anche ricevere notifiche mobili in $telegram! $thisGuide ti guiderà attraverso il processo di attivazione delle notifiche di Telegram (è facile). Il nostro bot ti invierà quindi notifiche sui tuoi eventi $appName.';
   }
 
   @override
@@ -2073,12 +2073,12 @@ class I18nIt extends I18n {
 
   @override
   String faq250Sbanswer8722Sb8(Object appName) {
-    return 'Tutte le negoziazioni online sono protette da vincoli arbitrali. Quando viene avviata una negoziazione, un importo di Monero pari all\'importo della transazione viene automaticamente riservato dal portafoglio obbligazionario $appName del venditore. Ciò significa che se il venditore scappa con i tuoi soldi e non finalizza lo scambio, il supporto $appName può indirizzare a te il Monero detenuto nell\'obbligazione arbitrale. Se stai vendendo Monero, non finalizzare mai lo scambio prima di sapere che hai ricevuto denaro dall\'acquirente Monero. Tieni presente che le negoziazioni locali non hanno la protezione dell\'obbligazione arbitrale abilitata per impostazione predefinita.';
+    return 'Tutte le transazioni online sono protette da vincoli arbitrali. Quando viene avviata un\'operazione, un importo di Monero pari all\'importo dell\'operazione viene automaticamente riservato dal portafoglio obbligazionario $appName del venditore. Ciò significa che se il venditore scappa con i tuoi soldi e non finalizza l\'operazione, il supporto di $appName può indirizzarti il Monero trattenuto nel vincolo arbitrale. Se vendi Monero, non finalizzare mai l\'operazione prima di sapere di aver ricevuto denaro dall\'acquirente Monero. Tieni presente che le negoziazioni locali non hanno la protezione delle obbligazioni arbitrali abilitata per impostazione predefinita.';
   }
 
   @override
   String faq250Sbanswer8722Sb857Sbagoradesk(Object appName) {
-    return 'Tutte le negoziazioni online sono protette da vincoli arbitrali. Quando viene avviato uno scambio, una quantità di criptovaluta pari all\'importo dello scambio viene automaticamente riservata dal portafoglio obbligazionario $appName del venditore. Ciò significa che se il venditore scappa con i tuoi soldi e non finalizza lo scambio, il supporto $appName può indirizzarti la criptovaluta detenuta nell\'obbligazione arbitrale. Se vendi criptovaluta, non finalizzare mai lo scambio prima di sapere di aver ricevuto denaro dall\'acquirente. Tieni presente che le negoziazioni locali non hanno la protezione dell\'obbligazione arbitrale abilitata per impostazione predefinita.';
+    return 'Tutte le transazioni online sono protette da vincoli arbitrali. Quando viene avviata una transazione, un importo di criptovaluta pari all\'importo della transazione viene automaticamente riservato dal portafoglio obbligazionario $appName del venditore. Ciò significa che se il venditore scappa con i tuoi soldi e non finalizza l\'operazione, il supporto di $appName può indirizzarti la criptovaluta detenuta nel vincolo arbitrale. Se vendi criptovaluta, non finalizzare mai l\'operazione prima di sapere di aver ricevuto denaro dall\'acquirente. Tieni presente che le negoziazioni locali non hanno la protezione delle obbligazioni arbitrali abilitata per impostazione predefinita.';
   }
 
   @override
@@ -2543,7 +2543,7 @@ class I18nIt extends I18n {
   String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb5 => 'Monero è una comunità di base che attrae i migliori ricercatori e ingegneri della criptovaluta al mondo.';
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb6 => 'Oltre 420 sviluppatori hanno contribuito al progetto Monero, inclusi 30 sviluppatori principali: i forum e i canali di chat sono accoglienti e attivi.';
+  String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb6 => 'Oltre 420 sviluppatori hanno contribuito al progetto Monero, inclusi 30 sviluppatori principali. Forum e canali di chat sono accoglienti e attivi.';
 
   @override
   String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb7 => 'Monero\'s Research Lab, Core Development Team e Community Developers stanno costantemente spingendo la frontiera di ciò che è possibile con la criptovaluta privacy e sicurezza.';
@@ -2738,7 +2738,7 @@ class I18nIt extends I18n {
 
   @override
   String guide250Sblocal250Sbtext8722Sb7(Object assetName) {
-    return 'Potrebbero esserci casi in cui il denaro contraffatto viene passato al venditore $assetName. Si prega di prendere in considerazione l\'utilizzo di un rilevatore di contraffazioni quando si effettuano operazioni.';
+    return 'Potrebbero verificarsi casi in cui denaro contraffatto viene passato al venditore $assetName. Ti invitiamo a considerare l\'utilizzo di un rilevatore di contraffazioni quando effettui le operazioni.';
   }
 
   @override
@@ -2873,7 +2873,7 @@ class I18nIt extends I18n {
   String get guide250Sbmnemonic250Sbtitle => 'Come ripristinare il mio portafoglio di insediamento non custodiale dal seme mnemonico?';
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1 => 'Vai alla pagina principale <a target=\"_blank\" href=\"/\" class=\"next-link\"></a> - vedrai le migliori offerte per la tua regione predefinita. Puoi raffinare i tuoi risultati inserendo l\'importo desiderato e cambiando la valuta, il paese o il metodo di pagamento (seleziona \"Tutte le offerte online\" se non sei sicuro del metodo di pagamento che vuoi usare) nella casella di ricerca e premendo \"Cerca\".';
+  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1 => 'Vai alla pagina principale <a target=\"_blank\" href=\"/\" class=\"next-link\"></a>: vedrai le migliori offerte per la tua regione predefinita. Puoi perfezionare i risultati inserendo l\'importo desiderato che desideri effettuare nella casella di ricerca, quindi selezionare la valuta con cui desideri effettuare la transazione, il Paese e il metodo di pagamento desiderato (seleziona \"Tutte le offerte online\" se non sei sicuro di quale metodo di pagamento vuoi utilizzare).';
 
   @override
   String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1250Sb1 => 'Dall\'elenco degli annunci, scegliete un trader con un alto numero di scambi e un buon punteggio di reputazione (indicato rispettivamente tra le parentesi accanto al nome utente). Un cerchio verde significa che il trader è stato online oggi; un cerchio giallo significa che ha visitato il sito questa settimana; e un cerchio grigio significa che il trader non è stato qui per oltre una settimana. Potete cliccare sul pulsante \"Acquista\" per visualizzare maggiori informazioni su un annuncio.';
@@ -3055,7 +3055,7 @@ class I18nIt extends I18n {
 
   @override
   String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb0(Object appName, Object assetName, Object linebreak, Object localmoneroWallet, Object create, Object aSellMoneroAd) {
-    return 'Un\'operazione tipica su $appName funziona in questo modo, l\'esempio è un\'operazione di vendita online in cui vendi $assetName a un acquirente. Il processo è simile quando acquisti $assetName online, ma per questo esempio ci stiamo concentrando sulla vendita di $assetName, poiché è il tipo di scambio più comune. $linebreak  Per prima cosa devi depositare $assetName sul tuo $localmoneroWallet. $linebreak  Quindi, devi $create $aSellMoneroAd (chiamato annuncio di vendita online). Quando fai l\'annuncio scegli un metodo di pagamento, imposta i tuoi prezzi, i tuoi limiti e scrivi le tue condizioni commerciali come messaggio in formato libero. ';
+    return 'Una tipica operazione su $appName funziona in questo modo, l\'esempio è un\'operazione di vendita online in cui vendi $assetName a un acquirente. Il processo è simile quando acquisti $assetName online, ma per questo esempio ci concentreremo sulla vendita di $assetName, poiché è il tipo di scambio più comune. $linebreak  Per prima cosa devi depositare $assetName sul tuo $localmoneroWallet. $linebreak  Quindi è necessario $create $aSellMoneroAd (chiamato annuncio di vendita online). Quando crei l\'annuncio, scegli un metodo di pagamento, stabilisci i prezzi, i limiti e scrivi le tue condizioni commerciali come messaggio in formato libero. ';
   }
 
   @override
@@ -3076,7 +3076,7 @@ class I18nIt extends I18n {
 
   @override
   String guide250Sbtrade250Sbblock8722Sb18722Sbtext8722Sb1(Object assetName, Object appName) {
-    return 'Devi avere $assetName nel tuo portafoglio di obbligazioni arbitrali $appName affinché i clienti possano aprire richieste di scambio dai tuoi annunci. <br/><br/>Quando un <strong>acquirente apre uno scambio con te</strong>, $assetName per l\'intero importo dello scambio viene automaticamente prenotato dal tuo portafoglio. Fornisci all\'acquirente le istruzioni di pagamento e guida l\'acquirente attraverso il pagamento dell\'operazione. Riceverai notifiche via e-mail quando qualcuno risponde al tuo annuncio. <br/><br/> Una volta che l\'acquirente ha pagato e premuto il pulsante <strong> Ho pagato</strong> riceverai una notifica via e-mail e sul sito web che un\'operazione è stata pagata. <br/><br/> Dopo aver confermato di aver ricevuto il pagamento, è il momento di finalizzare lo scambio. Dopo che l\'operazione è stata finalizzata e regolata, l\'acquirente avrà $assetName nel suo portafoglio di regolamento. <br/><br/> Il passaggio finale è <strong>lasciare un feedback</strong> per l\'acquirente e incoraggiare l\'acquirente a fare lo stesso per te. Il feedback è importante per guadagnare reputazione e fare più scambi.';
+    return 'Devi avere $assetName nel tuo portafoglio di obbligazioni arbitrali $appName affinché i clienti possano aprire richieste commerciali dai tuoi annunci. <br/><br/>Quando un <strong>acquirente apre uno scambio con te</strong>, $assetName per l\'intero importo dello scambio viene automaticamente prenotato dal tuo portafoglio. Fornisci all\'acquirente le istruzioni di pagamento e guidalo nel pagamento della transazione. Riceverai notifiche via email quando qualcuno risponde al tuo annuncio. <br/><br/> Una volta che l\'acquirente ha pagato e ha premuto il pulsante<strong> Ho pagato</strong> riceverai una notifica via e-mail e sul sito web che l\'operazione è stata pagata. <br/><br/> Una volta confermato di aver ricevuto il pagamento è il momento di finalizzare l\'operazione. Dopo che l\'operazione è stata finalizzata e regolata, l\'acquirente avrà $assetName nel proprio portafoglio di liquidazione. <br/><br/> Il passaggio finale è <strong>lasciare un feedback</strong> per l\'acquirente e incoraggiarlo a fare lo stesso per te. Il feedback è importante per guadagnare reputazione ed effettuare più scambi.';
   }
 
   @override
@@ -3118,7 +3118,7 @@ class I18nIt extends I18n {
 
   @override
   String guide250Sbtrade250Sbblock8722Sb38722Sbtext8722Sb1(Object assetName, Object assetSymbol, Object appName) {
-    return '<strong> Prezzo di mercato o fisso </strong><br/> Per valutare il tuo annuncio puoi inserire un margine che desideri sopra il prezzo di mercato $assetName. Per farlo, inserisci una percentuale nel campo del margine dopo aver scelto l\'opzione \"Prezzo di mercato\". Potresti anche voler specificare un prezzo fisso che non cambierà fino a quando non lo cambierai manualmente. Per questo è necessario scegliere l\'opzione \"Prezzo fisso\" e inserire il valore del prezzo. <br/><br/> <strong> min. / Massimo. limite di transazione </strong><br/> Il limite minimo di transazione imposta l\'importo minimo che qualcuno può acquistare. Se lo imposti su cinque e la tua valuta è impostata su EUR, significa che l\'importo minimo di negoziazione per cui qualcuno può aprire un\'operazione con te sarà di 5 EUR. Il limite massimo di transazione stabilisce qual è l\'importo più grande che vuoi accettare. <br/><br/> <strong> Termini di scambio </strong><br/> Questo è il testo che l\'acquirente vede prima di aprire uno scambio con te. È una buona idea scrivere istruzioni per l\'acquirente su come si desidera che il commercio proceda e se si hanno istruzioni specifiche. Se richiedi, ad esempio, che l\'acquirente invii una ricevuta come prova di pagamento prima di finalizzare un\'operazione o se hai bisogno che l\'acquirente fornisca un documento d\'identità, questo è il posto giusto per menzionarlo. Puoi dare un\'occhiata agli annunci di altri trader per il metodo di pagamento che desideri utilizzare per avere un\'idea di quali buone condizioni commerciali contengono. <br/><br/> <strong> Opzioni extra </strong><br/><br/> <strong> Limita gli importi a </strong><br/> È possibile restringere l\'annuncio in modo che sia possibile aprire negoziazioni solo per importi specifici. Se inserisci 20,30,60 nella casella, un potenziale partner commerciale potrebbe aprire uno scambio solo per 20, 30 o 60 EUR. <br/><br/> <strong> Dettagli del pagamento </strong><br/> Inserisci qui informazioni specifiche relative a come l\'acquirente dovrebbe pagare, questo può essere il tuo numero di conto bancario o indirizzo e-mail (ad es. per PayPal). <br/><br/> <strong> Punteggio di feedback minimo richiesto </strong><br/> Il punteggio di feedback minimo ti consente di impostare un punteggio di feedback minimo richiesto per aprire uno scambio utilizzando il tuo annuncio. <br/><br/> <strong> Primo limite di tempo ($assetSymbol) </strong><br/> Si tratta di un limite massimo specifico per le transazioni per i nuovi utenti. Se un acquirente senza precedenti di trading con te desidera aprire uno scambio con te, questo è l\'importo massimo per cui può aprire uno scambio. <br/><br/> <strong> Finestra di pagamento </strong><br/> La quantità di tempo a disposizione dell\'acquirente per completare il pagamento prima che il venditore sia in grado di annullare l\'operazione. <br/><br/> <strong> Tieni traccia dell\'importo massimo della liquidità </strong><br/> L\'abilitazione del monitoraggio della liquidità abbassa il limite massimo dell\'annuncio dell\'importo attualmente trattenuto nelle negoziazioni aperte. <br/><br/> <strong> Suggerimenti rapidi per identificare i truffatori </strong> <br/><br/><strong>Gli acquirenti fraudolenti hanno spesso fretta.</strong> Più un cliente ti chiede di sbrigarti, più sono sospettosi dovresti esserlo, i veri clienti hanno sempre pazienza. <br/><br/>Gli acquirenti fraudolenti spesso <strong>suggeriscono di eseguire tutta o parte della transazione al di fuori del sistema di protezione del vincolo arbitrale </strong>e poi non completano la loro parte della transazione. <br/><br/> Fai attenzione alle <strong>prove di pagamento modificate con photoshop</strong>, non finalizzare uno scambio finché non avrai confermato di aver ricevuto il denaro. Non sei obbligato a finalizzare un\'operazione fino a quando non puoi verificare di aver ricevuto il pagamento dell\'acquirente. <br/><br/><strong>Non aprire nessun link che il tuo partner commerciale ti sta inviando</strong>. Se necessario, utilizza un browser diverso da quello che stai utilizzando. <br/><br/>Non visitare siti web diversi da $appName con il browser che stai utilizzando per fare trading. <strong>Usa un browser diverso per altri siti web.</strong> <br/><br/> Aggiungi $appName ai segnalibri nel tuo browser e utilizza sempre i segnalibri quando visiti il sito web. Questo ti aiuta a evitare di visitare accidentalmente siti Web di phishing, esistono e possono essere molto convincenti.';
+    return '<strong> Prezzo di mercato o fisso </strong><br/> Per valutare il tuo annuncio puoi inserire un margine che desideri sopra il prezzo di mercato $assetName. Per fare ciò, inserisci una percentuale nel campo del margine dopo aver scelto l\'opzione \"Prezzo di mercato\". Potresti anche voler specificare un prezzo fisso che non cambierà finché non lo modificherai manualmente. Per questo è necessario scegliere l\'opzione “Prezzo fisso” e inserire il valore del prezzo. <br/><br/> <strong> Min. /Massimo. limite di transazione </strong><br/> Il limite minimo di transazione imposta l\'importo minimo che qualcuno può acquistare. Se lo imposti su cinque e la tua valuta è impostata su EUR, significa che l\'importo minimo per cui qualcuno può aprire un\'operazione con te sarà di 5 EUR. Il limite massimo di transazione stabilisce qual è l\'importo di scambio più grande che desideri accettare. <br/><br/> <strong> Condizioni commerciali </strong><br/> Questo è il testo che l\'acquirente vede prima di aprire uno scambio con te. È una buona idea scrivere istruzioni per l\'acquirente su come desideri che proceda l\'operazione e se hai istruzioni specifiche. Se richiedi, ad esempio, all\'acquirente di inviare una ricevuta come prova di pagamento prima di finalizzare un\'operazione o se hai bisogno che l\'acquirente fornisca un documento d\'identità, questo è il posto giusto per menzionarlo. Puoi dare un\'occhiata agli annunci di altri trader per il metodo di pagamento che desideri utilizzare per avere un\'idea di quali buone condizioni commerciali contengono. <br/><br/> <strong> Opzioni extra </strong><br/><br/> <strong> Limita gli importi a </strong><br/> È possibile limitare l\'annuncio solo alla possibilità di aprire operazioni per importi specifici. Se inserisci 20,30,60 nella casella un potenziale partner commerciale potrà aprire un\'operazione solo per 20, 30 o 60 EUR. <br/><br/> <strong> Dettagli del pagamento </strong><br/> Inserisci qui le informazioni specifiche relative alla modalità di pagamento dell\'acquirente, questo può essere il numero del tuo conto bancario o l\'indirizzo e-mail (ad esempio per PayPal). <br/><br/> <strong> Punteggio di feedback minimo richiesto </strong><br/> Il feedback minimo ti consente di impostare un punteggio di feedback minimo richiesto per poter aprire uno scambio utilizzando il tuo annuncio. <br/><br/> <strong> Primo limite temporale ($assetSymbol) </strong><br/> Si tratta di un limite massimo di transazione specifico per i nuovi utenti. Se un acquirente senza precedenti di scambi con te desidera aprire un\'operazione con te, questo è l\'importo massimo per cui può aprire un\'operazione. <br/><br/> <strong> Finestra di pagamento </strong><br/> Il tempo a disposizione dell\'acquirente per completare il pagamento prima che il venditore possa annullare l\'operazione. <br/><br/> <strong> Traccia l\'importo massimo della liquidità </strong><br/> L\'abilitazione del tracciamento della liquidità riduce il limite massimo dell\'annuncio in base all\'importo attualmente trattenuto nelle transazioni aperte. <br/><br/> <strong> Suggerimenti rapidi per identificare i truffatori </strong> <br/><br/><strong>Gli acquirenti fraudolenti hanno spesso fretta.</strong> Più un cliente ti chiede di sbrigarti, più diventa sospettoso dovresti esserlo, i veri clienti hanno sempre pazienza. <br/><br/>Gli acquirenti fraudolenti spesso <strong>suggeriscono di eseguire tutta o parte della transazione al di fuori del sistema di protezione delle obbligazioni arbitrali </strong>e quindi non completano la loro parte della transazione. <br/><br/> Fai attenzione alle <strong>prove di pagamento ritoccate con Photoshop</strong>, non finalizzare uno scambio finché non hai confermato di aver ricevuto il denaro. Non sei obbligato a finalizzare uno scambio finché non puoi verificare di aver ricevuto il pagamento dell\'acquirente. <br/><br/><strong>Non aprire alcun link che il tuo partner commerciale ti sta inviando</strong>. Se necessario, utilizza un browser diverso da quello che stai utilizzando. <br/><br/>Non visitare siti web diversi da $appName con il browser che stai utilizzando per fare trading. <strong>Utilizza un browser diverso per altri siti Web.</strong> <br/><br/> Aggiungi ai preferiti $appName nel tuo browser e utilizza sempre il segnalibro quando visiti il sito Web. Questo ti aiuta a evitare di visitare accidentalmente siti di phishing, esistono e possono essere molto convincenti.';
   }
 
   @override
@@ -3251,7 +3251,7 @@ class I18nIt extends I18n {
   String get knowledge250Sbatomic250Sbtitle => 'Come funzioneranno gli Atomic Swap in Monero';
 
   @override
-  String get knowledge250Sbblocks250Sb0250Sbtext => '<p><i><b>Nota:</b> Si consiglia vivamente al lettore di leggere i nostri articoli <a target=\"_blank\" href=\"/knowledge/monero-tail-emission\" class=\"next-link\">\"Perché Monero ha un\'emissione di coda\"</a> e <a target=\"_blank\" href=\"/knowledge/monero-mining-randomx\" class=\"next-link\">“Monero Mining: What Makes RandomX così speciale”</a>. Questo articolo si basa sui concetti qui presentati.</i></p>\n\n<p>Ogni volta che le persone discutono dei problemi con la blockchain, una delle prime parole a comparire sarà \"ridimensionamento\". Non è un segreto che le blockchain non scalano bene, ma la maggior parte delle persone non sa perché.</p>\n\n<p>La verità è che il ridimensionamento è in realtà un termine generico che copre due diverse categorie: supporto del protocollo e supporto tecnologico in un determinato momento. In questo articolo, focalizzeremo la nostra attenzione su uno, il supporto del protocollo è fondamentalmente una misura di quante transazioni il protocollo può gestire in un dato momento.</p>\n\n<p>Bitcoin ha un limite di dimensione del blocco, il che significa che una volta che un numero sufficiente di transazioni è stato incluso in un blocco, eventuali transazioni aggiuntive dovranno attendere in fila per il blocco successivo. Un\'analogia utile sarebbe pensare a un treno. Un treno si ferma alla stazione e quelli in fila entrano. Una volta che il treno è pieno, chiunque sia rimasto fuori dovrà aspettare il prossimo.</p>\n\n<p>Bitcoin utilizza le commissioni per determinare chi entra o meno nel blocco. Tornando all\'analogia del treno, si può immaginare che un potenziale passeggero, che sta per essere lasciato indietro, offra cinque dollari al macchinista per dargli un posto. Altri passeggeri seguono l\'esempio e alla fine c\'è una guerra di offerte per vedere chi ottiene quali posti. Spetta all\'autista decidere se vuole onorare la politica del primo arrivato, primo servito, ma è nel suo migliore interesse finanziario massimizzare le sue entrate prendendo a bordo i migliori offerenti.</p>\n\n<p>In questa analogia, i minatori sono i macchinisti. Possono includere qualsiasi transazione desiderino nel blocco, ma in genere sceglieranno quelle con le commissioni più alte.</p>\n\n<p>In alternativa, se i blocchi non sono molto pieni, le persone non hanno alcun incentivo a pagare tariffe elevate perché ci sono molti posti liberi da risparmiare.</p>\n\n<p>Al culmine del boom delle criptovalute del 2017, Bitcoin è stato inondato di transazioni e le commissioni sono salite alle stelle per coloro che volevano essere inclusi nel blocco successivo o in qualsiasi blocco del prossimo futuro. Coloro che non erano disposti a pagare commissioni elevate hanno visto le loro transazioni rimandare per ore, giorni o addirittura abbandonare del tutto la coda.</p>\n\n<p>Questa è stata una visione straziante di come se la sarebbe cavata Bitcoin se si fosse verificata la tanto discussa \"adozione di massa\". Se Bitcoin dovesse essere utilizzato dalle masse, le cose andrebbero anche peggio che nel 2017, e Bitcoin sarebbe inaccessibile a chiunque tranne che ai ricchi, semplicemente perché il throughput è ridotto a causa di una dimensione del blocco fissa, facendo sì che il mercato delle commissioni prenda il sopravvento .</p>\n\n<p>Monero lo aveva previsto e voleva fare qualcosa di diverso. Quindi gli sviluppatori di Monero hanno implementato un blocco dinamico.</p>\n\n<p>Fondamentalmente, Monero ha anche un limite di dimensione del blocco, ma è un limite morbido. Quando la fila delle transazioni in attesa diventa troppo lunga, i minatori possono aumentare la dimensione dei blocchi. Con la nostra analogia con il treno, puoi immaginare di aggiungere più vagoni per adattarsi ai passeggeri in più. Dopo che la coda è vuota, i blocchi tornano alla loro dimensione originale andando avanti.</p>\n\n<p>Se questa sembra un\'idea chiara, sembra ragionevole chiedersi perché Monero sia l\'unica criptovaluta che lo ha implementato. Perché non aggiungerlo su Bitcoin in modo da porre fine ai problemi di throughput?</p>\n\n<p>Sfortunatamente, questo non è possibile. I motivi sono diversi e faremo del nostro meglio per spiegarli.</p>\n\n<p> È sempre nell\'interesse di un minatore avere blocchi di grandi dimensioni. Con blocchi di grandi dimensioni possono inserirsi in più transazioni e guadagnare di più dalle commissioni, oltre che dalle ricompense del blocco. Questo ha il potenziale per portare ad attacchi di spam, in cui qualcuno invia molte piccole transazioni, con piccole commissioni, per gonfiare la catena. I minatori aumenterebbero semplicemente la dimensione del blocco includendoli tutti perché il denaro è denaro, non importa quanto piccolo. Ciò porterebbe a blocchi costantemente grandi con scarsi vantaggi economici. Bitcoin risolve questo problema limitando artificialmente la dimensione del blocco, generando così un mercato a pagamento. Gli aggressori di spam dovrebbero pagare più degli altri utenti in tasse, e non è più economico. Ma questo significa che i blocchi si riempiono lasciando alcune transazioni in attesa come menzionato sopra.</p>\n\n<p>Quindi, come può Monero avere blocchi dinamici ma evitare attacchi di spam? La risposta è semplice, ma intelligente. Viene introdotta una penalità sulla ricompensa del blocco quando un blocco è più grande del normale. Se un minatore desidera aumentare la dimensione del blocco, la ricompensa che otterrà trovando quel blocco sarà inferiore a quella che riceverebbe altrimenti. Quindi aumenteranno la dimensione del blocco solo quando le commissioni di transazione pagate dagli utenti superano la parte persa della ricompensa del blocco. Ad esempio, se il minatore perdesse 0,5 XMR aumentando la dimensione del blocco e la somma delle commissioni di transazione pagate fosse 0,4 XMR, allora ci sarebbe una perdita netta di 0,1 XMR se aumentassero la dimensione, quindi lo farebbero non farlo. Al contrario, se le commissioni di transazione totali si sommassero a 0,7 XMR, allora ci sarebbe un guadagno netto di 0,2 XMR, anche se perdono lo 0,5 XMR dalla penalità della ricompensa del blocco, quindi il minatore aumenterà la dimensione.</p>\n\n<p>Questi blocchi dinamici consentono alla rete di crescere in modo organico, senza limitare in modo aritificativo la dimensione del blocco per creare un mercato a pagamento forzato, evitando comunque gli attacchi di spam. Ci sono molte altre angolazioni da cui possiamo vedere questa idea, e più motivi per cui non sarebbe possibile aggiungere a Bitcoin, ma per ora, speriamo che il lettore abbia una comprensione di come Monero eluda molti dei problemi in Bitcoin e i suoi derivati e come intende scalare il suo throughput nel futuro.</p>';
+  String get knowledge250Sbblocks250Sb0250Sbtext => '<p><i><b>Nota:</b> Si consiglia vivamente al lettore di leggere i nostri articoli <a target=\"_blank\" href=\"/knowledge/monero-tail-emission\" class=\"next-link\">\"Perché Monero ha un\'emissione di coda\"</a> e <a target=\"_blank\" href=\"/knowledge/monero-mining-randomx\" class=\"next-link\">\"Monero Mining: What Makes RandomX così speciale”</a>. Questo articolo si basa sui concetti qui presentati.</i></p>\n\n<p>Ogni volta che le persone discutono dei problemi con la blockchain, una delle prime parole a comparire sarà \"dimensionamento\". Non è un segreto che le blockchain non si adattino bene, ma la maggior parte delle persone non sa perché.</p>\n\n<p>La verità è che il ridimensionamento è in realtà un termine generico che copre due diverse categorie: supporto del protocollo e supporto tecnologico in un dato momento. In questo articolo concentreremo la nostra attenzione su uno: il supporto del protocollo è fondamentalmente una misura di quante transazioni il protocollo può gestire in un dato momento.</p>\n\n<p>Bitcoin ha un limite alla dimensione del blocco, il che significa che una volta incluse un numero sufficiente di transazioni in un blocco, eventuali transazioni aggiuntive dovranno attendere in linea per il blocco successivo. Un’analogia utile potrebbe essere pensare a un treno. Un treno si ferma alla stazione e quelli in fila entrano. Una volta che il treno è pieno, chiunque sia rimasto fuori dovrà aspettare il successivo.</p>\n\n<p>Bitcoin utilizza le commissioni per determinare chi entra o meno nel blocco. Tornando all\'analogia del treno, si può immaginare che un potenziale passeggero, che sta per essere lasciato indietro, offra al macchinista cinque dollari per dargli un posto. Altri passeggeri seguono l\'esempio e alla fine scoppia una guerra di offerte per vedere chi ottiene quali posti. Spetta all\'autista decidere se vuole onorare la politica \"primo arrivato, primo servito\", ma è nel suo miglior interesse finanziario massimizzare il suo reddito accettando a bordo i migliori offerenti.</p>\n\n<p>In questa analogia, i minatori sono i macchinisti. Possono includere qualunque transazione vogliano nel blocco, ma generalmente sceglieranno quelle che hanno le commissioni pagate più alte.</p>\n\n<p>In alternativa, se i blocchi non sono molto pieni, le persone non hanno alcun incentivo a pagare tariffe elevate perché ci sono molti posti liberi da riservare.</p>\n\n<p>Al culmine del boom delle criptovalute del 2017, Bitcoin è stato inondato di transazioni e le commissioni sono salite alle stelle per coloro che volevano essere inclusi nel blocco successivo, o in qualsiasi blocco del prossimo futuro. Coloro che non erano disposti a pagare commissioni elevate hanno visto le loro transazioni rinviate per ore, giorni o addirittura eliminate del tutto dalla coda.</p>\n\n<p>Questa è stata una visione straziante di come se la sarebbe cavata Bitcoin se si fosse verificata la tanto citata \"adozione di massa\". Se Bitcoin dovesse essere utilizzato dalle masse, le cose andrebbero ancora peggio che nel 2017, e Bitcoin sarebbe inaccessibile a chiunque tranne che ai ricchi, semplicemente perché il throughput è piccolo a causa della dimensione fissa dei blocchi, facendo sì che il mercato delle commissioni prenda il sopravvento. .</p>\n\n<p>Monero lo aveva previsto e voleva fare qualcosa di diverso. Quindi gli sviluppatori di Monero hanno implementato una dimensione di blocco dinamica.</p>\n\n<p>Fondamentalmente, Monero ha anche un limite massimo alle dimensioni dei blocchi, ma è un limite morbido. Quando la fila delle transazioni in attesa diventa troppo lunga, i minatori possono aumentare la dimensione dei blocchi. Con la nostra analogia con il treno, puoi immaginare di aggiungere più vagoni ferroviari per accogliere i passeggeri in più. Dopo che la coda è vuota, i blocchi ritornano alla loro dimensione originale da ora in poi.</p>\n\n<p>Se sembra un\'idea interessante, sembra ragionevole chiedersi perché Monero è l\'unica criptovaluta ad averlo implementato. Perché non aggiungerlo su Bitcoin in modo da porre fine ai problemi di throughput?</p>\n\n<p>Purtroppo questo non è possibile. Esistono diversi motivi e faremo del nostro meglio per spiegarli.</p>\n\n<p> È sempre nell\'interesse del minatore avere blocchi di grandi dimensioni. Con blocchi di grandi dimensioni possono adattarsi a più transazioni e guadagnare di più dalle commissioni, nonché dai premi dei blocchi. Ciò può potenzialmente portare ad attacchi di spam, in cui qualcuno invia molte piccole transazioni, con piccole commissioni, per gonfiare la catena. I minatori aumenterebbero semplicemente la dimensione dei blocchi includendoli tutti perché il denaro è denaro, non importa quanto piccolo. Ciò porterebbe a blocchi costantemente grandi con scarsi vantaggi economici. Bitcoin risolve questo problema limitando artificialmente la dimensione del blocco, generando così un mercato delle commissioni. Gli aggressori di spam dovrebbero pagare più degli altri utenti in commissioni, e questo non è più economico. Ma questo significa che i blocchi si riempiono lasciando alcune transazioni in attesa come menzionato sopra.</p>\n\n<p>Allora come può Monero avere dimensioni di blocco dinamiche ed evitare attacchi di spam? La risposta è semplice, ma intelligente. Viene introdotta una penalità sulla ricompensa del blocco quando un blocco è più grande del normale. Se un minatore desidera aumentare la dimensione del blocco, la ricompensa che otterrà trovando quel blocco sarà inferiore a quella che riceverebbe altrimenti. Quindi aumenteranno la dimensione del blocco solo quando le commissioni di transazione pagate dagli utenti supereranno la parte persa della ricompensa del blocco. Ad esempio, se il minatore perdesse 0,5 XMR aumentando la dimensione del blocco e la somma delle commissioni di transazione pagate fosse 0,4 XMR, allora ci sarebbe una perdita netta di 0,1 XMR se aumentasse la dimensione, quindi non farebbero non farlo. Al contrario, se le commissioni di transazione totali ammontassero a 0,7 XMR, allora ci sarebbe un guadagno netto di 0,2 XMR, anche se perdono 0,5 XMR dalla penalità di ricompensa del blocco, quindi il minatore aumenterà le dimensioni.</p>\n\n<p>Questi blocchi dinamici consentono alla rete di crescere organicamente, senza limitare artificialmente la dimensione del blocco per creare un mercato a tariffa forzata, evitando comunque attacchi di spam. Ci sono molti altri punti di vista da cui possiamo vedere questa idea, e più ragioni per cui non sarebbe possibile aggiungerla a Bitcoin, ma per ora, speriamo che il lettore abbia una comprensione di come Monero elude molti dei problemi di Bitcoin e Bitcoin. i suoi derivati e come prevede di ampliare la propria produttività in futuro.</p>';
 
   @override
   String get knowledge250Sbblocks250Sbdescription => 'Ogni volta che le persone discutono dei problemi con la blockchain, una delle prime parole che apparirà sarà \"ridimensionamento\". Monero si distingue per risolvere questo problema.';
@@ -3551,7 +3551,7 @@ class I18nIt extends I18n {
   String get knowledge250Sbmining250Sb1250Sbtitle => 'Scopo';
 
   @override
-  String get knowledge250Sbmining250Sb2250Sbtext => 'Per il contesto, parliamo un po\' dell\'hardware di mining. I minatori usano i computer per fare il lavoro, ma sappiamo tutti che non tutti i computer sono fatti allo stesso modo. Alcuni computer sono abbastanza potenti da eseguire reti di intelligenza artificiale o giochi intensi, mentre altri hanno difficoltà anche con compiti semplici. Queste differenze nella potenza di calcolo influenzano anche l\'hash rate, ovvero la velocità con cui cercano soluzioni a blocchi. <br/><br/>\nMa anche queste differenze tra i computer impallidiscono rispetto ai tassi di hash dell\'hardware specializzato, altrimenti noto come ASIC (Application Specific Integrated Circuits), che superano i normali computer di diversi ordini di grandezza.<br/><br/>\nPrendiamoci del tempo per esplorare cosa rende gli ASIC così potenti. Immagina che tutti i computer cadano da qualche parte in uno spettro, che va dall\'essere in grado di fare molte cose, ma niente bene, al fare solo una cosa, ma farla molto bene. CPU e ASIC si trovano agli estremi opposti di questo spettro.<br/><br/>\nLe CPU che si trovano in tutti i computer standard sono alla prima estremità. Possono fare molte cose, come navigare sul Web, giocare o eseguire il rendering di video, ma non ne fanno nessuna particolarmente bene. Ma questa flessibilità va a discapito dell\'efficienza.<br/><br/>\nGli ASIC sono dall\'altra parte, dove possono fare solo una cosa, ma farlo a un ritmo incredibile. Possono eseguire solo una funzione matematica, ma poiché possono ignorare tutto il resto, i guadagni in termini di prestazioni sono astronomici. Questa efficienza, tuttavia, va a scapito della flessibilità, quindi se la funzione cambia anche leggermente - un esempio è x + y = z cambia in 2x + y = z - allora l\'ASIC cesserà di funzionare del tutto. <br/><br/>\nNon tutti possiedono un ASIC, ma tutti possiedono computer. Questo può portare a un vantaggio sleale.';
+  String get knowledge250Sbmining250Sb2250Sbtext => 'Per contesto, parliamo un po’ dell’hardware di mining. I minatori utilizzano i computer per svolgere il lavoro, ma sappiamo tutti che non tutti i computer sono uguali. Alcuni computer sono abbastanza potenti da gestire reti di intelligenza artificiale o giochi intensivi, mentre altri hanno difficoltà anche con compiti semplici. Queste differenze nella potenza di calcolo influiscono anche sull’hash rate, ovvero la velocità con cui cercano soluzioni a blocchi. <br/><br/>\nMa anche queste differenze tra computer impallidiscono in confronto ai tassi di hash dell\'hardware specializzato, altrimenti noto come circuiti integrati specifici per l\'applicazione (ASIC), che surclassano i normali computer di diversi ordini di grandezza.<br/><br/>\nPrendiamoci un po\' di tempo per esplorare ciò che rende gli ASIC così potenti. Immaginate che tutti i computer rientrino in uno spettro che va dall\'essere in grado di fare molte cose, ma niente bene, al fare solo una cosa, ma farla molto bene. CPU e ASIC si trovano agli estremi opposti di questo spettro.<br/><br/>\nLe CPU presenti in tutti i computer standard si trovano al primo posto. Possono fare molte cose, come navigare sul Web, giocare o eseguire il rendering di video, ma non ne fanno nessuna particolarmente bene. Ma questa flessibilità va a scapito dell\'efficienza.<br/><br/>\nGli ASIC sono dall\'altra parte, dove possono fare solo una cosa, ma lo fanno a una velocità incredibile. Possono eseguire solo una funzione matematica, ma poiché possono ignorare tutto il resto, i miglioramenti in termini di prestazioni sono astronomici. Questa efficienza, tuttavia, va a scapito della flessibilità, quindi se la funzione cambia anche leggermente – un esempio è x + y = z cambia in 2x + y = z – allora l\'ASIC cesserà di funzionare del tutto. <br/><br/>\nNon tutti possiedono un ASIC, ma tutti possiedono un computer. Ciò può portare ad un vantaggio ingiusto.';
 
   @override
   String get knowledge250Sbmining250Sb2250Sbtitle => 'sfondo';
@@ -3878,7 +3878,7 @@ class I18nIt extends I18n {
   String get knowledge250Sbscams250Sb3250Sbtitle => 'The Outright Scam';
 
   @override
-  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Il tuo seme Monero È il tuo Monero. Devi scriverlo quando crei un portafoglio per la prima volta, perché se perdi il seme, hai perso il tuo Monero e nessuno può aiutarti. MA devi anche tenere questo seme al sicuro dagli altri. Se qualcuno ruba il tuo seme, può inviare il Monero dal portafoglio come se fosse te e, ancora una volta, nessuno può recuperare questo denaro per te. Non c\'è più.</p>\n\n<p>Troppo spesso un individuo ha tenuto un portafoglio freddo di Monero, è stato curioso dei propri fondi e ha voluto controllarlo. Ma piuttosto che affrontare la seccatura di reinstallare l\'intera applicazione del portafoglio, decidono semplicemente di utilizzare un portafoglio web per ripristinare rapidamente il loro seme e guardare i loro soldi. Se cadono vittime della truffa Business Look Alike, l\'atto stesso di inserire il loro seme lo dà ai truffatori, che possono quindi spostare i soldi in un portafoglio diverso che controllano a loro piacimento.</p>\n\n<p> OGNI VOLTA che un sito, un\'applicazione o un portafoglio ha un\'opzione di \"ripristino con seed\", fai molta attenzione che l\'applicazione che stai utilizzando sia legittima. Controlla gli hash del programma (il sito Web di Monero ha istruzioni su come farlo) per assicurarti che il programma non sia stato manomesso da forze esterne e sii costantemente consapevole di dove e come esponi il tuo seme. Il doppio controllo può essere fastidioso, ma la perdita di fondi per disattenzione sarebbe ancora peggiore.</p>';
+  String get knowledge250Sbscams250Sb4250Sbtext => '<p>Il tuo seme Monero È il tuo Monero. Devi scriverlo quando crei un portafoglio per la prima volta, perché se perdi il tuo seme, hai perso il tuo Monero e nessuno può aiutarti. MA INOLTRE devi tenere questo seme al sicuro dagli altri. Se qualcuno ruba il tuo seme, può far uscire i Monero dal portafoglio come se fossi tu e, ancora una volta, nessuno potrà recuperare questi soldi per te. Non c\'è più.</p>\n\n<p>Troppo spesso un individuo ha tenuto un portafoglio freddo di Monero, era curioso dei propri fondi e voleva controllarli. Ma invece di dover affrontare il fastidio di reinstallare l’intera applicazione del portafoglio, decidono semplicemente di utilizzare un portafoglio web per ripristinare rapidamente il proprio seed e controllare i propri soldi. Se cadono vittime della truffa Business Look Alike, l\'atto stesso di inserire il loro seed lo dà ai truffatori, che possono quindi spostare i soldi su un portafoglio diverso che controllano a loro piacimento.</p>\n\n<p>OGNI VOLTA che un sito, un\'applicazione o un portafoglio dispone di un\'opzione di \"ripristino con seed\", fai molta attenzione che l\'applicazione che stai utilizzando sia legittima. Controlla gli hash del programma (il sito web di Monero contiene istruzioni su come farlo) per assicurarti che il programma non sia stato manomesso da forze esterne e sii costantemente consapevole di dove e come esponi il tuo seed. Il doppio controllo può essere fastidioso, ma la perdita di fondi per disattenzione sarebbe ancora peggiore.</p>';
 
   @override
   String get knowledge250Sbscams250Sb4250Sbtitle => 'Il ruolo del tuo seme Monero nelle truffe';
@@ -4585,7 +4585,7 @@ class I18nIt extends I18n {
   String get nojs250Sbtrade250Sbchat250Sbrefresh => 'Aggiorna';
 
   @override
-  String note250Sbbutton(Object username, Object val) {
+  String note250Sbbutton(Object username) {
     return 'Aggiungere una nota su $username';
   }
 
@@ -4598,7 +4598,7 @@ class I18nIt extends I18n {
   String get note250Sbinput250Sbplaceholder => 'Questa è una nota privata per il vostro riferimento, non sarà visibile a questo utente o a qualsiasi altro utente.';
 
   @override
-  String note250Sbtitle(Object username, Object val) {
+  String note250Sbtitle(Object username) {
     return 'La vostra nota su $username (vista solo da voi)';
   }
 
@@ -4773,7 +4773,7 @@ class I18nIt extends I18n {
   String get post8722Sbad250Sberror250Sbwallet8722Sbbalance => 'Saldo inferiore al minimo richiesto per questo tipo di annuncio';
 
   @override
-  String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit => 'Primo termine  ';
+  String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit => 'Primo limite temporale  ';
 
   @override
   String get post8722Sbad250Sbfirst8722Sbtime8722Sbxmr8722Sblimit8722Sbtip => 'Opzionale. Limita l\'importo max della transazione per gli utenti con cui non hai precedenti negoziazioni. Minimo 0.';
@@ -5338,7 +5338,7 @@ class I18nIt extends I18n {
   String get seo250Sbheadline8722Sb257Sbagoradesk => 'Una vera alternativa a LocalBitcoins e Paxful.';
 
   @override
-  String get seo250Sbtext8722Sb1 => 'Se sei preoccupato per l\'invasione della privacy, la migliore criptovaluta su cui investire è XMR. Monero è una moneta non rintracciabile sviluppata pensando alla privacy fin dal design.\n<br/>\nDove comprare Monero? LocalMonero è la piattaforma di trading Monero P2P più grande, affidabile e consolidata nella comunità XMR. Non abbiamo assegni KYC: puoi semplicemente acquistare Monero in modo anonimo senza verifica dell\'identità con PayPal, carta di credito, carta regalo, contanti per posta o convertire bitcoin in Monero: la nostra piattaforma supporta qualsiasi metodo di pagamento.';
+  String get seo250Sbtext8722Sb1 => 'Se sei preoccupato per l\'invasione della privacy, la migliore criptovaluta in cui investire è XMR. Monero è una moneta non tracciabile sviluppata pensando alla privacy fin dal design.\n<br/>\nDove acquistare Monero? LocalMonero è la piattaforma di trading P2P Monero più grande, affidabile e consolidata nella comunità XMR. Non abbiamo controlli KYC: puoi semplicemente acquistare Monero in modo anonimo senza verifica dell\'identità con PayPal, carta di credito, carta regalo, contanti per posta o convertire bitcoin in Monero: la nostra piattaforma supporta qualsiasi metodo di pagamento.';
 
   @override
   String get seo250Sbtext8722Sb157Sbagoradesk => 'Ti chiedi come investire in Bitcoin? Su AgoraDesk, l\'acquisto di bitcoin non è mai stato così facile: acquista immediatamente BTC da una persona utilizzando il tuo metodo di pagamento online preferito: PayPal, carta di credito / debito o bonifico bancario, carte regalo, Venmo o qualsiasi altro.\n<br/>\nSe vuoi acquistare bitcoin vicino a te con denaro contante, puoi trovare qualcuno disposto a vendere bitcoin localmente: la piattaforma di trading supporta l\'acquisto e la selezione di BTC con denaro contante. Puoi persino acquistare bitcoin usando contanti tramite posta.';
@@ -5869,7 +5869,7 @@ class I18nIt extends I18n {
 
   @override
   String start250Sbtitle(Object appName) {
-    return '$appName guide: come acquistare o vendere Monero';
+    return 'Guide $appName: come comprare o vendere Monero';
   }
 
   @override
@@ -6674,7 +6674,7 @@ class I18nIt extends I18n {
   String get verify8722Sbemail250Sbsuccess => 'Email verificata con successo!';
 
   @override
-  String get wallet250Sbclipboard8722Sbvirus8722Sbwarning => '<strong> Assicurati che l\'indirizzo che hai incollato sia lo stesso di quello che hai copiato! </strong> Alcuni utenti si sono visti rubare i loro fondi da <a style=\"text-decoration:underline;font-size:inherit;color:inherit\" href=\"https://reddit.com/r/Monero/comments/mcvuxc/beware_crypto_stealing_malware/\" target=\"_blank\">malware che sostituisce l\'indirizzo copiato negli appunti con quello dell\'attaccante</a>.';
+  String get wallet250Sbclipboard8722Sbvirus8722Sbwarning => '<strong> Assicurati che l\'indirizzo che hai incollato sia lo stesso dell\'indirizzo che hai copiato! </strong> Ad alcuni utenti sono stati rubati i fondi da <a style=\"text-decoration:underline;font-size:inherit;color:inherit\" href=\"https://web.archive.org/web/20220422235453/https://www.reddit.com/r/Monero/comments/mcvuxc/beware_crypto_stealing_malware/\" target=\"_blank\">malware che ha sostituito l\'indirizzo copiato negli appunti con l\'indirizzo dell\'aggressore</a>.';
 
   @override
   String get wallet250Sbdownload8722Sbcsv8722Sbbtn => 'Scarica CSV';
@@ -7127,7 +7127,7 @@ class I18nIt extends I18n {
 
   @override
   String wallet250Sbtx250Sbfee(Object assetName) {
-    return '$assetName commissione sulle transazioni di rete.';
+    return '$assetName commissione per transazione di rete.';
   }
 
   @override
@@ -7373,7 +7373,7 @@ class I18nIt extends I18n {
 
   @override
   String warn250Sbhigh8722Sbrisk8722Sbmethod8722Sb1(Object method, Object linebreak) {
-    return 'Anche se fai la dovuta diligenza e commerci solo con utenti affidabili, non c\'è alcuna garanzia che non finirai in una situazione di controversia $method. Ecco qualcosa che puoi fare per aumentare le tue possibilità: $linebreak  1. Richiedi 2 scansioni foto ID dell\'utente (ad esempio passaporto e patente di guida), assicurati che il nome dell\'account $method corrisponda all\'ID. $linebreak  2. Chiedi all\'utente di inviarti un\'e-mail dall\'account e-mail $method (forse anche digli di inserire l\'ID operazione e qualcosa sull\'operazione nell\'e-mail).$linebreak  3. Addebita premi molto alti per $method commercia. Ad esempio, 25% e oltre. In questo modo sarai coperto se 1 su 5 delle tue operazioni $method sono truffe (a parità di importo). $linebreak  4. Fai attenzione agli importi elevati degli scambi. Cerca prima di ottenere alcune negoziazioni di importo inferiore con un trader. $linebreak ';
+    return 'Anche se fai la dovuta diligenza e commerci solo con utenti affidabili, non vi è alcuna garanzia che non ti ritroverai in una situazione di controversia $method. Ecco qualcosa che puoi fare per aumentare le tue possibilità: $linebreak  1. Richiedi 2 scansioni del documento d\'identità con foto dell\'utente (ad esempio passaporto e patente di guida), assicurati che il nome dell\'account $method corrisponda al documento d\'identità. $linebreak  2. Chiedi all\'utente di inviarti un\'e-mail dall\'account e-mail $method (magari anche digli di inserire l\'ID commerciale e qualcosa relativo all\'operazione nell\'e-mail).$linebreak  3. Addebita premi molto elevati per $method commercia. Ad esempio, 25% e oltre. In questo modo sarai coperto se 1 su 5 delle tue transazioni $method sono truffe (a parità di importo commerciale). $linebreak  4. Diffidare degli importi commerciali elevati. Prova prima a ottenere alcune operazioni di importo inferiore con un trader. $linebreak ';
   }
 
   @override
@@ -7437,67 +7437,67 @@ class I18nIt extends I18n {
   }
 
   @override
-  String get devblog250Sbdescription => 'In questo blog il nostro team condivide alcune delle nostre intuizioni di sviluppo con coloro che sono interessati al lato tecnico delle cose.';
+  String get devblog250Sbdescription => 'In questo blog il nostro team condivide alcuni dei nostri approfondimenti sullo sviluppo con coloro che sono interessati al lato tecnico delle cose.';
 
   @override
-  String get devblog250Sbfdroid250Sb0250Sbtext => '<blockquote>\n<p>F-Droid è un catalogo installabile di applicazioni FOSS (Free and Open Source Software) per la piattaforma Android. Il client semplifica la navigazione, l\'installazione e il monitoraggio degli aggiornamenti sul dispositivo.\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\">Sito web F-Droid</a></p>\n</blockquote>\n\n<p>Tutti i passaggi di questo tutorial funzioneranno anche per un\'app senza sapori.</p>';
+  String get devblog250Sbfdroid250Sb0250Sbtext => '<blockquote>\n<p>F-Droid è un catalogo installabile di applicazioni FOSS (software gratuito e open source) per la piattaforma Android. Il client semplifica la navigazione, l\'installazione e il monitoraggio degli aggiornamenti sul tuo dispositivo.\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/\">Sito web F-Droid</a></p>\n</blockquote>\n\n<p>Tutti i passaggi di questo tutorial funzioneranno anche per un\'app senza caratteristiche.</p>';
 
   @override
-  String get devblog250Sbfdroid250Sb1250Sbtext => '<p>L\'app può essere inclusa in F-Droid solo se è completamente open source, comprese tutte le librerie e le dipendenze utilizzate. Ulteriori informazioni sulla politica di inclusione <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">qui</a>.</p>\n<p>Ad esempio, se utilizzi il database ObjectBox nella tua app, non può&#39;essere incluso in F-Droid (<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">discussione</a>).</p>';
+  String get devblog250Sbfdroid250Sb1250Sbtext => '<p>L\'app può essere inclusa in F-Droid solo se è completamente open source, comprese tutte le librerie e le dipendenze utilizzate. Scopri di più sulla politica di inclusione <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://f-droid.org/en/docs/Inclusion_Policy/\">qui</a>.</p>\n<p>Ad esempio, se utilizzi il database ObjectBox nella tua app, &#39;non può essere incluso in F-Droid (<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\"  href=\"https://gitlab.com/fdroid/fdroiddata/-/merge_requests/11973#note_1153656410\">discussione</a>).</p>';
 
   @override
   String get devblog250Sbfdroid250Sb1250Sbtitle => 'Quali app possono essere incluse in F-Droid?';
 
   @override
-  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>Fork <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">repository fdroiddata</a> su Gitlab.</li>\n<li>Clona il repository sul tuo dispositivo.</li>\n<li>Crea un ramo con l\'ID pacchetto dell\'app, ad esempio <code>co.localmonero.app</code></li>\n</ul>';
+  String get devblog250Sbfdroid250Sb2250Sbtext => '<ul>\n<li>Fork <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata\">repository fdroiddata</a> su Gitlab.</li>\n<li>Clona il repository sul tuo dispositivo.</li>\n<li>Crea un ramo con l\'ID bundle dell\'app, ad esempio <code>co.localmonero.app</code></li>\n</ul>';
 
   @override
   String get devblog250Sbfdroid250Sb2250Sbtitle => 'Passo 1';
 
   @override
-  String get devblog250Sbfdroid250Sb3250Sbtext => '<p>Verifica che <code>fdroid</code> funzioni correttamente. Esegui i seguenti comandi nella tua cartella <code>fdroid</code>:</p>\n<pre><code class=\"lang-sh\">fdroid init\nfdroid readmeta\n</code></pre>';
+  String get devblog250Sbfdroid250Sb3250Sbtext => '<p>Verifica che <code>fdroid</code> funzioni correttamente. Esegui i seguenti comandi nella cartella <code>fdroid</code>:</p>\n<pre><code class=\"lang-sh\">fdroid init\nreadmeta di Android\n</code></pre>';
 
   @override
   String get devblog250Sbfdroid250Sb3250Sbtitle => 'Passo 2';
 
   @override
-  String get devblog250Sbfdroid250Sb4250Sbtext => '<p>Aggiungi il tuo progetto:</p>\n<pre><code>fdroid import --url https://github.com/YOUR_REPO --subdir app\n</code></pre>\n<p>Creerà un file nella directory dei metadati, ad esempio <code>metadata/co.localmonero.app.yml</code>.\nPuoi anche creare questo file manualmente.</p>';
+  String get devblog250Sbfdroid250Sb4250Sbtext => '<p>Aggiungi il tuo progetto:</p>\n<pre><code>fdroid import --url https://github.com/YOUR_REPO --subdir app\n</code></pre>\n<p>Verrà creato un file nella directory dei metadati, ad esempio <code>metadata/co.localmonero.app.yml</code>.\nPuoi anche creare questo file manualmente.</p>';
 
   @override
   String get devblog250Sbfdroid250Sb4250Sbtitle => 'Passaggio 3';
 
   @override
-  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>Apri il file e modificalo. Ecco un esempio: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>Nell\'esempio puoi vedere:</p>\n<ol>\n<li>Flutter viene utilizzato come sottomodulo: questo è un requisito del team F-Droid.</li>\n<li>Per ogni versione abbiamo utilizzato un ramo separato (comando <code>AutoUpdateMode: Version %v-fdroid-lm</code>). Questo perché Fastlane&#39;non supporta i sapori con Flutter.</li>\n<li>La prima volta che aggiungiamo manualmente le informazioni sulla build, in futuro verranno aggiunte automaticamente da un bot, dopo aver inserito un nuovo tag.</li>\n</ol>\n<p>Verifica che il file abbia la sintassi corretta: <code>fdroid readmeta</code>.</p>';
+  String get devblog250Sbfdroid250Sb5250Sbtext => '<p>Apri il file e modificalo. Ecco un esempio: <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml\">https://gitlab.com/fdroid/fdroiddata/-/blob/master/metadata/co.localmonero.app.yml</a>.</p>\n<p>Nell\'esempio puoi vedere:</p>\n<ol>\n<li>Flutter viene utilizzato come sottomodulo: questo è un requisito del team F-Droid.</li>\n<li>Per ogni versione abbiamo utilizzato un ramo separato (comando <code>AutoUpdateMode: Versione %v-fdroid-lm</code>). Questo perché Fastlane&#39;non supporta i gusti con Flutter.</li>\n<li>La prima volta che aggiungiamo manualmente le informazioni sulla build, in futuro verranno aggiunte automaticamente da un bot, dopo aver inserito un nuovo tag.</li>\n</ol>\n<p>Verifica che il file abbia la sintassi corretta: <code>fdroid readmeta</code>.</p>';
 
   @override
   String get devblog250Sbfdroid250Sb5250Sbtitle => 'Passaggio 4';
 
   @override
-  String get devblog250Sbfdroid250Sb6250Sbtext => '<p>Ora, aggiungiamo i dati per il mercato degli F-Droid. Per questo creiamo un ramo separato per ogni sapore:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n</ul>\n<p>Successivamente, creiamo una cartella per Fastlane:\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a>.</p>\n<p>Aggiungi i dati richiesti e inviali.</p>';
+  String get devblog250Sbfdroid250Sb6250Sbtext => '<p>Ora aggiungiamo i dati per il mercato F-Droid. Per questo creiamo un ramo separato per ogni gusto:</p>\n<ul>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad</a></li>\n<li><a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_lm</a></li>\n</ul>\n<p>Successivamente creiamo una cartella per Fastlane:\n<a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US\">https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/tree/fdroid_ad/fastlane/metadata/android/en-US</a>.</p>\n<p>Aggiungi i dati richiesti ed esegui il push.</p>';
 
   @override
   String get devblog250Sbfdroid250Sb6250Sbtitle => 'Passaggio 5';
 
   @override
-  String get devblog250Sbfdroid250Sb7250Sbtext => '<p>È ora di aggiungere l\'app a F-Droid.</p>\n<ol>\n<li>Crea un tag nel repository dell\'app.</li>\n<li>Invia le modifiche al repository F-Droid su Gitlab.</li>\n<li>Fai una richiesta di unione nel repository Gitlab. Usa l\'ID della tua app nel titolo.</li>\n<li>Aspetta una recensione dal team di F-Droid.</li>\n</ol>';
+  String get devblog250Sbfdroid250Sb7250Sbtext => '<p>È ora di aggiungere l\'app a F-Droid.</p>\n<ol>\n<li>Crea un tag nel repository dell\'app.</li>\n<li>Invia le modifiche al repository F-Droid su Gitlab.</li>\n<li>Effettua una richiesta di unione nel repository Gitlab. Utilizza l\'ID della tua app nel titolo.</li>\n<li>Attendi una revisione da parte del team F-Droid.</li>\n</ol>';
 
   @override
   String get devblog250Sbfdroid250Sb7250Sbtitle => 'Passaggio 6';
 
   @override
-  String get devblog250Sbfdroid250Sb8250Sbtext => '<p>Il processo è un po\' complicato e potrebbero sorgere diversi problemi lungo il percorso. Tuttavia, una volta configurato l\'elemento della configurazione, i seguenti aggiornamenti verranno gestiti automaticamente.</p>\n<p>In caso di domande, non esitare a porle sul nostro <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHub</a>.</p>';
+  String get devblog250Sbfdroid250Sb8250Sbtext => '<p>Il processo è un po\' complicato e potrebbero sorgere diversi problemi lungo il percorso. Ma una volta configurato il CI, i seguenti aggiornamenti verranno gestiti automaticamente.</p>\n<p>Se hai domande, non esitare a farle sul nostro <a class=\"next-link\" target=\"_blank\" rel=\"noopener nofollow\" href=\"https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/\">GitHub</a>.</p>';
 
   @override
   String get devblog250Sbfdroid250Sb8250Sbtitle => 'Conclusione';
 
   @override
-  String get devblog250Sbfdroid250Sbdescription => 'F-Droid è un ottimo catalogo di app FOSS per Android, ma aggiungere la tua app potrebbe essere un po\' complicato...';
+  String get devblog250Sbfdroid250Sbdescription => 'F-Droid è un fantastico catalogo di app FOSS per Android, ma aggiungere la tua app potrebbe essere un po\' complicato...';
 
   @override
   String get devblog250Sbfdroid250Sbtitle => 'Come pubblicare la tua app Flutter con sapori su F-Droid?';
 
   @override
-  String get devblog250Sbtitle => 'Blog di sviluppo';
+  String get devblog250Sbtitle => 'Blog sullo sviluppo';
 
   @override
   String get address8722Sbbook250Sbadd8722Sbnew8722Sbbtn => 'Aggiungi indirizzo';
@@ -7509,22 +7509,22 @@ class I18nIt extends I18n {
   String get address8722Sbbook250Sbconfirm8722Sbdeletion => 'Vuoi eliminare questo indirizzo?';
 
   @override
-  String get address8722Sbbook250Sbdescription => 'Ogni volta che devi fornire un indirizzo, potrai selezionarne rapidamente uno salvato qui';
+  String get address8722Sbbook250Sbdescription => 'Ogni volta che dovrai fornire un indirizzo, potrai selezionarne rapidamente uno salvato qui';
 
   @override
-  String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => 'Etichetta (opzionale)';
+  String get address8722Sbbook250Sblabel8722Sbinput250Sblabel => 'Etichetta (facoltativa)';
 
   @override
   String get address8722Sbbook250Sbsave8722Sbbtn => 'Salva';
 
   @override
-  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => 'Salva questo indirizzo per un uso futuro';
+  String get address8722Sbbook250Sbsave8722Sbfor8722Sbfuture => 'Salva questo indirizzo per uso futuro';
 
   @override
   String get error250Sbaddress8722Sbbook250Sb270 => 'Questo indirizzo esiste già nella tua rubrica.';
 
   @override
-  String get error250Sbaddress8722Sbbook250Sb273 => 'Questo indirizzo è già stato cancellato dalla tua rubrica.';
+  String get error250Sbaddress8722Sbbook250Sb273 => 'Questo indirizzo è già stato eliminato dalla tua rubrica.';
 
   @override
   String get address8722Sbbook => 'Rubrica';
@@ -7537,11 +7537,11 @@ class I18nIt extends I18n {
 
   @override
   String dashboard250Sbwarning250Sbcc8722Sbshould8722Sbbe8722Sbglobal(Object timeRemaining) {
-    return 'Tutti gli annunci di criptovaluta vengono ora spostati nella nuova categoria di paesi \"globale (codice XX)\". Tutti gli annunci di criptovaluta duplicati che differiscono solo per paese verranno eliminati $timeRemaining. Assicurati di avere UN SOLO annuncio di criptovaluta per valuta, altrimenti tutti gli annunci pubblicati in quella valuta verranno eliminati, mentre l\'annuncio rimanente verrà spostato nella categoria Paese \"globale\".';
+    return 'Tutti gli annunci di criptovaluta verranno ora spostati nella nuova categoria di paesi \"globale (codice XX)\". Tutti gli annunci di criptovaluta duplicati che differiscono solo per paese verranno eliminati $timeRemaining. Assicurati di avere UN SOLO annuncio di criptovaluta per valuta, altrimenti tutti gli annunci pubblicati in quella valuta tranne quello più recente verranno eliminati, mentre l\'annuncio rimanente verrà spostato nella categoria Paese \"globale\".';
   }
 
   @override
-  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Quando premi \"Salva\", il paese dell\'annuncio verrà automaticamente aggiornato a \"globale\".';
+  String get edit8722Sbad250Sbno8722Sbglobal8722Sbcountrycode8722Sbfor8722Sbcryptocurrency8722Sbad => 'Quando premi \"Salva\", il Paese dell\'annuncio verrà aggiornato automaticamente a \"globale\".';
 
   @override
   String get dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsame8722Sbasset8722Sbsells => 'Solo annunci di vendita dello stesso asset';
@@ -7553,6 +7553,40 @@ class I18nIt extends I18n {
   String dashboard250Sbads250Sbbulk8722Sbedit250Sbgroup250Sbsingle8722Sbasset8722Sbbuys(Object asset) {
     return '$asset acquista solo annunci';
   }
+
+  @override
+  String error250Sbtrade8722Sbrequest250Sb363(Object cakeLink, Object monerujoLink, Object featherLink) {
+    return 'Hai fornito un indirizzo ricevuto da un commerciante che non ha aggiornato il formato dell\'indirizzo (indirizzo integrato). Configura il tuo portafoglio su un\'app come $cakeLink, $monerujoLink o $featherLink e fornisci invece quell\'indirizzo.';
+  }
+
+  @override
+  String get error250Sbtrade8722Sbrequest250Sb364 => 'Il proprietario di questo annuncio non ha specificato un indirizzo di residenza. Contattali e digli di aggiornare il loro annuncio o di trovare un altro acquirente.';
+
+  @override
+  String notification250Sbtrade8722Sbfunded(Object tradeId, Object username) {
+    return 'Lo scambio $tradeId è stato accettato da $username';
+  }
+
+  @override
+  String get web8722Sbnotification250Sbtrade8722Sbfunded => 'Uno scambio è stato accettato';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbtrade8722Sbsend => 'Invio commerciale';
+
+  @override
+  String get wallet250Sbtxs250Sbfilter250Sbtype250Sbnon8722Sbtrade8722Sbsend => 'Invio non commerciale';
+
+  @override
+  String get address250Sbvalidation250Sbgeneric => 'Indirizzo non valido';
+
+  @override
+  String get address250Sbvalidation250Sbtaproot8722Sbdisallowed => 'Gli indirizzi taproot non sono consentiti';
+
+  @override
+  String get reputation8722Sbimport250Sbstep250Sbcode250Sbmessage250Sbpaxful => 'Inserisci il codice come etichetta su una delle tue offerte, in modo che sia visibile sul tuo profilo pubblico. Una volta verificato il codice, potrai rimuoverlo.';
+
+  @override
+  String get trade250Sbwarning250Sbconfirmations => 'Non finalizzare finché il tx dell\'acquirente non avrà conferme! Si è verificata un\'ondata di truffe in cui una transazione non confermata viene annullata dopo la finalizzazione da parte del venditore.';
 
   @override
   String get ads => 'Annunci';
@@ -7682,7 +7716,7 @@ class I18nIt extends I18n {
 
   @override
   String ads_enter_verify_address(Object appName) {
-    return 'Inserisci e verifica il tuo indirizzo a cui verranno inviate le monete. Non può essere un indirizzo $appName interno.';
+    return 'Inserisci e verifica il tuo indirizzo a cui verranno inviate le monete. Non può essere un indirizzo interno $appName.';
   }
 
   @override
@@ -7882,7 +7916,7 @@ class I18nIt extends I18n {
   String get api_error_13 => 'Qualcosa è andato storto nella richiesta. Molto probabilmente si tratta di un problema di convalida. Controllare i parametri della richiesta e, se ancora non è corretto, contattare il nostro supporto.';
 
   @override
-  String get api_error_49 => 'La vecchia password fornita nella richiesta di modifica della password non corrisponde alla password attuale';
+  String get api_error_49 => 'La vecchia password fornita nella richiesta di modifica della password non corrisponde alla password corrente';
 
   @override
   String get api_error_60 => 'La password fornita per la modifica dell\'e-mail non è corretta';
@@ -7906,10 +7940,10 @@ class I18nIt extends I18n {
   String get api_error_77 => 'Fondi insufficienti per effettuare il trasferimento interno per l\'importo richiesto';
 
   @override
-  String get api_error_103 => 'Richiesta di scambio per l\'annuncio il cui poster è in vendita per le vacanze';
+  String get api_error_103 => 'Richiesta di scambio per l\'annuncio il cui inserzionista sta vendendo vacanze';
 
   @override
-  String get api_error_105 => 'Il poster dell\'annuncio per il quale viene richiesto lo scambio non ha un saldo sufficiente per finanziare l\'escrow';
+  String get api_error_105 => 'Il poster dell\'annuncio per il quale viene richiesta la transazione non ha abbastanza saldo per finanziare il deposito a garanzia';
 
   @override
   String get api_error_107 => 'Cercare di tracciare la liquidità senza impostare il maxAmount';
@@ -7921,7 +7955,7 @@ class I18nIt extends I18n {
   String get api_error_138 => 'Tentativo di convalidare 2FA fornendo un OTP errato';
 
   @override
-  String get api_error_139 => 'Password o OTP non corretti durante il tentativo di disabilitare 2FA';
+  String get api_error_139 => 'Password o OTP errati durante il tentativo di disabilitare 2FA';
 
   @override
   String get api_error_140 => 'OTP non corretto quando si tenta di prelevare monete dal portafoglio';
@@ -7990,10 +8024,10 @@ class I18nIt extends I18n {
   String get api_error_238 => 'Livello di commissione non specificato per il prelievo esterno di Bitcoin';
 
   @override
-  String get api_error_239 => 'Password errata durante il tentativo di rilasciare uno scambio';
+  String get api_error_239 => 'Password errata quando si tenta di rilasciare un\'operazione';
 
   @override
-  String get api_error_243 => 'L\'indirizzo interno di AgoraDesk non può essere utilizzato per il regolamento degli scambi. Inserisci un indirizzo XMR esterno, non AgoraDesk per continuare.';
+  String get api_error_243 => 'L\'indirizzo interno di AgoraDesk non può essere utilizzato per la liquidazione commerciale. Inserisci un indirizzo XMR esterno, non AgoraDesk, per continuare.';
 
   @override
   String get api_error_254 => 'Tentativo di inviare un prelievo a un indirizzo e importo identici negli ultimi 10 minuti';
@@ -8002,13 +8036,13 @@ class I18nIt extends I18n {
   String get api_error_260 => 'Tentativo di pubblicare una nota su un utente che non esiste';
 
   @override
-  String get api_error_261 => 'Tentativo di pubblicare una nota sul proprio account';
+  String get api_error_261 => 'Tentativo di pubblicare una nota sul tuo account';
 
   @override
   String get api_error_262 => 'Tentativo di ottenere una nota su un utente che non esiste';
 
   @override
-  String get api_error_263 => 'Tentativo di ottenere una nota sul proprio account';
+  String get api_error_263 => 'Tentativo di ottenere una nota sul tuo account';
 
   @override
   String get api_error_264 => 'Tentativo di eliminare una nota su un utente che non esiste';
@@ -8029,31 +8063,31 @@ class I18nIt extends I18n {
   String get api_error_4001 => 'Timeout della connessione, controllare la connessione a Internet.';
 
   @override
-  String get api_error_45 => 'Non puoi avere sia \"first_time_limit_asset\" che \"first_time_limit_TICKER\" nella tua richiesta. Rimuovere uno di loro (sono intercambiabili).';
+  String get api_error_45 => 'Non puoi avere sia \"first_time_limit_asset\" che \"first_time_limit_TICKER\" nella tua richiesta. Rimuovine uno (sono intercambiabili).';
 
   @override
-  String get api_error_46 => 'La richiesta deve contenere O un corpo della richiesta application/json con un parametro \"msg\" OPPURE un corpo della richiesta multipart/form-data con il file immagine elencato sotto il parametro \"document\"';
+  String get api_error_46 => 'La richiesta deve contenere SIA un corpo della richiesta application/json con un parametro \"msg\" OPPURE un corpo della richiesta multipart/form-data con il file immagine elencato sotto il parametro \"document\"';
 
   @override
   String get api_error_47 => 'L\'utente con quel nome utente esiste già';
 
   @override
-  String get api_error_48 => 'L\'utente con quell\'indirizzo email esiste già';
+  String get api_error_48 => 'L\'utente con quell\'e-mail esiste già';
 
   @override
-  String get api_error_50 => 'Tentativo di inviare un\'e-mail a un utente senza un\'e-mail impostata';
+  String get api_error_50 => 'Tentativo di inviare un\'e-mail a un utente senza un indirizzo e-mail impostato';
 
   @override
-  String get api_error_51 => 'Il token fornito per la verifica dell\'e-mail viene fornito a un utente che non esiste';
+  String get api_error_51 => 'Il token fornito per la verifica dell\'e-mail viene assegnato a un utente che non esiste';
 
   @override
-  String get api_error_52 => 'Il token fornito per la verifica dell\'email non è valido';
+  String get api_error_52 => 'Il token fornito per la verifica email non è valido';
 
   @override
   String get api_error_53 => 'L\'e-mail nel token non corrisponde all\'e-mail corrente nel database';
 
   @override
-  String get api_error_54 => 'Il token fornito per la reimpostazione della password viene fornito a un\'e-mail che non esiste nel database';
+  String get api_error_54 => 'Il token fornito per la reimpostazione della password viene assegnato a un messaggio di posta elettronica che non esiste nel database';
 
   @override
   String get api_error_55 => 'Il token fornito per la reimpostazione della password non è valido';
@@ -8065,31 +8099,31 @@ class I18nIt extends I18n {
   String get api_error_57 => 'Il token fornito per la reimpostazione della password non è un token di reimpostazione';
 
   @override
-  String get api_error_58 => 'Tentativo di inviare un\'e-mail di reimpostazione della password a un utente con un\'e-mail non verificata';
+  String get api_error_58 => 'Tentativo di inviare un\'e-mail di reimpostazione della password a un utente con un indirizzo e-mail non verificato';
 
   @override
   String get api_error_59 => 'Tentativo di reimpostare una password per un utente con un indirizzo email non verificato';
 
   @override
-  String get api_error_62 => 'Non esiste alcun account con il nome utente fornito per la richiesta di dati pubblici dell\'account';
+  String get api_error_62 => 'Non esiste alcun account con il nome utente fornito per la richiesta dei dati pubblici dell\'account';
 
   @override
-  String get api_error_63 => 'Tentativo di caricare file di un tipo proibito';
+  String get api_error_63 => 'Tentativo di caricare un file di tipo proibito';
 
   @override
-  String get api_error_64 => 'Tentativo di contrassegnare come letta una notifica inesistente';
+  String get api_error_64 => 'Tentativo di contrassegnare una notifica inesistente come letta';
 
   @override
-  String get api_error_65 => 'Tentativo di contrassegnare come letta una notifica già letta';
+  String get api_error_65 => 'Tentativo di contrassegnare una notifica già letta come letta';
 
   @override
-  String get api_error_66 => 'Tentativo di caricare un allegato di chat per fare trading che non esiste';
+  String get api_error_66 => 'Tentativo di caricare un allegato chat per un\'operazione che non esiste';
 
   @override
-  String get api_error_67 => 'Tentativo di inviare un messaggio di chat a uno scambio che non esiste';
+  String get api_error_67 => 'Tentativo di inviare un messaggio di chat a un\'operazione che non esiste';
 
   @override
-  String get api_error_68 => 'Tentativo di ottenere un elenco di scambi di messaggi di chat che non esiste';
+  String get api_error_68 => 'Tentativo di ottenere l\'elenco dei messaggi di chat relativi agli scambi che non esiste';
 
   @override
   String get api_error_69 => 'Tentativo di ricevere un messaggio di chat che non esiste';
@@ -8104,19 +8138,19 @@ class I18nIt extends I18n {
   String get api_error_72 => 'Tentativo di prelevare fondi da un conto che non esiste';
 
   @override
-  String get api_error_78 => 'Tentativo di ottenere annunci con una combinazione di parametri non valida';
+  String get api_error_78 => 'Tentativo di visualizzare annunci con una combinazione di parametri non valida';
 
   @override
   String get api_error_79 => 'L\'ID annuncio richiesto non esiste';
 
   @override
-  String get api_error_80 => 'Non sono state impostate sia lat che lon nella richiesta di aggiornamento/creazione dell\'annuncio';
+  String get api_error_80 => 'Non ho impostato sia la lat che la lon nella richiesta di aggiornamento/creazione dell\'annuncio';
 
   @override
   String get api_error_81 => 'Non ho impostato la formula del prezzo durante la pubblicazione dell\'annuncio';
 
   @override
-  String get api_error_82 => 'Tentativo di impostare latitudine e longitudine per un annuncio online';
+  String get api_error_82 => 'Sto cercando di impostare lat e lon per un annuncio online';
 
   @override
   String get api_error_83 => 'Tentativo di impostare proprietà specifiche di ONLINE_SELL/CALL_SELL/PUT_BUY su un diverso tipo di annuncio';
@@ -8128,22 +8162,22 @@ class I18nIt extends I18n {
   String get api_error_85 => 'Tentativo di impostare proprietà specifiche di LOCAL_SELL su un diverso tipo di annuncio';
 
   @override
-  String get api_error_86 => 'Tentativo di impostare un paese o un metodo di pagamento o una valuta non validi durante la creazione/aggiornamento dell\'annuncio';
+  String get api_error_86 => 'Tentativo di impostare un Paese, un metodo di pagamento o una valuta non valida durante la creazione/aggiornamento dell\'annuncio';
 
   @override
-  String get api_error_87 => 'Tentativo di impostare un metodo di pagamento non valido per quel paese durante la creazione/aggiornamento dell\'annuncio';
+  String get api_error_87 => 'Tentativo di impostare un metodo di pagamento non valido per quel Paese durante la creazione/aggiornamento dell\'annuncio';
 
   @override
   String get api_error_88 => 'Tentativo di impostare una valuta non valida per quel metodo di pagamento durante la creazione/aggiornamento dell\'annuncio';
 
   @override
-  String get api_error_89 => 'Tentativo di creare un annuncio LOCAL_* senza impostare long/lat';
+  String get api_error_89 => 'Tentativo di creare un annuncio LOCAL_* senza impostare lon/lat';
 
   @override
-  String get api_error_90 => 'Tentativo di accedere alle negoziazioni di un utente che non esiste.';
+  String get api_error_90 => 'Tentativo di accedere alle operazioni di un utente che non esiste.';
 
   @override
-  String get api_error_91 => 'Tentativo di accedere ai dati pubblici dell\'account utilizzando un token di un utente che non esiste';
+  String get api_error_91 => 'Tentativo di accesso ai dati pubblici dell\'account utilizzando un token di un utente che non esiste';
 
   @override
   String get api_error_92 => 'Tentativo di ricevere notifiche per un utente che non esiste';
@@ -8152,52 +8186,52 @@ class I18nIt extends I18n {
   String get api_error_93 => 'Tentativo di ottenere depositi in sospeso per un utente che non esiste';
 
   @override
-  String get api_error_94 => 'Cercando di ottenere un punteggio di feedback per l\'utente che non esiste';
+  String get api_error_94 => 'Tentativo di ottenere un punteggio di feedback per l\'utente che non esiste';
 
   @override
-  String get api_error_95 => 'Cercando di ottenere annunci per utenti che non esistono';
+  String get api_error_95 => 'Tentativo di ottenere annunci per un utente che non esiste';
 
   @override
-  String get api_error_96 => 'Utente inesistente che cerca di creare uno scambio';
+  String get api_error_96 => 'Utente inesistente che tenta di creare uno scambio';
 
   @override
-  String get api_error_97 => 'Cercando di creare uno scambio per un annuncio che non esiste';
+  String get api_error_97 => 'Tentativo di creare uno scambio per un annuncio che non esiste';
 
   @override
   String get api_error_98 => 'Cercando di creare uno scambio per un annuncio il cui poster non esiste';
 
   @override
-  String get api_error_99 => 'Tentativo di richiedere un importo superiore a quello consentito dal proprietario dell\'annuncio durante la creazione di un primo scambio';
+  String get api_error_99 => 'Tentativo di richiedere un importo superiore a quello consentito dal proprietario dell\'annuncio durante la creazione della prima operazione';
 
   @override
-  String get api_error_100 => 'Non è possibile richiedere meno di 0,0000000001 XMR per la creazione dell\'operazione';
+  String get api_error_100 => 'Non è possibile richiedere meno di 0,0000000001 XMR per la creazione dello scambio';
 
   @override
-  String get api_error_101 => 'L\'importo richiesto è inferiore al min_amount dell\'annuncio durante la creazione dell\'operazione';
+  String get api_error_101 => 'L\'importo richiesto è inferiore al min_amount dell\'annuncio durante la creazione dello scambio';
 
   @override
   String get api_error_102 => 'L\'importo richiesto è superiore al max_amount_available dell\'annuncio durante la creazione dello scambio';
 
   @override
-  String get api_error_104 => 'Richiesta di scambio per annuncio il cui inserzionista sta acquistando una vacanza';
+  String get api_error_104 => 'Richiesta di scambio per l\'annuncio il cui inserzionista sta acquistando una vacanza';
 
   @override
-  String get api_error_106 => 'Il richiedente dello scambio non ha un saldo sufficiente per finanziare la richiesta di scambio';
+  String get api_error_106 => 'Il richiedente dello scambio non ha saldo sufficiente per finanziare la richiesta di scambio';
 
   @override
   String get api_error_108 => 'minAmount non può essere uguale o maggiore di maxAmount';
 
   @override
-  String get api_error_109 => 'L\'importo richiesto è superiore al maxAmount dell\'annuncio durante la creazione dello scambio';
+  String get api_error_109 => 'L\'importo richiesto è superiore all\'importo massimo dell\'annuncio durante la creazione dello scambio';
 
   @override
-  String get api_error_110 => 'Il richiedente commerciale ha un punteggio di feedback inferiore a quello richiesto dal poster';
+  String get api_error_110 => 'Il richiedente dell\'operazione ha un punteggio di feedback inferiore a quello richiesto dall\'inserzionista';
 
   @override
-  String get api_error_111 => 'L\'importo richiesto non è uno degli importi accettati, vedi limit_to_fiat_amounts';
+  String get api_error_111 => 'L\'importo richiesto non è uno degli importi accettati, vedere limit_to_fiat_amounts';
 
   @override
-  String get api_error_112 => 'Non puoi richiedere uno scambio per un annuncio che hai pubblicato tu stesso';
+  String get api_error_112 => 'Non è possibile richiedere uno scambio per un annuncio pubblicato da te';
 
   @override
   String get api_error_113 => 'Impossibile impostare paymentWindowMinutes su <15 o >90 durante l\'aggiornamento dell\'annuncio';
@@ -8206,25 +8240,25 @@ class I18nIt extends I18n {
   String get api_error_114 => 'Impossibile impostare paymentWindowMinutes su <15 o >90 durante la creazione dell\'annuncio';
 
   @override
-  String get api_error_115 => 'Il commercio con l\'ID richiesto non esiste';
+  String get api_error_115 => 'Il commercio in base all\'ID richiesto non esiste';
 
   @override
   String get api_error_116 => 'L\'utente che richiede lo scambio non esiste';
 
   @override
-  String get api_error_117 => 'La valuta per la quale è stato richiesto il cambio non esiste';
+  String get api_error_117 => 'La valuta per la quale è stato richiesto il tasso di cambio non esiste';
 
   @override
   String get api_error_118 => 'L\'utente che richiede il finanziamento del commercio non esiste';
 
   @override
-  String get api_error_119 => 'Tentare di finanziare uno scambio che non esiste';
+  String get api_error_119 => 'Tentativo di finanziare un commercio che non esiste';
 
   @override
-  String get api_error_120 => 'L\'utente che richiede l\'escrow of trade non esiste';
+  String get api_error_120 => 'L\'utente che richiede il deposito a garanzia dell\'operazione non esiste';
 
   @override
-  String get api_error_121 => 'Tentativo di depositare in garanzia un commercio che non esiste';
+  String get api_error_121 => 'Tentare di depositare in garanzia un\'operazione che non esiste';
 
   @override
   String get api_error_122 => 'Fondi insufficienti per finanziare un\'operazione';
@@ -8233,46 +8267,46 @@ class I18nIt extends I18n {
   String get api_error_123 => 'Fondi insufficienti per finanziare un\'operazione';
 
   @override
-  String get api_error_124 => 'Errore durante il finanziamento di uno scambio';
+  String get api_error_124 => 'Errore durante il finanziamento di un\'operazione';
 
   @override
   String get api_error_125 => 'L\'utente che richiede l\'annullamento dell\'operazione non esiste';
 
   @override
-  String get api_error_126 => 'Tentativo di annullare uno scambio che non esiste';
+  String get api_error_126 => 'Tentativo di annullare un\'operazione che non esiste';
 
   @override
-  String get api_error_127 => 'L\'utente che richiede il pagamento dell\'operazione non esiste';
+  String get api_error_127 => 'L\'utente che richiede il pagamento della transazione non esiste';
 
   @override
-  String get api_error_128 => 'Il tentativo di contrassegnare un\'operazione che non esiste è stato pagato';
+  String get api_error_128 => 'Tentativo di contrassegnare come pagato un\'operazione che non esiste';
 
   @override
-  String get api_error_129 => 'L\'utente che richiede l\'autorizzazione allo scambio non esiste';
+  String get api_error_129 => 'L\'utente che richiede il rilascio dell\'operazione non esiste';
 
   @override
-  String get api_error_130 => 'Tentativo di rilasciare uno scambio che non esiste';
+  String get api_error_130 => 'Tentativo di rilasciare un\'operazione che non esiste';
 
   @override
-  String get api_error_131 => 'L\'utente che richiede la contestazione commerciale non esiste';
+  String get api_error_131 => 'L\'utente che richiede la controversia commerciale non esiste';
 
   @override
-  String get api_error_132 => 'Tentare di contestare un commercio che non esiste';
+  String get api_error_132 => 'Tentativo di contestare un’operazione che non esiste';
 
   @override
   String get api_error_133 => 'Tentativo di ottenere feedback da un utente che non esiste';
 
   @override
-  String get api_error_134 => 'Tentativo di creare un annuncio quando l\'utente dispone già del numero massimo consentito di annunci';
+  String get api_error_134 => 'Tentativo di creare un annuncio quando l\'utente ha già il numero massimo consentito di annunci';
 
   @override
   String get api_error_135 => 'In qualche modo maxAmount è impostato su null mentre trackingMaxAmount è impostato su true';
 
   @override
-  String get api_error_136 => 'Tentativo di pubblicare un annuncio con saldo inferiore al saldo minimo richiesto.';
+  String get api_error_136 => 'Tentativo di pubblicare un annuncio con un saldo inferiore al saldo minimo richiesto.';
 
   @override
-  String get api_error_141 => 'Tentativo di creare uno scambio per un importo inferiore all\'importo minimo consentito';
+  String get api_error_141 => 'Tentativo di creare un\'operazione per un importo inferiore all\'importo minimo consentito';
 
   @override
   String get api_error_142 => 'Tentativo di impostare un limite fiat inferiore a minAmount durante la creazione dell\'annuncio';
@@ -8287,7 +8321,7 @@ class I18nIt extends I18n {
   String get api_error_145 => 'Tentativo di impostare un limite fiat superiore a maxAmount durante l\'aggiornamento dell\'annuncio';
 
   @override
-  String get api_error_147 => 'Tentativo di ottenere dati di affiliazione per utenti che non hanno il programma di affiliazione abilitato';
+  String get api_error_147 => 'Tentativo di ottenere dati di affiliazione per un utente che non ha abilitato il programma di affiliazione';
 
   @override
   String get api_error_148 => 'Tentativo di impostare un ID telegramma già impostato';
@@ -8296,7 +8330,7 @@ class I18nIt extends I18n {
   String get api_error_149 => 'Priorità non specificata per ritiro esterno';
 
   @override
-  String get api_error_150 => 'Tentativo di avviare uno scambio su un annuncio in cui l\'utente richiedente è bloccato dall\'inserzionista';
+  String get api_error_150 => 'Tentativo di avviare uno scambio su un annuncio in cui l\'utente richiedente viene bloccato dall\'inserzionista';
 
   @override
   String get api_error_151 => 'Tentativo di avviare uno scambio su un annuncio in cui l\'utente richiedente non è considerato attendibile dall\'inserzionista';
@@ -8305,58 +8339,58 @@ class I18nIt extends I18n {
   String get api_error_152 => 'Tentativo di annullare un\'operazione già chiusa';
 
   @override
-  String get api_error_153 => 'Tentativo di rilasciare uno scambio che è già chiuso';
+  String get api_error_153 => 'Tentativo di rilasciare un\'operazione già chiusa';
 
   @override
-  String get api_error_154 => 'Tentativo di richiedere scambi per un account che non esiste';
+  String get api_error_154 => 'Tentativo di richiedere operazioni per un conto che non esiste';
 
   @override
-  String get api_error_155 => 'Tentativo di ottenere un elenco di utenti fidati per un utente che non esiste';
+  String get api_error_155 => 'Tentativo di ottenere un elenco di utenti attendibili per un utente che non esiste';
 
   @override
   String get api_error_156 => 'Tentativo di ottenere l\'elenco degli utenti bloccati per un utente che non esiste';
 
   @override
-  String get api_error_157 => 'Tentativo di impostare proprietà specifiche dell\'opzione per un annuncio non opzionale';
+  String get api_error_157 => 'Tentativo di impostare proprietà specifiche dell\'opzione per un annuncio senza opzione';
 
   @override
-  String get api_error_158 => 'Tentativo di creare un annuncio opzionale senza impostare proprietà specifiche dell\'opzione';
+  String get api_error_158 => 'Tentativo di creare un annuncio con opzione senza impostare proprietà specifiche dell\'opzione';
 
   @override
-  String get api_error_159 => 'L\'utente che richiede di contrassegnare il pagamento premium del commercio non esiste';
+  String get api_error_159 => 'L\'utente che richiede di contrassegnare il pagamento del premio commerciale non esiste';
 
   @override
-  String get api_error_160 => 'Tentativo di contrassegnare il premio pagato per uno scambio che non esiste';
+  String get api_error_160 => 'Tentativo di contrassegnare il premio pagato per un\'operazione che non esiste';
 
   @override
   String get api_error_161 => 'L\'utente che richiede di esercitare l\'opzione non esiste';
 
   @override
-  String get api_error_162 => 'Tentativo di esercitare un\'opzione per uno scambio che non esiste';
+  String get api_error_162 => 'Tentativo di esercitare un\'opzione per un\'operazione che non esiste';
 
   @override
-  String get api_error_163 => 'L\'utente che richiede di confermare il pagamento premium dell\'operazione non esiste';
+  String get api_error_163 => 'L\'utente che richiede di confermare il pagamento del premio commerciale non esiste';
 
   @override
-  String get api_error_164 => 'Tentativo di confermare il premio pagato per uno scambio che non esiste';
+  String get api_error_164 => 'Tentativo di confermare il premio pagato per un\'operazione che non esiste';
 
   @override
-  String get api_error_165 => 'L\'utente che richiede di esercitare il commercio con liquidazione netta non esiste';
+  String get api_error_165 => 'L\'utente che richiede di esercitare l\'operazione con liquidazione netta non esiste';
 
   @override
-  String get api_error_166 => 'Tentare di esercitare con regolamento netto un commercio che non esiste';
+  String get api_error_166 => 'Tentativo di esercitare con liquidazione netta un\'operazione che non esiste';
 
   @override
-  String get api_error_167 => 'Il prezzo di mercato corrente è inferiore o uguale al prezzo di esercizio durante la compensazione di una negoziazione CALL. L\'operazione è out-of-the-money per gli standard di mercato, pertanto non può essere compensata. Utilizzare la liquidazione normale se necessario.';
+  String get api_error_167 => 'Il prezzo di mercato corrente è inferiore o uguale al prezzo di esercizio quando si compensa un\'operazione CALL. Secondo gli standard di mercato, l’operazione è out-of-the-money e pertanto non può essere compensata. Se necessario, utilizzare la liquidazione normale.';
 
   @override
-  String get api_error_168 => 'L\'utente che richiede di confermare il pagamento della copertura dell\'operazione non esiste';
+  String get api_error_168 => 'L\'utente che richiede di confermare il pagamento della copertura commerciale non esiste';
 
   @override
-  String get api_error_169 => 'Tentativo di confermare la copertura pagata per uno scambio che non esiste';
+  String get api_error_169 => 'Tentativo di confermare la copertura pagata per un\'operazione che non esiste';
 
   @override
-  String get api_error_172 => 'Tentativo di pubblicare un annuncio in cui la risorsa è la stessa della valuta dell\'annuncio';
+  String get api_error_172 => 'Tentativo di pubblicare un annuncio in cui la risorsa è uguale alla valuta dell\'annuncio';
 
   @override
   String get api_error_174 => 'Tentativo di esercitare operazioni PUT out-of-the-money';
@@ -8371,16 +8405,16 @@ class I18nIt extends I18n {
   String get api_error_177 => 'Tentativo di riscattare un coupon esaurito durante la registrazione';
 
   @override
-  String get api_error_185 => 'Tentativo di ottenere coupon per utenti che non esistono';
+  String get api_error_185 => 'Tentativo di ottenere coupon per un utente che non esiste';
 
   @override
   String get api_error_186 => 'Tentativo di ottenere più di 50 annunci quando si ottengono annunci per ID';
 
   @override
-  String get api_error_187 => 'Tentativo di fornire un elenco vuoto di ID durante la ricezione di annunci in base all\'ID';
+  String get api_error_187 => 'Tentativo di fornire un elenco vuoto di ID quando si ottengono annunci in base all\'ID';
 
   @override
-  String get api_error_188 => 'Nessuno degli ID annuncio richiesti è un ID valido quando si ottengono annunci in base all\'ID';
+  String get api_error_188 => 'Nessuno degli ID annuncio richiesti è un ID valido quando si ottengono annunci per ID';
 
   @override
   String get api_error_189 => 'Non esiste uno solo degli annunci richiesti quando si ottengono annunci per ID';
@@ -8389,61 +8423,61 @@ class I18nIt extends I18n {
   String get api_error_190 => 'Tentativo di fornire un elenco vuoto di ID quando si ottengono operazioni per ID';
 
   @override
-  String get api_error_191 => 'Tentativo di ottenere più di 50 annunci quando si ottengono scambi per ID';
+  String get api_error_191 => 'Tentativo di ottenere più di 50 annunci quando si ottengono transazioni per ID';
 
   @override
-  String get api_error_192 => 'Nessuno degli ID operazione richiesti è un ID valido quando si ottengono operazioni tramite ID';
+  String get api_error_192 => 'Nessuno degli ID di transazione richiesti è un ID valido quando si ottengono transazioni per ID';
 
   @override
-  String get api_error_193 => 'Non esiste una sola delle negoziazioni richieste quando si ottengono negoziazioni per ID';
+  String get api_error_193 => 'Non esiste una sola delle transazioni richieste quando si ottengono transazioni per ID';
 
   @override
-  String get api_error_194 => 'Tentativo di generare un token API pubblico per un utente che non esiste';
+  String get api_error_194 => 'Tentativo di generare token API pubblico per l\'utente che non esiste';
 
   @override
   String get api_error_195 => 'Password errata durante il tentativo di ottenere il token API pubblico';
 
   @override
-  String get api_error_196 => 'Tentativo di ottenere messaggi recenti per un utente che non esiste';
+  String get api_error_196 => 'Tentativo di ricevere messaggi recenti per un utente che non esiste';
 
   @override
-  String get api_error_197 => 'Tentativo di scambiare messaggi di chat con timestamp \"dopo\" al di fuori dell\'intervallo consentito';
+  String get api_error_197 => 'Tentativo di ricevere messaggi di chat commerciali con timestamp \"dopo\" che non rientra nell\'intervallo consentito';
 
   @override
-  String get api_error_198 => 'Tentativo di ottenere messaggi di chat recenti dell\'account con timestamp \"dopo\" al di fuori dell\'intervallo consentito';
+  String get api_error_198 => 'Tentativo di ricevere messaggi di chat recenti dell\'account con timestamp \"dopo\" che non rientra nell\'intervallo consentito';
 
   @override
   String get api_error_199 => 'Tentativo di ottenere un token API pubblico per un utente che non esiste';
 
   @override
-  String get api_error_200 => 'Tentativo di far scadere ed eliminare il token API pubblico per l\'utente senza un token API pubblico';
+  String get api_error_200 => 'Tentativo di far scadere ed eliminare il token API pubblico per l\'utente senza token API pubblico';
 
   @override
   String get api_error_201 => 'Tentativo di aggiornare la formula del prezzo per un annuncio che non esiste';
 
   @override
-  String get api_error_202 => 'Tentativo di ottenere transazioni dell\'account con timestamp \"dopo\" al di fuori dell\'intervallo consentito';
+  String get api_error_202 => 'Tentativo di ottenere transazioni sull\'account con timestamp \"dopo\" esterno all\'intervallo consentito';
 
   @override
-  String get api_error_203 => 'Tentativo di ottenere i dati di importazione della reputazione per un account che non esiste';
+  String get api_error_203 => 'Tentativo di ottenere dati di importazione della reputazione per un account che non esiste';
 
   @override
   String get api_error_211 => 'Tentativo di approvare l\'importazione della reputazione per un utente che non esiste';
 
   @override
-  String get api_error_212 => 'Tentativo di approvare l\'importazione della reputazione per l\'utente che non si trova nel passaggio 2 del flusso di importazione della reputazione';
+  String get api_error_212 => 'Tentativo di approvare l\'importazione della reputazione per un utente che non si trova nel passaggio 2 del flusso di importazione della reputazione';
 
   @override
   String get api_error_213 => 'Tentativo di negare l\'importazione della reputazione per un utente che non esiste';
 
   @override
-  String get api_error_214 => 'Tentativo di negare l\'importazione della reputazione per l\'utente che non si trova nel passaggio 2 del flusso di importazione della reputazione';
+  String get api_error_214 => 'Tentativo di negare l\'importazione della reputazione per un utente che non si trova nel passaggio 2 del flusso di importazione della reputazione';
 
   @override
-  String get api_error_215 => 'Tentativo di specificare sia country_code che currency_code quando si richiedono i metodi di pagamento più diffusi';
+  String get api_error_215 => 'Tentativo di specificare sia country_code che valuta_code quando si richiedono i metodi di pagamento più diffusi';
 
   @override
-  String get api_error_216 => 'Tentativo di richiedere i metodi di pagamento più popolari per un country_code che non esiste';
+  String get api_error_216 => 'Tentativo di richiedere i metodi di pagamento più diffusi per un country_code che non esiste';
 
   @override
   String get api_error_217 => 'Tentativo di richiedere i metodi di pagamento più diffusi per un codice_valuta che non esiste';
@@ -8455,25 +8489,25 @@ class I18nIt extends I18n {
   String get api_error_219 => 'Tentativo di registrazione con un\'e-mail proveniente da un provider di posta elettronica usa e getta';
 
   @override
-  String get api_error_220 => 'Tentativo di modificare l\'e-mail dell\'account con un\'e-mail da un provider di posta elettronica usa e getta';
+  String get api_error_220 => 'Tentativo di modificare l\'e-mail dell\'account in un\'e-mail da un provider di posta elettronica usa e getta';
 
   @override
-  String get api_error_221 => 'Tentativo di contrassegnare tutte le notifiche come lette per un utente che non esiste';
+  String get api_error_221 => 'Tentativo di contrassegnare tutte le notifiche lette per un utente che non esiste';
 
   @override
-  String get api_error_222 => 'Tentativo di richiedere il codice di reputazione per un account di una piattaforma esterna che è già stato importato';
+  String get api_error_222 => 'Tentativo di richiedere il codice di reputazione per un account di piattaforma esterna che è già stato importato';
 
   @override
-  String get api_error_223 => 'Tentativo di aggiornare l\'annuncio specificando la verificaObbligatorio come vero mentre il messaggio di verifica è nullo';
+  String get api_error_223 => 'Tentativo di aggiornare l\'annuncio specificando verifyRequired come true mentre verifyMsg è null';
 
   @override
-  String get api_error_224 => 'Tentativo di aggiornare l\'annuncio specificando il messaggio di verifica ma l\'annuncio non richiede la verifica e anche la richiesta di aggiornamento dell\'annuncio non imposta la verificaRichiesto come vero';
+  String get api_error_224 => 'Tentativo di aggiornare l\'annuncio specificando verifyMsg ma l\'annuncio non richiede la verifica e anche la richiesta di aggiornamento dell\'annuncio non imposta verifyRequired come true';
 
   @override
   String get api_error_227 => 'Tentativo di sanzionare un utente che non esiste';
 
   @override
-  String get api_error_228 => 'Tentativo di sanzionare l\'utente con un account amministratore che non esiste';
+  String get api_error_228 => 'Tentativo di sanzionare un utente con un account amministratore che non esiste';
 
   @override
   String get api_error_229 => 'Tentativo di rimuovere una sanzione da un utente che non esiste';
@@ -8482,7 +8516,7 @@ class I18nIt extends I18n {
   String get api_error_230 => 'Tentativo di rimuovere una sanzione da un utente con un account amministratore che non esiste';
 
   @override
-  String get api_error_231 => 'Tentativo di rimuovere una sanzione da un utente che non ha sanzioni su di lui';
+  String get api_error_231 => 'Tentativo di rimuovere una sanzione da un utente che non ha alcuna sanzione nei suoi confronti';
 
   @override
   String get api_error_232 => 'Tentativo di aprire uno scambio con un utente a cui è attualmente vietato fare trading a causa di una sanzione';
@@ -8491,22 +8525,22 @@ class I18nIt extends I18n {
   String get api_error_233 => 'Tentativo di rimuovere il feedback con un ID che non esiste';
 
   @override
-  String get api_error_234 => 'Tentativo di rimuovere il feedback già rimosso';
+  String get api_error_234 => 'Tentativo di rimuovere un feedback già rimosso';
 
   @override
-  String get api_error_235 => 'Tentativo di rimuovere lo stato di contestazione da una transazione che non esiste';
+  String get api_error_235 => 'Tentativo di rimuovere lo stato di controversia da un\'operazione che non esiste';
 
   @override
-  String get api_error_236 => 'Tentativo di rimuovere lo stato di contestazione da una transazione che non è contestata';
+  String get api_error_236 => 'Tentativo di rimuovere lo stato di contestazione da un\'operazione che non è contestata';
 
   @override
-  String get api_error_237 => 'Tentativo di aprire una negoziazione come utente che non esiste quando si chiama l\'endpoint di apertura della negoziazione come amministratore e si specifica il parametro openAsUsername';
+  String get api_error_237 => 'Tentativo di aprire un\'operazione come utente che non esiste quando si chiama l\'endpoint di apertura dell\'operazione come amministratore e si specifica il parametro openAsUsername';
 
   @override
-  String get api_error_240 => 'Indirizzo non valido fornito dall\'acquirente durante la risposta a un annuncio di tipo VENDITA';
+  String get api_error_240 => 'Indirizzo non valido fornito dall\'acquirente quando risponde a un annuncio di tipo VENDITA';
 
   @override
-  String get api_error_241 => 'L\'acquirente tenta di fornire un indirizzo interno quando risponde a un annuncio di tipo VENDITA (gli indirizzi interni non sono consentiti ai fini della liquidazione della transazione)';
+  String get api_error_241 => 'L\'acquirente tenta di fornire un indirizzo interno quando risponde a un annuncio di tipo VENDITA (gli indirizzi interni non sono consentiti ai fini della transazione commerciale)';
 
   @override
   String get api_error_242 => 'Indirizzo non valido fornito dall\'acquirente durante la creazione di un annuncio di tipo ACQUISTA';
@@ -8515,34 +8549,34 @@ class I18nIt extends I18n {
   String get api_error_244 => 'Indirizzo non valido fornito dall\'acquirente durante l\'aggiornamento di un annuncio di tipo ACQUISTA';
 
   @override
-  String get api_error_245 => 'L\'acquirente tenta di fornire un indirizzo interno durante l\'aggiornamento di un annuncio di tipo ACQUISTA (gli indirizzi interni non sono consentiti ai fini della liquidazione della transazione)';
+  String get api_error_245 => 'L\'acquirente tenta di fornire un indirizzo interno durante l\'aggiornamento di un annuncio di tipo ACQUISTA (gli indirizzi interni non sono consentiti ai fini della transazione commerciale)';
 
   @override
-  String get api_error_246 => 'Tentativo di avviare un\'operazione da un annuncio di tipo ACQUISTA che non specifica l\'indirizzo di transazione dell\'acquirente';
+  String get api_error_246 => 'Tentativo di avviare un\'operazione da un annuncio di tipo ACQUISTA che non specifica l\'indirizzo di liquidazione dell\'acquirente';
 
   @override
-  String get api_error_247 => 'Tentativo di sbloccare un\'operazione da un conto a cui è vietato prelevare a causa di sanzioni';
+  String get api_error_247 => 'Tentativo di sbloccare un\'operazione da un conto a cui è vietato ritirare a causa di sanzioni';
 
   @override
   String get api_error_248 => 'Tentare di rilasciare un\'operazione quando l\'importo dell\'operazione non è sufficiente a coprire le commissioni relative alla liquidazione';
 
   @override
-  String get api_error_249 => 'Tentativo di aggiornare un annuncio di tipo ACQUISTA in cui non è impostato buyerSettlementAddress senza impostare il parametro buyerSettlementAddress nella richiesta di aggiornamento';
+  String get api_error_249 => 'Tentativo di aggiornare un annuncio di tipo ACQUISTA su cui non è impostato buyerSettlementAddress senza impostare il parametro buyerSettlementAddress nella richiesta di aggiornamento';
 
   @override
   String get api_error_250 => 'Indirizzo non valido fornito al momento della richiesta della commissione di prelievo per BTC';
 
   @override
-  String get api_error_251 => 'Livello di commissione non fornito quando si apre uno scambio rispondendo a un annuncio di tipo BTC SELL';
+  String get api_error_251 => 'Livello di commissione non fornito quando si apre un\'operazione rispondendo a un annuncio di tipo VENDITA di BTC';
 
   @override
-  String get api_error_252 => 'Livello di commissione non fornito durante la creazione di un annuncio di tipo BTC BUY';
+  String get api_error_252 => 'Livello di tariffa non fornito durante la creazione di un annuncio di tipo ACQUISTA BTC';
 
   @override
-  String get api_error_253 => 'Livello di commissione non fornito durante l\'aggiornamento di un annuncio di tipo ACQUISTA BTC che non ha un livello di commissione impostato';
+  String get api_error_253 => 'Livello di tariffa non fornito durante l\'aggiornamento di un annuncio di tipo ACQUISTO BTC per cui non è impostato un livello di tariffa';
 
   @override
-  String get api_error_255 => 'Tentativo di ricevere notifiche con timestamp \"dopo\" al di fuori dell\'intervallo consentito';
+  String get api_error_255 => 'Tentativo di ricevere notifiche con timestamp \"dopo\" esterno all\'intervallo consentito';
 
   @override
   String get api_error_256 => 'Tentativo di registrare un token di notifica push già esistente';
@@ -8551,10 +8585,10 @@ class I18nIt extends I18n {
   String get api_error_257 => 'Tentativo di registrare un token di notifica push non valido';
 
   @override
-  String get api_error_258 => 'Tentativo di registrare un token di notifica push per un account che dispone già di 500 token dispositivo, eliminare uno dei token esistenti prima di riprovare';
+  String get api_error_258 => 'Tentativo di registrare un token di notifica push per un account che dispone già di 500 token dispositivo, elimina uno dei token esistenti prima di riprovare';
 
   @override
-  String get api_error_259 => 'Tentativo di eliminare un token che non esiste o che non appartiene a questo utente';
+  String get api_error_259 => 'Tentativo di eliminare un token che non esiste o non appartiene a questo utente';
 
   @override
   String get account => 'conto';
@@ -8578,7 +8612,7 @@ class I18nIt extends I18n {
   String get pin_enter_to_confirm_transaction => 'Inserire il PIN per confermare la transazione';
 
   @override
-  String get pin_you_can_use => 'Il PIN deve essere di almeno 4 cifre';
+  String get pin_you_can_use => 'Il PIN deve contenere almeno 4 cifre';
 
   @override
   String get pin_confirm => 'Confermare il PIN';
@@ -8653,7 +8687,7 @@ class I18nIt extends I18n {
   String get email_verified => 'L\'e-mail è verificata.';
 
   @override
-  String get email_verification_error => 'Errore di verifica e-mail.';
+  String get email_verification_error => 'Errore di verifica dell\'e-mail.';
 
   @override
   String get email_token_error => 'Il token o l\'e-mail sono sbagliati. L\'e-mail non è stata verificata.';
@@ -8668,7 +8702,7 @@ class I18nIt extends I18n {
   String get welcome_pick_a_payment_method => 'Scegliete un metodo di pagamento o scegliete tra tutte le offerte disponibili.';
 
   @override
-  String get welcome_buy_press_buy => 'Premi ACQUISTA per iniziare lo scambio.';
+  String get welcome_buy_press_buy => 'Premi ACQUISTA per avviare lo scambio.';
 
   @override
   String get welcome_buy_follow_the_sellers => 'Segui le istruzioni del venditore nella chat commerciale!';
@@ -8964,12 +8998,12 @@ class I18nIt extends I18n {
 
   @override
   String affiliate__terms__text___agoradesk(Object appName) {
-    return '• Puoi collegarti a qualsiasi singola pagina, come l\'elenco dei paesi o dei metodi di pagamento, o qualsiasi altra cosa su $appName.\n• Guadagnerai criptovaluta dagli utenti che arrivano al sito tramite il tuo link di affiliazione registrati ed effettuano scambi.\n• I pagamenti verranno effettuati giornalmente sul tuo portafoglio $appName nelle relative criptovalute.\n• Le commissioni saranno pagate per un anno dalla registrazione dell\'utente. La commissione si basa sul reddito che il nuovo utente porta per $appName (commissioni di negoziazione).\n• È vietato qualsiasi gioco scorretto, come pubblicità ingannevole.\n• Lo spam è vietato. Lo spamming include l\'invio di messaggi privati o pubblici non iscritti su forum/reddit, e-mail di massa non iscritte, ecc.\n• È vietato aggiungere iframe nascosti su un sito web per catturare gli affiliati. Sono consentiti solo iframe di affiliazione o link diretti alla pagina web.\n• $appName ha il diritto di disabilitare qualsiasi utente affiliato in qualsiasi momento. Se violi i termini, il tuo programma di affiliazione verrà terminato.';
+    return '• Puoi collegarti a qualsiasi singola pagina, come l\'elenco dei paesi o dei metodi di pagamento o qualsiasi altra cosa su $appName.\n• Guadagnerai criptovaluta dagli utenti che arrivano al sito tramite il tuo link di affiliazione, si registrano ed effettuano operazioni.\n• I pagamenti verranno effettuati quotidianamente sul tuo portafoglio $appName nelle relative criptovalute.\n• Le commissioni verranno pagate per un anno dalla registrazione dell\'utente. La commissione si basa sul reddito che il nuovo utente apporta per $appName (commissioni di negoziazione).\n• Qualsiasi gioco scorretto, come la pubblicità ingannevole, è proibito.\n• È vietato fare spam. Lo spamming include l\'invio di messaggi privati o pubblici non iscritti su forum/reddit, e-mail di massa non iscritte, ecc.\n• È vietato aggiungere iframe nascosti su un sito Web per acquisire affiliati. Sono consentiti solo iframe affiliati o collegamenti diretti alla pagina Web.\n• $appName ha il diritto di disabilitare qualsiasi utente affiliato in qualsiasi momento. Se violi i termini, il tuo programma di affiliazione verrà terminato.';
   }
 
   @override
   String affiliate__example__text(Object assetName, Object appName, Object assetSymbol) {
-    return 'Ottieni due utenti, acquirente e venditore di $assetName registrati su $appName, e fanno uno scambio del valore di 100 $assetSymbol. Guadagni una commissione del 20% sulle commissioni di negoziazione di $appName da entrambi i partecipanti, in totale il 40% della commissione di $appName.\n\nLa tua somma guadagnata è 0,4 $assetSymbol. Contano solo le vendite finalizzate che passano attraverso il nostro processo di transazione. I pagamenti vengono effettuati giornalmente.\n\nL\'assistenza $appName è più che disposta ad aiutarti per qualsiasi domanda.';
+    return 'Ottieni due utenti, acquirente e venditore di $assetName registrati su $appName, e fanno uno scambio del valore di 100 $assetSymbol. Guadagni una commissione del 20% sulle commissioni di trading $appName da entrambi i partecipanti, in totale il 40% della commissione $appName.\n\nLa tua somma guadagnata è 0,4 $assetSymbol. Sono importanti solo le vendite finalizzate che passano attraverso il nostro processo di transazione. I pagamenti vengono effettuati giornalmente.\n\nIl supporto $appName è più che disposto ad aiutarti per qualsiasi domanda.';
   }
 
   @override
@@ -9020,7 +9054,7 @@ class I18nIt extends I18n {
   String get dont_have_an_account_yet => 'Non hai ancora un conto?';
 
   @override
-  String get app_trades => 'Mestieri';
+  String get app_trades => 'Commerci';
 
   @override
   String get app_unlimited => 'Illimitato';
@@ -9032,26 +9066,26 @@ class I18nIt extends I18n {
   String get app_edit_this_ad => 'Modifica questo annuncio';
 
   @override
-  String get app_you_can_use_markdown => 'Puoi utilizzare il markdown per dare uno stile ai termini del tuo annuncio (immagini non consentite).';
+  String get app_you_can_use_markdown => 'Puoi utilizzare il markdown per definire i termini del tuo annuncio (immagini non consentite).';
 
   @override
-  String get app_no_trades_to_export => 'No scambi da esportare.';
+  String get app_no_trades_to_export => 'No scambi per esportazione.';
 
   @override
   String app_settings_2fa_step_two(Object appName) {
-    return 'Annota il tuo codice di backup (sopra in verde) su un pezzo di carta e conservalo in un luogo sicuro. Ne avrai bisogno se perdi il telefono o sarai bloccato fuori dal tuo account. $appName non sarà in grado di aiutarti se perdi questo codice.';
+    return 'Annota il tuo codice di backup (sopra in verde) su un pezzo di carta e conservalo in un luogo sicuro. Ne avrai bisogno se perdi il telefono o verrai bloccato fuori dal tuo account. $appName non sarà in grado di aiutarti se perdessi questo codice.';
   }
 
   @override
-  String get ad_post_ad_rules_text_0 => 'Prima di creare un annuncio, leggi attentamente il nostro ';
+  String get ad_post_ad_rules_text_0 => 'Prima di creare un annuncio leggere attentamente la nostra ';
 
   @override
   String app_trade_warning_impersonation(Object appName) {
-    return 'Fai attenzione ai truffatori che cercano di impersonare il personale!\nGli amministratori di $appName non ti diranno mai di finalizzare uno scambio.\nI messaggi del personale hanno uno sfondo rosso.';
+    return 'Attenzione ai truffatori che tentano di impersonare il personale!\nGli amministratori di $appName non ti diranno mai di finalizzare un\'operazione.\nI messaggi dello staff hanno uno sfondo rosso.';
   }
 
   @override
-  String app_buy_sell(Object val) {
+  String app_buy_sell(Object val, Object buyOrSell) {
     return 'Quanto desideri $val?';
   }
 
@@ -9072,27 +9106,27 @@ class I18nIt extends I18n {
 
   @override
   String app_trades_with(Object val) {
-    return 'Vedi le negoziazioni con $val';
+    return 'Visualizza gli scambi con $val';
   }
 
   @override
   String app_able_to_cancel(Object val1, Object val2) {
-    return '($val1 sarà in grado di annullare in $val2 min a meno che non contrassegni come pagato)';
+    return '($val1 potrà annullare entro $val2 minuti a meno che non contrassegni come pagato)';
   }
 
   @override
   String app_able_to_cancel_now(Object val) {
-    return '($val ora è in grado di annullare a meno che non contrassegni come pagato)';
+    return '($val ora può annullare a meno che non contrassegni come pagato)';
   }
 
   @override
   String app_buying_from(Object asset, Object amount, Object username) {
-    return 'Acquisto di $asset $amount da $username';
+    return 'Acquistare $asset $amount da $username';
   }
 
   @override
   String app_selling_to(Object asset, Object amount, Object username) {
-    return 'Vendere $asset $amount a $username';
+    return 'Vendere da $asset $amount a $username';
   }
 
   @override
@@ -9107,22 +9141,22 @@ class I18nIt extends I18n {
   String get app_sell_crypto => 'Vendi criptovalute a';
 
   @override
-  String get app_intall_trade_title => 'Si prega di installare AgoraDesk per visualizzare questo trade';
+  String get app_intall_trade_title => 'Installa AgoraDesk per visualizzare questa operazione';
 
   @override
   String get app_intall_ad_title => 'Installa AgoraDesk per visualizzare questo annuncio';
 
   @override
-  String get app_intall_trade_body => 'Questo è uno scambio basato su Bitcoin, richiede la nostra app AgoraDesk per essere visualizzato.';
+  String get app_intall_trade_body => 'Questo è un commercio basato su Bitcoin, per poter essere visualizzato è necessaria la nostra app AgoraDesk.';
 
   @override
-  String get app_intall_ad_body => 'Questo è un annuncio basato su Bitcoin, richiede la nostra app AgoraDesk per essere visualizzato.';
+  String get app_intall_ad_body => 'Questo è un annuncio basato su Bitcoin, per essere visualizzato è necessaria la nostra app AgoraDesk.';
 
   @override
   String get app_trade_option_payment_receiver_cancel_notice => 'Non finalizzare mai un\'operazione finché non sei sicuro al 100% di aver ricevuto il denaro. I truffatori cercheranno di indurti a finalizzare in anticipo.';
 
   @override
-  String get app_cancel_trade_message => 'Hai commesso un errore o vuoi provare un altro trader? Se hai già trasferito i fondi e desideri annullare ora, devi negoziare tu stesso la restituzione del pagamento con il tuo partner commerciale. Non cancellare mai a meno che tu non sia sicuro di aver ricevuto indietro i tuoi soldi.';
+  String get app_cancel_trade_message => 'Hai commesso un errore o vuoi provare un altro trader? Se hai già trasferito i fondi e desideri annullare ora, devi negoziare personalmente la restituzione del pagamento con il tuo partner commerciale. Non annullare mai se non sei sicuro di aver ricevuto indietro i tuoi soldi.';
 
   @override
   String get app_all_feedback => 'Tutti i feedback';
@@ -9137,7 +9171,7 @@ class I18nIt extends I18n {
   String get app_ad_deleted => 'Annuncio eliminato';
 
   @override
-  String get app_verifiacetion_code_to_seller => 'Questo è il tuo codice di verifica. Puoi dirlo all\'acquirente in modo che l\'acquirente possa verificare che hai finalizzato lo scambio senza che sia necessario utilizzare il dispositivo.';
+  String get app_verifiacetion_code_to_seller => 'Questo è il tuo codice di verifica. Puoi comunicarlo all\'acquirente in modo che possa verificare che hai finalizzato lo scambio senza che debba utilizzare il dispositivo.';
 
   @override
   String get app_verification_code => 'Codice di verifica';
@@ -9161,7 +9195,7 @@ class I18nIt extends I18n {
   String get app_manage_ads => 'Gestisci gli annunci';
 
   @override
-  String get app_vacation_enabled => 'Vacanze abilitate';
+  String get app_vacation_enabled => 'Vacanza abilitata';
 
   @override
   String get app_trade_created => 'Commercio creato';
@@ -9170,13 +9204,13 @@ class I18nIt extends I18n {
   String get app_session_expired => 'Sessione scaduta';
 
   @override
-  String get app_anonymous_crash_diagnostics => 'Diagnostica anonima degli arresti anomali';
+  String get app_anonymous_crash_diagnostics => 'Diagnostica anonima degli incidenti';
 
   @override
   String get app_restart_now => 'Riavvia ora';
 
   @override
-  String get app_postpone => 'Rinviare';
+  String get app_postpone => 'Rimandare';
 
   @override
   String get app_biometric_authentication => 'Autenticazione biometrica';
@@ -9191,10 +9225,10 @@ class I18nIt extends I18n {
   String get app_trading_partners => 'Soci in affari';
 
   @override
-  String get app_trade_status_settlement_processing_description => 'L\'accordo è in fase di elaborazione. Per favore aspetta, non c\'è niente che devi fare.';
+  String get app_trade_status_settlement_processing_description => 'La transazione è in fase di elaborazione. Per favore aspetta, non c\'è niente che devi fare.';
 
   @override
-  String get app_buyer_settlement_fee_level_description => 'Scegli un livello di commissione da utilizzare durante il regolamento della transazione. I valori mostrati qui sono le stime del tasso corrente e possono differire da quelli applicati durante il regolamento della transazione. Se l\'importo dell\'operazione è troppo basso per regolare l\'operazione con il livello di commissione selezionato, durante il regolamento verrà selezionato automaticamente un livello di commissione inferiore.';
+  String get app_buyer_settlement_fee_level_description => 'Scegli un livello di commissione da utilizzare durante la transazione commerciale. I valori qui indicati rappresentano le stime attuali dei tassi e potrebbero differire da quelli applicati durante la liquidazione della transazione. Se l\'importo dell\'operazione fosse troppo basso per chiudere l\'operazione con il livello di commissione selezionato, durante la liquidazione verrà automaticamente selezionato un livello di commissione inferiore.';
 
   @override
   String get app_change_vacation_settings => 'Modifica le impostazioni delle vacanze.';
@@ -9212,18 +9246,18 @@ class I18nIt extends I18n {
   String get app_final_amount => 'Importo finale';
 
   @override
-  String app_note_label(Object val) {
+  String app_note_label(Object val, Object username) {
     return 'La tua nota su $val (vista solo da te)';
   }
 
   @override
-  String app_note_add(Object val) {
+  String app_note_add(Object val, Object username) {
     return 'Aggiungi una nota su $val';
   }
 
   @override
   String app_update_new_version_available(Object val) {
-    return 'È disponibile la nuova versione $val.';
+    return 'La nuova versione $val è disponibile.';
   }
 
   @override
@@ -9251,14 +9285,14 @@ class I18nIt extends I18n {
   String get app_display_password => 'Visualizza password';
 
   @override
-  String get app_hide_password => 'Nascondi password';
+  String get app_hide_password => 'Nascondi la password';
 
   @override
   String get app_trade_has_been_cancelled => 'Il commercio è stato annullato.';
 
   @override
   String app_last_seen(Object val) {
-    return 'Ultimo accesso $val';
+    return 'Visto l\'ultima volta $val';
   }
 
   @override
@@ -9277,7 +9311,7 @@ class I18nIt extends I18n {
   String get app_scan_qr_code => 'Scansiona il codice QR';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sbagoradesk => 'Acquista o vendi Bitcoin in modo anonimo, senza verifica dell\'identità. Contanti o online. Sicuro, veloce, facile.\n\nTi stai chiedendo come investire in Bitcoin? Su AgoraDesk, acquistare bitcoin non è mai stato così semplice: acquista istantaneamente BTC da una persona utilizzando il tuo metodo di pagamento online preferito: PayPal, carta di credito/debito o bonifico bancario, buoni regalo, Venmo o qualsiasi altro. Se desideri acquistare bitcoin vicino a te in contanti, puoi trovare qualcuno disposto a vendere bitcoin a livello locale: la piattaforma di trading supporta l\'acquisto e la vendita di BTC in contanti. Puoi persino acquistare bitcoin usando contanti per posta.\n\n- Trading sicuro e regolare\nProprio come LocalBitcoins, supportiamo qualsiasi metodo di pagamento, qualsiasi valuta, ovunque. Non rimuoviamo i metodi di pagamento e, a differenza di LocalBitcoin, supportiamo completamente le negoziazioni in contanti faccia a faccia. Tutte le nostre operazioni sono protette da un vincolo arbitrale. Grazie al fatto che richiediamo che i fondi siano tenuti in cauzione arbitrale prima che un\'operazione possa iniziare, garantiamo un\'esperienza fluida e sicura per l\'acquirente, che è essenziale per la popolarità della piattaforma e clienti abituali per i venditori.\n\n- Nessuna verifica KYC/AML o ID\nAgoraDesk si impegna a mantenere la semplicità e la semplicità che hanno reso così popolari i LocalBitcoin originali. Non impieghiamo KYC/AML, né abbiamo mai intenzione di farlo.\n\n- Scelto dalla Comunità\nLa nostra piattaforma opera da oltre quattro anni, è sopravvissuta al grande crollo del mercato delle criptovalute del 2018 e, grazie al suo diligente servizio orientato alla comunità, è diventata uno dei nomi più affidabili nella comunità estremamente scettica delle criptovalute.\n\n- Sicuro, open source, incentrato sulla privacy, resistente alla censura\nLa nostra app è gratuita e open source, il che garantisce che molti occhi guardino il codice dell\'app per assicurarsi che non vi siano falle di sicurezza o perdite di privacy. L\'open sourcing della nostra app consente inoltre a chiunque di accedere alla nostra app anche se un determinato repository di app censura l\'app. La nostra app funziona anche su telefoni con Google completamente bloccato. Apprezziamo così tanto la tua privacy che non ti chiediamo nemmeno di fornire un\'e-mail al momento della registrazione.\n\nCodice sorgente: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nTracker dei problemi: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Supporto stellare\nIl nostro team di supporto è veloce, reattivo e sempre desideroso di aiutare. Non abbiamo mai avuto un ticket di supporto che non abbia ricevuto risposta entro 24 ore. Siamo sempre facilmente raggiungibili attraverso i social media, ascoltiamo attentamente le tue critiche e implementiamo sempre buoni suggerimenti degli utenti in tempi record.\n\nPuoi raggiungere il nostro supporto su: https://agoradesk.com/support\n\n- Commissioni eque\nNon addebitiamo commissioni esorbitanti quando depositi o ritiri Bitcoin nel/dal nostro portafoglio di obbligazioni arbitrali. Non è prevista alcuna commissione di deposito e la commissione di prelievo è molto vicina alla commissione che pagheresti per una normale transazione.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sbagoradesk => 'Acquista o vendi Bitcoin in modo anonimo, senza verifica dell\'identità. Contanti o online. Sicuro, veloce, facile.\n\nTi stai chiedendo come investire in Bitcoin? Su AgoraDesk, acquistare bitcoin non è mai stato così facile: acquista istantaneamente BTC da una persona utilizzando il tuo metodo di pagamento online preferito: PayPal, carta di credito/debito o bonifico bancario, carte regalo, Venmo o qualsiasi altro. Se desideri acquistare bitcoin vicino a te in contanti, puoi trovare qualcuno disposto a vendere bitcoin a livello locale: la piattaforma di trading supporta l\'acquisto e la vendita di BTC in contanti. Puoi anche acquistare bitcoin utilizzando contanti per posta.\n\n- Trading sicuro e regolare\nProprio come LocalBitcoins, supportiamo qualsiasi metodo di pagamento, qualsiasi valuta, ovunque. Non rimuoviamo i metodi di pagamento e, a differenza di LocalBitcoin, supportiamo pienamente le transazioni in contanti faccia a faccia. Tutte le nostre operazioni sono protette da un vincolo arbitrale. Grazie al fatto che richiediamo che i fondi siano trattenuti in una cauzione arbitrale prima che un\'operazione possa iniziare, garantiamo un\'esperienza fluida e sicura per l\'acquirente, che è essenziale per la popolarità della piattaforma e per i clienti abituali per i venditori.\n\n- Nessuna verifica KYC/AML o ID\nAgoraDesk si impegna a mantenere la semplicità e la semplicità che hanno reso così popolari i LocalBitcoin originali. Non utilizziamo KYC/AML, né prevediamo di farlo.\n\n- Scelto dalla comunità\nLa nostra piattaforma opera da oltre quattro anni, è sopravvissuta al grande crollo del mercato delle criptovalute del 2018 e, attraverso il suo servizio diligente orientato alla comunità, è diventata uno dei nomi più affidabili nella comunità estremamente scettica delle criptovalute.\n\n- Sicuro, open source, incentrato sulla privacy, resistente alla censura\nLa nostra app è gratuita e open source, il che garantisce che molti occhi guardino il codice dell\'app per garantire che non vi siano buchi di sicurezza o perdite di privacy. L\'open source della nostra app consente inoltre a chiunque di avere accesso alla nostra app anche se un determinato repository di app censura l\'app. La nostra app funziona anche su telefoni su cui Google è completamente bloccato. Teniamo così tanto alla tua privacy che non ti chiediamo nemmeno di fornire un\'e-mail al momento della registrazione.\n\nCodice sorgente: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nTracker dei problemi: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Supporto stellare\nIl nostro team di supporto è veloce, reattivo e sempre pronto a soddisfare le tue esigenze. Non abbiamo mai ricevuto una richiesta di supporto a cui non sia stata data risposta entro 24 ore. Siamo sempre facilmente raggiungibili attraverso i social media, ascoltiamo attentamente le vostre critiche e implementiamo sempre i buoni suggerimenti degli utenti in tempi record.\n\nPuoi contattare il nostro supporto all\'indirizzo: https://agoradesk.com/support\n\n- Commissioni giuste\nNon addebitiamo commissioni esorbitanti quando depositi o ritiri Bitcoin sul/dal nostro portafoglio di obbligazioni arbitrali. Non è prevista alcuna commissione di deposito e la commissione di prelievo è molto vicina alla commissione che pagheresti per una normale transazione.';
 
   @override
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: BTC compra facile';
@@ -9286,19 +9320,19 @@ class I18nIt extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: XMR compra facile';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Acquista o vendi Monero senza verifica dell\'identità. Contanti o online. Sicuro, veloce, facile.\n\nLocalMonero è la piattaforma di trading P2P più grande, affidabile e consolidata nella comunità XMR. Non abbiamo assegni KYC: puoi semplicemente acquistare Monero in modo anonimo senza verifica dell\'identità con PayPal, carta di credito, carta regalo, contanti per posta o convertire Bitcoin, Ether, USDT o qualsiasi altra criptovaluta in Monero: la nostra piattaforma supporta qualsiasi metodo di pagamento.\n\n- Trading sicuro e regolare\nSupportiamo qualsiasi metodo di pagamento, qualsiasi valuta, ovunque. Non rimuoviamo i metodi di pagamento e supportiamo completamente le negoziazioni in contanti faccia a faccia. Tutte le nostre operazioni sono protette da un vincolo arbitrale. Grazie al fatto che richiediamo che i fondi siano tenuti in garanzia arbitrale prima che un\'operazione possa iniziare, garantiamo un\'esperienza fluida e sicura per l\'acquirente, che è essenziale per la popolarità della piattaforma e clienti abituali per i venditori.\n\n- Nessuna verifica KYC/AML o ID\nLocalMonero si impegna a mantenere la semplicità e la semplicità della tua esperienza di trading. Non impieghiamo KYC/AML, né abbiamo mai intenzione di farlo.\n\n- Scelto dalla Comunità\nLa nostra piattaforma ha operato per oltre quattro anni, è sopravvissuta al grande crollo del mercato delle criptovalute del 2018 e, grazie al suo diligente servizio orientato alla comunità, è diventata uno dei nomi più affidabili nella comunità estremamente scettica di Monero.\n\n- Sicuro, open source, incentrato sulla privacy, resistente alla censura\nLa nostra app è gratuita e open source, il che garantisce che molti occhi guardino il codice dell\'app per assicurarsi che non vi siano falle di sicurezza o perdite di privacy. L\'open sourcing della nostra app consente inoltre a chiunque di accedere alla nostra app anche se un determinato repository di app censura l\'app. La nostra app funziona anche su telefoni con Google completamente bloccato. Apprezziamo così tanto la tua privacy che non ti chiediamo nemmeno di fornire un\'e-mail al momento della registrazione.\n\nCodice sorgente: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nTracker dei problemi: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Supporto stellare\nIl nostro team di supporto è veloce, reattivo e sempre desideroso di aiutare. Non abbiamo mai avuto un ticket di supporto che non abbia ricevuto risposta entro 24 ore. Siamo sempre facilmente raggiungibili attraverso i social media, ascoltiamo attentamente le tue critiche e implementiamo sempre buoni suggerimenti degli utenti in tempi record.\n\nPuoi raggiungere il nostro supporto su: https://localmonero.co/support\n\n- Commissioni eque\nNon addebitiamo commissioni esorbitanti quando depositi o prelevi Monero sul/dal nostro portafoglio di obbligazioni arbitrali. Non è prevista alcuna commissione di deposito e la commissione di prelievo è molto vicina alla commissione che pagheresti per una normale transazione.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Acquista o vendi Monero senza verifica dell\'identità. Contanti o online. Sicuro, veloce, facile.\n\nLocalMonero è la piattaforma di trading P2P più grande, affidabile e consolidata nella comunità XMR. Non abbiamo controlli KYC: puoi semplicemente acquistare Monero in modo anonimo senza verifica dell\'identità con PayPal, carta di credito, carta regalo, contanti per posta o convertire Bitcoin, Ether, USDT o qualsiasi altra moneta crittografica in Monero: la nostra piattaforma supporta qualsiasi metodo di pagamento.\n\n- Trading sicuro e regolare\nSupportiamo qualsiasi metodo di pagamento, qualsiasi valuta, ovunque. Non rimuoviamo i metodi di pagamento e supportiamo pienamente le transazioni in contanti faccia a faccia. Tutte le nostre operazioni sono protette da un vincolo arbitrale. Grazie al fatto che richiediamo che i fondi siano trattenuti in una cauzione arbitrale prima che un\'operazione possa iniziare, garantiamo un\'esperienza fluida e sicura per l\'acquirente, che è essenziale per la popolarità della piattaforma e per i clienti abituali per i venditori.\n\n- Nessuna verifica KYC/AML o ID\nLocalMonero si impegna a mantenere la semplicità e la semplicità della tua esperienza di trading. Non utilizziamo KYC/AML, né prevediamo di farlo.\n\n- Scelto dalla comunità\nLa nostra piattaforma opera da oltre quattro anni, è sopravvissuta al grande crollo del mercato delle criptovalute del 2018 e, attraverso il suo servizio diligente orientato alla comunità, è diventata uno dei nomi più affidabili nella comunità estremamente scettica di Monero.\n\n- Sicuro, open source, incentrato sulla privacy, resistente alla censura\nLa nostra app è gratuita e open source, il che garantisce che molti occhi guardino il codice dell\'app per garantire che non vi siano buchi di sicurezza o perdite di privacy. L\'open source della nostra app consente inoltre a chiunque di avere accesso alla nostra app anche se un determinato repository di app censura l\'app. La nostra app funziona anche su telefoni su cui Google è completamente bloccato. Teniamo così tanto alla tua privacy che non ti chiediamo nemmeno di fornire un\'e-mail al momento della registrazione.\n\nCodice sorgente: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nTracker dei problemi: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Supporto stellare\nIl nostro team di supporto è veloce, reattivo e sempre pronto a soddisfare le tue esigenze. Non abbiamo mai ricevuto una richiesta di supporto a cui non sia stata data risposta entro 24 ore. Siamo sempre facilmente raggiungibili attraverso i social media, ascoltiamo attentamente le vostre critiche e implementiamo sempre i buoni suggerimenti degli utenti in tempi record.\n\nPuoi contattare il nostro supporto all\'indirizzo: https://localmonero.co/support\n\n- Commissioni giuste\nNon addebitiamo commissioni esorbitanti quando depositi o ritiri Monero sul/dal nostro portafoglio di obbligazioni arbitrali. Non è prevista alcuna commissione di deposito e la commissione di prelievo è molto vicina alla commissione che pagheresti per una normale transazione.';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: XMR compra facile';
 
   @override
-  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sblocalmonero => 'Acquista o vendi Monero senza verifica dell\'identità. Contanti o online. Sicuro, veloce, facile.\n\nLocalMonero è la piattaforma di trading P2P più grande, affidabile e consolidata nella comunità XMR. Non abbiamo assegni KYC: puoi semplicemente acquistare Monero in modo anonimo senza verifica dell\'identità con PayPal, carta di credito, carta regalo, contanti per posta o convertire Bitcoin, Ether, USDT o qualsiasi altra criptovaluta in Monero: la nostra piattaforma supporta qualsiasi metodo di pagamento.\n\n- Trading sicuro e regolare\nSupportiamo qualsiasi metodo di pagamento, qualsiasi valuta, ovunque. Non rimuoviamo i metodi di pagamento e supportiamo completamente le negoziazioni in contanti faccia a faccia. Tutte le nostre operazioni sono protette da un vincolo arbitrale. Grazie al fatto che richiediamo che i fondi siano tenuti in garanzia arbitrale prima che un\'operazione possa iniziare, garantiamo un\'esperienza fluida e sicura per l\'acquirente, che è essenziale per la popolarità della piattaforma e clienti abituali per i venditori.\n\n- Nessuna verifica KYC/AML o ID\nLocalMonero si impegna a mantenere la semplicità e la semplicità della tua esperienza di trading. Non impieghiamo KYC/AML, né abbiamo mai intenzione di farlo.\n\n- Scelto dalla Comunità\nLa nostra piattaforma ha operato per oltre quattro anni, è sopravvissuta al grande crollo del mercato delle criptovalute del 2018 e, grazie al suo diligente servizio orientato alla comunità, è diventata uno dei nomi più affidabili nella comunità estremamente scettica di Monero.\n\n- Sicuro, open source, incentrato sulla privacy, resistente alla censura\nLa nostra app è gratuita e open source, il che garantisce che molti occhi guardino il codice dell\'app per assicurarsi che non vi siano falle di sicurezza o perdite di privacy. L\'open sourcing della nostra app consente inoltre a chiunque di accedere alla nostra app anche se un determinato repository di app censura l\'app. La nostra app funziona anche su telefoni con Google completamente bloccato. Apprezziamo così tanto la tua privacy che non ti chiediamo nemmeno di fornire un\'e-mail al momento della registrazione.\n\nCodice sorgente: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nTracker dei problemi: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Supporto stellare\nIl nostro team di supporto è veloce, reattivo e sempre desideroso di aiutare. Non abbiamo mai avuto un ticket di supporto che non abbia ricevuto risposta entro 24 ore. Siamo sempre facilmente raggiungibili attraverso i social media, ascoltiamo attentamente le tue critiche e implementiamo sempre buoni suggerimenti degli utenti in tempi record.\n\nPuoi raggiungere il nostro supporto su: https://localmonero.co/support\n\n- Commissioni eque\nNon addebitiamo commissioni esorbitanti quando depositi o prelevi Monero sul/dal nostro portafoglio di obbligazioni arbitrali. Non è prevista alcuna commissione di deposito e la commissione di prelievo è molto vicina alla commissione che pagheresti per una normale transazione.';
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sblocalmonero => 'Acquista o vendi Monero senza verifica dell\'identità. Contanti o online. Sicuro, veloce, facile.\n\nLocalMonero è la piattaforma di trading P2P più grande, affidabile e consolidata nella comunità XMR. Non abbiamo controlli KYC: puoi semplicemente acquistare Monero in modo anonimo senza verifica dell\'identità con PayPal, carta di credito, carta regalo, contanti per posta o convertire Bitcoin, Ether, USDT o qualsiasi altra moneta crittografica in Monero: la nostra piattaforma supporta qualsiasi metodo di pagamento.\n\n- Trading sicuro e regolare\nSupportiamo qualsiasi metodo di pagamento, qualsiasi valuta, ovunque. Non rimuoviamo i metodi di pagamento e supportiamo pienamente le transazioni in contanti faccia a faccia. Tutte le nostre operazioni sono protette da un vincolo arbitrale. Grazie al fatto che richiediamo che i fondi siano trattenuti in una cauzione arbitrale prima che un\'operazione possa iniziare, garantiamo un\'esperienza fluida e sicura per l\'acquirente, che è essenziale per la popolarità della piattaforma e per i clienti abituali per i venditori.\n\n- Nessuna verifica KYC/AML o ID\nLocalMonero si impegna a mantenere la semplicità e la semplicità della tua esperienza di trading. Non utilizziamo KYC/AML, né prevediamo di farlo.\n\n- Scelto dalla comunità\nLa nostra piattaforma opera da oltre quattro anni, è sopravvissuta al grande crollo del mercato delle criptovalute del 2018 e, attraverso il suo servizio diligente orientato alla comunità, è diventata uno dei nomi più affidabili nella comunità estremamente scettica di Monero.\n\n- Sicuro, open source, incentrato sulla privacy, resistente alla censura\nLa nostra app è gratuita e open source, il che garantisce che molti occhi guardino il codice dell\'app per garantire che non vi siano buchi di sicurezza o perdite di privacy. L\'open source della nostra app consente inoltre a chiunque di avere accesso alla nostra app anche se un determinato repository di app censura l\'app. La nostra app funziona anche su telefoni su cui Google è completamente bloccato. Teniamo così tanto alla tua privacy che non ti chiediamo nemmeno di fornire un\'e-mail al momento della registrazione.\n\nCodice sorgente: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nTracker dei problemi: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Supporto stellare\nIl nostro team di supporto è veloce, reattivo e sempre pronto a soddisfare le tue esigenze. Non abbiamo mai ricevuto una richiesta di supporto a cui non sia stata data risposta entro 24 ore. Siamo sempre facilmente raggiungibili attraverso i social media, ascoltiamo attentamente le vostre critiche e implementiamo sempre i buoni suggerimenti degli utenti in tempi record.\n\nPuoi contattare il nostro supporto all\'indirizzo: https://localmonero.co/support\n\n- Commissioni giuste\nNon addebitiamo commissioni esorbitanti quando depositi o ritiri Monero sul/dal nostro portafoglio di obbligazioni arbitrali. Non è prevista alcuna commissione di deposito e la commissione di prelievo è molto vicina alla commissione che pagheresti per una normale transazione.';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: BTC compra facile';
 
   @override
-  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sbagoradesk => 'Acquista o vendi Bitcoin senza verifica dell\'identità. Contanti o online.\n\nTi stai chiedendo come investire in Bitcoin? Su AgoraDesk, acquistare bitcoin non è mai stato così semplice: acquista istantaneamente BTC da una persona utilizzando il tuo metodo di pagamento online preferito: PayPal, carta di credito/debito o bonifico bancario, buoni regalo, Venmo o qualsiasi altro. Se desideri acquistare bitcoin vicino a te in contanti, puoi trovare qualcuno disposto a vendere bitcoin a livello locale: la piattaforma di trading supporta l\'acquisto e la vendita di BTC in contanti. Puoi persino acquistare bitcoin usando contanti per posta.\n\n- Trading sicuro e regolare\nProprio come LocalBitcoins, supportiamo qualsiasi metodo di pagamento, qualsiasi valuta, ovunque. Non rimuoviamo i metodi di pagamento e, a differenza di LocalBitcoin, supportiamo completamente le negoziazioni in contanti faccia a faccia. Tutte le nostre operazioni sono protette da un vincolo arbitrale. Grazie al fatto che richiediamo che i fondi siano tenuti in garanzia arbitrale prima che un\'operazione possa iniziare, garantiamo un\'esperienza fluida e sicura per l\'acquirente, che è essenziale per la popolarità della piattaforma e clienti abituali per i venditori.\n\n- Nessuna verifica KYC/AML o ID\nAgoraDesk si impegna a mantenere la semplicità e la semplicità che hanno reso così popolari i LocalBitcoin originali. Non impieghiamo KYC/AML, né abbiamo mai intenzione di farlo.\n\n- Scelto dalla Comunità\nLa nostra piattaforma opera da oltre quattro anni, è sopravvissuta al grande crollo del mercato delle criptovalute del 2018 e, grazie al suo diligente servizio orientato alla comunità, è diventata uno dei nomi più affidabili nella comunità estremamente scettica delle criptovalute.\n\n- Sicuro, open source, incentrato sulla privacy, resistente alla censura\nLa nostra app è gratuita e open source, il che garantisce che molti occhi guardino il codice dell\'app per assicurarsi che non vi siano falle di sicurezza o perdite di privacy. L\'open sourcing della nostra app consente inoltre a chiunque di accedere alla nostra app anche se un determinato repository di app censura l\'app. La nostra app funziona anche su telefoni con Google completamente bloccato. Apprezziamo così tanto la tua privacy che non ti chiediamo nemmeno di fornire un\'e-mail al momento della registrazione.\n\nCodice sorgente: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nTracker dei problemi: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Supporto stellare\nIl nostro team di supporto è veloce, reattivo e sempre desideroso di aiutare. Non abbiamo mai avuto un ticket di supporto che non abbia ricevuto risposta entro 24 ore. Siamo sempre facilmente raggiungibili attraverso i social media, ascoltiamo attentamente le tue critiche e implementiamo sempre buoni suggerimenti degli utenti in tempi record.\n\nPuoi raggiungere il nostro supporto su: https://agoradesk.com/support\n\n- Commissioni eque\nNon addebitiamo commissioni esorbitanti quando depositi o ritiri Bitcoin nel/dal nostro portafoglio di obbligazioni arbitrali. Non è prevista alcuna commissione di deposito e la commissione di prelievo è molto vicina alla commissione che pagheresti per una normale transazione.';
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sbagoradesk => 'Acquista o vendi Bitcoin senza verifica dell\'identità. Contanti o online.\n\nTi stai chiedendo come investire in Bitcoin? Su AgoraDesk, acquistare bitcoin non è mai stato così facile: acquista istantaneamente BTC da una persona utilizzando il tuo metodo di pagamento online preferito: PayPal, carta di credito/debito o bonifico bancario, carte regalo, Venmo o qualsiasi altro. Se desideri acquistare bitcoin vicino a te in contanti, puoi trovare qualcuno disposto a vendere bitcoin a livello locale: la piattaforma di trading supporta l\'acquisto e la vendita di BTC in contanti. Puoi anche acquistare bitcoin utilizzando contanti per posta.\n\n- Trading sicuro e regolare\nProprio come LocalBitcoins, supportiamo qualsiasi metodo di pagamento, qualsiasi valuta, ovunque. Non rimuoviamo i metodi di pagamento e, a differenza di LocalBitcoin, supportiamo pienamente le transazioni in contanti faccia a faccia. Tutte le nostre operazioni sono protette da un vincolo arbitrale. Grazie al fatto che richiediamo che i fondi siano trattenuti in una cauzione arbitrale prima che un\'operazione possa iniziare, garantiamo un\'esperienza fluida e sicura per l\'acquirente, che è essenziale per la popolarità della piattaforma e per i clienti abituali per i venditori.\n\n- Nessuna verifica KYC/AML o ID\nAgoraDesk si impegna a mantenere la semplicità e la semplicità che hanno reso così popolari i LocalBitcoin originali. Non utilizziamo KYC/AML, né prevediamo di farlo.\n\n- Scelto dalla comunità\nLa nostra piattaforma opera da oltre quattro anni, è sopravvissuta al grande crollo del mercato delle criptovalute del 2018 e, attraverso il suo servizio diligente orientato alla comunità, è diventata uno dei nomi più affidabili nella comunità estremamente scettica delle criptovalute.\n\n- Sicuro, open source, incentrato sulla privacy, resistente alla censura\nLa nostra app è gratuita e open source, il che garantisce che molti occhi guardino il codice dell\'app per garantire che non vi siano buchi di sicurezza o perdite di privacy. L\'open source della nostra app consente inoltre a chiunque di avere accesso alla nostra app anche se un determinato repository di app censura l\'app. La nostra app funziona anche su telefoni su cui Google è completamente bloccato. Teniamo così tanto alla tua privacy che non ti chiediamo nemmeno di fornire un\'e-mail al momento della registrazione.\n\nCodice sorgente: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nTracker dei problemi: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Supporto stellare\nIl nostro team di supporto è veloce, reattivo e sempre pronto a soddisfare le tue esigenze. Non abbiamo mai ricevuto una richiesta di supporto a cui non sia stata data risposta entro 24 ore. Siamo sempre facilmente raggiungibili attraverso i social media, ascoltiamo attentamente le vostre critiche e implementiamo sempre i buoni suggerimenti degli utenti in tempi record.\n\nPuoi contattare il nostro supporto all\'indirizzo: https://agoradesk.com/support\n\n- Commissioni giuste\nNon addebitiamo commissioni esorbitanti quando depositi o ritiri Bitcoin sul/dal nostro portafoglio di obbligazioni arbitrali. Non è prevista alcuna commissione di deposito e la commissione di prelievo è molto vicina alla commissione che pagheresti per una normale transazione.';
 
   @override
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbkeywords250Sblocalmonero => 'criptovaluta,anonimo,privato,monero,xmr,p2p';
@@ -9322,7 +9356,7 @@ class I18nIt extends I18n {
   String get error250Sbsignup250Sb177 => 'Tentativo di riscattare un coupon esaurito durante la registrazione';
 
   @override
-  String get nojs250Sbpassword8722Sbreset250Sbsuccess => 'Lettera di reimpostazione password inviata! Controlla la tua casella di posta.';
+  String get nojs250Sbpassword8722Sbreset250Sbsuccess => 'Lettera di reimpostazione della password inviata! Controlla la tua casella di posta.';
 
   @override
   String get ad8722Sbpage250Sbterms8722Sbdialog250Sbagree8722Sbcontinue => 'Accetta i termini e continua';
@@ -9339,7 +9373,7 @@ class I18nIt extends I18n {
   }
 
   @override
-  String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_buy => 'acquisto di opzione call';
+  String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_buy => 'acquisto di opzioni call';
 
   @override
   String get coupons250Sbcoupon250Sbdescription250Sbtypes250Sbcall_sell => 'vendita di opzioni call';
@@ -9358,7 +9392,7 @@ class I18nIt extends I18n {
 
   @override
   String app_503_body(Object val) {
-    return '$val tornerà presto!\\nCi scusiamo per l\'inconveniente, ma al momento stiamo eseguendo una manutenzione programmata.\\nProbabilmente torneremo presto online. Rimani aggiornato nei gruppi della nostra community:';
+    return '$val tornerà presto!\\nCi scusiamo per l\'inconveniente ma al momento stiamo eseguendo della manutenzione programmata.\\nProbabilmente saremo di nuovo online presto. Rimani aggiornato nei nostri gruppi della community:';
   }
 
   @override
@@ -9368,7 +9402,7 @@ class I18nIt extends I18n {
   String get app_chat_leave_review => 'Tocca qui per lasciare una recensione!';
 
   @override
-  String get app_chat_update_review => 'Hai già lasciato una recensione a questo utente. Vuoi aggiornare ora la tua recensione?';
+  String get app_chat_update_review => 'Hai già lasciato una recensione a questo utente. Vuoi aggiornare la tua recensione adesso?';
 
   @override
   String get app_select_buyer_seller => 'Seleziona acquirente o venditore';
@@ -9415,7 +9449,7 @@ class I18nIt extends I18n {
   String get app_ask_community_chats => 'Hai domande? Chiedi nelle chat della community';
 
   @override
-  String get app_select_currency => 'Seleziona la valuta';
+  String get app_select_currency => 'Seleziona valuta';
 
   @override
   String get app_select_country => 'Seleziona il paese';
@@ -9424,22 +9458,22 @@ class I18nIt extends I18n {
   String get app_select_payment_method => 'Scegli il metodo di pagamento';
 
   @override
-  String get app_enable_ad => 'Attiva annuncio';
+  String get app_enable_ad => 'Abilita annuncio';
 
   @override
   String get app_disable_ad => 'Disattiva annuncio';
 
   @override
-  String get app_proxy => 'Delega';
+  String get app_proxy => 'Procura';
 
   @override
-  String get app_proxy_details => 'Dettagli delegati';
+  String get app_proxy_details => 'Dettagli della delega';
 
   @override
   String get app_proxy_use => 'Usa un proxy';
 
   @override
-  String get app_proxy_bugs_expected => 'Avvertimento! La funzionalità proxy è in versione beta, sono previsti bug. Si prega di segnalare i bug ai nostri canali di sviluppo per correzioni rapide';
+  String get app_proxy_bugs_expected => 'Avvertimento! La funzionalità proxy è in versione beta, sono previsti bug. Si prega di segnalare i bug ai nostri canali di sviluppo per soluzioni rapide';
 
   @override
   String get app_proxy_select_type => 'Seleziona il tipo di proxy';
@@ -9448,13 +9482,13 @@ class I18nIt extends I18n {
   String get app_proxy_on => 'Proxy abilitato';
 
   @override
-  String get app_proxy_on_descr => 'L\'app si collegherà ora alla piattaforma tramite il proxy.';
+  String get app_proxy_on_descr => 'L\'app ora si connetterà alla piattaforma tramite il proxy.';
 
   @override
   String get app_proxy_unavailable => 'Proxy non disponibile';
 
   @override
-  String get app_proxy_unavailable_decr => 'Verifica se le impostazioni di connessione sono corrette o utilizza un altro proxy.';
+  String get app_proxy_unavailable_decr => 'Controlla se le impostazioni di connessione sono corrette o utilizza un altro proxy.';
 
   @override
   String get api_error_269 => 'Tentativo di aggiungere un indirizzo non valido a una rubrica';
@@ -9466,7 +9500,7 @@ class I18nIt extends I18n {
   String get api_error_273 => 'Tentativo di eliminare un indirizzo che non esiste nella rubrica di un utente';
 
   @override
-  String get pin_you_can_use_new => 'Il PIN deve essere di almeno 4 cifre';
+  String get pin_you_can_use_new => 'Il PIN deve contenere almeno 4 cifre';
 
   @override
   String get app_default_theme => 'Imposta un tema predefinito';
@@ -9476,7 +9510,7 @@ class I18nIt extends I18n {
 
   @override
   String pin_wrong_current_info(Object val) {
-    return 'Ti rimangono $val tentativi. Successivamente, verrai disconnesso e dovrai accedere nuovamente.';
+    return 'Ti restano $val tentativi. Successivamente verrai disconnesso e dovrai effettuare nuovamente l\'accesso.';
   }
 
   @override
