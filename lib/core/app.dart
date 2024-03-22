@@ -105,7 +105,6 @@ class _AppState extends State<App>
   _setInitialeLocaleAndCountry() {
     if (AppSharedPrefs().firstRun) {
       final localeString = Platform.localeName;
-      print('++++++++++++++++++++01 - ${localeString}');
       _countryCode = getCountryCode();
       _locale = Locale(localeString.split('_').first, localeString.split('_').last);
       AppSharedPrefs().setString(AppSharedPrefsKey.locale, localeString);
