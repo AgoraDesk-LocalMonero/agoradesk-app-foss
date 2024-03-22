@@ -1,5 +1,5 @@
 import 'package:agoradesk/core/agora_font.dart';
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/services/notifications/notifications_service.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
@@ -23,7 +23,7 @@ class NotificationsScreen extends StatelessWidget {
       child: ViewModelBuilder<NotificationsViewModel>(
           disposable: false,
           model: NotificationsViewModel(
-            appState: context.read<AppState>(),
+            appState: context.read<AppStateV1>(),
             notificationsService: context.read<NotificationsService>(),
             accountService: context.read<AccountService>(),
           ),

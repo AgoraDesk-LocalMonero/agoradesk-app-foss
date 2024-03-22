@@ -22,7 +22,6 @@ import 'package:agoradesk/features/market/screens/widgets/suffix_icon.dart';
 import 'package:agoradesk/features/market/screens/widgets/text_with_dot.dart';
 import 'package:agoradesk/features/wallet/screens/widgets/send_asset_text_field.dart';
 import 'package:agoradesk/generated/i18n.dart';
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
@@ -91,6 +90,7 @@ class InitiateTradeScreen extends StatelessWidget with CountryInfoMixin, Clipboa
 
   Widget _buildFirstTile(BuildContext context, MarketAdInfoViewModel model) {
     final ad = model.ad!;
+
     return ContainerSurface5Radius12(
       child: Padding(
         padding: const EdgeInsets.fromLTRB(16, 20, 16, 20),
@@ -140,25 +140,9 @@ class InitiateTradeScreen extends StatelessWidget with CountryInfoMixin, Clipboa
                     : const SizedBox(),
               ],
             ),
-            // const SizedBox(height: 4),Text(
-            //   model.isSell ? context.intl.pay : context.intl.wallet250Sbtab250Sbreceive8722Sbshort,
-            //   style: context.txtBodySmallNeutral60,
-            // ),
             const SizedBox(height: 4),
-            TextField(
-              controller: model.ctrlReceive,
-              decoration: context.decorationTxtFieldMain.copyWith(
-                suffixIcon: SuffixIcon(text: ad.currency),
-                errorText: model.receiveError,
-              ),
-              keyboardType: const TextInputType.numberWithOptions(decimal: true),
-            ),
+            _buildReceiveTextFieldOrDropdown(context, model),
             const SizedBox(height: 12),
-            // Text(
-            //   model.isSell ? context.intl.wallet250Sbtab250Sbreceive8722Sbshort : context.intl.pay,
-            //   style: context.txtBodySmallNeutral60,
-            // ),
-            // const SizedBox(height: 4),
             TextField(
               controller: model.ctrlPay,
               decoration: context.decorationTxtFieldMain.copyWith(
@@ -171,6 +155,42 @@ class InitiateTradeScreen extends StatelessWidget with CountryInfoMixin, Clipboa
         ),
       ),
     );
+  }
+
+  Widget _buildReceiveTextFieldOrDropdown(BuildContext context, MarketAdInfoViewModel model) {
+    final ad = model.ad!;
+
+    if (ad.limitToFiatAmounts != null && ad.limitToFiatAmounts!.isNotEmpty) {
+      final values = ad.limitToFiatAmounts!.split(',');
+      model.selectedStringReceive = values.first;
+
+      return DropdownButtonFormField<String>(
+        value: model.selectedStringReceive,
+        onChanged: (selected) {
+          model.selectedStringReceive = selected;
+          model.ctrlReceive.text = selected!;
+        },
+        decoration: context.decorationTxtFieldMain.copyWith(
+          suffixIcon: SuffixIcon(text: model.ad!.asset!.name),
+          errorText: model.receiveError,
+        ),
+        items: values.map((String value) {
+          return DropdownMenuItem<String>(
+            value: value,
+            child: Text(value),
+          );
+        }).toList(),
+      );
+    } else {
+      return TextField(
+        controller: model.ctrlReceive,
+        decoration: context.decorationTxtFieldMain.copyWith(
+          suffixIcon: SuffixIcon(text: ad.currency),
+          errorText: model.receiveError,
+        ),
+        keyboardType: const TextInputType.numberWithOptions(decimal: true),
+      );
+    }
   }
 
   Widget _buildImportantTile(BuildContext context, MarketAdInfoViewModel model) {
@@ -399,7 +419,7 @@ class InitiateTradeScreen extends StatelessWidget with CountryInfoMixin, Clipboa
                               model.btcFees == null
                                   ? const CupertinoActivityIndicator()
                                   : Text(
-                                      model.btcFees!.selectedFeeStr(model.btcFeesEnum)[0]! + ' BTC',
+                                      '${model.btcFees!.selectedFeeStr(model.btcFeesEnum)[0]!} BTC',
                                       style: context.txtBodySmallN80,
                                     ),
                             ],
@@ -434,30 +454,29 @@ class InitiateTradeScreen extends StatelessWidget with CountryInfoMixin, Clipboa
   }
 
   Future<void> _showPriceChangeDialog(BuildContext context, MarketAdInfoViewModel model) async {
-     await Future.delayed(Duration.zero);
-      await showDialog(
-        barrierDismissible: true,
-        context: context,
-        builder: (context) => DialogOutlineAndFilledButtons(
-          title: 'The ad price was changed!!!',
-          content: Column(
-            children: [
-              const SizedBox(height: 6),
-              LineWithDot(text: 'Old price was ${model.ad!.tempPrice} ${model.ad!.currency}'),
-              const SizedBox(height: 6),
-              LineWithDot(text: 'New price is ${model.ad!.tempPrice} ${model.ad!.currency}'),
-              const SizedBox(height: 6),
-            ],
-          ),
-          outlineButtonTitle: 'Cancel trade',
-          onPressedOutline: () => Navigator.of(context).pop(),
-          filledButtonTitle: 'I agree',
-          onPressedFilled: () {
-            model.userAgreeToChangedPrice = true;
-            Navigator.of(context).pop();
-          },
+    await Future.delayed(Duration.zero);
+    await showDialog(
+      barrierDismissible: true,
+      context: context,
+      builder: (context) => DialogOutlineAndFilledButtons(
+        title: 'The ad price was changed!!!',
+        content: Column(
+          children: [
+            const SizedBox(height: 6),
+            LineWithDot(text: 'Old price was ${model.ad!.tempPrice} ${model.ad!.currency}'),
+            const SizedBox(height: 6),
+            LineWithDot(text: 'New price is ${model.ad!.tempPrice} ${model.ad!.currency}'),
+            const SizedBox(height: 6),
+          ],
         ),
-      );
-    
+        outlineButtonTitle: 'Cancel trade',
+        onPressedOutline: () => Navigator.of(context).pop(),
+        filledButtonTitle: 'I agree',
+        onPressedFilled: () {
+          model.userAgreeToChangedPrice = true;
+          Navigator.of(context).pop();
+        },
+      ),
+    );
   }
 }

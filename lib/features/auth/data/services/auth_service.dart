@@ -6,7 +6,7 @@ import 'package:agoradesk/core/api/api_client.dart';
 import 'package:agoradesk/core/api/api_helper.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_shared_prefs.dart';
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/app_state_v2.dart';
 import 'package:agoradesk/core/functional_models/either.dart';
 import 'package:agoradesk/core/secure_storage.dart';
@@ -28,7 +28,7 @@ class AuthService with FileUtilsMixin, AuthMixin {
   AuthService({
     required ApiClient api,
     required SecureStorage secureStorage,
-    required AppState appState,
+    required AppStateV1 appState,
   })  : _api = api,
         _secureStorage = secureStorage,
         _appState = appState;
@@ -39,7 +39,7 @@ class AuthService with FileUtilsMixin, AuthMixin {
   ///
   final ApiClient _api;
   final SecureStorage _secureStorage;
-  final AppState _appState;
+  final AppStateV1 _appState;
 
   final BehaviorSubject<AuthState> _authStateController = BehaviorSubject<AuthState>.seeded(AuthState.initial);
 
@@ -370,6 +370,7 @@ class AuthService with FileUtilsMixin, AuthMixin {
       responseImperva = await _api.client.post<Map>(
         '/login',
         data: request.toJson(),
+
         /// TODO: check if we need to pass imperva cookies - tests shown that we don't need to
         // options: Options(
         //   headers: {for (var v in impervaCookies) v.name: v.value},

@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_auto_back_button.dart';
 import 'package:agoradesk/core/widgets/branded/app_bar_button.dart';
@@ -90,7 +90,7 @@ class AgoraAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   Widget _displayProxy(BuildContext context) {
     return StreamBuilder<bool?>(
-        stream: context.read<AppState>().proxyStatus$,
+        stream: context.read<AppStateV1>().proxyStatus$,
         builder: (context, snapshot) {
           if (snapshot.data == true) {
             return Align(

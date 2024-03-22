@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/packages/mapbox/places_search.dart';
 import 'package:agoradesk/core/packages/mapbox/predictions.dart';
@@ -46,7 +46,7 @@ class AddEditAdViewModel extends ViewModel
     required AdsRepository adsRepository,
     required WalletService walletService,
     required PlacesSearch placesSearch,
-    required AppState appState,
+    required AppStateV1 appState,
     this.ad,
     this.isEditMode = false,
   })  : _adsRepository = adsRepository,
@@ -57,7 +57,7 @@ class AddEditAdViewModel extends ViewModel
   final AdsRepository _adsRepository;
   final WalletService _walletService;
   final PlacesSearch _placesSearch;
-  final AppState _appState;
+  final AppStateV1 _appState;
 
   final currencyDropdownKey = GlobalKey<DropdownSearchState>();
 
@@ -298,7 +298,7 @@ class AddEditAdViewModel extends ViewModel
         ctrl4MaxAmount.text = '${ad!.maxAmount}';
         maxAmount = ad!.maxAmount;
       }
-      if (ad?.limitToFiatAmounts != null) {
+      if (ad?.limitToFiatAmounts?.isNotEmpty == true) {
         ctrl4RestrictLimit.text = '${ad!.limitToFiatAmounts}';
         restrictLimit = ad!.limitToFiatAmounts;
       }
@@ -454,7 +454,7 @@ class AddEditAdViewModel extends ViewModel
         minAmount: minAmount,
         maxAmount: maxAmount,
         requireFeedbackScore: minimumFeedbackScore,
-        limitToFiatAmounts: restrictLimit,
+        limitToFiatAmounts: restrictLimit?.isNotEmpty == true ? restrictLimit : null,
         firstTimeLimitXmr: asset == Asset.XMR ? firstTradeMaxLimit : null,
         firstTimeLimitBtc: asset == Asset.BTC ? firstTradeMaxLimit : null,
         trackMaxAmount: trackMaxAmount,

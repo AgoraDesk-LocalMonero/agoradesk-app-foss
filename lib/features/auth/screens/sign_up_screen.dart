@@ -1,6 +1,6 @@
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/app_parameters.dart';
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/url_mixin.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
@@ -41,7 +41,7 @@ class SignUpScreen extends ConsumerWidget with UrlMixin, ValidatorMixin {
           child: ViewModelBuilder<SignUpViewModel>(
               model: SignUpViewModel(
                 authService: context.read<AuthService>(),
-                appState: context.read<AppState>(),
+                appState: context.read<AppStateV1>(),
               ),
               builder: (context, model, _) {
                 return SingleChildScrollView(

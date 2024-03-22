@@ -1,4 +1,4 @@
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
@@ -16,7 +16,7 @@ class DefaultThemeScreen extends StatelessWidget {
     return ViewModelBuilder<DefaultThemeViewModel>(
         disposable: false,
         model: DefaultThemeViewModel(
-          appState: context.read<AppState>(),
+          appState: context.read<AppStateV1>(),
         ),
         builder: (context, model, _) {
           return Scaffold(

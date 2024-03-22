@@ -1,16 +1,16 @@
 import 'dart:async';
 
 import 'package:agoradesk/core/app_shared_prefs.dart';
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/features/profile/models/notifications_settings_type.dart';
 import 'package:vm/vm.dart';
 
 class NotificationSettingsViewModel extends ViewModel {
   NotificationSettingsViewModel({
-    required AppState appState,
+    required AppStateV1 appState,
   }) : _appState = appState;
 
-  final AppState _appState;
+  final AppStateV1 _appState;
   List<NotificationsSettingsType>? disabledSettings;
   bool _loading = false;
 
