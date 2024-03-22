@@ -1,4 +1,4 @@
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/functional_models/either.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
@@ -16,7 +16,7 @@ class MockAdsRepository extends Mock implements AdsRepository {}
 
 class MockAuthService extends Mock implements AuthService {}
 
-class MockAppState extends Mock implements AppState {}
+class MockAppState extends Mock implements AppStateV1 {}
 
 void main() {
   late WalletViewModel sut;

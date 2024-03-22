@@ -1,4 +1,4 @@
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/qr_scanner_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
@@ -39,7 +39,7 @@ class SendAssetFirstScreen extends StatelessWidget with QrScannerMixin {
             price: price,
             fiatName: fiatName,
             walletService: context.read<WalletService>(),
-            appState: context.read<AppState>(),
+            appState: context.read<AppStateV1>(),
           ),
           builder: (context, model, child) {
             return Scaffold(

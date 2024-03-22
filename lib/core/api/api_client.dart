@@ -174,12 +174,12 @@ class ApiClient with UrlMixin {
     );
 
     if (_debug) {
-      _dio.interceptors.add(
-        DioLoggingInterceptor(
-          level: Level.body,
-          compact: false,
-        ),
-      );
+      // _dio.interceptors.add(
+      //   DioLoggingInterceptor(
+      //     level: Level.body,
+      //     compact: false,
+      //   ),
+      // );
     }
   }
 

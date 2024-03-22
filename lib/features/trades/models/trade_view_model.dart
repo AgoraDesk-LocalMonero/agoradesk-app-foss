@@ -4,7 +4,7 @@ import 'dart:ui';
 import 'package:agoradesk/core/api/api_client.dart';
 import 'package:agoradesk/core/app_constants.dart';
 import 'package:agoradesk/core/app_parameters.dart';
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
 import 'package:agoradesk/core/extensions/even_rounding.dart';
@@ -62,7 +62,7 @@ class TradeViewModel extends ViewModel
     required this.secureStorage,
     required AdsRepository adsRepository,
     required ApiClient apiClient,
-    required AppState appState,
+    required AppStateV1 appState,
     required NotificationsService notificationsService,
   })  : _tradeRepository = tradeRepository,
         _apiClient = apiClient,
@@ -77,7 +77,7 @@ class TradeViewModel extends ViewModel
   final SecureStorage secureStorage;
   final AdsRepository _adsRepository;
   final ApiClient _apiClient;
-  final AppState _appState;
+  final AppStateV1 _appState;
   final TradeModel? tradeModel;
   final String? tradeId;
 
@@ -252,7 +252,7 @@ class TradeViewModel extends ViewModel
     noteModel = NoteOnUserViewModel(
       username: usernameStr(),
       accountService: _accountService,
-      appState: context.read<AppState>(),
+      appState: context.read<AppStateV1>(),
     );
     // we need to get full ad for LOCAL trades for getting location string
     // recevining silently, without handling errors
@@ -1021,7 +1021,7 @@ class TradeViewModel extends ViewModel
   Future selectImage(BuildContext context, bool isKeyboardOpen) async {
     if (isKeyboardOpen) {
       FocusScope.of(context).unfocus();
-      await Future.delayed(Duration(milliseconds: 200));
+      await Future.delayed(const Duration(milliseconds: 200));
     }
     await _showGalleryCameraSelection(context);
     if (_imageSource != null) {

@@ -1,5 +1,5 @@
 import 'package:agoradesk/core/app_parameters.dart';
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
 import 'package:agoradesk/router.gr.dart';
@@ -111,7 +111,7 @@ class WebViewExampleState extends State<WebviewScreen> {
         onLoadStop: (controller, _) async {
           final pageBody = await controller.getHtml() ?? '';
           if (widget.isFromCaptchaEvent && (pageBody.contains('feedbackScore'))) {
-            context.read<AppState>().sinkReloadMarket.add(true);
+            context.read<AppStateV1>().sinkReloadMarket.add(true);
             if (AutoRouter.of(context).current.name == WebviewRoute.name) {
               Navigator.of(context).pop();
             }

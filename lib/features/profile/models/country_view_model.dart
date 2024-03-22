@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
@@ -9,13 +9,13 @@ import 'package:vm/vm.dart';
 
 class CountryViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin {
   CountryViewModel({
-    required AppState appState,
+    required AppStateV1 appState,
     required AdsRepository adsRepository,
   })  : _appState = appState,
         _adsRepository = adsRepository;
 
   final AdsRepository _adsRepository;
-  final AppState _appState;
+  final AppStateV1 _appState;
 
   final TextEditingController ctrlSearch = TextEditingController();
 

@@ -1,7 +1,7 @@
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/app_constants.dart';
 import 'package:agoradesk/core/app_parameters.dart';
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
 import 'package:agoradesk/core/translations/payment_method_mixin.dart';
@@ -175,7 +175,7 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
 
   Widget _buildBody(BuildContext context, AdsViewModel model) {
     return StreamBuilder<bool>(
-        stream: context.read<AppState>().connection$,
+        stream: context.read<AppStateV1>().connection$,
         builder: (context, snapshot) {
           if (snapshot.data == false) {
             model.connection = false;

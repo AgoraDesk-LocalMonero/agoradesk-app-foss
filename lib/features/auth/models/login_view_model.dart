@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:agoradesk/core/app_parameters.dart';
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/flavor_type.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
@@ -15,12 +15,12 @@ import 'package:vm/vm.dart';
 class LoginViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
   LoginViewModel({
     required AuthService authService,
-    required AppState appState,
+    required AppStateV1 appState,
   })  : _authService = authService,
         _appState = appState;
 
   final AuthService _authService;
-  final AppState _appState;
+  final AppStateV1 _appState;
 
   String? _username;
   String? _password;

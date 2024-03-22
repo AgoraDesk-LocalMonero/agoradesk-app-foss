@@ -4,7 +4,8 @@ import 'dart:async';
 import 'dart:ui';
 
 import 'package:agoradesk/core/app_parameters.dart';
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_shared_prefs.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
 import 'package:agoradesk/core/models/pagination.dart';
 import 'package:agoradesk/core/packages/mapbox/places_search.dart';
@@ -42,7 +43,7 @@ class MarketViewModel extends ViewModel
     required AdsRepository adsRepository,
     required PlacesSearch placesSearch,
     required AuthService authService,
-    required AppState appState,
+    required AppStateV1 appState,
   })  : _placesSearch = placesSearch,
         _adsRepository = adsRepository,
         _authService = authService,
@@ -51,7 +52,7 @@ class MarketViewModel extends ViewModel
   final AdsRepository _adsRepository;
   final PlacesSearch _placesSearch;
   final AuthService _authService;
-  final AppState _appState;
+  final AppStateV1 _appState;
 
   TextEditingController ctrlAmount = TextEditingController();
   TextEditingController ctrlLocation = TextEditingController();
@@ -64,7 +65,7 @@ class MarketViewModel extends ViewModel
 
   final int _reloadCounter = 0;
 
-  Asset? _asset = Asset.XMR;
+  late Asset _asset;
   bool connection = true;
   final List<AdModel> ads = [];
   late CountryCodeModel countryCodeModel;
@@ -82,7 +83,7 @@ class MarketViewModel extends ViewModel
   late final GlobalKey<DropdownSearchState<dynamic>> countryDropdownKey;
   late final StreamSubscription<bool> subscriptionReload;
 
-  TradeType? _tradeType = TradeType.ONLINE_BUY;
+  late TradeType _tradeType;
   double? _lon;
   double? _lat;
 
@@ -119,16 +120,26 @@ class MarketViewModel extends ViewModel
 
   set loadingAds(bool v) => updateWith(loadingAds: v);
 
-  Asset? get asset => _asset;
+  Asset get asset => _asset;
 
-  set asset(Asset? v) => updateWith(asset: v);
+  set asset(Asset? v) {
+    if (v != null) AppSharedPrefs().setMarketSelectedAsset(v);
+    updateWith(asset: v);
+  }
 
-  TradeType? get tradeType => _tradeType;
+  TradeType get tradeType => _tradeType;
 
-  set tradeType(TradeType? v) => updateWith(tradeType: v);
+  set tradeType(TradeType? v) {
+    if (v != null) AppSharedPrefs().setMarketSelectedTradeType(v);
+    updateWith(tradeType: v);
+  }
 
   @override
   void init() async {
+
+    _asset = AppSharedPrefs().marketSelectedAsset;
+    _tradeType = AppSharedPrefs().marketSelectedTradeType;
+
     onlineProviderDropdownKey = GlobalKey<DropdownSearchState>();
     currencyDropdownKey = GlobalKey<DropdownSearchState>();
     countryDropdownKey = GlobalKey<DropdownSearchState>();
@@ -335,7 +346,7 @@ class MarketViewModel extends ViewModel
         } else {}
       }
       final res = await _adsRepository.publicAdSearch(
-        asset: asset!,
+        asset: asset,
         tradeType: tradeType!,
         currencyCode: selectedCurrency.code,
         countryCode: countryCodeForSearch,
@@ -519,7 +530,7 @@ class MarketViewModel extends ViewModel
     if (state == AppLifecycleState.resumed) {
       if (GetIt.I<AppParameters>().isCheckUpdates) {
         final newVersion = await AppUpdateService(
-          appState: context.read<AppState>(),
+          appState: context.read<AppStateV1>(),
         ).getReleaseVersion();
         if (newVersion != null) {
           await Future.delayed(const Duration(seconds: 1));
