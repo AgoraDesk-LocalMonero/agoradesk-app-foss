@@ -21,6 +21,7 @@ import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/features/trades/data/repository/trade_repository.dart';
 import 'package:agoradesk/features/wallet/data/models/btc_fee_model.dart';
 import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
+import 'package:agoradesk/generated/l10n.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:decimal/decimal.dart';
@@ -97,6 +98,10 @@ class MarketAdInfoViewModel extends ViewModel
   bool _checkingPrice = false;
   String? _changedAdPrice = '';
   bool _userAgreeToChangedPrice = false;
+  String? _selectedStringReceive;
+
+   String? get selectedStringReceive => _selectedStringReceive;
+   set selectedStringReceive(String? v) => updateWith(selectedStringReceive: v);
 
   late final bool isSell;
   late final bool isAdOwner;
@@ -497,9 +502,11 @@ class MarketAdInfoViewModel extends ViewModel
     bool? startingTrade,
     String? changedAdPrice,
     bool? userAgreeToChangedPrice,
+    String? selectedStringReceive,
   }) async {
     bool reloadAds = false;
     _loadingAds = loadingAds ?? _loadingAds;
+    _selectedStringReceive = selectedStringReceive ?? _selectedStringReceive;
     _fieldHasValue = fieldHasValue ?? _fieldHasValue;
     _loadingBalance = loadingBalance ?? _loadingBalance;
     _loadingFees = loadingFees ?? _loadingFees;

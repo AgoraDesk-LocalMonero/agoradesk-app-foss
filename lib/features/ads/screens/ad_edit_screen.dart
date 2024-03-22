@@ -1,4 +1,4 @@
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/packages/mapbox/places_search.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
@@ -67,7 +67,7 @@ class _AdEditScreenState extends State<AdEditScreen>
       adsRepository: context.read<AdsRepository>(),
       walletService: context.read<WalletService>(),
       placesSearch: context.read<PlacesSearch>(),
-      appState: context.read<AppState>(),
+      appState: context.read<AppStateV1>(),
       ad: widget.ad,
       isEditMode: true,
     );

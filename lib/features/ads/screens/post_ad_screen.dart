@@ -1,5 +1,5 @@
 import 'package:agoradesk/core/app_parameters.dart';
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/packages/mapbox/places_search.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/url_mixin.dart';
@@ -37,7 +37,7 @@ class _PostAdScreenState extends State<PostAdScreen> with TickerProviderStateMix
       adsRepository: context.read<AdsRepository>(),
       walletService: context.read<WalletService>(),
       placesSearch: context.read<PlacesSearch>(),
-      appState: context.read<AppState>(),
+      appState: context.read<AppStateV1>(),
     );
     _model.tabController = TabController(length: 3, vsync: this);
     super.initState();
@@ -144,14 +144,14 @@ class _PopupMenu extends StatelessWidget with UrlMixin {
       itemBuilder: (context) => [
         PopupMenuItem(
           padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-          child: Text(context.intl.post8722Sbad250Sbrules8722Sbtext8722Sb08722Sbterms8722Sbof8722Sbservice),
           onTap: () => openLink(GetIt.I<AppParameters>().urlPrivacy, token: GetIt.I<AppParameters>().accessToken),
           value: 1,
+          child: Text(context.intl.post8722Sbad250Sbrules8722Sbtext8722Sb08722Sbterms8722Sbof8722Sbservice),
         ),
         PopupMenuItem(
-          child: Text(context.intl.post8722Sbad250Sbrules8722Sbtext8722Sb08722Sbguides),
           onTap: () => openLink(GetIt.I<AppParameters>().urlGuides, token: GetIt.I<AppParameters>().accessToken),
           value: 2,
+          child: Text(context.intl.post8722Sbad250Sbrules8722Sbtext8722Sb08722Sbguides),
         )
       ],
     );

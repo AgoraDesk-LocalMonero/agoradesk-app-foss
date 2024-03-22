@@ -1,4 +1,4 @@
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
@@ -42,7 +42,7 @@ class AdInfoScreen extends StatelessWidget with CountryInfoMixin, ClipboardMixin
         model: AdInfoViewModel(
           adsRepository: context.read<AdsRepository>(),
           accountService: context.read<AccountService>(),
-          appState: context.read<AppState>(),
+          appState: context.read<AppStateV1>(),
           ad: ad,
           onGlobalVacation: onGlobalVacation,
         ),
@@ -68,7 +68,7 @@ class AdInfoScreen extends StatelessWidget with CountryInfoMixin, ClipboardMixin
                       AdInfoBox(
                         ad: ad.copyWith(
                           profile: AccountInfoModel(
-                            username: context.read<AppState>().username,
+                            username: context.read<AppStateV1>().username,
                             lastOnline: DateTime.now(),
                           ),
                         ),
@@ -99,7 +99,7 @@ class AdInfoScreen extends StatelessWidget with CountryInfoMixin, ClipboardMixin
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  context.intl.ad250Sbself8722Sbvacation8722Sbnotice.split('.')[0] + '.',
+                  '${context.intl.ad250Sbself8722Sbvacation8722Sbnotice.split('.')[0]}.',
                   style: context.txtBodyXSmallN80N30,
                 ),
                 adsViewModel != null
@@ -194,17 +194,17 @@ class _PopupMenu extends StatelessWidget {
       itemBuilder: (context) => [
         PopupMenuItem(
           padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-          child: Text(context.intl.app_edit_this_ad),
           onTap: () => AutoRouter.of(context).push(
             AdEditRoute(ad: model.ad),
           ),
           value: 1,
+          child: Text(context.intl.app_edit_this_ad),
         ),
         PopupMenuItem(
           padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-          child: Text(context.intl.dashboard250Sbad250Sbdelete8722Sbbtn),
           onTap: () => _showDialog(context),
           value: 1,
+          child: Text(context.intl.dashboard250Sbad250Sbdelete8722Sbbtn),
         ),
       ],
     );

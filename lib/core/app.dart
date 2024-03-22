@@ -7,7 +7,7 @@ import 'package:agoradesk/core/app_constants.dart';
 import 'package:agoradesk/core/app_hive.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_shared_prefs.dart';
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/app_state_v2.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/observers/routes_observer.dart';
@@ -82,7 +82,7 @@ class _AppState extends State<App>
   late final AppRouter _appRouter;
   late final NotificationsService _notificationsService;
   late final PollingService _pollingService;
-  late final AppState appState;
+  late final AppStateV1 appState;
   String? token;
 
   Uri? _initialUri;
@@ -91,13 +91,31 @@ class _AppState extends State<App>
   DateTime _lastUsedErrorMessage = DateTime.now().subtract(const Duration(hours: 1));
   bool _activatePin = false;
   bool _dialogOpened = false;
+  late final Locale _locale;
+  late final String _countryCode;
+
+  _setInitialeLocaleAndCountry() {
+    if (AppSharedPrefs().firstRun) {
+      final localeString = Platform.localeName;
+      _countryCode = getCountryCode();
+      _locale = Locale(localeString.split('_').first, localeString.split('_').last);
+      AppSharedPrefs().setString(AppSharedPrefsKey.locale, localeString);
+      AppSharedPrefs().setString(AppSharedPrefsKey.countryCode, _countryCode);
+      AppSharedPrefs().setBool(AppSharedPrefsKey.firstRun, val: false);
+    } else {
+      _locale = AppSharedPrefs().locale;
+      _countryCode = AppSharedPrefs().countryCode;
+    }
+  }
 
   @override
   void initState() {
+    _setInitialeLocaleAndCountry();
     _secureStorage = SecureStorage();
-    appState = AppState(
+    appState = AppStateV1(
       secureStorage: _secureStorage,
-      locale: AppSharedPrefs().locale,
+      locale: _locale,
+      countryCode: _countryCode,
       defaultTab: AppSharedPrefs().defaultTab,
       themeMode: AppSharedPrefs().themeMode,
     );
@@ -191,7 +209,7 @@ class _AppState extends State<App>
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: _providers,
-      child: Consumer<AppState>(
+      child: Consumer<AppStateV1>(
         builder: (context, appState, _) {
           // TODO: find better way
           setLocaleMessages(appState.locale.languageCode, appState.messagesLocaleTimeago);
@@ -666,7 +684,6 @@ class _AppState extends State<App>
     }
 
     appState.updateWith(
-      countryCode: AppSharedPrefs().countryCode ?? countryCodeMixin,
       themeMode: AppSharedPrefs().themeMode,
       notify: false,
     );

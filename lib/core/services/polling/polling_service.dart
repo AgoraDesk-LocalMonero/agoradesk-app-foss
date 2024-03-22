@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:agoradesk/core/api/api_client.dart';
 import 'package:agoradesk/core/app_parameters.dart';
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
@@ -28,7 +28,7 @@ class PollingService with ErrorParseMixin {
   final WalletService walletService;
   final AuthService authService;
   final AdsRepository adsRepository;
-  final AppState appState;
+  final AppStateV1 appState;
   bool _loadingBalance = false;
   bool _calculatingBalance = false;
   Timer? _timer;
@@ -68,12 +68,14 @@ class PollingService with ErrorParseMixin {
             ]);
           } else {
             if (resBtc.isLeft) {
-              if (GetIt.I<AppParameters>().debugPrintIsOn)
+              if (GetIt.I<AppParameters>().debugPrintIsOn) {
                 debugPrint('++++[Polling service - getBalances error] - BTC ${resBtc.left.statusCode}');
+              }
             }
             if (resXmr.isLeft) {
-              if (GetIt.I<AppParameters>().debugPrintIsOn)
+              if (GetIt.I<AppParameters>().debugPrintIsOn) {
                 debugPrint('++++[Polling service - getBalances error] - BTC ${resXmr.left.statusCode}');
+              }
             }
           }
         } else {
@@ -83,8 +85,9 @@ class PollingService with ErrorParseMixin {
               resXmr.right,
             ]);
           } else {
-            if (GetIt.I<AppParameters>().debugPrintIsOn)
+            if (GetIt.I<AppParameters>().debugPrintIsOn) {
               debugPrint('++++[Polling service - getBalances error] - XMR ${resXmr.left.statusCode}');
+            }
           }
         }
         Future.delayed(const Duration(milliseconds: 500)).then((value) => GetIt.I<AppParameters>().polling = false);

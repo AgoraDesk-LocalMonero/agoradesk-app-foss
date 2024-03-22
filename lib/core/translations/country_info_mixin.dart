@@ -6,7 +6,7 @@ import 'package:agoradesk/core/translations/countries_names_consts.dart';
 import 'package:flutter/cupertino.dart';
 
 mixin CountryInfoMixin {
-  String get countryCodeMixin {
+  String getCountryCode() {
     final code = Platform.localeName.substring(Platform.localeName.length - 2);
     if (code == 'en') {
       return 'US';
@@ -15,7 +15,7 @@ mixin CountryInfoMixin {
   }
 
   String getCountryName(String code, {bool lowerCase = false}) {
-    String? langCode = AppSharedPrefs().locale?.languageCode;
+    String? langCode = AppSharedPrefs().locale.languageCode;
     langCode ??= 'en';
     if (langCode.isEmpty) {
       langCode = 'en';
@@ -38,7 +38,7 @@ mixin CountryInfoMixin {
   }
 
   String getCurrencyName(String code) {
-    String? langCode = AppSharedPrefs().locale?.languageCode;
+    String? langCode = AppSharedPrefs().locale.languageCode;
 
     langCode ??= 'en';
     if (langCode.isEmpty) {
@@ -57,7 +57,7 @@ mixin CountryInfoMixin {
   }
 
   String getCurrencyNameWithCode(String code) {
-    String? langCode = AppSharedPrefs().locale?.languageCode;
+    String? langCode = AppSharedPrefs().locale.languageCode;
 
     langCode ??= 'en';
     if (langCode.isEmpty) {

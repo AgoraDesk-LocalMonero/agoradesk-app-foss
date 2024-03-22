@@ -1,5 +1,5 @@
 import 'package:agoradesk/core/agora_font.dart';
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
 import 'package:agoradesk/core/widgets/branded/button_filled_inactive_surface2.dart';
@@ -309,7 +309,7 @@ class _EnterAmount extends StatelessWidget {
         TextField(
           controller: model.ctrlFiat,
           decoration: decoration.copyWith(
-            suffixIcon: SuffixIcon(text: context.read<AppState>().currencyCode),
+            suffixIcon: SuffixIcon(text: context.read<AppStateV1>().currencyCode),
             hintText: '0.0',
             errorText: model.inputFiatError,
           ),

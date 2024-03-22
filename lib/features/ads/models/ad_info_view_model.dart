@@ -1,5 +1,5 @@
 import 'package:agoradesk/core/app_constants.dart';
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/features/account/data/models/account_info_model.dart';
@@ -18,7 +18,7 @@ class AdInfoViewModel extends ViewModel with ErrorParseMixin {
   AdInfoViewModel({
     required AdsRepository adsRepository,
     required AccountService accountService,
-    required AppState appState,
+    required AppStateV1 appState,
     required this.ad,
     this.onGlobalVacation,
   })  : _accountService = accountService,
@@ -27,7 +27,7 @@ class AdInfoViewModel extends ViewModel with ErrorParseMixin {
 
   final AdsRepository _adsRepository;
   final AccountService _accountService;
-  final AppState _appState;
+  final AppStateV1 _appState;
   final AdModel ad;
   final bool? onGlobalVacation;
 
@@ -137,10 +137,5 @@ class AdInfoViewModel extends ViewModel with ErrorParseMixin {
     _loadingAccountInfo = loadingAccountInfo ?? _loadingAccountInfo;
     _savingSwitchers = savingSwitchers ?? _savingSwitchers;
     notifyListeners();
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
   }
 }

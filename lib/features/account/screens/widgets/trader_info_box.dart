@@ -1,6 +1,6 @@
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/app_parameters.dart';
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/date_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/box_iconP80_textN60_dataN90.dart';
@@ -107,7 +107,7 @@ class TraderInfoBox extends StatelessWidget with DateMixin {
                     iconData: AgoraFont.clock,
                     text: I18n.of(context)!.user250Sbmedian8722Sbtitle,
                     dataText: accountInfo.releaseTimeMedium != null
-                        ? secondsToString(accountInfo.releaseTimeMedium!, context.read<AppState>().langCode)
+                        ? secondsToString(accountInfo.releaseTimeMedium!, context.read<AppStateV1>().langCode)
                         : '',
                   ),
                 ),

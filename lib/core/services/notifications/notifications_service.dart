@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:agoradesk/core/api/api_client.dart';
 import 'package:agoradesk/core/app_parameters.dart';
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/translations/foreground_messages_mixin.dart';
 import 'package:agoradesk/features/account/data/models/notification_message_type.dart';
@@ -37,7 +37,7 @@ class NotificationsService with ForegroundMessagesMixin {
   final SecureStorage secureStorage;
   final AccountService accountService;
   final AuthService authService;
-  final AppState appState;
+  final AppStateV1 appState;
   bool _loading = false;
   final bool _tokenLoading = false;
   final bool _updating = false;

@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/api/api_client.dart';
 import 'package:agoradesk/core/app_parameters.dart';
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/flavor_type.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/services/notifications/notifications_service.dart';
@@ -50,11 +50,7 @@ class TradeScreen extends StatefulWidget {
 }
 
 class _TradeScreenState extends State<TradeScreen>
-    with
-        TickerProviderStateMixin,
-        DateMixin,
-        CountryInfoMixin,
-        WidgetsBindingObserver {
+    with TickerProviderStateMixin, DateMixin, CountryInfoMixin, WidgetsBindingObserver {
   late final TradeViewModel _model;
 
   @override
@@ -67,7 +63,7 @@ class _TradeScreenState extends State<TradeScreen>
       secureStorage: context.read<SecureStorage>(),
       apiClient: context.read<ApiClient>(),
       adsRepository: context.read<AdsRepository>(),
-      appState: context.read<AppState>(),
+      appState: context.read<AppStateV1>(),
       notificationsService: context.read<NotificationsService>(),
     );
     _model.tabController = TabController(length: 2, vsync: this);
@@ -78,8 +74,7 @@ class _TradeScreenState extends State<TradeScreen>
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (state == AppLifecycleState.resumed) {
-      _model.secureStorage.write(SecureStorageKey.openedTradeId,
-          widget.tradeId ?? widget.tradeModel?.tradeId ?? '');
+      _model.secureStorage.write(SecureStorageKey.openedTradeId, widget.tradeId ?? widget.tradeModel?.tradeId ?? '');
     }
     super.didChangeAppLifecycleState(state);
   }
@@ -91,8 +86,7 @@ class _TradeScreenState extends State<TradeScreen>
         builder: (context, model, child) {
           return Scaffold(
             appBar: AgoraAppBar(
-              title: context.intl
-                  .document8722Sbtitle250Sbtrade(model.barTitle(), ''),
+              title: context.intl.document8722Sbtitle250Sbtrade(model.barTitle(), ''),
               rightAction: TradePopupMenu(model: model),
             ),
             body: GestureDetector(
@@ -165,16 +159,14 @@ class _TradeScreenState extends State<TradeScreen>
           TradeStepOne(model: model),
           TradeStepTwo(model: model),
           TradeStepThree(model: model),
-          model.tradeStatus.index < 6 ||
-                  model.tradeStatus == TradeStatus.disputed
+          model.tradeStatus.index < 6 || model.tradeStatus == TradeStatus.disputed
               ? Padding(
                   padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
                   child: BoxInfoWithLabel(
                     label: context.intl.trade250Sbstatus250Sbescrowed,
                     child: Text(
                       context.intl
-                          .trade250Sbstatus250Sbfunded8722Sbescrowed8722Sbtext8722Sb1(
-                              GetIt.I<AppParameters>().appName),
+                          .trade250Sbstatus250Sbfunded8722Sbescrowed8722Sbtext8722Sb1(GetIt.I<AppParameters>().appName),
                       style: context.txtBodyXSmallN80,
                     ),
                   ),
