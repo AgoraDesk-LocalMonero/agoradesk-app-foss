@@ -298,7 +298,7 @@ class AddEditAdViewModel extends ViewModel
         ctrl4MaxAmount.text = '${ad!.maxAmount}';
         maxAmount = ad!.maxAmount;
       }
-      if (ad?.limitToFiatAmounts != null) {
+      if (ad?.limitToFiatAmounts?.isNotEmpty == true) {
         ctrl4RestrictLimit.text = '${ad!.limitToFiatAmounts}';
         restrictLimit = ad!.limitToFiatAmounts;
       }
@@ -454,7 +454,7 @@ class AddEditAdViewModel extends ViewModel
         minAmount: minAmount,
         maxAmount: maxAmount,
         requireFeedbackScore: minimumFeedbackScore,
-        limitToFiatAmounts: restrictLimit,
+        limitToFiatAmounts: restrictLimit?.isNotEmpty == true ? restrictLimit : null,
         firstTimeLimitXmr: asset == Asset.XMR ? firstTradeMaxLimit : null,
         firstTimeLimitBtc: asset == Asset.BTC ? firstTradeMaxLimit : null,
         trackMaxAmount: trackMaxAmount,
