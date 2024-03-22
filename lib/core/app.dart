@@ -112,7 +112,7 @@ class _AppState extends State<App>
       AppSharedPrefs().setBool(AppSharedPrefsKey.firstRun, val: false);
     } else {
       _locale = AppSharedPrefs().locale;
-      _countryCode = AppSharedPrefs().getString(AppSharedPrefsKey.countryCode)!;
+      _countryCode = AppSharedPrefs().countryCode;
     }
   }
 

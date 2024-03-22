@@ -107,7 +107,7 @@ class AppSharedPrefs with DateMixin {
 
   String? get ignoredUpdate => getString(AppSharedPrefsKey.ignoredUpdate);
 
-  String? get countryCode => getString(AppSharedPrefsKey.countryCode);
+  String get countryCode => getString(AppSharedPrefsKey.countryCode) ?? 'US';
 
   int get pinAttemptsLeft => getInt(AppSharedPrefsKey.pinAttemptsLeft) ?? kPinAttempts;
 
