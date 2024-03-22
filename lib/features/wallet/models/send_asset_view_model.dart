@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/extensions/even_rounding.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
@@ -25,12 +25,12 @@ class SendAssetViewModel extends ViewModel
     required this.balance,
     required this.asset,
     required WalletService walletService,
-    required AppState appState,
+    required AppStateV1 appState,
   })  : _appState = appState,
         _walletService = walletService;
 
   final WalletService _walletService;
-  final AppState _appState;
+  final AppStateV1 _appState;
   final double price;
   final String fiatName;
   final double? balance;
@@ -364,7 +364,7 @@ class SendAssetViewModel extends ViewModel
 
   String transactionFee() {
     if (asset == Asset.XMR) {
-      return xmrFees.toString() + ' XMR';
+      return '$xmrFees XMR';
     } else {
       return '${(btcFees?.selectedFeeStr(btcFeesEnum!)[0] ?? "")} BTC (${btcFeesEnum!.translated(context)} ${btcFees?.selectedFeeStr(btcFeesEnum!)[0]} sat/vB)';
     }
@@ -372,7 +372,7 @@ class SendAssetViewModel extends ViewModel
 
   String transactionFeeOld() {
     if (asset == Asset.XMR) {
-      return oldXmrFees.toString() + ' XMR';
+      return '$oldXmrFees XMR';
     } else {
       return '${(oldBtcFees?.selectedFeeStr(btcFeesEnum!)[0] ?? "")} BTC (${btcFeesEnum!.translated(context)} ${oldBtcFees?.selectedFeeStr(btcFeesEnum!)[0]} sat/vB)';
     }

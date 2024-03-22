@@ -1,4 +1,4 @@
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/features/account/data/models/note_model.dart';
 import 'package:agoradesk/features/account/data/services/account_service.dart';
@@ -9,11 +9,11 @@ class NoteOnUserViewModel extends ViewModel with ErrorParseMixin {
   NoteOnUserViewModel({
     required this.username,
     required AccountService accountService,
-    required AppState appState,
+    required AppStateV1 appState,
   })  : _appState = appState,
         _accountService = accountService;
 
-  final AppState _appState;
+  final AppStateV1 _appState;
   final AccountService _accountService;
   final String username;
 

@@ -3,7 +3,7 @@ import 'dart:io';
 
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_shared_prefs.dart';
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 import 'package:package_info_plus/package_info_plus.dart';
@@ -11,10 +11,10 @@ import 'package:store_checker/store_checker.dart';
 
 class AppUpdateService {
   AppUpdateService({
-    required AppState appState,
+    required AppStateV1 appState,
   }) : _appState = appState;
 
-  final AppState _appState;
+  final AppStateV1 _appState;
 
   // https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/releases/download/v1.0.27/co.localmonero.app-foss_51.apk
 

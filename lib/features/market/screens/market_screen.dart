@@ -1,7 +1,7 @@
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/app_constants.dart';
 import 'package:agoradesk/core/app_parameters.dart';
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
 import 'package:agoradesk/core/packages/mapbox/places_search.dart';
 import 'package:agoradesk/core/packages/text_field_search/textfield_search.dart';
@@ -48,7 +48,7 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
           adsRepository: context.read<AdsRepository>(),
           placesSearch: context.read<PlacesSearch>(),
           authService: context.read<AuthService>(),
-          appState: context.read<AppState>(),
+          appState: context.read<AppStateV1>(),
         ),
         // implicitView: true,
         builder: (context, model, child) {
@@ -390,7 +390,7 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
       onRefresh: model.getAds,
       child: LayoutBuilder(builder: (context, constraints) {
         return StreamBuilder<bool>(
-            stream: context.read<AppState>().connection$,
+            stream: context.read<AppStateV1>().connection$,
             builder: (context, snapshot) {
               if (snapshot.data == false) {
                 model.connection = false;

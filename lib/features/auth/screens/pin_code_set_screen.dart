@@ -1,5 +1,5 @@
 import 'package:agoradesk/core/app_constants.dart';
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/services/notifications/notifications_service.dart';
 import 'package:agoradesk/core/theme/theme.dart';
@@ -20,7 +20,7 @@ class PinCodeSetScreen extends StatelessWidget {
     return ViewModelBuilder<PinCodeViewModel>(
         model: PinCodeViewModel(
           secureStorage: context.read<SecureStorage>(),
-          appState: context.read<AppState>(),
+          appState: context.read<AppStateV1>(),
           notificationsService: context.read<NotificationsService>(),
           isSetFlow: true,
         ),
