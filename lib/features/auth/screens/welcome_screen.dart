@@ -1,5 +1,5 @@
 import 'package:agoradesk/core/app_parameters.dart';
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/url_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/button_filled_inactive_surface2.dart';
@@ -18,12 +18,12 @@ class WelcomeScreen extends StatefulWidget {
 }
 
 class _WelcomeScreenState extends State<WelcomeScreen> with WidgetsBindingObserver, UrlMixin {
-  late final AppState _appState;
+  late final AppStateV1 _appState;
   late final bool _isDark;
 
   @override
   void initState() {
-    _appState = context.read<AppState>();
+    _appState = context.read<AppStateV1>();
     _isDark = _appState.themeMode == ThemeMode.dark;
     // WidgetsBinding.instance.addPostFrameCallback((_) => _afterLayout());
     super.initState();

@@ -1,5 +1,5 @@
 import 'package:agoradesk/core/agora_font.dart';
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/container_surface5_radius12_border1.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
@@ -77,7 +77,7 @@ class WalletAssetTile extends StatelessWidget {
                                     child: model.assetPrice(asset) == null
                                         ? const CupertinoActivityIndicator()
                                         : Text(
-                                            '1 ${asset.name} ~ ${model.assetPrice(asset)} ${context.read<AppState>().currencyCode}',
+                                            '1 ${asset.name} ~ ${model.assetPrice(asset)} ${context.read<AppStateV1>().currencyCode}',
                                             style: context.txtBodyXSmallNeutral50,
                                           ),
                                   ),

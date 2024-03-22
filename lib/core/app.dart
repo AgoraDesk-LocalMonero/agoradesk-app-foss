@@ -2,12 +2,13 @@ import 'dart:async';
 import 'dart:developer';
 import 'dart:io';
 
+import 'package:agoradesk/core/analytics.dart';
 import 'package:agoradesk/core/api/api_client.dart';
 import 'package:agoradesk/core/app_constants.dart';
 import 'package:agoradesk/core/app_hive.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_shared_prefs.dart';
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/app_state_v2.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/observers/routes_observer.dart';
@@ -53,6 +54,7 @@ import 'package:flutter_keyboard_size/flutter_keyboard_size.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:overlay_support/overlay_support.dart';
 import 'package:package_info_plus/package_info_plus.dart';
+import 'package:plausible_analytics/plausible_analytics.dart';
 import 'package:provider/single_child_widget.dart';
 import 'package:timeago/timeago.dart';
 import 'package:uni_links/uni_links.dart';
@@ -82,7 +84,8 @@ class _AppState extends State<App>
   late final AppRouter _appRouter;
   late final NotificationsService _notificationsService;
   late final PollingService _pollingService;
-  late final AppState appState;
+  Plausible? _plausible;
+  late final AppStateV1 appState;
   String? token;
 
   Uri? _initialUri;
@@ -91,13 +94,31 @@ class _AppState extends State<App>
   DateTime _lastUsedErrorMessage = DateTime.now().subtract(const Duration(hours: 1));
   bool _activatePin = false;
   bool _dialogOpened = false;
+  late final Locale _locale;
+  late final String _countryCode;
+
+  _setInitialeLocaleAndCountry() {
+    if (AppSharedPrefs().firstRun) {
+      final localeString = Platform.localeName;
+      _countryCode = getCountryCode();
+      _locale = Locale(localeString.split('_').first, localeString.split('_').last);
+      AppSharedPrefs().setString(AppSharedPrefsKey.locale, localeString);
+      AppSharedPrefs().setString(AppSharedPrefsKey.countryCode, _countryCode);
+      AppSharedPrefs().setBool(AppSharedPrefsKey.firstRun, val: false);
+    } else {
+      _locale = AppSharedPrefs().locale;
+      _countryCode = AppSharedPrefs().getString(AppSharedPrefsKey.countryCode)!;
+    }
+  }
 
   @override
   void initState() {
+    _setInitialeLocaleAndCountry();
     _secureStorage = SecureStorage();
-    appState = AppState(
+    appState = AppStateV1(
       secureStorage: _secureStorage,
-      locale: AppSharedPrefs().locale,
+      locale: _locale,
+      countryCode: _countryCode,
       defaultTab: AppSharedPrefs().defaultTab,
       themeMode: AppSharedPrefs().themeMode,
     );
@@ -191,7 +212,7 @@ class _AppState extends State<App>
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: _providers,
-      child: Consumer<AppState>(
+      child: Consumer<AppStateV1>(
         builder: (context, appState, _) {
           // TODO: find better way
           setLocaleMessages(appState.locale.languageCode, appState.messagesLocaleTimeago);
@@ -269,7 +290,7 @@ class _AppState extends State<App>
     appState.proxyStatus = GetIt.I<AppParameters>().proxy;
     await _afterConfigInit();
     await _authService.init();
-    await _initLocalSettings();
+    await _initLocalSettings(false);
     appState.initialized = true;
     await Future.delayed(const Duration(milliseconds: 500));
     _initStartRoute(uri: _initialUri);
@@ -346,7 +367,7 @@ class _AppState extends State<App>
         case AuthState.loggedIn:
           _pollingService.getBalances();
           _initStartRoute();
-          _initLocalSettings();
+          _initLocalSettings(true);
           break;
         case AuthState.guest:
           _initStartRoute();
@@ -471,6 +492,17 @@ class _AppState extends State<App>
 
   void _initGlobalEvents() {
     eventBus
+      ..on<AnalyticsEvent>().listen((e) {
+        if (GetIt.I<AppParameters>().debugPrintIsOn) {
+          debugPrint('[AnalyticEvent] event: ${e.event}, props: ${e.properties}');
+        }
+        if (appState.initialized) {
+          if (_plausible != null) {
+            _plausible!.event(name: e.event, referrer: e.properties.toString());
+          }
+        }
+      })
+      ..on<LocaleChangedEvent>().listen((e) {})
       ..on<LogOutEvent>().listen((e) {
         if (_authService.isAuthenticated) {
           _authService.logOut();
@@ -647,26 +679,25 @@ class _AppState extends State<App>
     });
   }
 
-  Future _initLocalSettings() async {
-    if (AppSharedPrefs().username == null || AppSharedPrefs().username!.isEmpty) {
-      // app runs first time, we should clean FlutterSecureStorage items
-      // https://stackoverflow.com/questions/57933021/flutter-how-do-i-delete-fluttersecurestorage-items-during-install-uninstall
-      token ??= await _secureStorage.read(SecureStorageKey.token);
-      if (token != null) {
-        final res = await _accountService.getMyself();
-        if (res.isRight && res.right.username != null) {
-          await AppSharedPrefs().setString(AppSharedPrefsKey.username, res.right.username);
-          appState.updateWith(notify: true);
-        } else {
-          _secureStorage.deleteAll();
-        }
+  Future _initLocalSettings(bool fromLoginState) async {
+    if (fromLoginState) await Future.delayed(const Duration(seconds: 2));
+
+    // app runs first time, we should clean FlutterSecureStorage items
+    // https://stackoverflow.com/questions/57933021/flutter-how-do-i-delete-fluttersecurestorage-items-during-install-uninstall
+    token ??= await _secureStorage.read(SecureStorageKey.token);
+    if (token != null) {
+      final res = await _accountService.getMyself();
+      if (res.isRight && res.right.username != null) {
+        await AppSharedPrefs().setString(AppSharedPrefsKey.username, res.right.username);
+        appState.updateWith(notify: true);
       } else {
         _secureStorage.deleteAll();
       }
+    } else {
+      _secureStorage.deleteAll();
     }
 
     appState.updateWith(
-      countryCode: AppSharedPrefs().countryCode ?? countryCodeMixin,
       themeMode: AppSharedPrefs().themeMode,
       notify: false,
     );
@@ -681,6 +712,7 @@ class _AppState extends State<App>
           initialData: ConnectivityResult.none,
         ),
         Provider.value(value: _api),
+        Provider.value(value: _plausible),
         Provider.value(value: _adsRepository),
         Provider.value(value: _tradeRepository),
         Provider.value(value: _authService),

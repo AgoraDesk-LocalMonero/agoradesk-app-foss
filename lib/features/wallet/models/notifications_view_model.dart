@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/services/notifications/notifications_service.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
@@ -17,14 +17,14 @@ import 'package:vm/vm.dart';
 
 class NotificationsViewModel extends ViewModel with StringMixin, ValidatorMixin, ClipboardMixin, ErrorParseMixin {
   NotificationsViewModel({
-    required AppState appState,
+    required AppStateV1 appState,
     required NotificationsService notificationsService,
     required AccountService accountService,
   })  : _appState = appState,
         _accountService = accountService,
         _notificationsService = notificationsService;
 
-  final AppState _appState;
+  final AppStateV1 _appState;
   final NotificationsService _notificationsService;
   final AccountService _accountService;
 

@@ -1,5 +1,5 @@
 import 'package:agoradesk/core/agora_font.dart';
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/button_filled_p80.dart';
 import 'package:agoradesk/features/auth/models/welcome_slides_list.dart';
@@ -21,7 +21,7 @@ class WelcomeSlidesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final appState = context.read<AppState>();
+    final appState = context.read<AppStateV1>();
     final isDark = appState.themeMode == ThemeMode.dark;
     final List<Widget> slides = WelcomeSlidesList.getSlides(isDark, isBuy, context);
 

@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_shared_prefs.dart';
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/packages/socks_proxy/socks_proxy.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
@@ -24,12 +24,12 @@ import 'package:vm/vm.dart';
 class ProxyViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
   ProxyViewModel({
     required AccountService accountService,
-    required AppState appState,
+    required AppStateV1 appState,
   })  : _accountService = accountService,
         _appState = appState;
 
   final AccountService _accountService;
-  final AppState _appState;
+  final AppStateV1 _appState;
 
   final ctrlServer = TextEditingController();
   final ctrlPort = TextEditingController();
@@ -114,7 +114,7 @@ class ProxyViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin {
     }
   }
 
-  Future  changeProxyType(ProxyType? type) async {
+  Future changeProxyType(ProxyType? type) async {
     proxyType = type ?? ProxyType.socks5;
     _checkIsReadyToSetProxy();
   }

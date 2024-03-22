@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_password_field.dart';
@@ -35,7 +35,7 @@ class LoginScreen extends ConsumerWidget with WidgetsBindingObserver, ValidatorM
           child: ViewModelBuilder<LoginViewModel>(
               model: LoginViewModel(
                 authService: context.read<AuthService>(),
-                appState: context.read<AppState>(),
+                appState: context.read<AppStateV1>(),
               ),
               builder: (context, model, _) {
                 return Padding(
@@ -218,7 +218,7 @@ class LoginScreen extends ConsumerWidget with WidgetsBindingObserver, ValidatorM
 
   Widget _displayProxy(BuildContext context) {
     return StreamBuilder<bool?>(
-        stream: context.read<AppState>().proxyStatus$,
+        stream: context.read<AppStateV1>().proxyStatus$,
         builder: (context, snapshot) {
           if (snapshot.data == true) {
             return Align(

@@ -17,13 +17,15 @@ const _kLocaleDebounceTag = 'switch-locale';
 const _kUpdateDelaySharedPrefs = Duration(milliseconds: 100);
 const _kSmallScreenHeigh = 700.0;
 
-class AppState extends ChangeNotifier with CountryInfoMixin {
-  AppState({
-    Locale? locale,
+class AppStateV1 extends ChangeNotifier with CountryInfoMixin {
+  AppStateV1({
+    required Locale locale,
+    required String countryCode,
     TabType? defaultTab,
     required ThemeMode themeMode,
     required SecureStorage secureStorage,
   })  : _locale = locale,
+        _countryCode = countryCode,
         _defaultTab = defaultTab,
         _secureStorage = secureStorage,
         _themeMode = themeMode;

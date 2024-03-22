@@ -1,5 +1,5 @@
 import 'package:agoradesk/core/agora_font.dart';
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/app_bar_button.dart';
 import 'package:agoradesk/router.gr.dart';
@@ -14,7 +14,7 @@ class NotificationsAppBarButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return MergeSemantics(
       child: StreamBuilder<bool>(
-          stream: context.read<AppState>().hasUnread$,
+          stream: context.read<AppStateV1>().hasUnread$,
           builder: (context, snapshot) {
             final bool hasUnreaded = snapshot.data ?? false;
             return AppBarButton(
