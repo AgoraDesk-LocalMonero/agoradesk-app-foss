@@ -1,5 +1,8 @@
 import 'package:agoradesk/core/app_constants.dart';
 import 'package:agoradesk/core/utils/date_mixin.dart';
+import 'package:agoradesk/features/ads/data/models/asset.dart';
+import 'package:agoradesk/features/ads/data/models/payment_method_model.dart';
+import 'package:agoradesk/features/ads/data/models/trade_type.dart';
 import 'package:agoradesk/features/profile/models/notifications_settings_type.dart';
 import 'package:agoradesk/features/profile/models/proxy_type.dart';
 import 'package:agoradesk/features/profile/models/tab_type.dart';
@@ -35,6 +38,9 @@ enum AppSharedPrefsKey {
   xmrWalletTileOpen,
   pinAttemptsLeft,
   notificationsSettingDisabled,
+  marketSelectedAsset,
+  marketSelectedTradeType,
+  marketSelectedOnlineProvider,
 }
 
 class AppSharedPrefs with DateMixin {
@@ -110,6 +116,29 @@ class AppSharedPrefs with DateMixin {
   DateTime? get cachedCurrencySavedDate => dateTimeFromString(getString(AppSharedPrefsKey.cachedCurrencySavedDate));
 
   List<String> get tooltipShownNames => getListStrings(AppSharedPrefsKey.tooltipShownNames) ?? [];
+
+  /// Market selected asset
+  Asset get marketSelectedAsset => Asset.values
+      .firstWhere((e) => e.name == getString(AppSharedPrefsKey.marketSelectedAsset), orElse: () => Asset.XMR);
+
+  Future<void> setMarketSelectedAsset(Asset asset) async {
+    await setString(AppSharedPrefsKey.marketSelectedAsset, asset.name);
+  }
+
+  /// Market selected trade type
+  TradeType get marketSelectedTradeType =>
+      TradeType.values.firstWhere((e) => e.name == getString(AppSharedPrefsKey.marketSelectedTradeType),
+          orElse: () => TradeType.ONLINE_BUY);
+
+  Future<void> setMarketSelectedTradeType(TradeType tradeType) async {
+    await setString(AppSharedPrefsKey.marketSelectedTradeType, tradeType.name);
+  }
+
+  /// Market selected online provider
+  String get marketSelectedOnlineProviderCode => getString(AppSharedPrefsKey.marketSelectedOnlineProvider) ?? '';
+  Future<void> setMarketSelectedOnlineProvider(OnlineProvider onlineProvider) async {
+    await setString(AppSharedPrefsKey.marketSelectedOnlineProvider, onlineProvider.code);
+  }
 
   ///
   /// if [val] is null then data will be removed.

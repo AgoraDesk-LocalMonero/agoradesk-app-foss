@@ -75,7 +75,7 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
   }
 
   Widget _buildSelectAdType(BuildContext context, MarketViewModel model) {
-    final bool isLocalTrade = model.tradeType!.isLocal();
+    final bool isLocalTrade = model.tradeType.isLocal();
     return HeaderShadow(
       children: [
         Row(
@@ -197,7 +197,7 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
 
   void _buildExpandedFilter(BuildContext context, MarketViewModel model) {
     final widthHalf = MediaQuery.of(context).size.width / 2 - 16;
-    final bool isLocalTrade = model.tradeType!.isLocal();
+    final bool isLocalTrade = model.tradeType.isLocal();
     const radius = Radius.circular(20);
     final height = MediaQuery.of(context).size.height - 70;
     model.filterIsOpened = true;
