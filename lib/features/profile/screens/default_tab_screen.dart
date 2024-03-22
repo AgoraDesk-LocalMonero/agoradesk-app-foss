@@ -1,4 +1,4 @@
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
 import 'package:agoradesk/core/widgets/branded/radio_list_item.dart';
@@ -16,7 +16,7 @@ class DefaultTabScreen extends StatelessWidget {
     return ViewModelBuilder<DefaultTabViewModel>(
         disposable: false,
         model: DefaultTabViewModel(
-          appState: context.read<AppState>(),
+          appState: context.read<AppStateV1>(),
         ),
         builder: (context, model, _) {
           return Scaffold(

@@ -1,4 +1,4 @@
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/models/pagination.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/features/account/data/models/account_info_model.dart';
@@ -73,7 +73,7 @@ class TraderProfileViewModel extends ViewModel with ErrorParseMixin {
     noteModel = NoteOnUserViewModel(
       username: profileForScreen.username!,
       accountService: _accountService,
-      appState: context.read<AppState>(),
+      appState: context.read<AppStateV1>(),
     );
     initialLoading = false;
     _getUserAds();
@@ -150,10 +150,5 @@ class TraderProfileViewModel extends ViewModel with ErrorParseMixin {
     _loadingAccountInfo = loadingAccountInfo ?? _loadingAccountInfo;
     _loadingFeedbacks = loadingFeedbacks ?? _loadingFeedbacks;
     notifyListeners();
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
   }
 }

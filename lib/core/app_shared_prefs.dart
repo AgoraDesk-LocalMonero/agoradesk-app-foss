@@ -1,5 +1,8 @@
 import 'package:agoradesk/core/app_constants.dart';
 import 'package:agoradesk/core/utils/date_mixin.dart';
+import 'package:agoradesk/features/ads/data/models/asset.dart';
+import 'package:agoradesk/features/ads/data/models/payment_method_model.dart';
+import 'package:agoradesk/features/ads/data/models/trade_type.dart';
 import 'package:agoradesk/features/profile/models/notifications_settings_type.dart';
 import 'package:agoradesk/features/profile/models/proxy_type.dart';
 import 'package:agoradesk/features/profile/models/tab_type.dart';
@@ -35,6 +38,9 @@ enum AppSharedPrefsKey {
   xmrWalletTileOpen,
   pinAttemptsLeft,
   notificationsSettingDisabled,
+  marketSelectedAsset,
+  marketSelectedTradeType,
+  marketSelectedOnlineProvider,
 }
 
 class AppSharedPrefs with DateMixin {
@@ -56,22 +62,16 @@ class AppSharedPrefs with DateMixin {
     _instance ??= const AppSharedPrefs._();
   }
 
-  ThemeMode get themeMode =>
-      _parseThemeMode(getString(AppSharedPrefsKey.themeMode));
+  ThemeMode get themeMode => _parseThemeMode(getString(AppSharedPrefsKey.themeMode));
 
-  Locale? get locale =>
-      _parseLocale(getString(AppSharedPrefsKey.locale) ?? 'en');
+  Locale get locale => _parseLocale(getString(AppSharedPrefsKey.locale) ?? 'en_US');
 
-  ProxyType get proxyType =>
-      _parseProxyType(getString(AppSharedPrefsKey.proxyType));
+  ProxyType get proxyType => _parseProxyType(getString(AppSharedPrefsKey.proxyType));
 
-  TabType? get defaultTab =>
-      _parseTabType(getString(AppSharedPrefsKey.defaultTab)) ?? TabType.market;
+  TabType? get defaultTab => _parseTabType(getString(AppSharedPrefsKey.defaultTab)) ?? TabType.market;
 
   List<NotificationsSettingsType> get notificationSettingDisabled =>
-      _parseNotificationsSettingsType(
-          getListStrings(AppSharedPrefsKey.notificationsSettingDisabled)) ??
-      [];
+      _parseNotificationsSettingsType(getListStrings(AppSharedPrefsKey.notificationsSettingDisabled)) ?? [];
 
   bool? get pinIsActive => getBool(AppSharedPrefsKey.pinIsActive);
 
@@ -85,16 +85,13 @@ class AppSharedPrefs with DateMixin {
 
   bool? get sentryIsOn => getBool(AppSharedPrefsKey.sentryIsOn);
 
-  bool? get firstRun => getBool(AppSharedPrefsKey.firstRun);
+  bool get firstRun => getBool(AppSharedPrefsKey.firstRun) ?? true;
 
-  DateTime? get fcmTokenSavedToApiDate =>
-      _parseDate(getString(AppSharedPrefsKey.fcmTokenSavedToApiDate));
+  DateTime? get fcmTokenSavedToApiDate => _parseDate(getString(AppSharedPrefsKey.fcmTokenSavedToApiDate));
 
-  bool get btcWalletTileOpen =>
-      getBool(AppSharedPrefsKey.btcWalletTileOpen) ?? true;
+  bool get btcWalletTileOpen => getBool(AppSharedPrefsKey.btcWalletTileOpen) ?? true;
 
-  bool get xmrWalletTileOpen =>
-      getBool(AppSharedPrefsKey.xmrWalletTileOpen) ?? true;
+  bool get xmrWalletTileOpen => getBool(AppSharedPrefsKey.xmrWalletTileOpen) ?? true;
 
   String? get username => getString(AppSharedPrefsKey.username);
 
@@ -110,19 +107,38 @@ class AppSharedPrefs with DateMixin {
 
   String? get ignoredUpdate => getString(AppSharedPrefsKey.ignoredUpdate);
 
-  String? get countryCode => getString(AppSharedPrefsKey.countryCode);
+  String get countryCode => getString(AppSharedPrefsKey.countryCode) ?? 'US';
 
-  int get pinAttemptsLeft =>
-      getInt(AppSharedPrefsKey.pinAttemptsLeft) ?? kPinAttempts;
+  int get pinAttemptsLeft => getInt(AppSharedPrefsKey.pinAttemptsLeft) ?? kPinAttempts;
 
-  DateTime? get cachedCountrySavedDate =>
-      dateTimeFromString(getString(AppSharedPrefsKey.cachedCountrySavedDate));
+  DateTime? get cachedCountrySavedDate => dateTimeFromString(getString(AppSharedPrefsKey.cachedCountrySavedDate));
 
-  DateTime? get cachedCurrencySavedDate =>
-      dateTimeFromString(getString(AppSharedPrefsKey.cachedCurrencySavedDate));
+  DateTime? get cachedCurrencySavedDate => dateTimeFromString(getString(AppSharedPrefsKey.cachedCurrencySavedDate));
 
-  List<String> get tooltipShownNames =>
-      getListStrings(AppSharedPrefsKey.tooltipShownNames) ?? [];
+  List<String> get tooltipShownNames => getListStrings(AppSharedPrefsKey.tooltipShownNames) ?? [];
+
+  /// Market selected asset
+  Asset get marketSelectedAsset => Asset.values
+      .firstWhere((e) => e.name == getString(AppSharedPrefsKey.marketSelectedAsset), orElse: () => Asset.XMR);
+
+  Future<void> setMarketSelectedAsset(Asset asset) async {
+    await setString(AppSharedPrefsKey.marketSelectedAsset, asset.name);
+  }
+
+  /// Market selected trade type
+  TradeType get marketSelectedTradeType =>
+      TradeType.values.firstWhere((e) => e.name == getString(AppSharedPrefsKey.marketSelectedTradeType),
+          orElse: () => TradeType.ONLINE_BUY);
+
+  Future<void> setMarketSelectedTradeType(TradeType tradeType) async {
+    await setString(AppSharedPrefsKey.marketSelectedTradeType, tradeType.name);
+  }
+
+  /// Market selected online provider
+  String get marketSelectedOnlineProviderCode => getString(AppSharedPrefsKey.marketSelectedOnlineProvider) ?? '';
+  Future<void> setMarketSelectedOnlineProvider(OnlineProvider onlineProvider) async {
+    await setString(AppSharedPrefsKey.marketSelectedOnlineProvider, onlineProvider.code);
+  }
 
   ///
   /// if [val] is null then data will be removed.
@@ -161,20 +177,16 @@ class AppSharedPrefs with DateMixin {
 
   Future<bool> setnotificationsSetting(NotificationsSettingsType type) async {
     final String val = type.name;
-    final List<String>? currentSettings =
-        getListStrings(AppSharedPrefsKey.notificationsSettingDisabled);
+    final List<String>? currentSettings = getListStrings(AppSharedPrefsKey.notificationsSettingDisabled);
     if (currentSettings != null) {
       if (currentSettings.contains(val)) {
         currentSettings.remove(val);
       } else {
         currentSettings.add(val);
       }
-      return _prefs!.setStringList(
-          _key(AppSharedPrefsKey.notificationsSettingDisabled),
-          currentSettings);
+      return _prefs!.setStringList(_key(AppSharedPrefsKey.notificationsSettingDisabled), currentSettings);
     } else {
-      return _prefs!.setStringList(
-          _key(AppSharedPrefsKey.notificationsSettingDisabled), [val]);
+      return _prefs!.setStringList(_key(AppSharedPrefsKey.notificationsSettingDisabled), [val]);
     }
   }
 
@@ -229,17 +241,15 @@ class AppSharedPrefs with DateMixin {
   ///
   /// Generate [Locale] from the [locale] string.
   ///
-  Locale? _parseLocale(String? locale) {
-    if (locale != null) {
-      final subTags = locale.split('_');
-      if (subTags.length == 2) {
-        return Locale(subTags[0], '');
-      }
-      if (subTags.length == 1) {
-        return Locale(subTags[0], '');
-      }
+  Locale _parseLocale(String locale) {
+    final subTags = locale.split('_');
+    if (subTags.length == 2) {
+      return Locale(subTags[0], subTags[1]);
     }
-    return null;
+    if (subTags.length == 1) {
+      return Locale(subTags[0], '');
+    }
+    return const Locale('en', 'US');
   }
 
   ///
@@ -248,8 +258,7 @@ class AppSharedPrefs with DateMixin {
   ProxyType _parseProxyType(String? proxyStr) {
     if (proxyStr != null) {
       try {
-        final ProxyType proxy = ProxyType.values
-            .firstWhere((e) => e.name.toLowerCase() == proxyStr.toLowerCase());
+        final ProxyType proxy = ProxyType.values.firstWhere((e) => e.name.toLowerCase() == proxyStr.toLowerCase());
         return proxy;
       } catch (e) {
         return ProxyType.socks5;
@@ -276,17 +285,13 @@ class AppSharedPrefs with DateMixin {
   ///
   /// Generate [List<NotificationsSettingsType>] from the [defaultTab] string.
   ///
-  List<NotificationsSettingsType>? _parseNotificationsSettingsType(
-      List<String>? val) {
+  List<NotificationsSettingsType>? _parseNotificationsSettingsType(List<String>? val) {
     if (val != null) {
       try {
         final List<NotificationsSettingsType> resLst = [];
         for (final v in val) {
-          if (NotificationsSettingsType.values
-                  .firstWhereOrNull((e) => e.name == v) !=
-              null) {
-            resLst.add(NotificationsSettingsType.values
-                .firstWhere((e) => e.name == v));
+          if (NotificationsSettingsType.values.firstWhereOrNull((e) => e.name == v) != null) {
+            resLst.add(NotificationsSettingsType.values.firstWhere((e) => e.name == v));
           }
         }
         return resLst;

@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:agoradesk/core/app_constants.dart';
 import 'package:agoradesk/core/app_shared_prefs.dart';
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/services/notifications/notifications_service.dart';
@@ -15,7 +15,7 @@ import 'package:vm/vm.dart';
 class PinCodeViewModel extends ViewModel {
   PinCodeViewModel({
     required SecureStorage secureStorage,
-    required AppState appState,
+    required AppStateV1 appState,
     required NotificationsService notificationsService,
     this.isSetFlow = false,
   })  : _secureStorage = secureStorage,
@@ -23,7 +23,7 @@ class PinCodeViewModel extends ViewModel {
         _appState = appState;
 
   final SecureStorage _secureStorage;
-  final AppState _appState;
+  final AppStateV1 _appState;
   final NotificationsService _notificationsService;
   final bool isSetFlow;
 

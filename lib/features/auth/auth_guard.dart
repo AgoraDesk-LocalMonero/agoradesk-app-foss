@@ -1,4 +1,4 @@
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
@@ -9,7 +9,7 @@ class AuthGuard implements AutoRouteGuard {
     required this.authService,
   });
 
-  final AppState appState;
+  final AppStateV1 appState;
   final AuthService authService;
 
   @override

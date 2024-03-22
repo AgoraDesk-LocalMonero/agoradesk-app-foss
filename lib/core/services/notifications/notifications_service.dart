@@ -6,7 +6,7 @@ import 'package:agoradesk/core/api/api_client.dart';
 import 'package:agoradesk/core/api/api_helper.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_shared_prefs.dart';
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/services/notifications/local_notifications_utils.dart';
 import 'package:agoradesk/core/services/notifications/models/device_model.dart';
@@ -53,7 +53,7 @@ class NotificationsService with ForegroundMessagesMixin {
   final SecureStorage secureStorage;
   final AccountService accountService;
   final AuthService authService;
-  final AppState appState;
+  final AppStateV1 appState;
   bool _loading = false;
   bool _tokenLoading = false;
   bool _updating = false;

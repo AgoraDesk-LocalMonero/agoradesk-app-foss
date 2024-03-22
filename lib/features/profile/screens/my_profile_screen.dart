@@ -1,5 +1,5 @@
 import 'package:agoradesk/core/app_parameters.dart';
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/url_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
@@ -41,7 +41,7 @@ class MyProfileScreen extends StatelessWidget with UrlMixin {
           adsRepository: context.read<AdsRepository>(),
           authService: context.read<AuthService>(),
           accountService: context.read<AccountService>(),
-          appState: context.read<AppState>(),
+          appState: context.read<AppStateV1>(),
         ),
         builder: (context, model, _) {
           return Scaffold(
@@ -142,7 +142,7 @@ class MyProfileScreen extends StatelessWidget with UrlMixin {
                       text: TextSpan(
                         children: [
                           TextSpan(
-                            text: context.intl.app_you_can_use_markdown + ' ',
+                            text: '${context.intl.app_you_can_use_markdown} ',
                             style: context.txtBodySmallN80,
                           ),
                           TextSpan(
@@ -226,12 +226,12 @@ class _PopupMenu extends StatelessWidget {
       itemBuilder: (context) => [
         PopupMenuItem(
           padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+          onTap: () => _alertDialog(context),
+          value: 1,
           child: Text(
             context.intl.settings250Sbdelete8722Sbaccount250Sbbutton,
             style: context.txtBodyMediumNeutral80,
           ),
-          onTap: () => _alertDialog(context),
-          value: 1,
         ),
       ],
     );

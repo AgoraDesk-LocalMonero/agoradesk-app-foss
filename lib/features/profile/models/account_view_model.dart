@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:agoradesk/core/app_state.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/validator_mixin.dart';
@@ -16,11 +16,11 @@ import 'package:vm/vm.dart';
 class AccountViewModel extends ViewModel with ValidatorMixin {
   AccountViewModel({
     required AuthService authService,
-    required AppState appState,
+    required AppStateV1 appState,
   })  : _appState = appState,
         _authService = authService;
 
-  final AppState _appState;
+  final AppStateV1 _appState;
   final AuthService _authService;
 
   String? userName;
