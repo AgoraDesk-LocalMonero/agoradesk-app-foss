@@ -297,15 +297,12 @@ class _AppState extends State<App>
     appState.hasPinCode = token != null && pin != null;
     appState.pinCode = pin;
     appState.proxyStatus = GetIt.I<AppParameters>().proxy;
-    await _afterConfigInit();
     await _authService.init();
     await _initLocalSettings(false);
     appState.initialized = true;
     await Future.delayed(const Duration(milliseconds: 500));
     _initStartRoute(uri: _initialUri);
   }
-
-  Future<void> _afterConfigInit() async {}
 
   ///
   /// Initialize Mixpanel Analytics

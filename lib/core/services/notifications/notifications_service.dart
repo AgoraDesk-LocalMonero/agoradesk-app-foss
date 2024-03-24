@@ -199,7 +199,6 @@ class NotificationsService with ForegroundMessagesMixin {
         try {
           final token = await fcm!.getToken();
           if (token != null) {
-            if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('++++ FirebaseMessaging pushtoken created: $token');
             _tokenUpdate(token);
           }
         } catch (e) {
@@ -231,9 +230,6 @@ class NotificationsService with ForegroundMessagesMixin {
 
     _updating = true;
     final oldToken = await secureStorage.read(SecureStorageKey.pushToken);
-    await Sentry.captureMessage(
-      {'pushTokenUpdateEvent:': '', 'oldTokenNotEqualnewToken:': oldToken != newToken}.toString(),
-    );
     if (oldToken != newToken) {
       await Sentry.captureMessage(
         {'pushTokenUpdateEvent:': '${GetIt.I<AppParameters>().loggedIn} '}.toString(),
