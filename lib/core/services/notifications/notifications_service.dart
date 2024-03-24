@@ -292,7 +292,7 @@ class NotificationsService with ForegroundMessagesMixin {
       if (apiError.message.containsKey('error_code')) {
         // token already saved
         if (apiError.message['error_code'] == 256) {
-          return false;
+          return true;
         }
       }
       return false;

@@ -247,5 +247,5 @@ class AppParameters {
   bool? proxy;
   bool debugPrintIsOn = true;
   bool polling = false;
-  bool get loggedIn => accessToken != null;
+  bool get loggedIn => accessToken?.isNotEmpty == true;
 }
