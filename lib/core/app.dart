@@ -286,8 +286,6 @@ class _AppState extends State<App>
     } catch (e) {
       _secureStorage.deleteAll();
     }
-
-    if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[init app, API token from secured storage] $token');
     _api.accessToken = token;
     GetIt.I<AppParameters>().accessToken = token;
 
