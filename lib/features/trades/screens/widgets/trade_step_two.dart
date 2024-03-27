@@ -457,7 +457,7 @@ class TradeStepTwo extends StatelessWidget with DateMixin, ClipboardMixin {
         filledButtonTitle: context.intl.trade250Sbcancel8722Sbtrade8722Sbbtn,
         outlineButtonTitle: context.intl.post8722Sbad250Sberror250Sbdialog8722Sbbtn,
         onPressedOutline: () => AutoRouter.of(context).pop(),
-        onPressedFilled: () => model.cancelTrade(),
+        onPressedFilled: () => model.cancelTrade(context),
         loadingFilled: model.cancelingTrade,
       ),
     );
@@ -474,7 +474,7 @@ class TradeStepTwo extends StatelessWidget with DateMixin, ClipboardMixin {
         filledButtonTitle: context.intl.trade250Sbdialog250Sbconfirm8722Sbcancel8722Sbbtn,
         outlineButtonTitle: context.intl.post8722Sbad250Sberror250Sbdialog8722Sbbtn,
         onPressedOutline: () => AutoRouter.of(context).pop(),
-        onPressedFilled: () => model.enableEscrow(),
+        onPressedFilled: () => model.enableEscrow(context),
         loadingFilled: model.enablingEscrow,
       ),
     );

@@ -63,10 +63,10 @@ class App extends StatefulWidget {
   const App({Key? key}) : super(key: key);
 
   @override
-  _AppState createState() => _AppState();
+  AppState createState() => AppState();
 }
 
-class _AppState extends State<App>
+class AppState extends State<App>
     with WidgetsBindingObserver, StringMixin, CountryInfoMixin, ForegroundMessagesMixin, UrlMixin {
   late final SecureStorage _secureStorage;
   late final StreamSubscription<ConnectivityResult> _connectivitySubscription;
@@ -274,8 +274,6 @@ class _AppState extends State<App>
     } catch (e) {
       _secureStorage.deleteAll();
     }
-
-    if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[init app, API token from secured storage] $token');
     _api.accessToken = token;
     GetIt.I<AppParameters>().accessToken = token;
 
@@ -285,15 +283,12 @@ class _AppState extends State<App>
     appState.hasPinCode = token != null && pin != null;
     appState.pinCode = pin;
     appState.proxyStatus = GetIt.I<AppParameters>().proxy;
-    await _afterConfigInit();
     await _authService.init();
     await _initLocalSettings();
     appState.initialized = true;
     await Future.delayed(const Duration(milliseconds: 500));
     _initStartRoute(uri: _initialUri);
   }
-
-  Future<void> _afterConfigInit() async {}
 
   ///
   /// Images uploading in chats - spinner over all app

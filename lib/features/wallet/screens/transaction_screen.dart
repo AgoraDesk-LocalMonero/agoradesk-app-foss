@@ -114,7 +114,7 @@ class TransactionScreen extends StatelessWidget with DateMixin, ClipboardMixin, 
         const SizedBox(height: 16),
         LineFontIconTextNeutral60(
           icon: AgoraFont.box,
-          text: I18n.of(context)!.wallet250Sbreceive250Sbdetails8722Sbdialog250Sbid + ':',
+          text: '${I18n.of(context)!.wallet250Sbreceive250Sbdetails8722Sbdialog250Sbid}:',
         ),
         const SizedBox(height: 8),
         ContainerSurface3Radius12Border1(
@@ -132,7 +132,7 @@ class TransactionScreen extends StatelessWidget with DateMixin, ClipboardMixin, 
                     ButtonIconTextP80(
                       iconData: AgoraFont.external_link,
                       text: I18n.of(context)!.view_in_block_explorer,
-                      onPressed: () => openLink(model.linkForChain),
+                      onPressed: () => openLinkWithAuth(model.linkForChain),
                     ),
                     const SizedBox(width: 4),
                     ButtonIconTextP80(
@@ -203,7 +203,7 @@ class TransactionScreen extends StatelessWidget with DateMixin, ClipboardMixin, 
   }
 
   Widget _buildDescriptionNoTrade(BuildContext context) {
-    return SizedBox();
+    return const SizedBox();
     return Column(
       children: [
         LineFontIconTextNeutral60(

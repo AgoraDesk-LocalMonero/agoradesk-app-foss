@@ -8,7 +8,6 @@ import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/services/notifications/notifications_service.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/widgets/branded/dialog_markdown_with_close.dart';
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:vm/vm.dart';
 
@@ -68,7 +67,7 @@ class PinCodeViewModel extends ViewModel {
     }
     initializing = false;
     if (_appState.biometricAuthIsOn && !isSetFlow) {
-      await checkBiometrics();
+      await checkBiometrics(context);
     }
     super.init();
   }
@@ -84,14 +83,14 @@ class PinCodeViewModel extends ViewModel {
     _appState.hasPinCode = true;
   }
 
-  Future checkBiometrics() async {
+  Future checkBiometrics(BuildContext context) async {
     final res = await _notificationsService.authenticateWithBiometrics();
     if (res) {
       Navigator.of(context).pop();
     }
   }
 
-  bool checkPinCorrectness(String pin) {
+  bool checkPinCorrectness(String pin, BuildContext context) {
     if (pin != currentPin) {
       clearPins();
       attemptsLeft -= 1;
@@ -107,7 +106,7 @@ class PinCodeViewModel extends ViewModel {
     return true;
   }
 
-  void handlePinInput(String pin, {bool onFull = false}) async {
+  void handlePinInput(String pin, BuildContext context, {bool onFull = false}) async {
     if (hasCurrentPin && !currentPinChecked && currentPin != null) {
       if (pin != currentPin) {
         showDialog(context: context, builder: (context) => _dialogSetPinWrong(context));
@@ -130,7 +129,7 @@ class PinCodeViewModel extends ViewModel {
       secondPinCode = pin;
       if (firstPinCode == secondPinCode) {
         await setPin();
-        AutoRouter.of(context).pop();
+        Navigator.of(context).pop();
       } else {
         showDialog(context: context, builder: (context) => _dialogNotMatch(context));
         isFirstPin = true;

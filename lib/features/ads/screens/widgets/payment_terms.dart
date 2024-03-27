@@ -3,7 +3,6 @@ import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/url_mixin.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
 
 class PaymentTerms extends StatelessWidget with UrlMixin {
   const PaymentTerms({
@@ -34,7 +33,7 @@ class PaymentTerms extends StatelessWidget with UrlMixin {
           text: TextSpan(
             children: [
               TextSpan(
-                text: context.intl.post8722Sbad250Sbterms8722Sbtip8722Sb0 + ' ',
+                text: '${context.intl.post8722Sbad250Sbterms8722Sbtip8722Sb0} ',
                 style: context.txtBodySmallN80,
               ),
               TextSpan(
@@ -42,7 +41,7 @@ class PaymentTerms extends StatelessWidget with UrlMixin {
                 style: context.txtBodySmallP70P40,
                 recognizer: TapGestureRecognizer()
                   ..onTap = () {
-                    openLink(GetIt.I<AppParameters>().urlHowToMarkdown);
+                    openLinkWithAuth(GetIt.I<AppParameters>().urlHowToMarkdown);
                   },
               ),
             ],

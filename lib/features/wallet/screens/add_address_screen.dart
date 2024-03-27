@@ -82,6 +82,7 @@ class AddAddressScreen extends StatelessWidget with QrScannerMixin {
                             address: model.ctrlAddress.text,
                             label: model.ctrlLabel.text,
                           ),
+                          context,
                         ),
                       ),
                     ],

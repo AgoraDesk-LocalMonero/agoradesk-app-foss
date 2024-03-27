@@ -1,5 +1,4 @@
 import 'package:agoradesk/core/agora_font.dart';
-import 'package:vm/vm.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/utils/date_mixin.dart';
@@ -15,6 +14,7 @@ import 'package:agoradesk/features/wallet/data/models/incoming_deposit_model.dar
 import 'package:agoradesk/features/wallet/models/incoming_deposit_view_model.dart';
 import 'package:agoradesk/generated/i18n.dart';
 import 'package:flutter/material.dart';
+import 'package:vm/vm.dart';
 
 class IncomingDepositScreen extends StatelessWidget with StringMixin, DateMixin, ClipboardMixin, UrlMixin {
   const IncomingDepositScreen({
@@ -48,7 +48,7 @@ class IncomingDepositScreen extends StatelessWidget with StringMixin, DateMixin,
                           children: [
                             LineFontIconTextNeutral60(
                               icon: AgoraFont.calendar,
-                              text: I18n.of(context)!.affiliate250Sbpayouts250Sbtable250Sbdate + ':',
+                              text: '${I18n.of(context)!.affiliate250Sbpayouts250Sbtable250Sbdate}:',
                             ),
                             const SizedBox(height: 8),
                             ContainerSurface3Radius12Border1(
@@ -68,7 +68,7 @@ class IncomingDepositScreen extends StatelessWidget with StringMixin, DateMixin,
                             const SizedBox(height: 16),
                             LineFontIconTextNeutral60(
                               icon: AgoraFont.bill,
-                              text: I18n.of(context)!.post8722Sbad250Sbamount8722Sbtitle + ':',
+                              text: '${I18n.of(context)!.post8722Sbad250Sbamount8722Sbtitle}:',
                             ),
                             const SizedBox(height: 8),
                             ContainerSurface3Radius12Border1(
@@ -78,7 +78,7 @@ class IncomingDepositScreen extends StatelessWidget with StringMixin, DateMixin,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      deposit.amount + ' ' + deposit.asset!.key(),
+                                      '${deposit.amount} ${deposit.asset!.key()}',
                                       style: context.txtBodyXSmallN80,
                                     ),
                                   ],
@@ -113,7 +113,7 @@ class IncomingDepositScreen extends StatelessWidget with StringMixin, DateMixin,
         const SizedBox(height: 16),
         LineFontIconTextNeutral60(
           icon: AgoraFont.box,
-          text: I18n.of(context)!.wallet250Sbreceive250Sbdetails8722Sbdialog250Sbid + ':',
+          text: '${I18n.of(context)!.wallet250Sbreceive250Sbdetails8722Sbdialog250Sbid}:',
         ),
         const SizedBox(height: 8),
         ContainerSurface3Radius12Border1(
@@ -131,7 +131,7 @@ class IncomingDepositScreen extends StatelessWidget with StringMixin, DateMixin,
                     ButtonIconTextP80(
                       iconData: AgoraFont.external_link,
                       text: I18n.of(context)!.view_in_block_explorer,
-                      onPressed: () => openLink(model.linkForChain),
+                      onPressed: () => openLinkWithAuth(model.linkForChain),
                     ),
                     const SizedBox(width: 4),
                     ButtonIconTextP80(
