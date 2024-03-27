@@ -98,6 +98,7 @@ class MarketAdInfoViewModel extends ViewModel
   String? _changedAdPrice = '';
   bool _userAgreeToChangedPrice = false;
   String? _selectedStringReceive;
+  bool _receiveListWasInit = false;
 
   String? get selectedStringReceive => _selectedStringReceive;
   set selectedStringReceive(String? v) => updateWith(selectedStringReceive: v);
@@ -161,7 +162,8 @@ class MarketAdInfoViewModel extends ViewModel
 
   @override
   void onAfterBuild() {
-    if (ad!.limitToFiatAmounts != null && ad!.limitToFiatAmounts!.isNotEmpty) {
+    if (ad!.limitToFiatAmounts != null && ad!.limitToFiatAmounts!.isNotEmpty && !_receiveListWasInit) {
+      _receiveListWasInit = true;
       final values = ad!.limitToFiatAmounts!.split(',');
       selectedStringReceive = values.first;
       ctrlReceive.text = values.first;
@@ -354,6 +356,16 @@ class MarketAdInfoViewModel extends ViewModel
     }
   }
 
+  void updateSelectedReceive(String? value) {
+    if (value == null) {
+      return;
+    }
+
+    selectedStringReceive = value;
+    ctrlReceive.text = value;
+    _processReceive();
+  }
+
   void _checkReceiveQuantity(BuildContext context) {
     final receive = _receive.toDouble();
     if (receive < (ad?.minAmount ?? 0)) {
@@ -432,6 +444,7 @@ class MarketAdInfoViewModel extends ViewModel
     if (!startingTrade) {
       // if (!isSell || (isSell && checkWalletAddressCorrect))
       startingTrade = true;
+
       final res = await _tradeRepository.startTrade(
         adId: ad!.id!,
         amount: _receive.toString(),
