@@ -255,7 +255,7 @@ class TradeViewModel extends ViewModel
     noteModel = NoteOnUserViewModel(
       username: usernameStr(),
       accountService: _accountService,
-      appState: context.read<AppStateV1>(),
+      appState: _appState,
     );
     // we need to get full ad for LOCAL trades for getting location string
     // recevining silently, without handling errors
@@ -824,46 +824,46 @@ class TradeViewModel extends ViewModel
   }
 
   Future _getMessages({bool loadMore = false, bool polling = false}) async {
-    if (!_gettingMessages) {
-      _gettingMessages = true;
-      // only if first page loading
-      if (!loadMore && !polling) {
-        messages.clear();
-        loadingMessages = true;
-      }
-      final List<MessageBoxModel> res = await _tradeRepository.getMessages(
-        tradeId: tradeForScreen.tradeId,
-        context: context,
-        polling: polling,
-      );
-      if (!loadMore && !polling) {
-        loadingMessages = false;
-        messages.clear();
-        messages.addAll(res);
-        _divideMessagesTwoParts(messages, initial: true);
-        notifyListeners();
-      } else {
-        if (res.isNotEmpty) {
-          final reversedLst = res.reversed.toList();
-          for (var i = 0; i < res.length; i++) {
-            final message = reversedLst[i];
-            if (_checkMessageUnique(message, i)) {
-              messagesAfterSticky.insert(0, message);
-              if (messagesListKey.currentState != null) {
-                messagesListKey.currentState!.insertItem(0, duration: kNewMessageDuration);
-              }
-              await Future.delayed(const Duration(milliseconds: 500));
-            } else {
-              messagesAfterSticky[i].isSending = false;
-              messagesAfterSticky[i].isUpdated = true;
-              messagesAfterSticky[i].attachmentUrl = message.attachmentUrl;
-              notifyListeners();
+    if (_gettingMessages) return;
+
+    _gettingMessages = true;
+    // only if first page loading
+    if (!loadMore && !polling) {
+      messages.clear();
+      loadingMessages = true;
+    }
+    final List<MessageBoxModel> res = await _tradeRepository.getMessages(
+      tradeId: tradeForScreen.tradeId,
+      context: context,
+      polling: polling,
+    );
+    if (!loadMore && !polling) {
+      loadingMessages = false;
+      messages.clear();
+      messages.addAll(res);
+      _divideMessagesTwoParts(messages, initial: true);
+      notifyListeners();
+    } else {
+      if (res.isNotEmpty) {
+        final reversedLst = res.reversed.toList();
+        for (var i = 0; i < res.length; i++) {
+          final message = reversedLst[i];
+          if (_checkMessageUnique(message, i)) {
+            messagesAfterSticky.insert(0, message);
+            if (messagesListKey.currentState != null) {
+              messagesListKey.currentState!.insertItem(0, duration: kNewMessageDuration);
             }
+            await Future.delayed(const Duration(milliseconds: 500));
+          } else {
+            messagesAfterSticky[i].isSending = false;
+            messagesAfterSticky[i].isUpdated = true;
+            messagesAfterSticky[i].attachmentUrl = message.attachmentUrl;
+            notifyListeners();
           }
         }
       }
-      _gettingMessages = false;
     }
+    _gettingMessages = false;
   }
 
   bool _checkMessageUnique(MessageBoxModel m, int? i) {
