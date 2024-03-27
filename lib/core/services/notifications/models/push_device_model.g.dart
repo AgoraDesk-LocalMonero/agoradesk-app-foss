@@ -11,13 +11,22 @@ _$PushDeviceModelImpl _$$PushDeviceModelImplFromJson(
     _$PushDeviceModelImpl(
       id: json['id'] as String,
       timestamp: json['timestamp'] as String,
-      deviceName: json['deviceName'] as String,
+      deviceName: json['device_name'] as String?,
     );
 
 Map<String, dynamic> _$$PushDeviceModelImplToJson(
-        _$PushDeviceModelImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'timestamp': instance.timestamp,
-      'deviceName': instance.deviceName,
-    };
+    _$PushDeviceModelImpl instance) {
+  final val = <String, dynamic>{
+    'id': instance.id,
+    'timestamp': instance.timestamp,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('device_name', instance.deviceName);
+  return val;
+}

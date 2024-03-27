@@ -22,7 +22,8 @@ PushDeviceModel _$PushDeviceModelFromJson(Map<String, dynamic> json) {
 mixin _$PushDeviceModel {
   String get id => throw _privateConstructorUsedError;
   String get timestamp => throw _privateConstructorUsedError;
-  String get deviceName => throw _privateConstructorUsedError;
+  @JsonKey(name: 'device_name', includeIfNull: false)
+  String? get deviceName => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -36,7 +37,10 @@ abstract class $PushDeviceModelCopyWith<$Res> {
           PushDeviceModel value, $Res Function(PushDeviceModel) then) =
       _$PushDeviceModelCopyWithImpl<$Res, PushDeviceModel>;
   @useResult
-  $Res call({String id, String timestamp, String deviceName});
+  $Res call(
+      {String id,
+      String timestamp,
+      @JsonKey(name: 'device_name', includeIfNull: false) String? deviceName});
 }
 
 /// @nodoc
@@ -54,7 +58,7 @@ class _$PushDeviceModelCopyWithImpl<$Res, $Val extends PushDeviceModel>
   $Res call({
     Object? id = null,
     Object? timestamp = null,
-    Object? deviceName = null,
+    Object? deviceName = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -65,10 +69,10 @@ class _$PushDeviceModelCopyWithImpl<$Res, $Val extends PushDeviceModel>
           ? _value.timestamp
           : timestamp // ignore: cast_nullable_to_non_nullable
               as String,
-      deviceName: null == deviceName
+      deviceName: freezed == deviceName
           ? _value.deviceName
           : deviceName // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -81,7 +85,10 @@ abstract class _$$PushDeviceModelImplCopyWith<$Res>
       __$$PushDeviceModelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String id, String timestamp, String deviceName});
+  $Res call(
+      {String id,
+      String timestamp,
+      @JsonKey(name: 'device_name', includeIfNull: false) String? deviceName});
 }
 
 /// @nodoc
@@ -97,7 +104,7 @@ class __$$PushDeviceModelImplCopyWithImpl<$Res>
   $Res call({
     Object? id = null,
     Object? timestamp = null,
-    Object? deviceName = null,
+    Object? deviceName = freezed,
   }) {
     return _then(_$PushDeviceModelImpl(
       id: null == id
@@ -108,19 +115,22 @@ class __$$PushDeviceModelImplCopyWithImpl<$Res>
           ? _value.timestamp
           : timestamp // ignore: cast_nullable_to_non_nullable
               as String,
-      deviceName: null == deviceName
+      deviceName: freezed == deviceName
           ? _value.deviceName
           : deviceName // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(explicitToJson: true)
 class _$PushDeviceModelImpl extends _PushDeviceModel {
   _$PushDeviceModelImpl(
-      {required this.id, required this.timestamp, required this.deviceName})
+      {required this.id,
+      required this.timestamp,
+      @JsonKey(name: 'device_name', includeIfNull: false) this.deviceName})
       : super._();
 
   factory _$PushDeviceModelImpl.fromJson(Map<String, dynamic> json) =>
@@ -131,7 +141,8 @@ class _$PushDeviceModelImpl extends _PushDeviceModel {
   @override
   final String timestamp;
   @override
-  final String deviceName;
+  @JsonKey(name: 'device_name', includeIfNull: false)
+  final String? deviceName;
 
   @override
   String toString() {
@@ -173,7 +184,8 @@ abstract class _PushDeviceModel extends PushDeviceModel {
   factory _PushDeviceModel(
       {required final String id,
       required final String timestamp,
-      required final String deviceName}) = _$PushDeviceModelImpl;
+      @JsonKey(name: 'device_name', includeIfNull: false)
+      final String? deviceName}) = _$PushDeviceModelImpl;
   _PushDeviceModel._() : super._();
 
   factory _PushDeviceModel.fromJson(Map<String, dynamic> json) =
@@ -184,7 +196,8 @@ abstract class _PushDeviceModel extends PushDeviceModel {
   @override
   String get timestamp;
   @override
-  String get deviceName;
+  @JsonKey(name: 'device_name', includeIfNull: false)
+  String? get deviceName;
   @override
   @JsonKey(ignore: true)
   _$$PushDeviceModelImplCopyWith<_$PushDeviceModelImpl> get copyWith =>
