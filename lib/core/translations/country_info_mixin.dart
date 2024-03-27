@@ -15,16 +15,18 @@ mixin CountryInfoMixin {
   }
 
   String getCountryName(String code, {bool lowerCase = false}) {
-    String? langCode = AppSharedPrefs().locale.languageCode;
-    langCode ??= 'en';
+    if (code == 'ANY') {
+      return 'Any';
+    }
+    if (code == 'XX') {
+      return 'Global';
+    }
+    String langCode = AppSharedPrefs().locale.languageCode;
     if (langCode.isEmpty) {
       langCode = 'en';
     }
     if (!_countryName.keys.contains(langCode)) {
       langCode = 'en';
-    }
-    if (code == 'XX') {
-      return 'Global';
     }
     try {
       if (lowerCase) {
@@ -38,9 +40,8 @@ mixin CountryInfoMixin {
   }
 
   String getCurrencyName(String code) {
-    String? langCode = AppSharedPrefs().locale.languageCode;
+    String langCode = AppSharedPrefs().locale.languageCode;
 
-    langCode ??= 'en';
     if (langCode.isEmpty) {
       langCode = 'en';
     }
@@ -57,9 +58,8 @@ mixin CountryInfoMixin {
   }
 
   String getCurrencyNameWithCode(String code) {
-    String? langCode = AppSharedPrefs().locale.languageCode;
+    String langCode = AppSharedPrefs().locale.languageCode;
 
-    langCode ??= 'en';
     if (langCode.isEmpty) {
       langCode = 'en';
     }

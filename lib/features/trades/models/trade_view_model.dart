@@ -45,7 +45,7 @@ import 'package:vm/vm.dart';
 import 'note_on_user_view_model.dart';
 
 /// Polling trade activity and new messages in the chat when the trade screen is open
-const _kPollingSeconds = 30;
+const _kPollingSeconds = 60;
 
 const kDeletedUserName = '[DELETED]';
 
@@ -240,6 +240,9 @@ class TradeViewModel extends ViewModel
   }
 
   void _initialLoading() async {
+    if (isTradeLoading) {
+      return;
+    }
     isTradeLoading = true;
     if (tradeModel == null) {
       await getTrade();
@@ -608,7 +611,7 @@ class TradeViewModel extends ViewModel
       final res = await _tradeRepository.releaseEscrow(tradeForScreen.tradeId, ctrlPassword.text);
       releasingEscrow = false;
       if (res.isRight) {
-        AutoRouter.of(context).pop();
+        Navigator.of(context).pop();
         indicatorKey.currentState?.show();
       } else {
         handleApiError(res.left, context);
@@ -617,14 +620,14 @@ class TradeViewModel extends ViewModel
     }
   }
 
-  Future startDispute() async {
+  Future startDispute(BuildContext context) async {
     if (!startingDispute) {
       startingDispute = true;
       final res = await _tradeRepository.startDispute(tradeForScreen.tradeId);
       startingDispute = false;
       if (res.isRight) {
         eventBus.fire(FlashEvent.success(context.intl.dispute_started));
-        AutoRouter.of(context).pop();
+        Navigator.of(context).pop();
       } else {
         handleApiError(res.left, context);
       }
@@ -632,17 +635,17 @@ class TradeViewModel extends ViewModel
     }
   }
 
-  Future cancelTrade() async {
+  Future cancelTrade(BuildContext context) async {
     if (!cancelingTrade) {
       cancelingTrade = true;
       final res = await _tradeRepository.cancelTrade(tradeForScreen.tradeId);
       cancelingTrade = false;
       if (res.isRight) {
         getTrade(polling: true);
-        AutoRouter.of(context).pop();
+        Navigator.of(context).pop();
       } else {
         handleApiError(res.left, context);
-        AutoRouter.of(context).pop();
+        Navigator.of(context).pop();
       }
       notifyListeners();
     }
@@ -651,17 +654,17 @@ class TradeViewModel extends ViewModel
   ///
   /// Escrow protection for local trades - only seller can activate
   ///
-  Future enableEscrow() async {
+  Future enableEscrow(BuildContext context) async {
     if (!enablingEscrow) {
       enablingEscrow = true;
       final res = await _tradeRepository.enableEscrow(tradeForScreen.tradeId);
       enablingEscrow = false;
       if (res.isRight) {
         getTrade(polling: true);
-        AutoRouter.of(context).pop();
+        Navigator.of(context).pop();
       } else {
         handleApiError(res.left, context);
-        AutoRouter.of(context).pop();
+        Navigator.of(context).pop();
       }
       notifyListeners();
     }
@@ -670,21 +673,21 @@ class TradeViewModel extends ViewModel
   ///
   /// Fund local trade
   ///
-  Future fundTrade() async {
+  Future fundTrade(BuildContext context) async {
     enablingEscrow = true;
     final res = await _tradeRepository.fundTrade(tradeForScreen.tradeId);
     enablingEscrow = false;
     if (res.isRight) {
       getTrade(polling: true);
-      AutoRouter.of(context).pop();
+      Navigator.of(context).pop();
     } else {
       handleApiError(res.left, context);
-      AutoRouter.of(context).pop();
+      Navigator.of(context).pop();
     }
     notifyListeners();
   }
 
-  void showDisputeDialog() {
+  void showDisputeDialog(BuildContext context) {
     showDialog(
       barrierDismissible: true,
       context: context,
@@ -696,7 +699,7 @@ class TradeViewModel extends ViewModel
         ),
         filledButtonTitle: context.intl.trade250Sbdialog250Sbconfirm8722Sbcancel8722Sbbtn,
         onPressedFilled: () async {
-          startDispute();
+          startDispute(context);
         },
         loadingFilled: startingDispute,
         outlineButtonTitle: context.intl.post8722Sbad250Sberror250Sbdialog8722Sbbtn,
@@ -705,13 +708,13 @@ class TradeViewModel extends ViewModel
     );
   }
 
-  Future markAsPaid() async {
+  Future markAsPaid(BuildContext context) async {
     if (!markingAsPaid) {
       markingAsPaid = true;
       final res = await _tradeRepository.markAsPaid(tradeForScreen.tradeId);
       markingAsPaid = false;
       if (res.isRight) {
-        AutoRouter.of(context).pop();
+        Navigator.of(context).pop();
         paymentCompletedAt = DateTime.now();
         _setTradeStatus();
       } else {
@@ -777,7 +780,7 @@ class TradeViewModel extends ViewModel
     return tradeForScreen.seller;
   }
 
-  Future giveFeedback() async {
+  Future giveFeedback(BuildContext context) async {
     postingFeedback = true;
     final res = await _accountService.giveFeedback(
       tradeForScreen.isSelling! ? tradeForScreen.buyer.username! : tradeForScreen.seller.username!,
@@ -787,7 +790,7 @@ class TradeViewModel extends ViewModel
     postingFeedback = false;
     if (res.isRight) {
       eventBus.fire(FlashEvent.success(I18n.of(context)!.feedback_updated_successfully));
-      AutoRouter.of(context).pop();
+      Navigator.of(context).pop();
     } else {
       handleApiError(res.left, context);
     }

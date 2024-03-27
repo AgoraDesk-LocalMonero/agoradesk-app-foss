@@ -60,7 +60,7 @@ class PinCodeCheckScreen extends StatelessWidget {
                           deleteIconColor: Theme.of(context).colorScheme.surf5darkSurfLight,
                           deleteButtonColor: Theme.of(context).colorScheme.p90p10,
                           onEnter: (pin, _) {
-                            if (model.checkPinCorrectness(pin)) {
+                            if (model.checkPinCorrectness(pin, context)) {
                               Navigator.of(context).pop();
                             }
                           },
@@ -74,7 +74,7 @@ class PinCodeCheckScreen extends StatelessWidget {
                                     color: context.colN70N50,
                                   ),
                                   onPressed: () {
-                                    model.checkBiometrics();
+                                    model.checkBiometrics(context);
                                   },
                                 )
                               : const SizedBox(),

@@ -21,7 +21,7 @@ class LineIconLink extends StatelessWidget with UrlMixin {
   Widget build(BuildContext context) {
     return GestureDetector(
       behavior: HitTestBehavior.opaque,
-      onTap: () => openLink(link),
+      onTap: () => openLinkWithAuth(link),
       child: ContainerSurface5Radius12(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(16, 14, 16, 14),

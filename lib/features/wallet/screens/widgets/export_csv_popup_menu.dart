@@ -29,10 +29,7 @@ class ExportCsvPopupMenu extends StatelessWidget with UrlMixin {
         ),
         PopupMenuItem(
           padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-          onTap: () => openLink(
-            GetIt.I<AppParameters>().urlSupport,
-            token: GetIt.I<AppParameters>().accessToken,
-          ),
+          onTap: () => openLinkWithAuth(GetIt.I<AppParameters>().urlSupport),
           value: 1,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

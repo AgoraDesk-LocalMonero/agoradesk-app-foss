@@ -10,6 +10,7 @@ import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/services/notifications/local_notifications_utils.dart';
 import 'package:agoradesk/core/services/notifications/models/device_model.dart';
+import 'package:agoradesk/core/services/notifications/models/push_device_model.dart';
 import 'package:agoradesk/core/services/notifications/models/push_model.dart';
 import 'package:agoradesk/core/translations/foreground_messages_mixin.dart';
 import 'package:agoradesk/features/account/data/models/notification_message_type.dart';
@@ -20,6 +21,7 @@ import 'package:agoradesk/features/profile/models/notifications_settings_type.da
 import 'package:agoradesk/main.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:collection/collection.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
@@ -33,7 +35,7 @@ import '../../events.dart';
 
 /// Polling for getting notifications (activity) inside the app (not a push notifications)
 const _kNotificationsPollingSeconds = 30;
-const _kPeriodCheckTokenUpdatesDays = 2;
+const _kPeriodCheckTokenUpdatesDays = 7;
 
 final _readedEmptyNotification = ActivityNotificationModel(
     id: '', read: true, createdAt: DateTime(0), url: '', msg: '', type: NotificationMessageType.MESSAGE);
@@ -199,7 +201,6 @@ class NotificationsService with ForegroundMessagesMixin {
         try {
           final token = await fcm!.getToken();
           if (token != null) {
-            if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('++++ FirebaseMessaging pushtoken created: $token');
             _tokenUpdate(token);
           }
         } catch (e) {
@@ -231,14 +232,7 @@ class NotificationsService with ForegroundMessagesMixin {
 
     _updating = true;
     final oldToken = await secureStorage.read(SecureStorageKey.pushToken);
-    await Sentry.captureMessage(
-      {'pushTokenUpdateEvent:': '', 'oldTokenNotEqualnewToken:': oldToken != newToken}.toString(),
-    );
-    if (oldToken != newToken) {
-      await Sentry.captureMessage(
-        {'pushTokenUpdateEvent:': '${GetIt.I<AppParameters>().loggedIn} '}.toString(),
-      );
-    }
+
     if (oldToken != newToken && GetIt.I<AppParameters>().loggedIn) {
       late String deviceName;
       var deviceData = <String, dynamic>{};
@@ -253,6 +247,8 @@ class NotificationsService with ForegroundMessagesMixin {
       } catch (e) {
         deviceName = 'unknown';
       }
+      await _deleteOldTokenApi();
+
       final res = await _saveFcmTokenToApi(
         DeviceModel(
           token: newToken,
@@ -272,20 +268,74 @@ class NotificationsService with ForegroundMessagesMixin {
   }
 
   ///
+  ///
+  ///
+  Future<void> _deleteOldTokenApi() async {
+    try {
+      final deviceId = AppSharedPrefs().getString(AppSharedPrefsKey.pushDeviceId);
+      if (deviceId == null || deviceId.isEmpty) {
+        return;
+      }
+      final respDelete = await api.client.delete('/push/$deviceId/delete');
+      if (respDelete.statusCode != 200) {
+        await Sentry.captureMessage(
+          {'_deleteOldTokenApi2': '${respDelete.statusCode} - ${respDelete.data}'}.toString(),
+        );
+      }
+    } catch (e) {
+      await Sentry.captureMessage(
+        {'DeleteTokenEventError3': e.toString()}.toString(),
+      );
+    }
+  }
+
+  Future<List<PushDeviceModel>> _getDevices() async {
+    try {
+      final respDevices = await api.client.get('/push/devices');
+
+      if (respDevices.statusCode == 200) {
+        final List<PushDeviceModel> devices =
+            (respDevices.data['data'] as List).map((e) => PushDeviceModel.fromJson(e)).toList();
+
+        return devices;
+      }
+
+      await Sentry.captureMessage(
+        {'_getDevices_error1': '${respDevices.statusCode} - ${respDevices.data}'}.toString(),
+      );
+      return [];
+    } catch (e) {
+      await Sentry.captureMessage(
+        {'_getDevices_error2': e.toString()}.toString(),
+      );
+      return [];
+    }
+  }
+
+  ///
   /// Add new FCM push token to API
   ///
   Future<bool> _saveFcmTokenToApi(DeviceModel device) async {
     try {
+      final devicesBefore = await _getDevices();
+
       final resp = await api.client.post(
         '/push/registration',
         data: device.toJson(),
       );
-      if (resp.statusCode != 200) {
-        await Sentry.captureMessage(
-          {'SaveTokenEventError1': '${resp.statusCode} - ${resp.data}'}.toString(),
-        );
+      if (resp.statusCode == 200) {
+        final devicesAfter = await _getDevices();
+        final newDevice =
+            devicesAfter.firstWhereOrNull((e) => devicesBefore.firstWhereOrNull((val) => val.id == e.id) == null);
+        if (newDevice != null) {
+          AppSharedPrefs().setString(AppSharedPrefsKey.pushDeviceId, newDevice.id);
+        }
+        return resp.statusCode == 200;
       }
-      return resp.statusCode == 200;
+      await Sentry.captureMessage(
+        {'SaveTokenEventError1': '${resp.statusCode} - ${resp.data}'}.toString(),
+      );
+      return false;
     } catch (e) {
       ApiError apiError = ApiHelper.parseErrorToApiError(e, '[$runtimeType]');
 
@@ -296,7 +346,7 @@ class NotificationsService with ForegroundMessagesMixin {
       if (apiError.message.containsKey('error_code')) {
         // token already saved
         if (apiError.message['error_code'] == 256) {
-          return false;
+          return true;
         }
       }
       return false;
