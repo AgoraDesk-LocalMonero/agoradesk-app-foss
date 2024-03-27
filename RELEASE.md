@@ -1,6 +1,6 @@
 ### Updates
 
-1. Hotfix: Fixed push notification token updates.
+1. Hotfix: Fixed an issue with trades starting with a preselected amount in ads.
 
 ### About the attached app's
 
