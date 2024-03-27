@@ -21,7 +21,6 @@ import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/features/trades/data/repository/trade_repository.dart';
 import 'package:agoradesk/features/wallet/data/models/btc_fee_model.dart';
 import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
-import 'package:agoradesk/generated/l10n.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:decimal/decimal.dart';
@@ -100,8 +99,8 @@ class MarketAdInfoViewModel extends ViewModel
   bool _userAgreeToChangedPrice = false;
   String? _selectedStringReceive;
 
-   String? get selectedStringReceive => _selectedStringReceive;
-   set selectedStringReceive(String? v) => updateWith(selectedStringReceive: v);
+  String? get selectedStringReceive => _selectedStringReceive;
+  set selectedStringReceive(String? v) => updateWith(selectedStringReceive: v);
 
   late final bool isSell;
   late final bool isAdOwner;
@@ -160,6 +159,16 @@ class MarketAdInfoViewModel extends ViewModel
     super.init();
   }
 
+  @override
+  void onAfterBuild() {
+    if (ad!.limitToFiatAmounts != null && ad!.limitToFiatAmounts!.isNotEmpty) {
+      final values = ad!.limitToFiatAmounts!.split(',');
+      selectedStringReceive = values.first;
+      ctrlReceive.text = values.first;
+    }
+    super.onAfterBuild();
+  }
+
   void _initialLoading() async {
     initialLoadingAd = true;
     notifyListeners();
@@ -183,9 +192,11 @@ class MarketAdInfoViewModel extends ViewModel
       isAdOwner = ad!.profile == null;
       _asset = ad!.asset!;
       if (!isGuestMode) {
+        await Future.delayed(const Duration(seconds: 1));
         await _getWalletsBalance();
       }
     }
+
     if (asset == Asset.BTC) {
       _firstTimeLimitAsset = ad!.firstTimeLimitBtc;
     } else {
@@ -462,9 +473,11 @@ class MarketAdInfoViewModel extends ViewModel
   }
 
   String howMuchSign(BuildContext context) {
-    return context.intl.app_buy_sell(ad!.tradeType.isSell()
-        ? context.intl.ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy
-        : context.intl.ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbsell, '');
+    return context.intl.app_buy_sell(
+        ad!.tradeType.isSell()
+            ? context.intl.ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy
+            : context.intl.ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbsell,
+        '');
   }
 
   void pasteAllAvailableBalance() {

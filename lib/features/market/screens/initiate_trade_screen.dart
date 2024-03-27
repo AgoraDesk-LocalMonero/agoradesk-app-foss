@@ -168,10 +168,10 @@ class InitiateTradeScreen extends StatelessWidget with CountryInfoMixin, Clipboa
         value: model.selectedStringReceive,
         onChanged: (selected) {
           model.selectedStringReceive = selected;
-          model.ctrlReceive.text = selected!;
+          model.ctrlReceive.text = selected ?? '';
         },
         decoration: context.decorationTxtFieldMain.copyWith(
-          suffixIcon: SuffixIcon(text: model.ad!.asset!.name),
+          suffixIcon: SuffixIcon(text: model.ad!.currency),
           errorText: model.receiveError,
         ),
         items: values.map((String value) {
