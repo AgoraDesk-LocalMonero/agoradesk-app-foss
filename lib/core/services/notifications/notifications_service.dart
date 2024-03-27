@@ -10,6 +10,7 @@ import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/services/notifications/local_notifications_utils.dart';
 import 'package:agoradesk/core/services/notifications/models/device_model.dart';
+import 'package:agoradesk/core/services/notifications/models/push_device_model.dart';
 import 'package:agoradesk/core/services/notifications/models/push_model.dart';
 import 'package:agoradesk/core/translations/foreground_messages_mixin.dart';
 import 'package:agoradesk/features/account/data/models/notification_message_type.dart';
@@ -249,6 +250,8 @@ class NotificationsService with ForegroundMessagesMixin {
       } catch (e) {
         deviceName = 'unknown';
       }
+      final resDelete = await _deleteOldTokenApi(deviceName);
+
       final res = await _saveFcmTokenToApi(
         DeviceModel(
           token: newToken,
@@ -265,6 +268,37 @@ class NotificationsService with ForegroundMessagesMixin {
       }
     }
     _updating = false;
+  }
+
+  ///
+  ///
+  ///
+  Future<void> _deleteOldTokenApi(String deviceName) async {
+    try {
+      final respDevices = await api.client.get('/push/devices');
+      if (respDevices.statusCode != 200) {
+        await Sentry.captureMessage(
+          {'_deleteOldTokenApi1': '${respDevices.statusCode} - ${respDevices.data}'}.toString(),
+        );
+      }
+      print('++++++++++++++++++++01 - ${respDevices.data['data']}');
+      final List<PushDeviceModel> devices =
+          (respDevices.data['data'] as List).map((e) => PushDeviceModel.fromJson(e)).toList();
+      final List<PushDeviceModel> toDelete = devices.where((e) => e.deviceName == deviceName).toList();
+      for (final d in toDelete) {
+        final respDelete = await api.client.delete('/push/${d.id}/delete');
+        print('++++++++++++++++++++02 - ${respDelete.data}');
+        if (respDelete.statusCode != 200) {
+          await Sentry.captureMessage(
+            {'_deleteOldTokenApi2': '${respDelete.statusCode} - ${respDelete.data}'}.toString(),
+          );
+        }
+      }
+    } catch (e) {
+      await Sentry.captureMessage(
+        {'DeleteTokenEventError3': e.toString()}.toString(),
+      );
+    }
   }
 
   ///

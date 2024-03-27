@@ -15,15 +15,18 @@ mixin CountryInfoMixin {
   }
 
   String getCountryName(String code, {bool lowerCase = false}) {
+    if (code == 'ANY') {
+      return 'Any';
+    }
+    if (code == 'XX') {
+      return 'Global';
+    }
     String langCode = AppSharedPrefs().locale.languageCode;
     if (langCode.isEmpty) {
       langCode = 'en';
     }
     if (!_countryName.keys.contains(langCode)) {
       langCode = 'en';
-    }
-    if (code == 'XX') {
-      return 'Global';
     }
     try {
       if (lowerCase) {
