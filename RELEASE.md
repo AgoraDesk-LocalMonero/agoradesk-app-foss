@@ -1,8 +1,6 @@
 ### Updates
 
-1. Fixed bug when opening trades with a specific amount.
-2. Fixed bug when the market screen keeps resetting coin and trade type options.
-3. Other small bug fixes.
+1. Hotfix: Fixed push notification token updates.
 
 ### About the attached app's
 

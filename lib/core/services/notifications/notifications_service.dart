@@ -35,7 +35,7 @@ import '../../events.dart';
 
 /// Polling for getting notifications (activity) inside the app (not a push notifications)
 const _kNotificationsPollingSeconds = 30;
-const _kPeriodCheckTokenUpdatesDays = 0;
+const _kPeriodCheckTokenUpdatesDays = 7;
 
 final _readedEmptyNotification = ActivityNotificationModel(
     id: '', read: true, createdAt: DateTime(0), url: '', msg: '', type: NotificationMessageType.MESSAGE);
@@ -233,7 +233,7 @@ class NotificationsService with ForegroundMessagesMixin {
     _updating = true;
     final oldToken = await secureStorage.read(SecureStorageKey.pushToken);
 
-    if (oldToken == newToken && GetIt.I<AppParameters>().loggedIn) {
+    if (oldToken != newToken && GetIt.I<AppParameters>().loggedIn) {
       late String deviceName;
       var deviceData = <String, dynamic>{};
       try {
