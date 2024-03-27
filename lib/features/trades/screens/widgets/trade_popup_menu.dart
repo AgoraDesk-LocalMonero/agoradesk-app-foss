@@ -51,7 +51,7 @@ class TradePopupMenu extends StatelessWidget {
           ),
           onTap: () {
             WidgetsBinding.instance.addPostFrameCallback((_) {
-              model.showDisputeDialog();
+              model.showDisputeDialog(context);
             });
           },
         ),

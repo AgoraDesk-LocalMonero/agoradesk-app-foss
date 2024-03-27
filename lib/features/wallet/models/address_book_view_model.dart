@@ -92,7 +92,7 @@ class AddressBookViewModel extends ViewModel
     }
   }
 
-  Future saveAddress(AddressModelToSave addressModelToSave) async {
+  Future saveAddress(AddressModelToSave addressModelToSave, BuildContext context) async {
     loading = true;
     final res = await _accountService.saveAddress(addressModelToSave: addressModelToSave);
     loading = false;

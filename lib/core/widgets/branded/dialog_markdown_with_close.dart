@@ -1,5 +1,4 @@
 import 'package:agoradesk/core/theme/theme.dart';
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 class DialogMarkDownWithClose extends StatelessWidget {
@@ -73,7 +72,7 @@ class DialogMarkDownWithClose extends StatelessWidget {
                         ),
                   ),
                   onPressed: () {
-                    AutoRouter.of(context).pop();
+                    Navigator.of(context).pop();
                     // OverlaySupportEntry.of(context)!.dismiss();
                   },
                 )
