@@ -63,7 +63,6 @@ class AuthService with FileUtilsMixin, AuthMixin {
     if (_api.accessToken != null && _api.accessToken!.isNotEmpty) {
       authState = AuthState.loggedIn;
     }
-    if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[$runtimeType] init {accessToken: ${_api.accessToken}...');
   }
 
   @mustCallSuper

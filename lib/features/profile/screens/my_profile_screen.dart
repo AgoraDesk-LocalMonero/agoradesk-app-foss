@@ -150,7 +150,7 @@ class MyProfileScreen extends StatelessWidget with UrlMixin {
                             style: context.txtBodySmallP70P40,
                             recognizer: TapGestureRecognizer()
                               ..onTap = () {
-                                openLink(GetIt.I<AppParameters>().urlHowToMarkdown);
+                                openLinkWithAuth(GetIt.I<AppParameters>().urlHowToMarkdown);
                               },
                           ),
                         ],

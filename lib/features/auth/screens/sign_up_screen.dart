@@ -170,8 +170,7 @@ class SignUpScreen extends ConsumerWidget with UrlMixin, ValidatorMixin {
                                                 style: context.txtBodySmallP70P40,
                                                 recognizer: TapGestureRecognizer()
                                                   ..onTap = () {
-                                                    openLink(GetIt.I<AppParameters>().urlPrivacy,
-                                                        token: GetIt.I<AppParameters>().accessToken);
+                                                    openLinkWithAuth(GetIt.I<AppParameters>().urlPrivacy);
                                                   },
                                               ),
                                             ],

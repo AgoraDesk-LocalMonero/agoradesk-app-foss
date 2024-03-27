@@ -76,7 +76,7 @@ class PinCodeSetScreen extends StatelessWidget {
                         minPinLength: kMinPinLength,
                         maxPinLength: kMaxPinLength,
                         clearStream: model.clearPin,
-                        onEnter: (pin, __) => model.handlePinInput(pin, onFull: true),
+                        onEnter: (pin, __) => model.handlePinInput(pin, context, onFull: true),
                         onChangedPin: (_) {},
                       ),
                     ),

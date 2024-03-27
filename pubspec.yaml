@@ -1,5 +1,5 @@
 name: agoradesk
-version: 1.1.26+123
+version: 1.1.27+124
 publish_to: none
 description: Person-to-person platform to allow anyone to trade their local currency for cryptocurrency.
 environment: 
@@ -9,6 +9,7 @@ dependencies:
   auto_size_text: ^3.0.0
   barcode_scan2: ^4.3.0
   cached_network_image: ^3.3.1
+  collection: ^1.18.0
   connectivity_plus: ^5.0.2
   convert: ^3.1.1
   country_picker: ^2.0.11
