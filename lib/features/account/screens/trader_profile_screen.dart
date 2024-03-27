@@ -1,5 +1,6 @@
 import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/app_parameters.dart';
+import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/url_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/agora_appbar.dart';
@@ -45,6 +46,7 @@ class TraderProfileScreen extends StatelessWidget with UrlMixin {
           adsRepository: context.read<AdsRepository>(),
           profileModel: profileModel,
           username: username,
+          appState: context.read<AppStateV1>(),
         ),
         builder: (context, model, child) {
           return Scaffold(
