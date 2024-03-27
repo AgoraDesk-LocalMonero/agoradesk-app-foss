@@ -504,7 +504,7 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
                 context.intl.trade250Sbdialog250Sbconfirm8722Sbcancel8722Sbtext,
                 style: context.txtBodySmallN80,
               ),
-              mainAction: () => model.cancelTrade(),
+              mainAction: () => model.cancelTrade(context),
               mainActionText: context.intl.trade250Sbcancel8722Sbtrade8722Sbbtn,
               secondAction: () => Navigator.of(context).pop(),
               secondActionText: context.intl.cancel,
@@ -530,7 +530,7 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
               filledButtonTitle: context.intl.trade250Sbcancel8722Sbtrade8722Sbbtn,
               outlineButtonTitle: context.intl.post8722Sbad250Sberror250Sbdialog8722Sbbtn,
               onPressedOutline: () => Navigator.of(context).pop(),
-              onPressedFilled: () => model.cancelTrade(),
+              onPressedFilled: () => model.cancelTrade(context),
               loadingFilled: model.cancelingTrade,
             );
           }),
@@ -553,7 +553,7 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
                   .trade250Sbdialog8722Sbconfirm8722Sbpayment8722Sbtext(model.tradeForScreen.buyer.username!)),
               filledButtonTitle: context.intl.trade250Sbdialog250Sbconfirm8722Sbcancel8722Sbbtn,
               outlineButtonTitle: context.intl.post8722Sbad250Sberror250Sbdialog8722Sbbtn,
-              onPressedFilled: () => model.markAsPaid(),
+              onPressedFilled: () => model.markAsPaid(context),
               onPressedOutline: () => Navigator.of(context).pop(),
               loadingFilled: model.markingAsPaid,
             );
@@ -573,7 +573,7 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
         filledButtonTitle: context.intl.trade250Sbdialog250Sbconfirm8722Sbcancel8722Sbbtn,
         outlineButtonTitle: context.intl.post8722Sbad250Sberror250Sbdialog8722Sbbtn,
         onPressedOutline: () => AutoRouter.of(context).pop(),
-        onPressedFilled: () => model.fundTrade(),
+        onPressedFilled: () => model.fundTrade(context),
         loadingFilled: model.enablingEscrow,
       ),
     );
@@ -590,7 +590,7 @@ class ChatBubbleSticky extends StatelessWidget with DateMixin, ClipboardMixin {
         filledButtonTitle: context.intl.trade250Sbdialog250Sbconfirm8722Sbcancel8722Sbbtn,
         outlineButtonTitle: context.intl.post8722Sbad250Sberror250Sbdialog8722Sbbtn,
         onPressedOutline: () => AutoRouter.of(context).pop(),
-        onPressedFilled: () => model.enableEscrow(),
+        onPressedFilled: () => model.enableEscrow(context),
         loadingFilled: model.enablingEscrow,
       ),
     );

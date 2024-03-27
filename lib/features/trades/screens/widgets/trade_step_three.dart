@@ -169,7 +169,7 @@ class TradeStepThree extends StatelessWidget with DateMixin, UrlMixin, Clipboard
                                     padding: const EdgeInsets.fromLTRB(0, 8, 0, 0),
                                     child: GestureDetector(
                                       behavior: HitTestBehavior.opaque,
-                                      onTap: () => openLink(
+                                      onTap: () => openLinkWithAuth(
                                         linkForChain(
                                           model.tradeForScreen.transferToSellerTransactionId,
                                           model.tradeForScreen.asset,
@@ -333,7 +333,7 @@ class TradeStepThree extends StatelessWidget with DateMixin, UrlMixin, Clipboard
                   title: context.intl.trade250Sbstatus250Sbsettlement250Sbseller8722Sbtx250Sbtitle,
                   text: model.tradeForScreen.transferToSellerTransactionId ?? '',
                   iconData: AgoraFont.bolt_alt,
-                  iconDescr: context.intl.wallet250Sbreceive250Sbdetails8722Sbdialog250Sbid + ':',
+                  iconDescr: '${context.intl.wallet250Sbreceive250Sbdetails8722Sbdialog250Sbid}:',
                 ),
               )
             : const SizedBox(),
@@ -341,10 +341,10 @@ class TradeStepThree extends StatelessWidget with DateMixin, UrlMixin, Clipboard
           title: context.intl.trade250Sbstatus250Sbsettlement250Sbbuyer8722Sbtx250Sbtitle,
           text: model.tradeForScreen.transferToBuyerTransactionId ?? '',
           iconData: AgoraFont.bolt_alt,
-          descr: context.intl.wallet250Sbreceive250Sbdetails8722Sbdialog250Sbid + ':',
+          descr: '${context.intl.wallet250Sbreceive250Sbdetails8722Sbdialog250Sbid}:',
           text2: model.tradeForScreen.buyerSettlementAddress ?? '',
           iconData2: AgoraFont.bolt_alt,
-          descr2: context.intl.trade250Sbstatus250Sbsettlement250Sbaddress + ':',
+          descr2: '${context.intl.trade250Sbstatus250Sbsettlement250Sbaddress}:',
         ),
       ],
     );

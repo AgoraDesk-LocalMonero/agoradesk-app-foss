@@ -144,12 +144,14 @@ class _PopupMenu extends StatelessWidget with UrlMixin {
       itemBuilder: (context) => [
         PopupMenuItem(
           padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
-          onTap: () => openLink(GetIt.I<AppParameters>().urlPrivacy, token: GetIt.I<AppParameters>().accessToken),
+          onTap: () =>
+              openLinkWithAuth(GetIt.I<AppParameters>().urlPrivacy),
           value: 1,
           child: Text(context.intl.post8722Sbad250Sbrules8722Sbtext8722Sb08722Sbterms8722Sbof8722Sbservice),
         ),
         PopupMenuItem(
-          onTap: () => openLink(GetIt.I<AppParameters>().urlGuides, token: GetIt.I<AppParameters>().accessToken),
+          onTap: () =>
+              openLinkWithAuth(GetIt.I<AppParameters>().urlGuides),
           value: 2,
           child: Text(context.intl.post8722Sbad250Sbrules8722Sbtext8722Sb08722Sbguides),
         )

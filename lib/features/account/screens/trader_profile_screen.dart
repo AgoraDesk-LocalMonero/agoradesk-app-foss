@@ -24,7 +24,6 @@ import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
 import 'package:vm/vm.dart';
 
@@ -98,10 +97,7 @@ class TraderProfileScreen extends StatelessWidget with UrlMixin {
                             ButtonIconTextP70(
                               text: context.intl.app_report_this_user,
                               iconData: AgoraFont.alert_circle,
-                              onPressed: () => openLink(
-                                GetIt.I<AppParameters>().urlSupport,
-                                token: GetIt.I<AppParameters>().accessToken,
-                              ),
+                              onPressed: () => openLinkWithAuth(GetIt.I<AppParameters>().urlSupport),
                             ),
                             const SizedBox(height: 6),
                             TraderWebsiteBox(

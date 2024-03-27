@@ -41,6 +41,7 @@ enum AppSharedPrefsKey {
   marketSelectedAsset,
   marketSelectedTradeType,
   marketSelectedOnlineProvider,
+  pushDeviceId,
 }
 
 class AppSharedPrefs with DateMixin {
@@ -94,6 +95,8 @@ class AppSharedPrefs with DateMixin {
   bool get xmrWalletTileOpen => getBool(AppSharedPrefsKey.xmrWalletTileOpen) ?? true;
 
   String? get username => getString(AppSharedPrefsKey.username);
+  
+  String? get pushDeviceId => getString(AppSharedPrefsKey.pushDeviceId);
 
   String get proxyServer => getString(AppSharedPrefsKey.proxyServer) ?? '';
 

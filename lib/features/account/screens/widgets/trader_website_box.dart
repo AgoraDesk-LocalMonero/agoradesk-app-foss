@@ -51,7 +51,7 @@ class TraderWebsiteBox extends StatelessWidget with DateMixin, UrlMixin {
                         child: ButtonLink(
                           title: url ?? '',
                           style: context.txtBodyXSmallP70,
-                          onPressed: () => openLink(url),
+                          onPressed: () => openLinkWithAuth(url),
                         ),
                       ),
                     ),

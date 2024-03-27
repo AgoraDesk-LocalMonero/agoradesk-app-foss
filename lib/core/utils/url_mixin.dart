@@ -1,25 +1,22 @@
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:agoradesk/router.gr.dart';
-import 'package:get_it/get_it.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 mixin UrlMixin {
   ///
   /// open link
   ///
-  Future<void> openLink(String? url, {String? token}) async {
+  Future<void> openLinkWithAuth(String? url) async {
+    final token = GetIt.I<AppParameters>().accessToken;
     if (url != null) {
       final uri = Uri.tryParse(url) ?? Uri();
       if (await canLaunchUrl(uri)) {
-        Map<String, String> headers = {
-          'cookie': 'SameSite=Lax;Secure=true;HttpOnly=true;token=$token',
-        };
         GetIt.I<AppRouter>().push(
           WebviewRoute(
-            token: GetIt.I<AppParameters>().accessToken,
+            token: token,
             url: url,
-            cookies: [],
+            cookies: const [],
           ),
         );
       } else {

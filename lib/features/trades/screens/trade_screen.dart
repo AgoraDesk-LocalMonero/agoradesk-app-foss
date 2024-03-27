@@ -181,7 +181,7 @@ class _TradeScreenState extends State<TradeScreen>
                       color: context.colP80,
                     ),
                     title: context.intl.trade250Sbdispute8722Sbbtn,
-                    onPressed: () => model.showDisputeDialog(),
+                    onPressed: () => model.showDisputeDialog(context),
                   ),
                 )
               : const SizedBox(),

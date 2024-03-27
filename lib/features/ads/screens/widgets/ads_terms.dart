@@ -4,7 +4,6 @@ import 'package:agoradesk/core/utils/url_mixin.dart';
 import 'package:agoradesk/features/market/screens/widgets/line_with_dot.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
 
 class AdsTerms extends StatelessWidget with UrlMixin {
   const AdsTerms({Key? key}) : super(key: key);
@@ -27,11 +26,11 @@ class AdsTerms extends StatelessWidget with UrlMixin {
                   style: context.txtBodyXSmallP70P40,
                   recognizer: TapGestureRecognizer()
                     ..onTap = () {
-                      openLink(GetIt.I<AppParameters>().urlPrivacy, token: GetIt.I<AppParameters>().accessToken);
+                      openLinkWithAuth(GetIt.I<AppParameters>().urlPrivacy);
                     },
                 ),
                 TextSpan(
-                  text: ' ' + context.intl.and + ' ',
+                  text: ' ${context.intl.and} ',
                   style: context.txtBodyXSmallN80N30,
                 ),
                 TextSpan(
@@ -39,7 +38,7 @@ class AdsTerms extends StatelessWidget with UrlMixin {
                   style: context.txtBodyXSmallP70P40,
                   recognizer: TapGestureRecognizer()
                     ..onTap = () {
-                      openLink(GetIt.I<AppParameters>().urlGuides, token: GetIt.I<AppParameters>().accessToken);
+                      openLinkWithAuth(GetIt.I<AppParameters>().urlGuides);
                     },
                 ),
               ],
