@@ -68,10 +68,10 @@ class App extends StatefulWidget {
   const App({Key? key}) : super(key: key);
 
   @override
-  _AppState createState() => _AppState();
+  AppState createState() => AppState();
 }
 
-class _AppState extends State<App>
+class AppState extends State<App>
     with WidgetsBindingObserver, StringMixin, CountryInfoMixin, ForegroundMessagesMixin, UrlMixin {
   late final SecureStorage _secureStorage;
   late final StreamSubscription<ConnectivityResult> _connectivitySubscription;
