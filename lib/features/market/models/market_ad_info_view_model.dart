@@ -365,7 +365,11 @@ class MarketAdInfoViewModel extends ViewModel
       receiveError = context.intl.must_be_less((_firstTimeLimitAsset! * assetPrice).toStringAsFixed(2), ad!.currency);
       readyToDeal = false;
     } else if (ad!.maxAmountAvailable != null && receive > ad!.maxAmountAvailable!) {
-      receiveError = context.intl.must_be_less(ad!.maxAmountAvailable!.toString(), ad!.currency);
+      if (ad!.maxAmountAvailable! == 0.0) {
+        receiveError = context.intl.traderHasNoBalance;
+      } else {
+        receiveError = context.intl.must_be_less(ad!.maxAmountAvailable!.toString(), ad!.currency);
+      }
       readyToDeal = false;
     } else if (ad!.maxAmountAvailable == null && ad!.maxAmount != null && receive > ad!.maxAmount!) {
       receiveError = context.intl.must_be_less((ad!.maxAmount!).toString(), ad!.currency);

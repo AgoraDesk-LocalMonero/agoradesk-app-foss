@@ -9521,6 +9521,9 @@ class I18nNb extends I18n {
 
   @override
   String get find_user => 'Find user';
+
+  @override
+  String get traderHasNoBalance => 'This trader doesn\'t have enough balance to trade at the moment.';
 }
 
 /// The translations for Norwegian Bokmål, as used in Norway (`nb_NO`).
