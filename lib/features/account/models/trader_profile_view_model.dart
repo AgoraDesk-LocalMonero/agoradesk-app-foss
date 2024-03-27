@@ -15,13 +15,16 @@ class TraderProfileViewModel extends ViewModel with ErrorParseMixin {
   TraderProfileViewModel({
     required AccountService accountService,
     required AdsRepository adsRepository,
+    required AppStateV1 appState,
     this.profileModel,
     this.username,
   })  : _accountService = accountService,
+        _appState = appState,
         _adsRepository = adsRepository;
 
   final AccountService _accountService;
   final AdsRepository _adsRepository;
+  final AppStateV1 _appState;
 
   final AccountInfoModel? profileModel;
   final String? username;
@@ -73,7 +76,7 @@ class TraderProfileViewModel extends ViewModel with ErrorParseMixin {
     noteModel = NoteOnUserViewModel(
       username: profileForScreen.username!,
       accountService: _accountService,
-      appState: context.read<AppStateV1>(),
+      appState: _appState,
     );
     initialLoading = false;
     _getUserAds();

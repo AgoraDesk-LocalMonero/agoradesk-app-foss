@@ -88,7 +88,7 @@ class AppState extends State<App>
   late final NotificationsService _notificationsService;
   late final PollingService _pollingService;
   Plausible? _plausible;
-  late final AppStateV1 appState;
+  late final AppStateV1 appStateV1;
   String? token;
 
   Uri? _initialUri;
@@ -121,7 +121,7 @@ class AppState extends State<App>
     _setInitialeLocaleAndCountry();
     _getInitialFcmMessage();
     _secureStorage = SecureStorage();
-    appState = AppStateV1(
+    appStateV1 = AppStateV1(
       secureStorage: _secureStorage,
       locale: _locale,
       countryCode: _countryCode,
@@ -134,7 +134,7 @@ class AppState extends State<App>
     _authService = AuthService(
       api: _api,
       secureStorage: _secureStorage,
-      appState: appState,
+      appState: appStateV1,
     );
     _initUniLinks();
 
@@ -147,14 +147,14 @@ class AppState extends State<App>
     _userService = UserService(api: _api);
     _accountService = AccountService(api: _api);
     _tradeRepository = TradeRepository(
-      TradeService(api: _api, appState: appState),
+      TradeService(api: _api, appState: appStateV1),
       Hive.box<MessageBoxModel>(HiveBoxName.message),
     );
     _placesSearch = PlacesSearch(
       limit: 20,
     );
     _appRouter = AppRouter(
-      authGuard: AuthGuard(appState: appState, authService: _authService),
+      authGuard: AuthGuard(appState: appStateV1, authService: _authService),
     );
     GetIt.I.registerSingleton<AppRouter>(_appRouter);
     router = GetIt.I<AppRouter>();
@@ -163,14 +163,14 @@ class AppState extends State<App>
       api: _api,
       secureStorage: _secureStorage,
       accountService: _accountService,
-      appState: appState,
+      appState: appStateV1,
       authService: _authService,
     )..init();
     _pollingService = PollingService(
       isAgora: GetIt.I<AppParameters>().isAgora,
       api: _api,
       walletService: _walletService,
-      appState: appState,
+      appState: appStateV1,
       authService: _authService,
       adsRepository: _adsRepository,
     )..init();
@@ -194,7 +194,7 @@ class AppState extends State<App>
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (state == AppLifecycleState.resumed) {
       _notificationsService.getToken();
-      if (appState.hasPinCode && _activatePin || router.current.name == PinCodeCheckRoute.name) {
+      if (appStateV1.hasPinCode && _activatePin || router.current.name == PinCodeCheckRoute.name) {
         _authService.authState = AuthState.displayPinCode;
         _activatePin = false;
       }
@@ -254,7 +254,7 @@ class AppState extends State<App>
 
   Widget appBuilder(context, Widget? child) {
     final mq = MediaQuery.of(context);
-    appState.updateWith(
+    appStateV1.updateWith(
       screenHeight: mq.size.height,
       notify: false,
     );
@@ -292,12 +292,12 @@ class AppState extends State<App>
     /// Set pin code state
     final String? pin = await _secureStorage.read(SecureStorageKey.pin);
 
-    appState.hasPinCode = token != null && pin != null;
-    appState.pinCode = pin;
-    appState.proxyStatus = GetIt.I<AppParameters>().proxy;
+    appStateV1.hasPinCode = token != null && pin != null;
+    appStateV1.pinCode = pin;
+    appStateV1.proxyStatus = GetIt.I<AppParameters>().proxy;
     await _authService.init();
     await _initLocalSettings(false);
-    appState.initialized = true;
+    appStateV1.initialized = true;
     await Future.delayed(const Duration(milliseconds: 500));
     _initStartRoute(uri: _initialUri);
   }
@@ -320,12 +320,12 @@ class AppState extends State<App>
   ///
   void _initUploadingStatusListener() {
     OverlaySupportEntry? notification;
-    appState.uploadingStatus$.listen((val) {
+    appStateV1.uploadingStatus$.listen((val) {
       if (val) {
         notification = showOverlayNotification(
           (context) {
             return UploadingProgressIndicator(
-              stream: appState.uploadingProgress$,
+              stream: appStateV1.uploadingProgress$,
             );
           },
           position: NotificationPosition.top,
@@ -461,7 +461,7 @@ class AppState extends State<App>
         newRoutes.add(TradeRoute(tradeId: GetIt.I<AppParameters>().tradeId!));
       }
       addUniLinksRouts();
-      if (appState.hasPinCode) {
+      if (appStateV1.hasPinCode) {
         newRoutes.add(const PinCodeCheckRoute());
       }
     }
@@ -486,11 +486,11 @@ class AppState extends State<App>
           case ConnectivityResult.bluetooth:
           case ConnectivityResult.vpn:
           case ConnectivityResult.other:
-            appState.connection = true;
+            appStateV1.connection = true;
             // _initApp();
             break;
           case ConnectivityResult.none:
-            appState.connection = false;
+            appStateV1.connection = false;
             final context = router.navigatorKey.currentContext;
             // _initApp();
             showSimpleNotification(
@@ -513,7 +513,7 @@ class AppState extends State<App>
         if (GetIt.I<AppParameters>().debugPrintIsOn) {
           debugPrint('[AnalyticEvent] event: ${e.event}, props: ${e.properties}');
         }
-        if (appState.initialized) {
+        if (appStateV1.initialized) {
           if (_plausible != null) {
             _plausible!.event(name: e.event, referrer: e.properties.toString());
           }
@@ -538,7 +538,7 @@ class AppState extends State<App>
       //   }
       // })
       ..on<ReloadMarketScreenEvent>().listen((e) {
-        appState.sinkReloadMarket.add(true);
+        appStateV1.sinkReloadMarket.add(true);
       })
       ..on<FlashEvent>().listen((e) {
         if (e.message == null) {
@@ -711,7 +711,7 @@ class AppState extends State<App>
       final res = await _accountService.getMyself();
       if (res.isRight && res.right.username != null) {
         await AppSharedPrefs().setString(AppSharedPrefsKey.username, res.right.username);
-        appState.updateWith(notify: true);
+        appStateV1.updateWith(notify: true);
         _notificationsService.getToken();
       } else {
         _secureStorage.deleteAll();
@@ -720,7 +720,7 @@ class AppState extends State<App>
       _secureStorage.deleteAll();
     }
 
-    appState.updateWith(
+    appStateV1.updateWith(
       themeMode: AppSharedPrefs().themeMode,
       notify: false,
     );
@@ -745,7 +745,7 @@ class AppState extends State<App>
         Provider.value(value: _secureStorage),
         Provider.value(value: _placesSearch),
         Provider.value(value: _notificationsService),
-        ChangeNotifierProvider.value(value: appState),
+        ChangeNotifierProvider.value(value: appStateV1),
       ];
 
   Future _getInitialFcmMessage() async {

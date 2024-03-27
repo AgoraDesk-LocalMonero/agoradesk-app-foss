@@ -530,7 +530,7 @@ class MarketViewModel extends ViewModel
     if (state == AppLifecycleState.resumed) {
       if (GetIt.I<AppParameters>().isCheckUpdates) {
         final newVersion = await AppUpdateService(
-          appState: context.read<AppStateV1>(),
+          appState: _appState,
         ).getReleaseVersion();
         if (newVersion != null) {
           await Future.delayed(const Duration(seconds: 1));
