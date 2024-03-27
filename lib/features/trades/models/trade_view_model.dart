@@ -45,7 +45,7 @@ import 'package:vm/vm.dart';
 import 'note_on_user_view_model.dart';
 
 /// Polling trade activity and new messages in the chat when the trade screen is open
-const _kPollingSeconds = 30;
+const _kPollingSeconds = 60;
 
 const kDeletedUserName = '[DELETED]';
 
