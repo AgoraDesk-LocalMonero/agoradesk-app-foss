@@ -8,7 +8,7 @@ import 'package:flutter/cupertino.dart';
 
 mixin ErrorParseMixin {
   void handleApiError(ApiError error, BuildContext context) {
-    log('++++[handleApiError] ${error.statusCode} - ${error.errorCode} - ${error.message}');
+    debugPrint('++++[handleApiError] ${error.statusCode} - ${error.errorCode} - ${error.message}');
     late final String errorMessage;
     if (error.message.isEmpty) {
       errorMessage = '';

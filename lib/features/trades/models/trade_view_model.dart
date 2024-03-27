@@ -39,7 +39,6 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:provider/provider.dart';
 import 'package:vm/vm.dart';
 
 import 'note_on_user_view_model.dart';
@@ -910,7 +909,9 @@ class TradeViewModel extends ViewModel
       );
       ctrlMessage.clear();
       repliedText = '';
-      messagesListKey.currentState!.insertItem(0, duration: kNewMessageDuration);
+      if (messagesListKey.currentState != null) {
+        messagesListKey.currentState!.insertItem(0, duration: kNewMessageDuration);
+      }
       final res = await _tradeRepository.sendImage(tradeForScreen.tradeId, _image!);
       _sendingImage = false;
       if (res.isRight) {
@@ -945,7 +946,9 @@ class TradeViewModel extends ViewModel
       );
       ctrlMessage.clear();
       repliedText = '';
-      messagesListKey.currentState!.insertItem(0, duration: kNewMessageDuration);
+      if (messagesListKey.currentState != null) {
+        messagesListKey.currentState!.insertItem(0, duration: kNewMessageDuration);
+      }
       final res = await _tradeRepository.sendMessage(tradeForScreen.tradeId, textToSend);
       if (res.isRight) {
         messagesAfterSticky[0].messageId = res.right;
@@ -1011,13 +1014,15 @@ class TradeViewModel extends ViewModel
   }
 
   void _removeFromAnimatedList(MessageBoxModel? msg) {
-    if (msg != null) {
-      final position = messagesAfterSticky.indexOf(msg);
-      if (position != -1) {
-        messagesListKey.currentState!.removeItem(position, (BuildContext context, Animation<double> animation) {
-          return const SizedBox();
-        });
-      }
+    if (msg == null || messagesListKey.currentState == null) {
+      return;
+    }
+
+    final position = messagesAfterSticky.indexOf(msg);
+    if (position != -1) {
+      messagesListKey.currentState!.removeItem(position, (BuildContext context, Animation<double> animation) {
+        return const SizedBox();
+      });
     }
   }
 
