@@ -135,6 +135,7 @@ class NotificationsService with ForegroundMessagesMixin {
     ///
     /// get trade id in case it's screen is opened in the app
     ///
+    try {
     final PushModel push = PushModel.fromJson(message.data);
     final openedTradeId = GetIt.I<AppParameters>().openedTradeId;
     if (openedTradeId != push.objectId) {
@@ -168,6 +169,8 @@ class NotificationsService with ForegroundMessagesMixin {
     } else {
       // send signal to update the chat state
       eventBus.fire(const UpdateOpenedChatEvent());
+    }} catch (e) {
+      debugPrint('++++error parsing push _displayLocalNotification.dart - $e');
     }
   }
 

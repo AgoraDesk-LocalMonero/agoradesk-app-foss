@@ -753,10 +753,14 @@ class AppState extends State<App>
       _initialMessage = await FirebaseMessaging.instance.getInitialMessage();
       if (_initialMessage != null) {
         final Map<String, dynamic> payload = _initialMessage!.data;
-        final PushModel push = PushModel.fromJson(payload);
-        if (push.objectId != null && push.objectId!.isNotEmpty) {
-          final tradeId = push.objectId;
-          eventBus.fire(NoificationClickedEvent(tradeId));
+        try {
+          final PushModel push = PushModel.fromJson(payload);
+          if (push.objectId != null && push.objectId!.isNotEmpty) {
+            final tradeId = push.objectId;
+            eventBus.fire(NoificationClickedEvent(tradeId));
+          }
+        } catch (e) {
+          debugPrint('++++error parsing push app.dart - $e');
         }
       }
     }

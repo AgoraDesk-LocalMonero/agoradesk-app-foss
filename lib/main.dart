@@ -98,10 +98,14 @@ void main() async {
         await localNotificationsPlugin.getNotificationAppLaunchDetails();
     final String? payload = notificationAppLaunchDetails?.notificationResponse?.payload;
     if (notificationAppLaunchDetails != null && payload != null && payload.isNotEmpty) {
+      try {
       final PushModel push = PushModel.fromJson(jsonDecode(payload));
       if (push.objectId != null && push.objectId!.isNotEmpty) {
         appRanFromPush = true;
         tradeId = push.objectId;
+      }
+      } catch (e) {
+        debugPrint('+++ Error parsing push message in main.dart: $e');
       }
     }
   }
