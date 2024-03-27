@@ -38,8 +38,7 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
         disposable: false,
         builder: (context, model, child) {
           if (model.isLocalTrade) {
-            if (model.tradeStatus == TradeStatus.notFunded &&
-                model.tradeForScreen.isSelling == true) {
+            if (model.tradeStatus == TradeStatus.notFunded && model.tradeForScreen.isSelling == true) {
               return ContainerSurface5Radius12(
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(12, 14, 12, 14),
@@ -47,8 +46,7 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
                     children: [
                       LineIconTextPrimary90(
                         icon: const CircleWithNum(num: 1),
-                        text: context.intl
-                            .trade250Sblocal250Sbstep8722Sb0250Sbseller250Sbtitle,
+                        text: context.intl.trade250Sblocal250Sbstep8722Sb0250Sbseller250Sbtitle,
                       ),
                       const SizedBox(height: 14),
                       ContainerSurface3Radius12Border1(
@@ -65,8 +63,8 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
                               ),
                               const SizedBox(height: 12),
                               LineDotText(
-                                text: context.intl
-                                    .trade250Sblocal250Sbstep8722Sb0250Sbseller250Sbpress8722Sbfund8722Sbbtn,
+                                text: context
+                                    .intl.trade250Sblocal250Sbstep8722Sb0250Sbseller250Sbpress8722Sbfund8722Sbbtn,
                               ),
                             ],
                           ),
@@ -79,27 +77,20 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
                           model.escrowed()
                               ? const SizedBox()
                               : Padding(
-                                  padding:
-                                      const EdgeInsets.fromLTRB(0, 0, 12, 0),
+                                  padding: const EdgeInsets.fromLTRB(0, 0, 12, 0),
                                   child: ButtonOutlinedWithIconP80(
-                                    title: context.intl
-                                        .trade250Sbcancel8722Sbtrade8722Sbbtn,
-                                    insidePadding: const EdgeInsets.fromLTRB(
-                                        10, 10, 16, 10),
+                                    title: context.intl.trade250Sbcancel8722Sbtrade8722Sbbtn,
+                                    insidePadding: const EdgeInsets.fromLTRB(10, 10, 16, 10),
                                     icon: Icon(
                                       AgoraFont.check_circle_alt,
-                                      color:
-                                          Theme.of(context).colorScheme.p80P70,
+                                      color: Theme.of(context).colorScheme.p80P70,
                                     ),
-                                    onPressed: () =>
-                                        _cancelTradeDialog(model, context),
+                                    onPressed: () => _cancelTradeDialog(model, context),
                                   ),
                                 ),
                           ButtonFilledWithIconP80(
-                            title:
-                                context.intl.trade250Sbfund8722Sbtrade8722Sbbtn,
-                            insidePadding:
-                                const EdgeInsets.fromLTRB(10, 10, 16, 10),
+                            title: context.intl.trade250Sbfund8722Sbtrade8722Sbbtn,
+                            insidePadding: const EdgeInsets.fromLTRB(10, 10, 16, 10),
                             icon: Icon(
                               AgoraFont.check_circle_alt,
                               color: Theme.of(context).colorScheme.primary20,
@@ -114,10 +105,8 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
                               padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
                               child: ButtonIconTextP70(
                                 iconData: AgoraFont.lock,
-                                text: context
-                                    .intl.trade250Sbenable8722Sbescrow8722Sbbtn,
-                                onPressed: () =>
-                                    _enableEscrowDialog(model, context),
+                                text: context.intl.trade250Sbenable8722Sbescrow8722Sbbtn,
+                                onPressed: () => _enableEscrowDialog(model, context),
                               ),
                             ),
                     ],
@@ -126,8 +115,7 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
               );
             }
 
-            if (model.tradeStatus == TradeStatus.notFunded &&
-                model.tradeForScreen.isSelling == false) {
+            if (model.tradeStatus == TradeStatus.notFunded && model.tradeForScreen.isSelling == false) {
               _buildNotFundedBuyer(context, model);
             }
 
@@ -138,16 +126,14 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
                   padding: const EdgeInsets.fromLTRB(12, 14, 12, 14),
                   child: LineIconTextPrimary90(
                     icon: const CircleWithIcon(icon: CupertinoIcons.check_mark),
-                    text: context.intl
-                        .trade250Sblocal250Sbstep8722Sb0250Sbbuyer250Sbtitle,
+                    text: context.intl.trade250Sblocal250Sbstep8722Sb0250Sbbuyer250Sbtitle,
                   ),
                 ),
               ),
             );
           }
 
-          if (model.tradeStatus.index > 5 &&
-              model.tradeStatus != TradeStatus.disputed) {
+          if (model.tradeStatus.index > 5 && model.tradeStatus != TradeStatus.disputed) {
             return const SizedBox();
           }
 
@@ -161,8 +147,7 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
   }
 
   Widget _buildFirstStepSellerView(TradeViewModel model, BuildContext context) {
-    return model.tradeStatus.index < 3 ||
-            model.tradeStatus == TradeStatus.disputed
+    return model.tradeStatus.index < 3 || model.tradeStatus == TradeStatus.disputed
         ? ContainerSurface5Radius12(
             child: Padding(
               padding: const EdgeInsets.fromLTRB(12, 14, 12, 14),
@@ -170,8 +155,7 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
                 children: [
                   LineIconTextPrimary90(
                     icon: const CircleWithNum(num: 1),
-                    text: context.intl
-                        .agoradesk250Sbtrade250Sboption250Sbcall250Sbstep8722Sbfive250Sbseller250Sbtitle,
+                    text: context.intl.agoradesk250Sbtrade250Sboption250Sbcall250Sbstep8722Sbfive250Sbseller250Sbtitle,
                   ),
                   const SizedBox(height: 14),
                   ContainerSurface3Radius12Border1(
@@ -180,62 +164,48 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
                       child: Column(
                         children: [
                           LineDotText(
-                            text: context.intl
-                                .trade250Sbamount8722Sbto8722Sbreceive(
-                                    '${model.tradeForScreen.amount} ${model.tradeForScreen.currency}'),
+                            text: context.intl.trade250Sbamount8722Sbto8722Sbreceive(
+                                '${model.tradeForScreen.amount} ${model.tradeForScreen.currency}'),
                           ),
                           const SizedBox(height: 12),
                           LineDotText(
-                            text: context.intl
-                                .trade250Sbbuyer8722Sbhasnt8722Sbcompleted8722Sbpayment8722Sbtext(
-                                    model.minutesBeforeCancel),
+                            text: context.intl.trade250Sbbuyer8722Sbhasnt8722Sbcompleted8722Sbpayment8722Sbtext(
+                                model.minutesBeforeCancel),
                           ),
                           const SizedBox(height: 12),
                           LineDotText(
-                            text: context.intl
-                                .app_trade_option_payment_receiver_cancel_notice,
+                            text: context.intl.app_trade_option_payment_receiver_cancel_notice,
                           ),
                           const SizedBox(height: 12),
                           Row(
-                            mainAxisAlignment:
-                                model.displayCancelStepOneSeller()
-                                    ? MainAxisAlignment.spaceBetween
-                                    : MainAxisAlignment.center,
+                            mainAxisAlignment: model.displayCancelStepOneSeller()
+                                ? MainAxisAlignment.spaceBetween
+                                : MainAxisAlignment.center,
                             children: [
                               model.displayCancelStepOneSeller()
                                   ? ButtonOutlinedWithIconP80(
                                       title: context.intl.cancel,
-                                      insidePadding: const EdgeInsets.fromLTRB(
-                                          16, 10, 22, 10),
+                                      insidePadding: const EdgeInsets.fromLTRB(16, 10, 22, 10),
                                       icon: Icon(
                                         AgoraFont.x_circle,
-                                        color: Theme.of(context)
-                                            .colorScheme
-                                            .p80P70,
+                                        color: Theme.of(context).colorScheme.p80P70,
                                       ),
-                                      onPressed: () => _cancelTradeSellerDialog(
-                                          context, model),
+                                      onPressed: () => _cancelTradeSellerDialog(context, model),
                                     )
                                   : const SizedBox(),
                               ButtonFilledWithIconP80(
-                                title: context.intl
-                                    .trade250Sbrelease8722Sbmonero8722Sbbtn,
-                                insidePadding:
-                                    const EdgeInsets.fromLTRB(16, 10, 16, 10),
+                                title: context.intl.trade250Sbrelease8722Sbmonero8722Sbbtn,
+                                insidePadding: const EdgeInsets.fromLTRB(16, 10, 16, 10),
                                 icon: Icon(
                                   AgoraFont.check_circle_alt,
-                                  color:
-                                      Theme.of(context).colorScheme.primary20,
+                                  color: Theme.of(context).colorScheme.primary20,
                                 ),
                                 onPressed: () {
                                   showDialog(
                                     barrierDismissible: true,
                                     context: context,
-                                    barrierColor: Theme.of(context)
-                                        .colorScheme
-                                        .dialogOverlay,
-                                    builder: (_) =>
-                                        FinalizeTradeDialog(tradeModel: model),
+                                    barrierColor: Theme.of(context).colorScheme.dialogOverlay,
+                                    builder: (_) => FinalizeTradeDialog(tradeModel: model),
                                   );
                                 },
                               ),
@@ -254,20 +224,17 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
               padding: const EdgeInsets.fromLTRB(12, 14, 12, 14),
               child: LineIconTextPrimary90(
                 icon: const CircleWithIcon(icon: CupertinoIcons.check_mark),
-                text: context.intl
-                    .agoradesk250Sbtrade250Sboption250Sbcall250Sbstep8722Sbfive250Sbseller250Sbtitle,
+                text: context.intl.agoradesk250Sbtrade250Sboption250Sbcall250Sbstep8722Sbfive250Sbseller250Sbtitle,
               ),
             ),
           );
   }
 
   Widget _buildFirstStepBuyerView(TradeViewModel model, BuildContext context) {
-    if (model.tradeStatus == TradeStatus.notFunded &&
-        model.tradeForScreen.isSelling == false) {
+    if (model.tradeStatus == TradeStatus.notFunded && model.tradeForScreen.isSelling == false) {
       return _buildNotFundedBuyer(context, model);
     }
-    return model.tradeStatus.index < 3 ||
-            model.tradeStatus == TradeStatus.disputed
+    return model.tradeStatus.index < 3 || model.tradeStatus == TradeStatus.disputed
         ? ContainerSurface5Radius12(
             child: Padding(
               padding: const EdgeInsets.fromLTRB(12, 14, 12, 14),
@@ -275,8 +242,7 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
                 children: [
                   LineIconTextPrimary90(
                     icon: const CircleWithNum(num: 1),
-                    text: context.intl
-                        .agoradesk250Sbtrade250Sboption250Sbcall250Sbstep8722Sbfive250Sbbuyer250Sbtitle,
+                    text: context.intl.agoradesk250Sbtrade250Sboption250Sbcall250Sbstep8722Sbfive250Sbbuyer250Sbtitle,
                   ),
                   const SizedBox(height: 14),
                   ContainerSurface3Radius12Border1(
@@ -298,14 +264,12 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
                           ),
                           const SizedBox(height: 12),
                           LineDotText(
-                            text: context.intl
-                                .trade250Sbsettlement8722Sbfees8722Sbnotice,
+                            text: context.intl.trade250Sbsettlement8722Sbfees8722Sbnotice,
                           ),
                           const SizedBox(height: 12),
                           LineDotText(
-                            text: context.intl
-                                .trade250Sbbuyer8722Sbinstruction8722Sbstep8722Sbtwo8722Sbtext8722Sb1(
-                                    model.minutesBeforeCancel),
+                            text: context.intl.trade250Sbbuyer8722Sbinstruction8722Sbstep8722Sbtwo8722Sbtext8722Sb1(
+                                model.minutesBeforeCancel),
                           ),
                           const SizedBox(height: 12),
                           LineDotText(
@@ -313,8 +277,7 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
                           ),
                           const SizedBox(height: 12),
                           AgoraBoxOpenCloseLineS5S3(
-                            title: context.intl
-                                .trade250Sbbuyer8722Sbsettlement8722Sbaddress8722Sbwarning250Sbtoggle,
+                            title: context.intl.trade250Sbbuyer8722Sbsettlement8722Sbaddress8722Sbwarning250Sbtoggle,
                             icon: Icon(
                               AgoraFont.check_circle_alt,
                               color: Theme.of(context).colorScheme.p80P70,
@@ -323,12 +286,9 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
                             content: SelectableText(
                               model.tradeForScreen.buyerSettlementAddress!,
                               style: context.txtBodyXSmallN80N30,
-                              onTap: () => copyToClipboard(
-                                  model.tradeForScreen.buyerSettlementAddress!,
-                                  context),
+                              onTap: () => copyToClipboard(model.tradeForScreen.buyerSettlementAddress!, context),
                             ),
-                            description: context.intl
-                                .trade250Sbbuyer8722Sbsettlement8722Sbaddress8722Sbwarning,
+                            description: context.intl.trade250Sbbuyer8722Sbsettlement8722Sbaddress8722Sbwarning,
                           ),
                           const SizedBox(height: 12),
                           AgoraBoxOpenCloseLineS5S3(
@@ -341,45 +301,37 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
                             content: SelectableText(
                               model.paymentDetailsText(context),
                               style: context.txtBodyXSmallN80N30,
-                              onTap: () => copyToClipboard(
-                                  model.paymentDetailsText(context), context),
+                              onTap: () => copyToClipboard(model.paymentDetailsText(context), context),
                             ),
                           ),
                           const SizedBox(height: 12),
                           Row(
-                            mainAxisAlignment:
-                                model.tradeForScreen.paymentCompletedAt != null
-                                    ? MainAxisAlignment.center
-                                    : MainAxisAlignment.spaceBetween,
+                            mainAxisAlignment: model.tradeForScreen.paymentCompletedAt != null
+                                ? MainAxisAlignment.center
+                                : MainAxisAlignment.spaceBetween,
                             children: [
                               model.tradeForScreen.paymentCompletedAt != null
                                   ? const SizedBox()
                                   : ButtonFilledWithIconP80(
-                                      title: context.intl
-                                          .trade250Sbi8722Sbhave8722Sbpaid8722Sbbtn,
-                                      insidePadding: const EdgeInsets.fromLTRB(
-                                          16, 10, 16, 10),
+                                      title: context.intl.trade250Sbi8722Sbhave8722Sbpaid8722Sbbtn,
+                                      insidePadding: const EdgeInsets.fromLTRB(16, 10, 16, 10),
                                       loading: model.markingAsPaid,
                                       icon: Icon(
                                         AgoraFont.check_circle_alt,
                                         color: context.colP40,
                                       ),
-                                      onPressed: () =>
-                                          _markAsPaidDialog(context, model),
+                                      onPressed: () => _markAsPaidDialog(context, model),
                                     ),
                               const SizedBox(width: 10),
                               ButtonOutlinedWithIconP80(
-                                title: context
-                                    .intl.trade250Sbcancel8722Sbtrade8722Sbbtn,
-                                insidePadding:
-                                    const EdgeInsets.fromLTRB(14, 10, 14, 10),
+                                title: context.intl.trade250Sbcancel8722Sbtrade8722Sbbtn,
+                                insidePadding: const EdgeInsets.fromLTRB(14, 10, 14, 10),
                                 loading: model.cancelingTrade,
                                 icon: Icon(
                                   AgoraFont.x_circle,
                                   color: context.colP80,
                                 ),
-                                onPressed: () =>
-                                    _cancelTradeBuyerDialog(context, model),
+                                onPressed: () => _cancelTradeBuyerDialog(context, model),
                               )
                             ],
                           ),
@@ -396,8 +348,7 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
               padding: const EdgeInsets.fromLTRB(12, 14, 12, 14),
               child: LineIconTextPrimary90(
                 icon: const CircleWithIcon(icon: CupertinoIcons.check_mark),
-                text: context.intl
-                    .agoradesk250Sbtrade250Sboption250Sbcall250Sbstep8722Sbfive250Sbbuyer250Sbtitle,
+                text: context.intl.agoradesk250Sbtrade250Sboption250Sbcall250Sbstep8722Sbfive250Sbbuyer250Sbtitle,
               ),
             ),
           );
@@ -414,8 +365,7 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
               LineIconTextPrimary90(
                 icon: const CircleWithNum(num: 1),
                 text: model.isLocalTrade
-                    ? context.intl
-                        .trade250Sblocal250Sbstep8722Sb0250Sbbuyer250Sbwait8722Sbfor8722Sbfunding(
+                    ? context.intl.trade250Sblocal250Sbstep8722Sb0250Sbbuyer250Sbwait8722Sbfor8722Sbfunding(
                         GetIt.I<AppParameters>().appName,
                       )
                     : 'Waiting for the seller to fund the trade.',
@@ -428,8 +378,7 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
                     children: [
                       LineDotText(
                         text: model.isLocalTrade
-                            ? context.intl
-                                .trade250Sblocal250Sbbuyer250Sbnot8722Sbescrowed
+                            ? context.intl.trade250Sblocal250Sbbuyer250Sbnot8722Sbescrowed
                             : 'Do not pay now! The trade can be canceled anytime until the seller accepts.',
                       ),
                     ],
@@ -467,7 +416,7 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
           context.intl.trade250Sbdialog250Sbconfirm8722Sbcancel8722Sbtext,
           style: context.txtBodySmallN80,
         ),
-        mainAction: () => model.cancelTrade(),
+        mainAction: () => model.cancelTrade(context),
         mainActionText: context.intl.trade250Sbcancel8722Sbtrade8722Sbbtn,
         secondAction: () => Navigator.of(context).pop(),
         secondActionText: context.intl.cancel,
@@ -485,10 +434,9 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
         title: context.intl.trade250Sbcancel8722Sbtrade8722Sbbtn,
         content: Text(context.intl.app_cancel_trade_message),
         filledButtonTitle: context.intl.trade250Sbcancel8722Sbtrade8722Sbbtn,
-        outlineButtonTitle:
-            context.intl.post8722Sbad250Sberror250Sbdialog8722Sbbtn,
+        outlineButtonTitle: context.intl.post8722Sbad250Sberror250Sbdialog8722Sbbtn,
         onPressedOutline: () => Navigator.of(context).pop(),
-        onPressedFilled: () => model.cancelTrade(),
+        onPressedFilled: () => model.cancelTrade(context),
         loadingFilled: model.cancelingTrade,
       ),
     );
@@ -500,16 +448,12 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
       context: context,
       barrierColor: Theme.of(context).colorScheme.dialogOverlay,
       builder: (_) => DialogOutlineAndFilledButtons(
-        title:
-            context.intl.trade250Sbdialog8722Sbconfirm8722Sbpayment8722Sbtitle,
-        content: Text(context.intl
-            .trade250Sbdialog8722Sbconfirm8722Sbpayment8722Sbtext(
-                model.tradeForScreen.buyer.username!)),
-        filledButtonTitle:
-            context.intl.trade250Sbdialog250Sbconfirm8722Sbcancel8722Sbbtn,
-        outlineButtonTitle:
-            context.intl.post8722Sbad250Sberror250Sbdialog8722Sbbtn,
-        onPressedFilled: () => model.markAsPaid(),
+        title: context.intl.trade250Sbdialog8722Sbconfirm8722Sbpayment8722Sbtitle,
+        content: Text(
+            context.intl.trade250Sbdialog8722Sbconfirm8722Sbpayment8722Sbtext(model.tradeForScreen.buyer.username!)),
+        filledButtonTitle: context.intl.trade250Sbdialog250Sbconfirm8722Sbcancel8722Sbbtn,
+        outlineButtonTitle: context.intl.post8722Sbad250Sberror250Sbdialog8722Sbbtn,
+        onPressedFilled: () => model.markAsPaid(context),
         onPressedOutline: () => Navigator.of(context).pop(),
         loadingFilled: model.markingAsPaid,
       ),
@@ -525,10 +469,9 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
         title: context.intl.trade250Sbcancel8722Sbtrade8722Sbbtn,
         content: Text(context.intl.app_cancel_trade_message),
         filledButtonTitle: context.intl.trade250Sbcancel8722Sbtrade8722Sbbtn,
-        outlineButtonTitle:
-            context.intl.post8722Sbad250Sberror250Sbdialog8722Sbbtn,
+        outlineButtonTitle: context.intl.post8722Sbad250Sberror250Sbdialog8722Sbbtn,
         onPressedOutline: () => AutoRouter.of(context).pop(),
-        onPressedFilled: () => model.cancelTrade(),
+        onPressedFilled: () => model.cancelTrade(context),
         loadingFilled: model.cancelingTrade,
       ),
     );
@@ -541,14 +484,11 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
       barrierColor: Theme.of(context).colorScheme.dialogOverlay,
       builder: (_) => DialogOutlineAndFilledButtons(
         title: context.intl.trade250Sbdialog250Sbconfirm8722Sbescrow8722Sbtitle,
-        content: Text(
-            context.intl.trade250Sbdialog250Sbconfirm8722Sbescrow8722Sbtext),
-        filledButtonTitle:
-            context.intl.trade250Sbdialog250Sbconfirm8722Sbcancel8722Sbbtn,
-        outlineButtonTitle:
-            context.intl.post8722Sbad250Sberror250Sbdialog8722Sbbtn,
+        content: Text(context.intl.trade250Sbdialog250Sbconfirm8722Sbescrow8722Sbtext),
+        filledButtonTitle: context.intl.trade250Sbdialog250Sbconfirm8722Sbcancel8722Sbbtn,
+        outlineButtonTitle: context.intl.post8722Sbad250Sberror250Sbdialog8722Sbbtn,
         onPressedOutline: () => AutoRouter.of(context).pop(),
-        onPressedFilled: () => model.enableEscrow(),
+        onPressedFilled: () => model.enableEscrow(context),
         loadingFilled: model.enablingEscrow,
       ),
     );
@@ -560,17 +500,13 @@ class TradeStepOne extends StatelessWidget with DateMixin, ClipboardMixin {
       context: context,
       barrierColor: Theme.of(context).colorScheme.dialogOverlay,
       builder: (_) => DialogOutlineAndFilledButtons(
-        title:
-            context.intl.trade250Sbdialog250Sbfunding8722Sbconfirm8722Sbtitle,
-        content: Text(context.intl
-            .trade250Sbdialog250Sbfunding8722Sbconfirm8722Sbtext(
-                GetIt.I<AppParameters>().appName)),
-        filledButtonTitle:
-            context.intl.trade250Sbdialog250Sbconfirm8722Sbcancel8722Sbbtn,
-        outlineButtonTitle:
-            context.intl.post8722Sbad250Sberror250Sbdialog8722Sbbtn,
+        title: context.intl.trade250Sbdialog250Sbfunding8722Sbconfirm8722Sbtitle,
+        content:
+            Text(context.intl.trade250Sbdialog250Sbfunding8722Sbconfirm8722Sbtext(GetIt.I<AppParameters>().appName)),
+        filledButtonTitle: context.intl.trade250Sbdialog250Sbconfirm8722Sbcancel8722Sbbtn,
+        outlineButtonTitle: context.intl.post8722Sbad250Sberror250Sbdialog8722Sbbtn,
         onPressedOutline: () => AutoRouter.of(context).pop(),
-        onPressedFilled: () => model.fundTrade(),
+        onPressedFilled: () => model.fundTrade(context),
         loadingFilled: model.enablingEscrow,
       ),
     );
