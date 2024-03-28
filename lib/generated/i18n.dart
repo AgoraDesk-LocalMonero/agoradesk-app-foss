@@ -17152,6 +17152,12 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'Find user'**
   String get find_user;
+
+  /// No description provided for @traderHasNoBalance.
+  ///
+  /// In en, this message translates to:
+  /// **'This trader doesn\'t have enough balance to trade at the moment.'**
+  String get traderHasNoBalance;
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {

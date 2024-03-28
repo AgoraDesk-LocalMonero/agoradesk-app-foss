@@ -952,6 +952,7 @@ extension ColorExtension on ColorScheme {
         ),
         // errorStyle: textTheme.bodyTextSmall.copyWith(color: error60, height: 1),
         errorStyle: const TextStyle(height: 0),
+        errorMaxLines: 2,
         disabledBorder: OutlineInputBorder(
           borderSide: BorderSide(color: n50P70, width: 1),
           borderRadius: const BorderRadius.all(Radius.circular(4)),

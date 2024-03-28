@@ -42,11 +42,11 @@ class AdModel with _$AdModel {
     @JsonKey(name: 'verified_email_required', includeIfNull: false) bool? verifiedEmailRequired,
     @JsonKey(includeIfNull: false) String? msg,
     @JsonKey(fromJson: stringToDouble, toJson: doubleToString, name: 'min_amount', includeIfNull: false)
-        double? minAmount,
+    double? minAmount,
     @JsonKey(fromJson: stringToDouble, toJson: doubleToString, name: 'max_amount', includeIfNull: false)
-        double? maxAmount,
+    double? maxAmount,
     @JsonKey(fromJson: stringToDouble, toJson: doubleToString, name: 'max_amount_available', includeIfNull: false)
-        double? maxAmountAvailable,
+    double? maxAmountAvailable,
     @JsonKey(name: 'payment_window_minutes', includeIfNull: false) int? paymentWindowMinutes,
     @JsonKey(name: 'limit_to_fiat_amounts', includeIfNull: false) String? limitToFiatAmounts,
     @JsonKey(name: 'payment_method_detail', includeIfNull: false) String? paymentMethodDetail,

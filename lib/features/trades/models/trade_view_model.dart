@@ -39,7 +39,6 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:provider/provider.dart';
 import 'package:vm/vm.dart';
 
 import 'note_on_user_view_model.dart';
@@ -255,15 +254,13 @@ class TradeViewModel extends ViewModel
     noteModel = NoteOnUserViewModel(
       username: usernameStr(),
       accountService: _accountService,
-      appState: context.read<AppStateV1>(),
+      appState: _appState,
     );
     // we need to get full ad for LOCAL trades for getting location string
     // recevining silently, without handling errors
     await getAdForLocalTrade();
     // also we need to get Full data for user with whom we made trade
     await _getAccountInfo(tradeForScreen.isSelling! ? tradeForScreen.buyer.username : tradeForScreen.seller.username);
-
-    isTradeLoading = false;
 
     // for FCM
     GetIt.I<AppParameters>().openedTradeId = tradeForScreen.tradeId;
@@ -292,6 +289,9 @@ class TradeViewModel extends ViewModel
     });
     ctrlPassword.addListener(checkPassword);
     _getMessages();
+
+    await Future.delayed(const Duration(milliseconds: 300));
+    isTradeLoading = false;
 
     _timer?.cancel();
     _timer = Timer.periodic(const Duration(seconds: _kPollingSeconds), (_) async => _polling());
@@ -824,46 +824,46 @@ class TradeViewModel extends ViewModel
   }
 
   Future _getMessages({bool loadMore = false, bool polling = false}) async {
-    if (!_gettingMessages) {
-      _gettingMessages = true;
-      // only if first page loading
-      if (!loadMore && !polling) {
-        messages.clear();
-        loadingMessages = true;
-      }
-      final List<MessageBoxModel> res = await _tradeRepository.getMessages(
-        tradeId: tradeForScreen.tradeId,
-        context: context,
-        polling: polling,
-      );
-      if (!loadMore && !polling) {
-        loadingMessages = false;
-        messages.clear();
-        messages.addAll(res);
-        _divideMessagesTwoParts(messages, initial: true);
-        notifyListeners();
-      } else {
-        if (res.isNotEmpty) {
-          final reversedLst = res.reversed.toList();
-          for (var i = 0; i < res.length; i++) {
-            final message = reversedLst[i];
-            if (_checkMessageUnique(message, i)) {
-              messagesAfterSticky.insert(0, message);
-              if (messagesListKey.currentState != null) {
-                messagesListKey.currentState!.insertItem(0, duration: kNewMessageDuration);
-              }
-              await Future.delayed(const Duration(milliseconds: 500));
-            } else {
-              messagesAfterSticky[i].isSending = false;
-              messagesAfterSticky[i].isUpdated = true;
-              messagesAfterSticky[i].attachmentUrl = message.attachmentUrl;
-              notifyListeners();
+    if (_gettingMessages) return;
+
+    _gettingMessages = true;
+    // only if first page loading
+    if (!loadMore && !polling) {
+      messages.clear();
+      loadingMessages = true;
+    }
+    final List<MessageBoxModel> res = await _tradeRepository.getMessages(
+      tradeId: tradeForScreen.tradeId,
+      context: context,
+      polling: polling,
+    );
+    if (!loadMore && !polling) {
+      loadingMessages = false;
+      messages.clear();
+      messages.addAll(res);
+      _divideMessagesTwoParts(messages, initial: true);
+      notifyListeners();
+    } else {
+      if (res.isNotEmpty) {
+        final reversedLst = res.reversed.toList();
+        for (var i = 0; i < res.length; i++) {
+          final message = reversedLst[i];
+          if (_checkMessageUnique(message, i)) {
+            messagesAfterSticky.insert(0, message);
+            if (messagesListKey.currentState != null) {
+              messagesListKey.currentState!.insertItem(0, duration: kNewMessageDuration);
             }
+            await Future.delayed(const Duration(milliseconds: 500));
+          } else {
+            messagesAfterSticky[i].isSending = false;
+            messagesAfterSticky[i].isUpdated = true;
+            messagesAfterSticky[i].attachmentUrl = message.attachmentUrl;
+            notifyListeners();
           }
         }
       }
-      _gettingMessages = false;
     }
+    _gettingMessages = false;
   }
 
   bool _checkMessageUnique(MessageBoxModel m, int? i) {
@@ -910,7 +910,9 @@ class TradeViewModel extends ViewModel
       );
       ctrlMessage.clear();
       repliedText = '';
-      messagesListKey.currentState!.insertItem(0, duration: kNewMessageDuration);
+      if (messagesListKey.currentState != null) {
+        messagesListKey.currentState!.insertItem(0, duration: kNewMessageDuration);
+      }
       final res = await _tradeRepository.sendImage(tradeForScreen.tradeId, _image!);
       _sendingImage = false;
       if (res.isRight) {
@@ -945,7 +947,9 @@ class TradeViewModel extends ViewModel
       );
       ctrlMessage.clear();
       repliedText = '';
-      messagesListKey.currentState!.insertItem(0, duration: kNewMessageDuration);
+      if (messagesListKey.currentState != null) {
+        messagesListKey.currentState!.insertItem(0, duration: kNewMessageDuration);
+      }
       final res = await _tradeRepository.sendMessage(tradeForScreen.tradeId, textToSend);
       if (res.isRight) {
         messagesAfterSticky[0].messageId = res.right;
@@ -1011,13 +1015,15 @@ class TradeViewModel extends ViewModel
   }
 
   void _removeFromAnimatedList(MessageBoxModel? msg) {
-    if (msg != null) {
-      final position = messagesAfterSticky.indexOf(msg);
-      if (position != -1) {
-        messagesListKey.currentState!.removeItem(position, (BuildContext context, Animation<double> animation) {
-          return const SizedBox();
-        });
-      }
+    if (msg == null || messagesListKey.currentState == null) {
+      return;
+    }
+
+    final position = messagesAfterSticky.indexOf(msg);
+    if (position != -1) {
+      messagesListKey.currentState!.removeItem(position, (BuildContext context, Animation<double> animation) {
+        return const SizedBox();
+      });
     }
   }
 
