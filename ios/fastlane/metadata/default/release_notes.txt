@@ -1,1 +1,1 @@
-1. Hotfix: Fixed push notification token updates.
+1. Hotfix: Initiate trade with a list of sums.
