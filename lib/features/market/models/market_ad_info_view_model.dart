@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:agoradesk/core/api/api_errors.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/events.dart';
@@ -21,12 +23,12 @@ import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/features/trades/data/repository/trade_repository.dart';
 import 'package:agoradesk/features/wallet/data/models/btc_fee_model.dart';
 import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
-import 'package:agoradesk/generated/l10n.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:decimal/decimal.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:rxdart/rxdart.dart';
 import 'package:vm/vm.dart';
 
 const _kDebounceTag = '_kDebounceTag';
@@ -72,6 +74,9 @@ class MarketAdInfoViewModel extends ViewModel
   AdModel? ad;
   late bool isGuestMode;
 
+  /// Monitor ad loading status
+  final BehaviorSubject<bool> _adLoadedStatusController = BehaviorSubject<bool>.seeded(false);
+
   TradeType? _tradeType = TradeType.ONLINE_BUY;
   AccountInfoModel? accountInfoModel;
 
@@ -99,9 +104,10 @@ class MarketAdInfoViewModel extends ViewModel
   String? _changedAdPrice = '';
   bool _userAgreeToChangedPrice = false;
   String? _selectedStringReceive;
+  bool _receiveListWasInit = false;
 
-   String? get selectedStringReceive => _selectedStringReceive;
-   set selectedStringReceive(String? v) => updateWith(selectedStringReceive: v);
+  String? get selectedStringReceive => _selectedStringReceive;
+  set selectedStringReceive(String? v) => updateWith(selectedStringReceive: v);
 
   late final bool isSell;
   late final bool isAdOwner;
@@ -148,7 +154,13 @@ class MarketAdInfoViewModel extends ViewModel
 
   @override
   void init() {
-    //todo - refactor me (maybe with AutoRoute)
+    // listen ad loaded status
+    _adLoadedStatusController.listen((event) {
+      if (event) {
+        _setInitialReceive();
+      }
+    });
+
     isGuestMode = _authService.authState == AuthState.guest || _authService.authState == AuthState.initial;
     _authService.onAuthStateChange.listen((e) {
       isGuestMode = e == AuthState.guest || _authService.authState == AuthState.initial;
@@ -158,6 +170,17 @@ class MarketAdInfoViewModel extends ViewModel
     _textFieldsListeners();
     _initialLoading();
     super.init();
+  }
+
+  Future<void> _setInitialReceive() async {
+    await Future.delayed(const Duration(milliseconds: 300));
+    if (ad!.limitToFiatAmounts != null && ad!.limitToFiatAmounts!.isNotEmpty && !_receiveListWasInit) {
+      _receiveListWasInit = true;
+      final values = ad!.limitToFiatAmounts!.split(',');
+      selectedStringReceive = values.first;
+      ctrlReceive.text = values.first;
+      _processReceive();
+    }
   }
 
   void _initialLoading() async {
@@ -183,9 +206,11 @@ class MarketAdInfoViewModel extends ViewModel
       isAdOwner = ad!.profile == null;
       _asset = ad!.asset!;
       if (!isGuestMode) {
+        await Future.delayed(const Duration(seconds: 1));
         await _getWalletsBalance();
       }
     }
+
     if (asset == Asset.BTC) {
       _firstTimeLimitAsset = ad!.firstTimeLimitBtc;
     } else {
@@ -197,6 +222,8 @@ class MarketAdInfoViewModel extends ViewModel
     initialLoadingAd = false;
     assetPrice = double.tryParse(ad!.tempPrice!) ?? 0;
     fiatName = ad!.currency;
+    // send ad loaded status
+    _adLoadedStatusController.add(true);
     notifyListeners();
   }
 
@@ -343,6 +370,16 @@ class MarketAdInfoViewModel extends ViewModel
     }
   }
 
+  void updateSelectedReceive(String? value) {
+    if (value == null) {
+      return;
+    }
+
+    selectedStringReceive = value;
+    ctrlReceive.text = value;
+    _processReceive();
+  }
+
   void _checkReceiveQuantity(BuildContext context) {
     final receive = _receive.toDouble();
     if (receive < (ad?.minAmount ?? 0)) {
@@ -354,7 +391,11 @@ class MarketAdInfoViewModel extends ViewModel
       receiveError = context.intl.must_be_less((_firstTimeLimitAsset! * assetPrice).toStringAsFixed(2), ad!.currency);
       readyToDeal = false;
     } else if (ad!.maxAmountAvailable != null && receive > ad!.maxAmountAvailable!) {
-      receiveError = context.intl.must_be_less(ad!.maxAmountAvailable!.toString(), ad!.currency);
+      if (ad!.maxAmountAvailable! == 0.0) {
+        receiveError = context.intl.traderHasNoBalance;
+      } else {
+        receiveError = context.intl.must_be_less(ad!.maxAmountAvailable!.toString(), ad!.currency);
+      }
       readyToDeal = false;
     } else if (ad!.maxAmountAvailable == null && ad!.maxAmount != null && receive > ad!.maxAmount!) {
       receiveError = context.intl.must_be_less((ad!.maxAmount!).toString(), ad!.currency);
@@ -417,6 +458,7 @@ class MarketAdInfoViewModel extends ViewModel
     if (!startingTrade) {
       // if (!isSell || (isSell && checkWalletAddressCorrect))
       startingTrade = true;
+
       final res = await _tradeRepository.startTrade(
         adId: ad!.id!,
         amount: _receive.toString(),
@@ -462,9 +504,11 @@ class MarketAdInfoViewModel extends ViewModel
   }
 
   String howMuchSign(BuildContext context) {
-    return context.intl.app_buy_sell(ad!.tradeType.isSell()
-        ? context.intl.ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy
-        : context.intl.ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbsell, '');
+    return context.intl.app_buy_sell(
+        ad!.tradeType.isSell()
+            ? context.intl.ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbbuy
+            : context.intl.ad8722Sbpage250Sbhow8722Sbmuch8722Sbdo8722Sbyou8722Sbwish8722Sbto8722Sbsell,
+        '');
   }
 
   void pasteAllAvailableBalance() {
@@ -531,6 +575,7 @@ class MarketAdInfoViewModel extends ViewModel
   void dispose() {
     ctrlReceive.dispose();
     ctrlPay.dispose();
+    _adLoadedStatusController.close();
     EasyDebounce.cancel(_kDebounceTag);
     super.dispose();
   }

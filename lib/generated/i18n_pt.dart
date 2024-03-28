@@ -9521,6 +9521,9 @@ class I18nPt extends I18n {
 
   @override
   String get find_user => 'Find user';
+
+  @override
+  String get traderHasNoBalance => 'This trader doesn\'t have enough balance to trade at the moment.';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).
