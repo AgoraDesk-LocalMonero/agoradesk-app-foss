@@ -1,6 +1,6 @@
 ### Updates
 
-1. Hotfix: Fixed an issue with trades starting with a preselected amount in ads.
+1. Ad screen and trade start UI improved.
 
 ### About the attached app's
 
