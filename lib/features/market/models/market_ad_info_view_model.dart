@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:agoradesk/core/api/api_errors.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/events.dart';
@@ -26,6 +28,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:decimal/decimal.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:rxdart/rxdart.dart';
 import 'package:vm/vm.dart';
 
 const _kDebounceTag = '_kDebounceTag';
@@ -70,6 +73,9 @@ class MarketAdInfoViewModel extends ViewModel
   String? payError;
   AdModel? ad;
   late bool isGuestMode;
+
+  /// Monitor ad loading status
+  final BehaviorSubject<bool> _adLoadedStatusController = BehaviorSubject<bool>.seeded(false);
 
   TradeType? _tradeType = TradeType.ONLINE_BUY;
   AccountInfoModel? accountInfoModel;
@@ -148,7 +154,13 @@ class MarketAdInfoViewModel extends ViewModel
 
   @override
   void init() {
-    //todo - refactor me (maybe with AutoRoute)
+    // listen ad loaded status
+    _adLoadedStatusController.listen((event) {
+      if (event) {
+        _setInitialReceive();
+      }
+    });
+
     isGuestMode = _authService.authState == AuthState.guest || _authService.authState == AuthState.initial;
     _authService.onAuthStateChange.listen((e) {
       isGuestMode = e == AuthState.guest || _authService.authState == AuthState.initial;
@@ -160,15 +172,15 @@ class MarketAdInfoViewModel extends ViewModel
     super.init();
   }
 
-  @override
-  void onAfterBuild() {
+  Future<void> _setInitialReceive() async {
+    await Future.delayed(const Duration(milliseconds: 300));
     if (ad!.limitToFiatAmounts != null && ad!.limitToFiatAmounts!.isNotEmpty && !_receiveListWasInit) {
       _receiveListWasInit = true;
       final values = ad!.limitToFiatAmounts!.split(',');
       selectedStringReceive = values.first;
       ctrlReceive.text = values.first;
+      _processReceive();
     }
-    super.onAfterBuild();
   }
 
   void _initialLoading() async {
@@ -210,6 +222,8 @@ class MarketAdInfoViewModel extends ViewModel
     initialLoadingAd = false;
     assetPrice = double.tryParse(ad!.tempPrice!) ?? 0;
     fiatName = ad!.currency;
+    // send ad loaded status
+    _adLoadedStatusController.add(true);
     notifyListeners();
   }
 
@@ -561,6 +575,7 @@ class MarketAdInfoViewModel extends ViewModel
   void dispose() {
     ctrlReceive.dispose();
     ctrlPay.dispose();
+    _adLoadedStatusController.close();
     EasyDebounce.cancel(_kDebounceTag);
     super.dispose();
   }
