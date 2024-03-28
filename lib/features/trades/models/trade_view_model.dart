@@ -262,8 +262,6 @@ class TradeViewModel extends ViewModel
     // also we need to get Full data for user with whom we made trade
     await _getAccountInfo(tradeForScreen.isSelling! ? tradeForScreen.buyer.username : tradeForScreen.seller.username);
 
-    isTradeLoading = false;
-
     // for FCM
     GetIt.I<AppParameters>().openedTradeId = tradeForScreen.tradeId;
     // when FCM is not available
@@ -291,6 +289,9 @@ class TradeViewModel extends ViewModel
     });
     ctrlPassword.addListener(checkPassword);
     _getMessages();
+
+    await Future.delayed(const Duration(milliseconds: 300));
+    isTradeLoading = false;
 
     _timer?.cancel();
     _timer = Timer.periodic(const Duration(seconds: _kPollingSeconds), (_) async => _polling());
