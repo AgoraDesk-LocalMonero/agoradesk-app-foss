@@ -1,0 +1,1 @@
+1. Ad screen and trade start UI improved.
