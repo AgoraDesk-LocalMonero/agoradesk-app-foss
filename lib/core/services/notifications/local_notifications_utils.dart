@@ -9,6 +9,7 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:google_api_availability/google_api_availability.dart';
+import 'package:sentry_flutter/sentry_flutter.dart';
 
 /// Create a [AndroidNotificationChannel] for heads up notifications
 late AndroidNotificationChannel channel;
@@ -77,7 +78,7 @@ Future _notificationResponse(NotificationResponse notificationResponse) async {
     }
     eventBus.fire(NoificationClickedEvent(tradeId));
   } catch (e) {
-    if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('++++error parsing push in actionStream [main]- $e');
+    Sentry.captureException('Error parsing push payload local_notifications_utils.dart');
   }
 }
 
