@@ -1,43 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg
-   version="1.1"
-   id="svg2"
-   xml:space="preserve"
-   width="240"
-   height="240"
-   viewBox="0 0 240 240"
-   sodipodi:docname="amex-american-express-seeklogo.com.svg"
-   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg"><defs
-     id="defs6" /><sodipodi:namedview
-     id="namedview4"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     showgrid="false"
-     inkscape:zoom="0.78882576"
-     inkscape:cx="-142.61705"
-     inkscape:cy="119.79832"
-     inkscape:window-width="1920"
-     inkscape:window-height="1006"
-     inkscape:window-x="0"
-     inkscape:window-y="38"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="g8" /><g
-     id="g8"
-     inkscape:groupmode="layer"
-     inkscape:label="ink_ext_XXXXXX"
-     transform="matrix(1.3333333,0,0,-1.3333333,-287.99999,647.99998)"><g
-       id="g10"
-       transform="scale(0.1)"><path
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+   
+  <path
          d="M 2160,4860 H 3960 V 3060 H 2160 v 1800"
          style="fill:#016fd0;fill-opacity:1;fill-rule:evenodd;stroke:none"
          id="path12" /><path
@@ -58,4 +21,4 @@
          id="path22" /><path
          d="m 3315.23,3989.42 v 502.85 l 215.29,-0.74 110.78,-309.14 111.5,309.88 H 3960 v -502.86 l -133.33,-1.17 v 345.42 l -125.86,-344.25 h -121.7 l -128.47,345.42 v -345.42 l -135.41,0.01"
          style="fill:#016fd0;fill-opacity:1;fill-rule:evenodd;stroke:none"
-         id="path24" /></g></g></svg>
+         id="path24" /></svg>
