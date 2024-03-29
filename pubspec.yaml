@@ -36,7 +36,7 @@ dependencies:
   flutter_keyboard_size: ^1.0.1
   flutter_keyboard_visibility: ^5.2.0
   flutter_local_notifications: ^16.3.2
-  flutter_pin_code_widget: ^0.1.1
+  flutter_pin_code_widget: ^0.1.2
   flutter_riverpod: ^2.4.10
   flutter_screenutil: ^5.0.2
   flutter_secure_storage: ^9.0.0
