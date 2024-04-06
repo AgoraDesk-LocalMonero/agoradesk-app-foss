@@ -1,1 +1,2 @@
-1. Hotfix: Initiate trade with a list of sums.
+1. Add local currencies to the wallet balance.
+2. Bug fixes.
