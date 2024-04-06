@@ -35,7 +35,7 @@ class AppStateV1 extends ChangeNotifier with CountryInfoMixin {
   Locale? _locale;
   TabType? _defaultTab;
   String? _countryCode;
-  String? _currencyCode = 'USD';
+  String _currencyCode = 'USD';
   bool _hasPinCode = false;
 
   String? _pinCode;
@@ -182,7 +182,7 @@ class AppStateV1 extends ChangeNotifier with CountryInfoMixin {
 
   ///
 
-  String get currencyCode => _currencyCode ?? 'USD';
+  String get currencyCode => _currencyCode;
 
   String get countryCode {
     if (kBlockedCountriesCodes.contains(_countryCode)) {
@@ -302,10 +302,10 @@ class AppStateV1 extends ChangeNotifier with CountryInfoMixin {
     _screenHeight = screenHeight ?? _screenHeight;
     _themeMode = themeMode ?? _themeMode;
     _hasPinCode = hasPinCode ?? _hasPinCode;
-    if (countryCode != null && countryCode != _countryCode) {
-      _currencyCode = getCountryCurrencyCode(countryCode);
-    }
     _countryCode = countryCode ?? _countryCode;
+    if (_countryCode != null) {
+      _currencyCode = getCountryCurrencyCode(_countryCode!);
+    }
     if (notify) {
       notifyListeners();
     }

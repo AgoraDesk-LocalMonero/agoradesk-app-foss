@@ -387,7 +387,7 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
   Widget _buildAdsList(BuildContext context, MarketViewModel model) {
     return RefreshIndicator(
       key: model.indicatorKey,
-      onRefresh: model.getAds,
+      onRefresh: () => model.getAds(context: context),
       child: LayoutBuilder(builder: (context, constraints) {
         return StreamBuilder<bool>(
             stream: context.read<AppStateV1>().connection$,
@@ -432,7 +432,7 @@ class MarketScreen extends StatelessWidget with CountryInfoMixin, PaymentMethods
                             key: UniqueKey(),
                             onVisibilityChanged: (VisibilityInfo info) {
                               if (info.visibleFraction > 0.1) {
-                                model.getAds(loadMore: true);
+                                model.getAds(loadMore: true, context: context);
                               }
                             },
                             child: const SizedBox(

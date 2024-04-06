@@ -125,9 +125,7 @@ class NotificationsService with ForegroundMessagesMixin {
         eventBus.fire(NoificationClickedEvent(tradeId));
       }
     } catch (e) {
-      if (GetIt.I<AppParameters>().debugPrintIsOn) {
-        debugPrint('++++error parsing push in actionStream [Notification Service]- $e');
-      }
+      Sentry.captureException('Error parsing push payload _parseNotificationData');
     }
   }
 
@@ -135,39 +133,43 @@ class NotificationsService with ForegroundMessagesMixin {
     ///
     /// get trade id in case it's screen is opened in the app
     ///
-    final PushModel push = PushModel.fromJson(message.data);
-    final openedTradeId = GetIt.I<AppParameters>().openedTradeId;
-    if (openedTradeId != push.objectId) {
-      RemoteNotification? notification = message.notification;
-      final l = await secureStorage.read(SecureStorageKey.locale);
-      final String langCode = l ?? Platform.localeName.substring(0, 2);
+    try {
+      final PushModel push = PushModel.fromJson(message.data);
+      final openedTradeId = GetIt.I<AppParameters>().openedTradeId;
+      if (openedTradeId != push.objectId) {
+        RemoteNotification? notification = message.notification;
+        final l = await secureStorage.read(SecureStorageKey.locale);
+        final String langCode = l ?? Platform.localeName.substring(0, 2);
 
-      if (notification != null) {
-        final List<NotificationsSettingsType> disabledNotifications = AppSharedPrefs().notificationSettingDisabled;
-        bool display = true;
-        if (disabledNotifications.contains(push.type.asNotificationsSettingsType())) {
-          display = false;
-        }
-        if (display) {
-          localNotificationsPlugin.show(
-            notification.hashCode,
-            ForegroundMessagesMixin.translatedNotificationTitle(push, langCode),
-            translatedNotificationText(push, langCode),
-            payload: jsonEncode(message.data), //payload
-            NotificationDetails(
-              android: AndroidNotificationDetails(
-                channel.id,
-                channel.name,
-                channelDescription: channel.description,
-                icon: kNotificationIcon,
+        if (notification != null) {
+          final List<NotificationsSettingsType> disabledNotifications = AppSharedPrefs().notificationSettingDisabled;
+          bool display = true;
+          if (disabledNotifications.contains(push.type.asNotificationsSettingsType())) {
+            display = false;
+          }
+          if (display) {
+            localNotificationsPlugin.show(
+              notification.hashCode,
+              ForegroundMessagesMixin.translatedNotificationTitle(push, langCode),
+              translatedNotificationText(push, langCode),
+              payload: jsonEncode(message.data), //payload
+              NotificationDetails(
+                android: AndroidNotificationDetails(
+                  channel.id,
+                  channel.name,
+                  channelDescription: channel.description,
+                  icon: kNotificationIcon,
+                ),
               ),
-            ),
-          );
+            );
+          }
         }
+      } else {
+        // send signal to update the chat state
+        eventBus.fire(const UpdateOpenedChatEvent());
       }
-    } else {
-      // send signal to update the chat state
-      eventBus.fire(const UpdateOpenedChatEvent());
+    } catch (e) {
+      Sentry.captureException('Error parsing push payload _displayLocalNotification');
     }
   }
 
