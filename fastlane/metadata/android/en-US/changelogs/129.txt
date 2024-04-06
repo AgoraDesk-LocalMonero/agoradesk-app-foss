@@ -1,0 +1,2 @@
+1. Add local currencies to the wallet balance.
+2. Bug fixes.
