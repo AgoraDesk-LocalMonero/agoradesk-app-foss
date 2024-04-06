@@ -54,7 +54,6 @@ class WalletViewModel extends ViewModel with StringMixin {
   String _addressXmr = '';
   bool _loadingBalance = false;
   bool _afterBuildCalled = false;
-  // bool _loadingPrices = false;
   Asset _asset = Asset.BTC;
   late bool isGuestMode;
   final List<TransactionModel> transactions = [];
@@ -117,9 +116,6 @@ class WalletViewModel extends ViewModel with StringMixin {
       _tabsRouter = context.tabsRouter;
       _tabsRouter.addListener(_routerListener);
       _updateBalance();
-      // if (_authService.isAuthenticated) {
-      //   indicatorKey.currentState?.show();
-      // }
       super.onAfterBuild();
     }
   }
@@ -325,29 +321,6 @@ class WalletViewModel extends ViewModel with StringMixin {
     return '${(_xmrPrice! * (double.tryParse(_balanceXmr) ?? 0)).toStringAsFixed(2)} ${_appState.currencyCode}';
   }
 
-  // Future calcAssetsPrices() async {
-  //   if (!_loadingPrices) {
-  //     _loadingPrices = true;
-  //     for (final asset in Asset.values) {
-  //       String usdToCurrency = '';
-  //       if (_appState.currencyCode != 'USD') {
-  //         usdToCurrency = '*usd${_appState.currencyCode.toLowerCase()}';
-  //       }
-
-  //       if (asset == Asset.BTC) {
-  //         btcPrice = await calcPrice(
-  //             priceEquation: 'coingecko${asset.key().toLowerCase()}usd$usdToCurrency',
-  //             currency: _appState.currencyCode);
-  //       } else {
-  //         xmrPrice = await calcPrice(
-  //             priceEquation: 'coingecko${asset.key().toLowerCase()}usd$usdToCurrency',
-  //             currency: _appState.currencyCode);
-  //       }
-  //     }
-  //     _loadingPrices = false;
-  //   }
-  // }
-
   Future<double?> calcPrice({required String priceEquation, required String currency}) async {
     final res = await _adsRepository.calcPrice(priceEquation, currency);
     if (res.isRight) {
@@ -361,7 +334,6 @@ class WalletViewModel extends ViewModel with StringMixin {
         errorMessage = res.left.message.toString();
         if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('[calcPrice error] ${res.left.message}');
       }
-      // eventBus.fire(FlashEvent.error(errorMessage));
       return null;
     }
   }
