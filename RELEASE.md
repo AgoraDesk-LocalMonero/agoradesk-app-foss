@@ -1,6 +1,7 @@
 ### Updates
 
-1. Ad screen and trade start UI improved.
+1. Add local currencies to the wallet balance.
+2. Bug fixes.
 
 ### About the attached app's
 

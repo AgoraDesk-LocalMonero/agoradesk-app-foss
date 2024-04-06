@@ -37,33 +37,36 @@ class ChatTab extends StatelessWidget with PaymentMethodsMixin, UrlMixin, Clipbo
         initOnce: true,
         builder: (context, model, child) {
           return LayoutBuilder(builder: (context, constraints) {
-            return Stack(
-              children: [
-                SizedBox(height: constraints.maxHeight),
-                SizedBox(
-                  height: constraints.maxHeight - 80,
-                  child: model.loadingMessages
-                      ? const AgoraLoadingIndicator()
-                      : RepaintBoundary(
-                          child: Padding(
-                            padding: const EdgeInsets.fromLTRB(16, 40, 16, 0),
-                            child: ListView(
-                              controller: model.chatController,
-                              reverse: true,
-                              children: [
-                                _buildListWithStickyHeader(context, model),
-                                ..._buildMessagesBeforeSticky(context),
-                                _buildTradeStepOne(context),
-                                _buildWarning(context),
-                                _buildFirstChatTile(context),
-                              ],
+            return SizedBox(
+              height: constraints.maxHeight,
+              child: Stack(
+                children: [
+                  SizedBox(height: constraints.maxHeight),
+                  SizedBox(
+                    height: constraints.maxHeight - 80,
+                    child: model.loadingMessages
+                        ? const AgoraLoadingIndicator()
+                        : RepaintBoundary(
+                            child: Padding(
+                              padding: const EdgeInsets.fromLTRB(16, 40, 16, 0),
+                              child: ListView(
+                                controller: model.chatController,
+                                reverse: true,
+                                children: [
+                                  _buildListWithStickyHeader(context, model),
+                                  ..._buildMessagesBeforeSticky(context),
+                                  _buildTradeStepOne(context),
+                                  _buildWarning(context),
+                                  _buildFirstChatTile(context),
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                ),
-                _tradeInfoLine(context, model),
-                _sendMessageField(context, model),
-              ],
+                  ),
+                  _tradeInfoLine(context, model),
+                  _sendMessageField(context, model),
+                ],
+              ),
             );
           });
         });
@@ -86,7 +89,7 @@ class ChatTab extends StatelessWidget with PaymentMethodsMixin, UrlMixin, Clipbo
                   children: [
                     _buildReplyLine(context, model),
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 0, 36, 0),
+                      padding: const EdgeInsets.fromLTRB(0, 0, 38, 0),
                       child: TextField(
                         controller: model.ctrlMessage,
                         focusNode: model.focusMessage,
@@ -137,7 +140,7 @@ class ChatTab extends StatelessWidget with PaymentMethodsMixin, UrlMixin, Clipbo
                 iconSize: 72,
                 alignment: Alignment.centerRight,
                 icon: Padding(
-                  padding: EdgeInsets.fromLTRB(0, topPadding + 4, buttonLeftPadding, buttonBottomPadding + 20),
+                  padding: EdgeInsets.fromLTRB(0, topPadding + 4, buttonLeftPadding, buttonBottomPadding + 18),
                   child: Icon(
                     AgoraFont.paperclip,
                     color: context.n80N30,

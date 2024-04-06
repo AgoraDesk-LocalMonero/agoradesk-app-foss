@@ -40,12 +40,12 @@ class PollingService with ErrorParseMixin {
     ///
     Future.delayed(const Duration(seconds: 6)).then((value) {
       getBalances();
-      // calcAssetsPrices();
+      calcAssetsPrices();
     });
     _timer?.cancel();
     _timer = Timer.periodic(const Duration(seconds: _kWalletPollingSeconds), (_) {
       getBalances();
-      // calcAssetsPrices();
+      calcAssetsPrices();
     });
   }
 
@@ -112,12 +112,11 @@ class PollingService with ErrorParseMixin {
         if (appState.currencyCode != 'USD') {
           usdToCurrency = '*usd${appState.currencyCode.toLowerCase()}';
         }
-        final List<double> res = [0, 0];
         final price = await _calcPrice(
             priceEquation: 'coingecko${asset.key().toLowerCase()}usd$usdToCurrency', currency: appState.currencyCode);
         res.add(price ?? 0);
       }
-      appState.assetPriceController.add(res);
+      appState.assetPrice = res;
       Future.delayed(const Duration(milliseconds: 500)).then((value) => GetIt.I<AppParameters>().polling = false);
       _calculatingBalance = false;
     }

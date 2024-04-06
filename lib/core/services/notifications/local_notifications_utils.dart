@@ -1,10 +1,9 @@
 import 'dart:convert';
+import 'dart:developer';
 
-import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/services/notifications/models/push_model.dart';
 import 'package:agoradesk/main.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 /// Create a [AndroidNotificationChannel] for heads up notifications
@@ -65,6 +64,6 @@ Future _notificationResponse(NotificationResponse notificationResponse) async {
     }
     eventBus.fire(NoificationClickedEvent(tradeId));
   } catch (e) {
-    if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('++++error parsing push in actionStream [main]- $e');
+    log('Error parsing push payload local_notifications_utils.dart');
   }
 }

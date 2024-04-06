@@ -162,7 +162,6 @@ class InitiateTradeScreen extends StatelessWidget with CountryInfoMixin, Clipboa
 
     if (ad.limitToFiatAmounts != null && ad.limitToFiatAmounts!.isNotEmpty) {
       final values = ad.limitToFiatAmounts!.split(',');
-      model.selectedStringReceive = values.first;
 
       return DropdownButtonFormField<String>(
         value: model.selectedStringReceive,

@@ -30,7 +30,6 @@ import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:collection/collection.dart';
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_keyboard_size/flutter_keyboard_size.dart';
 import 'package:vm/vm.dart';
 
 const kDefaultCountry = CountryModel(name: 'United States of America', code: 'US');
@@ -136,7 +135,6 @@ class MarketViewModel extends ViewModel
 
   @override
   void init() async {
-
     _asset = AppSharedPrefs().marketSelectedAsset;
     _tradeType = AppSharedPrefs().marketSelectedTradeType;
 
@@ -166,9 +164,9 @@ class MarketViewModel extends ViewModel
     defaultCurrency = CurrencyModel(code: currencyCode, name: currencyCode, altcoin: true);
     await _loadCaches();
 
-    if (_appState.hasPinCode) {
-      await getAds();
-    }
+    // if (_appState.hasPinCode) {
+    //   await getAds(context: context);
+    // }
 
     super.init();
   }
@@ -322,6 +320,7 @@ class MarketViewModel extends ViewModel
   Future getAds({
     bool loadMore = false,
     bool reccursion = false,
+    required BuildContext context,
   }) async {
     if (!loadingAds) {
       displayFilterMessage = false;
@@ -329,7 +328,7 @@ class MarketViewModel extends ViewModel
       initialLoading = false;
 
       String countryCodeForSearch = selectedCountry.code;
-      if (tradeType!.isLocal()) {
+      if (tradeType.isLocal()) {
         if (ctrlLocation.text.isEmpty) {
           countryCodeForSearch = _appState.countryCode;
           late double lat;
@@ -347,7 +346,7 @@ class MarketViewModel extends ViewModel
       }
       final res = await _adsRepository.publicAdSearch(
         asset: asset,
-        tradeType: tradeType!,
+        tradeType: tradeType,
         currencyCode: selectedCurrency.code,
         countryCode: countryCodeForSearch,
         paymentMethod: selectedOnlineProvider?.url,
@@ -375,7 +374,7 @@ class MarketViewModel extends ViewModel
         ads.addAll(adsWithoutDuplicates);
         if (adsWithoutDuplicates.length < res.right.data.length) {
           if (!reccursion) {
-            getAds(loadMore: true, reccursion: true);
+            getAds(loadMore: true, reccursion: true, context: context);
           }
         }
       } else {
