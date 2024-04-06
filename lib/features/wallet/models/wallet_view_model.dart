@@ -43,6 +43,7 @@ class WalletViewModel extends ViewModel with StringMixin {
   final GlobalKey<ExpansionTileCardState> tileKeyXmr = GlobalKey();
 
   late final StreamSubscription<List<WalletBalanceModel>> _balanceSubcription;
+  late final StreamSubscription<List<double>> _assetsPricesSubcription;
 
   String _balanceBtc = '';
   String _addressBtc = '';
@@ -53,7 +54,7 @@ class WalletViewModel extends ViewModel with StringMixin {
   String _addressXmr = '';
   bool _loadingBalance = false;
   bool _afterBuildCalled = false;
-  bool _loadingPrices = false;
+  // bool _loadingPrices = false;
   Asset _asset = Asset.BTC;
   late bool isGuestMode;
   final List<TransactionModel> transactions = [];
@@ -92,6 +93,7 @@ class WalletViewModel extends ViewModel with StringMixin {
   void init() {
     //todo - refactor me (maybe with AutoRoute)
     isGuestMode = _authService.authState == AuthState.guest;
+
     _authService.onAuthStateChange.listen((e) {
       isGuestMode = e == AuthState.guest;
       if (e == AuthState.loggedIn) {
@@ -100,6 +102,9 @@ class WalletViewModel extends ViewModel with StringMixin {
       notifyListeners();
     });
     _balanceSubcription = _appState.balanceController.listen((event) {
+      _updateBalance();
+    });
+    _assetsPricesSubcription = _appState.assetPriceController.listen((event) {
       _updateBalance();
     });
     super.init();
@@ -111,6 +116,7 @@ class WalletViewModel extends ViewModel with StringMixin {
       _afterBuildCalled = true;
       _tabsRouter = context.tabsRouter;
       _tabsRouter.addListener(_routerListener);
+      _updateBalance();
       // if (_authService.isAuthenticated) {
       //   indicatorKey.currentState?.show();
       // }
@@ -120,9 +126,8 @@ class WalletViewModel extends ViewModel with StringMixin {
 
   Future getInitalData() async {
     fiatName = _appState.currencyCode;
-    await calcAssetsPrices();
     await getBalances();
-
+    // await calcAssetsPrices();
     getIncomingDeposits();
   }
 
@@ -149,12 +154,18 @@ class WalletViewModel extends ViewModel with StringMixin {
       // _balanceXmr = _appState.balance[0].balance.toDouble().bankerRound(digitsXmr).toString();
       _balanceXmr = _appState.balance[0].balance.toString();
       _addressXmr = _appState.balance[0].receivingAddress;
+      if (_appState.assetPrice.isNotEmpty) {
+        xmrPrice = _appState.assetPrice[0];
+      }
     }
     if (_appState.balance.length > 1) {
       // final int digitsBtc = getBankersDigits(Asset.BTC.name);
       // _balanceBtc = _appState.balance[1].balance.toDouble().bankerRound(digitsBtc).toString();
       _balanceBtc = _appState.balance[1].balance.toString();
       _addressBtc = _appState.balance[1].receivingAddress;
+      if (_appState.assetPrice.length > 1) {
+        btcPrice = _appState.assetPrice[1];
+      }
     }
   }
 
@@ -314,28 +325,28 @@ class WalletViewModel extends ViewModel with StringMixin {
     return '${(_xmrPrice! * (double.tryParse(_balanceXmr) ?? 0)).toStringAsFixed(2)} ${_appState.currencyCode}';
   }
 
-  Future calcAssetsPrices() async {
-    if (!_loadingPrices) {
-      _loadingPrices = true;
-      for (final asset in Asset.values) {
-        String usdToCurrency = '';
-        if (_appState.currencyCode != 'USD') {
-          usdToCurrency = '*usd${_appState.currencyCode.toLowerCase()}';
-        }
+  // Future calcAssetsPrices() async {
+  //   if (!_loadingPrices) {
+  //     _loadingPrices = true;
+  //     for (final asset in Asset.values) {
+  //       String usdToCurrency = '';
+  //       if (_appState.currencyCode != 'USD') {
+  //         usdToCurrency = '*usd${_appState.currencyCode.toLowerCase()}';
+  //       }
 
-        if (asset == Asset.BTC) {
-          btcPrice = await calcPrice(
-              priceEquation: 'coingecko${asset.key().toLowerCase()}usd$usdToCurrency',
-              currency: _appState.currencyCode);
-        } else {
-          xmrPrice = await calcPrice(
-              priceEquation: 'coingecko${asset.key().toLowerCase()}usd$usdToCurrency',
-              currency: _appState.currencyCode);
-        }
-      }
-      _loadingPrices = false;
-    }
-  }
+  //       if (asset == Asset.BTC) {
+  //         btcPrice = await calcPrice(
+  //             priceEquation: 'coingecko${asset.key().toLowerCase()}usd$usdToCurrency',
+  //             currency: _appState.currencyCode);
+  //       } else {
+  //         xmrPrice = await calcPrice(
+  //             priceEquation: 'coingecko${asset.key().toLowerCase()}usd$usdToCurrency',
+  //             currency: _appState.currencyCode);
+  //       }
+  //     }
+  //     _loadingPrices = false;
+  //   }
+  // }
 
   Future<double?> calcPrice({required String priceEquation, required String currency}) async {
     final res = await _adsRepository.calcPrice(priceEquation, currency);
@@ -377,6 +388,7 @@ class WalletViewModel extends ViewModel with StringMixin {
   @override
   void dispose() {
     _balanceSubcription.cancel();
+    _assetsPricesSubcription.cancel();
     _tabsRouter.removeListener(_routerListener);
     super.dispose();
   }
