@@ -97,12 +97,15 @@ void main() async {
     final NotificationAppLaunchDetails? notificationAppLaunchDetails =
         await localNotificationsPlugin.getNotificationAppLaunchDetails();
     final String? payload = notificationAppLaunchDetails?.notificationResponse?.payload;
-    if (notificationAppLaunchDetails != null && payload != null && payload.isNotEmpty) {
+    if (notificationAppLaunchDetails != null && payload?.isNotEmpty == true) {
       try {
-      final PushModel push = PushModel.fromJson(jsonDecode(payload));
-      if (push.objectId != null && push.objectId!.isNotEmpty) {
-        appRanFromPush = true;
-        tradeId = push.objectId;
+        final PushModel push = PushModel.fromJson(jsonDecode(payload!));
+        if (push.objectId != null && push.objectId!.isNotEmpty) {
+          appRanFromPush = true;
+          tradeId = push.objectId;
+        }
+      } catch (e) {
+        Sentry.captureException('Error parsing push payload main.dart');
       }
       } catch (e) {
         debugPrint('+++ Error parsing push message in main.dart: $e');
