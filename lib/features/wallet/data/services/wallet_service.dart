@@ -177,7 +177,7 @@ class WalletService {
       } else {
         url = '/wallet-send/XMR';
       }
-      final resp = await _api.client.post<Map>(
+      await _api.client.post<Map>(
         url,
         data: sendAssetModel.toJson(),
       );

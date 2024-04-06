@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:developer';
 import 'dart:io';
 
 import 'package:agoradesk/core/app.dart';
@@ -64,11 +65,15 @@ void main() async {
     final NotificationAppLaunchDetails? notificationAppLaunchDetails =
         await localNotificationsPlugin.getNotificationAppLaunchDetails();
     final String? payload = notificationAppLaunchDetails?.notificationResponse?.payload;
-    if (notificationAppLaunchDetails != null && payload != null && payload.isNotEmpty) {
-      final PushModel push = PushModel.fromJson(jsonDecode(payload));
-      if (push.objectId != null && push.objectId!.isNotEmpty) {
-        appRanFromPush = true;
-        tradeId = push.objectId;
+    if (notificationAppLaunchDetails != null && payload?.isNotEmpty == true) {
+      try {
+        final PushModel push = PushModel.fromJson(jsonDecode(payload!));
+        if (push.objectId != null && push.objectId!.isNotEmpty) {
+          appRanFromPush = true;
+          tradeId = push.objectId;
+        }
+      } catch (e) {
+        log('Error parsing push payload main.dart');
       }
     }
   }
@@ -83,8 +88,6 @@ void main() async {
       isCheckUpdates: isCheckUpdates,
     ),
   );
-
-  final bool sentryIsOn = AppSharedPrefs().sentryIsOn != false;
 
   // Get info about proxy on or off
   final bool proxyEnabled = AppSharedPrefs().proxyEnabled == true;

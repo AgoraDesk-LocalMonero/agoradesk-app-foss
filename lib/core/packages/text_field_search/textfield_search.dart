@@ -53,14 +53,14 @@ class TextFieldSearch extends StatefulWidget {
       : super(key: key);
 
   @override
-  _TextFieldSearchState createState() => _TextFieldSearchState();
+  TextFieldSearchState createState() => TextFieldSearchState();
 }
 
-class _TextFieldSearchState extends State<TextFieldSearch> {
+class TextFieldSearchState extends State<TextFieldSearch> {
   final FocusNode _focusNode = FocusNode();
   late OverlayEntry _overlayEntry;
   final LayerLink _layerLink = LayerLink();
-  List? filteredList = <SearchItem>[];
+  List filteredList = <SearchItem>[];
   bool hasFuture = false;
   bool loading = false;
   final _debouncer = Debouncer(milliseconds: 1000);
@@ -70,13 +70,15 @@ class _TextFieldSearchState extends State<TextFieldSearch> {
 
   void resetList() {
     List tempList = <dynamic>[];
-    setState(() {
-      // after loop is done, set the filteredList state from the tempList
-      filteredList = tempList;
-      loading = false;
-    });
-    // mark that the overlay widget needs to be rebuilt
-    _overlayEntry.markNeedsBuild();
+    if (mounted) {
+      setState(() {
+        // after loop is done, set the filteredList state from the tempList
+        filteredList = tempList;
+        loading = false;
+      });
+      // mark that the overlay widget needs to be rebuilt
+      _overlayEntry.markNeedsBuild();
+    }
   }
 
   void setLoading() {
@@ -110,17 +112,17 @@ class _TextFieldSearchState extends State<TextFieldSearch> {
         // create an empty temp list
         List tempList = <dynamic>[];
         // loop through each item in filtered items
-        for (int i = 0; i < (filteredList?.length ?? 0); i++) {
+        for (int i = 0; i < (filteredList.length); i++) {
           // lowercase the item and see if the item contains the string of text from the lowercase search
           if (widget.getSelectedValue != null) {
-            if (filteredList![i].label.toLowerCase().contains(widget.controller.text.toLowerCase())) {
+            if (filteredList[i].label.toLowerCase().contains(widget.controller.text.toLowerCase())) {
               // if there is a match, add to the temp list
-              tempList.add(filteredList![i]);
+              tempList.add(filteredList[i]);
             }
           } else {
-            if (filteredList![i].toLowerCase().contains(widget.controller.text.toLowerCase())) {
+            if (filteredList[i].toLowerCase().contains(widget.controller.text.toLowerCase())) {
               // if there is a match, add to the temp list
-              tempList.add(filteredList![i]);
+              tempList.add(filteredList[i]);
             }
           }
         }
@@ -141,11 +143,11 @@ class _TextFieldSearchState extends State<TextFieldSearch> {
     // create an empty temp list
     List tempList = <dynamic>[];
     // loop through each item in filtered items
-    for (int i = 0; i < filteredList!.length; i++) {
+    for (int i = 0; i < filteredList.length; i++) {
       // lowercase the item and see if the item contains the string of text from the lowercase search
-      if (filteredList![i].toLowerCase().contains(widget.controller.text.toLowerCase())) {
+      if (filteredList[i].toLowerCase().contains(widget.controller.text.toLowerCase())) {
         // if there is a match, add to the temp list
-        tempList.add(filteredList![i]);
+        tempList.add(filteredList[i]);
       }
     }
     // helper function to set tempList and other state props
@@ -186,13 +188,13 @@ class _TextFieldSearchState extends State<TextFieldSearch> {
         }
         // if we have a list of items, make sure the text input matches one of them
         // if not, clear the input
-        if (filteredList!.isNotEmpty) {
+        if (filteredList.isNotEmpty) {
           bool textMatchesItem = false;
           if (widget.getSelectedValue != null) {
             // try to match the label against what is set on controller
-            textMatchesItem = filteredList!.any((item) => item.label == widget.controller.text);
+            textMatchesItem = filteredList.any((item) => item.label == widget.controller.text);
           } else {
-            textMatchesItem = filteredList!.contains(widget.controller.text);
+            textMatchesItem = filteredList.contains(widget.controller.text);
           }
           if (textMatchesItem == false) widget.controller.clear();
           resetList();
@@ -237,7 +239,7 @@ class _TextFieldSearchState extends State<TextFieldSearch> {
     }
     return ListView.builder(
       controller: _scrollController,
-      itemCount: filteredList!.length,
+      itemCount: filteredList.length,
       itemBuilder: (context, i) {
         return GestureDetector(
             onTap: () {
@@ -246,10 +248,10 @@ class _TextFieldSearchState extends State<TextFieldSearch> {
                 // if we have a label property, and getSelectedValue function
                 // send getSelectedValue to parent widget using the label property
                 if (widget.getSelectedValue != null) {
-                  widget.controller.text = filteredList![i].label;
-                  widget.getSelectedValue!(filteredList![i]);
+                  widget.controller.text = filteredList[i].label;
+                  widget.getSelectedValue!(filteredList[i]);
                 } else {
-                  widget.controller.text = filteredList![i];
+                  widget.controller.text = filteredList[i];
                 }
               });
               // reset the list so it's empty and not visible
@@ -257,8 +259,8 @@ class _TextFieldSearchState extends State<TextFieldSearch> {
               // remove the focus node so we aren't editing the text
               FocusScope.of(context).unfocus();
             },
-            child: ListTile(
-                title: widget.getSelectedValue != null ? Text(filteredList![i].label) : Text(filteredList![i])));
+            child:
+                ListTile(title: widget.getSelectedValue != null ? Text(filteredList[i].label) : Text(filteredList[i])));
       },
       padding: EdgeInsets.zero,
       shrinkWrap: true,
@@ -288,7 +290,7 @@ class _TextFieldSearchState extends State<TextFieldSearch> {
   }
 
   Widget? _listViewContainer(context) {
-    if (itemsFound == true && filteredList!.isNotEmpty || itemsFound == false && widget.controller.text.isNotEmpty) {
+    if (itemsFound == true && filteredList.isNotEmpty || itemsFound == false && widget.controller.text.isNotEmpty) {
       return SizedBox(height: calculateHeight().toDouble(), child: decoratedScrollbar(_listViewBuilder(context)));
     }
     return null;
@@ -299,12 +301,12 @@ class _TextFieldSearchState extends State<TextFieldSearch> {
   }
 
   num calculateHeight() {
-    if ((filteredList?.length ?? 0) > 1) {
-      if (widget.itemsInView <= filteredList!.length) {
+    if ((filteredList.length) > 1) {
+      if (widget.itemsInView <= filteredList.length) {
         return heightByLength(widget.itemsInView);
       }
 
-      return heightByLength(filteredList!.length);
+      return heightByLength(filteredList.length);
     }
 
     return itemHeight;
