@@ -69,7 +69,7 @@ class App extends StatefulWidget {
 class AppState extends State<App>
     with WidgetsBindingObserver, StringMixin, CountryInfoMixin, ForegroundMessagesMixin, UrlMixin {
   late final SecureStorage _secureStorage;
-  late final StreamSubscription<List<ConnectivityResult>> _connectivitySubscription;
+  late final StreamSubscription<ConnectivityResult> _connectivitySubscription;
   late final ApiClient _api;
   late final AuthService _authService;
   late final AdsRepository _adsRepository;
@@ -448,12 +448,11 @@ class AppState extends State<App>
     }
   }
 
-  void _handleConnectivity(List<ConnectivityResult> connectivityRes) {
+  void _handleConnectivity(ConnectivityResult result) {
     EasyDebounce.debounce(
       'connectivity',
       const Duration(milliseconds: 500),
       () {
-        final result = connectivityRes.last;
         switch (result) {
           case ConnectivityResult.wifi:
           case ConnectivityResult.mobile:
@@ -693,9 +692,9 @@ class AppState extends State<App>
   /// Retrieve global services list
   ///
   List<SingleChildWidget> get _providers => [
-        StreamProvider<List<ConnectivityResult>>(
+        StreamProvider<ConnectivityResult>(
           create: (_) => Connectivity().onConnectivityChanged,
-          initialData: const [ConnectivityResult.none],
+          initialData: ConnectivityResult.none,
         ),
         Provider.value(value: _api),
         Provider.value(value: _adsRepository),
