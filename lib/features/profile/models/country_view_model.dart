@@ -65,7 +65,7 @@ class CountryViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin 
   /// updates appState + write new default countryCode to the cache
   ///
   void selectCountryCode(String code) {
-    _appState.countryCode = code;
+    _appState.changeCountry(code);
     notifyListeners();
   }
 
