@@ -1,6 +1,6 @@
 ### Updates
 
-1. Add local currencies to the wallet balance.
+1. Reload markets and wallet balances when a new country is selected.
 2. Bug fixes.
 
 ### About the attached app's
