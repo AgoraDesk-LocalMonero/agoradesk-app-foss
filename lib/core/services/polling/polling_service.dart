@@ -105,7 +105,7 @@ class PollingService with ErrorParseMixin {
     if (!_calculatingBalance) {
       _calculatingBalance = true;
       GetIt.I<AppParameters>().polling = true;
-      final List<double> res = [];
+      final List<double?> res = [];
 
       for (final asset in Asset.values.reversed) {
         String usdToCurrency = '';
@@ -114,7 +114,7 @@ class PollingService with ErrorParseMixin {
         }
         final price = await _calcPrice(
             priceEquation: 'coingecko${asset.key().toLowerCase()}usd$usdToCurrency', currency: appState.currencyCode);
-        res.add(price ?? 0);
+        res.add(price);
       }
       appState.assetPrice = res;
       Future.delayed(const Duration(milliseconds: 500)).then((value) => GetIt.I<AppParameters>().polling = false);

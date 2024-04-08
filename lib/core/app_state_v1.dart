@@ -174,11 +174,11 @@ class AppStateV1 extends ChangeNotifier with CountryInfoMixin {
   /// Wallet balances stream
   ///
 
-  final BehaviorSubject<List<double>> assetPriceController = BehaviorSubject<List<double>>.seeded([]);
+  final BehaviorSubject<List<double?>> assetPriceController = BehaviorSubject<List<double>>.seeded([]);
 
-  set assetPrice(List<double> v) => assetPriceController.add(v);
+  set assetPrice(List<double?> v) => assetPriceController.add(v);
 
-  List<double> get assetPrice => assetPriceController.value;
+  List<double?> get assetPrice => assetPriceController.value;
 
   ///
 
