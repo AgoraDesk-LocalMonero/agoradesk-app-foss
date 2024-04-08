@@ -158,7 +158,6 @@ class MarketData {
       'ltcusd',
       'xrpcad',
       'xrpeur',
-      'xrpjpy',
       'xrpusd',
       'zeceur',
       'zecusd',
