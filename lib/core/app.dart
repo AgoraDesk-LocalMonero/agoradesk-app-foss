@@ -74,7 +74,7 @@ class App extends StatefulWidget {
 class AppState extends State<App>
     with WidgetsBindingObserver, StringMixin, CountryInfoMixin, ForegroundMessagesMixin, UrlMixin {
   late final SecureStorage _secureStorage;
-  late final StreamSubscription<ConnectivityResult> _connectivitySubscription;
+  late final StreamSubscription<List<ConnectivityResult>> _connectivitySubscription;
   late final ApiClient _api;
   late final AuthService _authService;
   late final AdsRepository _adsRepository;
@@ -127,7 +127,6 @@ class AppState extends State<App>
       countryCode: _countryCode,
       defaultTab: AppSharedPrefs().defaultTab,
       themeMode: AppSharedPrefs().themeMode,
-      
     );
     _api = ApiClient(
       debug: kDebugMode,
@@ -474,12 +473,12 @@ class AppState extends State<App>
     }
   }
 
-  void _handleConnectivity(ConnectivityResult result) {
-    if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('+++connectivity $result');
+  void _handleConnectivity(List<ConnectivityResult> connectivityRes) {
     EasyDebounce.debounce(
       'connectivity',
       const Duration(milliseconds: 500),
       () {
+        final result = connectivityRes.last;
         switch (result) {
           case ConnectivityResult.wifi:
           case ConnectivityResult.mobile:
@@ -731,9 +730,9 @@ class AppState extends State<App>
   /// Retrieve global services list
   ///
   List<SingleChildWidget> get _providers => [
-        StreamProvider<ConnectivityResult>(
+        StreamProvider<List<ConnectivityResult>>(
           create: (_) => Connectivity().onConnectivityChanged,
-          initialData: ConnectivityResult.none,
+          initialData: const [ConnectivityResult.none],
         ),
         Provider.value(value: _api),
         Provider.value(value: _plausible),
