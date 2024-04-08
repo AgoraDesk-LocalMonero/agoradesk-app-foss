@@ -34,25 +34,29 @@ class PollingService with ErrorParseMixin {
   Timer? _timer;
 
   Future init() async {
-    ///
     /// Polling balance from the server
-    ///
-    ///
-    Future.delayed(const Duration(seconds: 6)).then((value) {
-      getBalances();
-      calcAssetsPrices();
-    });
+    Future.delayed(const Duration(seconds: 6)).then((value) {});
     _timer?.cancel();
     _timer = Timer.periodic(const Duration(seconds: _kWalletPollingSeconds), (_) {
-      getBalances();
-      calcAssetsPrices();
+      updateBalanceAndPrices();
     });
+
+    appState.countryChangedSignalController.stream.listen((val) {
+      if (val) {
+        updateBalanceAndPrices();
+      }
+    });
+  }
+
+  Future<void> updateBalanceAndPrices() async {
+    await _getBalances();
+    await _calcAssetsPrices();
   }
 
   ///
   /// Get balances
   ///
-  Future getBalances() async {
+  Future _getBalances() async {
     if (authService.isAuthenticated) {
       if (!_loadingBalance) {
         _loadingBalance = true;
@@ -101,12 +105,11 @@ class PollingService with ErrorParseMixin {
   /// Calculate Assets prices
   ///
 
-  void calcAssetsPrices() async {
+  Future<void> _calcAssetsPrices() async {
     if (!_calculatingBalance) {
       _calculatingBalance = true;
       GetIt.I<AppParameters>().polling = true;
       final List<double> res = [];
-
       for (final asset in Asset.values.reversed) {
         String usdToCurrency = '';
         if (appState.currencyCode != 'USD') {

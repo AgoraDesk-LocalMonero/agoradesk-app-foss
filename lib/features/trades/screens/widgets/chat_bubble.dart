@@ -10,7 +10,6 @@ import 'package:agoradesk/features/trades/mixins/trade_mixin.dart';
 import 'package:agoradesk/features/trades/screens/widgets/chat_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
 import 'package:image_picker/image_picker.dart';
 
 class ChatBubble extends StatelessWidget with DateMixin, TradeMixin, ClipboardMixin {

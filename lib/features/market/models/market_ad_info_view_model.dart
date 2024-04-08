@@ -28,7 +28,6 @@ import 'package:auto_route/auto_route.dart';
 import 'package:decimal/decimal.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:rxdart/rxdart.dart';
 import 'package:vm/vm.dart';
 
 const _kDebounceTag = '_kDebounceTag';
@@ -212,7 +211,7 @@ class MarketAdInfoViewModel extends ViewModel
     initialLoadingAd = false;
     assetPrice = double.tryParse(ad!.tempPrice!) ?? 0;
     fiatName = ad!.currency;
-    
+
     _setInitialReceive();
 
     notifyListeners();

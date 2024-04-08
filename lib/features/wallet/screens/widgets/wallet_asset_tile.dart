@@ -74,7 +74,7 @@ class WalletAssetTile extends StatelessWidget {
                                 children: [
                                   Padding(
                                     padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
-                                    child: model.assetPrice(asset) == null
+                                    child: model.assetPrice(asset) == 0
                                         ? const CupertinoActivityIndicator()
                                         : Text(
                                             '1 ${asset.name} ~ ${model.assetPrice(asset)} ${context.read<AppStateV1>().currencyCode}',
