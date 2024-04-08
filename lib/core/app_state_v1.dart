@@ -2,14 +2,12 @@ import 'dart:async';
 
 import 'package:agoradesk/core/app_constants.dart';
 import 'package:agoradesk/core/app_shared_prefs.dart';
-import 'package:agoradesk/core/app_state_v2.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
 import 'package:agoradesk/features/account/data/models/notification_model.dart';
 import 'package:agoradesk/features/profile/models/tab_type.dart';
 import 'package:agoradesk/features/wallet/data/models/wallet_balance_model.dart';
-import 'package:agoradesk/main.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:rxdart/rxdart.dart';
@@ -65,72 +63,50 @@ class AppStateV1 extends ChangeNotifier with CountryInfoMixin {
   ///
   /// Image uploading controller
   ///
-  final BehaviorSubject<double> _uploadingController = BehaviorSubject<double>.seeded(0.0);
-
+  final _uploadingController = BehaviorSubject<double>.seeded(0.0);
   ValueStream<double> get uploadingProgress$ => _uploadingController.stream;
-
   set uploadingProgress(double v) => _uploadingController.add(v);
-
   double get uploadingProgress => uploadingProgress$.value;
-
-  final BehaviorSubject<bool> _uploadingStatusController = BehaviorSubject<bool>.seeded(false);
-
+  final _uploadingStatusController = BehaviorSubject<bool>.seeded(false);
   ValueStream<bool> get uploadingStatus$ => _uploadingStatusController.stream;
-
   set uploadingStatus(bool v) => _uploadingStatusController.add(v);
-
   bool get uploadingStatus => uploadingStatus$.value;
 
   ///
   /// Connection controller
   ///
-  final BehaviorSubject<bool> _connectionController = BehaviorSubject<bool>.seeded(true);
-
+  final _connectionController = BehaviorSubject<bool>.seeded(true);
   ValueStream<bool> get connection$ => _connectionController.stream;
-
   set connection(bool v) => _connectionController.add(v);
-
   bool get connection => connection$.value;
 
   ///
   /// Proxy is on/off controller
   ///
-  final BehaviorSubject<bool?> _proxyStatusController = BehaviorSubject<bool?>.seeded(null);
-
+  final _proxyStatusController = BehaviorSubject<bool?>.seeded(null);
   ValueStream<bool?> get proxyStatus$ => _proxyStatusController.stream;
-
   set proxyStatus(bool? v) => _proxyStatusController.add(v);
-
   bool? get proxyStatus => proxyStatus$.value;
 
   ///
   /// Reload market stream
   ///
-  final StreamController<bool> _reloadMarketController = StreamController<bool>.broadcast();
-
+  final _reloadMarketController = StreamController<bool>.broadcast();
   Stream<bool> get reloadMarket => _reloadMarketController.stream;
-
   Sink get sinkReloadMarket => _reloadMarketController;
-
-  // final StreamController<bool> _amenPressedDown = StreamController<bool>.broadcast();
-  // Stream<bool> get amenPressedDown => _amenPressedDown.stream;
-  // Sink get sinkAmenPressedDown => _amenPressedDown;
 
   ///
   /// Unread / read state across the app
   ///
-  final BehaviorSubject<bool> _hasUnreadController = BehaviorSubject<bool>.seeded(false);
-
+  final _hasUnreadController = BehaviorSubject<bool>.seeded(false);
   ValueStream<bool> get hasUnread$ => _hasUnreadController.stream;
-
   set hasUnread(bool v) => _hasUnreadController.add(v);
-
   bool get hasUnread => hasUnread$.value;
 
   ///
   ///
   ///
-  final BehaviorSubject<bool> _notificationsLoadingController = BehaviorSubject<bool>.seeded(false);
+  final _notificationsLoadingController = BehaviorSubject<bool>.seeded(false);
 
   ValueStream<bool> get notificationsLoading$ => _notificationsLoadingController.stream;
 
@@ -141,35 +117,25 @@ class AppStateV1 extends ChangeNotifier with CountryInfoMixin {
   ///
   ///
   ///
-  final BehaviorSubject<bool> _notificationsMarkedReadController = BehaviorSubject<bool>.seeded(false);
-
+  final _notificationsMarkedReadController = BehaviorSubject<bool>.seeded(false);
   ValueStream<bool> get notificationsMarkedRead$ => _notificationsMarkedReadController.stream;
-
   set notificationsMarkedRead(bool v) => _notificationsMarkedReadController.add(v);
-
   bool get notificationsMarkedRead => notificationsMarkedRead$.value;
 
   ///
   /// Notifications stream
   ///
-  final BehaviorSubject<List<ActivityNotificationModel>> _notificationsController =
-      BehaviorSubject<List<ActivityNotificationModel>>.seeded([]);
-
+  final _notificationsController = BehaviorSubject<List<ActivityNotificationModel>>.seeded([]);
   ValueStream<List<ActivityNotificationModel>> get notifications$ => _notificationsController.stream;
-
   set notifications(List<ActivityNotificationModel> v) => _notificationsController.add(v);
-
   List<ActivityNotificationModel> get notifications => notifications$.value;
 
   ///
   /// Wallet balances stream
   ///
 
-  final BehaviorSubject<List<WalletBalanceModel>> balanceController =
-      BehaviorSubject<List<WalletBalanceModel>>.seeded([]);
-
+  final balanceController = BehaviorSubject<List<WalletBalanceModel>>.seeded([]);
   set balance(List<WalletBalanceModel> v) => balanceController.add(v);
-
   List<WalletBalanceModel> get balance => balanceController.value;
 
   ///
@@ -177,10 +143,15 @@ class AppStateV1 extends ChangeNotifier with CountryInfoMixin {
   ///
 
   final BehaviorSubject<List<double>> assetPriceController = BehaviorSubject<List<double>>.seeded([]);
-
   set assetPrice(List<double> v) => assetPriceController.add(v);
-
   List<double> get assetPrice => assetPriceController.value;
+
+  ///
+  /// Country changed signal
+  ///
+
+  final countryChangedSignalController = StreamController<bool>.broadcast();
+  set countryChangedSignal(bool v) => countryChangedSignalController.add(v);
 
   ///
   String get currencyCode => _currencyCode;
@@ -290,10 +261,12 @@ class AppStateV1 extends ChangeNotifier with CountryInfoMixin {
   }
 
   // change country code
-  void changeCountry(String code) {
+  Future<void> changeCountry(String code) async {
     countryCode = code;
     assetPrice = [0, 0];
-    container.read(appStateV2Provider.notifier).updadeAssetsPricesSignal();
+    countryChangedSignalController.add(true);
+    await Future.delayed(Duration.zero);
+    countryChangedSignalController.add(false);
   }
 
   void updateWith({
@@ -333,6 +306,7 @@ class AppStateV1 extends ChangeNotifier with CountryInfoMixin {
     _proxyStatusController.close();
     balanceController.close();
     assetPriceController.close();
+    countryChangedSignalController.close();
     EasyDebounce.cancel(_kLocaleDebounceTag);
   }
 }

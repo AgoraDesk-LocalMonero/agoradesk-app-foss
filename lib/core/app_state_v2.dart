@@ -9,19 +9,15 @@ const _kCountdownSeconds = 10;
 
 class AppStateViewModel {
   final int countdownSeconds;
-  final bool updateAssetsPricesSignal;
   AppStateViewModel({
     required this.countdownSeconds,
-    this.updateAssetsPricesSignal = false,
   });
 
   AppStateViewModel copyWith({
     int? countdownSeconds,
-    bool? updateAssetsPricesSignal,
   }) {
     return AppStateViewModel(
       countdownSeconds: countdownSeconds ?? this.countdownSeconds,
-      updateAssetsPricesSignal: updateAssetsPricesSignal ?? this.updateAssetsPricesSignal,
     );
   }
 }
@@ -72,11 +68,5 @@ class AppStateV2 extends _$AppStateV2 {
   Future<void> waitForFinish() async {
     await _streamSubscription?.asFuture();
     return;
-  }
-
-  Future<void> updadeAssetsPricesSignal() async {
-    state = state.copyWith(updateAssetsPricesSignal: true);
-    await Future.delayed(Duration.zero);
-    state = state.copyWith(updateAssetsPricesSignal: false);
   }
 }

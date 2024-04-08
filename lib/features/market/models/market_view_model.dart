@@ -164,9 +164,12 @@ class MarketViewModel extends ViewModel
     defaultCurrency = CurrencyModel(code: currencyCode, name: currencyCode, altcoin: true);
     await _loadCaches();
 
-    // if (_appState.hasPinCode) {
-    //   await getAds(context: context);
-    // }
+    _appState.countryChangedSignalController.stream.listen((val) {
+      if (val) {
+        changeSelectedCountryCodeAndCurrency(_appState.countryCode);
+        indicatorKey.currentState?.show();
+      }
+    });
 
     super.init();
   }

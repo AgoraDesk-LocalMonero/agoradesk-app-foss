@@ -3,13 +3,11 @@ import 'dart:async';
 import 'package:agoradesk/core/api/api_client.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_state_v1.dart';
-import 'package:agoradesk/core/app_state_v2.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
-import 'package:agoradesk/main.dart';
 import 'package:flutter/material.dart';
 
 /// Wallet data polling
@@ -43,10 +41,9 @@ class PollingService with ErrorParseMixin {
       updateBalanceAndPrices();
     });
 
-    /// Update assets prices signal listen
-    container.listen(appStateV2Provider, (previous, next) {
-      if (next.updateAssetsPricesSignal) {
-        _calcAssetsPrices();
+    appState.countryChangedSignalController.stream.listen((val) {
+      if (val) {
+        updateBalanceAndPrices();
       }
     });
   }
