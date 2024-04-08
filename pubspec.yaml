@@ -1,5 +1,5 @@
 name: agoradesk
-version: 1.1.31+129
+version: 1.1.32+130
 publish_to: none
 description: Person-to-person platform to allow anyone to trade their local currency for cryptocurrency.
 environment: 
@@ -10,13 +10,13 @@ dependencies:
   barcode_scan2: ^4.3.0
   cached_network_image: ^3.3.1
   collection: ^1.18.0
-  connectivity_plus: ^5.0.2
+  connectivity_plus: ^6.0.1
   convert: ^3.1.1
   country_picker: ^2.0.11
   cupertino_icons: ^1.0.2
-  currency_picker: ^2.0.7
+  currency_picker: ^2.0.21
   decimal: ^2.2.0
-  device_info_plus: ^9.0.3
+  device_info_plus: ^10.0.1
   dio: ^5.2.1
   dots_indicator: ^2.0.0
   dropdown_search: ^5.0.6
@@ -27,17 +27,17 @@ dependencies:
   expansion_tile_card: ^2.0.0
   extended_image: ^8.1.0
   figma_squircle: ^0.5.3
-  firebase_core: ^2.25.4
-  firebase_messaging: ^14.7.16
+  firebase_core: ^2.28.0
+  firebase_messaging: ^14.8.0
   flutter_app_badger: ^1.5.0
   flutter_displaymode: ^0.5.0
   flutter_foreground_task: ^6.1.2
   flutter_inappwebview: ^6.0.0
   flutter_keyboard_size: ^1.0.1
   flutter_keyboard_visibility: ^5.2.0
-  flutter_local_notifications: ^16.3.2
+  flutter_local_notifications: ^17.0.0
   flutter_pin_code_widget: ^0.1.2
-  flutter_riverpod: ^2.4.10
+  flutter_riverpod: ^2.5.1
   flutter_screenutil: ^5.0.2
   flutter_secure_storage: ^9.0.0
   flutter_svg: ^2.0.4
@@ -55,7 +55,7 @@ dependencies:
   local_auth: ^2.1.8
   lottie: ^2.3.2
   markdown_widget: ^2.3.2+3
-  overlay_support: ^2.0.1
+  overlay_support: ^2.1.0
   package_info_plus: ^4.1.0
   path_provider: ^2.0.8
   percent_indicator: ^4.2.1
@@ -65,7 +65,7 @@ dependencies:
   qr_flutter: ^4.1.0
   rating_dialog: ^2.0.3
   restart_app: ^1.1.2
-  riverpod_annotation: ^2.1.1
+  riverpod_annotation: ^2.3.5
   rxdart: ^0.27.7
   sentry_flutter: ^7.5.2
   share_plus: ^7.0.0
