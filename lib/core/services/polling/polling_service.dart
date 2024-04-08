@@ -3,11 +3,13 @@ import 'dart:async';
 import 'package:agoradesk/core/api/api_client.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_state_v1.dart';
+import 'package:agoradesk/core/app_state_v2.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/features/ads/data/models/asset.dart';
 import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
+import 'package:agoradesk/main.dart';
 import 'package:flutter/material.dart';
 
 /// Wallet data polling
@@ -34,25 +36,30 @@ class PollingService with ErrorParseMixin {
   Timer? _timer;
 
   Future init() async {
-    ///
     /// Polling balance from the server
-    ///
-    ///
-    Future.delayed(const Duration(seconds: 6)).then((value) {
-      getBalances();
-      calcAssetsPrices();
-    });
+    Future.delayed(const Duration(seconds: 6)).then((value) {});
     _timer?.cancel();
     _timer = Timer.periodic(const Duration(seconds: _kWalletPollingSeconds), (_) {
-      getBalances();
-      calcAssetsPrices();
+      updateBalanceAndPrices();
     });
+
+    /// Update assets prices signal listen
+    container.listen(appStateV2Provider, (previous, next) {
+      if (next.updateAssetsPricesSignal) {
+        _calcAssetsPrices();
+      }
+    });
+  }
+
+  Future<void> updateBalanceAndPrices() async {
+    await _getBalances();
+    await _calcAssetsPrices();
   }
 
   ///
   /// Get balances
   ///
-  Future getBalances() async {
+  Future _getBalances() async {
     if (authService.isAuthenticated) {
       if (!_loadingBalance) {
         _loadingBalance = true;
@@ -101,12 +108,11 @@ class PollingService with ErrorParseMixin {
   /// Calculate Assets prices
   ///
 
-  void calcAssetsPrices() async {
+  Future<void> _calcAssetsPrices() async {
     if (!_calculatingBalance) {
       _calculatingBalance = true;
       GetIt.I<AppParameters>().polling = true;
-      final List<double?> res = [];
-
+      final List<double> res = [];
       for (final asset in Asset.values.reversed) {
         String usdToCurrency = '';
         if (appState.currencyCode != 'USD') {
@@ -114,7 +120,7 @@ class PollingService with ErrorParseMixin {
         }
         final price = await _calcPrice(
             priceEquation: 'coingecko${asset.key().toLowerCase()}usd$usdToCurrency', currency: appState.currencyCode);
-        res.add(price);
+        res.add(price ?? 0);
       }
       appState.assetPrice = res;
       Future.delayed(const Duration(milliseconds: 500)).then((value) => GetIt.I<AppParameters>().polling = false);

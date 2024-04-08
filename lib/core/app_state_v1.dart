@@ -2,12 +2,14 @@ import 'dart:async';
 
 import 'package:agoradesk/core/app_constants.dart';
 import 'package:agoradesk/core/app_shared_prefs.dart';
+import 'package:agoradesk/core/app_state_v2.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/translations/country_info_mixin.dart';
 import 'package:agoradesk/features/account/data/models/notification_model.dart';
 import 'package:agoradesk/features/profile/models/tab_type.dart';
 import 'package:agoradesk/features/wallet/data/models/wallet_balance_model.dart';
+import 'package:agoradesk/main.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:rxdart/rxdart.dart';
@@ -174,14 +176,13 @@ class AppStateV1 extends ChangeNotifier with CountryInfoMixin {
   /// Wallet balances stream
   ///
 
-  final BehaviorSubject<List<double?>> assetPriceController = BehaviorSubject<List<double>>.seeded([]);
+  final BehaviorSubject<List<double>> assetPriceController = BehaviorSubject<List<double>>.seeded([]);
 
-  set assetPrice(List<double?> v) => assetPriceController.add(v);
+  set assetPrice(List<double> v) => assetPriceController.add(v);
 
-  List<double?> get assetPrice => assetPriceController.value;
+  List<double> get assetPrice => assetPriceController.value;
 
   ///
-
   String get currencyCode => _currencyCode;
 
   String get countryCode {
@@ -288,6 +289,13 @@ class AppStateV1 extends ChangeNotifier with CountryInfoMixin {
     await _secureStorage.delete(SecureStorageKey.pin);
   }
 
+  // change country code
+  void changeCountry(String code) {
+    countryCode = code;
+    assetPrice = [0, 0];
+    container.read(appStateV2Provider.notifier).updadeAssetsPricesSignal();
+  }
+
   void updateWith({
     Locale? locale,
     TabType? defaultTab,
@@ -317,6 +325,14 @@ class AppStateV1 extends ChangeNotifier with CountryInfoMixin {
     _connectionController.close();
     _uploadingController.close();
     _hasUnreadController.close();
+    _reloadMarketController.close();
+    _notificationsController.close();
+    _notificationsLoadingController.close();
+    _notificationsMarkedReadController.close();
+    _uploadingStatusController.close();
+    _proxyStatusController.close();
+    balanceController.close();
+    assetPriceController.close();
     EasyDebounce.cancel(_kLocaleDebounceTag);
   }
 }

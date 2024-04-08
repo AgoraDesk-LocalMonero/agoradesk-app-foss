@@ -127,6 +127,7 @@ class AppState extends State<App>
       countryCode: _countryCode,
       defaultTab: AppSharedPrefs().defaultTab,
       themeMode: AppSharedPrefs().themeMode,
+      
     );
     _api = ApiClient(
       debug: kDebugMode,
@@ -382,7 +383,7 @@ class AppState extends State<App>
           _initStartRoute();
           break;
         case AuthState.loggedIn:
-          _pollingService.getBalances();
+          _pollingService.updateBalanceAndPrices();
           _initStartRoute();
           _initLocalSettings(true);
           break;
