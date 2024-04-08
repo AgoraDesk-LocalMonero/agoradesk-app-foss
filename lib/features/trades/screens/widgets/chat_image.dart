@@ -40,6 +40,7 @@ class ChatImage extends StatelessWidget {
                 )
               : CachedNetworkImage(
                   fit: BoxFit.contain,
+                  memCacheWidth: 140,
                   httpHeaders: headers,
                   imageUrl: message.attachmentUrl ?? '',
                   placeholder: (_, __) => const SizedBox(

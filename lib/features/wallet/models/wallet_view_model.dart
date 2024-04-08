@@ -43,7 +43,7 @@ class WalletViewModel extends ViewModel with StringMixin {
   final GlobalKey<ExpansionTileCardState> tileKeyXmr = GlobalKey();
 
   late final StreamSubscription<List<WalletBalanceModel>> _balanceSubcription;
-  late final StreamSubscription<List<double>> _assetsPricesSubcription;
+  late final StreamSubscription<List<double?>> _assetsPricesSubcription;
 
   String _balanceBtc = '';
   String _addressBtc = '';
