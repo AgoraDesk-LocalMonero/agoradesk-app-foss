@@ -80,7 +80,8 @@ class MarketViewModel extends ViewModel
   late final GlobalKey<DropdownSearchState<dynamic>> onlineProviderDropdownKey;
   late final GlobalKey<DropdownSearchState<dynamic>> currencyDropdownKey;
   late final GlobalKey<DropdownSearchState<dynamic>> countryDropdownKey;
-  late final StreamSubscription<bool> subscriptionReload;
+  late final StreamSubscription<bool> _subscriptionReload;
+  late final StreamSubscription<bool> _countryChangedSignalSubscription;
 
   late TradeType _tradeType;
   double? _lon;
@@ -148,7 +149,7 @@ class MarketViewModel extends ViewModel
       notifyListeners();
     });
 
-    subscriptionReload = _appState.reloadMarket.listen((bool val) {
+    _subscriptionReload = _appState.reloadMarket.listen((bool val) {
       if (val) {
         _reloadScreenWithDelay();
       }
@@ -164,7 +165,7 @@ class MarketViewModel extends ViewModel
     defaultCurrency = CurrencyModel(code: currencyCode, name: currencyCode, altcoin: true);
     await _loadCaches();
 
-    _appState.countryChangedSignalController.stream.listen((val) {
+    _countryChangedSignalSubscription = _appState.countryChangedSignalController.stream.listen((val) {
       if (val) {
         changeSelectedCountryCodeAndCurrency(_appState.countryCode);
         indicatorKey.currentState?.show();
@@ -518,7 +519,8 @@ class MarketViewModel extends ViewModel
   void dispose() {
     ctrlAmount.dispose();
     ctrlLocation.dispose();
-    subscriptionReload.cancel();
+    _subscriptionReload.cancel();
+    _countryChangedSignalSubscription.cancel();
     super.dispose();
   }
 
