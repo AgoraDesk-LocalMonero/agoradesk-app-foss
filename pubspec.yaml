@@ -16,7 +16,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   currency_picker: ^2.0.21
   decimal: ^2.2.0
-  device_info_plus: ^10.0.1
+  device_info_plus: ^9.1.2
   dio: ^5.2.1
   dots_indicator: ^2.0.0
   dropdown_search: ^5.0.6
