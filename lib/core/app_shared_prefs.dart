@@ -42,6 +42,8 @@ enum AppSharedPrefsKey {
   marketSelectedTradeType,
   marketSelectedOnlineProvider,
   pushDeviceId,
+  tradesCount,
+  reviewAsked,
 }
 
 class AppSharedPrefs with DateMixin {
@@ -75,6 +77,8 @@ class AppSharedPrefs with DateMixin {
       _parseNotificationsSettingsType(getListStrings(AppSharedPrefsKey.notificationsSettingDisabled)) ?? [];
 
   bool? get pinIsActive => getBool(AppSharedPrefsKey.pinIsActive);
+  
+  bool get reviewAsked => getBool(AppSharedPrefsKey.reviewAsked) ?? false;
 
   bool? get i2pAddressOn => getBool(AppSharedPrefsKey.i2pAddressOn);
 
@@ -119,6 +123,8 @@ class AppSharedPrefs with DateMixin {
   DateTime? get cachedCurrencySavedDate => dateTimeFromString(getString(AppSharedPrefsKey.cachedCurrencySavedDate));
 
   List<String> get tooltipShownNames => getListStrings(AppSharedPrefsKey.tooltipShownNames) ?? [];
+
+  int get tradesCount => getInt(AppSharedPrefsKey.tradesCount) ?? 0;
 
   /// Market selected asset
   Asset get marketSelectedAsset => Asset.values
