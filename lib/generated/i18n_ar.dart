@@ -7589,6 +7589,21 @@ class I18nAr extends I18n {
   String get trade250Sbwarning250Sbconfirmations => 'لا تضع اللمسات الأخيرة حتى يحصل المشتري على تأكيدات! كانت هناك موجة من عمليات الاحتيال حيث يتم إلغاء معاملة غير مؤكدة بعد انتهاء البائع.';
 
   @override
+  String get filter250Sbtype250Sbonline8722Sbsell => 'شراء عبر الإنترنت';
+
+  @override
+  String get filter250Sbtype250Sbonline8722Sbbuy => 'بيع عبر الإنترنت';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbsell => 'شراء محليا';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbbuy => 'بيع محليا';
+
+  @override
+  String get login250Sbusername8722Sbtip8722Sbshort => 'اسم المستخدم (3-16 حرفًا)';
+
+  @override
   String get ads => 'إعلانات';
 
   @override
@@ -9514,23 +9529,40 @@ class I18nAr extends I18n {
   }
 
   @override
-  String get api_error_363 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_363 => 'لقد قدمت عنوانًا حصلت عليه من تاجر لم يقم بتحديث تنسيق عنوانه (العنوان المدمج). يُرجى إعداد محفظتك الخاصة على تطبيق مثل محافظ Cake أو Monerujo أو Feather، وتقديم هذا العنوان بدلاً من ذلك.';
 
   @override
-  String get api_error_364 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_364 => 'لقد قدمت عنوانًا حصلت عليه من تاجر لم يقم بتحديث تنسيق عنوانه (العنوان المدمج). يُرجى إعداد محفظتك الخاصة على تطبيق مثل محافظ Cake أو Monerujo أو Feather، وتقديم هذا العنوان بدلاً من ذلك.';
 
   @override
-  String get find_user => 'Find user';
+  String get find_user => 'العثور على المستخدم';
 
   @override
-  String get traderHasNoBalance => 'This trader doesn\'t have enough balance to trade at the moment.';
+  String get traderHasNoBalance => 'هذا التاجر ليس لديه رصيد كافي للتداول في الوقت الراهن.';
 
   @override
-  String get noMatchingItems => '\'No matching items.';
+  String askForAppReview(Object appName) {
+    return '$appName مدعوم من قبل الناس! يرجى تقييم التطبيق لدينا إذا كنت ترغب في ذلك. وسينضم المزيد من المتداولين، مما يؤدي إلى سوق أكثر صحة للجميع.';
+  }
 
   @override
-  String get pleaseCheckAddress => 'Please check address correctness';
+  String get askToContactWhenBadExperience => 'آسف لأنك تواجه تجربة سيئة! هل ترغب في الاتصال بفريقنا حتى نتمكن من تحسينه؟';
 
   @override
-  String get inputAddressForCalculatingFees => 'Input address for calculating fees';
+  String get dontLikeIt => 'لا أحب ذلك';
+
+  @override
+  String get loveIt => 'أحبها!';
+
+  @override
+  String get cancelAndDontAsk => 'إلغاء ولا تسأل مرة أخرى';
+
+  @override
+  String get noMatchingItems => 'لا توجد عناصر مطابقة.';
+
+  @override
+  String get pleaseCheckAddress => 'يرجى التحقق من صحة العنوان';
+
+  @override
+  String get inputAddressForCalculatingFees => 'عنوان الإدخال لحساب الرسوم';
 }

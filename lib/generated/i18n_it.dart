@@ -7589,6 +7589,21 @@ class I18nIt extends I18n {
   String get trade250Sbwarning250Sbconfirmations => 'Non finalizzare finché il tx dell\'acquirente non avrà conferme! Si è verificata un\'ondata di truffe in cui una transazione non confermata viene annullata dopo la finalizzazione da parte del venditore.';
 
   @override
+  String get filter250Sbtype250Sbonline8722Sbsell => 'Comprare on line';
+
+  @override
+  String get filter250Sbtype250Sbonline8722Sbbuy => 'Vendere on-line';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbsell => 'Acquista localmente';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbbuy => 'Vendi localmente';
+
+  @override
+  String get login250Sbusername8722Sbtip8722Sbshort => 'Nome utente (3-16 caratteri)';
+
+  @override
   String get ads => 'Annunci';
 
   @override
@@ -8414,7 +8429,7 @@ class I18nIt extends I18n {
   String get api_error_187 => 'Tentativo di fornire un elenco vuoto di ID quando si ottengono annunci in base all\'ID';
 
   @override
-  String get api_error_188 => 'Nessuno degli ID annuncio richiesti è un ID valido quando si ottengono annunci per ID';
+  String get api_error_188 => 'Nessuno degli ID annuncio richiesti è un ID valido quando si ottengono annunci in base all\'ID';
 
   @override
   String get api_error_189 => 'Non esiste uno solo degli annunci richiesti quando si ottengono annunci per ID';
@@ -9171,7 +9186,7 @@ class I18nIt extends I18n {
   String get app_ad_deleted => 'Annuncio eliminato';
 
   @override
-  String get app_verifiacetion_code_to_seller => 'Questo è il tuo codice di verifica. Puoi comunicarlo all\'acquirente in modo che possa verificare che hai finalizzato lo scambio senza che debba utilizzare il dispositivo.';
+  String get app_verifiacetion_code_to_seller => 'Questo è il tuo codice di verifica. Puoi dirlo all\'acquirente in modo che possa verificare che hai finalizzato lo scambio senza che abbia bisogno di utilizzare il dispositivo.';
 
   @override
   String get app_verification_code => 'Codice di verifica';
@@ -9514,23 +9529,40 @@ class I18nIt extends I18n {
   }
 
   @override
-  String get api_error_363 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_363 => 'Hai fornito un indirizzo ricevuto da un commerciante che non ha aggiornato il formato dell\'indirizzo (indirizzo integrato). Configura il tuo portafoglio su un\'app come i portafogli Cake, Monerujo o Feather e fornisci invece quell\'indirizzo.';
 
   @override
-  String get api_error_364 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_364 => 'Hai fornito un indirizzo ricevuto da un commerciante che non ha aggiornato il formato dell\'indirizzo (indirizzo integrato). Configura il tuo portafoglio su un\'app come i portafogli Cake, Monerujo o Feather e fornisci invece quell\'indirizzo.';
 
   @override
-  String get find_user => 'Find user';
+  String get find_user => 'Trova utente';
 
   @override
-  String get traderHasNoBalance => 'This trader doesn\'t have enough balance to trade at the moment.';
+  String get traderHasNoBalance => 'Questo trader non ha abbastanza saldo per fare trading in questo momento.';
 
   @override
-  String get noMatchingItems => '\'No matching items.';
+  String askForAppReview(Object appName) {
+    return '$appName è alimentato dalle persone! Valuta la nostra app se ti piace. Si uniranno più trader, creando un mercato più sano per tutti.';
+  }
 
   @override
-  String get pleaseCheckAddress => 'Please check address correctness';
+  String get askToContactWhenBadExperience => 'Mi spiace che tu stia vivendo una brutta esperienza! Desideri contattare il nostro team per consentirci di migliorarlo?';
 
   @override
-  String get inputAddressForCalculatingFees => 'Input address for calculating fees';
+  String get dontLikeIt => 'Non mi piace';
+
+  @override
+  String get loveIt => 'Lo adoro!';
+
+  @override
+  String get cancelAndDontAsk => 'Annulla e non chiedere più';
+
+  @override
+  String get noMatchingItems => 'Nessun articolo corrispondente.';
+
+  @override
+  String get pleaseCheckAddress => 'Si prega di verificare la correttezza dell\'indirizzo';
+
+  @override
+  String get inputAddressForCalculatingFees => 'Indirizzo di input per il calcolo delle tariffe';
 }

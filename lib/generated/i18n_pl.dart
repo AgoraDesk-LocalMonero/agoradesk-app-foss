@@ -7589,6 +7589,21 @@ class I18nPl extends I18n {
   String get trade250Sbwarning250Sbconfirmations => 'Nie finalizuj, dopóki wiadomość kupującego nie otrzyma potwierdzenia! Nastąpił gwałtowny wzrost liczby oszustw polegających na anulowaniu niepotwierdzonej transakcji po sfinalizowaniu transakcji przez sprzedawcę.';
 
   @override
+  String get filter250Sbtype250Sbonline8722Sbsell => 'Kup online';
+
+  @override
+  String get filter250Sbtype250Sbonline8722Sbbuy => 'Sprzedawaj w internecie';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbsell => 'Kupuj lokalnie';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbbuy => 'Sprzedawaj lokalnie';
+
+  @override
+  String get login250Sbusername8722Sbtip8722Sbshort => 'Nazwa użytkownika (3-16 znaków)';
+
+  @override
   String get ads => 'Ogłoszenia';
 
   @override
@@ -9514,23 +9529,40 @@ class I18nPl extends I18n {
   }
 
   @override
-  String get api_error_363 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_363 => 'Podałeś adres otrzymany od sprzedawcy, który nie zaktualizował formatu adresu (adres zintegrowany). Skonfiguruj własny portfel w aplikacji takiej jak portfele Cake, Monerujo lub Feather i zamiast tego podaj ten adres.';
 
   @override
-  String get api_error_364 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_364 => 'Podałeś adres otrzymany od sprzedawcy, który nie zaktualizował formatu adresu (adres zintegrowany). Skonfiguruj własny portfel w aplikacji takiej jak portfele Cake, Monerujo lub Feather i zamiast tego podaj ten adres.';
 
   @override
-  String get find_user => 'Find user';
+  String get find_user => 'Znajdź użytkownika';
 
   @override
-  String get traderHasNoBalance => 'This trader doesn\'t have enough balance to trade at the moment.';
+  String get traderHasNoBalance => 'Ten trader nie ma w tej chwili wystarczającego salda, aby handlować.';
 
   @override
-  String get noMatchingItems => '\'No matching items.';
+  String askForAppReview(Object appName) {
+    return '$appName jest napędzany przez ludzi! Jeśli Ci się podoba, oceń naszą aplikację. Dołączy więcej handlowców, co doprowadzi do zdrowszego rynku dla wszystkich.';
+  }
 
   @override
-  String get pleaseCheckAddress => 'Please check address correctness';
+  String get askToContactWhenBadExperience => 'Przykro nam, że masz złe doświadczenia! Czy chcesz skontaktować się z naszym zespołem, abyśmy mogli go ulepszyć?';
 
   @override
-  String get inputAddressForCalculatingFees => 'Input address for calculating fees';
+  String get dontLikeIt => 'Nie podoba mi się to';
+
+  @override
+  String get loveIt => 'Kocham to!';
+
+  @override
+  String get cancelAndDontAsk => 'Anuluj i nie pytaj ponownie';
+
+  @override
+  String get noMatchingItems => 'Brak pasujących elementów.';
+
+  @override
+  String get pleaseCheckAddress => 'Proszę sprawdzić poprawność adresu';
+
+  @override
+  String get inputAddressForCalculatingFees => 'Adres wejściowy do naliczania opłat';
 }

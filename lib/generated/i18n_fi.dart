@@ -7589,6 +7589,21 @@ class I18nFi extends I18n {
   String get trade250Sbwarning250Sbconfirmations => 'Älä viimeistele ennen kuin ostajan tx on saanut vahvistukset! On esiintynyt huijauksia, joissa vahvistamaton kauppa peruutetaan myyjän viimeistelyn jälkeen.';
 
   @override
+  String get filter250Sbtype250Sbonline8722Sbsell => 'Ostaa verkosta';
+
+  @override
+  String get filter250Sbtype250Sbonline8722Sbbuy => 'Myy verkossa';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbsell => 'Osta paikallisesti';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbbuy => 'Myy paikallisesti';
+
+  @override
+  String get login250Sbusername8722Sbtip8722Sbshort => 'Käyttäjätunnus (3-16 merkkiä)';
+
+  @override
   String get ads => 'Ilmoitukset';
 
   @override
@@ -9514,23 +9529,40 @@ class I18nFi extends I18n {
   }
 
   @override
-  String get api_error_363 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_363 => 'Olet antanut osoitteen, jonka sait kauppiaalta, joka ei ole päivittänyt osoitemuotoaan (integroitu osoite). Määritä oma lompakkosi sovelluksessa, kuten Cake-, Monerujo- tai Feather-lompakoissa, ja anna sen sijaan osoite.';
 
   @override
-  String get api_error_364 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_364 => 'Olet antanut osoitteen, jonka sait kauppiaalta, joka ei ole päivittänyt osoitemuotoaan (integroitu osoite). Määritä oma lompakkosi sovelluksessa, kuten Cake-, Monerujo- tai Feather-lompakoissa, ja anna sen sijaan osoite.';
 
   @override
-  String get find_user => 'Find user';
+  String get find_user => 'Etsi käyttäjä';
 
   @override
-  String get traderHasNoBalance => 'This trader doesn\'t have enough balance to trade at the moment.';
+  String get traderHasNoBalance => 'Tällä kauppiaalla ei ole tarpeeksi saldoa käydäkseen kauppaa tällä hetkellä.';
 
   @override
-  String get noMatchingItems => '\'No matching items.';
+  String askForAppReview(Object appName) {
+    return '$appName on ihmisten voimana! Arvioi sovelluksemme, jos pidät siitä. Lisää kauppiaita liittyy mukaan, mikä johtaa terveempään markkinoihin kaikille.';
+  }
 
   @override
-  String get pleaseCheckAddress => 'Please check address correctness';
+  String get askToContactWhenBadExperience => 'Anteeksi, että sinulla on huono kokemus! Haluatko ottaa yhteyttä tiimiimme, jotta voimme parantaa sitä?';
 
   @override
-  String get inputAddressForCalculatingFees => 'Input address for calculating fees';
+  String get dontLikeIt => 'Älä pidä siitä';
+
+  @override
+  String get loveIt => 'Rakastan sitä!';
+
+  @override
+  String get cancelAndDontAsk => 'Peruuta äläkä kysy uudelleen';
+
+  @override
+  String get noMatchingItems => 'Ei vastaavia kohteita.';
+
+  @override
+  String get pleaseCheckAddress => 'Tarkista osoitteen oikeellisuus';
+
+  @override
+  String get inputAddressForCalculatingFees => 'Syöttöosoite maksujen laskentaa varten';
 }

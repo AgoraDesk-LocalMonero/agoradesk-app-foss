@@ -7589,6 +7589,21 @@ class I18nBg extends I18n {
   String get trade250Sbwarning250Sbconfirmations => 'Не финализирайте, докато tx на купувача не получи потвърждения! Налице е вълна от измами, при които непотвърдена транзакция се анулира, след като продавачът я финализира.';
 
   @override
+  String get filter250Sbtype250Sbonline8722Sbsell => 'Купи онлайн';
+
+  @override
+  String get filter250Sbtype250Sbonline8722Sbbuy => 'Продавайте онлайн';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbsell => 'Купувайте на местно ниво';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbbuy => 'Продавайте на местно ниво';
+
+  @override
+  String get login250Sbusername8722Sbtip8722Sbshort => 'Потребителско име (3-16 знака)';
+
+  @override
   String get ads => 'реклами';
 
   @override
@@ -8267,7 +8282,7 @@ class I18nBg extends I18n {
   String get api_error_123 => 'Недостатъчни средства за финансиране на търговия';
 
   @override
-  String get api_error_124 => 'Грешка при финансиране на сделка';
+  String get api_error_124 => 'Грешка при финансиране на търговия';
 
   @override
   String get api_error_125 => 'Потребител който иска анулиране на търговия не съществува';
@@ -8612,7 +8627,7 @@ class I18nBg extends I18n {
   String get pin_enter_to_confirm_transaction => 'Въведете PIN за да потвърдите транзакцията';
 
   @override
-  String get pin_you_can_use => 'PIN трябва да е поне 4 цифри';
+  String get pin_you_can_use => 'ПИН трябва да е поне 4 цифри';
 
   @override
   String get pin_confirm => 'Потвърдете PIN';
@@ -9500,7 +9515,7 @@ class I18nBg extends I18n {
   String get api_error_273 => 'Опит за изтриване на адрес, който не съществува в адресната книга на потребителя';
 
   @override
-  String get pin_you_can_use_new => 'PIN трябва да е поне 4 цифри';
+  String get pin_you_can_use_new => 'ПИН трябва да е поне 4 цифри';
 
   @override
   String get app_default_theme => 'Задайте тема по подразбиране';
@@ -9514,23 +9529,40 @@ class I18nBg extends I18n {
   }
 
   @override
-  String get api_error_363 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_363 => 'Предоставили сте адрес, който сте получили от търговец, който не е актуализирал своя адресен формат (интегриран адрес). Моля, настройте свой собствен портфейл в приложение като портфейли Cake, Monerujo или Feather и вместо това предоставете този адрес.';
 
   @override
-  String get api_error_364 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_364 => 'Предоставили сте адрес, който сте получили от търговец, който не е актуализирал своя адресен формат (интегриран адрес). Моля, настройте свой собствен портфейл в приложение като портфейли Cake, Monerujo или Feather и вместо това предоставете този адрес.';
 
   @override
-  String get find_user => 'Find user';
+  String get find_user => 'Намерете потребител';
 
   @override
-  String get traderHasNoBalance => 'This trader doesn\'t have enough balance to trade at the moment.';
+  String get traderHasNoBalance => 'Този търговец няма достатъчно баланс за търговия в момента.';
 
   @override
-  String get noMatchingItems => '\'No matching items.';
+  String askForAppReview(Object appName) {
+    return '$appName се захранва от хората! Моля, оценете нашето приложение, ако ви харесва. Повече търговци ще се присъединят, което ще доведе до по-здрав пазар за всички.';
+  }
 
   @override
-  String get pleaseCheckAddress => 'Please check address correctness';
+  String get askToContactWhenBadExperience => 'Съжалявам, че имате лош опит! Искате ли да се свържете с нашия екип, за да можем да го подобрим?';
 
   @override
-  String get inputAddressForCalculatingFees => 'Input address for calculating fees';
+  String get dontLikeIt => 'Не ми харесва';
+
+  @override
+  String get loveIt => 'Обичам го!';
+
+  @override
+  String get cancelAndDontAsk => 'Отказ и не питай отново';
+
+  @override
+  String get noMatchingItems => 'Няма съответстващи елементи.';
+
+  @override
+  String get pleaseCheckAddress => 'Моля, проверете правилността на адреса';
+
+  @override
+  String get inputAddressForCalculatingFees => 'Адрес за въвеждане за изчисляване на таксите';
 }

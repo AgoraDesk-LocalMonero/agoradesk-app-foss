@@ -8474,7 +8474,7 @@ abstract class I18n {
   /// No description provided for @password8722Sbtip.
   ///
   /// In en, this message translates to:
-  /// **'8-72 characters.'**
+  /// **'8-72 characters'**
   String get password8722Sbtip;
 
   /// No description provided for @post8722Sbad250Sbamount8722Sbtitle.
@@ -13481,6 +13481,36 @@ abstract class I18n {
   /// **'Do not finalize until the buyer\'s tx has confirmations! There has been a surge of scams where an unconfirmed transaction is cancelled after the seller finalizes.'**
   String get trade250Sbwarning250Sbconfirmations;
 
+  /// No description provided for @filter250Sbtype250Sbonline8722Sbsell.
+  ///
+  /// In en, this message translates to:
+  /// **'Buy online'**
+  String get filter250Sbtype250Sbonline8722Sbsell;
+
+  /// No description provided for @filter250Sbtype250Sbonline8722Sbbuy.
+  ///
+  /// In en, this message translates to:
+  /// **'Sell online'**
+  String get filter250Sbtype250Sbonline8722Sbbuy;
+
+  /// No description provided for @filter250Sbtype250Sblocal8722Sbsell.
+  ///
+  /// In en, this message translates to:
+  /// **'Buy locally'**
+  String get filter250Sbtype250Sblocal8722Sbsell;
+
+  /// No description provided for @filter250Sbtype250Sblocal8722Sbbuy.
+  ///
+  /// In en, this message translates to:
+  /// **'Sell locally'**
+  String get filter250Sbtype250Sblocal8722Sbbuy;
+
+  /// No description provided for @login250Sbusername8722Sbtip8722Sbshort.
+  ///
+  /// In en, this message translates to:
+  /// **'3-16 characters'**
+  String get login250Sbusername8722Sbtip8722Sbshort;
+
   /// No description provided for @ads.
   ///
   /// In en, this message translates to:
@@ -17159,10 +17189,40 @@ abstract class I18n {
   /// **'This trader doesn\'t have enough balance to trade at the moment.'**
   String get traderHasNoBalance;
 
+  /// No description provided for @askForAppReview.
+  ///
+  /// In en, this message translates to:
+  /// **'{appName} is powered by the people! Please rate our app if you like it. More traders will join, leading to a healthier market for all.'**
+  String askForAppReview(Object appName);
+
+  /// No description provided for @askToContactWhenBadExperience.
+  ///
+  /// In en, this message translates to:
+  /// **'Sorry you\'re having a bad experience! Would you like to contact our team so that we can improve it?'**
+  String get askToContactWhenBadExperience;
+
+  /// No description provided for @dontLikeIt.
+  ///
+  /// In en, this message translates to:
+  /// **'Don\'t like it'**
+  String get dontLikeIt;
+
+  /// No description provided for @loveIt.
+  ///
+  /// In en, this message translates to:
+  /// **'Love it!'**
+  String get loveIt;
+
+  /// No description provided for @cancelAndDontAsk.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel and don\'t ask again'**
+  String get cancelAndDontAsk;
+
   /// No description provided for @noMatchingItems.
   ///
   /// In en, this message translates to:
-  /// **'\'No matching items.'**
+  /// **'No matching items.'**
   String get noMatchingItems;
 
   /// No description provided for @pleaseCheckAddress.

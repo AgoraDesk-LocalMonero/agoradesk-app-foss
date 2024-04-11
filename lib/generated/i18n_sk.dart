@@ -7589,6 +7589,21 @@ class I18nSk extends I18n {
   String get trade250Sbwarning250Sbconfirmations => 'Nedokončujte, kým TX kupujúceho nebude mať potvrdenia! Došlo k nárastu podvodov, pri ktorých je nepotvrdená transakcia zrušená po dokončení predajcu.';
 
   @override
+  String get filter250Sbtype250Sbonline8722Sbsell => 'Kúp online';
+
+  @override
+  String get filter250Sbtype250Sbonline8722Sbbuy => 'Predávajte online';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbsell => 'Nakupujte lokálne';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbbuy => 'Predajte lokálne';
+
+  @override
+  String get login250Sbusername8722Sbtip8722Sbshort => 'Používateľské meno (3 – 16 znakov)';
+
+  @override
   String get ads => 'Reklamy';
 
   @override
@@ -9320,7 +9335,7 @@ class I18nSk extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: kúp XMR ľahko';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Kúpiť alebo predávať Monero bez overenia ID. Hotovostne alebo online. Bezpečne, rýchlo, jednoducho.\n\nLocalMonero je najväčšia, najdôveryhodnejšia a osvedčená obchodná platforma P2P v komunite XMR. Nemáme žiadne šeky KYC – môžete si jednoducho kúpiť Monero anonymne bez overenia ID cez PayPal, kreditnú kartu, darčekovú kartu, hotovosť poštou alebo previesť bitcoiny, étery, USDT alebo akékoľvek iné kryptomeny na Monero – naša platforma podporuje akýkoľvek spôsob platby.\n\n- Bezpečné a plynulé obchodovanie\nPodporujeme akýkoľvek spôsob platby, akúkoľvek menu a kdekoľvek. Neodstraňujeme spôsoby platby a plne podporujeme osobné hotovostné obchody. Všetky naše obchody sú chránené arbitrážnym dlhopisom. Vďaka tomu, že pred začatím obchodu požadujeme držbu prostriedkov v rozhodcovskom dlhopise, zabezpečujeme bezproblémový a bezpečný zážitok pre kupujúceho, čo je nevyhnutné pre popularitu platformy a opakovaných zákazníkov pre predajcov.\n\n- Žiadne overenie KYC/AML alebo ID\nLocalMonero sa zaviazala zachovať jednoduchosť a priamočiarosť vašich obchodných skúseností. Nezamestnávame KYC/AML a ani to nikdy neplánujeme.\n\n- Dôveryhodné spoločenstvom\nNaša platforma funguje už viac ako štyri roky, prežila veľký krach kryptomenového trhu v roku 2018 a vďaka svojej dôslednej službe zameranej na komunitu sa stala jedným z najdôveryhodnejších mien v extrémne skeptickej komunite Monero.\n\n- Bezpečné, Open Source, Súkromie, Odolné voči cenzúre\nNaša aplikácia je bezplatná a má otvorený zdroj, čo zaisťuje, že veľa očí sa pozerá na kód aplikácie, aby sa zaistilo, že neexistujú žiadne bezpečnostné diery alebo úniky súkromia. Otvorený zdroj našej aplikácie tiež umožňuje komukoľvek mať prístup k našej aplikácii, aj keď určité úložisko aplikácie cenzuruje aplikáciu. Naša aplikácia funguje dokonca aj na telefónoch, ktoré majú Google úplne zablokovaný. Veľmi si vážime vaše súkromie, preto od vás pri registrácii nevyžadujeme ani e-mail.\n\nZdrojový kód: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nNástroj na sledovanie problémov: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Hviezdna podpora\nNáš tím podpory je rýchly, pohotový a vždy ochotný potešiť. Nikdy sme nemali lístok na podporu, ktorý by nebol zodpovedaný do 24 hodín. Sme vždy ľahko dosiahnuteľní prostredníctvom sociálnych médií, pozorne počúvame vašu kritiku a vždy implementujeme dobré návrhy používateľov v rekordnom čase.\n\nNašu podporu nájdete na: https://localmonero.co/support\n\n- Spravodlivé poplatky\nNeúčtujeme prehnané poplatky, keď vložíte alebo vyberiete Monero do/z našej peňaženky arbitrážnych dlhopisov. Neexistuje žiadny poplatok za vklad a poplatok za výber je veľmi blízko poplatku, ktorý by ste platili pri bežnej transakcii.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Kúpiť alebo predávať Monero bez overenia ID. Hotovostne alebo online. Bezpečne, rýchlo, jednoducho.\n\nLocalMonero je najväčšia, najdôveryhodnejšia a osvedčená obchodná platforma P2P v komunite XMR. Nemáme žiadne šeky KYC – môžete si jednoducho kúpiť Monero anonymne bez overenia ID cez PayPal, kreditnú kartu, darčekovú kartu, hotovosť poštou alebo previesť bitcoiny, étery, USDT alebo akékoľvek iné kryptomeny na Monero – naša platforma podporuje akýkoľvek spôsob platby.\n\n- Bezpečné a plynulé obchodovanie\nPodporujeme akýkoľvek spôsob platby, akúkoľvek menu a kdekoľvek. Neodstraňujeme spôsoby platby a plne podporujeme osobné hotovostné obchody. Všetky naše obchody sú chránené arbitrážnym dlhopisom. Vďaka tomu, že pred začatím obchodu požadujeme držbu prostriedkov v rozhodcovskom dlhopise, zabezpečujeme bezproblémový a bezpečný zážitok pre kupujúceho, čo je nevyhnutné pre popularitu platformy a opakovaných zákazníkov pre predajcov.\n\n- Žiadne overenie KYC/AML alebo ID\nLocalMonero sa zaviazala zachovať jednoduchosť a priamočiarosť vašich obchodných skúseností. Nezamestnávame KYC/AML a ani to nikdy neplánujeme.\n\n- Dôveryhodné spoločenstvom\nNaša platforma funguje už viac ako štyri roky, prežila veľký krach kryptomenového trhu v roku 2018 a vďaka svojej dôslednej službe zameranej na komunitu sa stala jedným z najdôveryhodnejších mien v extrémne skeptickej komunite Monero.\n\n- Bezpečné, Open Source, Súkromie, Odolné voči cenzúre\nNaša aplikácia je bezplatná a má otvorený zdroj, čo zaisťuje, že veľa očí sa pozerá na kód aplikácie, aby sa zaistilo, že neexistujú žiadne bezpečnostné diery alebo úniky súkromia. Otvorený zdroj našej aplikácie tiež umožňuje komukoľvek mať prístup k našej aplikácii, aj keď určité úložisko aplikácie cenzuruje aplikáciu. Naša aplikácia funguje dokonca aj na telefónoch, ktoré majú Google úplne zablokovaný. Veľmi si vážime vaše súkromie, preto od vás pri registrácii nevyžadujeme ani e-mail.\n\nZdrojový kód: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nSledovač problémov: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Hviezdna podpora\nNáš tím podpory je rýchly, pohotový a vždy ochotný potešiť. Nikdy sme nemali lístok na podporu, ktorý by nebol zodpovedaný do 24 hodín. Sme vždy ľahko dosiahnuteľní prostredníctvom sociálnych médií, pozorne počúvame vašu kritiku a vždy implementujeme dobré návrhy používateľov v rekordnom čase.\n\nNašu podporu nájdete na: https://localmonero.co/support\n\n- Spravodlivé poplatky\nNeúčtujeme prehnané poplatky, keď vložíte alebo vyberiete Monero do/z našej peňaženky arbitrážnych dlhopisov. Neexistuje žiadny poplatok za vklad a poplatok za výber je veľmi blízko poplatku, ktorý by ste zaplatili pri bežnej transakcii.';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: súkromná kúpa XMR';
@@ -9514,23 +9529,40 @@ class I18nSk extends I18n {
   }
 
   @override
-  String get api_error_363 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_363 => 'Zadali ste adresu, ktorú ste dostali od obchodníka, ktorý neaktualizoval svoj formát adresy (integrovaná adresa). Nastavte si svoju vlastnú peňaženku v aplikácii, ako sú Cake, Monerujo alebo Feather peňaženky, a uveďte túto adresu.';
 
   @override
-  String get api_error_364 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_364 => 'Zadali ste adresu, ktorú ste dostali od obchodníka, ktorý neaktualizoval svoj formát adresy (integrovaná adresa). Nastavte si svoju vlastnú peňaženku v aplikácii, ako sú Cake, Monerujo alebo Feather peňaženky, a uveďte túto adresu.';
 
   @override
-  String get find_user => 'Find user';
+  String get find_user => 'Nájsť používateľa';
 
   @override
-  String get traderHasNoBalance => 'This trader doesn\'t have enough balance to trade at the moment.';
+  String get traderHasNoBalance => 'Tento obchodník momentálne nemá dostatočný zostatok na obchodovanie.';
 
   @override
-  String get noMatchingItems => '\'No matching items.';
+  String askForAppReview(Object appName) {
+    return '$appName je poháňaný ľuďmi! Ohodnoťte našu aplikáciu, ak sa vám páči. Pripojí sa viac obchodníkov, čo povedie k zdravšiemu trhu pre všetkých.';
+  }
 
   @override
-  String get pleaseCheckAddress => 'Please check address correctness';
+  String get askToContactWhenBadExperience => 'Je nám ľúto, že máte zlú skúsenosť! Chceli by ste kontaktovať náš tím, aby sme ho mohli zlepšiť?';
 
   @override
-  String get inputAddressForCalculatingFees => 'Input address for calculating fees';
+  String get dontLikeIt => 'Nepáči sa mi to';
+
+  @override
+  String get loveIt => 'Milujem to!';
+
+  @override
+  String get cancelAndDontAsk => 'Zrušiť a už sa nepýtať';
+
+  @override
+  String get noMatchingItems => 'Žiadne zodpovedajúce položky.';
+
+  @override
+  String get pleaseCheckAddress => 'Skontrolujte správnosť adresy';
+
+  @override
+  String get inputAddressForCalculatingFees => 'Vstupná adresa pre výpočet poplatkov';
 }

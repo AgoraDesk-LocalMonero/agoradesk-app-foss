@@ -7589,6 +7589,21 @@ class I18nFr extends I18n {
   String get trade250Sbwarning250Sbconfirmations => 'Ne finalisez pas tant que la transmission de l\'acheteur n\'a pas de confirmation ! Il y a eu une vague d\'escroqueries dans lesquelles une transaction non confirmée est annulée une fois finalisée par le vendeur.';
 
   @override
+  String get filter250Sbtype250Sbonline8722Sbsell => 'Acheter en ligne';
+
+  @override
+  String get filter250Sbtype250Sbonline8722Sbbuy => 'Vendre en ligne';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbsell => 'Acheter localement';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbbuy => 'Vendre localement';
+
+  @override
+  String get login250Sbusername8722Sbtip8722Sbshort => 'Nom d\'utilisateur (3-16 caractères)';
+
+  @override
   String get ads => 'Annonces';
 
   @override
@@ -9514,23 +9529,40 @@ class I18nFr extends I18n {
   }
 
   @override
-  String get api_error_363 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_363 => 'Vous avez fourni une adresse que vous avez obtenue auprès d\'un commerçant qui n\'a pas mis à jour son format d\'adresse (adresse intégrée). Veuillez configurer votre propre portefeuille sur une application telle que les portefeuilles Cake, Monerujo ou Feather, et fournir cette adresse à la place.';
 
   @override
-  String get api_error_364 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_364 => 'Vous avez fourni une adresse que vous avez obtenue auprès d\'un commerçant qui n\'a pas mis à jour son format d\'adresse (adresse intégrée). Veuillez configurer votre propre portefeuille sur une application telle que les portefeuilles Cake, Monerujo ou Feather, et fournir cette adresse à la place.';
 
   @override
-  String get find_user => 'Find user';
+  String get find_user => 'Trouver un utilisateur';
 
   @override
-  String get traderHasNoBalance => 'This trader doesn\'t have enough balance to trade at the moment.';
+  String get traderHasNoBalance => 'Ce trader n\'a pas suffisamment de solde pour négocier pour le moment.';
 
   @override
-  String get noMatchingItems => '\'No matching items.';
+  String askForAppReview(Object appName) {
+    return '$appName est propulsé par les gens ! Veuillez évaluer notre application si vous l\'aimez. Davantage de commerçants s\'y joindront, ce qui conduira à un marché plus sain pour tous.';
+  }
 
   @override
-  String get pleaseCheckAddress => 'Please check address correctness';
+  String get askToContactWhenBadExperience => 'Désolé, vous vivez une mauvaise expérience ! Vous souhaitez contacter notre équipe afin que nous puissions l’améliorer ?';
 
   @override
-  String get inputAddressForCalculatingFees => 'Input address for calculating fees';
+  String get dontLikeIt => 'Je n\'aime pas ça';
+
+  @override
+  String get loveIt => 'Aimer!';
+
+  @override
+  String get cancelAndDontAsk => 'Annulez et ne demandez plus';
+
+  @override
+  String get noMatchingItems => 'Aucun élément correspondant.';
+
+  @override
+  String get pleaseCheckAddress => 'Veuillez vérifier l\'exactitude de l\'adresse';
+
+  @override
+  String get inputAddressForCalculatingFees => 'Adresse de saisie pour le calcul des frais';
 }

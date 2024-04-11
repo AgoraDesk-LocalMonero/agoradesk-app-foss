@@ -2873,7 +2873,7 @@ class I18nSl extends I18n {
   String get guide250Sbmnemonic250Sbtitle => 'Kako obnoviti denarnico za neskrbniško poravnavo iz mnemoničnega semena?';
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1 => 'Pojdite na <a target=\"_blank\" href=\"/\" class=\"next-link\">glavno stran</a> - videli boste najboljše ponudbe za vašo privzeto regijo. Rezultate lahko izboljšate tako, da v iskalno polje vnesete želeni znesek, ki ga želite opraviti, nato pa izberete, s katero valuto želite opraviti transakcijo, državo in želeno plačilno sredstvo (izberite »Vse spletne ponudbe«, če niste prepričani, katero plačilno sredstvo želite uporabiti).';
+  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1 => 'Pojdite na <a target=\"_blank\" href=\"/\" class=\"next-link\">glavno stran</a> - videli boste najboljše ponudbe za vašo privzeto regijo. Rezultate lahko izboljšate tako, da v iskalno polje vnesete želeni znesek transakcije, nato pa izberete, s katero valuto želite opraviti transakcijo, državo in želeno plačilno sredstvo (izberite »Vse spletne ponudbe«, če niste prepričani, katero plačilno sredstvo želite uporabiti).';
 
   @override
   String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1250Sb1 => 'S seznama oglasov izberite enega od trgovalcev z velikim številom poslov in dobro oceno ugleda (prikazano v oklepajih poleg uporabniškega imena). Zeleni krog pomeni, da je bil trgovec danes aktiven; rumeni krog pomeni, da je ta teden obiskal spletno mesto; siv krog pa pomeni, da ga ni bilo več kot teden dni. Za več informacij o oglasu lahko kliknete gumb \"Kupi\".';
@@ -7589,6 +7589,21 @@ class I18nSl extends I18n {
   String get trade250Sbwarning250Sbconfirmations => 'Ne dokončajte, dokler kupčevo sporočilo ne prejme potrditve! Prišlo je do porasta goljufij, pri katerih je nepotrjena transakcija preklicana, potem ko jo prodajalec zaključi.';
 
   @override
+  String get filter250Sbtype250Sbonline8722Sbsell => 'Kupiti na spletu';
+
+  @override
+  String get filter250Sbtype250Sbonline8722Sbbuy => 'Prodaja preko spleta';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbsell => 'Kupujte lokalno';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbbuy => 'Prodaja lokalno';
+
+  @override
+  String get login250Sbusername8722Sbtip8722Sbshort => 'Uporabniško ime (3-16 znakov)';
+
+  @override
   String get ads => 'Oglasi';
 
   @override
@@ -8201,7 +8216,7 @@ class I18nSl extends I18n {
   String get api_error_98 => 'Poskus ustvarjanja trde-a za oglas, katerega plakat ne obstaja';
 
   @override
-  String get api_error_99 => 'Poskuša zahtevati višji znesek, kot dovoljuje lastnik oglasa pri ustvarjanju prvega posla';
+  String get api_error_99 => 'Poskus zahtevati višji znesek, kot ga dovoljuje lastnik oglasa pri ustvarjanju prvega posla';
 
   @override
   String get api_error_100 => 'Za ustvarjanje trgovanja ni mogoče zahtevati manj kot 0,0000000001 XMR';
@@ -8267,7 +8282,7 @@ class I18nSl extends I18n {
   String get api_error_123 => 'Nezadostna sredstva za financiranje trgovine';
 
   @override
-  String get api_error_124 => 'Napaka pri financiranju posla';
+  String get api_error_124 => 'Napaka pri financiranju trgovine';
 
   @override
   String get api_error_125 => 'Uporabnik, ki zahteva preklic trgovanja, ne obstaja';
@@ -9514,23 +9529,40 @@ class I18nSl extends I18n {
   }
 
   @override
-  String get api_error_363 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_363 => 'Navedli ste naslov, ki ste ga dobili od trgovca, ki ni posodobil svoje oblike naslova (integriran naslov). Nastavite svojo denarnico v aplikaciji, kot je denarnica Cake, Monerujo ali Feather, in namesto nje navedite ta naslov.';
 
   @override
-  String get api_error_364 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_364 => 'Navedli ste naslov, ki ste ga dobili od trgovca, ki ni posodobil svoje oblike naslova (integriran naslov). Nastavite svojo denarnico v aplikaciji, kot je denarnica Cake, Monerujo ali Feather, in namesto nje navedite ta naslov.';
 
   @override
-  String get find_user => 'Find user';
+  String get find_user => 'Najdi uporabnika';
 
   @override
-  String get traderHasNoBalance => 'This trader doesn\'t have enough balance to trade at the moment.';
+  String get traderHasNoBalance => 'Ta trgovec trenutno nima dovolj sredstev za trgovanje.';
 
   @override
-  String get noMatchingItems => '\'No matching items.';
+  String askForAppReview(Object appName) {
+    return '$appName poganjajo ljudje! Ocenite našo aplikacijo, če vam je všeč. Pridružilo se bo več trgovcev, kar bo vodilo k bolj zdravemu trgu za vse.';
+  }
 
   @override
-  String get pleaseCheckAddress => 'Please check address correctness';
+  String get askToContactWhenBadExperience => 'Žal imate slabo izkušnjo! Ali želite stopiti v stik z našo ekipo, da jo izboljšamo?';
 
   @override
-  String get inputAddressForCalculatingFees => 'Input address for calculating fees';
+  String get dontLikeIt => 'Ni mi všeč';
+
+  @override
+  String get loveIt => 'Všeč mi je!';
+
+  @override
+  String get cancelAndDontAsk => 'Prekliči in ne sprašuj več';
+
+  @override
+  String get noMatchingItems => 'Ni ustreznih predmetov.';
+
+  @override
+  String get pleaseCheckAddress => 'Preverite pravilnost naslova';
+
+  @override
+  String get inputAddressForCalculatingFees => 'Vnosni naslov za izračun nadomestil';
 }

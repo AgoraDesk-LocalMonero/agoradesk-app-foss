@@ -7589,6 +7589,21 @@ class I18nEl extends I18n {
   String get trade250Sbwarning250Sbconfirmations => 'Μην οριστικοποιήσετε έως ότου το tx του αγοραστή έχει επιβεβαιώσεις! Υπήρξε ένα κύμα απατών όπου μια μη επιβεβαιωμένη συναλλαγή ακυρώνεται μετά την οριστικοποίηση του πωλητή.';
 
   @override
+  String get filter250Sbtype250Sbonline8722Sbsell => 'Αγοράζω απο το Ιντερνετ';
+
+  @override
+  String get filter250Sbtype250Sbonline8722Sbbuy => 'Πουλήστε online';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbsell => 'Αγοράστε τοπικά';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbbuy => 'Πουλήστε τοπικά';
+
+  @override
+  String get login250Sbusername8722Sbtip8722Sbshort => 'Όνομα χρήστη (3-16 χαρακτήρες)';
+
+  @override
   String get ads => 'Διαφημίσεις';
 
   @override
@@ -9514,23 +9529,40 @@ class I18nEl extends I18n {
   }
 
   @override
-  String get api_error_363 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_363 => 'Δώσατε μια διεύθυνση που λάβατε από έναν έμπορο που δεν έχει ενημερώσει τη μορφή διεύθυνσης (ενσωματωμένη διεύθυνση). Ρυθμίστε το δικό σας πορτοφόλι σε μια εφαρμογή όπως τα πορτοφόλια Cake, Monerujo ή Feather και καταχωρίστε αυτήν τη διεύθυνση.';
 
   @override
-  String get api_error_364 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_364 => 'Δώσατε μια διεύθυνση που λάβατε από έναν έμπορο που δεν έχει ενημερώσει τη μορφή διεύθυνσης (ενσωματωμένη διεύθυνση). Ρυθμίστε το δικό σας πορτοφόλι σε μια εφαρμογή όπως τα πορτοφόλια Cake, Monerujo ή Feather και καταχωρίστε αυτήν τη διεύθυνση.';
 
   @override
-  String get find_user => 'Find user';
+  String get find_user => 'Εύρεση χρήστη';
 
   @override
-  String get traderHasNoBalance => 'This trader doesn\'t have enough balance to trade at the moment.';
+  String get traderHasNoBalance => 'Αυτός ο έμπορος δεν έχει αρκετό υπόλοιπο για συναλλαγές αυτή τη στιγμή.';
 
   @override
-  String get noMatchingItems => '\'No matching items.';
+  String askForAppReview(Object appName) {
+    return 'Το $appName τροφοδοτείται από τον κόσμο! Βαθμολογήστε την εφαρμογή μας αν σας αρέσει. Θα συμμετάσχουν περισσότεροι έμποροι, οδηγώντας σε μια πιο υγιή αγορά για όλους.';
+  }
 
   @override
-  String get pleaseCheckAddress => 'Please check address correctness';
+  String get askToContactWhenBadExperience => 'Συγγνώμη που έχετε μια κακή εμπειρία! Θα θέλατε να επικοινωνήσετε με την ομάδα μας για να τη βελτιώσουμε;';
 
   @override
-  String get inputAddressForCalculatingFees => 'Input address for calculating fees';
+  String get dontLikeIt => 'Δεν μου αρέσει';
+
+  @override
+  String get loveIt => 'Το λατρεύω!';
+
+  @override
+  String get cancelAndDontAsk => 'Ακυρώστε και μην ρωτήσετε ξανά';
+
+  @override
+  String get noMatchingItems => 'Δεν υπάρχουν στοιχεία που να ταιριάζουν.';
+
+  @override
+  String get pleaseCheckAddress => 'Ελέγξτε την ορθότητα της διεύθυνσης';
+
+  @override
+  String get inputAddressForCalculatingFees => 'Εισαγωγή διεύθυνσης για τον υπολογισμό των τελών';
 }

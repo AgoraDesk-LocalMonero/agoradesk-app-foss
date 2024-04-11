@@ -7589,6 +7589,21 @@ class I18nTl extends I18n {
   String get trade250Sbwarning250Sbconfirmations => 'Huwag i-finalize hanggang sa may confirmations ang tx ng buyer! Nagkaroon ng surge ng mga scam kung saan ang isang hindi kumpirmadong transaksyon ay kinansela pagkatapos ma-finalize ng nagbebenta.';
 
   @override
+  String get filter250Sbtype250Sbonline8722Sbsell => 'Bumili online';
+
+  @override
+  String get filter250Sbtype250Sbonline8722Sbbuy => 'Magbenta online';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbsell => 'Bumili ng lokal';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbbuy => 'Ibenta sa lokal';
+
+  @override
+  String get login250Sbusername8722Sbtip8722Sbshort => 'Username (3-16 character)';
+
+  @override
   String get ads => 'Mga ad';
 
   @override
@@ -7928,7 +7943,7 @@ class I18nTl extends I18n {
   String get api_error_73 => 'Ang password na ibinigay sa panahon ng kahilingan sa pag-withdraw ay hindi tama';
 
   @override
-  String get api_error_74 => 'Hindi sapat na pondo para magsagawa ng withdrawal para sa hiniling na halaga';
+  String get api_error_74 => 'Hindi sapat na pondo para magsagawa ng withdrawal para sa hinihiling na halaga';
 
   @override
   String get api_error_75 => 'Pagtatangkang mag-withdraw ng mga pondo sa isang panloob na address na hindi umiiral';
@@ -7937,7 +7952,7 @@ class I18nTl extends I18n {
   String get api_error_76 => 'Pagtatangkang mag-withdraw ng mga pondo sa parehong account tulad ng account na humihiling ng withdrawal';
 
   @override
-  String get api_error_77 => 'Hindi sapat na pondo upang magsagawa ng panloob na paglipat para sa hiniling na halaga';
+  String get api_error_77 => 'Hindi sapat na pondo para magsagawa ng internal transfer para sa hiniling na halaga';
 
   @override
   String get api_error_103 => 'Humihiling ng trade para sa ad kung sino ang poster na nagbebenta ng bakasyon';
@@ -8318,7 +8333,7 @@ class I18nTl extends I18n {
   String get api_error_144 => 'Sinusubukang magtakda ng limitasyon sa fiat na mas mababa sa minAmount kapag nag-a-update ng ad';
 
   @override
-  String get api_error_145 => 'Sinusubukang magtakda ng limitasyon ng fiat na higit sa maxAmount kapag nag-a-update ng ad';
+  String get api_error_145 => 'Sinusubukang magtakda ng limitasyon sa fiat na higit sa maxAmount kapag nag-a-update ng ad';
 
   @override
   String get api_error_147 => 'Pagtatangkang kumuha ng data ng kaakibat para sa user na hindi pinagana ang programang kaakibat';
@@ -8330,7 +8345,7 @@ class I18nTl extends I18n {
   String get api_error_149 => 'Hindi tinukoy ang priyoridad para sa panlabas na pag-withdraw';
 
   @override
-  String get api_error_150 => 'Pagtatangkang magsimula ng trade sa isang ad kung saan ang humihiling na user ay hinarangan ng ad poster';
+  String get api_error_150 => 'Pagtatangkang magsimula ng kalakalan sa isang ad kung saan ang humihiling na user ay hinarangan ng ad poster';
 
   @override
   String get api_error_151 => 'Pagtatangkang magsimula ng trade sa isang ad kung saan ang humihiling na user ay hindi pinagkakatiwalaan ng ad poster';
@@ -8381,13 +8396,13 @@ class I18nTl extends I18n {
   String get api_error_166 => 'Pagtatangkang mag-ehersisyo gamit ang net settlement sa isang kalakalan na wala';
 
   @override
-  String get api_error_167 => 'Ang kasalukuyang presyo sa merkado ay mas mababa sa o katumbas ng presyo ng ehersisyo kapag kumita ng isang CALL trade. Ang kalakalan ay out-of-the-money sa pamamagitan ng mga pamantayan ng merkado, samakatuwid ay hindi maaaring netted. Gumamit ng normal na settlement kung kinakailangan.';
+  String get api_error_167 => 'Ang kasalukuyang presyo sa merkado ay mas mababa sa o katumbas ng presyo ng ehersisyo kapag kumita ng CALL trade. Ang kalakalan ay out-of-the-money sa pamamagitan ng mga pamantayan ng merkado, samakatuwid ay hindi maaaring netted. Gumamit ng normal na settlement kung kinakailangan.';
 
   @override
   String get api_error_168 => 'Ang user na humihiling na kumpirmahin ang pagbabayad ng saklaw ng kalakalan ay hindi umiiral';
 
   @override
-  String get api_error_169 => 'Sinusubukang kumpirmahin ang bayad na bayad para sa isang kalakalan na hindi umiiral';
+  String get api_error_169 => 'Sinusubukang kumpirmahin ang bayad na bayad para sa isang trade na hindi umiiral';
 
   @override
   String get api_error_172 => 'Pagtatangkang mag-post ng ad kung saan ang asset ay kapareho ng currency ng ad';
@@ -8420,7 +8435,7 @@ class I18nTl extends I18n {
   String get api_error_189 => 'Wala ni isa sa mga hiniling na ad ang umiiral kapag kumukuha ng mga ad sa pamamagitan ng ID';
 
   @override
-  String get api_error_190 => 'Sinusubukang magbigay ng walang laman na listahan ng mga ID kapag kumukuha ng mga trade sa pamamagitan ng ID';
+  String get api_error_190 => 'Sinusubukang magbigay ng walang laman na listahan ng mga ID kapag nakakakuha ng mga trade sa pamamagitan ng ID';
 
   @override
   String get api_error_191 => 'Sinusubukang makakuha ng higit sa 50 ad kapag nakakakuha ng mga trade sa pamamagitan ng ID';
@@ -8609,7 +8624,7 @@ class I18nTl extends I18n {
   String get pin_enter => 'Ilagay ang PIN';
 
   @override
-  String get pin_enter_to_confirm_transaction => 'Ilagay ang PIN para kumpirmahin ang transaksyon';
+  String get pin_enter_to_confirm_transaction => 'Ipasok ang PIN upang kumpirmahin ang transaksyon';
 
   @override
   String get pin_you_can_use => 'Dapat na hindi bababa sa 4 na digit ang PIN';
@@ -9011,7 +9026,7 @@ class I18nTl extends I18n {
 
   @override
   String affiliate__enabled(Object refCode, Object appName) {
-    return 'Ang iyong affiliate program ay pinagana, at maaari kang makakuha ng mga komisyon sa pamamagitan ng pagdaragdag ng iyong affiliate tag $refCode sa anumang $appName URL.';
+    return 'Naka-enable ang iyong affiliate program, at maaari kang makakuha ng mga komisyon sa pamamagitan ng pagdaragdag ng iyong affiliate tag $refCode sa anumang $appName URL.';
   }
 
   @override
@@ -9311,7 +9326,7 @@ class I18nTl extends I18n {
   String get app_scan_qr_code => 'I-scan ang QR code';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sbagoradesk => 'Bumili o magbenta ng Bitcoin nang hindi nagpapakilala, nang walang pag-verify ng ID. Cash o online. Ligtas, mabilis, madali.\n\nNag-iisip kung paano mamuhunan sa Bitcoin? Sa AgoraDesk, ang pagbili ng mga bitcoin ay hindi kailanman naging mas madali - agad na bumili ng BTC mula sa isang tao gamit ang iyong paboritong online na paraan ng pagbabayad: PayPal, credit/debit card o bank transfer, gift card, Venmo o anumang iba pa. Kung gusto mong bumili ng mga bitcoin na malapit sa iyo gamit ang cash, makakahanap ka ng isang taong handang magbenta ng mga bitcoin nang lokal - sinusuportahan ng trading platform ang pagbili at pagbebenta ng BTC gamit ang cash. Maaari ka ring bumili ng mga bitcoin gamit ang cash sa pamamagitan ng koreo.\n\n- Ligtas at Smooth Trading\nTulad ng LocalBitcoins, sinusuportahan namin ang anumang paraan ng pagbabayad, anumang pera, kahit saan. Hindi kami nag-aalis ng mga paraan ng pagbabayad, at, hindi tulad ng LocalBitcoins, ganap naming sinusuportahan ang face-to-face na cash trade. Ang lahat ng aming mga kalakalan ay protektado ng isang arbitration bond. Salamat sa katotohanan na kailangan namin ng mga pondo na itago sa arbitration bond bago magsimula ang isang kalakalan, tinitiyak namin ang maayos at ligtas na karanasan para sa mamimili, na mahalaga para sa katanyagan ng platform at mga umuulit na customer para sa mga nagbebenta.\n\n- Walang KYC/AML o ID Verification\nAng AgoraDesk ay nakatuon sa pagpapanatili ng pagiging simple at pagiging diretso na naging dahilan ng pagiging popular ng orihinal na LocalBitcoins. Hindi kami gumagamit ng KYC/AML, ni hindi namin pinaplanong gawin ito.\n\n- Pinagkakatiwalaan ng Komunidad\nAng aming platform ay gumana nang mahigit apat na taon, nakaligtas sa Great Cryptocurrency Market Crash ng 2018, at sa pamamagitan ng masigasig na serbisyong nakatuon sa komunidad ay naging isa sa mga pinakapinagkakatiwalaang pangalan sa lubhang may pag-aalinlangan na komunidad ng cryptocurrency.\n\n- Secure, Open Source, Privacy-Centric, Censorship-Resistant\nAng aming app ay libre at open source, na nagsisiguro na maraming mga mata ang tumitingin sa code ng app upang matiyak na walang mga butas sa seguridad o mga pagtagas sa privacy. Binibigyang-daan din ng open sourcing ang aming app ang sinuman na magkaroon ng access sa aming app kahit na sine-censor ng isang partikular na repositoryo ng app ang app. Gumagana pa nga ang aming app sa mga teleponong ganap na na-block ng Google. Lubos naming pinahahalagahan ang iyong privacy, hindi ka namin hinihiling na magbigay ng email kapag nagrerehistro.\n\nSource code: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nTagasubaybay ng isyu: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellar Support\nAng aming team ng suporta ay mabilis, tumutugon at laging sabik na pasayahin. Wala pa kaming support ticket na hindi nasagot sa loob ng 24 na oras. Palagi kaming madaling maabot sa pamamagitan ng social media, masinsinan kaming nakikinig sa iyong mga kritisismo at palagi kaming nagpapatupad ng magagandang suhestiyon ng user sa oras.\n\nMaaari mong maabot ang aming suporta sa: https://agoradesk.com/support\n\n- Mga Patas na Bayarin\nHindi kami naniningil ng labis na bayad kapag nagdeposito o nag-withdraw ka ng Bitcoins papunta/mula sa aming wallet ng arbitration bond. Walang bayad sa deposito, at ang bayad sa pag-withdraw ay napakalapit sa bayad na babayaran mo sa isang normal na transaksyon.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sbagoradesk => 'Bumili o magbenta ng Bitcoin nang hindi nagpapakilala, nang walang pag-verify ng ID. Cash o online. Ligtas, mabilis, madali.\n\nNag-iisip kung paano mamuhunan sa Bitcoin? Sa AgoraDesk, ang pagbili ng mga bitcoin ay hindi kailanman naging mas madali - agad na bumili ng BTC mula sa isang tao gamit ang iyong paboritong online na paraan ng pagbabayad: PayPal, credit/debit card o bank transfer, gift card, Venmo o anumang iba pa. Kung gusto mong bumili ng mga bitcoin na malapit sa iyo gamit ang cash, makakahanap ka ng isang taong handang magbenta ng mga bitcoin nang lokal - sinusuportahan ng trading platform ang pagbili at pagbebenta ng BTC gamit ang cash. Maaari ka ring bumili ng mga bitcoin gamit ang cash sa pamamagitan ng koreo.\n\n- Ligtas at Smooth Trading\nTulad ng LocalBitcoins, sinusuportahan namin ang anumang paraan ng pagbabayad, anumang pera, kahit saan. Hindi kami nag-aalis ng mga paraan ng pagbabayad, at, hindi tulad ng LocalBitcoins, ganap naming sinusuportahan ang face-to-face na cash trade. Ang lahat ng aming mga kalakalan ay protektado ng isang arbitration bond. Salamat sa katotohanan na kailangan namin ng mga pondo na itago sa arbitration bond bago magsimula ang isang kalakalan, tinitiyak namin ang maayos at ligtas na karanasan para sa mamimili, na mahalaga para sa katanyagan ng platform at mga umuulit na customer para sa mga nagbebenta.\n\n- Walang KYC/AML o ID Verification\nAng AgoraDesk ay nakatuon sa pagpapanatili ng pagiging simple at straight-forwardness na nagpasikat sa orihinal na LocalBitcoins. Hindi kami gumagamit ng KYC/AML, ni hindi namin pinaplanong gawin ito.\n\n- Pinagkakatiwalaan ng Komunidad\nAng aming platform ay gumana nang mahigit apat na taon, nakaligtas sa Great Cryptocurrency Market Crash ng 2018, at sa pamamagitan ng masigasig na serbisyong nakatuon sa komunidad ay naging isa sa mga pinakapinagkakatiwalaang pangalan sa lubhang may pag-aalinlangan na komunidad ng cryptocurrency.\n\n- Secure, Open Source, Privacy-Centric, Censorship-Resistant\nAng aming app ay libre at open source, na nagsisiguro na maraming mga mata ang tumitingin sa code ng app upang matiyak na walang mga butas sa seguridad o mga pagtagas sa privacy. Binibigyang-daan din ng open sourcing ang aming app ang sinuman na magkaroon ng access sa aming app kahit na sine-censor ng isang partikular na repositoryo ng app ang app. Gumagana pa nga ang aming app sa mga teleponong ganap na na-block ng Google. Lubos naming pinahahalagahan ang iyong privacy, hindi ka namin hinihiling na magbigay ng email kapag nagrerehistro.\n\nSource code: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nTagasubaybay ng isyu: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellar Support\nAng aming team ng suporta ay mabilis, tumutugon at laging sabik na pasayahin. Wala pa kaming support ticket na hindi nasagot sa loob ng 24 na oras. Palagi kaming madaling maabot sa pamamagitan ng social media, masinsinan kaming nakikinig sa iyong mga kritisismo at palagi kaming nagpapatupad ng magagandang suhestiyon ng user sa oras.\n\nMaaari mong maabot ang aming suporta sa: https://agoradesk.com/support\n\n- Mga Patas na Bayarin\nHindi kami naniningil ng labis na bayad kapag nagdeposito o nag-withdraw ka ng Bitcoins papunta/mula sa aming wallet ng arbitration bond. Walang bayad sa deposito, at ang bayad sa pag-withdraw ay napakalapit sa bayad na babayaran mo sa isang normal na transaksyon.';
 
   @override
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: bumily ng BTC';
@@ -9332,7 +9347,7 @@ class I18nTl extends I18n {
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: bumily ng BTC';
 
   @override
-  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sbagoradesk => 'Bumili o magbenta ng Bitcoin nang walang pag-verify ng ID. Cash o online.\n\nNag-iisip kung paano mamuhunan sa Bitcoin? Sa AgoraDesk, ang pagbili ng mga bitcoin ay hindi kailanman naging mas madali - agad na bumili ng BTC mula sa isang tao gamit ang iyong paboritong online na paraan ng pagbabayad: PayPal, credit/debit card o bank transfer, gift card, Venmo o anumang iba pa. Kung gusto mong bumili ng mga bitcoin na malapit sa iyo gamit ang cash, makakahanap ka ng isang taong handang magbenta ng mga bitcoin nang lokal - sinusuportahan ng trading platform ang pagbili at pagbebenta ng BTC gamit ang cash. Maaari ka ring bumili ng mga bitcoin gamit ang cash sa pamamagitan ng koreo.\n\n- Ligtas at Smooth Trading\nTulad ng LocalBitcoins, sinusuportahan namin ang anumang paraan ng pagbabayad, anumang pera, kahit saan. Hindi kami nag-aalis ng mga paraan ng pagbabayad, at, hindi tulad ng LocalBitcoins, ganap naming sinusuportahan ang face-to-face na cash trade. Ang lahat ng aming mga kalakalan ay protektado ng isang arbitration bond. Salamat sa katotohanang nangangailangan kami ng mga pondo na mailagay sa arbitration bond bago magsimula ang isang kalakalan, tinitiyak namin ang isang maayos at ligtas na karanasan para sa mamimili, na mahalaga para sa katanyagan ng platform at umuulit na mga customer para sa mga nagbebenta.\n\n- Walang KYC/AML o ID Verification\nAng AgoraDesk ay nakatuon sa pagpapanatili ng pagiging simple at pagiging diretso na naging dahilan ng pagiging popular ng orihinal na LocalBitcoins. Hindi kami gumagamit ng KYC/AML, ni hindi namin pinaplanong gawin ito.\n\n- Pinagkakatiwalaan ng Komunidad\nAng aming platform ay gumana nang higit sa apat na taon, nakaligtas sa Great Cryptocurrency Market Crash ng 2018, at sa pamamagitan ng masigasig na serbisyong nakatuon sa komunidad ay naging isa sa mga pinakapinagkakatiwalaang pangalan sa lubhang may pag-aalinlangan na komunidad ng cryptocurrency.\n\n- Secure, Open Source, Privacy-Centric, Censorship-Resistant\nAng aming app ay libre at open source, na nagsisiguro na maraming mga mata ang tumitingin sa code ng app upang matiyak na walang mga butas sa seguridad o mga pagtagas sa privacy. Binibigyang-daan din ng open sourcing ang aming app ang sinuman na magkaroon ng access sa aming app kahit na sine-censor ng isang partikular na repositoryo ng app ang app. Gumagana pa nga ang aming app sa mga teleponong ganap na na-block ng Google. Lubos naming pinahahalagahan ang iyong privacy, hindi ka namin hinihiling na magbigay ng email kapag nagrerehistro.\n\nSource code: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nTagasubaybay ng isyu: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellar Support\nAng aming team ng suporta ay mabilis, tumutugon at laging sabik na pasayahin. Wala pa kaming support ticket na hindi nasagot sa loob ng 24 na oras. Palagi kaming madaling maabot sa pamamagitan ng social media, masinsinan kaming nakikinig sa iyong mga kritisismo at palagi kaming nagpapatupad ng magagandang suhestiyon ng user sa rekord ng oras.\n\nMaaari mong maabot ang aming suporta sa: https://agoradesk.com/support\n\n- Mga Patas na Bayarin\nHindi kami naniningil ng labis na bayad kapag nagdeposito o nag-withdraw ka ng Bitcoins papunta/mula sa aming wallet ng arbitration bond. Walang bayad sa deposito, at ang bayad sa pag-withdraw ay napakalapit sa bayad na babayaran mo sa isang normal na transaksyon.';
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sbagoradesk => 'Bumili o magbenta ng Bitcoin nang walang pag-verify ng ID. Cash o online.\n\nNag-iisip kung paano mamuhunan sa Bitcoin? Sa AgoraDesk, ang pagbili ng mga bitcoin ay hindi kailanman naging mas madali - agad na bumili ng BTC mula sa isang tao gamit ang iyong paboritong online na paraan ng pagbabayad: PayPal, credit/debit card o bank transfer, gift card, Venmo o anumang iba pa. Kung gusto mong bumili ng mga bitcoin na malapit sa iyo gamit ang cash, makakahanap ka ng isang taong handang magbenta ng mga bitcoin nang lokal - sinusuportahan ng trading platform ang pagbili at pagbebenta ng BTC gamit ang cash. Maaari ka ring bumili ng mga bitcoin gamit ang cash sa pamamagitan ng koreo.\n\n- Ligtas at Smooth Trading\nTulad ng LocalBitcoins, sinusuportahan namin ang anumang paraan ng pagbabayad, anumang pera, kahit saan. Hindi kami nag-aalis ng mga paraan ng pagbabayad, at, hindi tulad ng LocalBitcoins, ganap naming sinusuportahan ang face-to-face na cash trade. Ang lahat ng aming mga kalakalan ay protektado ng isang arbitration bond. Salamat sa katotohanan na kailangan namin ng mga pondo na itago sa arbitration bond bago magsimula ang isang kalakalan, tinitiyak namin ang maayos at ligtas na karanasan para sa mamimili, na mahalaga para sa katanyagan ng platform at mga umuulit na customer para sa mga nagbebenta.\n\n- Walang KYC/AML o ID Verification\nAng AgoraDesk ay nakatuon sa pagpapanatili ng pagiging simple at pagiging diretso na naging dahilan ng pagiging popular ng orihinal na LocalBitcoins. Hindi kami gumagamit ng KYC/AML, ni hindi namin pinaplanong gawin ito.\n\n- Pinagkakatiwalaan ng Komunidad\nAng aming platform ay gumana nang mahigit apat na taon, nakaligtas sa Great Cryptocurrency Market Crash ng 2018, at sa pamamagitan ng masigasig na serbisyong nakatuon sa komunidad ay naging isa sa mga pinakapinagkakatiwalaang pangalan sa lubhang may pag-aalinlangan na komunidad ng cryptocurrency.\n\n- Secure, Open Source, Privacy-Centric, Censorship-Resistant\nAng aming app ay libre at open source, na nagsisiguro na maraming mga mata ang tumitingin sa code ng app upang matiyak na walang mga butas sa seguridad o mga pagtagas sa privacy. Binibigyang-daan din ng open sourcing ang aming app ang sinuman na magkaroon ng access sa aming app kahit na sine-censor ng isang partikular na repositoryo ng app ang app. Gumagana pa nga ang aming app sa mga teleponong ganap na na-block ng Google. Lubos naming pinahahalagahan ang iyong privacy, hindi ka namin hinihiling na magbigay ng email kapag nagrerehistro.\n\nSource code: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nTagasubaybay ng isyu: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellar Support\nAng aming team ng suporta ay mabilis, tumutugon at laging sabik na pasayahin. Wala pa kaming support ticket na hindi nasagot sa loob ng 24 na oras. Palagi kaming madaling maabot sa pamamagitan ng social media, masinsinan kaming nakikinig sa iyong mga kritisismo at palagi kaming nagpapatupad ng magagandang suhestiyon ng user sa oras.\n\nMaaari mong maabot ang aming suporta sa: https://agoradesk.com/support\n\n- Mga Patas na Bayarin\nHindi kami naniningil ng labis na bayad kapag nagdeposito o nag-withdraw ka ng Bitcoins papunta/mula sa aming wallet ng arbitration bond. Walang bayad sa deposito, at ang bayad sa pag-withdraw ay napakalapit sa bayad na babayaran mo sa isang normal na transaksyon.';
 
   @override
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbkeywords250Sblocalmonero => 'cryptocurrency,anonymous,pribado,monero,xmr,p2p';
@@ -9473,7 +9488,7 @@ class I18nTl extends I18n {
   String get app_proxy_use => 'Gumamit ka ng kinatawan';
 
   @override
-  String get app_proxy_bugs_expected => 'Babala! Nasa beta ang pag-andar ng proxy, inaasahan ang mga bug. Mangyaring iulat ang mga bug sa aming mga channel sa pagpapaunlad para sa mabilis na pag-aayos';
+  String get app_proxy_bugs_expected => 'Babala! Nasa beta ang pag-andar ng proxy, inaasahan ang mga bug. Mangyaring iulat ang mga bug sa aming mga channel sa pag-unlad para sa mabilis na pag-aayos';
 
   @override
   String get app_proxy_select_type => 'Pumili ng uri ng proxy';
@@ -9494,7 +9509,7 @@ class I18nTl extends I18n {
   String get api_error_269 => 'Sinusubukang magdagdag ng di-wastong address sa isang address book';
 
   @override
-  String get api_error_270 => 'Sinusubukang magdagdag ng duplicate na address sa address book ng user';
+  String get api_error_270 => 'Sinusubukang magdagdag ng duplicate na address sa address book ng isang user';
 
   @override
   String get api_error_273 => 'Sinusubukang tanggalin ang isang address na wala sa address book ng isang user';
@@ -9514,23 +9529,40 @@ class I18nTl extends I18n {
   }
 
   @override
-  String get api_error_363 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_363 => 'Nagbigay ka ng address na nakuha mo mula sa isang merchant na hindi na-update ang kanilang format ng address (pinagsamang address). Mangyaring i-set up ang iyong sariling wallet sa isang app tulad ng Cake, Monerujo, o Feather wallet, at ibigay ang address na iyon sa halip.';
 
   @override
-  String get api_error_364 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_364 => 'Nagbigay ka ng address na nakuha mo mula sa isang merchant na hindi na-update ang kanilang format ng address (pinagsamang address). Mangyaring i-set up ang iyong sariling wallet sa isang app tulad ng Cake, Monerujo, o Feather wallet, at ibigay ang address na iyon sa halip.';
 
   @override
-  String get find_user => 'Find user';
+  String get find_user => 'Maghanap ng user';
 
   @override
-  String get traderHasNoBalance => 'This trader doesn\'t have enough balance to trade at the moment.';
+  String get traderHasNoBalance => 'Ang mangangalakal na ito ay walang sapat na balanse upang makipagkalakalan sa ngayon.';
 
   @override
-  String get noMatchingItems => '\'No matching items.';
+  String askForAppReview(Object appName) {
+    return 'Ang $appName ay pinapagana ng mga tao! Paki-rate ang aming app kung gusto mo ito. Mas maraming mangangalakal ang sasali, na humahantong sa isang mas malusog na merkado para sa lahat.';
+  }
 
   @override
-  String get pleaseCheckAddress => 'Please check address correctness';
+  String get askToContactWhenBadExperience => 'Paumanhin, mayroon kang masamang karanasan! Gusto mo bang makipag-ugnayan sa aming team para mapagbuti namin ito?';
 
   @override
-  String get inputAddressForCalculatingFees => 'Input address for calculating fees';
+  String get dontLikeIt => 'ayoko';
+
+  @override
+  String get loveIt => 'Mahal ito!';
+
+  @override
+  String get cancelAndDontAsk => 'Kanselahin at huwag nang magtanong muli';
+
+  @override
+  String get noMatchingItems => 'Walang tugmang item.';
+
+  @override
+  String get pleaseCheckAddress => 'Pakisuri ang tama ng address';
+
+  @override
+  String get inputAddressForCalculatingFees => 'Input address para sa pagkalkula ng mga bayarin';
 }

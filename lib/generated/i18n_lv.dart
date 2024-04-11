@@ -7589,6 +7589,21 @@ class I18nLv extends I18n {
   String get trade250Sbwarning250Sbconfirmations => 'Nepabeigt, kamēr pircēja tx nav apstiprinājumu! Ir pieaudzis krāpniecības gadījumu skaits, kad neapstiprināts darījums tiek atcelts pēc tam, kad pārdevējs to ir pabeidzis.';
 
   @override
+  String get filter250Sbtype250Sbonline8722Sbsell => 'Pirkt tiešsaistē';
+
+  @override
+  String get filter250Sbtype250Sbonline8722Sbbuy => 'Pārdod tiešsaistē';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbsell => 'Pērciet uz vietas';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbbuy => 'Pārdod uz vietas';
+
+  @override
+  String get login250Sbusername8722Sbtip8722Sbshort => 'Lietotājvārds (3–16 rakstzīmes)';
+
+  @override
   String get ads => 'Sludinājumi';
 
   @override
@@ -8201,7 +8216,7 @@ class I18nLv extends I18n {
   String get api_error_98 => 'Mēģinājums izveidot darījumu sludinājumam, kura plakāts neeksistē';
 
   @override
-  String get api_error_99 => 'Veidojot pirmo darījumu, mēģināt pieprasīt lielāku summu, nekā atļāvis sludinājuma īpašnieks';
+  String get api_error_99 => 'Veidojot pirmo darījumu, mēģina pieprasīt lielāku summu, nekā atļāvis sludinājuma īpašnieks';
 
   @override
   String get api_error_100 => 'Darījuma izveidei nevar pieprasīt mazāk par 0,0000000001 XMR';
@@ -9392,7 +9407,7 @@ class I18nLv extends I18n {
 
   @override
   String app_503_body(Object val) {
-    return '$val drīzumā atgriezīsies!\\nAtvainojiet par sagādātajām neērtībām, taču pašlaik mēs veicam plānotos apkopes darbus.\\nDrīzumā mēs droši vien atkal būsim tiešsaistē. Esiet informēts par mūsu kopienas grupām:';
+    return '$val drīzumā atgriezīsies!\\nAtvainojiet par sagādātajām neērtībām, taču mēs pašlaik veicam plānotos apkopes darbus.\\nDrīzumā mēs droši vien atkal būsim tiešsaistē. Esiet informēts par mūsu kopienas grupām:';
   }
 
   @override
@@ -9514,23 +9529,40 @@ class I18nLv extends I18n {
   }
 
   @override
-  String get api_error_363 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_363 => 'Jūs esat norādījis adresi, ko saņēmāt no tirgotāja, kurš nav atjauninājis adreses formātu (integrētā adrese). Lūdzu, iestatiet savu maku tādā lietotnē kā Cake, Monerujo vai Feather, un tā vietā norādiet šo adresi.';
 
   @override
-  String get api_error_364 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_364 => 'Jūs esat norādījis adresi, ko saņēmāt no tirgotāja, kurš nav atjauninājis adreses formātu (integrētā adrese). Lūdzu, iestatiet savu maku tādā lietotnē kā Cake, Monerujo vai Feather, un tā vietā norādiet šo adresi.';
 
   @override
-  String get find_user => 'Find user';
+  String get find_user => 'Atrast lietotāju';
 
   @override
-  String get traderHasNoBalance => 'This trader doesn\'t have enough balance to trade at the moment.';
+  String get traderHasNoBalance => 'Šim tirgotājam šobrīd nav pietiekami daudz bilances, lai tirgotos.';
 
   @override
-  String get noMatchingItems => '\'No matching items.';
+  String askForAppReview(Object appName) {
+    return '$appName darbina cilvēki! Lūdzu, novērtējiet mūsu lietotni, ja jums tā patīk. Pievienosies vairāk tirgotāju, kas radīs veselīgāku tirgu visiem.';
+  }
 
   @override
-  String get pleaseCheckAddress => 'Please check address correctness';
+  String get askToContactWhenBadExperience => 'Atvainojiet, ka jums ir slikta pieredze! Vai vēlaties sazināties ar mūsu komandu, lai mēs to varētu uzlabot?';
 
   @override
-  String get inputAddressForCalculatingFees => 'Input address for calculating fees';
+  String get dontLikeIt => 'Nepatīk';
+
+  @override
+  String get loveIt => 'Mīlu to!';
+
+  @override
+  String get cancelAndDontAsk => 'Atcelt un vairs nejautāt';
+
+  @override
+  String get noMatchingItems => 'Nav atbilstošu vienumu.';
+
+  @override
+  String get pleaseCheckAddress => 'Lūdzu, pārbaudiet adreses pareizību';
+
+  @override
+  String get inputAddressForCalculatingFees => 'Ievades adrese maksas aprēķināšanai';
 }
