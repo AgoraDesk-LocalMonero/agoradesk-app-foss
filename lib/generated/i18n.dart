@@ -17158,6 +17158,24 @@ abstract class I18n {
   /// In en, this message translates to:
   /// **'This trader doesn\'t have enough balance to trade at the moment.'**
   String get traderHasNoBalance;
+
+  /// No description provided for @noMatchingItems.
+  ///
+  /// In en, this message translates to:
+  /// **'\'No matching items.'**
+  String get noMatchingItems;
+
+  /// No description provided for @pleaseCheckAddress.
+  ///
+  /// In en, this message translates to:
+  /// **'Please check address correctness'**
+  String get pleaseCheckAddress;
+
+  /// No description provided for @inputAddressForCalculatingFees.
+  ///
+  /// In en, this message translates to:
+  /// **'Input address for calculating fees'**
+  String get inputAddressForCalculatingFees;
 }
 
 class _I18nDelegate extends LocalizationsDelegate<I18n> {

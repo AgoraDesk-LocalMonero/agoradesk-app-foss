@@ -63,7 +63,7 @@ class _PostAdStep32OnlineBuyState extends State<PostAdStep32OnlineBuy> with QrSc
             Flexible(
               flex: 1,
               child: Text(
-                context.intl.buyer8722Sbsettlement8722Sbfee8722Sblevel250Sbtitle + ':',
+                '${context.intl.buyer8722Sbsettlement8722Sbfee8722Sblevel250Sbtitle}:',
                 style: context.txtBodySmallN60,
               ),
             ),
@@ -91,7 +91,7 @@ class _PostAdStep32OnlineBuyState extends State<PostAdStep32OnlineBuy> with QrSc
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Text(
-          context.intl.wallet250Sbwithdraw250Sbconfirmation8722Sbdialog250Sbnetwork8722Sbfees + ': ',
+          '${context.intl.wallet250Sbwithdraw250Sbconfirmation8722Sbdialog250Sbnetwork8722Sbfees}: ',
           style: context.txtBodySmallN60,
         ),
         widget.model.isWalletValid
@@ -99,10 +99,10 @@ class _PostAdStep32OnlineBuyState extends State<PostAdStep32OnlineBuy> with QrSc
                 ? const CupertinoActivityIndicator()
                 : Text(
                     widget.model.btcFees?.selectedFeeStr(widget.model.btcFeesEnum!)[0] ??
-                        'Please check address correctness',
+                        context.intl.pleaseCheckAddress,
                     style: context.txtBodySmallN60,
                   )
-            : const Text('Input address for calculating fees'),
+            : Text(context.intl.inputAddressForCalculatingFees),
       ],
     );
   }
@@ -132,8 +132,8 @@ class _PostAdStep32OnlineBuyState extends State<PostAdStep32OnlineBuy> with QrSc
                     },
                   ),
                 ),
-                Text(BtcFeesEnum.values[index].translated(context) +
-                    ' (${widget.model.btcFees?.selectedFeeStr(BtcFeesEnum.values[index])[1] ?? '??'} sat/vB)'),
+                Text(
+                    '${BtcFeesEnum.values[index].translated(context)} (${widget.model.btcFees?.selectedFeeStr(BtcFeesEnum.values[index])[1] ?? '??'} sat/vB)'),
               ],
             ),
           );

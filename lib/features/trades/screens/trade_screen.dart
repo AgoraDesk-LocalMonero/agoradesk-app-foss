@@ -157,7 +157,6 @@ class _TradeScreenState extends State<TradeScreen>
           TextButton(
               onPressed: () {
                 AskForReviewWidget.show(context);
-                // model.checkAndAskForReview();
               },
               child: const Text('Ask for review')),
           _noteOnUser(model),

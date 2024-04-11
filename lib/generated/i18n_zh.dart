@@ -9524,6 +9524,15 @@ class I18nZh extends I18n {
 
   @override
   String get traderHasNoBalance => 'This trader doesn\'t have enough balance to trade at the moment.';
+
+  @override
+  String get noMatchingItems => '\'No matching items.';
+
+  @override
+  String get pleaseCheckAddress => 'Please check address correctness';
+
+  @override
+  String get inputAddressForCalculatingFees => 'Input address for calculating fees';
 }
 
 /// The translations for Chinese, as used in China (`zh_CN`).

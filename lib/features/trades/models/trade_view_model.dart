@@ -11,7 +11,6 @@ import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
 import 'package:agoradesk/core/extensions/even_rounding.dart';
 import 'package:agoradesk/core/models/pagination.dart';
 import 'package:agoradesk/core/secure_storage.dart';
-import 'package:agoradesk/core/services/in_app_review/in_app_review_service.dart';
 import 'package:agoradesk/core/services/notifications/notifications_service.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/translations/payment_method_mixin.dart';
@@ -36,8 +35,8 @@ import 'package:agoradesk/features/trades/data/models/trade_request_parameter_mo
 import 'package:agoradesk/features/trades/data/models/trade_request_type.dart';
 import 'package:agoradesk/features/trades/data/models/trade_status.dart';
 import 'package:agoradesk/features/trades/data/repository/trade_repository.dart';
+import 'package:agoradesk/features/trades/screens/widgets/ask_for_review_widget.dart';
 import 'package:agoradesk/generated/i18n.dart';
-import 'package:agoradesk/main.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:collection/collection.dart';
@@ -618,6 +617,8 @@ class TradeViewModel extends ViewModel
       if (res.isRight) {
         Navigator.of(context).pop();
         indicatorKey.currentState?.show();
+        await Future.delayed(Duration.zero);
+        checkAndAskForReview();
       } else {
         handleApiError(res.left, context);
       }
@@ -747,17 +748,18 @@ class TradeViewModel extends ViewModel
       }
     }
 
-    if (AppSharedPrefs().tradesCount == 2) {
-      container.read(inAppReviewServiceProvider).requestReview();
+    if (AppSharedPrefs().tradesCount == 2 && !AppSharedPrefs().reviewAsked) {
+      AskForReviewWidget.show(context);
       await AppSharedPrefs().setInt(AppSharedPrefsKey.tradesCount, 3);
       await AppSharedPrefs().setBool(AppSharedPrefsKey.reviewAsked, val: true);
+
+      ///todo: remove with next release
     } else if (AppSharedPrefs().tradesCount > 2 && !AppSharedPrefs().reviewAsked) {
-      container.read(inAppReviewServiceProvider).requestReview();
+      // } else if (AppSharedPrefs().tradesCount > 2) {
+      AskForReviewWidget.show(context);
       await AppSharedPrefs().setBool(AppSharedPrefsKey.reviewAsked, val: true);
     }
   }
-
-
 
   String tradeInfoTitle(BuildContext context) {
     if (tradeForScreen.isSelling!) {
