@@ -1,6 +1,6 @@
 ### Updates
 
-1. Add asking for review functionality.
+1. Add "ask for a review" feature.
 
 ### About the attached app's
 
