@@ -1,5 +1,5 @@
 name: agoradesk
-version: 1.1.32+130
+version: 1.1.33+133
 publish_to: none
 description: Person-to-person platform to allow anyone to trade their local currency for cryptocurrency.
 environment: 
@@ -10,13 +10,13 @@ dependencies:
   barcode_scan2: ^4.3.0
   cached_network_image: ^3.3.1
   collection: ^1.18.0
-  connectivity_plus: ^6.0.1
+  connectivity_plus: ^5.0.2
   convert: ^3.1.1
   country_picker: ^2.0.11
   cupertino_icons: ^1.0.2
   currency_picker: ^2.0.21
   decimal: ^2.2.0
-  device_info_plus: ^10.0.1
+  device_info_plus: ^9.1.2
   dio: ^5.2.1
   dots_indicator: ^2.0.0
   dropdown_search: ^5.0.6
@@ -48,6 +48,7 @@ dependencies:
   hive: ^2.2.3
   hive_flutter: ^1.1.0
   image_picker: ^1.0.7
+  in_app_review: ^2.0.9
   injectable: ^2.1.0
   insta_image_viewer: ^1.0.2
   intl: any

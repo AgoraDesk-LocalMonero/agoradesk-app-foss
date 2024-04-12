@@ -1,7 +1,6 @@
 ### Updates
 
-1. Reload markets and wallet balances when a new country is selected.
-2. Bug fixes.
+1. Add "ask for a review" feature.
 
 ### About the attached app's
 

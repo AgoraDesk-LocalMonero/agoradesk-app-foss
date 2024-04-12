@@ -229,9 +229,9 @@ class TextFieldSearchState extends State<TextFieldSearch> {
               // remove the focus node so we aren't editing the text
               FocusScope.of(context).unfocus();
             },
-            child: const ListTile(
-              title: Text('No matching items.'),
-              trailing: Icon(Icons.cancel),
+            child: ListTile(
+              title: Text(context.intl.noMatchingItems),
+              trailing: const Icon(Icons.cancel),
             ),
           ),
         ],

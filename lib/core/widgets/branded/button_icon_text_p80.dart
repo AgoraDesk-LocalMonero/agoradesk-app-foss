@@ -8,11 +8,13 @@ class ButtonIconTextP80 extends StatelessWidget {
     required this.iconData,
     required this.text,
     required this.onPressed,
+    this.fontSize = 11,
   }) : super(key: key);
 
   final IconData iconData;
   final String text;
   final VoidCallback onPressed;
+  final double fontSize;
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +39,9 @@ class ButtonIconTextP80 extends StatelessWidget {
             maxLines: 1,
             minFontSize: 6,
             overflow: TextOverflow.ellipsis,
-            style: context.txtLabelSmallP80,
+            style: context.txtLabelSmallP80.copyWith(
+              fontSize: fontSize,
+            ),
           ),
         ],
       ),
