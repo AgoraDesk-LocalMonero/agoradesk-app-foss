@@ -2873,7 +2873,7 @@ class I18nSw extends I18n {
   String get guide250Sbmnemonic250Sbtitle => 'Jinsi ya kurejesha mkoba wangu wa makazi ambao haukuwa chini ya ulinzi kutoka kwa mbegu ya mnemonic?';
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1 => 'Nenda kwenye <a target=\"_blank\" href=\"/\" class=\"next-link\">ukurasa mkuu</a> - utaona matoleo makuu ya eneo lako chaguomsingi. Unaweza kuboresha matokeo yako kwa kuweka kiasi unachotaka kufanya katika kisanduku cha kutafutia, kisha uchague ni sarafu gani ungependa kutumia, nchi na njia ya malipo unayotaka (chagua \"Ofa zote za mtandaoni\" ikiwa huna uhakika ni njia gani ya malipo. unataka kutumia).';
+  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1 => 'Nenda kwenye <a target=\"_blank\" href=\"/\" class=\"next-link\">ukurasa mkuu</a> - utaona matoleo makuu ya eneo lako chaguomsingi. Unaweza kuboresha matokeo yako kwa kuingiza kiasi unachotaka kufanya katika kisanduku cha kutafutia, kisha uchague ni sarafu gani ungependa kutumia, nchi na njia ya malipo unayotaka (chagua \"Ofa zote za mtandaoni\" ikiwa huna uhakika ni njia gani ya malipo. unataka kutumia).';
 
   @override
   String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1250Sb1 => 'Kutoka kwenye orodha ya matangazo, chagua mmoja kutoka kwa mfanyabiashara aliye na kiasi kikubwa cha biashara na alama nzuri ya sifa (inaonyeshwa kwa mtiririko huo kwenye mabano karibu na jina la mtumiaji). Duara la kijani unamaanisha kuwa mfanyabiashara amekuwa mtandaoni leo; duara la manjano inamaanisha kuwa wametembelea tovuti wiki hii; na duara la kijivu unamaanisha kuwa mfanyabiashara hajawahi kuwa hapa kwa zaidi ya wiki. Unaweza kubofya kitufe cha \"Nunua\" ili kuona maelezo zaidi kuhusu tangazo.';
@@ -7589,6 +7589,21 @@ class I18nSw extends I18n {
   String get trade250Sbwarning250Sbconfirmations => 'Usimalize hadi tx ya mnunuzi iwe na uthibitisho! Kumekuwa na ongezeko la ulaghai ambapo muamala ambao haujathibitishwa hughairiwa baada ya muuzaji kukamilika.';
 
   @override
+  String get filter250Sbtype250Sbonline8722Sbsell => 'Nunua mtandaoni';
+
+  @override
+  String get filter250Sbtype250Sbonline8722Sbbuy => 'Uza mtandaoni';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbsell => 'Nunua ndani ya nchi';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbbuy => 'Uza ndani ya nchi';
+
+  @override
+  String get login250Sbusername8722Sbtip8722Sbshort => 'Jina la mtumiaji (herufi 3-16)';
+
+  @override
   String get ads => 'Matangazo';
 
   @override
@@ -9320,7 +9335,7 @@ class I18nSw extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: nunua au uza XMR';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Nunua au uuze Monero bila uthibitishaji wa kitambulisho. Pesa au mtandaoni. Salama, haraka, rahisi.\n\nLocalMonero ndio jukwaa kubwa zaidi, linaloaminika zaidi na lililoimarishwa vyema la P2P katika jumuiya ya XMR. Hatuna hundi za KYC - unaweza kununua Monero bila kukutambulisha bila uthibitisho wa kitambulisho kwa PayPal, kadi ya mkopo, kadi ya zawadi, pesa taslimu kwa barua au kubadilisha Bitcoin, Etha, USDT, au sarafu nyingine yoyote ya crypto hadi Monero - jukwaa letu linatumia njia yoyote ya malipo.\n\n- Biashara Salama na Laini\nTunatumia njia yoyote ya malipo, sarafu yoyote, popote. Hatuondoi njia za kulipa, na tunaunga mkono kikamilifu biashara ya ana kwa ana. Biashara zetu zote zinalindwa na dhamana ya usuluhishi. Shukrani kwa ukweli kwamba tunahitaji pesa ziwekwe katika dhamana ya usuluhishi kabla ya biashara kuanza, tunahakikisha hali ya utumiaji laini na salama kwa mnunuzi, ambayo ni muhimu kwa umaarufu wa jukwaa na kurudia wateja kwa wauzaji.\n\n- Hakuna KYC/AML au Uthibitishaji wa Kitambulisho\nLocalMonero imejitolea kudumisha usahili na usawazishaji wa uzoefu wako wa biashara. Hatuajiri KYC/AML, wala hatuna mpango wa kufanya hivyo.\n\n- Inaaminiwa na Jumuiya\nJukwaa letu limefanya kazi kwa zaidi ya miaka minne, lilinusurika kwenye Ajali Kubwa ya Soko la Cryptocurrency la 2018, na kupitia huduma yake ya bidii inayolenga jamii ikawa mojawapo ya majina yanayoaminika zaidi katika jumuiya ya Monero yenye shaka sana.\n\n- Salama, Chanzo Huria, Kitivo cha Faragha, Kipingamizi cha Udhibiti\nProgramu yetu ni chanzo huria na huria, ambayo huhakikisha kwamba macho mengi yanatazama msimbo wa programu ili kuhakikisha kuwa hakuna mashimo ya usalama au uvujaji wa faragha. Uwekaji vyanzo wazi programu yetu pia huruhusu mtu yeyote kufikia programu yetu hata kama hazina fulani ya programu inakagua programu. Programu yetu inafanya kazi hata kwenye simu ambazo Google imezuiwa kabisa. Tunathamini sana faragha yako, hatuhitaji hata utupe barua pepe wakati wa kusajili.\n\nNambari ya chanzo: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nKifuatiliaji cha suala: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Msaada wa Stellar\nTimu yetu ya usaidizi ni ya haraka, sikivu na ina shauku ya kupendeza kila wakati. Hatujawahi kupata tikiti ya usaidizi ambayo haikujibiwa ndani ya masaa 24. Tunaweza kufikiwa kwa urahisi kila wakati kupitia mitandao ya kijamii, tunasikiliza kwa makini ukosoaji wako na kila mara tunatekeleza mapendekezo mazuri ya watumiaji katika muda uliorekodiwa.\n\nUnaweza kufikia usaidizi wetu kwa: https://localmonero.co/support\n\n- Ada ya Haki\nHatutozwi ada ghali zaidi unapoweka au kutoa Monero kwa/kutoka kwa mkoba wetu wa dhamana ya usuluhishi. Hakuna ada ya amana, na ada ya uondoaji iko karibu sana na ada ambayo ungelipa kwa shughuli ya kawaida.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Nunua au uuze Monero bila uthibitishaji wa kitambulisho. Pesa au mtandaoni. Salama, haraka, rahisi.\n\nLocalMonero ndio jukwaa kubwa zaidi, linaloaminika zaidi na lililoimarishwa vyema la P2P katika jumuiya ya XMR. Hatuna hundi za KYC - unaweza kununua Monero bila kukutambulisha bila uthibitisho wa kitambulisho kwa PayPal, kadi ya mkopo, kadi ya zawadi, pesa taslimu kwa barua au kubadilisha Bitcoin, Etha, USDT, au sarafu nyingine yoyote ya crypto kuwa Monero - jukwaa letu linatumia njia yoyote ya malipo.\n\n- Biashara salama na laini\nTunatumia njia yoyote ya malipo, sarafu yoyote, popote. Hatuondoi njia za kulipa, na tunaunga mkono kikamilifu biashara ya ana kwa ana. Biashara zetu zote zinalindwa na dhamana ya usuluhishi. Shukrani kwa ukweli kwamba tunahitaji pesa ziwekwe katika dhamana ya usuluhishi kabla ya biashara kuanza, tunahakikisha hali ya utumiaji laini na salama kwa mnunuzi, ambayo ni muhimu kwa umaarufu wa jukwaa na kurudia wateja kwa wauzaji.\n\n- Hakuna KYC/AML au Uthibitishaji wa Kitambulisho\nLocalMonero imejitolea kudumisha usahili na usawazishaji wa uzoefu wako wa biashara. Hatuajiri KYC/AML, wala hatuna mpango wa kufanya hivyo.\n\n- Inaaminiwa na Jumuiya\nJukwaa letu limefanya kazi kwa zaidi ya miaka minne, lilinusurika kwenye Ajali Kubwa ya Soko la Cryptocurrency la 2018, na kupitia huduma yake ya bidii inayolenga jamii ikawa mojawapo ya majina yanayoaminika zaidi katika jumuiya ya Monero yenye shaka sana.\n\n- Salama, Chanzo Huria, Kitivo cha Faragha, Kipingamizi cha Udhibiti\nProgramu yetu ni chanzo huria na huria, ambayo huhakikisha kwamba macho mengi yanatazama msimbo wa programu ili kuhakikisha kuwa hakuna mashimo ya usalama au uvujaji wa faragha. Uwekaji vyanzo wazi programu yetu pia huruhusu mtu yeyote kufikia programu yetu hata kama hazina fulani ya programu inakagua programu. Programu yetu inafanya kazi hata kwenye simu ambazo Google imezuiwa kabisa. Tunathamini sana faragha yako, hatuhitaji hata utupe barua pepe wakati wa kusajili.\n\nNambari ya chanzo: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nKifuatiliaji cha suala: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Msaada wa Stellar\nTimu yetu ya usaidizi ni ya haraka, sikivu na ina shauku ya kupendeza kila wakati. Hatujawahi kupata tikiti ya usaidizi ambayo haikujibiwa ndani ya masaa 24. Tunaweza kufikiwa kwa urahisi kila wakati kupitia mitandao ya kijamii, tunasikiliza kwa makini ukosoaji wako na kila mara tunatekeleza mapendekezo mazuri ya watumiaji kwa wakati uliorekodiwa.\n\nUnaweza kufikia usaidizi wetu kwa: https://localmonero.co/support\n\n- Ada ya Haki\nHatutozwi ada ghali zaidi unapoweka au kutoa Monero kwa/kutoka kwa mkoba wetu wa dhamana ya usuluhishi. Hakuna ada ya amana, na ada ya uondoaji iko karibu sana na ada ambayo ungekuwa unalipa kwa shughuli ya kawaida.';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: nunua au uza XMR';
@@ -9408,7 +9423,7 @@ class I18nSw extends I18n {
   String get app_select_buyer_seller => 'Chagua mnunuzi au muuzaji';
 
   @override
-  String get app_default_tab => 'Weka kichupo cha chaguo-msingi';
+  String get app_default_tab => 'Weka kichupo chaguo-msingi';
 
   @override
   String get app_your_ads => 'Matangazo yako';
@@ -9514,14 +9529,40 @@ class I18nSw extends I18n {
   }
 
   @override
-  String get api_error_363 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_363 => 'Umetoa anwani uliyopata kutoka kwa mfanyabiashara ambayo haijasasisha umbizo la anwani yake (anwani iliyounganishwa). Tafadhali sanidi pochi yako mwenyewe kwenye programu kama vile pochi za Keki, Monerujo au Feather, na badala yake utoe anwani hiyo.';
 
   @override
-  String get api_error_364 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_364 => 'Umetoa anwani uliyopata kutoka kwa mfanyabiashara ambayo haijasasisha umbizo la anwani yake (anwani iliyounganishwa). Tafadhali sanidi pochi yako mwenyewe kwenye programu kama vile pochi za Keki, Monerujo au Feather, na badala yake utoe anwani hiyo.';
 
   @override
-  String get find_user => 'Find user';
+  String get find_user => 'Tafuta mtumiaji';
 
   @override
-  String get traderHasNoBalance => 'This trader doesn\'t have enough balance to trade at the moment.';
+  String get traderHasNoBalance => 'Mfanyabiashara huyu hana salio la kutosha kufanya biashara kwa sasa.';
+
+  @override
+  String askForAppReview(Object appName) {
+    return '$appName inaendeshwa na watu! Tafadhali kadiria programu yetu ikiwa unaipenda. Wafanyabiashara zaidi watajiunga, na hivyo kusababisha soko la afya kwa wote.';
+  }
+
+  @override
+  String get askToContactWhenBadExperience => 'Samahani una uzoefu mbaya! Je, ungependa kuwasiliana na timu yetu ili tuweze kuiboresha?';
+
+  @override
+  String get dontLikeIt => 'Usipendeze';
+
+  @override
+  String get loveIt => 'Naipenda!';
+
+  @override
+  String get cancelAndDontAsk => 'Ghairi na usiulize tena';
+
+  @override
+  String get noMatchingItems => 'Hakuna vipengee vinavyolingana.';
+
+  @override
+  String get pleaseCheckAddress => 'Tafadhali angalia usahihi wa anwani';
+
+  @override
+  String get inputAddressForCalculatingFees => 'Ingiza anwani ya kukokotoa ada';
 }
