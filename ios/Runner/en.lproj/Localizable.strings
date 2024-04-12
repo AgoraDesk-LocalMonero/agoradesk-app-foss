@@ -17,4 +17,5 @@
 "TRADE_PAYMENT_MARKED_COMPLETE" = "%@ has completed the payment in trade %@";
 "TRADE_CANCELLED" = "Trade %@ has been cancelled by %@";
 "TRADE_DISPUTED" = "Trade %@ has been disputed by %@";
+"TRADE_FUNDED" = "Trade %@ has been funded";
 "MESSAGE" = "%@";

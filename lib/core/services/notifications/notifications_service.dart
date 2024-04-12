@@ -169,7 +169,9 @@ class NotificationsService with ForegroundMessagesMixin {
         eventBus.fire(const UpdateOpenedChatEvent());
       }
     } catch (e) {
-      Sentry.captureException('Error parsing push payload _displayLocalNotification');
+      /// map from message.data that contains all fields and values are length
+       final Map<String, dynamic> payload = message.data.map((key, value) => MapEntry(key, value?.toString().length ?? ''));
+      Sentry.captureException('Error parsing push payload _displayLocalNotification - $payload');
     }
   }
 

@@ -1,4 +1,3 @@
-import 'package:agoradesk/features/auth/screens/captcha_screen.dart';
 import 'package:agoradesk/features/auth/screens/forgot_password_screen.dart';
 import 'package:agoradesk/features/auth/screens/login_screen.dart';
 import 'package:agoradesk/features/auth/screens/pin_code_check_screen.dart';
