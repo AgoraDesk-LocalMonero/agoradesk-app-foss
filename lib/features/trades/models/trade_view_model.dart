@@ -59,6 +59,7 @@ class TradeViewModel extends ViewModel
     implements WidgetsBindingObserver {
   TradeViewModel({
     required TradeRepository tradeRepository,
+    required BuildContext parentContext,
     this.tradeModel,
     this.tradeId,
     required AccountService accountService,
@@ -70,11 +71,13 @@ class TradeViewModel extends ViewModel
   })  : _tradeRepository = tradeRepository,
         _apiClient = apiClient,
         _accountService = accountService,
+        _parentContext = parentContext,
         _appState = appState,
         _notificationsService = notificationsService,
         _adsRepository = adsRepository;
 
   final TradeRepository _tradeRepository;
+  final BuildContext _parentContext;
   final AccountService _accountService;
   final NotificationsService _notificationsService;
   final SecureStorage secureStorage;
@@ -618,7 +621,7 @@ class TradeViewModel extends ViewModel
         Navigator.of(context).pop();
         indicatorKey.currentState?.show();
         await Future.delayed(Duration.zero);
-        checkAndAskForReview();
+        await checkAndAskForReview(_parentContext);
       } else {
         handleApiError(res.left, context);
       }
@@ -723,7 +726,7 @@ class TradeViewModel extends ViewModel
         Navigator.of(context).pop();
         paymentCompletedAt = DateTime.now();
         await _setTradeStatus();
-        await checkAndAskForReview();
+        await checkAndAskForReview(_parentContext);
       } else {
         handleApiError(res.left, context);
       }
@@ -731,7 +734,8 @@ class TradeViewModel extends ViewModel
     }
   }
 
-  Future<void> checkAndAskForReview() async {
+  Future<void> checkAndAskForReview(BuildContext parentContext) async {
+    AskForReviewWidget.show(parentContext);
     // check how many trades user made
     if (AppSharedPrefs().tradesCount == 0) {
       const requestParameter = TradeRequestParameterModel(
@@ -749,14 +753,14 @@ class TradeViewModel extends ViewModel
     }
 
     if (AppSharedPrefs().tradesCount == 2 && !AppSharedPrefs().reviewAsked) {
-      AskForReviewWidget.show(context);
+      AskForReviewWidget.show(parentContext);
       await AppSharedPrefs().setInt(AppSharedPrefsKey.tradesCount, 3);
       await AppSharedPrefs().setBool(AppSharedPrefsKey.reviewAsked, val: true);
 
       ///todo: remove with next release
     } else if (AppSharedPrefs().tradesCount > 2 && !AppSharedPrefs().reviewAsked) {
       // } else if (AppSharedPrefs().tradesCount > 2) {
-      AskForReviewWidget.show(context);
+      AskForReviewWidget.show(parentContext);
       await AppSharedPrefs().setBool(AppSharedPrefsKey.reviewAsked, val: true);
     }
   }

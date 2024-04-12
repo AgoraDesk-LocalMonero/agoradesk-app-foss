@@ -23,7 +23,6 @@ import 'package:agoradesk/features/trades/data/repository/trade_repository.dart'
 import 'package:agoradesk/features/trades/models/note_on_user_view_model.dart';
 import 'package:agoradesk/features/trades/models/trade_view_model.dart';
 import 'package:agoradesk/features/trades/screens/widgets/agora_two_tabs_bar.dart';
-import 'package:agoradesk/features/trades/screens/widgets/ask_for_review_widget.dart';
 import 'package:agoradesk/features/trades/screens/widgets/chat_tab.dart';
 import 'package:agoradesk/features/trades/screens/widgets/note_on_user_widget.dart';
 import 'package:agoradesk/features/trades/screens/widgets/trade_info_tile.dart';
@@ -66,6 +65,7 @@ class _TradeScreenState extends State<TradeScreen>
       adsRepository: context.read<AdsRepository>(),
       appState: context.read<AppStateV1>(),
       notificationsService: context.read<NotificationsService>(),
+      parentContext: context,
     );
     _model.tabController = TabController(length: 2, vsync: this);
 
@@ -156,7 +156,7 @@ class _TradeScreenState extends State<TradeScreen>
         children: [
           TextButton(
               onPressed: () {
-                AskForReviewWidget.show(context);
+                model.checkAndAskForReview(context);
               },
               child: const Text('Ask for review')),
           _noteOnUser(model),
