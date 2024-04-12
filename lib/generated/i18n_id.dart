@@ -7589,21 +7589,6 @@ class I18nId extends I18n {
   String get trade250Sbwarning250Sbconfirmations => 'Jangan selesaikan sampai tx pembeli ada konfirmasi! Ada lonjakan penipuan di mana transaksi yang belum dikonfirmasi dibatalkan setelah penjual menyelesaikannya.';
 
   @override
-  String get filter250Sbtype250Sbonline8722Sbsell => 'Beli online';
-
-  @override
-  String get filter250Sbtype250Sbonline8722Sbbuy => 'Jual daring';
-
-  @override
-  String get filter250Sbtype250Sblocal8722Sbsell => 'Beli secara lokal';
-
-  @override
-  String get filter250Sbtype250Sblocal8722Sbbuy => 'Jual secara lokal';
-
-  @override
-  String get login250Sbusername8722Sbtip8722Sbshort => 'Nama pengguna (3-16 karakter)';
-
-  @override
   String get ads => 'Iklan';
 
   @override
@@ -9529,40 +9514,14 @@ class I18nId extends I18n {
   }
 
   @override
-  String get api_error_363 => 'Anda memberikan alamat yang Anda dapatkan dari pedagang yang belum memperbarui format alamatnya (alamat terintegrasi). Silakan siapkan dompet Anda sendiri di aplikasi seperti dompet Cake, Monerujo, atau Feather, dan berikan alamat tersebut.';
+  String get api_error_363 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
 
   @override
-  String get api_error_364 => 'Anda memberikan alamat yang Anda dapatkan dari pedagang yang belum memperbarui format alamatnya (alamat terintegrasi). Silakan siapkan dompet Anda sendiri di aplikasi seperti dompet Cake, Monerujo, atau Feather, dan berikan alamat tersebut.';
+  String get api_error_364 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
 
   @override
-  String get find_user => 'Temukan pengguna';
+  String get find_user => 'Find user';
 
   @override
-  String get traderHasNoBalance => 'Pedagang ini tidak memiliki cukup saldo untuk berdagang saat ini.';
-
-  @override
-  String askForAppReview(Object appName) {
-    return '$appName didukung oleh masyarakat! Silakan menilai aplikasi kami jika Anda menyukainya. Semakin banyak pedagang yang bergabung, sehingga menghasilkan pasar yang lebih sehat bagi semua orang.';
-  }
-
-  @override
-  String get askToContactWhenBadExperience => 'Maaf Anda mengalami pengalaman buruk! Apakah Anda ingin menghubungi tim kami agar kami dapat memperbaikinya?';
-
-  @override
-  String get dontLikeIt => 'Tidak menyukainya';
-
-  @override
-  String get loveIt => 'Suka sekali!';
-
-  @override
-  String get cancelAndDontAsk => 'Batalkan dan jangan tanya lagi';
-
-  @override
-  String get noMatchingItems => 'Tidak ada item yang cocok.';
-
-  @override
-  String get pleaseCheckAddress => 'Silakan periksa kebenaran alamat';
-
-  @override
-  String get inputAddressForCalculatingFees => 'Masukkan alamat untuk menghitung biaya';
+  String get traderHasNoBalance => 'This trader doesn\'t have enough balance to trade at the moment.';
 }

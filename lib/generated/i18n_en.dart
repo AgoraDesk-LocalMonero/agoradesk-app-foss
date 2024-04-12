@@ -4700,7 +4700,7 @@ class I18nEn extends I18n {
   String get password8722Sbreset250Sbtitle => 'Change password';
 
   @override
-  String get password8722Sbtip => '8-72 characters';
+  String get password8722Sbtip => '8-72 characters.';
 
   @override
   String get post8722Sbad250Sbamount8722Sbtitle => 'Amount';
@@ -7589,21 +7589,6 @@ class I18nEn extends I18n {
   String get trade250Sbwarning250Sbconfirmations => 'Do not finalize until the buyer\'s tx has confirmations! There has been a surge of scams where an unconfirmed transaction is cancelled after the seller finalizes.';
 
   @override
-  String get filter250Sbtype250Sbonline8722Sbsell => 'Buy online';
-
-  @override
-  String get filter250Sbtype250Sbonline8722Sbbuy => 'Sell online';
-
-  @override
-  String get filter250Sbtype250Sblocal8722Sbsell => 'Buy locally';
-
-  @override
-  String get filter250Sbtype250Sblocal8722Sbbuy => 'Sell locally';
-
-  @override
-  String get login250Sbusername8722Sbtip8722Sbshort => '3-16 characters';
-
-  @override
   String get ads => 'Ads';
 
   @override
@@ -9539,30 +9524,4 @@ class I18nEn extends I18n {
 
   @override
   String get traderHasNoBalance => 'This trader doesn\'t have enough balance to trade at the moment.';
-
-  @override
-  String askForAppReview(Object appName) {
-    return '$appName is powered by the people! Please rate our app if you like it. More traders will join, leading to a healthier market for all.';
-  }
-
-  @override
-  String get askToContactWhenBadExperience => 'Sorry you\'re having a bad experience! Would you like to contact our team so that we can improve it?';
-
-  @override
-  String get dontLikeIt => 'Don\'t like it';
-
-  @override
-  String get loveIt => 'Love it!';
-
-  @override
-  String get cancelAndDontAsk => 'Cancel and don\'t ask again';
-
-  @override
-  String get noMatchingItems => 'No matching items.';
-
-  @override
-  String get pleaseCheckAddress => 'Please check address correctness';
-
-  @override
-  String get inputAddressForCalculatingFees => 'Input address for calculating fees';
 }

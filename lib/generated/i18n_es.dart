@@ -7589,21 +7589,6 @@ class I18nEs extends I18n {
   String get trade250Sbwarning250Sbconfirmations => '¡No finalices hasta que el tx del comprador tenga confirmaciones! Ha habido una oleada de estafas en las que una transacción no confirmada se cancela una vez que el vendedor finaliza.';
 
   @override
-  String get filter250Sbtype250Sbonline8722Sbsell => 'Comprar en linea';
-
-  @override
-  String get filter250Sbtype250Sbonline8722Sbbuy => 'Vender en línea';
-
-  @override
-  String get filter250Sbtype250Sblocal8722Sbsell => 'Compra localmente';
-
-  @override
-  String get filter250Sbtype250Sblocal8722Sbbuy => 'Vender localmente';
-
-  @override
-  String get login250Sbusername8722Sbtip8722Sbshort => 'Nombre de usuario (3-16 caracteres)';
-
-  @override
   String get ads => 'Anuncios';
 
   @override
@@ -8720,7 +8705,7 @@ class I18nEs extends I18n {
   String get welcome_buy_press_buy => 'Presione COMPRAR para iniciar la operación.';
 
   @override
-  String get welcome_buy_follow_the_sellers => '¡Sigue las instrucciones del vendedor en el chat comercial!';
+  String get welcome_buy_follow_the_sellers => '¡Siga las instrucciones del vendedor en el chat comercial!';
 
   @override
   String get welcome_sell_go_to_wallet => 'Ve a tu billetera y deposita tus monedas.';
@@ -8729,7 +8714,7 @@ class I18nEs extends I18n {
   String get welcome_sell_press_sell => 'Presione VENDER para iniciar la operación.';
 
   @override
-  String get welcome_sell_follow_the_buyer => '¡Siga las instrucciones del comprador en el chat comercial!';
+  String get welcome_sell_follow_the_buyer => '¡Sigue las instrucciones del comprador en el chat comercial!';
 
   @override
   String get get_started => 'Empieza';
@@ -9529,40 +9514,14 @@ class I18nEs extends I18n {
   }
 
   @override
-  String get api_error_363 => 'Proporcionó una dirección que obtuvo de un comerciante que no actualizó su formato de dirección (dirección integrada). Configure su propia billetera en una aplicación como Cake, Monerujo o Feather, y proporcione esa dirección en su lugar.';
+  String get api_error_363 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
 
   @override
-  String get api_error_364 => 'Proporcionó una dirección que obtuvo de un comerciante que no actualizó su formato de dirección (dirección integrada). Configure su propia billetera en una aplicación como Cake, Monerujo o Feather, y proporcione esa dirección en su lugar.';
+  String get api_error_364 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
 
   @override
-  String get find_user => 'Encontrar usuario';
+  String get find_user => 'Find user';
 
   @override
-  String get traderHasNoBalance => 'Este comerciante no tiene saldo suficiente para operar en este momento.';
-
-  @override
-  String askForAppReview(Object appName) {
-    return '¡$appName está impulsado por la gente! Califica nuestra aplicación si te gusta. Se unirán más comerciantes, lo que conducirá a un mercado más saludable para todos.';
-  }
-
-  @override
-  String get askToContactWhenBadExperience => '¡Lamento que estés teniendo una mala experiencia! ¿Quieres contactar con nuestro equipo para que podamos mejorarlo?';
-
-  @override
-  String get dontLikeIt => 'no me gusta';
-
-  @override
-  String get loveIt => '¡Me encanta!';
-
-  @override
-  String get cancelAndDontAsk => 'Cancelar y no volver a preguntar';
-
-  @override
-  String get noMatchingItems => 'No hay artículos coincidentes.';
-
-  @override
-  String get pleaseCheckAddress => 'Por favor verifique que la dirección sea correcta';
-
-  @override
-  String get inputAddressForCalculatingFees => 'Dirección de entrada para calcular las tarifas';
+  String get traderHasNoBalance => 'This trader doesn\'t have enough balance to trade at the moment.';
 }

@@ -1,4 +1,200 @@
 {
+  "ar": [
+    "api_error_363",
+    "api_error_364",
+    "find_user",
+    "traderHasNoBalance"
+  ],
+
+  "bg": [
+    "api_error_363",
+    "api_error_364",
+    "find_user",
+    "traderHasNoBalance"
+  ],
+
+  "cs": [
+    "api_error_363",
+    "api_error_364",
+    "find_user",
+    "traderHasNoBalance"
+  ],
+
+  "da": [
+    "api_error_363",
+    "api_error_364",
+    "find_user",
+    "traderHasNoBalance"
+  ],
+
+  "de": [
+    "api_error_363",
+    "api_error_364",
+    "find_user",
+    "traderHasNoBalance"
+  ],
+
+  "el": [
+    "api_error_363",
+    "api_error_364",
+    "find_user",
+    "traderHasNoBalance"
+  ],
+
+  "es": [
+    "api_error_363",
+    "api_error_364",
+    "find_user",
+    "traderHasNoBalance"
+  ],
+
+  "fi": [
+    "api_error_363",
+    "api_error_364",
+    "find_user",
+    "traderHasNoBalance"
+  ],
+
+  "fr": [
+    "api_error_363",
+    "api_error_364",
+    "find_user",
+    "traderHasNoBalance"
+  ],
+
+  "ha": [
+    "api_error_363",
+    "api_error_364",
+    "find_user",
+    "traderHasNoBalance"
+  ],
+
+  "hi": [
+    "api_error_363",
+    "api_error_364",
+    "find_user",
+    "traderHasNoBalance"
+  ],
+
+  "hu": [
+    "api_error_363",
+    "api_error_364",
+    "find_user",
+    "traderHasNoBalance"
+  ],
+
+  "id": [
+    "api_error_363",
+    "api_error_364",
+    "find_user",
+    "traderHasNoBalance"
+  ],
+
+  "it": [
+    "api_error_363",
+    "api_error_364",
+    "find_user",
+    "traderHasNoBalance"
+  ],
+
+  "ja": [
+    "api_error_363",
+    "api_error_364",
+    "find_user",
+    "traderHasNoBalance"
+  ],
+
+  "ko": [
+    "api_error_363",
+    "api_error_364",
+    "find_user",
+    "traderHasNoBalance"
+  ],
+
+  "lt": [
+    "api_error_363",
+    "api_error_364",
+    "find_user",
+    "traderHasNoBalance"
+  ],
+
+  "lv": [
+    "api_error_363",
+    "api_error_364",
+    "find_user",
+    "traderHasNoBalance"
+  ],
+
+  "nb": [
+    "api_error_363",
+    "api_error_364",
+    "find_user",
+    "traderHasNoBalance"
+  ],
+
+  "nb_NO": [
+    "api_error_363",
+    "api_error_364",
+    "find_user",
+    "traderHasNoBalance"
+  ],
+
+  "nl": [
+    "api_error_363",
+    "api_error_364",
+    "find_user",
+    "traderHasNoBalance"
+  ],
+
+  "pl": [
+    "api_error_363",
+    "api_error_364",
+    "find_user",
+    "traderHasNoBalance"
+  ],
+
+  "pt": [
+    "api_error_363",
+    "api_error_364",
+    "find_user",
+    "traderHasNoBalance"
+  ],
+
+  "pt_BR": [
+    "api_error_363",
+    "api_error_364",
+    "find_user",
+    "traderHasNoBalance"
+  ],
+
+  "ro": [
+    "api_error_363",
+    "api_error_364",
+    "find_user",
+    "traderHasNoBalance"
+  ],
+
+  "ru": [
+    "api_error_363",
+    "api_error_364",
+    "find_user",
+    "traderHasNoBalance"
+  ],
+
+  "sk": [
+    "api_error_363",
+    "api_error_364",
+    "find_user",
+    "traderHasNoBalance"
+  ],
+
+  "sl": [
+    "api_error_363",
+    "api_error_364",
+    "find_user",
+    "traderHasNoBalance"
+  ],
+
   "so": [
     "app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sbagoradesk",
     "app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero",
@@ -6,6 +202,66 @@
     "app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk",
     "app_apple_app_store_subtitle_localmonero",
     "app_google_play_store_short_description_localmonero",
-    "app_google_play_store_short_description_agoradesk"
+    "app_google_play_store_short_description_agoradesk",
+    "api_error_363",
+    "api_error_364",
+    "find_user",
+    "traderHasNoBalance"
+  ],
+
+  "sv": [
+    "api_error_363",
+    "api_error_364",
+    "find_user",
+    "traderHasNoBalance"
+  ],
+
+  "sw": [
+    "api_error_363",
+    "api_error_364",
+    "find_user",
+    "traderHasNoBalance"
+  ],
+
+  "tl": [
+    "api_error_363",
+    "api_error_364",
+    "find_user",
+    "traderHasNoBalance"
+  ],
+
+  "tr": [
+    "api_error_363",
+    "api_error_364",
+    "find_user",
+    "traderHasNoBalance"
+  ],
+
+  "ur": [
+    "api_error_363",
+    "api_error_364",
+    "find_user",
+    "traderHasNoBalance"
+  ],
+
+  "zh": [
+    "api_error_363",
+    "api_error_364",
+    "find_user",
+    "traderHasNoBalance"
+  ],
+
+  "zh_CN": [
+    "api_error_363",
+    "api_error_364",
+    "find_user",
+    "traderHasNoBalance"
+  ],
+
+  "zh_TW": [
+    "api_error_363",
+    "api_error_364",
+    "find_user",
+    "traderHasNoBalance"
   ]
 }

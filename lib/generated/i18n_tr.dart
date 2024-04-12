@@ -7589,21 +7589,6 @@ class I18nTr extends I18n {
   String get trade250Sbwarning250Sbconfirmations => 'Alıcının gönderimi onaylanana kadar işlemi sonlandırmayın! Satıcı kesinleştikten sonra onaylanmamış bir işlemin iptal edildiği dolandırıcılıklarda artış yaşandı.';
 
   @override
-  String get filter250Sbtype250Sbonline8722Sbsell => 'Çevrim içi satın al';
-
-  @override
-  String get filter250Sbtype250Sbonline8722Sbbuy => 'Çevrimiçi satış yapın';
-
-  @override
-  String get filter250Sbtype250Sblocal8722Sbsell => 'Yerel olarak satın alın';
-
-  @override
-  String get filter250Sbtype250Sblocal8722Sbbuy => 'Yerel olarak sat';
-
-  @override
-  String get login250Sbusername8722Sbtip8722Sbshort => 'Kullanıcı adı (3-16 karakter)';
-
-  @override
   String get ads => 'Reklamlar';
 
   @override
@@ -7735,7 +7720,7 @@ class I18nTr extends I18n {
   }
 
   @override
-  String get what_is_settlement_fee_level => 'Uzlaşma ücreti düzeyi nedir?';
+  String get what_is_settlement_fee_level => 'Uzlaştırma ücreti düzeyi nedir?';
 
   @override
   String get settlement_fee_level_selector_explanation => 'Bu seçici, işlemi cüzdanınıza gönderirken hangi ağ ücreti seviyesinin kullanılacağını seçmenizi sağlar. Hangi ücret düzeyini istediğinizden emin değilseniz orta ücreti seçin.';
@@ -8108,7 +8093,7 @@ class I18nTr extends I18n {
   String get api_error_55 => 'Şifre sıfırlama için sağlanan jeton geçersiz';
 
   @override
-  String get api_error_56 => 'Veritabanında bulunmayan bir e-postaya parola sıfırlama e-postası gönderilmeye çalışılıyor';
+  String get api_error_56 => 'Veritabanında bulunmayan bir e-postaya şifre sıfırlama e-postası gönderilmeye çalışılıyor';
 
   @override
   String get api_error_57 => 'Parola sıfırlama için sağlanan jeton bir sıfırlama jetonu değil';
@@ -8318,7 +8303,7 @@ class I18nTr extends I18n {
   String get api_error_135 => 'Her nasılsa, traceMaxAmount true olarak ayarlanırken maxAmount null olarak ayarlandı';
 
   @override
-  String get api_error_136 => 'Bakiyesi gereken minimum bakiyeden daha az olan bir reklam yayınlamaya çalışılıyor.';
+  String get api_error_136 => 'Bakiyesi gerekli minimum bakiyeden az olan bir reklam yayınlamaya çalışılıyor.';
 
   @override
   String get api_error_141 => 'İzin verilen minimum tutarın altında bir tutarda işlem oluşturmaya çalışmak';
@@ -8330,13 +8315,13 @@ class I18nTr extends I18n {
   String get api_error_143 => 'Reklam oluştururken maxAmount\'tan daha fazla bir fiat limiti belirlenmeye çalışılıyor';
 
   @override
-  String get api_error_144 => 'Reklam güncellenirken minAmount\'tan daha düşük bir fiat limiti belirlenmeye çalışılıyor';
+  String get api_error_144 => 'Reklamı güncellerken minAmount\'tan daha düşük bir fiat limiti belirlenmeye çalışılıyor';
 
   @override
   String get api_error_145 => 'Reklamı güncellerken maxAmount\'tan daha fazla bir fiat limiti belirlenmeye çalışılıyor';
 
   @override
-  String get api_error_147 => 'Satış ortaklığı programı etkin olmayan kullanıcılardan satış ortaklığı verileri alınmaya çalışılıyor';
+  String get api_error_147 => 'Satış ortaklığı programı etkin olmayan bir kullanıcı için satış ortaklığı verileri alınmaya çalışılıyor';
 
   @override
   String get api_error_148 => 'Zaten ayarlanmış bir telgraf kimliği ayarlanmaya çalışılıyor';
@@ -8498,7 +8483,7 @@ class I18nTr extends I18n {
   String get api_error_217 => 'Mevcut olmayan bir para birimi_kodu için en popüler ödeme yöntemlerini istemeye çalışmak';
 
   @override
-  String get api_error_218 => 'Talep eden kullanıcının doğrulanmış bir e-postası olmadığı halde, doğrulanmış bir e-posta adresi gerektiren bir reklam üzerinde işlem açmaya çalışmak';
+  String get api_error_218 => 'Talep eden kullanıcının doğrulanmış bir e-postası olmadığı halde, doğrulanmış bir e-posta adresi gerektiren bir reklam için işlem açmaya çalışmak';
 
   @override
   String get api_error_219 => 'Tek kullanımlık bir e-posta sağlayıcısından gelen bir e-postayla kaydolmaya çalışılıyor';
@@ -8507,7 +8492,7 @@ class I18nTr extends I18n {
   String get api_error_220 => 'Hesap e-postasını tek kullanımlık bir e-posta sağlayıcısından gelen bir e-postayla değiştirmeye çalışmak';
 
   @override
-  String get api_error_221 => 'Var olmayan bir kullanıcı için okunan tüm bildirimler işaretlenmeye çalışılıyor';
+  String get api_error_221 => 'Mevcut olmayan bir kullanıcı için okunan tüm bildirimler işaretlenmeye çalışılıyor';
 
   @override
   String get api_error_222 => 'Halihazırda içe aktarılmış bir dış platform hesabı için itibar kodu istemeye çalışmak';
@@ -8531,7 +8516,7 @@ class I18nTr extends I18n {
   String get api_error_230 => 'Mevcut olmayan bir yönetici hesabına sahip bir kullanıcıdan yaptırımı kaldırmaya çalışmak';
 
   @override
-  String get api_error_231 => 'Üzerinde herhangi bir yaptırım bulunmayan bir kullanıcının yaptırımını kaldırmaya çalışmak';
+  String get api_error_231 => 'Üzerinde herhangi bir yaptırım bulunmayan bir kullanıcıdan yaptırımı kaldırmaya çalışmak';
 
   @override
   String get api_error_232 => 'Yaptırım nedeniyle halihazırda işlem yapması yasak olan bir kullanıcıyla işlem açmaya çalışmak';
@@ -8927,7 +8912,7 @@ class I18nTr extends I18n {
   String get set_up_2fa => '2FA\'yı kurun';
 
   @override
-  String get download_2fa => 'Bir 2FA uygulaması indirin. Aşağıdaki kodu kopyalayıp 2FA uygulamanıza yapıştırın.';
+  String get download_2fa => 'Bir 2FA uygulamasını indirin. Aşağıdaki kodu kopyalayıp 2FA uygulamanıza yapıştırın.';
 
   @override
   String get paste_code => 'Kodu yapıştır';
@@ -9347,7 +9332,7 @@ class I18nTr extends I18n {
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: kolayca BTC alın';
 
   @override
-  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sbagoradesk => 'Kimlik doğrulaması olmadan Bitcoin satın alın veya satın. Nakit veya çevrimiçi.\n\nBitcoin\'e nasıl yatırım yapacağınızı mı merak ediyorsunuz? AgoraDesk\'te bitcoin satın almak hiç bu kadar kolay olmamıştı; PayPal, kredi/banka kartı veya banka havalesi, hediye kartları, Venmo veya başka herhangi bir çevrimiçi ödeme yöntemini kullanarak bir kişiden anında BTC satın alın. Yakınınızda nakit parayla bitcoin satın almak istiyorsanız, yerel olarak bitcoin satmaya istekli birini bulabilirsiniz; ticaret platformu, BTC\'nin nakitle alınıp satılmasını destekler. Hatta posta yoluyla nakit kullanarak bitcoin satın alabilirsiniz.\n\n- Güvenli ve Sorunsuz Ticaret\nTıpkı LocalBitcoins gibi biz de her yerde, her ödeme yöntemini, her para birimini destekliyoruz. Ödeme yöntemlerini kaldırmıyoruz ve LocalBitcoins\'in aksine yüz yüze nakit alım satımları tamamen destekliyoruz. Yaptığımız tüm işlemler tahkim teminatı ile korunmaktadır. Bir ticaretin başlayabilmesi için fonların tahkim bonosu içerisinde tutulmasını zorunlu kılmamız sayesinde, platformun popülaritesi ve satıcılar için sürekli müşteriler için gerekli olan alıcı için sorunsuz ve güvenli bir deneyim sağlıyoruz.\n\n- KYC/AML veya Kimlik Doğrulaması Yok\nAgoraDesk, orijinal LocalBitcoins\'i bu kadar popüler yapan basitliği ve anlaşılırlığı korumaya kendini adamıştır. KYC/AML kullanmıyoruz ve kullanmayı da planlamıyoruz.\n\n- Topluluğun güvendiği\nPlatformumuz dört yıldan fazla bir süredir faaliyet gösteriyor, 2018\'deki Büyük Kripto Para Piyasası Çöküşünden sağ çıktı ve topluluk odaklı özenli hizmeti sayesinde son derece şüpheci kripto para birimi topluluğunun en güvenilir isimlerinden biri haline geldi.\n\n- Güvenli, Açık Kaynak, Gizlilik Odaklı, Sansüre Dirençli\nUygulamamız ücretsiz ve açık kaynak olup, herhangi bir güvenlik açığı veya gizlilik sızıntısı olmadığından emin olmak için birçok gözün uygulamanın koduna bakmasını sağlar. Uygulamamızın açık kaynak kullanımı, belirli bir uygulama deposu uygulamayı sansürlese bile herkesin uygulamamıza erişmesine olanak tanır. Uygulamamız Google\'ın tamamen engellediği telefonlarda bile çalışır. Gizliliğinize o kadar değer veriyoruz ki kayıt olurken e-posta adresinizi vermenizi bile talep etmiyoruz.\n\nKaynak kodu: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nSorun izleyici: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Yıldız Desteği\nDestek ekibimiz hızlı, duyarlı ve her zaman memnun etmeye isteklidir. Hiçbir zaman 24 saat içinde yanıtlanmayan bir destek biletimiz olmadı. Sosyal medya aracılığıyla her zaman kolayca ulaşılabilir durumdayız, eleştirilerinizi dikkatle dinliyor ve iyi kullanıcı önerilerini her zaman rekor sürede hayata geçiriyoruz.\n\nDesteğimize şu adresten ulaşabilirsiniz: https://agoradesk.com/support\n\n- Adil Ücretler\nTahkim bonosu cüzdanımıza Bitcoin yatırırken veya cüzdanımızdan çekerken fahiş ücretler talep etmiyoruz. Para yatırma ücreti yoktur ve para çekme ücreti, normal bir işlemde ödeyeceğiniz ücrete çok yakındır.';
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sbagoradesk => 'Kimlik doğrulaması olmadan Bitcoin satın alın veya satın. Nakit veya çevrimiçi.\n\nBitcoin\'e nasıl yatırım yapacağınızı mı merak ediyorsunuz? AgoraDesk\'te bitcoin satın almak hiç bu kadar kolay olmamıştı; PayPal, kredi/banka kartı veya banka havalesi, hediye kartları, Venmo veya başka herhangi bir çevrimiçi ödeme yöntemini kullanarak bir kişiden anında BTC satın alın. Yakınınızda nakit parayla bitcoin satın almak istiyorsanız, yerel olarak bitcoin satmaya istekli birini bulabilirsiniz; ticaret platformu, BTC\'nin nakitle alınıp satılmasını destekler. Hatta posta yoluyla nakit kullanarak bitcoin satın alabilirsiniz.\n\n- Güvenli ve Sorunsuz Ticaret\nTıpkı LocalBitcoins gibi biz de her yerde, her ödeme yöntemini, her para birimini destekliyoruz. Ödeme yöntemlerini kaldırmıyoruz ve LocalBitcoins\'in aksine yüz yüze nakit alım satımları tamamen destekliyoruz. Yaptığımız tüm işlemler tahkim teminatı ile korunmaktadır. Bir ticaretin başlayabilmesi için fonların tahkimde tutulmasını zorunlu kılmamız sayesinde, alıcı için sorunsuz ve güvenli bir deneyim sağlıyoruz; bu da platformun popülaritesi ve satıcılar için sürekli müşteriler için hayati önem taşıyor.\n\n- KYC/AML veya Kimlik Doğrulaması Yok\nAgoraDesk, orijinal LocalBitcoins\'i bu kadar popüler yapan basitliği ve anlaşılırlığı korumaya kendini adamıştır. KYC/AML kullanmıyoruz ve kullanmayı da planlamıyoruz.\n\n- Topluluğun güvendiği\nPlatformumuz dört yıldan fazla bir süredir faaliyet gösteriyor, 2018\'deki Büyük Kripto Para Piyasası Çöküşünden sağ çıktı ve topluluk odaklı özenli hizmeti sayesinde son derece şüpheci kripto para birimi topluluğunun en güvenilir isimlerinden biri haline geldi.\n\n- Güvenli, Açık Kaynak, Gizlilik Odaklı, Sansüre Dirençli\nUygulamamız ücretsiz ve açık kaynaktır; bu, hiçbir güvenlik açığı veya gizlilik sızıntısı olmadığından emin olmak için birçok gözün uygulamanın koduna bakmasını sağlar. Uygulamamızın açık kaynak kullanımı, belirli bir uygulama deposu uygulamayı sansürlese bile herkesin uygulamamıza erişmesine olanak tanır. Uygulamamız Google\'ın tamamen engellediği telefonlarda bile çalışır. Gizliliğinize o kadar değer veriyoruz ki kayıt olurken e-posta adresinizi vermenizi bile talep etmiyoruz.\n\nKaynak kodu: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nSorun izleyici: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Yıldız Desteği\nDestek ekibimiz hızlı, duyarlı ve her zaman memnun etmeye isteklidir. Hiçbir zaman 24 saat içinde yanıtlanmayan bir destek biletimiz olmadı. Sosyal medya aracılığıyla her zaman kolayca ulaşılabilir durumdayız, eleştirilerinizi dikkatle dinliyor ve iyi kullanıcı önerilerini her zaman rekor sürede hayata geçiriyoruz.\n\nDesteğimize şu adresten ulaşabilirsiniz: https://agoradesk.com/support\n\n- Adil Ücretler\nTahkim bonosu cüzdanımıza Bitcoin yatırırken veya cüzdanımızdan çekerken fahiş ücretler talep etmiyoruz. Para yatırma ücreti yoktur ve para çekme ücreti, normal bir işlemde ödeyeceğiniz ücrete çok yakındır.';
 
   @override
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbkeywords250Sblocalmonero => 'kripto para birimi,anonim,özel,monero,xmr,p2p';
@@ -9423,7 +9408,7 @@ class I18nTr extends I18n {
   String get app_select_buyer_seller => 'Alıcı veya satıcıyı seçin';
 
   @override
-  String get app_default_tab => 'Varsayılan sekmeyi ayarlama';
+  String get app_default_tab => 'Varsayılan sekmeyi ayarlayın';
 
   @override
   String get app_your_ads => 'Reklamlarınız';
@@ -9529,40 +9514,14 @@ class I18nTr extends I18n {
   }
 
   @override
-  String get api_error_363 => 'Adres biçimini (entegre adres) güncellememiş bir satıcıdan aldığınız adresi sağladınız. Lütfen Cake, Monerujo veya Feather cüzdanları gibi bir uygulamada kendi cüzdanınızı kurun ve bunun yerine bu adresi sağlayın.';
+  String get api_error_363 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
 
   @override
-  String get api_error_364 => 'Adres biçimini (entegre adres) güncellememiş bir satıcıdan aldığınız adresi sağladınız. Lütfen Cake, Monerujo veya Feather cüzdanları gibi bir uygulamada kendi cüzdanınızı kurun ve bunun yerine bu adresi sağlayın.';
+  String get api_error_364 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
 
   @override
-  String get find_user => 'Kullanıcı bul';
+  String get find_user => 'Find user';
 
   @override
-  String get traderHasNoBalance => 'Bu yatırımcının şu anda işlem yapmak için yeterli bakiyesi yok.';
-
-  @override
-  String askForAppReview(Object appName) {
-    return '$appName halk tarafından destekleniyor! Eğer beğenirseniz lütfen uygulamamızı derecelendirin. Daha fazla tüccar katılacak ve bu da herkes için daha sağlıklı bir pazara yol açacak.';
-  }
-
-  @override
-  String get askToContactWhenBadExperience => 'Kötü bir deneyim yaşadığınız için üzgünüz! Bunu geliştirebilmemiz için ekibimizle iletişime geçmek ister misiniz?';
-
-  @override
-  String get dontLikeIt => 'Beğenmedim';
-
-  @override
-  String get loveIt => 'Onu seviyorum!';
-
-  @override
-  String get cancelAndDontAsk => 'İptal et ve bir daha sorma';
-
-  @override
-  String get noMatchingItems => 'Eşleşen öğe yok.';
-
-  @override
-  String get pleaseCheckAddress => 'Lütfen adresin doğruluğunu kontrol edin';
-
-  @override
-  String get inputAddressForCalculatingFees => 'Ücretlerin hesaplanması için giriş adresi';
+  String get traderHasNoBalance => 'This trader doesn\'t have enough balance to trade at the moment.';
 }

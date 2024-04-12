@@ -7589,21 +7589,6 @@ class I18nRo extends I18n {
   String get trade250Sbwarning250Sbconfirmations => 'Nu finalizați până când TX-ul cumpărătorului nu are confirmări! A existat un val de escrocherii în care o tranzacție neconfirmată este anulată după ce vânzătorul finalizează.';
 
   @override
-  String get filter250Sbtype250Sbonline8722Sbsell => 'Cumpara online';
-
-  @override
-  String get filter250Sbtype250Sbonline8722Sbbuy => 'Vinde online';
-
-  @override
-  String get filter250Sbtype250Sblocal8722Sbsell => 'Cumpărați local';
-
-  @override
-  String get filter250Sbtype250Sblocal8722Sbbuy => 'Vinde local';
-
-  @override
-  String get login250Sbusername8722Sbtip8722Sbshort => 'Nume de utilizator (3-16 caractere)';
-
-  @override
   String get ads => 'Reclame';
 
   @override
@@ -9529,40 +9514,14 @@ class I18nRo extends I18n {
   }
 
   @override
-  String get api_error_363 => 'Ați furnizat o adresă pe care ați primit-o de la un comerciant care nu și-a actualizat formatul adresei (adresă integrată). Vă rugăm să vă configurați propriul portofel într-o aplicație precum portofele Cake, Monerujo sau Feather și furnizați acea adresă.';
+  String get api_error_363 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
 
   @override
-  String get api_error_364 => 'Ați furnizat o adresă pe care ați primit-o de la un comerciant care nu și-a actualizat formatul adresei (adresă integrată). Vă rugăm să vă configurați propriul portofel într-o aplicație precum portofele Cake, Monerujo sau Feather și furnizați acea adresă.';
+  String get api_error_364 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
 
   @override
-  String get find_user => 'Găsiți utilizator';
+  String get find_user => 'Find user';
 
   @override
-  String get traderHasNoBalance => 'Acest comerciant nu are suficient echilibru pentru a tranzacționa în acest moment.';
-
-  @override
-  String askForAppReview(Object appName) {
-    return '$appName este alimentat de oameni! Vă rugăm să evaluați aplicația noastră dacă vă place. Se vor alătura mai mulți comercianți, ceea ce duce la o piață mai sănătoasă pentru toți.';
-  }
-
-  @override
-  String get askToContactWhenBadExperience => 'Ne pare rău că ai o experiență proastă! Doriți să contactați echipa noastră pentru a o îmbunătăți?';
-
-  @override
-  String get dontLikeIt => 'Nu-mi place';
-
-  @override
-  String get loveIt => 'Place!';
-
-  @override
-  String get cancelAndDontAsk => 'Anulați și nu mai întrebați';
-
-  @override
-  String get noMatchingItems => 'Nu există articole care se potrivesc.';
-
-  @override
-  String get pleaseCheckAddress => 'Vă rugăm să verificați corectitudinea adresei';
-
-  @override
-  String get inputAddressForCalculatingFees => 'Adresa de intrare pentru calcularea taxelor';
+  String get traderHasNoBalance => 'This trader doesn\'t have enough balance to trade at the moment.';
 }
