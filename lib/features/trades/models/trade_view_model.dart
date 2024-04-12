@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io';
 import 'dart:ui';
 
 import 'package:agoradesk/core/api/api_client.dart';
@@ -735,8 +736,9 @@ class TradeViewModel extends ViewModel
   }
 
   Future<void> checkAndAskForReview(BuildContext parentContext) async {
-    AskForReviewWidget.show(parentContext);
-    // check how many trades user made
+    if (GetIt.I<AppParameters>().includeFcm == false) {
+      return;
+    }
     if (AppSharedPrefs().tradesCount == 0) {
       const requestParameter = TradeRequestParameterModel(
         page: 0,

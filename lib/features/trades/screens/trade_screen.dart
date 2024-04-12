@@ -154,11 +154,6 @@ class _TradeScreenState extends State<TradeScreen>
     return SingleChildScrollView(
       child: Column(
         children: [
-          TextButton(
-              onPressed: () {
-                model.checkAndAskForReview(context);
-              },
-              child: const Text('Ask for review')),
           _noteOnUser(model),
           const SizedBox(height: 12),
           TradeInfoTile(model: model),
