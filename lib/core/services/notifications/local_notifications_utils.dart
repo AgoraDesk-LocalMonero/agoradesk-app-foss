@@ -1,12 +1,10 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/services/notifications/models/push_model.dart';
 import 'package:agoradesk/main.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:google_api_availability/google_api_availability.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
@@ -78,7 +76,13 @@ Future _notificationResponse(NotificationResponse notificationResponse) async {
     }
     eventBus.fire(NoificationClickedEvent(tradeId));
   } catch (e) {
-    Sentry.captureException('Error parsing push payload local_notifications_utils.dart');
+    if (notificationResponse.payload != null) {
+      final data = jsonDecode(notificationResponse.payload!);
+      final Map<String, dynamic> payload = data.map((key, value) => MapEntry(key, value?.toString().length ?? ''));
+      Sentry.captureException('Error local_notifications_utils.dart - $payload');
+    } else {
+      Sentry.captureException('Error local_notifications_utils.dart (payload is null) - $e');
+    }
   }
 }
 

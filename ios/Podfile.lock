@@ -5,7 +5,6 @@ PODS:
     - SwiftProtobuf
   - connectivity_plus (0.0.1):
     - Flutter
-    - FlutterMacOS
     - ReachabilitySwift
   - device_info_plus (0.0.1):
     - Flutter
@@ -90,6 +89,8 @@ PODS:
     - GoogleUtilities/Privacy
   - image_picker_ios (0.0.1):
     - Flutter
+  - in_app_review (0.2.0):
+    - Flutter
   - local_auth_ios (0.0.1):
     - Flutter
   - MTBBarcodeScanner (5.0.11)
@@ -135,7 +136,7 @@ PODS:
 
 DEPENDENCIES:
   - barcode_scan2 (from `.symlinks/plugins/barcode_scan2/ios`)
-  - connectivity_plus (from `.symlinks/plugins/connectivity_plus/darwin`)
+  - connectivity_plus (from `.symlinks/plugins/connectivity_plus/ios`)
   - device_info_plus (from `.symlinks/plugins/device_info_plus/ios`)
   - firebase_core (from `.symlinks/plugins/firebase_core/ios`)
   - firebase_messaging (from `.symlinks/plugins/firebase_messaging/ios`)
@@ -147,6 +148,7 @@ DEPENDENCIES:
   - flutter_local_notifications (from `.symlinks/plugins/flutter_local_notifications/ios`)
   - flutter_secure_storage (from `.symlinks/plugins/flutter_secure_storage/ios`)
   - image_picker_ios (from `.symlinks/plugins/image_picker_ios/ios`)
+  - in_app_review (from `.symlinks/plugins/in_app_review/ios`)
   - local_auth_ios (from `.symlinks/plugins/local_auth_ios/ios`)
   - package_info_plus (from `.symlinks/plugins/package_info_plus/ios`)
   - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
@@ -182,7 +184,7 @@ EXTERNAL SOURCES:
   barcode_scan2:
     :path: ".symlinks/plugins/barcode_scan2/ios"
   connectivity_plus:
-    :path: ".symlinks/plugins/connectivity_plus/darwin"
+    :path: ".symlinks/plugins/connectivity_plus/ios"
   device_info_plus:
     :path: ".symlinks/plugins/device_info_plus/ios"
   firebase_core:
@@ -205,6 +207,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/flutter_secure_storage/ios"
   image_picker_ios:
     :path: ".symlinks/plugins/image_picker_ios/ios"
+  in_app_review:
+    :path: ".symlinks/plugins/in_app_review/ios"
   local_auth_ios:
     :path: ".symlinks/plugins/local_auth_ios/ios"
   package_info_plus:
@@ -232,8 +236,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   barcode_scan2: 0af2bb63c81b4565aab6cd78278e4c0fa136dbb0
-  connectivity_plus: e2dad488011aeb593e219360e804c43cc1af5770
-  device_info_plus: 97af1d7e84681a90d0693e63169a5d50e0839a0d
+  connectivity_plus: bf0076dd84a130856aa636df1c71ccaff908fa1d
+  device_info_plus: c6fb39579d0f423935b0c9ce7ee2f44b71b9fce6
   Firebase: 797fd7297b7e1be954432743a0b3f90038e45a71
   firebase_core: d955499180c3c8ef355adf46b8752c4c01d09e0a
   firebase_messaging: 23c8eaa885a11552e45c98b7a08ba81860092883
@@ -251,6 +255,7 @@ SPEC CHECKSUMS:
   GoogleDataTransport: 6c09b596d841063d76d4288cc2d2f42cc36e1e2a
   GoogleUtilities: d053d902a8edaa9904e1bd00c37535385b8ed152
   image_picker_ios: 99dfe1854b4fa34d0364e74a78448a0151025425
+  in_app_review: 318597b3a06c22bb46dc454d56828c85f444f99d
   local_auth_ios: 5046a18c018dd973247a0564496c8898dbb5adf9
   MTBBarcodeScanner: f453b33c4b7dfe545d8c6484ed744d55671788cb
   nanopb: 438bc412db1928dac798aa6fd75726007be04262

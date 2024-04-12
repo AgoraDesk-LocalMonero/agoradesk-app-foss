@@ -14,6 +14,7 @@ import 'package:agoradesk/features/market/screens/widgets/line_icon_link.dart';
 import 'package:agoradesk/features/profile/models/account_view_model.dart';
 import 'package:agoradesk/features/profile/screens/widgets/line_with_arrow.dart';
 import 'package:agoradesk/features/profile/screens/widgets/line_with_switcher.dart';
+import 'package:agoradesk/features/trades/screens/widgets/ask_for_review_widget.dart';
 import 'package:agoradesk/router.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
@@ -178,6 +179,11 @@ class AccountScreen extends StatelessWidget with ClipboardMixin {
                             title: context.intl.post8722Sbad250Sbcountry250Sbtitle,
                             onPressed: () => AutoRouter.of(context).push(CountryRoute()),
                           ),
+                          // sectionsSeparator,
+                          // LineWithArrow(
+                          //   title: context.intl.review,
+                          //   onPressed: () => AskForReviewWidget.show(context),
+                          // ),
                           const SizedBox(height: 16),
                           // kDebugMode
                           //     ? LineWithArrow(

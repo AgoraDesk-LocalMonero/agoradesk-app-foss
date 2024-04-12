@@ -65,6 +65,7 @@ class _TradeScreenState extends State<TradeScreen>
       adsRepository: context.read<AdsRepository>(),
       appState: context.read<AppStateV1>(),
       notificationsService: context.read<NotificationsService>(),
+      parentContext: context,
     );
     _model.tabController = TabController(length: 2, vsync: this);
 

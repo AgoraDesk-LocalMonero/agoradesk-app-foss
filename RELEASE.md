@@ -1,7 +1,6 @@
 ### Updates
 
-1. Add local currencies to the wallet balance.
-2. Bug fixes.
+1. Add "ask for a review" feature.
 
 ### About the attached app's
 

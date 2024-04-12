@@ -17,4 +17,5 @@
 "TRADE_PAYMENT_MARKED_COMPLETE" = "%@가 거래 %@의 결제를 완료했습니다";
 "TRADE_CANCELLED" = "%@가 거래 %@를 최소했습니다";
 "TRADE_DISPUTED" = "%@가 거래%@의 분쟁 중재를 신청했습니다";
+"TRADE_FUNDED" = "%@ 거래가 자금화되었습니다";
 "MESSAGE" = "%@";

@@ -17,4 +17,5 @@
 "TRADE_PAYMENT_MARKED_COMPLETE" = "%@ marcou pagamento como realizado na negociação %@";
 "TRADE_CANCELLED" = "Negociação %@ foi cancelada por %@";
 "TRADE_DISPUTED" = "Negociação %@ disputada por %@";
+"TRADE_FUNDED" = "Negociação %@ foi financiada";
 "MESSAGE" = "%@";
