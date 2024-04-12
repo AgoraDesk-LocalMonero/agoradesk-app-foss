@@ -1,6 +1,9 @@
+import 'dart:io';
 
+import 'package:agoradesk/core/app_parameters.dart';
 import 'package:in_app_review/in_app_review.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+import 'package:sentry_flutter/sentry_flutter.dart';
 
 part 'in_app_review_service.g.dart';
 
@@ -14,7 +17,13 @@ class InAppReviewService {
 
   Future<void> requestReview() async {
     if (await _inAppReview.isAvailable()) {
-      await _inAppReview.requestReview();
+      if (Platform.isAndroid) {
+        await _inAppReview.requestReview();
+      } else {
+        _inAppReview.openStoreListing(appStoreId: GetIt.I<AppParameters>().appStoreId);
+      }
+    } else {
+      await Sentry.captureMessage(' _inAppReview.isAvailable() is false');
     }
   }
 }
