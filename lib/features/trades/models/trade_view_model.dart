@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:io';
 import 'dart:ui';
 
 import 'package:agoradesk/core/api/api_client.dart';
@@ -49,7 +48,7 @@ import 'package:vm/vm.dart';
 import 'note_on_user_view_model.dart';
 
 /// Polling trade activity and new messages in the chat when the trade screen is open
-const _kPollingSeconds = 60;
+const _kPollingSeconds = 90;
 
 const kDeletedUserName = '[DELETED]';
 
@@ -301,11 +300,15 @@ class TradeViewModel extends ViewModel
     await Future.delayed(const Duration(milliseconds: 300));
     isTradeLoading = false;
 
-    _timer?.cancel();
-    _timer = Timer.periodic(const Duration(seconds: _kPollingSeconds), (_) async => _polling());
+    if (_timer?.isActive != true) {
+      _timer = Timer.periodic(const Duration(seconds: _kPollingSeconds), (_) async => _polling());
+    }
   }
 
   Future _polling() async {
+    if (GetIt.I<AppParameters>().polling) {
+      return;
+    }
     if (GetIt.I<AppParameters>().includeFcm == false ||
         GetIt.I<AppParameters>().isGoogleAvailable == false ||
         isProcessing()) {
@@ -313,12 +316,16 @@ class TradeViewModel extends ViewModel
       await indicatorKey.currentState?.show();
       _calcTimeBeforeCancel();
       await _getMessages(polling: true);
-      Future.delayed(const Duration(milliseconds: 500)).then((value) => GetIt.I<AppParameters>().polling = false);
+      await Future.delayed(const Duration(milliseconds: 500));
+      GetIt.I<AppParameters>().polling = false;
     }
   }
 
   _listenEventBus() {
     _updateOpenedChatSubscription = eventBus.on<UpdateOpenedChatEvent>().listen((e) async {
+      if (GetIt.I<AppParameters>().polling) {
+        return;
+      }
       GetIt.I<AppParameters>().polling = true;
       await indicatorKey.currentState?.show();
       _calcTimeBeforeCancel();
@@ -425,33 +432,35 @@ class TradeViewModel extends ViewModel
   }
 
   Future getTrade({bool polling = false}) async {
-    if (!_pollingLoading) {
-      late final String tradeIdWithPolling;
-      if (polling) {
-        _pollingLoading = true;
-        if (tradeId != null) {
-          tradeIdWithPolling = tradeId!;
-        } else {
-          tradeIdWithPolling = tradeForScreen.tradeId;
-        }
-      } else {
+    if (_pollingLoading) {
+      return;
+    }
+
+    late final String tradeIdWithPolling;
+    if (polling) {
+      _pollingLoading = true;
+      if (tradeId != null) {
         tradeIdWithPolling = tradeId!;
-      }
-      final res = await _tradeRepository.getTrade(id: tradeIdWithPolling);
-      _pollingLoading = false;
-      if (res.isRight) {
-        errorTradeLoading = false;
-        tradeForScreen = res.right;
-        if (polling) {
-          await _setTradeStatus();
-          _calcTimeBeforeCancel();
-          notifyListeners();
-        }
       } else {
-        if (!polling) {
-          errorTradeLoading = true;
-          handleApiError(res.left, context);
-        }
+        tradeIdWithPolling = tradeForScreen.tradeId;
+      }
+    } else {
+      tradeIdWithPolling = tradeId!;
+    }
+    final res = await _tradeRepository.getTrade(id: tradeIdWithPolling);
+    _pollingLoading = false;
+    if (res.isRight) {
+      errorTradeLoading = false;
+      tradeForScreen = res.right;
+      if (polling) {
+        await _setTradeStatus();
+        _calcTimeBeforeCancel();
+        notifyListeners();
+      }
+    } else {
+      if (!polling) {
+        errorTradeLoading = true;
+        handleApiError(res.left, context);
       }
     }
   }
@@ -906,6 +915,7 @@ class TradeViewModel extends ViewModel
         }
       }
     }
+    await Future.delayed(const Duration(milliseconds: 1000));
     _gettingMessages = false;
   }
 
@@ -1269,7 +1279,6 @@ class TradeViewModel extends ViewModel
   void didChangeAppLifecycleState(AppLifecycleState state) async {
     if (state == AppLifecycleState.resumed) {
       _calcTimeBeforeCancel();
-      await indicatorKey.currentState?.show();
       await _getMessages(polling: true);
     }
   }
