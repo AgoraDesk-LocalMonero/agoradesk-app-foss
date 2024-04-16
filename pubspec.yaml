@@ -50,7 +50,7 @@ dependencies:
   image_picker: ^1.0.7
   in_app_review: ^2.0.9
   injectable: ^2.1.0
-  insta_image_viewer: ^1.0.2
+  insta_image_viewer: ^1.0.4
   intl: any
   json_annotation: ^4.4.0
   local_auth: ^2.1.8

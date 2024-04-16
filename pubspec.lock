@@ -1122,10 +1122,10 @@ packages:
     dependency: "direct main"
     description:
       name: insta_image_viewer
-      sha256: "9a81432b1ab907ea91c255ec079440afe43f999533422badffaa482dfb7fdfbb"
+      sha256: "5c3150415d19945ee7eb9a986ed636219e384164e53a4854e8c6f3dbb3b3e197"
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.2"
+    version: "1.0.4"
   intl:
     dependency: "direct main"
     description:

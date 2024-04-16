@@ -7589,6 +7589,21 @@ class I18nKo extends I18n {
   String get trade250Sbwarning250Sbconfirmations => '구매자의 전송이 확인될 때까지 마무리하지 마십시오! 판매자가 확정한 후 확인되지 않은 거래를 취소하는 사기가 급증했습니다.';
 
   @override
+  String get filter250Sbtype250Sbonline8722Sbsell => '온라인 구매';
+
+  @override
+  String get filter250Sbtype250Sbonline8722Sbbuy => '온라인 판매';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbsell => '현지에서 구매';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbbuy => '현지에서 판매';
+
+  @override
+  String get login250Sbusername8722Sbtip8722Sbshort => '사용자 이름(3~16자)';
+
+  @override
   String get ads => '광고';
 
   @override
@@ -8117,7 +8132,7 @@ class I18nKo extends I18n {
   String get api_error_65 => '이미 읽은 알림을 읽음으로 표시하려고 합니다.';
 
   @override
-  String get api_error_66 => '존재하지 않는 거래에 채팅 첨부 파일을 업로드하려고 합니다.';
+  String get api_error_66 => '존재하지 않는 거래에 채팅 첨부 파일을 업로드하려고 시도했습니다.';
 
   @override
   String get api_error_67 => '존재하지 않는 거래에 채팅 메시지를 보내려고 합니다.';
@@ -8327,7 +8342,7 @@ class I18nKo extends I18n {
   String get api_error_148 => '이미 설정된 텔레그램 ID를 설정하려고 합니다.';
 
   @override
-  String get api_error_149 => '외부 출금에 대해서는 우선순위가 지정되지 않았습니다.';
+  String get api_error_149 => '외부 출금에 대한 우선순위가 지정되지 않았습니다.';
 
   @override
   String get api_error_150 => '요청한 사용자가 광고 포스터에 의해 차단된 광고에서 거래를 시작하려고 시도하는 경우';
@@ -8486,7 +8501,7 @@ class I18nKo extends I18n {
   String get api_error_218 => '요청한 사용자에게 확인된 이메일이 없는데 확인된 이메일이 필요한 광고에 대해 거래를 열려고 시도하는 행위';
 
   @override
-  String get api_error_219 => '일회용 이메일 제공업체가 제공한 이메일로 등록을 시도함';
+  String get api_error_219 => '일회용 이메일 제공업체가 제공한 이메일로 등록을 시도합니다.';
 
   @override
   String get api_error_220 => '계정 이메일을 일회용 이메일 제공업체의 이메일로 변경하려고 합니다.';
@@ -8567,10 +8582,10 @@ class I18nKo extends I18n {
   String get api_error_250 => 'BTC 출금 수수료 요청 시 잘못된 주소가 제공되었습니다.';
 
   @override
-  String get api_error_251 => 'BTC SELL 유형의 광고에 응답하여 거래 개시 시 수수료 수준이 제공되지 않습니다.';
+  String get api_error_251 => 'BTC SELL 유형 광고에 응답하여 거래 개시 시 수수료 수준이 제공되지 않습니다.';
 
   @override
-  String get api_error_252 => 'BTC BUY형 광고 작성 시 수수료 수준이 제공되지 않습니다.';
+  String get api_error_252 => 'BTC BUY형 광고작성시 수수료 수준이 제공되지 않습니다.';
 
   @override
   String get api_error_253 => '수수료 수준이 설정되지 않은 BTC BUY형 광고 업데이트 시 수수료 수준이 제공되지 않습니다.';
@@ -8588,7 +8603,7 @@ class I18nKo extends I18n {
   String get api_error_258 => '이미 500개의 장치 토큰이 있는 계정에 푸시 알림 토큰을 등록하려고 하면 다시 시도하기 전에 기존 토큰 중 하나를 삭제하세요.';
 
   @override
-  String get api_error_259 => '존재하지 않거나 이 사용자에게 속하지 않은 토큰을 삭제하려고 합니다.';
+  String get api_error_259 => '존재하지 않거나 이 사용자에게 속하지 않는 토큰을 삭제하려고 합니다.';
 
   @override
   String get account => '계정';
@@ -9243,7 +9258,7 @@ class I18nKo extends I18n {
   String get app_one_percent => '수수료 1%';
 
   @override
-  String get app_final_amount => '최종 금액';
+  String get app_final_amount => '최종금액';
 
   @override
   String app_note_label(Object val, Object username) {
@@ -9320,19 +9335,19 @@ class I18nKo extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: XMR을 쉽게 구매하세요';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => '신분증 확인 없이 Monero를 구매하거나 판매하세요. 현금 또는 온라인. 안전하고 빠르고 간편합니다.\n\nLocalMonero는 XMR 커뮤니티에서 가장 크고, 가장 신뢰할 수 있으며, 확고한 P2P 거래 플랫폼입니다. 우리는 KYC 수표를 사용하지 않습니다. PayPal, 신용 카드, 기프트 카드, 현금을 사용하여 ID 확인 없이 익명으로 Monero를 구매할 수 있으며 Bitcoin, Ether, USDT 또는 기타 암호화폐를 Monero로 변환할 수 있습니다. 우리 플랫폼은 모든 결제 방법을 지원합니다.\n\n- 안전하고 원활한 거래\n우리는 어디서나 모든 결제 방법, 통화를 지원합니다. 결제 수단을 제거하지 않으며, 대면 현금 거래를 완벽하게 지원합니다. 우리의 모든 거래는 중재 채권으로 보호됩니다. 거래가 시작되기 전에 중재 채권에 자금을 보유해야 한다는 사실 덕분에 우리는 구매자에게 원활하고 안전한 경험을 보장합니다. 이는 플랫폼의 인기와 판매자의 반복 고객에 필수적입니다.\n\n- KYC/AML 또는 ID 확인이 없습니다.\nLocalMonero는 귀하의 거래 경험의 단순성과 단순성을 유지하기 위해 최선을 다하고 있습니다. 우리는 KYC/AML을 채택하지 않으며 앞으로도 그렇게 할 계획이 없습니다.\n\n- 커뮤니티의 신뢰를 받음\n우리 플랫폼은 4년 넘게 운영되었으며 2018년 암호화폐 시장 대붕괴에서 살아남았으며 커뮤니티 중심의 부지런한 서비스를 통해 극도로 회의적인 Monero 커뮤니티에서 가장 신뢰받는 이름 중 하나가 되었습니다.\n\n- 보안, 오픈 소스, 개인 정보 보호 중심, 검열 방지\n우리 앱은 무료이며 오픈 소스이므로 보안 허점이나 개인 정보 유출이 없는지 확인하기 위해 많은 눈이 앱 코드를 살펴보고 있습니다. 또한 우리 앱을 오픈 소스화하면 특정 앱 저장소가 앱을 검열하더라도 누구나 우리 앱에 액세스할 수 있습니다. 우리 앱은 Google이 완전히 차단한 휴대폰에서도 작동합니다. 우리는 귀하의 개인 정보를 매우 중요하게 생각하므로 등록할 때 이메일을 제공하도록 요구하지도 않습니다.\n\n소스 코드: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\n이슈 추적기: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- 스텔라 지원\n우리의 지원팀은 빠르고 신속하게 대응하며 항상 만족을 드리고자 노력합니다. 우리는 24시간 이내에 답변을 받지 못한 지원 티켓을 받은 적이 없습니다. 우리는 항상 소셜 미디어를 통해 쉽게 연락할 수 있으며, 귀하의 비판에 귀를 기울이고 항상 기록적인 시간 내에 좋은 사용자 제안을 구현합니다.\n\nhttps://localmonero.co/support에서 지원을 받을 수 있습니다.\n\n- 공정한 수수료\n우리는 중재 채권 지갑에 모네로를 입금하거나 인출할 때 엄청난 수수료를 부과하지 않습니다. 입금 수수료는 없으며, 출금 수수료는 일반 거래에서 지불하는 수수료와 매우 유사합니다.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => '신분증 확인 없이 Monero를 구매하거나 판매하세요. 현금 또는 온라인. 안전하고 빠르고 간편합니다.\n\nLocalMonero는 XMR 커뮤니티에서 가장 크고, 가장 신뢰할 수 있으며, 확고한 P2P 거래 플랫폼입니다. 우리는 KYC 수표를 사용하지 않습니다. PayPal, 신용 카드, 기프트 카드, 현금을 사용하여 ID 확인 없이 익명으로 Monero를 구매할 수 있으며 Bitcoin, Ether, USDT 또는 기타 암호화폐를 Monero로 변환할 수 있습니다. 우리 플랫폼은 모든 결제 방법을 지원합니다.\n\n- 안전하고 원활한 거래\n우리는 어디서나 모든 결제 방법, 통화를 지원합니다. 결제 수단을 제거하지 않으며, 대면 현금 거래를 완벽하게 지원합니다. 우리의 모든 거래는 중재 채권으로 보호됩니다. 거래가 시작되기 전에 중재 채권에 자금을 보유해야 한다는 사실 덕분에 우리는 구매자에게 원활하고 안전한 경험을 보장합니다. 이는 플랫폼의 인기와 판매자의 반복 고객에 필수적입니다.\n\n- KYC/AML 또는 ID 확인이 없습니다.\nLocalMonero는 귀하의 거래 경험의 단순성과 단순성을 유지하기 위해 최선을 다하고 있습니다. 우리는 KYC/AML을 채택하지 않으며 앞으로도 그렇게 할 계획이 없습니다.\n\n- 커뮤니티의 신뢰를 받음\n우리 플랫폼은 4년 넘게 운영되었으며 2018년 암호화폐 시장 대붕괴에서 살아남았으며 커뮤니티 중심의 부지런한 서비스를 통해 극도로 회의적인 Monero 커뮤니티에서 가장 신뢰받는 이름 중 하나가 되었습니다.\n\n- 보안, 오픈 소스, 개인 정보 보호 중심, 검열 방지\n우리 앱은 무료이며 오픈 소스이므로 보안 허점이나 개인 정보 유출이 없는지 확인하기 위해 많은 눈이 앱 코드를 살펴보고 있습니다. 또한 우리 앱을 오픈 소스화하면 특정 앱 저장소가 앱을 검열하더라도 누구나 우리 앱에 액세스할 수 있습니다. 우리 앱은 Google이 완전히 차단한 휴대폰에서도 작동합니다. 우리는 귀하의 개인 정보를 매우 중요하게 생각하므로 등록할 때 이메일을 제공하도록 요구하지도 않습니다.\n\n소스 코드: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\n이슈 추적기: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- 스텔라 지원\n우리의 지원팀은 빠르고 신속하게 대응하며 항상 만족을 드리고자 노력합니다. 우리는 24시간 이내에 답변을 받지 못한 지원 티켓을 받은 적이 없습니다. 우리는 항상 소셜 미디어를 통해 쉽게 연락할 수 있으며, 귀하의 비판에 귀를 기울이고 항상 기록적인 시간 내에 좋은 사용자 제안을 구현합니다.\n\nhttps://localmonero.co/support에서 지원을 받을 수 있습니다.\n\n- 공정한 수수료\n우리는 중재 채권 지갑에 Monero를 입금하거나 인출할 때 엄청난 수수료를 부과하지 않습니다. 입금 수수료는 없으며, 출금 수수료는 일반 거래에서 지불하는 수수료와 매우 유사합니다.';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: XMR을 개인적으로 구매하세요';
 
   @override
-  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sblocalmonero => '신분증 확인 없이 Monero를 구매하거나 판매하세요. 현금 또는 온라인. 안전하고 빠르고 간편합니다.\n\nLocalMonero는 XMR 커뮤니티에서 가장 크고, 가장 신뢰할 수 있으며, 확고한 P2P 거래 플랫폼입니다. 우리는 KYC 수표를 사용하지 않습니다. PayPal, 신용 카드, 기프트 카드, 현금을 사용하여 ID 확인 없이 익명으로 Monero를 구매할 수 있으며 Bitcoin, Ether, USDT 또는 기타 암호화폐를 Monero로 변환할 수 있습니다. 우리 플랫폼은 모든 결제 방법을 지원합니다.\n\n- 안전하고 원활한 거래\n우리는 어디서나 모든 결제 방법, 통화를 지원합니다. 결제 수단을 제거하지 않으며, 대면 현금 거래를 완벽하게 지원합니다. 우리의 모든 거래는 중재 채권으로 보호됩니다. 거래가 시작되기 전에 중재 채권에 자금을 보유해야 한다는 사실 덕분에 우리는 구매자에게 원활하고 안전한 경험을 보장합니다. 이는 플랫폼의 인기와 판매자의 반복 고객에 필수적입니다.\n\n- KYC/AML 또는 ID 확인이 없습니다.\nLocalMonero는 귀하의 거래 경험의 단순성과 단순성을 유지하기 위해 최선을 다하고 있습니다. 우리는 KYC/AML을 채택하지 않으며 앞으로도 그렇게 할 계획이 없습니다.\n\n- 커뮤니티의 신뢰를 받음\n우리 플랫폼은 4년 넘게 운영되었으며 2018년 암호화폐 시장 대붕괴에서 살아남았으며 커뮤니티 중심의 부지런한 서비스를 통해 극도로 회의적인 Monero 커뮤니티에서 가장 신뢰받는 이름 중 하나가 되었습니다.\n\n- 보안, 오픈 소스, 개인 정보 보호 중심, 검열 방지\n우리 앱은 무료이며 오픈 소스이므로 보안 허점이나 개인 정보 유출이 없는지 확인하기 위해 많은 눈이 앱 코드를 살펴보고 있습니다. 또한 우리 앱을 오픈 소스화하면 특정 앱 저장소가 앱을 검열하더라도 누구나 우리 앱에 액세스할 수 있습니다. 우리 앱은 Google이 완전히 차단한 휴대폰에서도 작동합니다. 우리는 귀하의 개인 정보를 매우 중요하게 생각하므로 등록할 때 이메일을 제공하도록 요구하지도 않습니다.\n\n소스 코드: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\n이슈 추적기: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- 스텔라 지원\n우리의 지원팀은 빠르고 신속하게 대응하며 항상 만족을 드리고자 노력합니다. 우리는 24시간 이내에 답변을 받지 못한 지원 티켓을 받은 적이 없습니다. 우리는 항상 소셜 미디어를 통해 쉽게 연락할 수 있으며, 귀하의 비판에 귀를 기울이고 항상 기록적인 시간 내에 좋은 사용자 제안을 구현합니다.\n\nhttps://localmonero.co/support에서 지원을 받을 수 있습니다.\n\n- 공정한 수수료\n우리는 중재 채권 지갑에 모네로를 입금하거나 인출할 때 엄청난 수수료를 부과하지 않습니다. 입금 수수료는 없으며, 출금 수수료는 일반 거래에서 지불하는 수수료와 매우 유사합니다.';
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sblocalmonero => '신분증 확인 없이 Monero를 구매하거나 판매하세요. 현금 또는 온라인. 안전하고 빠르고 간편합니다.\n\nLocalMonero는 XMR 커뮤니티에서 가장 크고, 가장 신뢰할 수 있으며, 확고한 P2P 거래 플랫폼입니다. 우리는 KYC 수표를 사용하지 않습니다. PayPal, 신용 카드, 기프트 카드, 현금을 사용하여 ID 확인 없이 익명으로 Monero를 구매할 수 있으며 Bitcoin, Ether, USDT 또는 기타 암호화폐를 Monero로 변환할 수 있습니다. 우리 플랫폼은 모든 결제 방법을 지원합니다.\n\n- 안전하고 원활한 거래\n우리는 어디서나 모든 결제 방법, 통화를 지원합니다. 결제 수단을 제거하지 않으며, 대면 현금 거래를 완벽하게 지원합니다. 우리의 모든 거래는 중재 채권으로 보호됩니다. 거래가 시작되기 전에 중재 채권에 자금을 보유해야 한다는 사실 덕분에 우리는 구매자에게 원활하고 안전한 경험을 보장합니다. 이는 플랫폼의 인기와 판매자의 반복 고객에 필수적입니다.\n\n- KYC/AML 또는 ID 확인이 없습니다.\nLocalMonero는 귀하의 거래 경험의 단순성과 단순성을 유지하기 위해 최선을 다하고 있습니다. 우리는 KYC/AML을 채택하지 않으며 앞으로도 그렇게 할 계획이 없습니다.\n\n- 커뮤니티의 신뢰를 받음\n우리 플랫폼은 4년 넘게 운영되었으며 2018년 암호화폐 시장 대붕괴에서 살아남았으며 커뮤니티 중심의 부지런한 서비스를 통해 극도로 회의적인 Monero 커뮤니티에서 가장 신뢰받는 이름 중 하나가 되었습니다.\n\n- 보안, 오픈 소스, 개인 정보 보호 중심, 검열 방지\n우리 앱은 무료이며 오픈 소스이므로 보안 허점이나 개인 정보 유출이 없는지 확인하기 위해 많은 눈이 앱 코드를 살펴보고 있습니다. 또한 우리 앱을 오픈 소스화하면 특정 앱 저장소가 앱을 검열하더라도 누구나 우리 앱에 액세스할 수 있습니다. 우리 앱은 Google이 완전히 차단한 휴대폰에서도 작동합니다. 우리는 귀하의 개인 정보를 매우 중요하게 생각하므로 등록할 때 이메일을 제공하도록 요구하지도 않습니다.\n\n소스 코드: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\n이슈 추적기: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- 스텔라 지원\n우리의 지원팀은 빠르고 신속하게 대응하며 항상 만족을 드리고자 노력합니다. 우리는 24시간 이내에 답변을 받지 못한 지원 티켓을 받은 적이 없습니다. 우리는 항상 소셜 미디어를 통해 쉽게 연락할 수 있으며, 귀하의 비판에 귀를 기울이고 항상 기록적인 시간 내에 좋은 사용자 제안을 구현합니다.\n\nhttps://localmonero.co/support에서 지원을 받을 수 있습니다.\n\n- 공정한 수수료\n우리는 중재 채권 지갑에 Monero를 입금하거나 인출할 때 엄청난 수수료를 부과하지 않습니다. 입금 수수료는 없으며, 출금 수수료는 일반 거래에서 지불하는 수수료와 매우 유사합니다.';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sbagoradesk => 'AgoraDesk: 익명으로 BTC 구매';
 
   @override
-  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sbagoradesk => '신분증 확인 없이 비트코인을 구매하거나 판매하세요. 현금 또는 온라인.\n\n비트코인에 투자하는 방법이 궁금하십니까? AgoraDesk에서는 비트코인 구매가 그 어느 때보다 쉬워졌습니다. PayPal, 신용/직불 카드, 은행 송금, 기프트 카드, Venmo 등 원하는 온라인 결제 방법을 사용하여 사람으로부터 BTC를 즉시 구매하세요. 가까운 곳에서 현금으로 비트코인을 사고 싶다면 현지에서 비트코인을 팔려는 사람을 찾을 수 있습니다. 거래 플랫폼은 BTC를 현금으로 사고 파는 것을 지원합니다. 우편으로 현금을 사용하여 비트코인을 구입할 수도 있습니다.\n\n- 안전하고 원활한 거래\nLocalBitcoins와 마찬가지로 우리는 어디서나 모든 결제 방법, 모든 통화를 지원합니다. 우리는 결제 수단을 제거하지 않으며 LocalBitcoins와 달리 대면 현금 거래를 완벽하게 지원합니다. 우리의 모든 거래는 중재 채권으로 보호됩니다. 거래가 시작되기 전에 중재 채권에 자금을 보유해야 한다는 사실 덕분에 우리는 구매자에게 원활하고 안전한 경험을 보장합니다. 이는 플랫폼의 인기와 판매자의 반복 고객에 필수적입니다.\n\n- KYC/AML 또는 ID 확인이 없습니다.\nAgoraDesk는 원래 LocalBitcoins를 인기 있게 만든 단순성과 단순성을 유지하기 위해 최선을 다하고 있습니다. 우리는 KYC/AML을 채택하지 않으며 앞으로도 그렇게 할 계획이 없습니다.\n\n- 커뮤니티의 신뢰를 받음\n우리 플랫폼은 4년 넘게 운영되었으며 2018년 암호화폐 시장 대붕괴에서 살아남았으며 커뮤니티 중심의 부지런한 서비스를 통해 극도로 회의적인 암호화폐 커뮤니티에서 가장 신뢰받는 이름 중 하나가 되었습니다.\n\n- 보안, 오픈 소스, 개인 정보 보호 중심, 검열 방지\n우리 앱은 무료이며 오픈 소스이므로 보안 허점이나 개인 정보 유출이 없는지 확인하기 위해 많은 눈이 앱 코드를 살펴보고 있습니다. 또한 우리 앱을 오픈 소스화하면 특정 앱 저장소가 앱을 검열하더라도 누구나 우리 앱에 액세스할 수 있습니다. 우리 앱은 Google이 완전히 차단한 휴대폰에서도 작동합니다. 우리는 귀하의 개인 정보를 매우 중요하게 생각하므로 등록할 때 이메일을 제공하도록 요구하지도 않습니다.\n\n소스 코드: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\n이슈 추적기: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- 스텔라 지원\n우리의 지원팀은 빠르고 신속하게 대응하며 항상 만족을 드리고자 노력합니다. 우리는 24시간 이내에 답변을 받지 못한 지원 티켓을 받은 적이 없습니다. 우리는 항상 소셜 미디어를 통해 쉽게 연락할 수 있으며, 귀하의 비판에 귀를 기울이고 항상 기록적인 시간 내에 좋은 사용자 제안을 구현합니다.\n\nhttps://agoradesk.com/support에서 지원을 받으실 수 있습니다.\n\n- 공정한 수수료\n우리는 중재 채권 지갑에 비트코인을 입금하거나 인출할 때 엄청난 수수료를 부과하지 않습니다. 입금 수수료는 없으며, 출금 수수료는 일반 거래에서 지불하는 수수료와 매우 유사합니다.';
+  String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbdescription250Sbagoradesk => '신분증 확인 없이 비트코인을 구매하거나 판매하세요. 현금 또는 온라인.\n\n비트코인에 투자하는 방법이 궁금하십니까? AgoraDesk에서는 비트코인 구매가 그 어느 때보다 쉬워졌습니다. PayPal, 신용/직불 카드, 은행 송금, 기프트 카드, Venmo 등 원하는 온라인 결제 방법을 사용하여 사람으로부터 BTC를 즉시 구매하세요. 가까운 곳에서 현금으로 비트코인을 사고 싶다면 현지에서 비트코인을 팔려는 사람을 찾을 수 있습니다. 거래 플랫폼은 BTC를 현금으로 사고 파는 것을 지원합니다. 우편으로 현금을 사용하여 비트코인을 구입할 수도 있습니다.\n\n- 안전하고 원활한 거래\nLocalBitcoins와 마찬가지로 우리는 어디서나 모든 결제 방법, 모든 통화를 지원합니다. 우리는 결제 수단을 제거하지 않으며 LocalBitcoins와 달리 대면 현금 거래를 완벽하게 지원합니다. 우리의 모든 거래는 중재 채권으로 보호됩니다. 거래가 시작되기 전에 중재 채권에 자금을 보유해야 한다는 사실 덕분에 우리는 구매자에게 원활하고 안전한 경험을 보장합니다. 이는 플랫폼의 인기와 판매자의 반복 고객에 필수적입니다.\n\n- KYC/AML 또는 ID 확인이 없습니다.\nAgoraDesk는 원래 LocalBitcoins를 인기 있게 만든 단순성과 단순성을 유지하기 위해 최선을 다하고 있습니다. 우리는 KYC/AML을 채택하지 않으며 앞으로도 그렇게 할 계획이 없습니다.\n\n- 커뮤니티의 신뢰를 받음\n우리 플랫폼은 4년 넘게 운영되었으며 2018년 암호화폐 시장 대붕괴에서 살아남았으며 커뮤니티 중심의 부지런한 서비스를 통해 극도로 회의적인 암호화폐 커뮤니티에서 가장 신뢰받는 이름 중 하나가 되었습니다.\n\n- 보안, 오픈 소스, 개인 정보 보호 중심, 검열 방지\n우리 앱은 무료이며 오픈 소스이므로 보안 허점이나 개인 정보 유출이 없는지 확인하기 위해 많은 눈이 앱 코드를 살펴보고 있습니다. 또한 우리 앱을 오픈 소스화하면 특정 앱 저장소가 앱을 검열하더라도 누구나 우리 앱에 액세스할 수 있습니다. 우리 앱은 Google이 완전히 차단한 휴대폰에서도 작동합니다. 우리는 귀하의 개인 정보를 매우 중요하게 생각하므로 등록할 때 이메일을 제공하도록 요구하지도 않습니다.\n\n소스 코드: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\n이슈 추적기: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- 스텔라 지원\n우리의 지원팀은 빠르고 신속하게 대응하며 항상 고객을 기쁘게 하려고 노력합니다. 우리는 24시간 이내에 답변을 받지 못한 지원 티켓을 받은 적이 없습니다. 우리는 항상 소셜 미디어를 통해 쉽게 연락할 수 있으며, 귀하의 비판에 귀를 기울이고 항상 기록적인 시간 내에 좋은 사용자 제안을 구현합니다.\n\nhttps://agoradesk.com/support에서 지원을 받으실 수 있습니다.\n\n- 공정한 수수료\n우리는 중재 채권 지갑에 비트코인을 입금하거나 인출할 때 엄청난 수수료를 부과하지 않습니다. 입금 수수료는 없으며, 출금 수수료는 일반 거래에서 지불하는 수수료와 매우 유사합니다.';
 
   @override
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbkeywords250Sblocalmonero => '암호화폐,익명,비공개,모네로,xmr,p2p';
@@ -9510,18 +9525,44 @@ class I18nKo extends I18n {
 
   @override
   String pin_wrong_current_info(Object val) {
-    return '$val번의 시도가 남았습니다. 그 후에는 로그아웃되며 다시 로그인해야 합니다.';
+    return '$val회 시도 남았습니다. 그 후에는 로그아웃되며 다시 로그인해야 합니다.';
   }
 
   @override
-  String get api_error_363 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_363 => '주소 형식(통합 주소)을 업데이트하지 않은 판매자로부터 받은 주소를 제공하셨습니다. Cake, Monerujo 또는 Feather 지갑과 같은 앱에서 자신의 지갑을 설정하고 대신 해당 주소를 제공하세요.';
 
   @override
-  String get api_error_364 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_364 => '주소 형식(통합 주소)을 업데이트하지 않은 판매자로부터 받은 주소를 제공하셨습니다. Cake, Monerujo 또는 Feather 지갑과 같은 앱에서 자신의 지갑을 설정하고 대신 해당 주소를 제공하세요.';
 
   @override
-  String get find_user => 'Find user';
+  String get find_user => '사용자 찾기';
 
   @override
-  String get traderHasNoBalance => 'This trader doesn\'t have enough balance to trade at the moment.';
+  String get traderHasNoBalance => '이 거래자는 현재 거래하기에 충분한 잔고가 없습니다.';
+
+  @override
+  String askForAppReview(Object appName) {
+    return '$appName는 사람들에 의해 운영됩니다! 마음에 드신다면 저희 앱을 평가해 주세요. 더 많은 거래자가 참여하여 모두를 위한 더 건강한 시장으로 이어질 것입니다.';
+  }
+
+  @override
+  String get askToContactWhenBadExperience => '안 좋은 경험을 해서 미안해요! 개선할 수 있도록 저희 팀에 연락하시겠습니까?';
+
+  @override
+  String get dontLikeIt => '마음에 들지 않음';
+
+  @override
+  String get loveIt => '정말 좋아요!';
+
+  @override
+  String get cancelAndDontAsk => '취소하고 다시 묻지 않음';
+
+  @override
+  String get noMatchingItems => '일치하는 항목이 없습니다.';
+
+  @override
+  String get pleaseCheckAddress => '주소가 정확한지 확인해주세요';
+
+  @override
+  String get inputAddressForCalculatingFees => '수수료 계산을 위한 입력 주소';
 }
