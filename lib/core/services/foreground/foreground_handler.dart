@@ -79,5 +79,4 @@ class ForegroundHandler extends TaskHandler with ForegroundMessagesMixin, UrlMix
 
   @override
   void onNotificationPressed() {}
-
 }

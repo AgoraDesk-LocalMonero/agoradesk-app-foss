@@ -689,7 +689,7 @@ class _AdsScreenState extends State<AdsScreen> with TickerProviderStateMixin, Co
                                 },
                               ),
                               asyncItems: (String? filter) =>
-                                  model.getCountryPaymentMethods(model.selectedCountryCode ?? ''),
+                                  model.getCountryPaymentMethods(model.selectedCountryCode ?? '', context),
                               onChanged: (val) => model.selectedOnlineProvider = val,
                               selectedItem: model.selectedOnlineProvider,
                               dropdownBuilder: (context, val) {

@@ -7589,6 +7589,21 @@ class I18nHu extends I18n {
   String get trade250Sbwarning250Sbconfirmations => 'Addig ne véglegesítsd, amíg a vevő tx-je nem rendelkezik visszaigazolásokkal! Megszaporodtak a csalások, amikor egy meg nem erősített tranzakciót az eladó véglegesítése után törölnek.';
 
   @override
+  String get filter250Sbtype250Sbonline8722Sbsell => 'Online vásárlás';
+
+  @override
+  String get filter250Sbtype250Sbonline8722Sbbuy => 'Eladás online';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbsell => 'Vásároljon helyben';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbbuy => 'Eladás helyben';
+
+  @override
+  String get login250Sbusername8722Sbtip8722Sbshort => 'Felhasználónév (3-16 karakter)';
+
+  @override
   String get ads => 'Hirdetések';
 
   @override
@@ -9514,14 +9529,40 @@ class I18nHu extends I18n {
   }
 
   @override
-  String get api_error_363 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_363 => 'Olyan címet adott meg, amelyet egy olyan kereskedőtől kapott, aki nem frissítette a címformátumát (integrált cím). Állítsa be saját pénztárcáját egy olyan alkalmazásban, mint a Cake, Monerujo vagy Feather pénztárca, és adja meg helyette ezt a címet.';
 
   @override
-  String get api_error_364 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_364 => 'Olyan címet adott meg, amelyet egy olyan kereskedőtől kapott, aki nem frissítette a címformátumát (integrált cím). Állítsa be saját pénztárcáját egy olyan alkalmazásban, mint a Cake, Monerujo vagy Feather pénztárca, és adja meg helyette ezt a címet.';
 
   @override
-  String get find_user => 'Find user';
+  String get find_user => 'Felhasználó keresése';
 
   @override
-  String get traderHasNoBalance => 'This trader doesn\'t have enough balance to trade at the moment.';
+  String get traderHasNoBalance => 'Ennek a kereskedőnek jelenleg nincs elegendő egyenlege a kereskedéshez.';
+
+  @override
+  String askForAppReview(Object appName) {
+    return 'Az $appName-et az emberek hajtják! Kérjük, értékelje alkalmazásunkat, ha tetszik. Több kereskedő csatlakozik majd, ami egészségesebb piacot eredményez mindenki számára.';
+  }
+
+  @override
+  String get askToContactWhenBadExperience => 'Sajnálom, hogy rossz tapasztalataid vannak! Szeretné felvenni a kapcsolatot csapatunkkal, hogy javíthassuk?';
+
+  @override
+  String get dontLikeIt => 'Nem tetszik';
+
+  @override
+  String get loveIt => 'Szeretem!';
+
+  @override
+  String get cancelAndDontAsk => 'Mégse, és ne kérdezzen újra';
+
+  @override
+  String get noMatchingItems => 'Nincsenek megfelelő elemek.';
+
+  @override
+  String get pleaseCheckAddress => 'Kérjük, ellenőrizze a cím helyességét';
+
+  @override
+  String get inputAddressForCalculatingFees => 'Beviteli cím a díjak kiszámításához';
 }

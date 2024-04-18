@@ -198,7 +198,7 @@ class LoginScreen extends ConsumerWidget with WidgetsBindingObserver, ValidatorM
         Image.file(
           File(model.captchaLocalPath ?? ''),
           errorBuilder: (context, exception, stackTrace) {
-            return Text('captcha display error - $exception');
+            return Text('Captcha display error - $exception');
           },
         ),
         const SizedBox(height: 16),

@@ -66,6 +66,12 @@ Future _notificationResponse(NotificationResponse notificationResponse) async {
     }
     eventBus.fire(NoificationClickedEvent(tradeId));
   } catch (e) {
-    log('Error handling notification response: $e');
+    // if (notificationResponse.payload != null) {
+    //   final data = jsonDecode(notificationResponse.payload!);
+    //   final Map<String, dynamic> payload = data.map((key, value) => MapEntry(key, value?.toString().length ?? ''));
+    //   Sentry.captureException('Error local_notifications_utils.dart - $payload');
+    // } else {
+    //   Sentry.captureException('Error local_notifications_utils.dart (payload is null) - $e');
+    // }
   }
 }
