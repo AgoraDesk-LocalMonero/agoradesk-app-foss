@@ -29,6 +29,8 @@ class ChatImage extends StatelessWidget {
       width: 160,
       child: InstaImageViewer(
         disableSwipeToDismiss: true,
+        imageUrl: message.attachmentUrl ?? '',
+        headers: headers,
         child: ClipRRect(
           borderRadius: BorderRadius.circular(4),
           child: message.isSending || message.isUpdated
