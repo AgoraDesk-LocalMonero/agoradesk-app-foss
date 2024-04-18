@@ -5,6 +5,7 @@ description: Person-to-person platform to allow anyone to trade their local curr
 environment: 
   sdk: '>=3.0.0 <4.0.0'
 dependencies: 
+  app_links: ^4.0.1
   auto_route: ^5.0.1
   auto_size_text: ^3.0.0
   barcode_scan2: ^4.3.0
@@ -75,8 +76,8 @@ dependencies:
   sticky_headers: ^0.3.0+2
   store_checker: ^1.1.0
   timeago: ^3.2.2
-  uni_links: ^0.5.1
-  uni_links_desktop: ^0.1.7
+  # uni_links: ^0.5.1
+  # uni_links_desktop: ^0.1.7
   url_launcher: ^6.0.17
   visibility_detector: ^0.4.0
   vm: ^1.0.4
