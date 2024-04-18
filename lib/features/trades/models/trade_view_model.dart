@@ -4,6 +4,7 @@ import 'dart:ui';
 import 'package:agoradesk/core/api/api_client.dart';
 import 'package:agoradesk/core/app_constants.dart';
 import 'package:agoradesk/core/app_parameters.dart';
+import 'package:agoradesk/core/app_shared_prefs.dart';
 import 'package:agoradesk/core/app_state_v1.dart';
 import 'package:agoradesk/core/events.dart';
 import 'package:agoradesk/core/extensions/capitalized_first_letter.dart';
@@ -30,8 +31,11 @@ import 'package:agoradesk/features/ads/data/models/trade_type.dart';
 import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
 import 'package:agoradesk/features/trades/data/models/message_box_model.dart';
 import 'package:agoradesk/features/trades/data/models/trade_model.dart';
+import 'package:agoradesk/features/trades/data/models/trade_request_parameter_model.dart';
+import 'package:agoradesk/features/trades/data/models/trade_request_type.dart';
 import 'package:agoradesk/features/trades/data/models/trade_status.dart';
 import 'package:agoradesk/features/trades/data/repository/trade_repository.dart';
+import 'package:agoradesk/features/trades/screens/widgets/ask_for_review_widget.dart';
 import 'package:agoradesk/generated/i18n.dart';
 import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
@@ -44,7 +48,7 @@ import 'package:vm/vm.dart';
 import 'note_on_user_view_model.dart';
 
 /// Polling trade activity and new messages in the chat when the trade screen is open
-const _kPollingSeconds = 60;
+const _kPollingSeconds = 90;
 
 const kDeletedUserName = '[DELETED]';
 
@@ -55,6 +59,7 @@ class TradeViewModel extends ViewModel
     implements WidgetsBindingObserver {
   TradeViewModel({
     required TradeRepository tradeRepository,
+    required BuildContext parentContext,
     this.tradeModel,
     this.tradeId,
     required AccountService accountService,
@@ -66,11 +71,13 @@ class TradeViewModel extends ViewModel
   })  : _tradeRepository = tradeRepository,
         _apiClient = apiClient,
         _accountService = accountService,
+        _parentContext = parentContext,
         _appState = appState,
         _notificationsService = notificationsService,
         _adsRepository = adsRepository;
 
   final TradeRepository _tradeRepository;
+  final BuildContext _parentContext;
   final AccountService _accountService;
   final NotificationsService _notificationsService;
   final SecureStorage secureStorage;
@@ -293,11 +300,15 @@ class TradeViewModel extends ViewModel
     await Future.delayed(const Duration(milliseconds: 300));
     isTradeLoading = false;
 
-    _timer?.cancel();
-    _timer = Timer.periodic(const Duration(seconds: _kPollingSeconds), (_) async => _polling());
+    if (_timer?.isActive != true) {
+      _timer = Timer.periodic(const Duration(seconds: _kPollingSeconds), (_) async => _polling());
+    }
   }
 
   Future _polling() async {
+    if (GetIt.I<AppParameters>().polling) {
+      return;
+    }
     if (GetIt.I<AppParameters>().includeFcm == false ||
         GetIt.I<AppParameters>().isGoogleAvailable == false ||
         isProcessing()) {
@@ -305,12 +316,16 @@ class TradeViewModel extends ViewModel
       await indicatorKey.currentState?.show();
       _calcTimeBeforeCancel();
       await _getMessages(polling: true);
-      Future.delayed(const Duration(milliseconds: 500)).then((value) => GetIt.I<AppParameters>().polling = false);
+      await Future.delayed(const Duration(milliseconds: 500));
+      GetIt.I<AppParameters>().polling = false;
     }
   }
 
   _listenEventBus() {
     _updateOpenedChatSubscription = eventBus.on<UpdateOpenedChatEvent>().listen((e) async {
+      if (GetIt.I<AppParameters>().polling) {
+        return;
+      }
       GetIt.I<AppParameters>().polling = true;
       await indicatorKey.currentState?.show();
       _calcTimeBeforeCancel();
@@ -417,33 +432,35 @@ class TradeViewModel extends ViewModel
   }
 
   Future getTrade({bool polling = false}) async {
-    if (!_pollingLoading) {
-      late final String tradeIdWithPolling;
-      if (polling) {
-        _pollingLoading = true;
-        if (tradeId != null) {
-          tradeIdWithPolling = tradeId!;
-        } else {
-          tradeIdWithPolling = tradeForScreen.tradeId;
-        }
-      } else {
+    if (_pollingLoading) {
+      return;
+    }
+
+    late final String tradeIdWithPolling;
+    if (polling) {
+      _pollingLoading = true;
+      if (tradeId != null) {
         tradeIdWithPolling = tradeId!;
-      }
-      final res = await _tradeRepository.getTrade(id: tradeIdWithPolling);
-      _pollingLoading = false;
-      if (res.isRight) {
-        errorTradeLoading = false;
-        tradeForScreen = res.right;
-        if (polling) {
-          _setTradeStatus();
-          _calcTimeBeforeCancel();
-          notifyListeners();
-        }
       } else {
-        if (!polling) {
-          errorTradeLoading = true;
-          handleApiError(res.left, context);
-        }
+        tradeIdWithPolling = tradeForScreen.tradeId;
+      }
+    } else {
+      tradeIdWithPolling = tradeId!;
+    }
+    final res = await _tradeRepository.getTrade(id: tradeIdWithPolling);
+    _pollingLoading = false;
+    if (res.isRight) {
+      errorTradeLoading = false;
+      tradeForScreen = res.right;
+      if (polling) {
+        await _setTradeStatus();
+        _calcTimeBeforeCancel();
+        notifyListeners();
+      }
+    } else {
+      if (!polling) {
+        errorTradeLoading = true;
+        handleApiError(res.left, context);
       }
     }
   }
@@ -540,7 +557,7 @@ class TradeViewModel extends ViewModel
   }
 
   //todo - move to utils
-  void _setTradeStatus({bool initial = false}) {
+  Future<void> _setTradeStatus({bool initial = false}) async {
     DateTime tradeStatusDate;
     if (tradeForScreen.fundedAt == null && tradeForScreen.canceledAt == null) {
       tradeStatus = TradeStatus.notFunded;
@@ -584,11 +601,11 @@ class TradeViewModel extends ViewModel
     if (initial) {
       _divideMessagesTwoParts(null, initial: initial);
     } else {
-      _updateStickyBubblePosition(tradeStatusDate);
+      await _updateStickyBubblePosition(tradeStatusDate);
     }
   }
 
-  Future _updateStickyBubblePosition(DateTime date) async {
+  Future<void> _updateStickyBubblePosition(DateTime date) async {
     final List<MessageBoxModel> listToUpdate = [];
     for (final m in messagesAfterSticky) {
       if (m.createdAt.isBefore(date)) {
@@ -613,6 +630,8 @@ class TradeViewModel extends ViewModel
       if (res.isRight) {
         Navigator.of(context).pop();
         indicatorKey.currentState?.show();
+        await Future.delayed(Duration.zero);
+        await checkAndAskForReview(_parentContext);
       } else {
         handleApiError(res.left, context);
       }
@@ -716,11 +735,44 @@ class TradeViewModel extends ViewModel
       if (res.isRight) {
         Navigator.of(context).pop();
         paymentCompletedAt = DateTime.now();
-        _setTradeStatus();
+        await _setTradeStatus();
+        await checkAndAskForReview(_parentContext);
       } else {
         handleApiError(res.left, context);
       }
       notifyListeners();
+    }
+  }
+
+  Future<void> checkAndAskForReview(BuildContext parentContext) async {
+    if (GetIt.I<AppParameters>().includeFcm == false) {
+      return;
+    }
+    if (AppSharedPrefs().tradesCount == 0) {
+      const requestParameter = TradeRequestParameterModel(
+        page: 0,
+        size: 3,
+      );
+      final res = await _tradeRepository.getTrades(
+        type: TradeRequestType.released,
+        requestParameter: requestParameter,
+      );
+      if (res.isRight) {
+        final trades = res.right;
+        await AppSharedPrefs().setInt(AppSharedPrefsKey.tradesCount, trades.data.length);
+      }
+    }
+
+    if (AppSharedPrefs().tradesCount == 2 && !AppSharedPrefs().reviewAsked) {
+      AskForReviewWidget.show(parentContext);
+      await AppSharedPrefs().setInt(AppSharedPrefsKey.tradesCount, 3);
+      await AppSharedPrefs().setBool(AppSharedPrefsKey.reviewAsked, val: true);
+
+      ///todo: remove with next release
+    } else if (AppSharedPrefs().tradesCount > 2 && !AppSharedPrefs().reviewAsked) {
+      // } else if (AppSharedPrefs().tradesCount > 2) {
+      AskForReviewWidget.show(parentContext);
+      await AppSharedPrefs().setBool(AppSharedPrefsKey.reviewAsked, val: true);
     }
   }
 
@@ -863,6 +915,7 @@ class TradeViewModel extends ViewModel
         }
       }
     }
+    await Future.delayed(const Duration(milliseconds: 1000));
     _gettingMessages = false;
   }
 
@@ -1226,7 +1279,6 @@ class TradeViewModel extends ViewModel
   void didChangeAppLifecycleState(AppLifecycleState state) async {
     if (state == AppLifecycleState.resumed) {
       _calcTimeBeforeCancel();
-      await indicatorKey.currentState?.show();
       await _getMessages(polling: true);
     }
   }

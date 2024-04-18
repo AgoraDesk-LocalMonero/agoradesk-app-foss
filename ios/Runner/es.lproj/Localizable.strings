@@ -17,4 +17,5 @@
  "TRADE_PAYMENT_MARKED_COMPLETE" = "%@ ha completado el pago de la transacción {tradeId}";
  "TRADE_CANCELLED" = "Transacción %@ cancelada por {username}";
  "TRADE_DISPUTED" = "Transacción %@ disputada por {username}";
+ "TRADE_FUNDED" = "Transacción %@ financiada";
  "MESSAGE" = "%@";

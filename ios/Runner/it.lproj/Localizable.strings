@@ -17,4 +17,5 @@
 "TRADE_PAYMENT_MARKED_COMPLETE" = "%@ ha completato il pagamento nella compravendita %@";
 "TRADE_CANCELLED" = "La compravendita %@ è stata cancellata da %@";
 "TRADE_DISPUTED" = "La compravendita %@ è stata contestata da %@";
+"TRADE_FUNDED" = "La compravendita %@ è stata finanziata";
 "MESSAGE" = "%@";

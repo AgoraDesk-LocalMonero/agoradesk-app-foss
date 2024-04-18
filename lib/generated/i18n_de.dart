@@ -2543,7 +2543,7 @@ class I18nDe extends I18n {
   String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb5 => 'Monero ist eine Grassroots-Community, die die weltbesten Kryptowährungsforscher und Ingenieurtalente anzieht.';
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb6 => 'Über 420 Entwickler haben zum Monero-Projekt beigetragen, darunter 30 Kernentwickler. Foren und Chatkanäle sind einladend und aktiv.';
+  String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb6 => 'Über 420 Entwickler haben zum Monero-Projekt beigetragen, darunter 30 Kernentwickler. Foren und Chat-Kanäle sind einladend und aktiv.';
 
   @override
   String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb7 => 'Das Forschungslabor, das Kernentwicklungsteam und die Community-Entwickler von Monero erweitern ständig die Grenzen dessen, was mit dem Datenschutz und der Sicherheit von Kryptowährungen möglich ist.';
@@ -2873,7 +2873,7 @@ class I18nDe extends I18n {
   String get guide250Sbmnemonic250Sbtitle => 'Wie kann ich meine nicht verwahrte Settlement-Wallet aus dem mnemonischen Seed wiederherstellen?';
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1 => 'Gehen Sie zur <a target=\"_blank\" href=\"/\" class=\"next-link\">Hauptseite</a> – Sie sehen die Top-Angebote für Ihre Standardregion. Sie können Ihre Ergebnisse verfeinern, indem Sie den gewünschten Transaktionsbetrag in das Suchfeld eingeben und dann die gewünschte Währung, das Land und die gewünschte Zahlungsmethode auswählen (wählen Sie „Alle Online-Angebote“, wenn Sie sich bei der Zahlungsmethode nicht sicher sind). Sie verwenden möchten).';
+  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1 => 'Gehen Sie zur <a target=\"_blank\" href=\"/\" class=\"next-link\">Hauptseite</a> – dort werden Ihnen die besten Angebote für Ihre Standardregion angezeigt. Sie können Ihre Ergebnisse verfeinern, indem Sie den gewünschten Transaktionsbetrag in das Suchfeld eingeben und dann die gewünschte Währung, das Land und die gewünschte Zahlungsmethode auswählen (wählen Sie „Alle Online-Angebote“ aus, wenn Sie sich nicht sicher sind, welche Zahlungsmethode Sie verwenden möchten).';
 
   @override
   String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1250Sb1 => 'Wählen Sie aus der Liste der Anzeigen eine von einem Händler mit einer hohen Anzahl an Trades und einem guten Feedback-Wert (jeweils in Klammern neben dem Benutzernamen angezeigt). Ein grüner Kreis bedeutet, dass der Händler heute online war; ein gelber Kreis bedeutet, dass er die Website diese Woche besucht haben; und ein grauer Kreis bedeutet, dass der Händler seit über einer Woche nicht mehr hier war. Sie können auf die Schaltfläche „Kaufen“ klicken, um weitere Informationen zu einer Anzeige anzuzeigen.';
@@ -7589,6 +7589,21 @@ class I18nDe extends I18n {
   String get trade250Sbwarning250Sbconfirmations => 'Schließen Sie den Vorgang erst ab, wenn der Käufer die Bestätigung erhalten hat! Es gab eine Welle von Betrügereien, bei denen eine unbestätigte Transaktion storniert wurde, nachdem der Verkäufer sie abgeschlossen hatte.';
 
   @override
+  String get filter250Sbtype250Sbonline8722Sbsell => 'Online kaufen';
+
+  @override
+  String get filter250Sbtype250Sbonline8722Sbbuy => 'Online verkaufen';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbsell => 'Kaufe vor Ort';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbbuy => 'Verkaufen Sie lokal';
+
+  @override
+  String get login250Sbusername8722Sbtip8722Sbshort => 'Benutzername (3-16 Zeichen)';
+
+  @override
   String get ads => 'Anzeigen';
 
   @override
@@ -8201,7 +8216,7 @@ class I18nDe extends I18n {
   String get api_error_98 => 'Der Versuch, einen Handel für eine Anzeige zu erstellen, deren Ersteller nicht existiert';
 
   @override
-  String get api_error_99 => 'Es wird versucht, einen höheren Betrag anzufordern, als der Anzeigeneigentümer bei der Erstellung eines ersten Handels erlaubt hat';
+  String get api_error_99 => 'Beim Erstellen eines ersten Handels wird versucht, einen höheren Betrag anzufordern, als vom Anzeigeninhaber zugelassen';
 
   @override
   String get api_error_100 => 'Für die Handelserstellung kann nicht weniger als 0,0000000001 XMR angefordert werden';
@@ -8261,10 +8276,10 @@ class I18nDe extends I18n {
   String get api_error_121 => 'Versuch, eine Treuhand für einen Handel zu hinterlegen, der nicht existiert';
 
   @override
-  String get api_error_122 => 'Unzureichende Mittel, um einen Handel zu finanzieren';
+  String get api_error_122 => 'Unzureichende Mittel zur Finanzierung eines Handels';
 
   @override
-  String get api_error_123 => 'Unzureichende Mittel, um einen Handel zu finanzieren';
+  String get api_error_123 => 'Unzureichende Mittel zur Finanzierung eines Handels';
 
   @override
   String get api_error_124 => 'Fehler bei der Finanzierung eines Handels';
@@ -8612,7 +8627,7 @@ class I18nDe extends I18n {
   String get pin_enter_to_confirm_transaction => 'Geben Sie die PIN ein, um die Transaktion zu bestätigen';
 
   @override
-  String get pin_you_can_use => 'Die PIN muss mindestens 4-stellig sein';
+  String get pin_you_can_use => 'Die PIN muss mindestens 4 Ziffern lang sein';
 
   @override
   String get pin_confirm => 'PIN bestätigen';
@@ -9320,7 +9335,7 @@ class I18nDe extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: XMR anonym kaufen';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Kaufen oder verkaufen Sie Monero ohne ID-Verifizierung. Bargeld oder online. Sicher, schnell, einfach.\n\nLocalMonero ist die größte, vertrauenswürdigste und etablierteste P2P-Handelsplattform in der XMR-Community. Wir haben keine KYC-Prüfungen – Sie können Monero einfach anonym ohne Identitätsprüfung mit PayPal, Kreditkarte, Geschenkkarte, Bargeld per Post kaufen oder Bitcoin, Ether, USDT oder jede andere Kryptomünze in Monero umwandeln – unsere Plattform unterstützt jede Zahlungsmethode.\n\n- Sicherer und reibungsloser Handel\nWir unterstützen jede Zahlungsmethode, jede Währung und überall. Wir entfernen keine Zahlungsmethoden und unterstützen uneingeschränkt den persönlichen Bargeldhandel. Alle unsere Geschäfte sind durch eine Schiedsgarantie geschützt. Da wir verlangen, dass Gelder in einer Schiedsgarantie gehalten werden, bevor ein Handel beginnen kann, gewährleisten wir ein reibungsloses und sicheres Erlebnis für den Käufer, was für die Beliebtheit der Plattform und Stammkunden bei den Verkäufern von entscheidender Bedeutung ist.\n\n- Keine KYC/AML- oder ID-Verifizierung\nLocalMonero ist bestrebt, die Einfachheit und Unkompliziertheit Ihres Handelserlebnisses aufrechtzuerhalten. Wir setzen kein KYC/AML ein und haben auch nie vor, dies zu tun.\n\n- Von der Community als vertrauenswürdig eingestuft\nUnsere Plattform ist seit über vier Jahren in Betrieb, überlebte den großen Kryptowährungsmarktcrash von 2018 und wurde durch ihren gemeinschaftsorientierten, sorgfältigen Service zu einem der vertrauenswürdigsten Namen in der äußerst skeptischen Monero-Community.\n\n- Sicher, Open Source, datenschutzorientiert, zensurresistent\nUnsere App ist kostenlos und Open Source, was dafür sorgt, dass viele Augen auf den Code der App blicken, um sicherzustellen, dass es keine Sicherheitslücken oder Datenschutzlecks gibt. Durch das Open-Sourcing unserer App hat auch jeder Zugriff auf unsere App, selbst wenn ein bestimmtes App-Repository die App zensiert. Unsere App funktioniert sogar auf Telefonen, bei denen Google vollständig blockiert ist. Wir legen großen Wert auf Ihre Privatsphäre, sodass Sie bei der Registrierung nicht einmal eine E-Mail-Adresse angeben müssen.\n\nQuellcode: https://github.com/AgoraDesk-LocalMonero/agoradek-app-foss\nIssue-Tracker: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Hervorragende Unterstützung\nUnser Support-Team ist schnell, reaktionsschnell und immer bemüht, Sie zufrieden zu stellen. Wir hatten noch nie ein Support-Ticket, das nicht innerhalb von 24 Stunden beantwortet wurde. Über die sozialen Medien sind wir immer gut erreichbar, wir hören aufmerksam auf Ihre Kritik und setzen gute Nutzervorschläge stets in Rekordzeit um.\n\nSie erreichen unseren Support unter: https://localmonero.co/support\n\n- Faire Gebühren\nWir erheben keine überhöhten Gebühren, wenn Sie Monero in unser Schieds-Bond-Wallet einzahlen oder von diesem abheben. Es gibt keine Einzahlungsgebühr und die Auszahlungsgebühr kommt der Gebühr, die Sie bei einer normalen Transaktion zahlen würden, sehr nahe.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Kaufen oder verkaufen Sie Monero ohne ID-Verifizierung. Bar oder online. Sicher, schnell, einfach.\n\nLocalMonero ist die größte, vertrauenswürdigste und etablierteste P2P-Handelsplattform in der XMR-Community. Wir haben keine KYC-Prüfungen – Sie können Monero einfach anonym ohne ID-Verifizierung mit PayPal, Kreditkarte, Geschenkkarte, Bargeld per Post kaufen oder Bitcoin, Ether, USDT oder jede andere Kryptowährung in Monero umwandeln – unsere Plattform unterstützt jede Zahlungsmethode.\n\n- Sicherer und reibungsloser Handel\nWir unterstützen jede Zahlungsmethode, jede Währung, überall. Wir entfernen keine Zahlungsmethoden und unterstützen Bargeldgeschäfte von Angesicht zu Angesicht vollständig. Alle unsere Geschäfte sind durch eine Schiedsbürgschaft geschützt. Dank der Tatsache, dass wir verlangen, dass Gelder in einer Schiedsbürgschaft gehalten werden, bevor ein Handel beginnen kann, gewährleisten wir ein reibungsloses und sicheres Erlebnis für den Käufer, was für die Popularität der Plattform und Stammkunden für die Verkäufer unerlässlich ist.\n\n- Keine KYC/AML- oder ID-Verifizierung\nLocalMonero ist bestrebt, die Einfachheit und Unkompliziertheit Ihres Handelserlebnisses aufrechtzuerhalten. Wir setzen kein KYC/AML ein und haben auch nicht vor, dies jemals zu tun.\n\n- Von der Community vertraut\nUnsere Plattform ist seit über vier Jahren in Betrieb, hat den großen Kryptowährungsmarktcrash von 2018 überlebt und ist durch ihren gemeinschaftsorientierten, sorgfältigen Service zu einem der vertrauenswürdigsten Namen in der äußerst skeptischen Monero-Community geworden.\n\n- Sicher, Open Source, datenschutzorientiert, zensurresistent\nUnsere App ist kostenlos und Open Source, was sicherstellt, dass viele Augen auf den Code der App schauen, um sicherzustellen, dass es keine Sicherheitslücken oder Datenschutzlecks gibt. Da unsere App Open Source ist, kann auch jeder auf unsere App zugreifen, selbst wenn ein bestimmtes App-Repository die App zensiert. Unsere App funktioniert sogar auf Telefonen, auf denen Google vollständig blockiert ist. Wir legen so viel Wert auf Ihre Privatsphäre, dass wir bei der Registrierung nicht einmal von Ihnen verlangen, eine E-Mail-Adresse anzugeben.\n\nQuellcode: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nProblem-Tracker: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Hervorragender Support\nUnser Support-Team ist schnell, reaktionsschnell und immer bemüht, Sie zufriedenzustellen. Wir hatten noch nie ein Support-Ticket, das nicht innerhalb von 24 Stunden beantwortet wurde. Wir sind über soziale Medien immer leicht erreichbar, hören uns Ihre Kritik aufmerksam an und setzen gute Benutzervorschläge immer in Rekordzeit um.\n\nSie erreichen unseren Support unter: https://localmonero.co/support\n\n- Faire Gebühren\nWir erheben keine exorbitanten Gebühren, wenn Sie Monero auf unser Schiedsguthaben-Wallet einzahlen oder von dort abheben. Es gibt keine Einzahlungsgebühr und die Abhebungsgebühr liegt sehr nahe an der Gebühr, die Sie für eine normale Transaktion zahlen würden.';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: XMR privat kaufen';
@@ -9382,44 +9397,44 @@ class I18nDe extends I18n {
   String get app250Sbf8722Sbdroid8722Sbtitle250Sblocalmonero => 'LocalMonero: XMR anonym kaufen';
 
   @override
-  String get app_accessibility_edit_box_password => 'Box-Passwort bearbeiten, zum Bearbeiten doppeltippen';
+  String get app_accessibility_edit_box_password => 'Passwort für Bearbeitungsfeld, zum Bearbeiten doppeltippen';
 
   @override
-  String get app_accessibility_edit_box_confirm_password => 'Bestätigen Sie das Passwort-Bearbeitungsfeld und tippen Sie zweimal, um es zu bearbeiten';
+  String get app_accessibility_edit_box_confirm_password => 'Feld zur Passwortbestätigung bearbeiten. Zum Bearbeiten doppeltippen.';
 
   @override
   String get app_ad_created => 'Anzeige erstellt';
 
   @override
   String app_503_body(Object val) {
-    return '$val wird bald zurück sein!\\nEntschuldigen Sie die Unannehmlichkeiten, aber wir führen derzeit einige geplante Wartungsarbeiten durch.\\nWir werden wahrscheinlich bald wieder online sein. Bleiben Sie in unseren Community-Gruppen auf dem Laufenden:';
+    return '$val ist bald wieder da!\\nWir entschuldigen uns für die Unannehmlichkeiten, aber wir führen im Moment einige planmäßige Wartungsarbeiten durch.\\nWir werden wahrscheinlich bald wieder online sein. Bleiben Sie in unseren Community-Gruppen auf dem Laufenden:';
   }
 
   @override
-  String get app_select_ad_type => 'Wählen Sie den Anzeigentyp aus';
+  String get app_select_ad_type => 'Anzeigentyp auswählen';
 
   @override
   String get app_chat_leave_review => 'Tippen Sie hier, um eine Bewertung abzugeben!';
 
   @override
-  String get app_chat_update_review => 'Sie haben diesem Benutzer bereits eine Bewertung hinterlassen. Möchten Sie Ihre Bewertung jetzt aktualisieren?';
+  String get app_chat_update_review => 'Sie haben für diesen Benutzer bereits eine Bewertung abgegeben. Möchten Sie Ihre Bewertung jetzt aktualisieren?';
 
   @override
-  String get app_select_buyer_seller => 'Wählen Sie Käufer oder Verkäufer aus';
+  String get app_select_buyer_seller => 'Käufer oder Verkäufer auswählen';
 
   @override
-  String get app_default_tab => 'Legen Sie eine Standardregisterkarte fest';
+  String get app_default_tab => 'Festlegen einer Standardregisterkarte';
 
   @override
   String get app_your_ads => 'Ihre Anzeigen';
 
   @override
   String app_503_title(Object val) {
-    return '$val App-Wartung';
+    return '$val App Wartung';
   }
 
   @override
-  String get app_push_new_message => 'Sie haben eine neue Nachricht in einem Trade';
+  String get app_push_new_message => 'Sie haben eine neue Nachricht in einem Handels';
 
   @override
   String get app_push_new_offer => 'Sie haben ein neues Angebot';
@@ -9446,7 +9461,7 @@ class I18nDe extends I18n {
   String get app_google_play_store_short_description_agoradesk => 'Kaufen oder verkaufen Sie Bitcoin ohne ID-Verifizierung. Bargeld oder online.';
 
   @override
-  String get app_ask_community_chats => 'Habe Fragen? Fragen Sie in den Community-Chats';
+  String get app_ask_community_chats => 'Haben Sie Fragen? Stellen Sie diese in den Community-Chats';
 
   @override
   String get app_select_currency => 'Währung wählen';
@@ -9464,19 +9479,19 @@ class I18nDe extends I18n {
   String get app_disable_ad => 'Anzeige deaktivieren';
 
   @override
-  String get app_proxy => 'Stellvertreter';
+  String get app_proxy => 'Proxy';
 
   @override
   String get app_proxy_details => 'Proxy-Details';
 
   @override
-  String get app_proxy_use => 'Verwenden Sie einen Proxy';
+  String get app_proxy_use => 'Proxy verwenden';
 
   @override
-  String get app_proxy_bugs_expected => 'Warnung! Die Proxy-Funktionalität befindet sich in der Betaphase, Fehler werden erwartet. Bitte melden Sie die Fehler an unsere Entwicklungskanäle, um schnelle Lösungen zu erhalten';
+  String get app_proxy_bugs_expected => 'Achtung! Die Proxy-Funktionalität befindet sich in der Betaphase, es sind Fehler zu erwarten. Bitte melden Sie die Fehler an unsere Entwicklungskanäle, um sie schnell beheben zu können.';
 
   @override
-  String get app_proxy_select_type => 'Wählen Sie den Proxy-Typ aus';
+  String get app_proxy_select_type => 'Proxy-Typ auswählen';
 
   @override
   String get app_proxy_on => 'Proxy aktiviert';
@@ -9488,40 +9503,66 @@ class I18nDe extends I18n {
   String get app_proxy_unavailable => 'Proxy nicht verfügbar';
 
   @override
-  String get app_proxy_unavailable_decr => 'Bitte überprüfen Sie, ob die Verbindungseinstellungen korrekt sind oder verwenden Sie einen anderen Proxy.';
+  String get app_proxy_unavailable_decr => 'Bitte prüfen Sie, ob die Verbindungseinstellungen korrekt sind oder verwenden Sie einen anderen Proxy.';
 
   @override
-  String get api_error_269 => 'Es wird versucht, einem Adressbuch eine ungültige Adresse hinzuzufügen';
+  String get api_error_269 => 'Versuch, einem Adressbuch eine ungültige Adresse hinzuzufügen';
 
   @override
-  String get api_error_270 => 'Es wird versucht, dem Adressbuch eines Benutzers eine doppelte Adresse hinzuzufügen';
+  String get api_error_270 => 'Versuch, dem Adressbuch eines Benutzers eine doppelte Adresse hinzuzufügen';
 
   @override
-  String get api_error_273 => 'Es wird versucht, eine Adresse zu löschen, die nicht im Adressbuch eines Benutzers vorhanden ist';
+  String get api_error_273 => 'Versuch, eine Adresse zu löschen, die im Adressbuch eines Benutzers nicht vorhanden ist';
 
   @override
-  String get pin_you_can_use_new => 'Die PIN muss mindestens 4-stellig sein';
+  String get pin_you_can_use_new => 'Die PIN muss mindestens 4 Ziffern lang sein';
 
   @override
-  String get app_default_theme => 'Legen Sie ein Standardthema fest';
+  String get app_default_theme => 'Festlegen eines Standarddesigns';
 
   @override
   String get app_no_info_to_export => 'Keine Informationen zum Exportieren';
 
   @override
   String pin_wrong_current_info(Object val) {
-    return 'Sie haben noch $val Versuche übrig. Danach werden Sie abgemeldet und müssen sich erneut anmelden.';
+    return 'Ihnen bleiben noch $val Versuche. Danach werden Sie abgemeldet und müssen sich erneut anmelden.';
   }
 
   @override
-  String get api_error_363 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_363 => 'Sie haben eine Adresse angegeben, die Sie von einem Händler erhalten haben, der sein Adressformat nicht aktualisiert hat (integrierte Adresse). Bitte richten Sie Ihr eigenes Wallet in einer App wie Cake, Monerujo oder Feather Wallets ein und geben Sie stattdessen diese Adresse an.';
 
   @override
-  String get api_error_364 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_364 => 'Sie haben eine Adresse angegeben, die Sie von einem Händler erhalten haben, der sein Adressformat nicht aktualisiert hat (integrierte Adresse). Bitte richten Sie Ihr eigenes Wallet in einer App wie Cake, Monerujo oder Feather Wallets ein und geben Sie stattdessen diese Adresse an.';
 
   @override
-  String get find_user => 'Find user';
+  String get find_user => 'Benutzer finden';
 
   @override
-  String get traderHasNoBalance => 'This trader doesn\'t have enough balance to trade at the moment.';
+  String get traderHasNoBalance => 'Das Guthaben dieses Händlers reicht momentan nicht für den Handel aus.';
+
+  @override
+  String askForAppReview(Object appName) {
+    return '$appName wird von den Menschen angetrieben! Bitte bewerten Sie unsere App, wenn sie Ihnen gefällt. Weitere Händler werden sich anschließen, was zu einem gesünderen Markt für alle führt.';
+  }
+
+  @override
+  String get askToContactWhenBadExperience => 'Es tut uns leid, dass Sie eine schlechte Erfahrung gemacht haben! Möchten Sie unser Team kontaktieren, damit wir es verbessern können?';
+
+  @override
+  String get dontLikeIt => 'Gefällt mir nicht';
+
+  @override
+  String get loveIt => 'Liebe es!';
+
+  @override
+  String get cancelAndDontAsk => 'Abbrechen und nicht mehr fragen';
+
+  @override
+  String get noMatchingItems => 'Keine passenden Artikel.';
+
+  @override
+  String get pleaseCheckAddress => 'Bitte überprüfen Sie die Richtigkeit der Adresse';
+
+  @override
+  String get inputAddressForCalculatingFees => 'Eingabe der Adresse zur Gebührenberechnung';
 }

@@ -58,26 +58,6 @@ extension NotificationMessageTypeExt on NotificationMessageType {
     }
   }
 
-  // String titleForPushes(BuildContext context) {
-  //   switch (this) {
-  //     case NotificationMessageType.MESSAGE:
-  //       return context.intl.settings250Sbnotifications250Sbtelegram250Sbmessages8722Sblong.replaceAll(' Telegram', '');
-  //     case NotificationMessageType.TRADE_REQUEST:
-  //       return context.intl.settings250Sbnotifications250Sbtelegram250Sbtrade8722Sbrequests8722Sblong
-  //           .replaceAll(' Telegram', '');
-  //     case NotificationMessageType.TRADE_FUNDED:
-  //       return context.intl.settings250Sbnotifications250Sbtelegram250Sbpayments8722Sbtip.replaceAll(' Telegram', '');
-  //     case NotificationMessageType.TRADE_COMPLETE:
-  //       return context.intl.settings250Sbnotifications250Sbtelegram250Sbescrow8722Sblong.replaceAll(' Telegram', '');
-  //     case NotificationMessageType.TRADE_PAYMENT_MARKED_COMPLETE:
-  //       return context.intl.settings250Sbnotifications250Sbtelegram250Sbpayments8722Sbtip.replaceAll(' Telegram', '');
-  //     case NotificationMessageType.TRADE_CANCELLED:
-  //       return context.intl.app_push_trade_cancelled;
-  //     case NotificationMessageType.TRADE_DISPUTED:
-  //       return context.intl.app_push_trade_disputed;
-  //   }
-  // }
-
   String translatedMessage(BuildContext context, String? tradeId, String msg) {
     late final String tradeIdShort;
     if (tradeId != null) {

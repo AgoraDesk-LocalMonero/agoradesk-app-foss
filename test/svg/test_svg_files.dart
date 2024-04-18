@@ -22,7 +22,7 @@ void main() {
           if (file is File) {
             final svgFileName = file.path.split('/').last;
             try {
-              print('++++++++++++++++++++ DIRECTORY $directoryName - $svgFileName');
+              print('++++ DIRECTORY $directoryName - $svgFileName');
               await tester.pumpWidget(SvgPicture.asset(
                 '$directoryName/$svgFileName',
                 height: 10,

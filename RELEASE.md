@@ -1,7 +1,8 @@
 ### Updates
 
-1. Add local currencies to the wallet balance.
-2. Bug fixes.
+1. Add ad filtering to the trader screen.
+2. Fix image quality in the trade chat.
+3. Add an icon for recent notifications.
 
 ### About the attached app's
 

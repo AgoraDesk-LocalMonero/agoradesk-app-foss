@@ -141,14 +141,12 @@ class AdsRepository with CountryInfoMixin {
   /// Get ads by username
   ///
   Future<Either<ApiError, Pagination<AdModel>>> getUserAds(
-    String username, {
-    int? page,
-    TradeType? tradeType,
-  }) async {
+    String username,
+    AdsRequestParameterModel requestParameter,
+  ) async {
     return _adsService.getUserAds(
       username,
-      page: page,
-      tradeType: tradeType,
+      requestParameter,
     );
   }
 

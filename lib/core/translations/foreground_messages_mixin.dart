@@ -50,6 +50,7 @@ mixin class ForegroundMessagesMixin {
       "TRADE_PAYMENT_MARKED_COMPLETE": "Trade marked as completed",
       "TRADE_CANCELLED": "Trade cancelled",
       "TRADE_DISPUTED": "Trade disputed",
+      "TRADE_FUNDED": "Trade funded",
     },
     "es": {
       "MESSAGE": "Tienes un nuevo mensaje en un comercio",
@@ -58,6 +59,7 @@ mixin class ForegroundMessagesMixin {
       "TRADE_PAYMENT_MARKED_COMPLETE": "Operación marcada como completada",
       "TRADE_CANCELLED": "Operación cancelada",
       "TRADE_DISPUTED": "Operación disputada",
+      "TRADE_FUNDED": "Operación financiada",
     },
     "it": {
       "MESSAGE": "Avete un nuovo messaggio in uno scambio",
@@ -66,6 +68,7 @@ mixin class ForegroundMessagesMixin {
       "TRADE_PAYMENT_MARKED_COMPLETE": "Scambio contrassegnato come completato",
       "TRADE_CANCELLED": "Scambio annullato",
       "TRADE_DISPUTED": "Scambio contestato",
+      "TRADE_FUNDED": "Scambio finanziato",
     },
     "ko": {
       "MESSAGE": "거래에 새 메시지가 있습니다.",
@@ -74,6 +77,7 @@ mixin class ForegroundMessagesMixin {
       "TRADE_PAYMENT_MARKED_COMPLETE": "완료된 것으로 표시된 거래",
       "TRADE_CANCELLED": "거래 취소됨",
       "TRADE_DISPUTED": "무역 분쟁",
+      "TRADE_FUNDED": "거래 자금화",
     },
     "pt": {
       "MESSAGE": "Masz nową wiadomość w transakcji",
@@ -82,6 +86,7 @@ mixin class ForegroundMessagesMixin {
       "TRADE_PAYMENT_MARKED_COMPLETE": "Transakcja oznaczona jako zakończona",
       "TRADE_CANCELLED": "Transakcja anulowana",
       "TRADE_DISPUTED": "Handel sporny",
+      "TRADE_FUNDED": "Transakcja sfinansowana",
     },
     "ru": {
       "MESSAGE": "Новое сообщение в сделке",
@@ -90,6 +95,7 @@ mixin class ForegroundMessagesMixin {
       "TRADE_PAYMENT_MARKED_COMPLETE": "Сделка отмечена как завершенная",
       "TRADE_CANCELLED": "Сделка отменена",
       "TRADE_DISPUTED": "Сделка оспорена",
+      "TRADE_FUNDED": "Сделка финансирована",
     },
     "zh": {
       "MESSAGE": "您在交易中有一条新消息",
@@ -98,6 +104,7 @@ mixin class ForegroundMessagesMixin {
       "TRADE_PAYMENT_MARKED_COMPLETE": "交易标记为已完成",
       "TRADE_CANCELLED": "交易取消",
       "TRADE_DISPUTED": "贸易争议",
+      "TRADE_FUNDED": "交易资助",
     },
   };
 
@@ -108,6 +115,7 @@ mixin class ForegroundMessagesMixin {
       "TRADE_PAYMENT_MARKED_COMPLETE": "{username} has completed the payment in trade {tradeId}",
       "TRADE_CANCELLED": "Trade {tradeId} has been cancelled by {username}",
       "TRADE_DISPUTED": "Trade {tradeId} has been disputed by {username}",
+      "TRADE_FUNDED": "Trade {tradeId} has been funded",
     },
     "es": {
       "TRADE_REQUEST": "Tiene una nueva oferta {tradeId} del usuario {username}",
@@ -115,6 +123,7 @@ mixin class ForegroundMessagesMixin {
       "TRADE_PAYMENT_MARKED_COMPLETE": "{username} ha completado el pago de la transacción {tradeId}",
       "TRADE_CANCELLED": "Transacción {tradeId} cancelada por {username}",
       "TRADE_DISPUTED": "Transacción {tradeId} disputada por {username}",
+      "TRADE_FUNDED": "Transacción {tradeId} financiada",
     },
     "it": {
       "TRADE_REQUEST": "Hai una nuova offerta {tradeId} dall'utente {username}",
@@ -122,6 +131,7 @@ mixin class ForegroundMessagesMixin {
       "TRADE_PAYMENT_MARKED_COMPLETE": "{username} ha completato il pagamento nella compravendita {tradeId}",
       "TRADE_CANCELLED": "La compravendita {tradeId} è stata cancellata da {username}",
       "TRADE_DISPUTED": "La compravendita {tradeId} è stata contestata da {username}",
+      "TRADE_FUNDED": "La compravendita {tradeId} è stata finanziata",
     },
     "ko": {
       "TRADE_REQUEST": "{username}로부터 새 거래 {tradeId} 제안이 있습니다",
@@ -129,6 +139,7 @@ mixin class ForegroundMessagesMixin {
       "TRADE_PAYMENT_MARKED_COMPLETE": "{username}가 거래 {tradeId}의 결제를 완료했습니다",
       "TRADE_CANCELLED": "{username}가 거래 {tradeId}를 최소했습니다",
       "TRADE_DISPUTED": "{username}가 거래{tradeId}의 분쟁 중재를 신청했습니다",
+      "TRADE_FUNDED": "{tradeId} 거래가 자금화되었습니다",
     },
     "pt": {
       "TRADE_REQUEST": "Nova negociação {tradeId} do usuário {username}",
@@ -136,6 +147,7 @@ mixin class ForegroundMessagesMixin {
       "TRADE_PAYMENT_MARKED_COMPLETE": "{username} marcou pagamento como realizado na negociação {tradeId}",
       "TRADE_CANCELLED": "Negociação {tradeId} foi cancelada por {username}",
       "TRADE_DISPUTED": "Negociação {tradeId} disputada por {username}",
+      "TRADE_FUNDED": "Negociação {tradeId} foi financiada",
     },
     "ru": {
       "TRADE_REQUEST": "Вам пришло новое предложение о сделке {tradeId} от {username}",
@@ -143,6 +155,7 @@ mixin class ForegroundMessagesMixin {
       "TRADE_PAYMENT_MARKED_COMPLETE": "{username} оплатил сделку {tradeId}",
       "TRADE_CANCELLED": "{username} отменил сделку {tradeId}",
       "TRADE_DISPUTED": "{username} оспорил сделку {tradeId}",
+      "TRADE_FUNDED": "Сделка {tradeId} была финансирована",
     },
     "zh": {
       "TRADE_REQUEST": "用户{username}发起了新交易{tradeId}",
@@ -150,6 +163,7 @@ mixin class ForegroundMessagesMixin {
       "TRADE_PAYMENT_MARKED_COMPLETE": "付款完成。",
       "TRADE_CANCELLED": "用户{username}取消了交易{tradeId}",
       "TRADE_DISPUTED": "用户{username}在交易{tradeId}发起了申诉",
+      "TRADE_FUNDED": "交易{tradeId}已资助",
     },
   };
 

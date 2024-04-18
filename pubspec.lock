@@ -1006,6 +1006,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.2.1+1"
+  in_app_review:
+    dependency: "direct main"
+    description:
+      name: in_app_review
+      sha256: "99869244d09adc76af16bf8fd731dd13cef58ecafd5917847589c49f378cbb30"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.9"
+  in_app_review_platform_interface:
+    dependency: transitive
+    description:
+      name: in_app_review_platform_interface
+      sha256: fed2c755f2125caa9ae10495a3c163aa7fab5af3585a9c62ef4a6920c5b45f10
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.5"
   injectable:
     dependency: "direct main"
     description:
@@ -1026,10 +1042,10 @@ packages:
     dependency: "direct main"
     description:
       name: insta_image_viewer
-      sha256: "9a81432b1ab907ea91c255ec079440afe43f999533422badffaa482dfb7fdfbb"
+      sha256: "5c3150415d19945ee7eb9a986ed636219e384164e53a4854e8c6f3dbb3b3e197"
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.2"
+    version: "1.0.4"
   intl:
     dependency: "direct main"
     description:

@@ -2543,7 +2543,7 @@ class I18nHi extends I18n {
   String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb5 => 'Monero एक जमीनी स्तर का समुदाय है जो दुनिया के सर्वश्रेष्ठ cryptocurrency शोधकर्ताओं और engineering प्रतिभा को आकर्षित करता है।';
 
   @override
-  String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb6 => '420 से अधिक डेवलपर्स ने मोनेरो प्रोजेक्ट में योगदान दिया है, जिसमें 30 प्रमुख डेवलपर्स भी शामिल हैं। फ़ोरम और चैट चैनल स्वागतयोग्य और सक्रिय हैं।';
+  String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb6 => '420 से ज़्यादा डेवलपर्स ने मोनरो प्रोजेक्ट में योगदान दिया है, जिसमें 30 कोर डेवलपर्स शामिल हैं। फ़ोरम और चैट चैनल स्वागत योग्य और सक्रिय हैं।';
 
   @override
   String get guide250Sbbtc250Sbcard8722Sbtwo8722Sb7 => 'Monero की संशोधन लैब, Core Development Team और सामाजिक Developers Cryptocurrency गोपनीयता और सुरक्षा के साथ क्या संभव है, इसकी सीमा को लगातार आगे बढ़ा रहे हैं।';
@@ -2873,7 +2873,7 @@ class I18nHi extends I18n {
   String get guide250Sbmnemonic250Sbtitle => 'अपने गैर-हिरासती भुगतान बटुए को स्मरक बीज से कैसे पुनर्स्थापित करें?';
 
   @override
-  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1 => '<a target=\"_blank\" href=\"/\" class=\"next-link\">मुख्य पृष्ठ</a> पर जाएँ - आप अपने डिफ़ॉल्ट क्षेत्र के लिए शीर्ष ऑफ़र देखेंगे। आप खोज बॉक्स में वांछित राशि दर्ज करके अपने परिणामों को परिष्कृत कर सकते हैं, जिसके बाद आप जिस मुद्रा में लेनदेन करना चाहते हैं, देश और वांछित भुगतान विधि का चयन करें (यदि आप सुनिश्चित नहीं हैं कि कौन सी भुगतान विधि है तो \"सभी ऑनलाइन ऑफ़र\" का चयन करें) आप उपयोग करना चाहते हैं)।';
+  String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1 => '<a target=\"_blank\" href=\"/\" class=\"next-link\">मुख्य पृष्ठ</a> पर जाएँ - आपको अपने डिफ़ॉल्ट क्षेत्र के लिए शीर्ष ऑफ़र दिखाई देंगे। आप खोज बॉक्स में वांछित राशि दर्ज करके अपने परिणामों को परिष्कृत कर सकते हैं, फिर चुनें कि आप किस मुद्रा में लेनदेन करना चाहते हैं, देश और इच्छित भुगतान विधि (यदि आप सुनिश्चित नहीं हैं कि आप किस भुगतान विधि का उपयोग करना चाहते हैं तो \"सभी ऑनलाइन ऑफ़र\" चुनें)।';
 
   @override
   String get guide250Sbnon8722Sbcustodial250Sbbuy250Sb1250Sb1 => 'विज्ञापनों की सूची में से, ऐसे व्यापारियों में से किसी एक को चुनें, जिसके पास अधिक मात्रा में व्यापार और एक अच्छा प्रतिक्रिया अंक है (क्रमशः उपयोगकर्ता नाम के आगे कोष्ठक में दिखाया गया है)। हरे घेरे का अर्थ है कि व्यापारी आज ऑनलाइन हो गया है; पीले वृत्त का अर्थ है कि वे इस सप्ताह site पर गए हैं; और एक भूरे घेरे का मतलब है कि व्यापारी एक सप्ताह से अधिक समय से यहाँ नहीं है। किसी विज्ञापन के बारे में अधिक जानकारी देखने के लिए आप \"खरीदें\" बटन को दबा सकते हैं।';
@@ -7589,6 +7589,21 @@ class I18nHi extends I18n {
   String get trade250Sbwarning250Sbconfirmations => 'जब तक खरीदार के टीएक्स से पुष्टि न हो जाए, तब तक अंतिम निर्णय न लें! ऐसे घोटालों में वृद्धि हुई है जहां विक्रेता द्वारा अंतिम निर्णय लेने के बाद एक अपुष्ट लेनदेन रद्द कर दिया जाता है।';
 
   @override
+  String get filter250Sbtype250Sbonline8722Sbsell => 'ऑनलाइन खरीदें';
+
+  @override
+  String get filter250Sbtype250Sbonline8722Sbbuy => 'ऑनलाइन बेचें';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbsell => 'स्थानीय स्तर पर खरीदें';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbbuy => 'स्थानीय स्तर पर बेचें';
+
+  @override
+  String get login250Sbusername8722Sbtip8722Sbshort => 'उपयोगकर्ता नाम (3-16 अक्षर)';
+
+  @override
   String get ads => 'विज्ञापन';
 
   @override
@@ -8201,7 +8216,7 @@ class I18nHi extends I18n {
   String get api_error_98 => 'एक ऐसे विज्ञापन के लिए व्यापार बनाने की कोशिश की जा रही है जिसका रचनाकार मौजूद नहीं है';
 
   @override
-  String get api_error_99 => 'पहला व्यापार बनाते समय विज्ञापन स्वामी द्वारा दी गई अनुमति से अधिक राशि का अनुरोध करने का प्रयास किया जा रहा है';
+  String get api_error_99 => 'पहला ट्रेड बनाते समय विज्ञापन स्वामी द्वारा अनुमत राशि से अधिक राशि का अनुरोध करने का प्रयास करना';
 
   @override
   String get api_error_100 => 'व्यापार निर्माण के लिए ०.०००००००००१ XMR से कम का अनुरोध नहीं कर सकते';
@@ -8261,13 +8276,13 @@ class I18nHi extends I18n {
   String get api_error_121 => 'एक ऐसे व्यापार को escrow करने का प्रयास करना जो मौजूद नहीं है';
 
   @override
-  String get api_error_122 => 'किसी व्यापार के वित्तपोषण के लिए अपर्याप्त धनराशि';
+  String get api_error_122 => 'व्यापार के लिए निधि अपर्याप्त होना';
 
   @override
-  String get api_error_123 => 'किसी व्यापार के वित्तपोषण के लिए अपर्याप्त धनराशि';
+  String get api_error_123 => 'व्यापार के लिए निधि अपर्याप्त होना';
 
   @override
-  String get api_error_124 => 'किसी व्यापार के लिए फ़ंडिंग करते समय त्रुटि';
+  String get api_error_124 => 'ट्रेड को फंड करते समय त्रुटि';
 
   @override
   String get api_error_125 => 'व्यापार रद्द करने का अनुरोध करने वाला उपयोगकर्ता मौजूद नहीं है';
@@ -8612,7 +8627,7 @@ class I18nHi extends I18n {
   String get pin_enter_to_confirm_transaction => 'लेन-देन की पुष्टि करने के लिए PIN दर्ज करें';
 
   @override
-  String get pin_you_can_use => 'पिन कम से कम 4 अंक का होना चाहिए';
+  String get pin_you_can_use => 'पिन कम से कम 4 अंकों का होना चाहिए';
 
   @override
   String get pin_confirm => 'PIN की पुष्टि करें';
@@ -9086,7 +9101,7 @@ class I18nHi extends I18n {
 
   @override
   String app_buy_sell(Object val, Object buyOrSell) {
-    return 'आप कितना $val चाहते हैं$val?';
+    return 'आप कितना $val चाहते हैं?';
   }
 
   @override
@@ -9473,7 +9488,7 @@ class I18nHi extends I18n {
   String get app_proxy_use => 'प्रॉक्सी का उपयोग करें';
 
   @override
-  String get app_proxy_bugs_expected => 'चेतावनी! प्रॉक्सी कार्यक्षमता बीटा में है, बग अपेक्षित हैं। त्वरित समाधान के लिए कृपया हमारे विकास चैनलों पर बग की रिपोर्ट करें';
+  String get app_proxy_bugs_expected => 'चेतावनी! प्रॉक्सी कार्यक्षमता बीटा में है, बग की संभावना है। कृपया त्वरित समाधान के लिए हमारे विकास चैनलों पर बग की रिपोर्ट करें';
 
   @override
   String get app_proxy_select_type => 'प्रॉक्सी प्रकार चुनें';
@@ -9482,46 +9497,72 @@ class I18nHi extends I18n {
   String get app_proxy_on => 'प्रॉक्सी सक्षम';
 
   @override
-  String get app_proxy_on_descr => 'ऐप अब प्रॉक्सी के जरिए प्लेटफॉर्म से कनेक्ट होगा।';
+  String get app_proxy_on_descr => 'ऐप अब प्रॉक्सी के माध्यम से प्लेटफॉर्म से कनेक्ट हो जाएगा।';
 
   @override
   String get app_proxy_unavailable => 'प्रॉक्सी अनुपलब्ध';
 
   @override
-  String get app_proxy_unavailable_decr => 'कृपया जांचें कि क्या कनेक्शन सेटिंग्स सही हैं या किसी अन्य प्रॉक्सी का उपयोग करें।';
+  String get app_proxy_unavailable_decr => 'कृपया जाँच लें कि कनेक्शन सेटिंग्स सही हैं या किसी अन्य प्रॉक्सी का उपयोग करें।';
 
   @override
-  String get api_error_269 => 'पता पुस्तिका में अमान्य पता जोड़ने का प्रयास किया जा रहा है';
+  String get api_error_269 => 'पता पुस्तिका में अमान्य पता जोड़ने का प्रयास';
 
   @override
-  String get api_error_270 => 'किसी उपयोगकर्ता की पता पुस्तिका में डुप्लिकेट पता जोड़ने का प्रयास किया जा रहा है';
+  String get api_error_270 => 'किसी उपयोगकर्ता की पता पुस्तिका में डुप्लिकेट पता जोड़ने का प्रयास करना';
 
   @override
-  String get api_error_273 => 'उस पते को हटाने का प्रयास किया जा रहा है जो उपयोगकर्ता की पता पुस्तिका में मौजूद नहीं है';
+  String get api_error_273 => 'किसी ऐसे पते को हटाने का प्रयास करना जो उपयोगकर्ता की पता पुस्तिका में मौजूद नहीं है';
 
   @override
-  String get pin_you_can_use_new => 'पिन कम से कम 4 अंक का होना चाहिए';
+  String get pin_you_can_use_new => 'पिन कम से कम 4 अंकों का होना चाहिए';
 
   @override
-  String get app_default_theme => 'एक डिफ़ॉल्ट थीम सेट करें';
+  String get app_default_theme => 'डिफ़ॉल्ट थीम सेट करें';
 
   @override
   String get app_no_info_to_export => 'निर्यात करने के लिए कोई जानकारी नहीं';
 
   @override
   String pin_wrong_current_info(Object val) {
-    return 'आपके पास $val प्रयास शेष हैं। इसके बाद आप लॉग आउट हो जाएंगे और आपको दोबारा लॉग इन करना होगा।';
+    return 'आपके पास $val प्रयास बचे हैं। उसके बाद, आप लॉग आउट हो जाएँगे और आपको फिर से लॉग इन करना होगा।';
   }
 
   @override
-  String get api_error_363 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_363 => 'आपने एक ऐसा पता दिया है जो आपको एक व्यापारी से मिला है जिसने अपना पता प्रारूप (एकीकृत पता) अपडेट नहीं किया है। कृपया Cake, Monerujo, या Feather wallets जैसे ऐप पर अपना खुद का वॉलेट सेट करें और इसके बजाय वह पता प्रदान करें।';
 
   @override
-  String get api_error_364 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_364 => 'आपने एक ऐसा पता दिया है जो आपको एक व्यापारी से मिला है जिसने अपना पता प्रारूप (एकीकृत पता) अपडेट नहीं किया है। कृपया Cake, Monerujo, या Feather wallets जैसे ऐप पर अपना खुद का वॉलेट सेट करें और इसके बजाय वह पता प्रदान करें।';
 
   @override
-  String get find_user => 'Find user';
+  String get find_user => 'उपयोगकर्ता खोजें';
 
   @override
-  String get traderHasNoBalance => 'This trader doesn\'t have enough balance to trade at the moment.';
+  String get traderHasNoBalance => 'इस व्यापारी के पास इस समय व्यापार करने के लिए पर्याप्त शेष राशि नहीं है।';
+
+  @override
+  String askForAppReview(Object appName) {
+    return '$appName लोगों द्वारा संचालित है! अगर आपको हमारा ऐप पसंद आया तो कृपया रेटिंग दें। ज़्यादा से ज़्यादा व्यापारी इसमें शामिल होंगे, जिससे सभी के लिए एक स्वस्थ बाज़ार बनेगा।';
+  }
+
+  @override
+  String get askToContactWhenBadExperience => 'खेद है कि आपका अनुभव खराब रहा! क्या आप हमारी टीम से संपर्क करना चाहेंगे ताकि हम इसे सुधार सकें?';
+
+  @override
+  String get dontLikeIt => 'यह पसंद नहीं है';
+
+  @override
+  String get loveIt => 'इसे प्यार करना!';
+
+  @override
+  String get cancelAndDontAsk => 'रद्द करें और दोबारा न पूछें';
+
+  @override
+  String get noMatchingItems => 'कोई मेल खाता आइटम नहीं.';
+
+  @override
+  String get pleaseCheckAddress => 'कृपया पता की सत्यता की जांच करें';
+
+  @override
+  String get inputAddressForCalculatingFees => 'शुल्क की गणना के लिए पता दर्ज करें';
 }
