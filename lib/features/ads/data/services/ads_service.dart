@@ -200,16 +200,7 @@ class AdsService {
     AdsRequestParameterModel requestParameter,
   ) async {
     try {
-      // final Map<String, dynamic> parameters = {};
-      // String urlParameter = '';
-      // if (page != null) {
-      //   urlParameter = '?page=$page';
-      // }
-      // if (tradeType != null) {
-      //   parameters['trade_type'] = tradeType.name;
-      // }
       final resp = await _api.client.get(
-        // '/user-ads/$username$urlParameter',
         '/user-ads/$username',
         queryParameters: requestParameter.toJson(),
       );
