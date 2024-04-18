@@ -83,7 +83,6 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
 
   bool _changingVisibility = false;
 
-  Asset? _asset;
   SortingDirectionType _sortingDirectionType = SortingDirectionType.asc;
   final List<AdModel> ads = [];
   final List<String> selectedAdIds = [];
@@ -98,7 +97,7 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
   TradeType? tradeType;
   UserSettingsModel userSettingsModel = UserSettingsModel();
   late bool isGuestMode;
-  bool _displayFilter = false;
+
   bool? _selVisibility;
 
   AgoraMenuItem? dropdownValue;
@@ -167,8 +166,8 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
 
   set deletingAds(bool v) => updateWith(deletingAds: v);
 
+  bool _displayFilter = false;
   bool get displayFilter => _displayFilter;
-
   set displayFilter(bool v) => updateWith(displayFilter: v);
 
   bool get loadingSettings => _loadingSettings;
@@ -191,8 +190,8 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
 
   set isBulkActionsMode(bool v) => updateWith(isBulkActionsMode: v);
 
+  Asset? _asset;
   Asset? get asset => _asset;
-
   set asset(Asset? v) => updateWith(asset: v);
 
   SortingDirectionType get sortingDirectionType => _sortingDirectionType;
@@ -208,18 +207,18 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
     _authService.onAuthStateChange.listen((e) {
       isGuestMode = e == AuthState.guest;
       if (e == AuthState.loggedIn) {
-        initModel();
+        _initModel();
         indicatorKey.currentState?.show();
       }
       notifyListeners();
     });
     if (_authService.isAuthenticated) {
-      initModel();
+      _initModel();
     }
     super.init();
   }
 
-  void initModel() {
+  void _initModel() {
     if (_init == false) {
       _init = true;
       if (GetIt.I<AppParameters>().isAgoraDesk == false) {
@@ -333,7 +332,7 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
     notifyListeners();
   }
 
-  Future<List<OnlineProvider?>> getCountryPaymentMethods(String country) async {
+  Future<List<OnlineProvider?>> getCountryPaymentMethods(String country, BuildContext context) async {
     if (_reloadPaymentMethods) {
       final res = await _adsRepository.getCountryPaymentMethods(country);
       if (res.isRight) {
@@ -493,18 +492,20 @@ class AdsViewModel extends ViewModel with ErrorParseMixin, CountryInfoMixin, Val
       tradeType = TradeType.values[index - 1];
     }
     indicatorKey.currentState?.show();
-    // notifyListeners();
   }
 
   void setAsset(String? selected) {
     final index = assetMenu.indexWhere((e) => e == selected);
     if (index == 0 || index == -1) {
-      _asset = null;
+      if (_asset != null) {
+        _asset = null;
+      }
     } else {
-      _asset = Asset.values[index - 1];
+      if (_asset != Asset.values[index - 1]) {
+        _asset = Asset.values[index - 1];
+      }
     }
     indicatorKey.currentState?.show();
-    // notifyListeners();
   }
 
   void _ctrlListeners() {

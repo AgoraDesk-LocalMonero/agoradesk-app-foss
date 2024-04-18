@@ -8,6 +8,7 @@ import 'package:agoradesk/features/account/data/models/account_info_model.dart';
 import 'package:agoradesk/features/account/data/models/feedback_model.dart';
 import 'package:agoradesk/features/account/data/services/account_service.dart';
 import 'package:agoradesk/features/ads/data/models/ad_model.dart';
+import 'package:agoradesk/features/ads/data/models/ads_request_parameter_model.dart';
 import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
 import 'package:agoradesk/features/auth/data/services/auth_service.dart';
 import 'package:agoradesk/features/profile/data/models/user_settings_model.dart';
@@ -120,7 +121,10 @@ class MyProfileViewModel extends ViewModel with ValidatorMixin, ErrorParseMixin 
   Future _getAds() async {
     loadingAds = true;
     ads.clear();
-    final res = await _adsRepository.getUserAds(username);
+    final res = await _adsRepository.getUserAds(
+      username,
+      const AdsRequestParameterModel(),
+    );
     loadingAds = false;
     if (res.isRight) {
       paginationMeta = res.right.pagination;

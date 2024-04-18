@@ -196,22 +196,22 @@ class AdsService {
   /// Get ads by username
   ///
   Future<Either<ApiError, Pagination<AdModel>>> getUserAds(
-    String username, {
-    int? page,
-    TradeType? tradeType,
-  }) async {
+    String username,
+    AdsRequestParameterModel requestParameter,
+  ) async {
     try {
-      final Map<String, dynamic> parameters = {};
-      String urlParameter = '';
-      if (page != null) {
-        urlParameter = '?page=$page';
-      }
-      if (tradeType != null) {
-        parameters['trade_type'] = tradeType.name;
-      }
+      // final Map<String, dynamic> parameters = {};
+      // String urlParameter = '';
+      // if (page != null) {
+      //   urlParameter = '?page=$page';
+      // }
+      // if (tradeType != null) {
+      //   parameters['trade_type'] = tradeType.name;
+      // }
       final resp = await _api.client.get(
-        '/user-ads/$username$urlParameter',
-        queryParameters: parameters,
+        // '/user-ads/$username$urlParameter',
+        '/user-ads/$username',
+        queryParameters: requestParameter.toJson(),
       );
       if (resp.statusCode == 200) {
         List<dynamic> respMap = jsonDecode(jsonEncode(resp.data['data']['ad_list']));
