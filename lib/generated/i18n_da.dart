@@ -7589,6 +7589,21 @@ class I18nDa extends I18n {
   String get trade250Sbwarning250Sbconfirmations => 'Afslut ikke før købers tx har bekræftelse! Der har været en bølge af svindel, hvor en ubekræftet transaktion annulleres, efter at sælgeren har afsluttet.';
 
   @override
+  String get filter250Sbtype250Sbonline8722Sbsell => 'Køb online';
+
+  @override
+  String get filter250Sbtype250Sbonline8722Sbbuy => 'Sælg online';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbsell => 'Køb lokalt';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbbuy => 'Sælg lokalt';
+
+  @override
+  String get login250Sbusername8722Sbtip8722Sbshort => 'Brugernavn (3-16 tegn)';
+
+  @override
   String get ads => 'Annoncer';
 
   @override
@@ -9514,14 +9529,40 @@ class I18nDa extends I18n {
   }
 
   @override
-  String get api_error_363 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_363 => 'Du har angivet en adresse, som du har fået fra en sælger, der ikke har opdateret deres adresseformat (integreret adresse). Opsæt venligst din egen tegnebog på en app som Cake, Monerujo eller Feather wallets, og angiv den adresse i stedet.';
 
   @override
-  String get api_error_364 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_364 => 'Du har angivet en adresse, som du har fået fra en sælger, der ikke har opdateret deres adresseformat (integreret adresse). Opsæt venligst din egen tegnebog på en app som Cake, Monerujo eller Feather wallets, og angiv den adresse i stedet.';
 
   @override
-  String get find_user => 'Find user';
+  String get find_user => 'Find bruger';
 
   @override
-  String get traderHasNoBalance => 'This trader doesn\'t have enough balance to trade at the moment.';
+  String get traderHasNoBalance => 'Denne forhandler har ikke nok saldo til at handle i øjeblikket.';
+
+  @override
+  String askForAppReview(Object appName) {
+    return '$appName er drevet af folket! Bedøm venligst vores app, hvis du kan lide den. Flere forhandlere vil tilslutte sig, hvilket fører til et sundere marked for alle.';
+  }
+
+  @override
+  String get askToContactWhenBadExperience => 'Beklager, at du har en dårlig oplevelse! Vil du kontakte vores team, så vi kan forbedre det?';
+
+  @override
+  String get dontLikeIt => 'Kan ikke lide det';
+
+  @override
+  String get loveIt => 'Elsker det!';
+
+  @override
+  String get cancelAndDontAsk => 'Annuller og spørg ikke igen';
+
+  @override
+  String get noMatchingItems => 'Ingen matchende varer.';
+
+  @override
+  String get pleaseCheckAddress => 'Tjek venligst adressen korrekt';
+
+  @override
+  String get inputAddressForCalculatingFees => 'Indtastningsadresse til beregning af gebyrer';
 }
