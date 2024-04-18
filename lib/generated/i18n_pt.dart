@@ -7589,6 +7589,21 @@ class I18nPt extends I18n {
   String get trade250Sbwarning250Sbconfirmations => 'Não finalize até que o tx do comprador tenha confirmações! Tem havido uma onda de golpes em que uma transação não confirmada é cancelada após a finalização do vendedor.';
 
   @override
+  String get filter250Sbtype250Sbonline8722Sbsell => 'Compre online';
+
+  @override
+  String get filter250Sbtype250Sbonline8722Sbbuy => 'Venda on-line';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbsell => 'Compre localmente';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbbuy => 'Venda localmente';
+
+  @override
+  String get login250Sbusername8722Sbtip8722Sbshort => 'Nome de usuário (3-16 caracteres)';
+
+  @override
   String get ads => 'Anúncios';
 
   @override
@@ -8165,7 +8180,7 @@ class I18nPt extends I18n {
   String get api_error_86 => 'Tentativa de definir um país, forma de pagamento ou moeda inválida ao criar/atualizar o anúncio';
 
   @override
-  String get api_error_87 => 'Tentando definir uma forma de pagamento inválida para esse país ao criar/atualizar o anúncio';
+  String get api_error_87 => 'Tentando definir uma forma de pagamento inválida para aquele país ao criar/atualizar o anúncio';
 
   @override
   String get api_error_88 => 'Tentando definir uma moeda inválida para essa forma de pagamento ao criar/atualizar o anúncio';
@@ -9514,16 +9529,42 @@ class I18nPt extends I18n {
   }
 
   @override
-  String get api_error_363 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_363 => 'Você forneceu um endereço obtido de um comerciante que não atualizou o formato do endereço (endereço integrado). Configure sua própria carteira em um aplicativo como as carteiras Cake, Monerujo ou Feather e forneça esse endereço.';
 
   @override
-  String get api_error_364 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_364 => 'Você forneceu um endereço obtido de um comerciante que não atualizou o formato do endereço (endereço integrado). Configure sua própria carteira em um aplicativo como as carteiras Cake, Monerujo ou Feather e forneça esse endereço.';
 
   @override
-  String get find_user => 'Find user';
+  String get find_user => 'Encontrar usuário';
 
   @override
-  String get traderHasNoBalance => 'This trader doesn\'t have enough balance to trade at the moment.';
+  String get traderHasNoBalance => 'Este trader não tem saldo suficiente para negociar no momento.';
+
+  @override
+  String askForAppReview(Object appName) {
+    return '$appName é movido pelas pessoas! Por favor, avalie nosso aplicativo se você gostar. Mais comerciantes irão aderir, levando a um mercado mais saudável para todos.';
+  }
+
+  @override
+  String get askToContactWhenBadExperience => 'Desculpe, você está tendo uma experiência ruim! Gostaria de entrar em contato com nossa equipe para que possamos melhorá-lo?';
+
+  @override
+  String get dontLikeIt => 'Não gosto';
+
+  @override
+  String get loveIt => 'Adoro!';
+
+  @override
+  String get cancelAndDontAsk => 'Cancele e não pergunte novamente';
+
+  @override
+  String get noMatchingItems => 'Nenhum item correspondente.';
+
+  @override
+  String get pleaseCheckAddress => 'Verifique a exatidão do endereço';
+
+  @override
+  String get inputAddressForCalculatingFees => 'Endereço de entrada para cálculo de taxas';
 }
 
 /// The translations for Portuguese, as used in Brazil (`pt_BR`).
@@ -17115,6 +17156,21 @@ class I18nPtBr extends I18nPt {
   String get trade250Sbwarning250Sbconfirmations => 'Não finalize até que o tx do comprador tenha confirmações! Tem havido uma onda de golpes em que uma transação não confirmada é cancelada após a finalização do vendedor.';
 
   @override
+  String get filter250Sbtype250Sbonline8722Sbsell => 'Compre online';
+
+  @override
+  String get filter250Sbtype250Sbonline8722Sbbuy => 'Venda on-line';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbsell => 'Compre localmente';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbbuy => 'Venda localmente';
+
+  @override
+  String get login250Sbusername8722Sbtip8722Sbshort => 'Nome de usuário (3-16 caracteres)';
+
+  @override
   String get ads => 'Anúncios';
 
   @override
@@ -17691,7 +17747,7 @@ class I18nPtBr extends I18nPt {
   String get api_error_86 => 'Tentativa de definir um país, forma de pagamento ou moeda inválida ao criar/atualizar o anúncio';
 
   @override
-  String get api_error_87 => 'Tentando definir uma forma de pagamento inválida para esse país ao criar/atualizar o anúncio';
+  String get api_error_87 => 'Tentando definir uma forma de pagamento inválida para aquele país ao criar/atualizar o anúncio';
 
   @override
   String get api_error_88 => 'Tentando definir uma moeda inválida para essa forma de pagamento ao criar/atualizar o anúncio';
@@ -19038,4 +19094,42 @@ class I18nPtBr extends I18nPt {
   String pin_wrong_current_info(Object val) {
     return 'Você tem $val tentativas restantes. Depois disso, você será desconectado e terá que fazer login novamente.';
   }
+
+  @override
+  String get api_error_363 => 'Você forneceu um endereço obtido de um comerciante que não atualizou o formato do endereço (endereço integrado). Configure sua própria carteira em um aplicativo como as carteiras Cake, Monerujo ou Feather e forneça esse endereço.';
+
+  @override
+  String get api_error_364 => 'Você forneceu um endereço obtido de um comerciante que não atualizou o formato do endereço (endereço integrado). Configure sua própria carteira em um aplicativo como as carteiras Cake, Monerujo ou Feather e forneça esse endereço.';
+
+  @override
+  String get find_user => 'Encontrar usuário';
+
+  @override
+  String get traderHasNoBalance => 'Este trader não tem saldo suficiente para negociar no momento.';
+
+  @override
+  String askForAppReview(Object appName) {
+    return '$appName é movido pelas pessoas! Por favor, avalie nosso aplicativo se você gostar. Mais comerciantes irão aderir, levando a um mercado mais saudável para todos.';
+  }
+
+  @override
+  String get askToContactWhenBadExperience => 'Desculpe, você está tendo uma experiência ruim! Gostaria de entrar em contato com nossa equipe para que possamos melhorá-lo?';
+
+  @override
+  String get dontLikeIt => 'Não gosto';
+
+  @override
+  String get loveIt => 'Adoro!';
+
+  @override
+  String get cancelAndDontAsk => 'Cancele e não pergunte novamente';
+
+  @override
+  String get noMatchingItems => 'Nenhum item correspondente.';
+
+  @override
+  String get pleaseCheckAddress => 'Verifique a exatidão do endereço';
+
+  @override
+  String get inputAddressForCalculatingFees => 'Endereço de entrada para cálculo de taxas';
 }

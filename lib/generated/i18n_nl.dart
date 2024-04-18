@@ -7589,6 +7589,21 @@ class I18nNl extends I18n {
   String get trade250Sbwarning250Sbconfirmations => 'Rond het document pas af als de koper een bevestiging heeft! Er is een golf van oplichting geweest waarbij een onbevestigde transactie wordt geannuleerd nadat de verkoper de transactie heeft afgerond.';
 
   @override
+  String get filter250Sbtype250Sbonline8722Sbsell => 'Koop online';
+
+  @override
+  String get filter250Sbtype250Sbonline8722Sbbuy => 'Verkoop online';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbsell => 'Lokaal kopen';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbbuy => 'Verkoop lokaal';
+
+  @override
+  String get login250Sbusername8722Sbtip8722Sbshort => 'Gebruikersnaam (3-16 tekens)';
+
+  @override
   String get ads => 'Advertenties';
 
   @override
@@ -9320,7 +9335,7 @@ class I18nNl extends I18n {
   String get app250Sbapple8722Sbapp8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: anoniem XMR kopen';
 
   @override
-  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Koop of verkoop Monero zonder ID-verificatie. Contant of online. Veilig, snel, gemakkelijk.\n\nLocalMonero is het grootste, meest vertrouwde en gevestigde P2P-handelsplatform in de XMR-gemeenschap. We hebben geen KYC-cheques - u kunt eenvoudig Monero anoniem kopen zonder identiteitsverificatie met PayPal, creditcard, cadeaubon, contant per post of Bitcoin, Ether, USDT of een andere cryptomunt omzetten in Monero - ons platform ondersteunt elke betalingsmethode.\n\n- Veilige en soepele handel\nWij ondersteunen elke betaalmethode, elke valuta, waar dan ook. We verwijderen geen betaalmethoden en ondersteunen face-to-face contante transacties volledig. Al onze transacties worden beschermd door een arbitrageobligatie. Dankzij het feit dat er geld in arbitrage-obligaties moet worden bewaard voordat een transactie kan beginnen, zorgen we voor een soepele en veilige ervaring voor de koper, wat essentieel is voor de populariteit van het platform en terugkerende klanten voor de verkopers.\n\n- Geen KYC/AML- of ID-verificatie\nLocalMonero streeft ernaar de eenvoud en rechtlijnigheid van uw handelservaring te behouden. Wij maken geen gebruik van KYC/AML en zijn dat ook nooit van plan.\n\n- Vertrouwd door de gemeenschap\nOns platform bestaat al meer dan vier jaar, heeft de Grote Cryptocurrency-marktcrash van 2018 overleefd en is door zijn gemeenschapsgerichte, toegewijde service een van de meest vertrouwde namen in de uiterst sceptische Monero-gemeenschap geworden.\n\n- Veilig, open source, privacygericht, censuurbestendig\nOnze app is gratis en open source, wat ervoor zorgt dat veel ogen naar de code van de app kijken om er zeker van te zijn dat er geen beveiligingslekken of privacylekken zijn. Door onze app te openen heeft iedereen ook toegang tot onze app, zelfs als een bepaalde app-repository de app censureert. Onze app werkt zelfs op telefoons waarop Google volledig is geblokkeerd. Wij hechten zoveel waarde aan uw privacy dat u bij registratie niet eens een e-mailadres hoeft op te geven.\n\nBroncode: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nProbleemtracker: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellaire ondersteuning\nOns ondersteuningsteam is snel, responsief en altijd bereid om te behagen. We hebben nog nooit een supportticket gehad dat niet binnen 24 uur werd beantwoord. We zijn altijd goed bereikbaar via sociale media, luisteren aandachtig naar uw kritiek en implementeren goede gebruikerssuggesties altijd in recordtijd.\n\nU kunt onze ondersteuning bereiken op: https://localmonero.co/support\n\n- Eerlijke vergoedingen\nWe brengen geen buitensporige kosten in rekening wanneer u Monero stort of opneemt naar/uit onze arbitrage-obligatieportefeuille. Er zijn geen stortingskosten en de opnamekosten liggen zeer dicht bij de kosten die u voor een normale transactie zou betalen.';
+  String get app250Sbapple8722Sbapp8722Sbstore8722Sbdescription250Sblocalmonero => 'Koop of verkoop Monero zonder ID-verificatie. Contant of online. Veilig, snel, gemakkelijk.\n\nLocalMonero is het grootste, meest vertrouwde en gevestigde P2P-handelsplatform in de XMR-gemeenschap. We hebben geen KYC-cheques - u kunt eenvoudig Monero anoniem kopen zonder identiteitsverificatie met PayPal, creditcard, cadeaubon, contant per post of Bitcoin, Ether, USDT of een andere cryptomunt omzetten in Monero - ons platform ondersteunt elke betalingsmethode.\n\n- Veilige en soepele handel\nWij ondersteunen elke betaalmethode, elke valuta, waar dan ook. We verwijderen geen betaalmethoden en ondersteunen face-to-face contante transacties volledig. Al onze transacties worden beschermd door een arbitrageobligatie. Dankzij het feit dat er geld in arbitrage-obligaties moet worden bewaard voordat een transactie kan beginnen, zorgen we voor een soepele en veilige ervaring voor de koper, wat essentieel is voor de populariteit van het platform en terugkerende klanten voor de verkopers.\n\n- Geen KYC/AML- of ID-verificatie\nLocalMonero streeft ernaar de eenvoud en rechtlijnigheid van uw handelservaring te behouden. Wij maken geen gebruik van KYC/AML en zijn dat ook nooit van plan.\n\n- Vertrouwd door de gemeenschap\nOns platform bestaat al meer dan vier jaar, heeft de Grote Cryptocurrency-marktcrash van 2018 overleefd en is door zijn gemeenschapsgerichte, toegewijde service een van de meest vertrouwde namen in de uiterst sceptische Monero-gemeenschap geworden.\n\n- Veilig, open source, privacygericht, censuurbestendig\nOnze app is gratis en open source, wat ervoor zorgt dat veel ogen naar de code van de app kijken om er zeker van te zijn dat er geen beveiligingslekken of privacylekken zijn. Door onze app te openen heeft iedereen ook toegang tot onze app, zelfs als een bepaalde app-repository de app censureert. Onze app werkt zelfs op telefoons waarop Google volledig is geblokkeerd. Wij hechten zoveel waarde aan uw privacy dat u bij registratie niet eens een e-mailadres hoeft op te geven.\n\nBroncode: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss\nProbleemtracker: https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/issues\n\n- Stellaire ondersteuning\nOns ondersteuningsteam is snel, responsief en altijd bereid om te behagen. We hebben nog nooit een supportticket gehad dat niet binnen 24 uur werd beantwoord. We zijn altijd goed bereikbaar via sociale media, luisteren aandachtig naar uw kritiek en implementeren goede gebruikerssuggesties altijd in recordtijd.\n\nU kunt onze ondersteuning bereiken op: https://localmonero.co/support\n\n- Eerlijke vergoedingen\nWij brengen geen exorbitante kosten in rekening wanneer u Monero stort of opneemt naar/uit onze arbitrage-obligatieportefeuille. Er zijn geen stortingskosten en de opnamekosten liggen zeer dicht bij de kosten die u voor een normale transactie zou betalen.';
 
   @override
   String get app250Sbgoogle8722Sbplay8722Sbstore8722Sbtitle250Sblocalmonero => 'LocalMonero: anoniem XMR kopen';
@@ -9514,14 +9529,40 @@ class I18nNl extends I18n {
   }
 
   @override
-  String get api_error_363 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_363 => 'U heeft een adres opgegeven dat u heeft gekregen van een verkoper die de adresnotatie (geïntegreerd adres) niet heeft bijgewerkt. Stel uw eigen portemonnee in in een app zoals Cake-, Monerujo- of Feather-portemonnees en geef in plaats daarvan dat adres op.';
 
   @override
-  String get api_error_364 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_364 => 'U heeft een adres opgegeven dat u heeft gekregen van een verkoper die de adresnotatie (geïntegreerd adres) niet heeft bijgewerkt. Stel uw eigen portemonnee in in een app zoals Cake-, Monerujo- of Feather-portemonnees en geef in plaats daarvan dat adres op.';
 
   @override
-  String get find_user => 'Find user';
+  String get find_user => 'Zoek gebruiker';
 
   @override
-  String get traderHasNoBalance => 'This trader doesn\'t have enough balance to trade at the moment.';
+  String get traderHasNoBalance => 'Deze handelaar heeft momenteel niet genoeg saldo om te handelen.';
+
+  @override
+  String askForAppReview(Object appName) {
+    return '$appName wordt mogelijk gemaakt door de mensen! Beoordeel onze app als je hem leuk vindt. Er zullen meer handelaren meedoen, wat zal leiden tot een gezondere markt voor iedereen.';
+  }
+
+  @override
+  String get askToContactWhenBadExperience => 'Sorry dat je een slechte ervaring hebt! Wilt u contact opnemen met ons team zodat wij dit kunnen verbeteren?';
+
+  @override
+  String get dontLikeIt => 'Vind het niet leuk';
+
+  @override
+  String get loveIt => 'Hou ervan!';
+
+  @override
+  String get cancelAndDontAsk => 'Annuleer en vraag het niet opnieuw';
+
+  @override
+  String get noMatchingItems => 'Geen overeenkomende artikelen.';
+
+  @override
+  String get pleaseCheckAddress => 'Controleer de juistheid van het adres';
+
+  @override
+  String get inputAddressForCalculatingFees => 'Invoeradres voor het berekenen van vergoedingen';
 }

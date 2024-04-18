@@ -7589,6 +7589,21 @@ class I18nNb extends I18n {
   String get trade250Sbwarning250Sbconfirmations => 'Ikke fullfør før kjøperens tx har bekreftelse! Det har vært en bølge av svindel der en ubekreftet transaksjon kanselleres etter at selgeren har fullført.';
 
   @override
+  String get filter250Sbtype250Sbonline8722Sbsell => 'Kjøpe på nettet';
+
+  @override
+  String get filter250Sbtype250Sbonline8722Sbbuy => 'Selg på nett';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbsell => 'Kjøp lokalt';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbbuy => 'Selg lokalt';
+
+  @override
+  String get login250Sbusername8722Sbtip8722Sbshort => 'Brukernavn (3-16 tegn)';
+
+  @override
   String get ads => 'Annonser';
 
   @override
@@ -8006,7 +8021,7 @@ class I18nNb extends I18n {
   String get api_error_207 => 'Forsøker å bekrefte plassering av bekreftelseskode for omdømmeimport for bruker som ikke eksisterer';
 
   @override
-  String get api_error_208 => 'Forsøk på å bekrefte plassering av bekreftelseskode for omdømmeimport for bruker som ikke er i trinn 1 i flyten for omdømmeimport';
+  String get api_error_208 => 'Forsøker å bekrefte plassering av bekreftelseskode for omdømmeimport for bruker som ikke er i trinn 1 i flyten for omdømmeimport';
 
   @override
   String get api_error_209 => 'LocalBitcoins-feil ved forsøk på å bekrefte plassering av bekreftelseskode for omdømmeimport. Kanskje brukernavnet er feil eller profilen er ikke synlig';
@@ -8087,7 +8102,7 @@ class I18nNb extends I18n {
   String get api_error_53 => 'E-posten i tokenet samsvarer ikke med gjeldende e-post i databasen';
 
   @override
-  String get api_error_54 => 'Token for tilbakestilling av passord gis til en e-post som ikke finnes i databasen';
+  String get api_error_54 => 'Token gitt for tilbakestilling av passord gis til en e-post som ikke finnes i databasen';
 
   @override
   String get api_error_55 => 'Token oppgitt for tilbakestilling av passord er ugyldig';
@@ -8105,13 +8120,13 @@ class I18nNb extends I18n {
   String get api_error_59 => 'Prøver å tilbakestille et passord for en bruker med en ubekreftet e-post';
 
   @override
-  String get api_error_62 => 'Det eksisterer ingen konto med brukernavnet som er oppgitt for forespørselen om offentlige data på kontoen';
+  String get api_error_62 => 'Det finnes ingen konto med brukernavnet som er oppgitt for forespørselen om offentlige data for kontoen';
 
   @override
   String get api_error_63 => 'Forsøk på å laste opp fil av en forbudt type';
 
   @override
-  String get api_error_64 => 'Forsøker å merke et ikke-eksisterende varsel som lest';
+  String get api_error_64 => 'Forsøk på å merke et ikke-eksisterende varsel som lest';
 
   @override
   String get api_error_65 => 'Forsøker å merke et allerede lest varsel som lest';
@@ -8144,7 +8159,7 @@ class I18nNb extends I18n {
   String get api_error_79 => 'Den forespurte annonse-ID-en finnes ikke';
 
   @override
-  String get api_error_80 => 'Angav ikke både lat og lon i forespørselen om annonseoppdatering/oppretting';
+  String get api_error_80 => 'Angav ikke både lat og lon i annonseoppdateringen/opprettingsforespørselen';
 
   @override
   String get api_error_81 => 'Har ikke angitt prisformel da annonsen ble lagt ut';
@@ -8330,10 +8345,10 @@ class I18nNb extends I18n {
   String get api_error_149 => 'Prioritet ikke spesifisert for eksternt uttak';
 
   @override
-  String get api_error_150 => 'Forsøk på å starte en handel på en annonse der den spørrende brukeren blir blokkert av annonseplakaten';
+  String get api_error_150 => 'Forsøk på å starte en handel på en annonse der den spørrende brukeren er blokkert av annonseplakaten';
 
   @override
-  String get api_error_151 => 'Forsøk på å starte en handel på en annonse der den forespørrende brukeren ikke er klarert av annonseplakaten';
+  String get api_error_151 => 'Forsøk på å starte en handel på en annonse der den spørrende brukeren ikke er klarert av annonseplakaten';
 
   @override
   String get api_error_152 => 'Forsøker å kansellere en handel som allerede er stengt';
@@ -8411,7 +8426,7 @@ class I18nNb extends I18n {
   String get api_error_186 => 'Forsøk på å få mer enn 50 annonser når du får annonser etter ID';
 
   @override
-  String get api_error_187 => 'Forsøk på å gi en tom liste over ID-er når du får annonser etter ID';
+  String get api_error_187 => 'Forsøk på å gi en tom liste over IDer når du får annonser etter ID';
 
   @override
   String get api_error_188 => 'Ikke en eneste av de forespurte annonse-ID-ene er en gyldig ID når du får annonser etter ID';
@@ -8444,7 +8459,7 @@ class I18nNb extends I18n {
   String get api_error_197 => 'Forsøk på å få handelschatmeldinger med \"etter\" tidsstempel som er utenfor det tillatte området';
 
   @override
-  String get api_error_198 => 'Forsøk på å motta nylige chat-meldinger på kontoen med \"etter\"-tidsstempel som er utenfor det tillatte området';
+  String get api_error_198 => 'Forsøk på å få nye chatmeldinger på kontoen med \"etter\" tidsstempel som er utenfor det tillatte området';
 
   @override
   String get api_error_199 => 'Forsøker å få offentlig API-token for bruker som ikke eksisterer';
@@ -8486,7 +8501,7 @@ class I18nNb extends I18n {
   String get api_error_218 => 'Forsøk på å åpne en handel på en annonse som krever en bekreftet e-post når den spørrende brukeren ikke har en bekreftet e-post';
 
   @override
-  String get api_error_219 => 'Forsøk på å registrere deg med en e-post som er fra en engangsleverandør av e-post';
+  String get api_error_219 => 'Forsøk på å registrere seg med en e-post som er fra en engangsleverandør av e-post';
 
   @override
   String get api_error_220 => 'Forsøk på å endre konto-e-post til en e-post fra en engangs-e-postleverandør';
@@ -8582,7 +8597,7 @@ class I18nNb extends I18n {
   String get api_error_256 => 'Forsøker å registrere et push-varslingstoken som allerede eksisterer';
 
   @override
-  String get api_error_257 => 'Forsøker å registrere et pushvarslingstoken som ikke er gyldig';
+  String get api_error_257 => 'Forsøker å registrere et push-varslingstoken som ikke er gyldig';
 
   @override
   String get api_error_258 => 'Forsøk på å registrere et pushvarslingstoken for en konto som allerede har 500 enhetstokener, slett en av de eksisterende tokenene før du prøver dette igjen';
@@ -8624,7 +8639,7 @@ class I18nNb extends I18n {
   String get pin_set => 'Angi PIN-kode';
 
   @override
-  String get pin_do_not_match => 'PIN-kodene stemmer ikke overens';
+  String get pin_do_not_match => 'PIN-koden samsvarer ikke';
 
   @override
   String get pin_second_as_first => 'PIN-koden du skrev inn andre gang samsvarer ikke med den første.';
@@ -8681,7 +8696,7 @@ class I18nNb extends I18n {
   String get view_all_transactions => 'Se alle transaksjoner';
 
   @override
-  String get email_is_used_to => 'E-post brukes til å gjenopprette passordet ditt eller sende deg e-postvarsler. E-posten din vil bli sjekket mot en tredjeparts database med engangs-e-postleverandører.';
+  String get email_is_used_to => 'E-post brukes til å gjenopprette passordet ditt eller sende deg e-postvarsler. E-posten din vil bli sjekket mot en tredjeparts database med engangse-postleverandører.';
 
   @override
   String get email_verified => 'E-post er bekreftet.';
@@ -8760,7 +8775,7 @@ class I18nNb extends I18n {
   String get edit => 'Redigere';
 
   @override
-  String get confirm_transaction => 'Bekreft transaksjon';
+  String get confirm_transaction => 'Bekreft transaksjonen';
 
   @override
   String get transaction_fee => 'Transaksjonsgebyr';
@@ -8998,7 +9013,7 @@ class I18nNb extends I18n {
 
   @override
   String affiliate__terms__text___agoradesk(Object appName) {
-    return '• Du kan koble til en hvilken som helst individuell side, for eksempel landoppføring eller betalingsmåteoppføring, eller noe annet på $appName.\n• Du vil tjene kryptovaluta fra brukerne som kommer til nettstedet gjennom ditt tilknyttede lenkeregister og gjør handler.\n• Utbetalinger vil bli gjort daglig til din $appName lommebok i de relevante kryptovalutaene.\n• Provisjon vil bli betalt i ett år fra brukerens registrering. Provisjon er basert på inntekten den nye brukeren kommer med for $appName (handelsgebyrer).\n• Ethvert stygt spill, som villedende reklame, er forbudt.\n• Spamming er forbudt. Spamming inkluderer å sende private eller offentlige meldinger som ikke abonneres på forum/reddit, avmeldt massepost osv.\n• Det er forbudt å legge til skjulte iframes på et nettsted for å fange opp tilknyttede selskaper. Bare tilknyttede iframes eller direkte lenker til nettsiden er tillatt.\n• $appName har rett til å deaktivere enhver tilknyttet bruker til enhver tid. Hvis du bryter vilkårene, vil tilknytningsprogrammet ditt bli avsluttet.';
+    return '• Du kan koble til en hvilken som helst individuell side, for eksempel landoppføring eller betalingsmåteoppføring, eller noe annet på $appName.\n• Du vil tjene kryptovaluta fra brukerne som kommer til nettstedet gjennom ditt tilknyttede lenkeregister og gjør handler.\n• Utbetalinger vil bli gjort daglig til din $appName lommebok i de relevante kryptovalutaene.\n• Provisjon vil bli betalt i ett år fra brukerens registrering. Provisjon er basert på inntekten den nye brukeren kommer med for $appName (handelsgebyrer).\n• Ethvert stygt spill, som villedende reklame, er forbudt.\n• Spamming er forbudt. Spamming inkluderer å sende private eller offentlige meldinger som ikke abonneres på forum/reddit, avmeldt massepost osv.\n• Det er forbudt å legge til skjulte iframes på et nettsted for å fange tilknyttede selskaper. Bare tilknyttede iframes eller direkte lenker til nettsiden er tillatt.\n• $appName har rett til å deaktivere enhver tilknyttet bruker til enhver tid. Hvis du bryter vilkårene, vil tilknytningsprogrammet ditt bli avsluttet.';
   }
 
   @override
@@ -9488,7 +9503,7 @@ class I18nNb extends I18n {
   String get app_proxy_unavailable => 'Proxy utilgjengelig';
 
   @override
-  String get app_proxy_unavailable_decr => 'Sjekk om tilkoblingsinnstillingene er riktige eller bruk en annen proxy.';
+  String get app_proxy_unavailable_decr => 'Kontroller om tilkoblingsinnstillingene er riktige eller bruk en annen proxy.';
 
   @override
   String get api_error_269 => 'Forsøker å legge til en ugyldig adresse i en adressebok';
@@ -9514,16 +9529,42 @@ class I18nNb extends I18n {
   }
 
   @override
-  String get api_error_363 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_363 => 'Du har oppgitt en adresse som du fikk fra en selger som ikke har oppdatert adresseformatet sitt (integrert adresse). Sett opp din egen lommebok på en app som Cake-, Monerujo- eller Feather-lommebøker, og oppgi den adressen i stedet.';
 
   @override
-  String get api_error_364 => 'You\'ve provided an address that you got from a merchant that hasn\'t updated their address format (integrated address). Please set up your own wallet on an app like Cake, Monerujo, or Feather wallets, and provide that address instead.';
+  String get api_error_364 => 'Du har oppgitt en adresse som du fikk fra en selger som ikke har oppdatert adresseformatet sitt (integrert adresse). Sett opp din egen lommebok på en app som Cake-, Monerujo- eller Feather-lommebøker, og oppgi den adressen i stedet.';
 
   @override
-  String get find_user => 'Find user';
+  String get find_user => 'Finn bruker';
 
   @override
-  String get traderHasNoBalance => 'This trader doesn\'t have enough balance to trade at the moment.';
+  String get traderHasNoBalance => 'Denne traderen har ikke nok balanse til å handle for øyeblikket.';
+
+  @override
+  String askForAppReview(Object appName) {
+    return '$appName drives av folket! Vurder appen vår hvis du liker den. Flere handelsmenn vil bli med, noe som fører til et sunnere marked for alle.';
+  }
+
+  @override
+  String get askToContactWhenBadExperience => 'Beklager at du har en dårlig opplevelse! Vil du kontakte teamet vårt slik at vi kan forbedre det?';
+
+  @override
+  String get dontLikeIt => 'Liker det ikke';
+
+  @override
+  String get loveIt => 'Elsker det!';
+
+  @override
+  String get cancelAndDontAsk => 'Avbryt og ikke spør igjen';
+
+  @override
+  String get noMatchingItems => 'Ingen samsvarende varer.';
+
+  @override
+  String get pleaseCheckAddress => 'Kontroller at adressen er korrekt';
+
+  @override
+  String get inputAddressForCalculatingFees => 'Inndataadresse for beregning av gebyrer';
 }
 
 /// The translations for Norwegian Bokmål, as used in Norway (`nb_NO`).
@@ -17115,6 +17156,21 @@ class I18nNbNo extends I18nNb {
   String get trade250Sbwarning250Sbconfirmations => 'Ikke fullfør før kjøperens tx har bekreftelse! Det har vært en bølge av svindel der en ubekreftet transaksjon kanselleres etter at selgeren har fullført.';
 
   @override
+  String get filter250Sbtype250Sbonline8722Sbsell => 'Kjøpe på nettet';
+
+  @override
+  String get filter250Sbtype250Sbonline8722Sbbuy => 'Selg på nett';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbsell => 'Kjøp lokalt';
+
+  @override
+  String get filter250Sbtype250Sblocal8722Sbbuy => 'Selg lokalt';
+
+  @override
+  String get login250Sbusername8722Sbtip8722Sbshort => 'Brukernavn (3-16 tegn)';
+
+  @override
   String get ads => 'Annonser';
 
   @override
@@ -17532,7 +17588,7 @@ class I18nNbNo extends I18nNb {
   String get api_error_207 => 'Forsøker å bekrefte plassering av bekreftelseskode for omdømmeimport for bruker som ikke eksisterer';
 
   @override
-  String get api_error_208 => 'Forsøk på å bekrefte plassering av bekreftelseskode for omdømmeimport for bruker som ikke er i trinn 1 i flyten for omdømmeimport';
+  String get api_error_208 => 'Forsøker å bekrefte plassering av bekreftelseskode for omdømmeimport for bruker som ikke er i trinn 1 i flyten for omdømmeimport';
 
   @override
   String get api_error_209 => 'LocalBitcoins-feil ved forsøk på å bekrefte plassering av bekreftelseskode for omdømmeimport. Kanskje brukernavnet er feil eller profilen er ikke synlig';
@@ -17613,7 +17669,7 @@ class I18nNbNo extends I18nNb {
   String get api_error_53 => 'E-posten i tokenet samsvarer ikke med gjeldende e-post i databasen';
 
   @override
-  String get api_error_54 => 'Token for tilbakestilling av passord gis til en e-post som ikke finnes i databasen';
+  String get api_error_54 => 'Token gitt for tilbakestilling av passord gis til en e-post som ikke finnes i databasen';
 
   @override
   String get api_error_55 => 'Token oppgitt for tilbakestilling av passord er ugyldig';
@@ -17631,13 +17687,13 @@ class I18nNbNo extends I18nNb {
   String get api_error_59 => 'Prøver å tilbakestille et passord for en bruker med en ubekreftet e-post';
 
   @override
-  String get api_error_62 => 'Det eksisterer ingen konto med brukernavnet som er oppgitt for forespørselen om offentlige data på kontoen';
+  String get api_error_62 => 'Det finnes ingen konto med brukernavnet som er oppgitt for forespørselen om offentlige data for kontoen';
 
   @override
   String get api_error_63 => 'Forsøk på å laste opp fil av en forbudt type';
 
   @override
-  String get api_error_64 => 'Forsøker å merke et ikke-eksisterende varsel som lest';
+  String get api_error_64 => 'Forsøk på å merke et ikke-eksisterende varsel som lest';
 
   @override
   String get api_error_65 => 'Forsøker å merke et allerede lest varsel som lest';
@@ -17670,7 +17726,7 @@ class I18nNbNo extends I18nNb {
   String get api_error_79 => 'Den forespurte annonse-ID-en finnes ikke';
 
   @override
-  String get api_error_80 => 'Angav ikke både lat og lon i forespørselen om annonseoppdatering/oppretting';
+  String get api_error_80 => 'Angav ikke både lat og lon i annonseoppdateringen/opprettingsforespørselen';
 
   @override
   String get api_error_81 => 'Har ikke angitt prisformel da annonsen ble lagt ut';
@@ -17856,10 +17912,10 @@ class I18nNbNo extends I18nNb {
   String get api_error_149 => 'Prioritet ikke spesifisert for eksternt uttak';
 
   @override
-  String get api_error_150 => 'Forsøk på å starte en handel på en annonse der den spørrende brukeren blir blokkert av annonseplakaten';
+  String get api_error_150 => 'Forsøk på å starte en handel på en annonse der den spørrende brukeren er blokkert av annonseplakaten';
 
   @override
-  String get api_error_151 => 'Forsøk på å starte en handel på en annonse der den forespørrende brukeren ikke er klarert av annonseplakaten';
+  String get api_error_151 => 'Forsøk på å starte en handel på en annonse der den spørrende brukeren ikke er klarert av annonseplakaten';
 
   @override
   String get api_error_152 => 'Forsøker å kansellere en handel som allerede er stengt';
@@ -17937,7 +17993,7 @@ class I18nNbNo extends I18nNb {
   String get api_error_186 => 'Forsøk på å få mer enn 50 annonser når du får annonser etter ID';
 
   @override
-  String get api_error_187 => 'Forsøk på å gi en tom liste over ID-er når du får annonser etter ID';
+  String get api_error_187 => 'Forsøk på å gi en tom liste over IDer når du får annonser etter ID';
 
   @override
   String get api_error_188 => 'Ikke en eneste av de forespurte annonse-ID-ene er en gyldig ID når du får annonser etter ID';
@@ -17970,7 +18026,7 @@ class I18nNbNo extends I18nNb {
   String get api_error_197 => 'Forsøk på å få handelschatmeldinger med \"etter\" tidsstempel som er utenfor det tillatte området';
 
   @override
-  String get api_error_198 => 'Forsøk på å motta nylige chat-meldinger på kontoen med \"etter\"-tidsstempel som er utenfor det tillatte området';
+  String get api_error_198 => 'Forsøk på å få nye chatmeldinger på kontoen med \"etter\" tidsstempel som er utenfor det tillatte området';
 
   @override
   String get api_error_199 => 'Forsøker å få offentlig API-token for bruker som ikke eksisterer';
@@ -18012,7 +18068,7 @@ class I18nNbNo extends I18nNb {
   String get api_error_218 => 'Forsøk på å åpne en handel på en annonse som krever en bekreftet e-post når den spørrende brukeren ikke har en bekreftet e-post';
 
   @override
-  String get api_error_219 => 'Forsøk på å registrere deg med en e-post som er fra en engangsleverandør av e-post';
+  String get api_error_219 => 'Forsøk på å registrere seg med en e-post som er fra en engangsleverandør av e-post';
 
   @override
   String get api_error_220 => 'Forsøk på å endre konto-e-post til en e-post fra en engangs-e-postleverandør';
@@ -18108,7 +18164,7 @@ class I18nNbNo extends I18nNb {
   String get api_error_256 => 'Forsøker å registrere et push-varslingstoken som allerede eksisterer';
 
   @override
-  String get api_error_257 => 'Forsøker å registrere et pushvarslingstoken som ikke er gyldig';
+  String get api_error_257 => 'Forsøker å registrere et push-varslingstoken som ikke er gyldig';
 
   @override
   String get api_error_258 => 'Forsøk på å registrere et pushvarslingstoken for en konto som allerede har 500 enhetstokener, slett en av de eksisterende tokenene før du prøver dette igjen';
@@ -18150,7 +18206,7 @@ class I18nNbNo extends I18nNb {
   String get pin_set => 'Angi PIN-kode';
 
   @override
-  String get pin_do_not_match => 'PIN-kodene stemmer ikke overens';
+  String get pin_do_not_match => 'PIN-koden samsvarer ikke';
 
   @override
   String get pin_second_as_first => 'PIN-koden du skrev inn andre gang samsvarer ikke med den første.';
@@ -18207,7 +18263,7 @@ class I18nNbNo extends I18nNb {
   String get view_all_transactions => 'Se alle transaksjoner';
 
   @override
-  String get email_is_used_to => 'E-post brukes til å gjenopprette passordet ditt eller sende deg e-postvarsler. E-posten din vil bli sjekket mot en tredjeparts database med engangs-e-postleverandører.';
+  String get email_is_used_to => 'E-post brukes til å gjenopprette passordet ditt eller sende deg e-postvarsler. E-posten din vil bli sjekket mot en tredjeparts database med engangse-postleverandører.';
 
   @override
   String get email_verified => 'E-post er bekreftet.';
@@ -18286,7 +18342,7 @@ class I18nNbNo extends I18nNb {
   String get edit => 'Redigere';
 
   @override
-  String get confirm_transaction => 'Bekreft transaksjon';
+  String get confirm_transaction => 'Bekreft transaksjonen';
 
   @override
   String get transaction_fee => 'Transaksjonsgebyr';
@@ -18524,7 +18580,7 @@ class I18nNbNo extends I18nNb {
 
   @override
   String affiliate__terms__text___agoradesk(Object appName) {
-    return '• Du kan koble til en hvilken som helst individuell side, for eksempel landoppføring eller betalingsmåteoppføring, eller noe annet på $appName.\n• Du vil tjene kryptovaluta fra brukerne som kommer til nettstedet gjennom ditt tilknyttede lenkeregister og gjør handler.\n• Utbetalinger vil bli gjort daglig til din $appName lommebok i de relevante kryptovalutaene.\n• Provisjon vil bli betalt i ett år fra brukerens registrering. Provisjon er basert på inntekten den nye brukeren kommer med for $appName (handelsgebyrer).\n• Ethvert stygt spill, som villedende reklame, er forbudt.\n• Spamming er forbudt. Spamming inkluderer å sende private eller offentlige meldinger som ikke abonneres på forum/reddit, avmeldt massepost osv.\n• Det er forbudt å legge til skjulte iframes på et nettsted for å fange opp tilknyttede selskaper. Bare tilknyttede iframes eller direkte lenker til nettsiden er tillatt.\n• $appName har rett til å deaktivere enhver tilknyttet bruker til enhver tid. Hvis du bryter vilkårene, vil tilknytningsprogrammet ditt bli avsluttet.';
+    return '• Du kan koble til en hvilken som helst individuell side, for eksempel landoppføring eller betalingsmåteoppføring, eller noe annet på $appName.\n• Du vil tjene kryptovaluta fra brukerne som kommer til nettstedet gjennom ditt tilknyttede lenkeregister og gjør handler.\n• Utbetalinger vil bli gjort daglig til din $appName lommebok i de relevante kryptovalutaene.\n• Provisjon vil bli betalt i ett år fra brukerens registrering. Provisjon er basert på inntekten den nye brukeren kommer med for $appName (handelsgebyrer).\n• Ethvert stygt spill, som villedende reklame, er forbudt.\n• Spamming er forbudt. Spamming inkluderer å sende private eller offentlige meldinger som ikke abonneres på forum/reddit, avmeldt massepost osv.\n• Det er forbudt å legge til skjulte iframes på et nettsted for å fange tilknyttede selskaper. Bare tilknyttede iframes eller direkte lenker til nettsiden er tillatt.\n• $appName har rett til å deaktivere enhver tilknyttet bruker til enhver tid. Hvis du bryter vilkårene, vil tilknytningsprogrammet ditt bli avsluttet.';
   }
 
   @override
@@ -19014,7 +19070,7 @@ class I18nNbNo extends I18nNb {
   String get app_proxy_unavailable => 'Proxy utilgjengelig';
 
   @override
-  String get app_proxy_unavailable_decr => 'Sjekk om tilkoblingsinnstillingene er riktige eller bruk en annen proxy.';
+  String get app_proxy_unavailable_decr => 'Kontroller om tilkoblingsinnstillingene er riktige eller bruk en annen proxy.';
 
   @override
   String get api_error_269 => 'Forsøker å legge til en ugyldig adresse i en adressebok';
@@ -19038,4 +19094,42 @@ class I18nNbNo extends I18nNb {
   String pin_wrong_current_info(Object val) {
     return 'Du har $val forsøk igjen. Etter det blir du logget ut og du må logge på igjen.';
   }
+
+  @override
+  String get api_error_363 => 'Du har oppgitt en adresse som du fikk fra en selger som ikke har oppdatert adresseformatet sitt (integrert adresse). Sett opp din egen lommebok på en app som Cake-, Monerujo- eller Feather-lommebøker, og oppgi den adressen i stedet.';
+
+  @override
+  String get api_error_364 => 'Du har oppgitt en adresse som du fikk fra en selger som ikke har oppdatert adresseformatet sitt (integrert adresse). Sett opp din egen lommebok på en app som Cake-, Monerujo- eller Feather-lommebøker, og oppgi den adressen i stedet.';
+
+  @override
+  String get find_user => 'Finn bruker';
+
+  @override
+  String get traderHasNoBalance => 'Denne traderen har ikke nok balanse til å handle for øyeblikket.';
+
+  @override
+  String askForAppReview(Object appName) {
+    return '$appName drives av folket! Vurder appen vår hvis du liker den. Flere handelsmenn vil bli med, noe som fører til et sunnere marked for alle.';
+  }
+
+  @override
+  String get askToContactWhenBadExperience => 'Beklager at du har en dårlig opplevelse! Vil du kontakte teamet vårt slik at vi kan forbedre det?';
+
+  @override
+  String get dontLikeIt => 'Liker det ikke';
+
+  @override
+  String get loveIt => 'Elsker det!';
+
+  @override
+  String get cancelAndDontAsk => 'Avbryt og ikke spør igjen';
+
+  @override
+  String get noMatchingItems => 'Ingen samsvarende varer.';
+
+  @override
+  String get pleaseCheckAddress => 'Kontroller at adressen er korrekt';
+
+  @override
+  String get inputAddressForCalculatingFees => 'Inndataadresse for beregning av gebyrer';
 }
