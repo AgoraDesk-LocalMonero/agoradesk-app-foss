@@ -61,6 +61,7 @@ class LocalNotificationController with ForegroundMessagesMixin {
             channelDescription: channel.description,
             icon: kNotificationIcon,
             color: const Color.fromRGBO(0, 0, 0, 1),
+            largeIcon: const DrawableResourceAndroidBitmap('@mipmap/ic_launcher'),
             // colorized: true,
           ),
         ),

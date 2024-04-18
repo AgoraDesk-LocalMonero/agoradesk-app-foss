@@ -6,9 +6,9 @@ import 'package:agoradesk/features/account/data/models/feedback_model.dart';
 import 'package:agoradesk/features/account/data/models/feedback_type.dart';
 import 'package:agoradesk/features/account/data/services/account_service.dart';
 import 'package:agoradesk/features/ads/data/models/ad_model.dart';
+import 'package:agoradesk/features/ads/data/models/ads_request_parameter_model.dart';
 import 'package:agoradesk/features/ads/data/repositories/ads_repository.dart';
 import 'package:agoradesk/features/trades/models/note_on_user_view_model.dart';
-import 'package:provider/provider.dart';
 import 'package:vm/vm.dart';
 
 class TraderProfileViewModel extends ViewModel with ErrorParseMixin {
@@ -87,7 +87,10 @@ class TraderProfileViewModel extends ViewModel with ErrorParseMixin {
   Future _getUserAds() async {
     loadingAds = true;
     ads.clear();
-    final res = await _adsRepository.getUserAds(profileModel?.username ?? username!);
+    final res = await _adsRepository.getUserAds(
+      profileModel?.username ?? username!,
+      const AdsRequestParameterModel(),
+    );
     loadingAds = false;
     if (res.isRight) {
       paginationMeta = res.right.pagination;
