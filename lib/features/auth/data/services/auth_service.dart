@@ -248,9 +248,6 @@ class AuthService with FileUtilsMixin, AuthMixin {
       if (request.captchaCookie != null) {
         cookie = {'cookie': request.captchaCookie!};
       }
-      if (GetIt.I<AppParameters>().debugPrintIsOn) {
-        debugPrint('++++[cookie in authService, login] ${request.captchaCookie}');
-      }
 
       Response<Map<dynamic, dynamic>> resp = await _api.client.post<Map>(
         '/login',

@@ -166,7 +166,7 @@ class InitiateTradeScreen extends StatelessWidget with CountryInfoMixin, Clipboa
       return DropdownButtonFormField<String>(
         value: model.selectedStringReceive,
         onChanged: (selected) {
-          model.updateSelectedReceive(selected);
+          model.updateSelectedReceive(selected, context);
         },
         decoration: context.decorationTxtFieldMain.copyWith(
           suffixIcon: SuffixIcon(text: model.ad!.currency),

@@ -156,19 +156,19 @@ class MarketAdInfoViewModel extends ViewModel
       notifyListeners();
     });
     _initMenus();
-    _textFieldsListeners();
+    _textFieldsListeners(context);
     _initialLoading();
     super.init();
   }
 
-  Future<void> _setInitialReceive() async {
+  Future<void> _setInitialReceive(BuildContext context) async {
     await Future.delayed(const Duration(milliseconds: 300));
     if (ad!.limitToFiatAmounts != null && ad!.limitToFiatAmounts!.isNotEmpty && !_receiveListWasInit) {
       _receiveListWasInit = true;
       final values = ad!.limitToFiatAmounts!.split(',');
       selectedStringReceive = values.first;
       ctrlReceive.text = values.first;
-      _processReceive();
+      _processReceive(context);
     }
   }
 
@@ -212,7 +212,7 @@ class MarketAdInfoViewModel extends ViewModel
     assetPrice = double.tryParse(ad!.tempPrice!) ?? 0;
     fiatName = ad!.currency;
 
-    _setInitialReceive();
+    _setInitialReceive(context);
 
     notifyListeners();
   }
@@ -231,8 +231,8 @@ class MarketAdInfoViewModel extends ViewModel
     assetMenu.addAll(Asset.values.map((e) => e.key()));
   }
 
-  void _textFieldsListeners() {
-    ctrlReceive.addListener(_processReceive);
+  void _textFieldsListeners(BuildContext context) {
+    ctrlReceive.addListener(() => _processReceive(context));
     ctrlPay.addListener(_processPay);
     ctrlSettlementAddress.addListener(_processSettlementAddress);
   }
@@ -315,7 +315,7 @@ class MarketAdInfoViewModel extends ViewModel
     }
   }
 
-  void _processReceive() {
+  void _processReceive(BuildContext context) {
     if (!_calculating) {
       _calculating = true;
       receiveError = null;
@@ -360,14 +360,14 @@ class MarketAdInfoViewModel extends ViewModel
     }
   }
 
-  void updateSelectedReceive(String? value) {
+  void updateSelectedReceive(String? value, BuildContext context) {
     if (value == null) {
       return;
     }
 
     selectedStringReceive = value;
     ctrlReceive.text = value;
-    _processReceive();
+    _processReceive(context);
   }
 
   void _checkReceiveQuantity(BuildContext context) {
