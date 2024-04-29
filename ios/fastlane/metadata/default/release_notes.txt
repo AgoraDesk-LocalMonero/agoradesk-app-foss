@@ -1,3 +1,3 @@
-1. Add ad filtering to the trader screen.
-2. Fix image quality in the trade chat.
-3. Add an icon for recent notifications.
+1. Fixed an issue with the SOCKS5 proxy.
+2. Fixed settlement proof and added a share button for receipts.
+3. Small fixes.
