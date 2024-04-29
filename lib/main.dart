@@ -7,7 +7,7 @@ import 'package:agoradesk/core/app_hive.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_shared_prefs.dart';
 import 'package:agoradesk/core/flavor_type.dart';
-import 'package:agoradesk/core/packages/socks_proxy/socks_proxy.dart';
+import 'package:flutter_socks_proxy/socks_proxy.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/services/notifications/local_notifications_utils.dart';
 import 'package:agoradesk/core/services/notifications/models/push_model.dart';
@@ -22,7 +22,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl_standalone.dart' if (dart.library.html) 'package:intl/intl_browser.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
-import 'package:uni_links_desktop/uni_links_desktop.dart';
 
 import 'firebase_options_agoradesk.dart' as agoradesk_options;
 import 'firebase_options_localmonero.dart' as localmonero_options;
@@ -65,13 +64,6 @@ void main() async {
   }
 
   await setupLocalNotifications(isGoogleAvailable);
-
-  ///
-  /// Desktop specific initializations
-  ///
-  if (Platform.isWindows) {
-    registerProtocol('unilinks');
-  }
 
   ///
   /// general initializations

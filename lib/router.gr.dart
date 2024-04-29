@@ -394,6 +394,7 @@ class AppRouter extends _i58.RootStackRouter {
           cookies: args.cookies,
           isFromCaptchaEvent: args.isFromCaptchaEvent,
           url: args.url,
+          displayShareButton: args.displayShareButton,
         ),
         transitionsBuilder: _i58.TransitionsBuilders.slideLeft,
         durationInMilliseconds: 200,
@@ -1692,6 +1693,7 @@ class WebviewRoute extends _i58.PageRouteInfo<WebviewRouteArgs> {
     required List<dynamic> cookies,
     bool isFromCaptchaEvent = false,
     required String url,
+    bool displayShareButton = false,
   }) : super(
           WebviewRoute.name,
           path: 'webviewScreen',
@@ -1701,6 +1703,7 @@ class WebviewRoute extends _i58.PageRouteInfo<WebviewRouteArgs> {
             cookies: cookies,
             isFromCaptchaEvent: isFromCaptchaEvent,
             url: url,
+            displayShareButton: displayShareButton,
           ),
         );
 
@@ -1714,6 +1717,7 @@ class WebviewRouteArgs {
     required this.cookies,
     this.isFromCaptchaEvent = false,
     required this.url,
+    this.displayShareButton = false,
   });
 
   final _i61.Key? key;
@@ -1726,9 +1730,11 @@ class WebviewRouteArgs {
 
   final String url;
 
+  final bool displayShareButton;
+
   @override
   String toString() {
-    return 'WebviewRouteArgs{key: $key, token: $token, cookies: $cookies, isFromCaptchaEvent: $isFromCaptchaEvent, url: $url}';
+    return 'WebviewRouteArgs{key: $key, token: $token, cookies: $cookies, isFromCaptchaEvent: $isFromCaptchaEvent, url: $url, displayShareButton: $displayShareButton}';
   }
 }
 
