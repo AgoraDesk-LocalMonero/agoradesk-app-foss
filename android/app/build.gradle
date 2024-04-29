@@ -111,11 +111,7 @@ flutter {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.20"
-<<<<<<< HEAD
     // implementation platform('com.google.firebase:firebase-bom:29.0.3')
-=======
-    implementation platform('com.google.firebase:firebase-bom:29.0.3')
->>>>>>> main
     implementation "androidx.multidex:multidex:2.0.1"
 }
 
