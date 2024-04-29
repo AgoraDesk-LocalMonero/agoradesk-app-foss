@@ -7,7 +7,7 @@ import 'package:agoradesk/core/app_hive.dart';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_shared_prefs.dart';
 import 'package:agoradesk/core/flavor_type.dart';
-import 'package:agoradesk/core/packages/socks_proxy/socks_proxy.dart';
+import 'package:flutter_socks_proxy/socks_proxy.dart';
 import 'package:agoradesk/core/secure_storage.dart';
 import 'package:agoradesk/core/services/notifications/local_notifications_utils.dart';
 import 'package:agoradesk/core/services/notifications/models/push_model.dart';

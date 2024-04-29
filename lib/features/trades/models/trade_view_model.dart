@@ -383,6 +383,7 @@ class TradeViewModel extends ViewModel
         token: _apiClient.accessToken ?? '',
         url: '${GetIt.I<AppParameters>().urlReceipt}/${tradeForScreen.tradeId}',
         cookies: const [],
+        displayShareButton: true,
       ),
     );
   }
@@ -402,6 +403,14 @@ class TradeViewModel extends ViewModel
       return false;
     } else {
       return true;
+    }
+  }
+
+  String settlementProofLink(BuildContext context) {
+    if (tradeForScreen.asset == Asset.BTC) {
+      return '${GetIt.I<AppParameters>().mempoolLink}${tradeForScreen.transferToBuyerTransactionId ?? ''}'; 
+    } else {
+      return '${GetIt.I<AppParameters>().localMoneroLink}${tradeForScreen.transferToBuyerTransactionId ?? ''}?txprvkey=${tradeForScreen.transferToBuyerKey ?? ''}&xmraddress=${tradeForScreen.buyerSettlementAddress ?? ''}';
     }
   }
 

@@ -20,9 +20,11 @@ class __ImpervaCounterState extends ConsumerState<ImpervaCounter> {
         _counter = next.countdownSeconds;
       });
       Future.delayed(const Duration(milliseconds: 300)).then((value) {
-        setState(() {
-          _counter = previous?.countdownSeconds;
-        });
+        if (mounted) {
+          setState(() {
+            _counter = previous?.countdownSeconds;
+          });
+        }
       });
     });
     super.initState();
