@@ -44,6 +44,7 @@ import 'package:agoradesk/features/wallet/data/services/wallet_service.dart';
 import 'package:agoradesk/generated/i18n.dart';
 import 'package:agoradesk/main.dart';
 import 'package:agoradesk/router.gr.dart';
+import 'package:app_links/app_links.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:dio/dio.dart';
@@ -60,7 +61,6 @@ import 'package:plausible_analytics/plausible_analytics.dart';
 import 'package:provider/single_child_widget.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
 import 'package:timeago/timeago.dart';
-import 'package:uni_links/uni_links.dart';
 
 const _kPinDelay = Duration(seconds: 300);
 
@@ -101,6 +101,7 @@ class AppState extends State<App>
   late final String _countryCode;
 
   late RemoteMessage? _initialMessage;
+  final _appLinks = AppLinks();
 
   _setInitialeLocaleAndCountry() {
     if (AppSharedPrefs().firstRun) {
@@ -677,10 +678,10 @@ class AppState extends State<App>
 
   //todo - check how it works when app initially was closed
   Future<void> _initUniLinks() async {
-    linkStream.listen((String? link) {
+    _appLinks.allUriLinkStream.listen((uri) {
       if (GetIt.I<AppParameters>().debugPrintIsOn) debugPrint('++++uni_links - link');
-      if (link != null && link.isNotEmpty) {
-        _initialUri = Uri.parse(link);
+      if (uri.hasAbsolutePath && uri.pathSegments.isNotEmpty) {
+        _initialUri = Uri.parse(uri.toString());
         // check if the link for email confirm or not
         if (_initialUri!.pathSegments.length == 1 &&
             _initialUri!.pathSegments[0] == 'emailConfirm' &&

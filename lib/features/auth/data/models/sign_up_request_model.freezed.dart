@@ -20,8 +20,9 @@ SignUpRequestModel _$SignUpRequestModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SignUpRequestModel {
+  @JsonKey(toJson: _toLowerCase)
   String? get username => throw _privateConstructorUsedError;
-  @JsonKey(includeIfNull: false)
+  @JsonKey(includeIfNull: false, toJson: _toLowerCase)
   String? get email => throw _privateConstructorUsedError;
   @JsonKey(name: 'front_type', includeIfNull: false)
   String? get frontType => throw _privateConstructorUsedError;
@@ -30,7 +31,7 @@ mixin _$SignUpRequestModel {
   String? get otp => throw _privateConstructorUsedError;
   @JsonKey(includeIfNull: false)
   String? get captcha => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+  @JsonKey(includeIfNull: false)
   String? get captchaCookie => throw _privateConstructorUsedError;
   @JsonKey(name: 'referral_code', includeIfNull: false)
   String? get referralCode => throw _privateConstructorUsedError;
@@ -50,13 +51,13 @@ abstract class $SignUpRequestModelCopyWith<$Res> {
       _$SignUpRequestModelCopyWithImpl<$Res, SignUpRequestModel>;
   @useResult
   $Res call(
-      {String? username,
-      @JsonKey(includeIfNull: false) String? email,
+      {@JsonKey(toJson: _toLowerCase) String? username,
+      @JsonKey(includeIfNull: false, toJson: _toLowerCase) String? email,
       @JsonKey(name: 'front_type', includeIfNull: false) String? frontType,
       String? password,
       @JsonKey(includeIfNull: false) String? otp,
       @JsonKey(includeIfNull: false) String? captcha,
-      @JsonKey(ignore: true) String? captchaCookie,
+      @JsonKey(includeIfNull: false) String? captchaCookie,
       @JsonKey(name: 'referral_code', includeIfNull: false)
       String? referralCode,
       @JsonKey(name: 'coupon_code', includeIfNull: false) String? couponCode});
@@ -135,13 +136,13 @@ abstract class _$$SignUpRequestModelImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String? username,
-      @JsonKey(includeIfNull: false) String? email,
+      {@JsonKey(toJson: _toLowerCase) String? username,
+      @JsonKey(includeIfNull: false, toJson: _toLowerCase) String? email,
       @JsonKey(name: 'front_type', includeIfNull: false) String? frontType,
       String? password,
       @JsonKey(includeIfNull: false) String? otp,
       @JsonKey(includeIfNull: false) String? captcha,
-      @JsonKey(ignore: true) String? captchaCookie,
+      @JsonKey(includeIfNull: false) String? captchaCookie,
       @JsonKey(name: 'referral_code', includeIfNull: false)
       String? referralCode,
       @JsonKey(name: 'coupon_code', includeIfNull: false) String? couponCode});
@@ -214,13 +215,13 @@ class __$$SignUpRequestModelImplCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$SignUpRequestModelImpl implements _SignUpRequestModel {
   const _$SignUpRequestModelImpl(
-      {this.username,
-      @JsonKey(includeIfNull: false) this.email,
+      {@JsonKey(toJson: _toLowerCase) this.username,
+      @JsonKey(includeIfNull: false, toJson: _toLowerCase) this.email,
       @JsonKey(name: 'front_type', includeIfNull: false) this.frontType,
       this.password,
       @JsonKey(includeIfNull: false) this.otp,
       @JsonKey(includeIfNull: false) this.captcha,
-      @JsonKey(ignore: true) this.captchaCookie,
+      @JsonKey(includeIfNull: false) this.captchaCookie,
       @JsonKey(name: 'referral_code', includeIfNull: false) this.referralCode,
       @JsonKey(name: 'coupon_code', includeIfNull: false) this.couponCode});
 
@@ -228,9 +229,10 @@ class _$SignUpRequestModelImpl implements _SignUpRequestModel {
       _$$SignUpRequestModelImplFromJson(json);
 
   @override
+  @JsonKey(toJson: _toLowerCase)
   final String? username;
   @override
-  @JsonKey(includeIfNull: false)
+  @JsonKey(includeIfNull: false, toJson: _toLowerCase)
   final String? email;
   @override
   @JsonKey(name: 'front_type', includeIfNull: false)
@@ -244,7 +246,7 @@ class _$SignUpRequestModelImpl implements _SignUpRequestModel {
   @JsonKey(includeIfNull: false)
   final String? captcha;
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeIfNull: false)
   final String? captchaCookie;
   @override
   @JsonKey(name: 'referral_code', includeIfNull: false)
@@ -302,14 +304,14 @@ class _$SignUpRequestModelImpl implements _SignUpRequestModel {
 
 abstract class _SignUpRequestModel implements SignUpRequestModel {
   const factory _SignUpRequestModel(
-      {final String? username,
-      @JsonKey(includeIfNull: false) final String? email,
+      {@JsonKey(toJson: _toLowerCase) final String? username,
+      @JsonKey(includeIfNull: false, toJson: _toLowerCase) final String? email,
       @JsonKey(name: 'front_type', includeIfNull: false)
       final String? frontType,
       final String? password,
       @JsonKey(includeIfNull: false) final String? otp,
       @JsonKey(includeIfNull: false) final String? captcha,
-      @JsonKey(ignore: true) final String? captchaCookie,
+      @JsonKey(includeIfNull: false) final String? captchaCookie,
       @JsonKey(name: 'referral_code', includeIfNull: false)
       final String? referralCode,
       @JsonKey(name: 'coupon_code', includeIfNull: false)
@@ -319,9 +321,10 @@ abstract class _SignUpRequestModel implements SignUpRequestModel {
       _$SignUpRequestModelImpl.fromJson;
 
   @override
+  @JsonKey(toJson: _toLowerCase)
   String? get username;
   @override
-  @JsonKey(includeIfNull: false)
+  @JsonKey(includeIfNull: false, toJson: _toLowerCase)
   String? get email;
   @override
   @JsonKey(name: 'front_type', includeIfNull: false)
@@ -335,7 +338,7 @@ abstract class _SignUpRequestModel implements SignUpRequestModel {
   @JsonKey(includeIfNull: false)
   String? get captcha;
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeIfNull: false)
   String? get captchaCookie;
   @override
   @JsonKey(name: 'referral_code', includeIfNull: false)

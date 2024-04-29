@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/app_shared_prefs.dart';
 import 'package:agoradesk/core/app_state_v1.dart';
-import 'package:agoradesk/core/packages/socks_proxy/socks_proxy.dart';
+// import 'package:agoradesk/core/packages/socks_proxy/socks_proxy.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/error_parse_mixin.dart';
 import 'package:agoradesk/core/utils/proxy_helper_dart.dart';
@@ -13,6 +13,7 @@ import 'package:agoradesk/features/account/data/services/account_service.dart';
 import 'package:agoradesk/features/profile/models/proxy_type.dart';
 import 'package:flutter/material.dart';
 import 'package:vm/vm.dart';
+import 'package:flutter_socks_proxy/socks_proxy.dart';
 
 ///
 /// Proxy example 69.194.181.6:7497

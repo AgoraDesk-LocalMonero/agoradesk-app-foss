@@ -134,6 +134,8 @@ class NotificationsService with ForegroundMessagesMixin {
     /// get trade id in case it's screen is opened in the app
     ///
     try {
+      if (message.data.isEmpty) return;
+
       final PushModel push = PushModel.fromJson(message.data);
       final openedTradeId = GetIt.I<AppParameters>().openedTradeId;
       if (openedTradeId != push.objectId) {
@@ -170,7 +172,8 @@ class NotificationsService with ForegroundMessagesMixin {
       }
     } catch (e) {
       /// map from message.data that contains all fields and values are length
-       final Map<String, dynamic> payload = message.data.map((key, value) => MapEntry(key, value?.toString().length ?? ''));
+      final Map<String, dynamic> payload =
+          message.data.map((key, value) => MapEntry(key, value?.toString().length ?? ''));
       Sentry.captureException('Error parsing push payload _displayLocalNotification - $payload');
     }
   }
