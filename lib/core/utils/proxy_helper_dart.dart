@@ -7,8 +7,8 @@ import 'package:agoradesk/features/profile/models/proxy_type.dart';
 String getProxyAddress() {
   final String server = AppSharedPrefs().proxyServer;
   final String port = AppSharedPrefs().proxyPort;
-  final String password = AppSharedPrefs().proxyUsername;
-  final String username = AppSharedPrefs().proxyPassword;
+  final String username = AppSharedPrefs().proxyUsername;
+  final String password = AppSharedPrefs().proxyPassword;
   final ProxyType proxyType = AppSharedPrefs().proxyType;
   if (username.isEmpty) {
     return '${proxyType.value()} $server:$port';
