@@ -83,6 +83,11 @@ class AppParameters {
   final String appstoreLink = 'https://apps.apple.com/app/agoradesk-p2p-btc-trading/id1617601678';
   final String googlePlayLink = 'https://play.google.com/store/apps/details?id=com.agoradesk.app';
 
+  /// Settlement proof links
+  final String localMoneroLink = 'https://localmonero.co/blocks/tx/';
+  final String mempoolLink = 'https://mempool.space/tx/';
+
+
   /// Github
   final String githubLatestReleaseUrl = 'https://github.com/AgoraDesk-LocalMonero/agoradesk-app-foss/releases/latest';
 

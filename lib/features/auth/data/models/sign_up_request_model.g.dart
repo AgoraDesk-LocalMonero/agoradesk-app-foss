@@ -15,6 +15,7 @@ _$SignUpRequestModelImpl _$$SignUpRequestModelImplFromJson(
       password: json['password'] as String?,
       otp: json['otp'] as String?,
       captcha: json['captcha'] as String?,
+      captchaCookie: json['captchaCookie'] as String?,
       referralCode: json['referral_code'] as String?,
       couponCode: json['coupon_code'] as String?,
     );
@@ -22,7 +23,7 @@ _$SignUpRequestModelImpl _$$SignUpRequestModelImplFromJson(
 Map<String, dynamic> _$$SignUpRequestModelImplToJson(
     _$SignUpRequestModelImpl instance) {
   final val = <String, dynamic>{
-    'username': instance.username,
+    'username': _toLowerCase(instance.username),
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -31,11 +32,12 @@ Map<String, dynamic> _$$SignUpRequestModelImplToJson(
     }
   }
 
-  writeNotNull('email', instance.email);
+  writeNotNull('email', _toLowerCase(instance.email));
   writeNotNull('front_type', instance.frontType);
   val['password'] = instance.password;
   writeNotNull('otp', instance.otp);
   writeNotNull('captcha', instance.captcha);
+  writeNotNull('captchaCookie', instance.captchaCookie);
   writeNotNull('referral_code', instance.referralCode);
   writeNotNull('coupon_code', instance.couponCode);
   return val;

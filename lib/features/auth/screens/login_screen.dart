@@ -35,7 +35,6 @@ class LoginScreen extends ConsumerWidget with WidgetsBindingObserver, ValidatorM
           child: ViewModelBuilder<LoginViewModel>(
               model: LoginViewModel(
                 authService: context.read<AuthService>(),
-                appState: context.read<AppStateV1>(),
               ),
               builder: (context, model, _) {
                 return Padding(
