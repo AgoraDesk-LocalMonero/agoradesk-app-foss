@@ -1,5 +1,4 @@
 import 'package:agoradesk/core/agora_font.dart';
-import 'package:agoradesk/core/app_parameters.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/clipboard_mixin.dart';
 import 'package:agoradesk/core/utils/date_mixin.dart';
@@ -278,8 +277,7 @@ class TradeStepThree extends StatelessWidget with DateMixin, UrlMixin, Clipboard
                       title: context.intl.trade250Sbstatus250Sbsettlement250Sbproof,
                       insidePadding: const EdgeInsets.fromLTRB(14, 13, 14, 13),
                       delimiterWidth: 4,
-                      onPressed: () => openLinkBrowser(
-                          '${GetIt.I<AppParameters>().urlBase}/blocks/tx/${model.tradeForScreen.transferToBuyerTransactionId ?? ''}?txprvkey=${model.tradeForScreen.transferToBuyerKey ?? ''}&xmraddress=${model.tradeForScreen.buyerSettlementAddress ?? ''}'),
+                      onPressed: () => openLinkBrowser(model.settlementProofLink(context)),
                     ),
                   ],
                 ),
