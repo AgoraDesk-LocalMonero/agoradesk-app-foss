@@ -79,6 +79,12 @@ class Display403IncapsulaEvent {
   final String? incidentId;
 }
 
+class Display444Event {
+  const Display444Event({required this.message});
+
+  final String? message;
+}
+
 ///
 /// Flash events
 ///

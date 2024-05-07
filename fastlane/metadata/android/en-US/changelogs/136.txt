@@ -1,0 +1,2 @@
+1. Hotfix: Add notifications for certain events.  
+2. Add a home screen widget.
