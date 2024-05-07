@@ -1,8 +1,7 @@
 ### Updates
 
-1. Fixed an issue with the SOCKS5 proxy.
-2. Fixed settlement proof and added a share button for receipts.
-3. Small fixes.
+1. Add notifications for certain events.  
+3. Add a home screen widget.
 
 ### About the attached app's
 
