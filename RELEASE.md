@@ -1,7 +1,7 @@
 ### Updates
 
-1. Add notifications for certain events.  
-3. Add a home screen widget.
+1. Hotfix: Add notifications for certain events.  
+2. Add a home screen widget.
 
 ### About the attached app's
 
