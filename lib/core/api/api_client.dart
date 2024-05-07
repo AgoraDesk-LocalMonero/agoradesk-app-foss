@@ -156,8 +156,20 @@ class ApiClient with UrlMixin {
               int firstIndex = resp.indexOf('incident_id=') + 'incident_id='.length;
               int secondIndex = resp.indexOf('&edet');
               final String incidentId = resp.substring(firstIndex, secondIndex);
-
               eventBus.fire(Display403IncapsulaEvent(incidentId: incidentId));
+            }
+            try {
+            if (error.response?.data != null && error.response!.data.toString().contains('winding')) {
+              eventBus.fire(Display444Event(message: error.response!.data['error']['message']));
+            }} catch (e) {
+              debugPrint('++++[api_client ERROR 403] $e');
+            }
+          } else if (statusCode == 444) {
+            try {
+            if (error.response?.data != null && error.response!.data.toString().contains('winding')) {
+              eventBus.fire(Display444Event(message: error.response!.data['error']['message']));
+            }} catch (e) {
+              debugPrint('++++[api_client ERROR 444] $e');
             }
           } else if (statusCode == 503) {
             //check that response contains word maintenance
