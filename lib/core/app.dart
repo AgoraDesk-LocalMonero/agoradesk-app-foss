@@ -23,6 +23,7 @@ import 'package:agoradesk/core/translations/foreground_messages_mixin.dart';
 import 'package:agoradesk/core/utils/app_links_handler.dart';
 import 'package:agoradesk/core/utils/string_mixin.dart';
 import 'package:agoradesk/core/utils/url_mixin.dart';
+import 'package:agoradesk/core/widgets/app_markdown_widget.dart';
 import 'package:agoradesk/core/widgets/branded/agora_dialog_info_widget.dart';
 import 'package:agoradesk/core/widgets/branded/agora_info_dialog_for_root.dart';
 import 'package:agoradesk/core/widgets/branded/button_link.dart';
@@ -657,6 +658,27 @@ class AppState extends State<App>
                     ButtonLink(
                       title: 'Message us on Telegram',
                       onPressed: () => openLinkBrowser(GetIt.I<AppParameters>().telegramChannel),
+                    ),
+                  ],
+                ),
+              ),
+            ).then((value) => _dialogOpened = false);
+          }
+        },
+      )
+      ..on<Display444Event>().listen(
+        (e) {
+          if (!_dialogOpened) {
+            _dialogOpened = true;
+            showDialog(
+              context: router.navigatorKey.currentContext!,
+              builder: (context) => AgoraDialogInfoWidget(
+                title: 'Platform winding down.',
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    AppMarkdownWidget(
+                      text: e.message ?? '',
                     ),
                   ],
                 ),
