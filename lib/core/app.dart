@@ -216,21 +216,22 @@ class AppState extends State<App>
     if (AppSharedPrefs().windingDownShown == false) {
       await Future.delayed(const Duration(seconds: 2));
       AppSharedPrefs().setBool(AppSharedPrefsKey.windingDownShown, val: true);
-      showOverlay(
-        (context, t) {
+      showDialog(
+        context: router.navigatorKey.currentContext!,
+        builder: (context) {
           return const AgoraDialogInfoWidget(
             title: 'LocalMonero will be winding down',
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 AppMarkdownWidget(
-                  text: 'The winding down process begins May 7th, 2024, and finishes on November 7th, 2024. Our [support](https://localmonero.co/support) staff will be available for help throughout this period.\n\n1.  Effective immediately, all new signups and ad postings are disabled;\n\n2.  On May 14th, 2024, new trades will be disabled as well;\n\n3.  On November 7th, 2024, the website will be taken down. Please reclaim any funds from your arbitration bond wallet prior to that date, otherwise the funds may be considered abandoned/forfeited.\n\n[Read more](https://localmonero.co/blog/announcements/winding-down)',
+                  text:
+                      'The winding down process begins May 7th, 2024, and finishes on November 7th, 2024. Our [support](https://localmonero.co/support) staff will be available for help throughout this period.\n\n1.  Effective immediately, all new signups and ad postings are disabled;\n\n2.  On May 14th, 2024, new trades will be disabled as well;\n\n3.  On November 7th, 2024, the website will be taken down. Please reclaim any funds from your arbitration bond wallet prior to that date, otherwise the funds may be considered abandoned/forfeited.\n\n[Read more](https://localmonero.co/blog/announcements/winding-down)',
                 ),
               ],
             ),
           );
         },
-        duration: Duration.zero,
       );
     }
   }

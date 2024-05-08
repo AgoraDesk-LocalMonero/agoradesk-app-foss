@@ -2,7 +2,6 @@ import 'package:agoradesk/core/agora_font.dart';
 import 'package:agoradesk/core/theme/theme.dart';
 import 'package:agoradesk/core/utils/string_mixin.dart';
 import 'package:agoradesk/core/widgets/branded/button_square_icon.dart';
-import 'package:auto_route/auto_route.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
@@ -46,7 +45,7 @@ class AgoraDialogInfoWidget extends StatelessWidget with StringMixin {
                 ButtonSquareIcon(
                   label: context.intl.close,
                   iconData: AgoraFont.x,
-                  onPressed: () => AutoRouter.of(context).pop(),
+                  onPressed: () => Navigator.of(context).pop(),
                 )
               ],
             ),
