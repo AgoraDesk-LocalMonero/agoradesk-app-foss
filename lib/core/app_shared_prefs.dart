@@ -44,6 +44,7 @@ enum AppSharedPrefsKey {
   pushDeviceId,
   tradesCount,
   reviewAsked,
+  windingDownShown,
 }
 
 class AppSharedPrefs with DateMixin {
@@ -77,8 +78,10 @@ class AppSharedPrefs with DateMixin {
       _parseNotificationsSettingsType(getListStrings(AppSharedPrefsKey.notificationsSettingDisabled)) ?? [];
 
   bool? get pinIsActive => getBool(AppSharedPrefsKey.pinIsActive);
-  
+
   bool get reviewAsked => getBool(AppSharedPrefsKey.reviewAsked) ?? false;
+  
+  bool get windingDownShown => getBool(AppSharedPrefsKey.windingDownShown) ?? false;
 
   bool? get i2pAddressOn => getBool(AppSharedPrefsKey.i2pAddressOn);
 
@@ -99,7 +102,7 @@ class AppSharedPrefs with DateMixin {
   bool get xmrWalletTileOpen => getBool(AppSharedPrefsKey.xmrWalletTileOpen) ?? true;
 
   String? get username => getString(AppSharedPrefsKey.username);
-  
+
   String? get pushDeviceId => getString(AppSharedPrefsKey.pushDeviceId);
 
   String get proxyServer => getString(AppSharedPrefsKey.proxyServer) ?? '';
