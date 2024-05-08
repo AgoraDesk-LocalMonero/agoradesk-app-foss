@@ -1,7 +1,6 @@
 ### Updates
 
-1. Hotfix: Add notifications for certain events.  
-2. Add a home screen widget.
+1. Hotfix: Add a popup about the platform winding down.
 
 ### About the attached app's
 
