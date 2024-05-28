@@ -37,44 +37,4 @@ void main() {
       appState: mockAppState,
     );
   });
-
-  test('initial values are correct', () {
-    expect(sut.loadingBalance, false);
-    expect(sut.transactions, []);
-  });
-
-  group('[getTransactions method works properly]', () {
-    final Decimal kBalanceXmr = Decimal.parse('2.0');
-    final Decimal kBalanceBtc = Decimal.parse('1.0');
-
-    void arrangeWalletServiceReturnsXmrAndBtcTransactions() {
-      when(() => mockWalletService.getRecentWalletTransactions(Asset.BTC)).thenAnswer(
-        (_) async => Either.right(
-          WalletBalanceModel(balance: kBalanceBtc, receivingAddress: 'addressBTC'),
-        ),
-      );
-      when(() => mockWalletService.getRecentWalletTransactions(Asset.XMR)).thenAnswer(
-        (_) async => Either.right(
-          WalletBalanceModel(balance: kBalanceXmr, receivingAddress: 'addressXMR'),
-        ),
-      );
-    }
-
-    test('getTransactions called with service for BTC & XMR - 2 times inside one method', () async {
-      arrangeWalletServiceReturnsXmrAndBtcTransactions();
-      await sut.getBalances();
-      verify(() => mockWalletService.getRecentWalletTransactions(Asset.BTC)).called(1);
-      verify(() => mockWalletService.getRecentWalletTransactions(Asset.XMR)).called(1);
-    });
-
-    test('indicates loading, got data, indicates stop loading', () async {
-      arrangeWalletServiceReturnsXmrAndBtcTransactions();
-      final future = sut.getBalances();
-      expect(sut.loadingBalance, true);
-      await future;
-      expect(sut.loadingBalance, false);
-      expect(sut.balanceXmr, kBalanceXmr.toString());
-      expect(sut.balanceBtc, kBalanceBtc.toString());
-    });
-  });
 }

@@ -28,7 +28,7 @@ class OverlayPopupMenuItem extends StatelessWidget {
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
     final PopupMenuThemeData popupMenuTheme = PopupMenuTheme.of(context);
-    TextStyle style = textStyle ?? popupMenuTheme.textStyle ?? theme.textTheme.subtitle1!;
+    TextStyle style = textStyle ?? popupMenuTheme.textStyle ?? theme.textTheme.titleSmall!;
 
     if (onTap == null) style = style.copyWith(color: theme.disabledColor);
 

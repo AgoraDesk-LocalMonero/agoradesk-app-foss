@@ -149,7 +149,7 @@ class WalletViewModel extends ViewModel with StringMixin {
       // final int digitsXmr = getBankersDigits(Asset.XMR.name);
       // _balanceXmr = _appState.balance[0].balance.toDouble().bankerRound(digitsXmr).toString();
       _balanceXmr = _appState.balance[0].balance.toString();
-      _addressXmr = _appState.balance[0].receivingAddress;
+      // _addressXmr = _appState.balance[0].receivingAddress;
       if (_appState.assetPrice.isNotEmpty) {
         xmrPrice = _appState.assetPrice[0];
       }
@@ -158,7 +158,7 @@ class WalletViewModel extends ViewModel with StringMixin {
       // final int digitsBtc = getBankersDigits(Asset.BTC.name);
       // _balanceBtc = _appState.balance[1].balance.toDouble().bankerRound(digitsBtc).toString();
       _balanceBtc = _appState.balance[1].balance.toString();
-      _addressBtc = _appState.balance[1].receivingAddress;
+      // _addressBtc = _appState.balance[1].receivingAddress;
       if (_appState.assetPrice.length > 1) {
         btcPrice = _appState.assetPrice[1];
       }
@@ -180,9 +180,9 @@ class WalletViewModel extends ViewModel with StringMixin {
         loadingBalance = false;
         if (resBtc.isRight && resXmr.isRight) {
           _balanceBtc = resBtc.right.balance.toString();
-          _addressBtc = resBtc.right.receivingAddress;
+          // _addressBtc = resBtc.right.receivingAddress;
           _balanceXmr = resXmr.right.balance.toString();
-          _addressXmr = resXmr.right.receivingAddress;
+          // _addressXmr = resXmr.right.receivingAddress;
           joinAllTransactions(resXmr.right, resBtc.right);
         } else {
           if (resBtc.isLeft) {
@@ -204,7 +204,7 @@ class WalletViewModel extends ViewModel with StringMixin {
         loadingBalance = false;
         if (resXmr.isRight) {
           _balanceXmr = resXmr.right.balance.toString();
-          _addressXmr = resXmr.right.receivingAddress;
+          // _addressXmr = resXmr.right.receivingAddress;
           joinAllTransactions(resXmr.right, null);
         } else {
           if (resXmr.left.message.containsKey('error_code')) {
