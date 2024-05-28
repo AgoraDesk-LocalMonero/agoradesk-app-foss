@@ -154,7 +154,11 @@ SPEC CHECKSUMS:
   flutter_secure_storage: 23fc622d89d073675f2eaa109381aefbcf5a49be
   image_picker_ios: b545a5f16c0fa88e3ecbbce3ed4de45567a8ec18
   in_app_review: 318597b3a06c22bb46dc454d56828c85f444f99d
+<<<<<<< HEAD
   local_auth_darwin: c7e464000a6a89e952235699e32b329457608d98
+=======
+  local_auth_darwin: 4d56c90c2683319835a61274b57620df9c4520ab
+>>>>>>> main
   MTBBarcodeScanner: f453b33c4b7dfe545d8c6484ed744d55671788cb
   OrderedSet: aaeb196f7fef5a9edf55d89760da9176ad40b93c
   package_info_plus: 115f4ad11e0698c8c1c5d8a689390df880f47e85

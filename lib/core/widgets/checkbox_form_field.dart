@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:agoradesk/core/theme/theme.dart';
 
 class CheckboxFormField extends FormField<bool> {
   CheckboxFormField(
@@ -23,7 +24,7 @@ class CheckboxFormField extends FormField<bool> {
                     ? Builder(
                         builder: (BuildContext context) => Text(
                           state.errorText ?? '',
-                          style: TextStyle(color: Theme.of(context).errorColor),
+                          style: TextStyle(color: Theme.of(context).colorScheme.errorColor),
                         ),
                       )
                     : null,

@@ -41,6 +41,7 @@ import 'package:agoradesk/router.gr.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/src/services/predictive_back_event.dart';
 import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:vm/vm.dart';
@@ -1339,5 +1340,26 @@ class TradeViewModel extends ViewModel
   Future<AppExitResponse> didRequestAppExit() {
     // TODO: implement didRequestAppExit
     throw UnimplementedError();
+  }
+
+  @override
+  void handleCancelBackGesture() {
+    // TODO: implement handleCancelBackGesture
+  }
+
+  @override
+  void handleCommitBackGesture() {
+    // TODO: implement handleCommitBackGesture
+  }
+
+  @override
+  bool handleStartBackGesture(PredictiveBackEvent backEvent) {
+    // TODO: implement handleStartBackGesture
+    throw UnimplementedError();
+  }
+
+  @override
+  void handleUpdateBackGestureProgress(PredictiveBackEvent backEvent) {
+    // TODO: implement handleUpdateBackGestureProgress
   }
 }
