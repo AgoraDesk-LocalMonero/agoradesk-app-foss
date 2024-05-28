@@ -25,7 +25,7 @@ dependencies:
   easy_debounce: ^2.0.2
   event_bus: ^2.0.0
   expandable: ^5.0.1
-  expansion_tile_card: ^2.0.0
+  expansion_tile_card: ^3.0.0
   extended_image: ^8.1.0
   figma_squircle: ^0.5.3
   firebase_core: ^2.28.0
@@ -102,10 +102,10 @@ dev_dependencies:
   flutter_test: 
     sdk: flutter
 dependency_overrides: 
-  expansion_tile_card: 
-    git: 
-      url: https://github.com/awaik/expansion_tile_card/
-      ref: fix_theme_issue
+  # expansion_tile_card: 
+  #   git: 
+  #     url: https://github.com/awaik/expansion_tile_card/
+  #     ref: fix_theme_issue
   flutter_socks_proxy: 
     git: 
       url: https://github.com/jiangtian616/socks_proxy/

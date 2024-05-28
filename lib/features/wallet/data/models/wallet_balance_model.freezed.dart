@@ -22,9 +22,8 @@ WalletBalanceModel _$WalletBalanceModelFromJson(Map<String, dynamic> json) {
 mixin _$WalletBalanceModel {
   @_NestedBalanceConverter()
   @JsonKey(name: 'total')
-  Decimal get balance => throw _privateConstructorUsedError;
-  @JsonKey(name: 'receiving_address')
-  String get receivingAddress => throw _privateConstructorUsedError;
+  Decimal get balance =>
+      throw _privateConstructorUsedError; // @JsonKey(name: 'receiving_address') required String receivingAddress,
   @JsonKey(name: 'received_transactions_30d')
   List<TransactionModel>? get receivedTransactions =>
       throw _privateConstructorUsedError;
@@ -46,7 +45,6 @@ abstract class $WalletBalanceModelCopyWith<$Res> {
   @useResult
   $Res call(
       {@_NestedBalanceConverter() @JsonKey(name: 'total') Decimal balance,
-      @JsonKey(name: 'receiving_address') String receivingAddress,
       @JsonKey(name: 'received_transactions_30d')
       List<TransactionModel>? receivedTransactions,
       @JsonKey(name: 'sent_transactions_30d')
@@ -67,7 +65,6 @@ class _$WalletBalanceModelCopyWithImpl<$Res, $Val extends WalletBalanceModel>
   @override
   $Res call({
     Object? balance = null,
-    Object? receivingAddress = null,
     Object? receivedTransactions = freezed,
     Object? sentTransactions = freezed,
   }) {
@@ -76,10 +73,6 @@ class _$WalletBalanceModelCopyWithImpl<$Res, $Val extends WalletBalanceModel>
           ? _value.balance
           : balance // ignore: cast_nullable_to_non_nullable
               as Decimal,
-      receivingAddress: null == receivingAddress
-          ? _value.receivingAddress
-          : receivingAddress // ignore: cast_nullable_to_non_nullable
-              as String,
       receivedTransactions: freezed == receivedTransactions
           ? _value.receivedTransactions
           : receivedTransactions // ignore: cast_nullable_to_non_nullable
@@ -102,7 +95,6 @@ abstract class _$$WalletBalanceModelImplCopyWith<$Res>
   @useResult
   $Res call(
       {@_NestedBalanceConverter() @JsonKey(name: 'total') Decimal balance,
-      @JsonKey(name: 'receiving_address') String receivingAddress,
       @JsonKey(name: 'received_transactions_30d')
       List<TransactionModel>? receivedTransactions,
       @JsonKey(name: 'sent_transactions_30d')
@@ -121,7 +113,6 @@ class __$$WalletBalanceModelImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? balance = null,
-    Object? receivingAddress = null,
     Object? receivedTransactions = freezed,
     Object? sentTransactions = freezed,
   }) {
@@ -130,10 +121,6 @@ class __$$WalletBalanceModelImplCopyWithImpl<$Res>
           ? _value.balance
           : balance // ignore: cast_nullable_to_non_nullable
               as Decimal,
-      receivingAddress: null == receivingAddress
-          ? _value.receivingAddress
-          : receivingAddress // ignore: cast_nullable_to_non_nullable
-              as String,
       receivedTransactions: freezed == receivedTransactions
           ? _value._receivedTransactions
           : receivedTransactions // ignore: cast_nullable_to_non_nullable
@@ -152,7 +139,6 @@ class __$$WalletBalanceModelImplCopyWithImpl<$Res>
 class _$WalletBalanceModelImpl implements _WalletBalanceModel {
   const _$WalletBalanceModelImpl(
       {@_NestedBalanceConverter() @JsonKey(name: 'total') required this.balance,
-      @JsonKey(name: 'receiving_address') required this.receivingAddress,
       @JsonKey(name: 'received_transactions_30d')
       final List<TransactionModel>? receivedTransactions,
       @JsonKey(name: 'sent_transactions_30d')
@@ -167,10 +153,9 @@ class _$WalletBalanceModelImpl implements _WalletBalanceModel {
   @_NestedBalanceConverter()
   @JsonKey(name: 'total')
   final Decimal balance;
-  @override
-  @JsonKey(name: 'receiving_address')
-  final String receivingAddress;
+// @JsonKey(name: 'receiving_address') required String receivingAddress,
   final List<TransactionModel>? _receivedTransactions;
+// @JsonKey(name: 'receiving_address') required String receivingAddress,
   @override
   @JsonKey(name: 'received_transactions_30d')
   List<TransactionModel>? get receivedTransactions {
@@ -196,7 +181,7 @@ class _$WalletBalanceModelImpl implements _WalletBalanceModel {
 
   @override
   String toString() {
-    return 'WalletBalanceModel(balance: $balance, receivingAddress: $receivingAddress, receivedTransactions: $receivedTransactions, sentTransactions: $sentTransactions)';
+    return 'WalletBalanceModel(balance: $balance, receivedTransactions: $receivedTransactions, sentTransactions: $sentTransactions)';
   }
 
   @override
@@ -205,8 +190,6 @@ class _$WalletBalanceModelImpl implements _WalletBalanceModel {
         (other.runtimeType == runtimeType &&
             other is _$WalletBalanceModelImpl &&
             (identical(other.balance, balance) || other.balance == balance) &&
-            (identical(other.receivingAddress, receivingAddress) ||
-                other.receivingAddress == receivingAddress) &&
             const DeepCollectionEquality()
                 .equals(other._receivedTransactions, _receivedTransactions) &&
             const DeepCollectionEquality()
@@ -218,7 +201,6 @@ class _$WalletBalanceModelImpl implements _WalletBalanceModel {
   int get hashCode => Object.hash(
       runtimeType,
       balance,
-      receivingAddress,
       const DeepCollectionEquality().hash(_receivedTransactions),
       const DeepCollectionEquality().hash(_sentTransactions));
 
@@ -242,8 +224,6 @@ abstract class _WalletBalanceModel implements WalletBalanceModel {
           {@_NestedBalanceConverter()
           @JsonKey(name: 'total')
           required final Decimal balance,
-          @JsonKey(name: 'receiving_address')
-          required final String receivingAddress,
           @JsonKey(name: 'received_transactions_30d')
           final List<TransactionModel>? receivedTransactions,
           @JsonKey(name: 'sent_transactions_30d')
@@ -257,10 +237,7 @@ abstract class _WalletBalanceModel implements WalletBalanceModel {
   @_NestedBalanceConverter()
   @JsonKey(name: 'total')
   Decimal get balance;
-  @override
-  @JsonKey(name: 'receiving_address')
-  String get receivingAddress;
-  @override
+  @override // @JsonKey(name: 'receiving_address') required String receivingAddress,
   @JsonKey(name: 'received_transactions_30d')
   List<TransactionModel>? get receivedTransactions;
   @override
