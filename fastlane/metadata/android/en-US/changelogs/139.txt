@@ -1,0 +1,1 @@
+1. Hotfix: fixed bug that prevented displaying the wallets balances.
