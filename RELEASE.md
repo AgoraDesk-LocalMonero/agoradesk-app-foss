@@ -1,6 +1,6 @@
 ### Updates
 
-1. Hotfix: Fix a popup about the platform winding down.
+1. Hotfix: fixed bug that prevented displaying the wallets balances.
 
 ### About the attached app's
 
